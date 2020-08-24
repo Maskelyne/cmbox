@@ -1,0 +1,40 @@
+mixin header()
+
+  -
+    const headerList = [
+      {
+        text: 'О нас',
+        link: 'about-us.html'
+      },
+      {
+        text: 'Услуги',
+        link: 'services.html'
+      },
+      {
+        text: 'Этапы',
+        link: 'steps.html'
+      },
+      {
+        text: 'Портфолио',
+        link: 'portfolio.html'
+      },
+      {
+        text: 'Блог',
+        link: 'blog.html'
+      },
+      {
+        text: 'Контакты',
+        link: 'contacts.html'
+      },
+    ];
+
+  section.main-header
+    nav.main-header__wrapper.container
+      .main-header__image
+        +img('svg', 'logo', 'svg', '120', '43', 'Логотип сайта')
+      ul.main-header__list
+        each item in headerList
+          li
+            a(href= item.link)= item.text
+      .main-header__box
+        +img('svg', 'icon-mobile', 'svg', '24', '24', '')
