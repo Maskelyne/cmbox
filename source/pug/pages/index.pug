@@ -1,0 +1,48 @@
+extends ../layout/page-layout
+
+block variables
+  - var title = 'CmBox | Креативная маркетинговая упаковка'
+
+block main
+  -
+    var pageCount = 1;
+
+    var pages = [
+      {
+        title: 'Главная',
+        innerPages: [
+          {
+            name: 'Главная',
+            src: 'main.html'
+          }
+        ]
+      },
+      {
+        title: 'О нас',
+        innerPages: [
+          {
+            name: 'О нас',
+            src: 'about-us.html'
+          }
+        ]
+      }
+    ];
+
+  ol
+    each page in pages
+      li
+        h3= page.title
+
+        if page.innerPages.length > 0
+          each levelSecond in page.innerPages
+            p
+              a(href=levelSecond.src)
+                = pageCount++
+                | .
+                |
+                = levelSecond.name
+                if levelSecond.src.length > 0
+                  |
+                  | -----
+                  |
+                  = levelSecond.src

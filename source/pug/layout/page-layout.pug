@@ -1,0 +1,30 @@
+include ../global/mixins
+include ../global/header
+include ../global/footer
+include ../data/data
+
+block variables
+
+doctype html
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width,initial-scale=1")
+    title= title
+    meta(name="description", content="CmBox | Креативная маркетинговая упаковка")
+
+    link(rel="stylesheet", href="css/style.css")
+    link(rel="stylesheet", href="css/style.min.css")
+    link(rel="stylesheet", href="css/fancybox.min.css")
+
+  body
+
+    block header
+
+    block main
+
+    block footer
+
+    script(src="js/vendor.min.js")
+    script(src="js/default.js")
+    script(src="js/main.js")

@@ -1,0 +1,11 @@
+// general
+@import "general/normalize.scss";
+@import "general/variables.scss";
+@import "general/global.scss";
+@import "general/fonts.scss";
+@import "general/mixins.scss";
+
+// blocks
+@import "blocks/header.scss";
+@import "blocks/main.scss";
+@import "blocks/footer.scss";
