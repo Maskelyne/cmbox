@@ -1,0 +1,34 @@
+.our-work-slider {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 40px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.our-work-slider__swiper-container {
+  position: static;
+}
+
+.our-work-slider__wrapper {
+  @include reset-list;
+  display: flex;
+}
+
+.our-work-slider__swiper-button-prev {
+  color: #2c6e67;
+
+  &::after {
+    font-size: 30px;
+    text-shadow: 0 -1px 3px #000000;
+  }
+}
+
+.our-work-slider__swiper-button-next {
+  color: #2c6e67;
+
+  &::after {
+    font-size: 30px;
+    text-shadow: 0 -1px 3px #000000;
+  }
+}
