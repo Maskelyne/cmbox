@@ -38,3 +38,18 @@ mixin header()
             a(href= item.link)= item.text
       .main-header__box
         +img('svg', 'icon-mobile', 'svg', '24', '24', '')
+
+  .our-work-slider
+    .our-work-slider__swiper-container.swiper-container
+      ul.our-work-slider__wrapper.swiper-wrapper
+        li.swiper-slide
+          a(href="#")
+            img(src="img/image-1.png" width="346" height="310" alt="Первый слайд")
+        li.swiper-slide
+          a(href="#")
+            img(src="img/image-1.png" width="346" height="310" alt="Второй слайд")
+        li.swiper-slide
+          a(href="#")
+            img(src="img/image-1.png" width="346" height="310" alt="Третий слайд")
+      .our-work-slider__swiper-button-prev.swiper-button-prev
+      .our-work-slider__swiper-button-next.swiper-button-next
