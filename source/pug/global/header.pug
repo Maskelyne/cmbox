@@ -28,13 +28,28 @@ mixin header()
       },
     ];
 
-  section.main-header
+  header.main-header
     nav.main-header__wrapper.container
+      a.main-header__todo-menu(href="#")
+        span.visually-hidden Портфолио
       .main-header__image
-        +img('svg', 'logo', 'svg', '120', '43', 'Логотип сайта')
-      ul.main-header__list
-        each item in headerList
-          li
-            a(href= item.link)= item.text
+        a(href="#")
+          +img('svg', 'logo', 'svg', '120', '43', 'Логотип')
+      a.main-header__link-services(href="#")
+        span.visually-hidden Услуги
+        +img('svg', 'icon-box', 'svg', '26', '26', 'Услуги')
+      button.main-header__btn.main-header__btn--closed(href="#")
+        span.visually-hidden Открыть меню
+      .main-header__wrap-menu
+        ul.main-header__list
+          each item in headerList
+            li
+              a(href= item.link)= item.text
+        .main-header__box-tablet
+          a(href="tel:375296086368") +375 (29) 608-63-68
+          +social-list.social-list--tablet
       .main-header__box
-        +img('svg', 'icon-mobile', 'svg', '24', '24', '')
+        a.main-header__link-phone(href="tel:375296086368")
+          +img('svg', 'icon-mobile', 'svg', '9', '18', 'Телефон')
+          span +375 (29) 608-63-68
+        +social-list

@@ -76,5 +76,9 @@ main {
 .container {
   max-width: $container-max-width;
   margin: 0 auto;
-  padding: 0 $desktop-padding;
+  padding: $desktop-padding;
+
+  @media (max-width: $tablet-width) {
+    padding: $tablet-padding;
+  }
 }
