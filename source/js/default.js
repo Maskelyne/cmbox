@@ -7,4 +7,3 @@
 
 //= modules/menu.js
 //= modules/head.js
-//= modules/our-work-slider.js
