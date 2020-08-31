@@ -47,7 +47,7 @@
   a {
     font-size: 18px;
     line-height: 18px;
-    color: $dark-black;
+    color: $black;
 
     @media (max-width: $tablet-width) {
       padding: 10px 0;
@@ -145,7 +145,7 @@
 
   span {
     margin-left: 6%;
-    color: $dark-black;
+    color: $black;
 
     @media (max-width: $desktop-width-min) {
       display: none;

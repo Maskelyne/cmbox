@@ -75,7 +75,7 @@
   }
 
   a {
-    color: $dark-black;
+    color: $black;
   }
 }
 
@@ -83,7 +83,7 @@
   p {
     margin: 0;
     padding-left: 20px;
-    color: $dark-black;
+    color: $black;
     position: relative;
 
     &::before {
@@ -107,7 +107,7 @@
   padding-left: 22px;
   margin: 15px 0 10px 0;
   display: block;
-  color: $dark-black;
+  color: $black;
   position: relative;
 
   &::before {
@@ -124,7 +124,7 @@
 
 .main-footer__link-phone {
   padding-left: 20px;
-  color: $dark-black;
+  color: $black;
   position: relative;
 
   &::before {

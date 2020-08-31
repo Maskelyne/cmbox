@@ -6,9 +6,15 @@
 @import "general/fonts.scss";
 @import "general/mixins.scss";
 
-// blocks
+//header
 @import "blocks/main-header.scss";
-@import "blocks/main.scss";
+
+//footer
 @import "blocks/main-footer.scss";
+
+//services
+@import "blocks/services.scss";
+
+//social-nav
 @import "blocks/social-list.scss";
 @import "blocks/footer-social.scss";
