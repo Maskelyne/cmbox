@@ -5,5 +5,4 @@
 
 */
 
-//= modules/menu.js
-//= modules/head.js
+//= modules/header-nav.js

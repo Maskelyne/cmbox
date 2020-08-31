@@ -1,0 +1,72 @@
+mixin footer-social()
+
+  -
+    const footerList = [
+      {
+        link: '#',
+        text: 'Одноклассники',
+        path: 'svg',
+        name: 'icon-ok',
+        format: 'svg',
+        width: '24',
+        height: '24',
+        altText: 'Одноклассники'
+      },
+      {
+        link: '#',
+        text: 'Вконтакте',
+        path: 'svg',
+        name: 'icon-vk',
+        format: 'svg',
+        width: '24',
+        height: '24',
+        altText: 'Вконтакте'
+      },
+      {
+        link: '#',
+        text: 'Фэйсбук',
+        path: 'svg',
+        name: 'icon-facebook',
+        format: 'svg',
+        width: '24',
+        height: '24',
+        altText: 'Фэйсбук'
+      },
+      {
+        link: '#',
+        text: 'Ютуб',
+        path: 'svg',
+        name: 'icon-youtube',
+        format: 'svg',
+        width: '24',
+        height: '24',
+        altText: 'Ютуб'
+      },
+      {
+        link: '#',
+        text: 'Линкедин',
+        path: 'svg',
+        name: 'icon-linkedin',
+        format: 'svg',
+        width: '24',
+        height: '24',
+        altText: 'Линкедин'
+      },
+      {
+        link: '#',
+        text: 'Инстаграм',
+        path: 'svg',
+        name: 'icon-instagram',
+        format: 'svg',
+        width: '24',
+        height: '24',
+        altText: 'Инстаграм'
+      },
+    ];
+
+  ul.footer-social
+    each item in footerList
+      li
+        a(href= item.link)
+          span.visually-hidden= item.text
+          +img(item.path, item.name, item.format, item.width, item.height, item.altText)

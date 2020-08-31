@@ -1,11 +1,20 @@
 // general
 @import "general/normalize.scss";
+@import "general/swiper-bundle.min.scss";
 @import "general/variables.scss";
 @import "general/global.scss";
 @import "general/fonts.scss";
 @import "general/mixins.scss";
 
-// blocks
-@import "blocks/header.scss";
-@import "blocks/main.scss";
-@import "blocks/footer.scss";
+//header
+@import "blocks/main-header.scss";
+
+//footer
+@import "blocks/main-footer.scss";
+
+//services
+@import "blocks/services.scss";
+
+//social-nav
+@import "blocks/social-list.scss";
+@import "blocks/footer-social.scss";
