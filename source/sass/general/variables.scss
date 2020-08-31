@@ -1,11 +1,13 @@
 // screen-resolution
 $container-max-width: 1200px;
 $desktop-width: 1200px;
-$tablet-width: 768px;
+$desktop-width-min: 1024px;
+$tablet-width: 767px;
 $mobile-width: 320px;
 
 //padding
-$desktop-padding: 15px;
+$desktop-padding: 0 30px;
+$tablet-padding: 0 15px;
 
 // retina
 $retina-dpi: 144dpi;
@@ -13,6 +15,8 @@ $retina-dppx: 1.5dppx;
 
 //fonts
 $proximaNova: "ProximaNova-Regular", arial, sans-serif;
+$proximaBold: "ProximaNova-Bold", arial, sans-serif;
+$mistral: "Mistral", arial, sans-serif;
 
 //font-weight
 $normal: 400;
@@ -25,3 +29,6 @@ $dark-black: #333333;
 $white: #ffffff;
 $light-pink: #fff5f7;
 $light-gray: #f5f9ff;
+$gray: #787878;
+$black: #000000;
+$pink: #ffb4c5;

@@ -1,7 +1,2 @@
 mixin img(path, image, format, width, height, altText)
-  if (format === "jpg")
-    img(src="img/" + path + "/" + image + '.' + format, width= width, height= height, alt= altText, srcset= "img/" + path + "/" + image + "@2x." + format + " 2x")
-  else if (format === "png")
-    img(src="img/" + path + "/" + image + '.' + format, width= width, height= height, alt= altText, srcset= "img/" + path + "/" + image + "@2x." + format + " 2x")
-  else
     img(src="img/" + path + "/" + image + '.' + format, width= width, height= height, alt= altText)
