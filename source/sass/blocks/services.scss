@@ -15,11 +15,20 @@
 
   li {
     height: 12vh;
+    transform: translate(-20px, 0);
   }
 
   a {
     position: relative;
     display: block;
+
+    img {
+      transition: all 0.5s;
+    }
+
+    span {
+      z-index: 1;
+    }
 
     &:hover {
       &::before {
@@ -31,6 +40,7 @@
         left: 58px;
         background-color: $pink;
         transform: skewY(-21deg);
+        transition: all 0.5s;
       }
 
       &::after {
@@ -43,6 +53,16 @@
         background-image: url("../img/boxes/hover-pink-bckg.svg");
         background-repeat: no-repeat;
         background-size: 83px 56px;
+      }
+
+      img {
+        transform: translate(20px, 0);
+        transition: all 0.5s;
+      }
+
+      span {
+        top: 91px;
+        right: 130px;
       }
     }
   }

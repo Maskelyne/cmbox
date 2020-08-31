@@ -1241,10 +1241,15 @@ main {
   display: grid;
   grid-template-columns: 15%; }
   .services__boxes-list li {
-    height: 12vh; }
+    height: 12vh;
+    transform: translate(-20px, 0); }
   .services__boxes-list a {
     position: relative;
     display: block; }
+    .services__boxes-list a img {
+      transition: all 0.5s; }
+    .services__boxes-list a span {
+      z-index: 1; }
     .services__boxes-list a:hover::before {
       width: 118px;
       height: 54px;
@@ -1264,6 +1269,12 @@ main {
       background-image: url("../img/boxes/hover-pink-bckg.svg");
       background-repeat: no-repeat;
       background-size: 83px 56px; }
+    .services__boxes-list a:hover img {
+      transform: translate(20px, 0);
+      transition: all 0.5s; }
+    .services__boxes-list a:hover span {
+      top: 91px;
+      right: 130px; }
   .services__boxes-list span {
     color: #000000;
     letter-spacing: 0.05em;
