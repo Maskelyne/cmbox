@@ -10,14 +10,17 @@
   }
 
   img {
+    border-radius: 5px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+
     @media (max-width: $desktop-width-min) {
       border-radius: 6px;
       box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
     }
 
     @media (max-width: $tablet-width) {
-      border-radius: 10px;
-      max-width: 48px;
+      border-radius: 6px;
+      max-width: 36px;
     }
   }
 
@@ -44,9 +47,8 @@
     @media (max-width: $tablet-width) {
       width: auto;
       padding: 0;
-      grid-column-gap: 20px;
       display: grid;
-      grid-template-columns: 15% 15% 15%;
+      grid-template-columns: 16% 16% 16%;
       position: static;
       justify-content: center;
       background-color: transparent;

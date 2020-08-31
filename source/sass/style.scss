@@ -7,11 +7,8 @@
 @import "general/mixins.scss";
 
 // blocks
-@import "blocks/header.scss";
+@import "blocks/main-header.scss";
 @import "blocks/main.scss";
-@import "blocks/footer.scss";
-<<<<<<< HEAD
+@import "blocks/main-footer.scss";
 @import "blocks/social-list.scss";
-=======
-@import "blocks/our-work-slider.scss";
->>>>>>> e3a3fd259eba5299f5ec115c664d0196c2a1343e
+@import "blocks/footer-social.scss";

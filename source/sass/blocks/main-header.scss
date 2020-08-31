@@ -248,33 +248,37 @@
 }
 
 .main-header__todo-menu {
-  width: 23px;
-  height: 23px;
-  display: block;
-  position: absolute;
-  z-index: -1;
+  display: none;
 
-  &::before {
+  @media (max-width: $tablet-width) {
     width: 23px;
     height: 23px;
+    display: block;
     position: absolute;
-    content: "";
-    top: 57px;
-    left: 13px;
-    background-image: url('../img/svg/icon-add-menu.svg');
-    background-repeat: no-repeat;
-    z-index: 2;
-  }
+    z-index: -1;
 
-  &::after {
-    width: 128px;
-    height: 128px;
-    position: absolute;
-    content: "";
-    top: -15px;
-    left: -65px;
-    background-color: $white;
-    border-radius: 50%;
-    z-index: 1;
+    &::before {
+      width: 23px;
+      height: 23px;
+      position: absolute;
+      content: "";
+      top: 57px;
+      left: 13px;
+      background-image: url('../img/svg/icon-add-menu.svg');
+      background-repeat: no-repeat;
+      z-index: 2;
+    }
+
+    &::after {
+      width: 128px;
+      height: 128px;
+      position: absolute;
+      content: "";
+      top: -15px;
+      left: -65px;
+      background-color: $white;
+      border-radius: 50%;
+      z-index: 1;
+    }
   }
 }
