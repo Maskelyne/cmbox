@@ -13,8 +13,17 @@
   display: grid;
   grid-template-columns: 48% 600px 21%;
 
+  @media (max-width: $desktop-width) {
+    grid-template-columns: 48% 520px 21%;
+  }
+
   @media (max-width: $desktop-width-min) {
     grid-template-columns: 1fr;
+    margin-bottom: 60px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 30px;
   }
 }
 
@@ -40,10 +49,9 @@
     line-height: 24px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    text-align: center;
 
     @media (max-width: $desktop-width-min) {
-      padding-left: 0;
+      padding: 0 30px;
       font-size: 16px;
       line-height: 24px;
     }
@@ -60,12 +68,9 @@
 .services__image {
   margin: 0 auto 0 24%;
 
-  // background-image: url("../img/boxes/big-box-site.svg");
-  // background-repeat: no-repeat;
-  // background-size: contain;
-
   @media (max-width: $desktop-width-min) {
     max-width: 500px;
+    margin: 0 auto;
   }
 
   @media (max-width: $tablet-width) {
@@ -76,26 +81,66 @@
 
 .services__boxes {
   max-width: 600px;
+
+  img {
+    &:last-child {
+      display: none;
+    }
+  }
 }
 
 .services__computer {
   max-width: 250px;
-  margin: 0 28% -22% 28%;
+  margin: 0 28% -20% 28%;
   position: relative;
+  animation: show, show-space-bottom, show-space-top;
+  animation-duration: 2s, 3s, 3s;
+  animation-delay: 1s, 3s, 6s;
+  animation-timing-function: ease, linear, linear;
+  animation-iteration-count: 1, infinite, infinite;
+  animation-direction: normal, alternate, alternate;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  opacity: 0;
 
   @media (max-width: $desktop-width-min) {
     max-width: 200px;
   }
 }
 
-.services__text-1 {
-  margin-left: 5%;
+.services__text {
+  margin-right: 10%;
   padding: 30px 20px 30px 30px;
+  background-color: $light-pink;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: $desktop-width-min) {
+    margin-right: 0;
+  }
+
+  &-box--2 {
+    background-color: $light-gray;
+    margin: -25px 0 0 10%;
+    z-index: -1;
+
+    @media (max-width: $desktop-width-min) {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  }
+
+  span {
+    font-family: $proximaBold;
+  }
+}
+
+.services__text--1 {
+  margin-left: 5%;
+  margin-right: 0;
   display: grid;
   grid-template-columns: 17% 70%;
   grid-gap: 15px 0;
   align-items: center;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   background-color: $light-pink;
   position: relative;
   z-index: 1;
@@ -122,11 +167,10 @@
   }
 }
 
-.services__text-2 {
+.services__text--2 {
   max-width: 415px;
-  padding: 30px 20px 30px 30px;
+  margin-right: 0;
   background-color: $light-gray;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: -1;
 
@@ -149,14 +193,12 @@
   }
 }
 
-.services__text-3 {
+.services__text--3 {
   margin-top: -165px;
   margin-right: 5%;
-  padding: 30px 20px 30px 30px;
   max-width: 300px;
   justify-self: flex-end;
   background-color: $light-pink;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 
   @media (max-width: $desktop-width-min) {
     margin: 0;

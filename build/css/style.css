@@ -305,7 +305,7 @@ template {
   display: none; }
 
 /**
- * Swiper 6.1.1
+ * Swiper 6.1.2
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * http://swiperjs.com
  *
@@ -313,7 +313,7 @@ template {
  *
  * Released under the MIT License
  *
- * Released on: July 31, 2020
+ * Released on: August 17, 2020
  */
 @font-face {
   font-family: swiper-icons;
@@ -871,6 +871,46 @@ main {
   font-display: swap;
   src: local("Mistral"), local("Mistral"), url("../fonts/Mistral.woff2") format("woff2"), url("../fonts/Mistral.woff") format("woff"); }
 
+@-webkit-keyframes show {
+  0% {
+    transform: translateY(15%);
+    opacity: 0; }
+  100% {
+    transform: translateY(5%);
+    opacity: 1; } }
+
+@keyframes show {
+  0% {
+    transform: translateY(15%);
+    opacity: 0; }
+  100% {
+    transform: translateY(5%);
+    opacity: 1; } }
+
+@-webkit-keyframes show-space-bottom {
+  0% {
+    transform: translateY(5%); }
+  100% {
+    transform: translateY(10%); } }
+
+@keyframes show-space-bottom {
+  0% {
+    transform: translateY(5%); }
+  100% {
+    transform: translateY(10%); } }
+
+@-webkit-keyframes show-space-top {
+  0% {
+    transform: translateY(10%); }
+  100% {
+    transform: translateY(5%); } }
+
+@keyframes show-space-top {
+  0% {
+    transform: translateY(10%); }
+  100% {
+    transform: translateY(5%); } }
+
 .main-header {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   background-color: #f5f9ff; }
@@ -1239,9 +1279,16 @@ main {
   margin-bottom: 100px;
   display: grid;
   grid-template-columns: 48% 600px 21%; }
+  @media (max-width: 1200px) {
+    .services__box {
+      grid-template-columns: 48% 520px 21%; } }
   @media (max-width: 1024px) {
     .services__box {
-      grid-template-columns: 1fr; } }
+      grid-template-columns: 1fr;
+      margin-bottom: 60px; } }
+  @media (max-width: 767px) {
+    .services__box {
+      margin-bottom: 30px; } }
 
 .services__box-text {
   display: grid;
@@ -1261,11 +1308,10 @@ main {
     font-size: 24px;
     line-height: 24px;
     letter-spacing: 0.05em;
-    text-transform: uppercase;
-    text-align: center; }
+    text-transform: uppercase; }
     @media (max-width: 1024px) {
       .services__box-text h2 {
-        padding-left: 0;
+        padding: 0 30px;
         font-size: 16px;
         line-height: 24px; } }
   .services__box-text p {
@@ -1278,7 +1324,8 @@ main {
   margin: 0 auto 0 24%; }
   @media (max-width: 1024px) {
     .services__image {
-      max-width: 500px; } }
+      max-width: 500px;
+      margin: 0 auto; } }
   @media (max-width: 767px) {
     .services__image {
       max-width: 100%;
@@ -1286,78 +1333,112 @@ main {
 
 .services__boxes {
   max-width: 600px; }
+  .services__boxes img:last-child {
+    display: none; }
 
 .services__computer {
   max-width: 250px;
-  margin: 0 28% -22% 28%;
-  position: relative; }
+  margin: 0 28% -20% 28%;
+  position: relative;
+  -webkit-animation: show, show-space-bottom, show-space-top;
+          animation: show, show-space-bottom, show-space-top;
+  -webkit-animation-duration: 2s, 3s, 3s;
+          animation-duration: 2s, 3s, 3s;
+  -webkit-animation-delay: 1s, 3s, 6s;
+          animation-delay: 1s, 3s, 6s;
+  -webkit-animation-timing-function: ease, linear, linear;
+          animation-timing-function: ease, linear, linear;
+  -webkit-animation-iteration-count: 1, infinite, infinite;
+          animation-iteration-count: 1, infinite, infinite;
+  -webkit-animation-direction: normal, alternate, alternate;
+          animation-direction: normal, alternate, alternate;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  opacity: 0; }
   @media (max-width: 1024px) {
     .services__computer {
       max-width: 200px; } }
 
-.services__text-1 {
-  margin-left: 5%;
+.services__text {
+  margin-right: 10%;
   padding: 30px 20px 30px 30px;
+  background-color: #fff5f7;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); }
+  @media (max-width: 1024px) {
+    .services__text {
+      margin-right: 0; } }
+  .services__text-box--2 {
+    background-color: #f5f9ff;
+    margin: -25px 0 0 10%;
+    z-index: -1; }
+    @media (max-width: 1024px) {
+      .services__text-box--2 {
+        margin-left: 0;
+        margin-top: 10px; } }
+  .services__text span {
+    font-family: "ProximaNova-Bold", arial, sans-serif; }
+
+.services__text--1 {
+  margin-left: 5%;
+  margin-right: 0;
   display: grid;
   grid-template-columns: 17% 70%;
   grid-gap: 15px 0;
   align-items: center;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #fff5f7;
   position: relative;
   z-index: 1; }
   @media (max-width: 1024px) {
-    .services__text-1 {
+    .services__text--1 {
       margin-left: 0;
       padding: 20px 15px 20px 25px; } }
   @media (max-width: 767px) {
-    .services__text-1 {
+    .services__text--1 {
       grid-template-columns: 24% 1fr; } }
-  .services__text-1 strong {
+  .services__text--1 strong {
     font-family: "ProximaNova-Bold", arial, sans-serif;
     font-size: 24px;
     line-height: 24px;
     color: #0a3d76; }
     @media (max-width: 1024px) {
-      .services__text-1 strong {
+      .services__text--1 strong {
         font-size: 16px;
         line-height: 16px; } }
 
-.services__text-2 {
+.services__text--2 {
   max-width: 415px;
-  padding: 30px 20px 30px 30px;
+  margin-right: 0;
   background-color: #f5f9ff;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: -1; }
   @media (max-width: 1024px) {
-    .services__text-2 {
+    .services__text--2 {
       max-width: 100%;
       z-index: 0; } }
   @media (max-width: 767px) {
-    .services__text-2 {
+    .services__text--2 {
       margin: 10px 0; } }
-  .services__text-2 p {
+  .services__text--2 p {
     max-width: 275px;
     margin-bottom: 10px; }
     @media (max-width: 1024px) {
-      .services__text-2 p {
+      .services__text--2 p {
         max-width: 100%; } }
 
-.services__text-3 {
+.services__text--3 {
   margin-top: -165px;
   margin-right: 5%;
-  padding: 30px 20px 30px 30px;
   max-width: 300px;
   justify-self: flex-end;
-  background-color: #fff5f7;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); }
+  background-color: #fff5f7; }
   @media (max-width: 1024px) {
-    .services__text-3 {
+    .services__text--3 {
       margin: 0;
       width: 100%;
       max-width: 100%; } }
-  .services__text-3 p {
+  .services__text--3 p {
     margin-bottom: 10px; }
 
 .services__text-list {
