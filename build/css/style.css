@@ -305,7 +305,7 @@ template {
   display: none; }
 
 /**
- * Swiper 6.1.1
+ * Swiper 6.1.2
  * Most modern mobile touch slider and framework with hardware accelerated transitions
  * http://swiperjs.com
  *
@@ -313,7 +313,7 @@ template {
  *
  * Released under the MIT License
  *
- * Released on: July 31, 2020
+ * Released on: August 17, 2020
  */
 @font-face {
   font-family: swiper-icons;
@@ -1239,7 +1239,7 @@ main {
   padding: 0;
   list-style: none;
   display: grid;
-  grid-template-columns: 15%; }
+  grid-template-columns: 10%; }
   .services__boxes-list li {
     height: 12vh;
     transform: translate(-20px, 0); }
@@ -1258,7 +1258,8 @@ main {
       top: 76px;
       left: 58px;
       background-color: #ffb4c5;
-      transform: skewY(-21deg); }
+      transform: skewY(-21deg);
+      transition: all 0.5s; }
     .services__boxes-list a:hover::after {
       width: 85px;
       height: 56px;

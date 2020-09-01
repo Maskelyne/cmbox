@@ -11,7 +11,7 @@
 .services__boxes-list {
   @include reset-list;
   display: grid;
-  grid-template-columns: 15%;
+  grid-template-columns: 10%;
 
   li {
     height: 12vh;

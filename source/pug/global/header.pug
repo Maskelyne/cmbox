@@ -49,4 +49,7 @@ mixin header()
           a(href="tel:375296086368") +375 (29) 608-63-68
           +social-list.social-list--tablet
       .main-header__box
-        +img('svg', 'icon-mobile', 'svg', '24', '24', '')
+        a.main-header__link-phone(href="tel:375296086368")
+          +img('svg', 'icon-mobile', 'svg', '9', '18', 'Телефон')
+          span +375 (29) 608-63-68
+        +social-list
