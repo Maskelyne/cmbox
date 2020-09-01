@@ -1,0 +1,150 @@
+extends ../layout/page-layout
+
+block variables
+  - var title = "Сайт"
+
+block header
+  +header
+
+block main
+
+  -
+    const boxesList = [
+      {
+        link: 'services-site.html',
+        path: 'boxes',
+        name: 'box-site',
+        format: 'svg',
+        width: '260',
+        height: '190',
+        altText: 'Сайт'
+      },
+      {
+        link: 'services-sales.html',
+        path: 'boxes',
+        name: 'box-sales',
+        format: 'svg',
+        width: '260',
+        height: '190',
+        altText: 'Воронка продаж'
+      },
+      {
+        link: '#',
+        path: 'boxes',
+        name: 'box-seo',
+        format: 'svg',
+        width: '260',
+        height: '190',
+        altText: 'Seo'
+      },
+      {
+        link: '#',
+        path: 'boxes',
+        name: 'box-contecst',
+        format: 'svg',
+        width: '260',
+        height: '190',
+        altText: 'Seo'
+      },
+      {
+        link: '#',
+        path: 'boxes',
+        name: 'box-social',
+        format: 'svg',
+        width: '260',
+        height: '190',
+        altText: 'Seo'
+      },
+      {
+        link: '#',
+        path: 'boxes',
+        name: 'box-marketing',
+        format: 'svg',
+        width: '260',
+        height: '190',
+        altText: 'Seo'
+      },
+      {
+        link: '#',
+        path: 'boxes',
+        name: 'box-crm',
+        format: 'svg',
+        width: '260',
+        height: '190',
+        altText: 'Seo'
+      },
+    ];
+
+  -
+    const servicesList = [
+      {
+        text: 'воронка продаж'
+      },
+      {
+        text: 'видео-контент'
+      },
+      {
+        text: 'лид-магнит'
+      },
+      {
+        text: 'чат-боты'
+      },
+      {
+        text: 'smm'
+      },
+      {
+        text: 'crm'
+      }
+    ];
+
+  -
+    const servicesList2 = [
+      {
+        text: 'WordPress'
+      },
+      {
+        text: '1C-Bitrix'
+      },
+      {
+        text: 'Laravel'
+      },
+    ];
+
+  main
+    .services
+      .services__wrapper.container
+        h1 Услуги
+      .services__box
+        ul.services__boxes-list
+          each item in boxesList
+            li
+              a(href= item.link)
+                +img(item.path, item.name, item.format, item.width, item.height, item.altText)
+        .services__image
+          .services__computer
+            +img('services', 'big-box-tv', 'svg', '257', '240', 'Компьютер')
+          .services__boxes
+            +img('services', 'big-box-active', 'svg', '640', '380', 'Сайт')
+            +img('services', 'big-box-hover', 'svg', '640', '380', 'Сайт')
+        .services__box-text
+          h2 Создадим или модернизируем сайт
+          .services__text.services__text--1
+            strong 2000
+            p Сайт — полноценный инструмент продажи в интернете из-за слабой конкуренции.
+            strong 2000
+            p Сайт — не даёт той же ценности, что и раньше без современных маркетинговых инструментов, но является первым уровнем комплексной системы продаж в интернете.
+          .services__text.services__text--2
+            p В итоге сайты подготовлены для всех эффективных маркетинговых инструментов:
+            ul.services__text-list
+              each item in servicesList
+                li
+                  span= item.text
+          .services__text.services__text--3
+            p Для разработки сайтов мы используем популярные платформы в СНГ:
+            ul.services__text-list
+              each item in servicesList2
+                li
+                  strong= item.text
+
+block footer
+  +footer
