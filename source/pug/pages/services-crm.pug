@@ -1,7 +1,7 @@
 extends ../layout/page-layout
 
 block variables
-  - var title = "Сайт"
+  - var title = "CRM"
 
 block header
   +header
@@ -78,35 +78,16 @@ block main
   -
     const servicesList = [
       {
-        text: 'воронка продаж'
+        text: 'собирает базовую и маркетинговую информацию о лидах, клиентах и компаниях в единое ядро'
       },
       {
-        text: 'видео-контент'
+        text: 'помогает выстраивать и систематизировать работу отделов продаж и компании в целом'
       },
       {
-        text: 'лид-магнит'
+        text: 'формирует дополнительную отчётность и аналитику'
       },
       {
-        text: 'чат-боты'
-      },
-      {
-        text: 'smm'
-      },
-      {
-        text: 'crm'
-      }
-    ];
-
-  -
-    const servicesList2 = [
-      {
-        text: 'WordPress'
-      },
-      {
-        text: '1C-Bitrix'
-      },
-      {
-        text: 'Laravel'
+        text: 'автоматизирует документооборот'
       },
     ];
 
@@ -122,29 +103,20 @@ block main
                 +img(item.path, item.name, item.format, item.width, item.height, item.altText)
         .services__image
           .services__computer
-            +img('services', 'icon-tv', 'svg', '250', '250', 'Компьютер')
+            +img('services', 'icon-crm', 'svg', '250', '250', 'CRM')
           .services__boxes
-            +img('services', 'big-box-active', 'svg', '640', '380', 'Сайт')
-            +img('services', 'big-box-hover', 'svg', '640', '380', 'Сайт')
-        .services__box-text
-          h2 Создадим или модернизируем сайт
-          .services__text.services__text--1
-            strong 2000
-            p Сайт — полноценный инструмент продажи в интернете из-за слабой конкуренции.
-            strong 2000
-            p Сайт — не даёт той же ценности, что и раньше без современных маркетинговых инструментов, но является первым уровнем комплексной системы продаж в интернете.
-          .services__text.services__text--2
-            p В итоге сайты подготовлены для всех эффективных маркетинговых инструментов:
+            +img('services', 'big-box-active', 'svg', '640', '380', 'Коробка')
+            +img('services', 'big-box-hover', 'svg', '640', '380', 'Коробка')
+        .services__box-text.services__box-text--grid
+          h2 Подберем и настроим подходящую для вас crm
+          .services__text.services__text-box--1.services__text-box
+            strong CRM
+            p — это система для выстраивания взаимоотношений с клиентами, в связке с маркетинговыми инструментами становится максимально эффективной.
+          .services__text.services__text-box--2
+            p.services__text-dark Основной функционал:
             ul.services__text-list
               each item in servicesList
                 li
                   p= item.text
-          .services__text.services__text--3
-            p Для разработки сайтов мы используем популярные платформы в СНГ:
-            ul.services__text-list
-              each item in servicesList2
-                li
-                  strong= item.text
-
 block footer
   +footer

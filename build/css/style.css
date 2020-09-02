@@ -801,19 +801,19 @@ h1 {
   margin: 0;
   font-size: 48px;
   line-height: 48px;
-  font-weight: 800; }
+  color: #333333; }
 
 h2 {
   margin: 0;
+  font-family: "ProximaNova-Bold", arial, sans-serif;
   font-size: 24px;
   line-height: 24px;
-  font-weight: 800; }
+  color: #333333; }
 
 h3 {
   margin: 0;
   font-size: 18px;
-  line-height: 18px;
-  font-weight: 800; }
+  line-height: 18px; }
 
 body {
   min-width: 320px;
@@ -1141,8 +1141,15 @@ main {
         z-index: 1; } }
 
 .main-footer {
+  margin-top: 100px;
   background-color: #f5f9ff;
   border-top: solid 2px #0a3d76; }
+  @media (max-width: 1024px) {
+    .main-footer {
+      margin-top: 60px; } }
+  @media (max-width: 767px) {
+    .main-footer {
+      margin-top: 30px; } }
 
 .main-footer__wrapper {
   padding: 10px 30px;
@@ -1274,9 +1281,22 @@ main {
   line-height: 48px;
   text-align: center;
   color: #000000; }
+  @media (max-width: 767px) {
+    .services__wrapper h1 {
+      font-size: 24px;
+      line-height: 24px; } }
+
+.services__box-wrapper {
+  display: grid;
+  grid-template-rows: 5% 25% 20% 21% 16% 1fr; }
+  @media (max-width: 1024px) {
+    .services__box-wrapper {
+      grid-template-rows: 3% 33% 21% 21% 14% 1fr; } }
+  @media (max-width: 767px) {
+    .services__box-wrapper {
+      grid-template-rows: 1fr; } }
 
 .services__box {
-  margin-bottom: 100px;
   display: grid;
   grid-template-columns: 48% 600px 21%; }
   @media (max-width: 1200px) {
@@ -1284,26 +1304,24 @@ main {
       grid-template-columns: 48% 520px 21%; } }
   @media (max-width: 1024px) {
     .services__box {
-      grid-template-columns: 1fr;
-      margin-bottom: 60px; } }
-  @media (max-width: 767px) {
-    .services__box {
-      margin-bottom: 30px; } }
+      grid-template-columns: 1fr; } }
 
 .services__box-text {
   display: grid;
+  grid-template-rows: 8% 34% 1fr;
   position: relative;
   z-index: 1; }
   @media (max-width: 1024px) {
     .services__box-text {
-      margin: 0 17% 0 24%; } }
+      margin: 0 17% 0 24%;
+      grid-template-rows: 4% 1fr 1fr; } }
   @media (max-width: 767px) {
     .services__box-text {
       margin: 0 auto;
-      padding: 0 10px; } }
+      padding: 0 10px;
+      grid-template-rows: 7% 1fr 1fr; } }
   .services__box-text h2 {
     padding-left: 30px;
-    margin-bottom: 15px;
     font-family: "ProximaNova-Bold", arial, sans-serif;
     font-size: 24px;
     line-height: 24px;
@@ -1311,14 +1329,27 @@ main {
     text-transform: uppercase; }
     @media (max-width: 1024px) {
       .services__box-text h2 {
-        padding: 0 30px;
+        padding: 0 35px;
         font-size: 16px;
         line-height: 24px; } }
+    @media (max-width: 767px) {
+      .services__box-text h2 {
+        padding: 0 20px; } }
   .services__box-text p {
     margin: 0;
     font-size: 16px;
     line-height: 24px;
     color: #333333; }
+  .services__box-text--grid {
+    grid-template-rows: 15% auto auto 12%; }
+    @media (max-width: 767px) {
+      .services__box-text--grid {
+        grid-template-rows: 12% auto auto; } }
+  .services__box-text--grid-1 {
+    grid-template-rows: 12% 1fr 12%; }
+    @media (max-width: 1024px) {
+      .services__box-text--grid-1 {
+        grid-template-rows: 10% 1fr; } }
 
 .services__image {
   margin: 0 auto 0 24%; }
@@ -1342,10 +1373,10 @@ main {
   position: relative;
   -webkit-animation: show, show-space-bottom, show-space-top;
           animation: show, show-space-bottom, show-space-top;
-  -webkit-animation-duration: 2s, 3s, 3s;
-          animation-duration: 2s, 3s, 3s;
-  -webkit-animation-delay: 1s, 3s, 6s;
-          animation-delay: 1s, 3s, 6s;
+  -webkit-animation-duration: 2.5s, 3.2s, 3.2s;
+          animation-duration: 2.5s, 3.2s, 3.2s;
+  -webkit-animation-delay: 1.5s, 3.5s, 6.5s;
+          animation-delay: 1.5s, 3.5s, 6.5s;
   -webkit-animation-timing-function: ease, linear, linear;
           animation-timing-function: ease, linear, linear;
   -webkit-animation-iteration-count: 1, infinite, infinite;
@@ -1377,8 +1408,34 @@ main {
       .services__text-box--2 {
         margin-left: 0;
         margin-top: 10px; } }
+    .services__text-box--2 .services__text-dark {
+      font-family: "ProximaNova-Bold", arial, sans-serif;
+      margin: 10px 0; }
+  .services__text-box--3 {
+    margin: 0;
+    background-color: #f5f9ff; }
   .services__text span {
     font-family: "ProximaNova-Bold", arial, sans-serif; }
+
+.services__text-box {
+  display: grid;
+  grid-template-columns: 17% 1fr;
+  align-items: center; }
+  @media (max-width: 767px) {
+    .services__text-box {
+      grid-template-columns: 24% 1fr; } }
+  .services__text-box strong {
+    font-family: "ProximaNova-Bold", arial, sans-serif;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #092340; }
+    @media (max-width: 1024px) {
+      .services__text-box strong {
+        color: #0a3d76; } }
+    @media (max-width: 767px) {
+      .services__text-box strong {
+        font-size: 16px; } }
 
 .services__text--1 {
   margin-left: 5%;
@@ -1441,16 +1498,22 @@ main {
   .services__text--3 p {
     margin-bottom: 10px; }
 
+.services__info .services__text-list {
+  margin-bottom: 40px; }
+  @media (max-width: 1024px) {
+    .services__info .services__text-list {
+      margin-bottom: 20px; } }
+
 .services__text-list {
   margin: 0;
   padding: 0;
   list-style: none; }
-  .services__text-list span,
+  .services__text-list p,
   .services__text-list strong {
     padding-left: 20px;
     position: relative;
     display: block; }
-    .services__text-list span::before,
+    .services__text-list p::before,
     .services__text-list strong::before {
       width: 10px;
       height: 2px;
@@ -1478,11 +1541,29 @@ main {
     position: relative;
     display: block; }
     .services__boxes-list a img {
-      transition: all 0.5s;
+      transition: all 1s;
       transform: translate(-40px, 0); }
     .services__boxes-list a:hover img {
-      transition: all 0.5s;
+      transition: all 1s;
       transform: translate(-20px, 0); }
+
+.services__info {
+  max-width: 680px;
+  margin: 0 auto; }
+  @media (max-width: 1024px) {
+    .services__info {
+      margin: 0 24% 0 27%; } }
+  @media (max-width: 767px) {
+    .services__info {
+      margin: 0;
+      padding: 0 10px; } }
+  .services__info h2 {
+    text-align: center;
+    color: #092340; }
+    @media (max-width: 1024px) {
+      .services__info h2 {
+        font-size: 16px;
+        color: #0a3d76; } }
 
 .social-list {
   margin: 0;
