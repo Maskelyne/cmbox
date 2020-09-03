@@ -1,0 +1,82 @@
+.teams__wrapper {
+  @media (max-width: $desktop-width-min) {
+    display: grid;
+    grid-row-gap: 30px;
+  }
+
+  h2 {
+    margin: 40px 0 30px 0;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media (max-width: $desktop-width-min) {
+      margin: 60px 0 0 0;
+    }
+  }
+
+  h3 {
+    margin-bottom: 10px;
+    font-family: $mistral;
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: $normal;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+
+    @media (max-width: $tablet-width) {
+      font-size: 36px;
+      line-height: 36px;
+      text-align: center;
+    }
+  }
+}
+
+.teams__box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  grid-column-gap: 6%;
+
+  @media (max-width: $desktop-width-min) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.teams__box-text {
+  @media (max-width: $desktop-width-min) {
+    padding: 0 90px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 0;
+  }
+
+  p {
+    margin: 0 0 ;
+  }
+}
+
+.teams__image {
+  @media (max-width: $desktop-width-min) {
+    max-width: 500px;
+    margin: 0 auto;
+
+    &:nth-child(2n) {
+      grid-row: 1;
+    }
+  }
+}
+
+.teams__image--marketing {
+  @media (max-width: $desktop-width-min) {
+    grid-row: 1;
+  }
+}
+
+.teams__image--row {
+  grid-row: 1;
+
+  @media (max-width: $desktop-width-min) {
+    grid-row: auto;
+  }
+}

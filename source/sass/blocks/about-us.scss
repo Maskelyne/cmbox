@@ -1,0 +1,72 @@
+.about-us {
+  h1 {
+    margin: 25px 0;
+    text-align: center;
+  }
+}
+
+.about-us__box {
+  display: grid;
+  grid-template-columns: 46% 1fr;
+  align-items: center;
+
+  @media (max-width: $desktop-width-min) {
+    grid-template-columns: 1fr;
+  }
+
+  p {
+    margin: 0 0 30px 0;
+
+    @media (max-width: $tablet-width) {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.about-us__box-text {
+  @media (max-width: $desktop-width-min) {
+    padding: 0 90px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.about-us__image {
+  @media (max-width: $desktop-width-min) {
+    grid-row: 1;
+    margin: 0 auto;
+  }
+}
+
+.about-us__list {
+  @include reset-list;
+  max-width: 495px;
+  margin-left: 10px;
+
+  p {
+    margin: 0 0 15px 0;
+    padding-left: 60px;
+    position: relative;
+
+    &::before {
+      width: 48px;
+      height: 48px;
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      background-image: url("../img/about-us/icon-loupe.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-left: 0;
+  }
+
+  span {
+    font-family: $proximaBold;
+  }
+}
