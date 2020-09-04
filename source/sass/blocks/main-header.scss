@@ -5,12 +5,12 @@
 
 .main-header__wrapper {
   display: grid;
-  grid-template-columns: 25% 50% auto;
+  grid-template-columns: 17% 58% auto;
   min-height: 75px;
   align-items: center;
 
   @media (max-width: $desktop-width) {
-    grid-template-columns: 20% 50% auto;
+    grid-template-columns: 13% 58% auto;
     position: relative;
   }
 
@@ -32,6 +32,7 @@
 
 .main-header__list {
   @include reset-list;
+  max-width: 600px;
   display: grid;
   grid-template-columns: repeat(6, auto);
   flex-wrap: wrap;
@@ -47,7 +48,6 @@
   a {
     font-size: 18px;
     line-height: 18px;
-    color: $black;
 
     @media (max-width: $tablet-width) {
       padding: 10px 0;

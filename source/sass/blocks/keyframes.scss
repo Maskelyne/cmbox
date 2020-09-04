@@ -29,3 +29,23 @@
     transform: translateY(5%);
   }
 }
+
+@keyframes teams-svg-top {
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(15%);
+  }
+}
+
+@keyframes teams-svg-bottom {
+  0% {
+    transform: translateY(15%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}

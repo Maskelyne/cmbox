@@ -19,7 +19,7 @@
   position: relative;
 
   @media (max-width: $desktop-width-min) {
-    padding: 0 90px;
+    padding: 0 100px;
   }
 
   @media (max-width: $tablet-width) {
@@ -69,14 +69,11 @@
 
 .clients__image-list {
   @include reset-list;
-  // display: grid;
-  // grid-template-columns: repeat(auto-fit, minmax(17%, 1fr));
   align-items: center;
   grid-gap: 30px 0;
 
   @media (max-width: $desktop-width-min) {
     padding: 0 30px;
-    // grid-template-columns: repeat(auto-fit, minmax(35%, 1fr));
 
     li {
       display: grid;
@@ -88,7 +85,7 @@
     padding: 0;
   }
 
-  @media (max-width: $mobile-width-min) {
+  @media (max-width: $mobile-width) {
     grid-template-columns: 1fr;
   }
 }

@@ -15,8 +15,8 @@ block main
         path: 'png',
         name: 'logo-deepsleep',
         format: 'png',
-        width: '270',
-        height: '80',
+        width: '240',
+        height: '70',
         altText: 'Дипслип'
       },
       {
@@ -24,8 +24,8 @@ block main
         path: 'png',
         name: 'logo-exim',
         format: 'png',
-        width: '270',
-        height: '80',
+        width: '240',
+        height: '70',
         altText: 'Эксимэлектро'
       },
       {
@@ -33,8 +33,8 @@ block main
         path: 'png',
         name: 'logo-torwood',
         format: 'png',
-        width: '270',
-        height: '80',
+        width: '240',
+        height: '70',
         altText: 'Торвуд'
       },
       {
@@ -42,8 +42,8 @@ block main
         path: 'png',
         name: 'logo-techimport',
         format: 'png',
-        width: '270',
-        height: '80',
+        width: '240',
+        height: '70',
         altText: 'Техимпорт'
       },
     ];
@@ -73,7 +73,22 @@ block main
                   span  Гарантируем хороший результат
                   |  и фиксируем это в договоре для вашего спокойствия.
           .about-us__image
-            +img('about-us', 'img-boss', 'svg', '815', '430', 'Руководство')
+            +picture('about-us', 'img-boss', 'img-boss-mobile', 'svg', '815', '430', 'Руководство', '767')
+            ul.about-us__nav-list
+              li
+                a.about-us__link.about-us__link--crm(href="#") Crm
+              li
+                a.about-us__link.about-us__link--sales(href="#") Воронка продаж
+              li
+                a.about-us__link.about-us__link--context(href="#") Контекст
+              li
+                a.about-us__link.about-us__link--marketing(href="#") Видеомаркетинг
+              li
+                a.about-us__link.about-us__link--socseti(href="#") Соцсети
+              li
+                a.about-us__link.about-us__link--seo(href="#") Seo
+              li
+                a.about-us__link.about-us__link--site(href="#") Сайт
     section.clients
       .clients__wrapper.container
         h2 Наши клиенты
@@ -95,13 +110,17 @@ block main
             h3 Маркетинг
             p Web-дизайн – это важная отрасль веб разработки сайта, основной задачей которой является проектирование пользовательского интерфейса. Это не просто привлекательная картинка, а имидживое решение, которое сделает сайт узнаваемым среди тысяч других и сформирует деловую репутацию компании.
           .teams__image.teams__image--marketing
-            +img('about-us', 'img-marketing', 'svg', '650', '590', 'Маркетинг')
+            +img('about-us', 'img-marketing', 'svg', '500', '570', 'Маркетинг')
+            +img('about-us', 'marketing-element-1', 'svg', '200', '97', 'Анализ конкурентов')
+            +img('about-us', 'marketing-element-2', 'svg', '200', '97', 'Выявление слабых сторон')
+            +img('about-us', 'marketing-element-3', 'svg', '200', '97', 'Маркетинговая стратегия')
         .teams__box
           .teams__box-text
             h3 Дизайн
             p Web-дизайн – это важная отрасль веб разработки сайта, основной задачей которой является проектирование пользовательского интерфейса. Это не просто привлекательная картинка, а имидживое решение, которое сделает сайт узнаваемым среди тысяч других и сформирует деловую репутацию компании.
-          .teams__image.teams__image--row
+          .teams__image.teams__image--designers.teams__image--row
             +img('about-us', 'img-designers', 'svg', '530', '525', 'Дизайнеры')
+            +img('about-us', 'designers-element-1', 'svg', '30', '37', 'Фигма')
         .teams__box
           .teams__box-text
             h3 Разработка
@@ -126,6 +145,22 @@ block main
             p SMM-продвижение в социальных сетях наряду с другими видами рекламы, чаще всего — таргетированной и контекстной рекламой, составляет основу многих маркетинговых стратегий. Нередко маркетологи принимают решение в пользу одного только SMM — для некоторых брендов работы с соцсетями, прямых коммуникаций с клиентом бывает более чем достаточно.
           .teams__image.teams__image--row
             +img('about-us', 'img-smm', 'svg', '475', '590', 'SMM')
-
+        .teams__box.teams__box--mans
+          .teams__box-text
+            h3 Видеомаркетинг
+            p Видеомаркетинг — это деятельность, направленная на формирование потребностей у людей в каком-либо товаре с помощью видео. Является очень мощным инструментом для продвижения бизнеса.
+          .teams__image.teams__image--box
+            +img('about-us', 'img-mans', 'svg', '1140', '617', 'Операторы')
+          .teams__image-svg-animate
+            +img('about-us', 'img-operator', 'svg', '300', '405', 'Оператор-постановщик')
+            +img('about-us', 'img-katerina', 'svg', '600', '485', 'Имиджмейкер')
+            .teams__box-text.teams__box-text--animate
+              h3 Стиль
+              p Имиджмейкер выступает организатором и связующим звеном между всеми участниками творческого процесса.
+          .teams__box-text.teams__box-text--tablet
+            h3 Стиль
+            p Имиджмейкер выступает организатором и связующим звеном между всеми участниками творческого процесса.
+            h3 Видеомаркетинг
+            p Видеомаркетинг — это деятельность, направленная на формирование потребностей у людей в каком-либо товаре с помощью видео. Является очень мощным инструментом для продвижения бизнеса.
 block footer
   +footer
