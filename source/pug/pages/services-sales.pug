@@ -120,7 +120,7 @@ block main
             li
               a(href= item.link)
                 +img(item.path, item.name, item.format, item.width, item.height, item.altText)
-        .services__image
+        .services__images
           .services__computer
             +img('services', 'icon-sales', 'svg', '257', '240', 'Воронка')
           .services__boxes
@@ -138,5 +138,6 @@ block main
             p С таким подходом, даже если потенциальный покупатель не купит у вас сегодня, он может посоветовать вас своему знакомому. В рамках этой концепции
               span  очень важно собирать отзывы и работать с негативом,
               |  это влияет на продажи и отношение к вашему бренду.
+
 block footer
   +footer
