@@ -12,7 +12,7 @@ block main
     const boxesList = [
       {
         link: 'services-site.html',
-        path: 'boxes',
+        path: 'services',
         name: 'box-site',
         format: 'svg',
         width: '260',
@@ -21,7 +21,7 @@ block main
       },
       {
         link: 'services-sales.html',
-        path: 'boxes',
+        path: 'services',
         name: 'box-sales',
         format: 'svg',
         width: '260',
@@ -29,8 +29,8 @@ block main
         altText: 'Воронка продаж'
       },
       {
-        link: '#',
-        path: 'boxes',
+        link: 'services-seo.html',
+        path: 'services',
         name: 'box-seo',
         format: 'svg',
         width: '260',
@@ -38,8 +38,8 @@ block main
         altText: 'Seo'
       },
       {
-        link: '#',
-        path: 'boxes',
+        link: 'services-context.html',
+        path: 'services',
         name: 'box-contecst',
         format: 'svg',
         width: '260',
@@ -47,8 +47,8 @@ block main
         altText: 'Seo'
       },
       {
-        link: '#',
-        path: 'boxes',
+        link: 'services-social.html',
+        path: 'services',
         name: 'box-social',
         format: 'svg',
         width: '260',
@@ -56,8 +56,8 @@ block main
         altText: 'Seo'
       },
       {
-        link: '#',
-        path: 'boxes',
+        link: 'services-marketing.html',
+        path: 'services',
         name: 'box-marketing',
         format: 'svg',
         width: '260',
@@ -65,8 +65,8 @@ block main
         altText: 'Seo'
       },
       {
-        link: '#',
-        path: 'boxes',
+        link: 'services-crm.html',
+        path: 'services',
         name: 'box-crm',
         format: 'svg',
         width: '260',
@@ -110,7 +110,7 @@ block main
       },
     ];
 
-  main
+  main.page-main
     .services
       .services__wrapper.container
         h1 Услуги
@@ -122,7 +122,7 @@ block main
                 +img(item.path, item.name, item.format, item.width, item.height, item.altText)
         .services__image
           .services__computer
-            +img('services', 'big-box-tv', 'svg', '257', '240', 'Компьютер')
+            +img('services', 'icon-tv', 'svg', '250', '250', 'Компьютер')
           .services__boxes
             +img('services', 'big-box-active', 'svg', '640', '380', 'Сайт')
             +img('services', 'big-box-hover', 'svg', '640', '380', 'Сайт')
@@ -138,7 +138,7 @@ block main
             ul.services__text-list
               each item in servicesList
                 li
-                  span= item.text
+                  p= item.text
           .services__text.services__text--3
             p Для разработки сайтов мы используем популярные платформы в СНГ:
             ul.services__text-list

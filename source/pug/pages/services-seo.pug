@@ -1,7 +1,7 @@
 extends ../layout/page-layout
 
 block variables
-  - var title = "Услуги"
+  - var title = "SEO"
 
 block header
   +header
@@ -11,8 +11,8 @@ block main
   -
     const boxesList = [
       {
-        link: '#',
-        path: 'boxes',
+        link: 'services-site.html',
+        path: 'services',
         name: 'box-site',
         format: 'svg',
         width: '260',
@@ -20,8 +20,8 @@ block main
         altText: 'Сайт'
       },
       {
-        link: '#',
-        path: 'boxes',
+        link: 'services-sales.html',
+        path: 'services',
         name: 'box-sales',
         format: 'svg',
         width: '260',
@@ -29,8 +29,8 @@ block main
         altText: 'Воронка продаж'
       },
       {
-        link: '#',
-        path: 'boxes',
+        link: 'services-seo.html',
+        path: 'services',
         name: 'box-seo',
         format: 'svg',
         width: '260',
@@ -38,8 +38,8 @@ block main
         altText: 'Seo'
       },
       {
-        link: '#',
-        path: 'boxes',
+        link: 'services-context.html',
+        path: 'services',
         name: 'box-contecst',
         format: 'svg',
         width: '260',
@@ -47,8 +47,8 @@ block main
         altText: 'Seo'
       },
       {
-        link: '#',
-        path: 'boxes',
+        link: 'services-social.html',
+        path: 'services',
         name: 'box-social',
         format: 'svg',
         width: '260',
@@ -56,8 +56,8 @@ block main
         altText: 'Seo'
       },
       {
-        link: '#',
-        path: 'boxes',
+        link: 'services-marketing.html',
+        path: 'services',
         name: 'box-marketing',
         format: 'svg',
         width: '260',
@@ -65,8 +65,8 @@ block main
         altText: 'Seo'
       },
       {
-        link: '#',
-        path: 'boxes',
+        link: 'services-crm.html',
+        path: 'services',
         name: 'box-crm',
         format: 'svg',
         width: '260',
@@ -110,7 +110,7 @@ block main
       },
     ];
 
-  main
+  main.page-main
     .services
       .services__wrapper.container
         h1 Услуги
@@ -122,7 +122,7 @@ block main
                 +img(item.path, item.name, item.format, item.width, item.height, item.altText)
         .services__image
           .services__computer
-            +img('services', 'big-box-tv', 'svg', '257', '240', 'Компьютер')
+            +img('services', 'icon-context', 'svg', '257', '240', 'Контекст')
           .services__boxes
             +img('services', 'big-box-active', 'svg', '640', '380', 'Сайт')
             +img('services', 'big-box-hover', 'svg', '640', '380', 'Сайт')

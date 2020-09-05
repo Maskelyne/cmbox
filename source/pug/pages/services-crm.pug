@@ -1,0 +1,122 @@
+extends ../layout/page-layout
+
+block variables
+  - var title = "CRM"
+
+block header
+  +header
+
+block main
+
+  -
+    const boxesList = [
+      {
+        link: 'services-site.html',
+        path: 'services',
+        name: 'box-site',
+        format: 'svg',
+        width: '260',
+        height: '190',
+        altText: 'Сайт'
+      },
+      {
+        link: 'services-sales.html',
+        path: 'services',
+        name: 'box-sales',
+        format: 'svg',
+        width: '260',
+        height: '190',
+        altText: 'Воронка продаж'
+      },
+      {
+        link: 'services-seo.html',
+        path: 'services',
+        name: 'box-seo',
+        format: 'svg',
+        width: '260',
+        height: '190',
+        altText: 'Seo'
+      },
+      {
+        link: 'services-context.html',
+        path: 'services',
+        name: 'box-contecst',
+        format: 'svg',
+        width: '260',
+        height: '190',
+        altText: 'Seo'
+      },
+      {
+        link: 'services-social.html',
+        path: 'services',
+        name: 'box-social',
+        format: 'svg',
+        width: '260',
+        height: '190',
+        altText: 'Seo'
+      },
+      {
+        link: 'services-marketing.html',
+        path: 'services',
+        name: 'box-marketing',
+        format: 'svg',
+        width: '260',
+        height: '190',
+        altText: 'Seo'
+      },
+      {
+        link: 'services-crm.html',
+        path: 'services',
+        name: 'box-crm',
+        format: 'svg',
+        width: '260',
+        height: '190',
+        altText: 'Seo'
+      },
+    ];
+
+  -
+    const servicesList = [
+      {
+        text: 'собирает базовую и маркетинговую информацию о лидах, клиентах и компаниях в единое ядро'
+      },
+      {
+        text: 'помогает выстраивать и систематизировать работу отделов продаж и компании в целом'
+      },
+      {
+        text: 'формирует дополнительную отчётность и аналитику'
+      },
+      {
+        text: 'автоматизирует документооборот'
+      },
+    ];
+
+  main.page-main
+    .services
+      .services__wrapper.container
+        h1 Услуги
+      .services__box
+        ul.services__boxes-list
+          each item in boxesList
+            li
+              a(href= item.link)
+                +img(item.path, item.name, item.format, item.width, item.height, item.altText)
+        .services__image
+          .services__computer
+            +img('services', 'icon-crm', 'svg', '250', '250', 'CRM')
+          .services__boxes
+            +img('services', 'big-box-active', 'svg', '640', '380', 'Коробка')
+            +img('services', 'big-box-hover', 'svg', '640', '380', 'Коробка')
+        .services__box-text.services__box-text--grid
+          h2 Подберем и настроим подходящую для вас crm
+          .services__text.services__text-box--1.services__text-box
+            strong CRM
+            p — это система для выстраивания взаимоотношений с клиентами, в связке с маркетинговыми инструментами становится максимально эффективной.
+          .services__text.services__text-box--2
+            p.services__text-dark Основной функционал:
+            ul.services__text-list
+              each item in servicesList
+                li
+                  p= item.text
+block footer
+  +footer
