@@ -6,3 +6,4 @@
 */
 
 //= modules/header-nav.js
+//= modules/clients-slider.js

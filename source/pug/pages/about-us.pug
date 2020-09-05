@@ -1,0 +1,166 @@
+extends ../layout/page-layout
+
+block variables
+  - var title = "О нас"
+
+block header
+  +header
+
+block main
+
+  -
+    const imageList = [
+      {
+        link: '#',
+        path: 'png',
+        name: 'logo-deepsleep',
+        format: 'png',
+        width: '240',
+        height: '70',
+        altText: 'Дипслип'
+      },
+      {
+        link: '#',
+        path: 'png',
+        name: 'logo-exim',
+        format: 'png',
+        width: '240',
+        height: '70',
+        altText: 'Эксимэлектро'
+      },
+      {
+        link: '#',
+        path: 'png',
+        name: 'logo-torwood',
+        format: 'png',
+        width: '240',
+        height: '70',
+        altText: 'Торвуд'
+      },
+      {
+        link: '#',
+        path: 'png',
+        name: 'logo-techimport',
+        format: 'png',
+        width: '240',
+        height: '70',
+        altText: 'Техимпорт'
+      },
+    ];
+
+  main.page-main
+    section.about-us
+      .about-us__wrapper.container
+        h1 О нас
+        .about-us__box
+          .about-us__box-text
+            p Мы являемся агентством веб- и бизнес-аналитики. Основное направление нашей деятельности – это бизнес-аналитика и ключевые течения интернет-маркетинга: веб-аналитика, SEO-продвижение, контекстная реклама, SMM, а также ряд других сопутствующих услуг.
+            ul.about-us__list
+              li
+                p Используем
+                  span  самые эффективные инструменты
+                  |  для создания комплексного продвижения в интернете.
+              li
+                p Всегда
+                  span  ход рекламной компании,
+                  |  чтобы оперативно внести корректировки для повышения её эффективности.
+              li
+                p Всегда
+                  span  ответственно относимся
+                  |  к исполнению нашей работы.
+              li
+                p
+                  span  Гарантируем хороший результат
+                  |  и фиксируем это в договоре для вашего спокойствия.
+          .about-us__image
+            +picture('about-us', 'img-boss', 'img-boss-mobile', 'svg', '815', '430', 'Руководство', '767')
+            ul.about-us__nav-list
+              li
+                a.about-us__link.about-us__link--crm(href="#") Crm
+              li
+                a.about-us__link.about-us__link--sales(href="#") Воронка продаж
+              li
+                a.about-us__link.about-us__link--context(href="#") Контекст
+              li
+                a.about-us__link.about-us__link--marketing(href="#") Видеомаркетинг
+              li
+                a.about-us__link.about-us__link--socseti(href="#") Соцсети
+              li
+                a.about-us__link.about-us__link--seo(href="#") Seo
+              li
+                a.about-us__link.about-us__link--site(href="#") Сайт
+    section.clients
+      .clients__wrapper.container
+        h2 Наши клиенты
+        .clients__slider-wrapper
+          .clients__swiper-container.swiper-container
+            ul.clients__image-list.swiper-wrapper
+              each item in imageList
+                li.swiper-slide
+                  .clients__image-box
+                    a(href= item.link)
+                      +img(item.path, item.name, item.format, item.width, item.height, item.altText)
+            .clients__swiper-button-prev.swiper-button-prev
+            .clients__swiper-button-next.swiper-button-next
+    section.teams
+      .teams__wrapper.container
+        h2 Наша команда
+        .teams__box
+          .teams__box-text
+            h3 Маркетинг
+            p Web-дизайн – это важная отрасль веб разработки сайта, основной задачей которой является проектирование пользовательского интерфейса. Это не просто привлекательная картинка, а имидживое решение, которое сделает сайт узнаваемым среди тысяч других и сформирует деловую репутацию компании.
+          .teams__image.teams__image--marketing
+            +img('about-us', 'img-marketing', 'svg', '500', '570', 'Маркетинг')
+            +img('about-us', 'marketing-element-1', 'svg', '200', '97', 'Анализ конкурентов')
+            +img('about-us', 'marketing-element-2', 'svg', '200', '97', 'Выявление слабых сторон')
+            +img('about-us', 'marketing-element-3', 'svg', '200', '97', 'Маркетинговая стратегия')
+        .teams__box
+          .teams__box-text
+            h3 Дизайн
+            p Web-дизайн – это важная отрасль веб разработки сайта, основной задачей которой является проектирование пользовательского интерфейса. Это не просто привлекательная картинка, а имидживое решение, которое сделает сайт узнаваемым среди тысяч других и сформирует деловую репутацию компании.
+          .teams__image.teams__image--designers.teams__image--row
+            +img('about-us', 'img-designers', 'svg', '530', '525', 'Дизайнеры')
+            +img('about-us', 'designers-element-1', 'svg', '30', '37', 'Фигма')
+        .teams__box
+          .teams__box-text
+            h3 Разработка
+            p Смысл веб-разработки заключается в написании кода для функционирования сайта. Веб-разработчики с помощью интегрированных сред разработки и языков программирования на основе созданного дизайнерами проекта строят полностью работоспособный сайт.
+          .teams__image
+            +img('about-us', 'img-developers', 'svg', '630', '534', 'Разработчики')
+        .teams__box
+          .teams__box-text
+            h3 Seo
+            p SEO (Search Engine Optimization) — совокупность работ по развитию сайта, изменению его окружения, анализу поведения пользователей, направленная на улучшение уже существующих позиций по целевым запросам (в Яндексе, Google, Mail.ru и других поисковиках), а также получение хороших позиций (в ТОП-10) по новым интересующим запросам.
+          .teams__image.teams__image--row
+            +img('about-us', 'img-seo', 'svg', '500', '530', 'СЕО')
+        .teams__box
+          .teams__box-text
+            h3 Контекст
+            p Контекстолог — это специалист, который занимается ведением и анализом контекстной рекламы. Он настраивает рекламу так, чтобы она показывалась только тем людям, которые искали в поиске аналогичную информацию. Преимущество контекстной рекламы — быстрая отдача. После размещения целевая аудитория увидит рекламу , если правильно подобраны ключевые слова.
+          .teams__image
+            +img('about-us', 'img-contecst', 'svg', '500', '634', 'Контекстолог')
+        .teams__box
+          .teams__box-text
+            h3 Smm
+            p SMM-продвижение в социальных сетях наряду с другими видами рекламы, чаще всего — таргетированной и контекстной рекламой, составляет основу многих маркетинговых стратегий. Нередко маркетологи принимают решение в пользу одного только SMM — для некоторых брендов работы с соцсетями, прямых коммуникаций с клиентом бывает более чем достаточно.
+          .teams__image.teams__image--row
+            +img('about-us', 'img-smm', 'svg', '475', '590', 'SMM')
+        .teams__box.teams__box--mans
+          .teams__box-text
+            h3 Видеомаркетинг
+            p Видеомаркетинг — это деятельность, направленная на формирование потребностей у людей в каком-либо товаре с помощью видео. Является очень мощным инструментом для продвижения бизнеса.
+          .teams__image.teams__image--box
+            +img('about-us', 'img-mans', 'svg', '1140', '617', 'Операторы')
+          .teams__image-svg-animate
+            +img('about-us', 'img-operator', 'svg', '300', '405', 'Оператор-постановщик')
+            +img('about-us', 'img-katerina', 'svg', '600', '485', 'Имиджмейкер')
+            .teams__box-text.teams__box-text--animate
+              h3 Стиль
+              p Имиджмейкер выступает организатором и связующим звеном между всеми участниками творческого процесса.
+          .teams__box-text.teams__box-text--tablet
+            h3 Стиль
+            p Имиджмейкер выступает организатором и связующим звеном между всеми участниками творческого процесса.
+            h3 Видеомаркетинг
+            p Видеомаркетинг — это деятельность, направленная на формирование потребностей у людей в каком-либо товаре с помощью видео. Является очень мощным инструментом для продвижения бизнеса.
+block footer
+  +footer
