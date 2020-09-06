@@ -69,28 +69,12 @@
 
 .clients__image-list {
   @include reset-list;
-  align-items: center;
-  grid-gap: 30px 0;
-
-  @media (max-width: $desktop-width-min) {
-    padding: 0 30px;
-
-    li {
-      display: grid;
-      justify-content: center;
-    }
-  }
-
-  @media (max-width: $tablet-width) {
-    padding: 0;
-  }
-
-  @media (max-width: $mobile-width) {
-    grid-template-columns: 1fr;
-  }
 }
 
 .clients__image-box {
+  display: grid;
+  justify-content: center;
+
   img {
     width: auto;
     filter: grayscale(1);

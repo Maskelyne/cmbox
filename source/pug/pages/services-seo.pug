@@ -78,73 +78,108 @@ block main
   -
     const servicesList = [
       {
-        text: 'воронка продаж'
+        text: 'Технический анализ.'
       },
       {
-        text: 'видео-контент'
+        text: 'Анализ юзабилити сайта. Необходимо для поисковых систем, учитывающих поведенческие факторы при определении вашей позиции в поисковой выдаче.'
       },
       {
-        text: 'лид-магнит'
+        text: 'Сбор семантического ядра – набора ключевых слов, которые соответствуют вашей тематике.'
       },
       {
-        text: 'чат-боты'
+        text: 'Анализ, изменение текстов со внесением в них ключевых слов.'
       },
       {
-        text: 'smm'
+        text: 'Распределение веса посадочных страниц, возможно, добавление новых.'
       },
       {
-        text: 'crm'
+        text: 'Контроль за поведенческими факторами пользователей на сайте и их совершенствование.'
       }
     ];
 
   -
     const servicesList2 = [
       {
-        text: 'WordPress'
+        text: 'Анализ конкурентов и их места в поиске.'
       },
       {
-        text: '1C-Bitrix'
+        text: 'Внедрение изменений на основе аналитики конкурентов.'
       },
       {
-        text: 'Laravel'
+        text: 'Анализ позиций вашего бизнеса по составленному семантическому ядру.'
       },
+      {
+        text: 'Анализ и работа с вашим ссылочным профилем.'
+      }
+    ];
+
+  -
+    const servicesList3 = [
+      {
+        text: 'Оценка KPI, которые дают понимание, что SEO продвижение приносит результаты, помогает достигать намеченные цели.'
+      },
+      {
+        text: 'Прогноз дальнейшей динамики развития.'
+      }
     ];
 
   main.page-main
-    .services
-      .services__wrapper.container
-        h1 Услуги
-      .services__box
-        ul.services__boxes-list
-          each item in boxesList
-            li
-              a(href= item.link)
-                +img(item.path, item.name, item.format, item.width, item.height, item.altText)
-        .services__image
-          .services__computer
-            +img('services', 'icon-context', 'svg', '257', '240', 'Контекст')
-          .services__boxes
-            +img('services', 'big-box-active', 'svg', '640', '380', 'Сайт')
-            +img('services', 'big-box-hover', 'svg', '640', '380', 'Сайт')
-        .services__box-text
-          h2 Создадим или модернизируем сайт
-          .services__text-1
-            strong 2000
-            p Сайт — полноценный инструмент продажи в интернете из-за слабой конкуренции.
-            strong 2000
-            p Сайт — не даёт той же ценности, что и раньше без современных маркетинговых инструментов, но является первым уровнем комплексной системы продаж в интернете.
-          .services__text-2
-            p В итоге сайты подготовлены для всех эффективных маркетинговых инструментов:
-            ul.services__text-list
-              each item in servicesList
-                li
-                  span= item.text
-          .services__text-3
-            p Для разработки сайтов мы используем популярные платформы в СНГ:
-            ul.services__text-list
-              each item in servicesList2
-                li
-                  strong= item.text
+    section.services
+      .services__box-wrapper
+        .services__wrapper
+          h1 Услуги
+        .services__box
+          ul.services__boxes-list
+            each item in boxesList
+              li
+                a(href= item.link)
+                  +img(item.path, item.name, item.format, item.width, item.height, item.altText)
+          .services__box-images
+            .services__image
+              +img('services', 'icon-seo', 'svg', '220', '220', 'Seo')
+            .services__boxes
+              +img('services', 'big-box-active', 'svg', '640', '380', 'Коробка')
+              +img('services', 'big-box-hover', 'svg', '640', '380', 'Коробка')
+          .services__box-text
+            h2 Настроим SEO для вашего сайта для органического поднятия в поиске
+            .services__text.services__text-light--gray
+              h3 Продвижение сайта
+              p Прежде, чем говорить о преимуществах, стоит объяснить, что такое SEO (Search Engine Optimization). Это оптимизация и продвижение сайта в поиске Яндекс и Google, которые выводят в топовые позиции органической выдачи. Органическая выдача – это естественная часть выдачи в Яндекс и Google, не являющаяся рекламной. То есть, вы попадаете в ТОП-позиции органической выдачи при условии максимальной релевантности контента сайта запросу пользователя. Существует больше 500 факторов, которые определяют ваш уровень релевантности введенному пользователем запросу. В настройке SEO достаточно учесть основные из таких факторов, чтобы эффективно конкурировать в вашей нише бизнеса.
+        .services__info
+          h3 Зачем SEO продвижение?
+          p Сейчас продвижение сайта – это одна из самых важных частей эффективных продаж в Интернете.
+            strong  Если вы не продвигаетесь, о вас мало кто узнает.
+          p Грамотно настроенное СЕО выведет вас в ТОП поисковой выдачи Яндекс и Google. 85% людей не переходят дальше второй страницы по интересующему их запросу – раскрутка сайта делает вас видимым для целевой аудитории. Что увеличит поступаемый трафик – количество целевой аудитории, которой интересен ваш контент. Произойдет стабильный рост количества заявок. При правильной обработке этих заявок вашими специалистами, вы отметите рост продаж. А также это повысит узнаваемость вашего бренда, что запустит «сарафанное радио»: вас будут чаще советовать. В итоге, прибыль гарантированно увеличится.
+          p Получается, что оптимизация и продвижение сайта дают вам конкурентное преимущество. Вы готовы отдать своих клиентов тем конкурентам, которые уже настроили SEO? Если нет, используйте все возможные точки роста, чтобы превзойти своих конкурентов!
+        .services__box-seo
+          h3 Этапы SEO-продвижения:
+          .services__box-seo-wrapper
+            .services__box-text-seo
+              .services__text.services__text-box.services__text--1
+                span 1
+                p Разработка SEO-стратегии
+              .services__text.services__text-box--2.services__text-light--gray
+                span 2
+                p Внутренняя оптимизация и продвижение:
+                ul.services__text-list
+                  each item in servicesList
+                    li
+                      p= item.text
+            .services__box-text-seo
+              .services__text.services__text-box
+                span 3
+                p Внешняя оптимизация и продвижение:
+                ul.services__text-list
+                  each item in servicesList2
+                    li
+                      p= item.text
+              .services__text.services__text--margin.services__text-box--2.services__text-light--gray
+                span 4
+                p Анализ полученных результатов:
+                ul.services__text-list
+                  each item in servicesList3
+                    li
+                      p= item.text
 
 block footer
   +footer

@@ -101,18 +101,18 @@ block main
             li
               a(href= item.link)
                 +img(item.path, item.name, item.format, item.width, item.height, item.altText)
-        .services__image
-          .services__computer
+        .services__box-images
+          .services__image
             +img('services', 'icon-crm', 'svg', '250', '250', 'CRM')
           .services__boxes
             +img('services', 'big-box-active', 'svg', '640', '380', 'Коробка')
             +img('services', 'big-box-hover', 'svg', '640', '380', 'Коробка')
-        .services__box-text.services__box-text--grid
+        .services__box-text
           h2 Подберем и настроим подходящую для вас crm
-          .services__text.services__text-box--1.services__text-box
+          .services__text.services__text-box
             strong CRM
             p — это система для выстраивания взаимоотношений с клиентами, в связке с маркетинговыми инструментами становится максимально эффективной.
-          .services__text.services__text-box--2
+          .services__text.services__text-box--2.services__text-light--gray
             p.services__text-dark Основной функционал:
             ul.services__text-list
               each item in servicesList
