@@ -1,6 +1,8 @@
 .main-header {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   background-color: $light-gray;
+  position: relative;
+  z-index: 1;
 }
 
 .main-header__wrapper {

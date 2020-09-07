@@ -1,7 +1,7 @@
 extends ../layout/page-layout
 
 block variables
-  - var title = "Воронка продаж"
+  - var title = "Контекст"
 
 block header
   +header
@@ -76,41 +76,6 @@ block main
     ];
 
   -
-    const servicesList = [
-      {
-        text: 'воронка продаж'
-      },
-      {
-        text: 'видео-контент'
-      },
-      {
-        text: 'лид-магнит'
-      },
-      {
-        text: 'чат-боты'
-      },
-      {
-        text: 'smm'
-      },
-      {
-        text: 'crm'
-      }
-    ];
-
-  -
-    const servicesList2 = [
-      {
-        text: 'WordPress'
-      },
-      {
-        text: '1C-Bitrix'
-      },
-      {
-        text: 'Laravel'
-      },
-    ];
-
-  -
     const advantagesList = [
       {
         text: 'Подходит многим бизнесам, наверняка ваш товар или услугу тоже ищут в Интернете.'
@@ -170,7 +135,7 @@ block main
       },
     ];
 
-  main.page-main
+  main.padding-box
     section.services
       .services__box-wrapper
         .services__wrapper.container

@@ -1,7 +1,7 @@
 extends ../layout/page-layout
 
 block variables
-  - var title = "CRM"
+  - var title = "Соцсети"
 
 block header
   +header
@@ -78,17 +78,23 @@ block main
   -
     const servicesList = [
       {
-        text: 'собирает базовую и маркетинговую информацию о лидах, клиентах и компаниях в единое ядро'
+        text: 'воронка продаж'
       },
       {
-        text: 'помогает выстраивать и систематизировать работу отделов продаж и компании в целом'
+        text: 'видео-контент'
       },
       {
-        text: 'формирует дополнительную отчётность и аналитику'
+        text: 'лид-магнит'
       },
       {
-        text: 'автоматизирует документооборот'
+        text: 'чат-боты'
       },
+      {
+        text: 'smm'
+      },
+      {
+        text: 'crm'
+      }
     ];
 
   main
@@ -103,20 +109,27 @@ block main
                 +img(item.path, item.name, item.format, item.width, item.height, item.altText)
         .services__box-images
           .services__image
-            +img('services', 'icon-crm', 'svg', '250', '250', 'CRM')
+            +img('services', 'icon-social', 'svg', '250', '250', 'Соцсети')
           .services__boxes
             +img('services', 'big-box-active', 'svg', '640', '380', 'Коробка')
             +img('services', 'big-box-hover', 'svg', '640', '380', 'Коробка')
-        .services__box-text
-          h2 Подберем и настроим подходящую для вас crm
-          .services__text.services__text-box
-            strong CRM
-            p — это система для выстраивания взаимоотношений с клиентами, в связке с маркетинговыми инструментами становится максимально эффективной.
+        .services__box-text.services__box-text--ssm
+          h2 Спланируем и запустим продвижение в социальных сетях и Youtube
+          .services__text
+            p С развитием скоростного интернета и мобильных устройств, просмотр видео стало одним из самых популярных развлечений в интернете. Из-за чего большинство людей перестало читать статьи, и переключились на просмотр видео.
           .services__text.services__text-box--2.services__text-light--gray
-            p.services__text-dark Основной функционал:
-            ul.services__text-list
-              each item in servicesList
-                li
-                  p= item.text
+            p
+              span Youtube
+              |  сейчас это эффективный и пока не дорогой инструмент маркетинга.
+            p Видео очень плотно связано с
+              span  маркетингом в социальных сетях,
+              |  так как большая часть аудитории именно там.
+          .services__text
+            h3 SSM
+              br
+              | (Social Media Marketing)
+            p — маркетинг в социальных сетях достаточно эффективен, даёт возможность анализа покупателя и составления стратегии таргетинговой рекламы, это приводит к
+              span  уменьшению бюджетов и большей результативности.
+
 block footer
   +footer

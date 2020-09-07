@@ -3,8 +3,9 @@
 (function () {
 
   let clientsSlider = document.querySelector('.clients__swiper-container');
+  let servicesSlider = document.querySelector('.services__swiper-container');
 
-  let createSliderDesk = function (el) {
+  let clientsSliderDesk = function (el) {
     return new Swiper(el, {
       loop: true,
       speed: 1000,
@@ -33,7 +34,32 @@
   };
 
   if (clientsSlider) {
-    createSliderDesk(clientsSlider);
+    clientsSliderDesk(clientsSlider);
+  }
+
+  let servicesSliderDesk = function (el) {
+    return new Swiper(el, {
+      speed: 1000,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        }
+      }
+    });
+  };
+
+  if (servicesSlider) {
+    servicesSliderDesk(servicesSlider);
   }
 
 })();

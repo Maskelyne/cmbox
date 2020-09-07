@@ -81,6 +81,11 @@ body {
 
 main {
   flex-grow: 1;
+  padding-bottom: 80px;
+
+  @media (max-width: $tablet-width) {
+    padding-bottom: 40px;
+  }
 }
 
 .visually-hidden {
@@ -104,4 +109,8 @@ main {
   @media (max-width: $tablet-width) {
     padding: $tablet-padding;
   }
+}
+
+.gray-box {
+  background-color: $light-gray;
 }
