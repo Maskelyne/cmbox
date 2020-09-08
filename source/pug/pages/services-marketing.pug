@@ -1,0 +1,149 @@
+extends ../layout/page-layout
+
+block variables
+  - var title = "Видеомаркетинг"
+
+block header
+  +header
+
+block main
+
+  -
+    const boxesList = [
+      {
+        link: 'services-site.html',
+        path: 'services',
+        name: 'box-site',
+        format: 'svg',
+        width: '260',
+        height: '190',
+        altText: 'Сайт'
+      },
+      {
+        link: 'services-sales.html',
+        path: 'services',
+        name: 'box-sales',
+        format: 'svg',
+        width: '260',
+        height: '190',
+        altText: 'Воронка продаж'
+      },
+      {
+        link: 'services-seo.html',
+        path: 'services',
+        name: 'box-seo',
+        format: 'svg',
+        width: '260',
+        height: '190',
+        altText: 'Seo'
+      },
+      {
+        link: 'services-context.html',
+        path: 'services',
+        name: 'box-contecst',
+        format: 'svg',
+        width: '260',
+        height: '190',
+        altText: 'Seo'
+      },
+      {
+        link: 'services-social.html',
+        path: 'services',
+        name: 'box-social',
+        format: 'svg',
+        width: '260',
+        height: '190',
+        altText: 'Seo'
+      },
+      {
+        link: 'services-marketing.html',
+        path: 'services',
+        name: 'box-marketing',
+        format: 'svg',
+        width: '260',
+        height: '190',
+        altText: 'Seo'
+      },
+      {
+        link: 'services-crm.html',
+        path: 'services',
+        name: 'box-crm',
+        format: 'svg',
+        width: '260',
+        height: '190',
+        altText: 'Seo'
+      },
+    ];
+
+  -
+    const servicesList = [
+      {
+        text: '60% визуальный канал'
+      },
+      {
+        text: '30 % аудиальный канал'
+      },
+      {
+        text: '10% смысловой'
+      }
+    ];
+
+  main.gray-box
+    section.services
+      .services__wrapper
+        h1 Услуги
+      .services__box
+        ul.services__boxes-list
+          each item in boxesList
+            li
+              a(href= item.link)
+                +img(item.path, item.name, item.format, item.width, item.height, item.altText)
+        .services__box-images
+          .services__image
+            +img('services', 'icon-video', 'svg', '200', '200', 'Видеомаркетинг')
+          .services__boxes
+            +img('services', 'big-box-active', 'svg', '640', '380', 'Коробка')
+            +img('services', 'big-box-hover', 'svg', '640', '380', 'Коробка')
+        .services__box-text.services__box-text--marketing
+          h2 Почему вашему бизнесу нужен видеомаркетинг
+          .services__text
+            p
+              span Видеомаркетинг
+              |  – мощный инструмент по продвижению вашего бизнеса, который повышает конверсии и продажи, показывая ваш товар или услугу в действии, что вызывает доверие у потенциальных покупателей. Видео окупает вложенные в него инвестиции.
+            p Видео на целевой странице может увеличить конверсию до 80%.
+          .services__text.services__text-box--2
+            p Вы наверняка слышали о человеческих каналах восприятия информации:
+            ul.services__text-list
+              each item in servicesList
+                li
+                  p= item.text
+            p Именно поэтому, люди предпочитают посмотреть какое-либо видео, нежели прочитать текст.
+      .services__slider
+        .services__slider-wrapper
+          .services__swiper-container.swiper-container
+            ul.swiper-wrapper
+              li.swiper-slide
+                .services__slide-image
+                  a(href="#")
+                    +img('png', 'img-video-1', 'png', '278', '152', 'Видео')
+              li.swiper-slide
+                .services__slide-image
+                  a(href="#")
+                    +img('png', 'img-video-2', 'png', '278', '152', 'Видео')
+              li.swiper-slide
+                .services__slide-image
+                  a(href="#")
+                    +img('png', 'img-video-3', 'png', '278', '152', 'Видео')
+              li.swiper-slide
+                .services__slide-image
+                  a(href="#")
+                    +img('png', 'img-video-3', 'png', '278', '152', 'Видео')
+              li.swiper-slide
+                .services__slide-image
+                  a(href="#")
+                    +img('png', 'img-video-3', 'png', '278', '152', 'Видео')
+            .services__swiper-button-prev.swiper-button-prev
+            .services__swiper-button-next.swiper-button-next
+
+block footer
+  +footer

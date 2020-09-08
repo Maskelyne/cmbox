@@ -1,7 +1,7 @@
 extends ../layout/page-layout
 
 block variables
-  - var title = "Сайт"
+  - var title = "Соцсети"
 
 block header
   +header
@@ -97,19 +97,6 @@ block main
       }
     ];
 
-  -
-    const servicesList2 = [
-      {
-        text: 'WordPress'
-      },
-      {
-        text: '1C-Bitrix'
-      },
-      {
-        text: 'Laravel'
-      },
-    ];
-
   main
     section.services
       .services__wrapper.container
@@ -122,29 +109,27 @@ block main
                 +img(item.path, item.name, item.format, item.width, item.height, item.altText)
         .services__box-images
           .services__image
-            +img('services', 'icon-tv', 'svg', '250', '250', 'Компьютер')
+            +img('services', 'icon-social', 'svg', '250', '250', 'Соцсети')
           .services__boxes
-            +img('services', 'big-box-active', 'svg', '640', '380', 'Сайт')
-            +img('services', 'big-box-hover', 'svg', '640', '380', 'Сайт')
-        .services__box-text
-          h2 Создадим или модернизируем сайт
-          .services__text.services__text--1
-            strong 2000
-            p Сайт — полноценный инструмент продажи в интернете из-за слабой конкуренции.
-            strong 2000
-            p Сайт — не даёт той же ценности, что и раньше без современных маркетинговых инструментов, но является первым уровнем комплексной системы продаж в интернете.
-          .services__text.services__text--2
-            p В итоге сайты подготовлены для всех эффективных маркетинговых инструментов:
-            ul.services__text-list
-              each item in servicesList
-                li
-                  p= item.text
-          .services__text.services__text--3
-            p Для разработки сайтов мы используем популярные платформы в СНГ:
-            ul.services__text-list
-              each item in servicesList2
-                li
-                  strong= item.text
+            +img('services', 'big-box-active', 'svg', '640', '380', 'Коробка')
+            +img('services', 'big-box-hover', 'svg', '640', '380', 'Коробка')
+        .services__box-text.services__box-text--ssm
+          h2 Спланируем и запустим продвижение в социальных сетях и Youtube
+          .services__text
+            p С развитием скоростного интернета и мобильных устройств, просмотр видео стало одним из самых популярных развлечений в интернете. Из-за чего большинство людей перестало читать статьи, и переключились на просмотр видео.
+          .services__text.services__text-box--2.services__text-light--gray
+            p
+              span Youtube
+              |  сейчас это эффективный и пока не дорогой инструмент маркетинга.
+            p Видео очень плотно связано с
+              span  маркетингом в социальных сетях,
+              |  так как большая часть аудитории именно там.
+          .services__text
+            h3 SSM
+              br
+              | (Social Media Marketing)
+            p — маркетинг в социальных сетях достаточно эффективен, даёт возможность анализа покупателя и составления стратегии таргетинговой рекламы, это приводит к
+              span  уменьшению бюджетов и большей результативности.
 
 block footer
   +footer
