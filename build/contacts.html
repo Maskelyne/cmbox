@@ -12,7 +12,7 @@
   <body>
     <header class="main-header">
       <nav class="main-header__wrapper container"><a class="main-header__todo-menu" href="#"><span class="visually-hidden">Портфолио</span></a>
-        <div class="main-header__image"><a href="main.html"><img src="img/svg/logo.svg" width="120" height="43" alt="Логотип"/></a></div><a class="main-header__link-services" href="#"><span class="visually-hidden">Услуги</span><img src="img/svg/icon-box.svg" width="26" height="26" alt="Услуги"/></a>
+        <div class="main-header__image"><a href="index.html"><img src="img/svg/logo.svg" width="120" height="43" alt="Логотип"/></a></div><a class="main-header__link-services" href="#"><span class="visually-hidden">Услуги</span><img src="img/svg/icon-box.svg" width="26" height="26" alt="Услуги"/></a>
         <button class="main-header__btn main-header__btn--closed" href="#"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-header__wrap-menu">
           <ul class="main-header__list">
@@ -61,8 +61,7 @@
             <div class="contacts__info">
               <h2>Маркетинговое агенство</h2>
               <h3>Creative Marketing<span> box</span></h3>
-              <div class="main-footer__contacts">
-                <p>ул. Калиновского 77а, офис 310</p><a class="main-footer__link-mail" href="mail:info@cmbox.by">info@cmbox.by</a>
+              <div class="main-footer__contacts"><a class="main-footer__link-location" href="#">ул. Калиновского 77а, офис 310</a><a class="main-footer__link-mail" href="mail:info@cmbox.by">info@cmbox.by</a>
                 <div class="main-footer__link-box"><a class="main-footer__link-phone" href="tel:+375296086368">+375 (29) 608-63-68</a>
                   <ul class="social-list">
                     <li><a href="#"><span class="visually-hidden">Телеграм</span><img src="img/svg/icon-telegram.svg" width="24" height="24" alt="Телеграм"/></a></li>
@@ -73,14 +72,18 @@
               </div>
               <div class="contacts__form">
                 <p>Как с Вами связаться?</p>
-                <form action="#" method="get">
+                <form id="form" action="#" method="get">
                   <div class="contacts__user-name">
-                    <input id="user_name" type="text" name="user_name">
+                    <input id="user_name" type="text" name="user_name" required>
                     <label for="user_name">Имя</label>
                   </div>
                   <div class="contacts__user-tel">
-                    <input id="user_phone" type="tel" name="user_tel">
+                    <input id="user_phone" type="tel" name="user_phone" required>
                     <label for="user_phone">Телефон</label>
+                  </div>
+                  <div class="contacts__user-email">
+                    <input id="user_email" type="tel" name="user_email">
+                    <label for="user_email">Email</label>
                   </div>
                   <div class="contacts__user-comment">
                     <textarea id="user_comment" name="user_comment"></textarea>
@@ -118,8 +121,7 @@
           <li><a href="#">Блог</a></li>
           <li><a href="#">Контакты</a></li>
         </ul>
-        <div class="main-footer__contacts">
-          <p>ул. Калиновского 77а, офис 310</p><a class="main-footer__link-mail" href="mail:info@cmbox.by">info@cmbox.by</a>
+        <div class="main-footer__contacts"><a class="main-footer__link-location" href="#">ул. Калиновского 77а, офис 310</a><a class="main-footer__link-mail" href="mail:info@cmbox.by">info@cmbox.by</a>
           <div class="main-footer__link-box"><a class="main-footer__link-phone" href="tel:+375296086368">+375 (29) 608-63-68</a>
             <ul class="social-list">
               <li><a href="#"><span class="visually-hidden">Телеграм</span><img src="img/svg/icon-telegram.svg" width="24" height="24" alt="Телеграм"/></a></li>

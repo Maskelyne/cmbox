@@ -7,3 +7,4 @@
 
 //= modules/header-nav.js
 //= modules/clients-slider.js
+//= modules/validation.js
