@@ -1,0 +1,48 @@
+extends ../layout/page-layout
+
+block variables
+  - var title = "Главная"
+
+block header
+  +header
+
+block main
+  main
+    section.contacts
+      .contacts__wrapper.container
+        h1 Контакты
+        .contacts__box-info
+          .contacts__image
+            +img('svg', 'img-girl', 'svg', '408', '610', 'Контакты')
+          .contacts__social
+            +footer-social
+            h2 Мы
+              br
+              |
+              span  в социальных сетях
+          .contacts__info
+            h2 Маркетинговое агенство
+            h3 Creative Marketing
+              span  box
+            .main-footer__contacts
+              p ул. Калиновского 77а, офис 310
+              a.main-footer__link-mail(href="mail:info@cmbox.by") info@cmbox.by
+              .main-footer__link-box
+                a.main-footer__link-phone(href="tel:+375296086368") +375 (29) 608-63-68
+                +social-list
+            .contacts__form
+              p Как с Вами связаться?
+              form(action="#" method="get")
+                .contacts__user-name
+                  input(id="user_name" type="text" name="user_name")
+                  label(for="user_name") Имя
+                .contacts__user-tel
+                  input(id="user_phone" type="tel" name="user_tel")
+                  label(for="user_phone") Телефон
+                .contacts__user-comment
+                  textarea(id="user_comment" name="user_comment")
+                  label(for="user_comment") Комментарий
+                button.button(type="submit") Отправить
+
+block footer
+  +footer
