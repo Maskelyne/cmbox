@@ -12,6 +12,7 @@
   img {
     border-radius: 5px;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s linear;
 
     @media (max-width: $desktop-width-min) {
       border-radius: 6px;
@@ -21,6 +22,11 @@
     @media (max-width: $tablet-width) {
       border-radius: 6px;
       max-width: 36px;
+    }
+
+    &:hover {
+      transform: scale(1.2);
+      transition: all 0.3s linear;
     }
   }
 

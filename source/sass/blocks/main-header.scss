@@ -64,7 +64,7 @@
 
 .main-header__box {
   display: grid;
-  grid-template-columns: 60% 36%;
+  grid-template-columns: 67% 36%;
   grid-column-gap: 10px;
   align-items: center;
 
@@ -148,7 +148,6 @@
 
   span {
     margin-left: 6%;
-    color: $black;
 
     @media (max-width: $desktop-width-min) {
       display: none;
