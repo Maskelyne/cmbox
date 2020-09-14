@@ -1,0 +1,94 @@
+extends ../layout/page-layout
+
+block variables
+  - var title = "Блог"
+
+block header
+  +header
+
+block main
+
+  -
+    var blogList = [
+      {
+        path: 'png',
+        image: 'blog-image-1',
+        format: 'png',
+        width: '370',
+        height: '150',
+        altText: '1 Карточка',
+        textCard: 'Шаблон, который поможет регулярно писать статьи',
+        timeText: '24 апреля 2020'
+      },
+      {
+        path: 'png',
+        image: 'blog-image-1',
+        format: 'png',
+        width: '370',
+        height: '150',
+        altText: '1 Карточка',
+        textCard: 'Шаблон, который поможет регулярно писать статьи',
+        timeText: '24 апреля 2020'
+      },
+      {
+        path: 'png',
+        image: 'blog-image-1',
+        format: 'png',
+        width: '370',
+        height: '150',
+        altText: '1 Карточка',
+        textCard: 'Шаблон, который поможет регулярно писать статьи',
+        timeText: '24 апреля 2020'
+      },
+      {
+        path: 'png',
+        image: 'blog-image-1',
+        format: 'png',
+        width: '370',
+        height: '150',
+        altText: '1 Карточка',
+        textCard: 'Шаблон, который поможет регулярно писать статьи',
+        timeText: '24 апреля 2020'
+      },
+      {
+        path: 'png',
+        image: 'blog-image-1',
+        format: 'png',
+        width: '370',
+        height: '150',
+        altText: '1 Карточка',
+        textCard: 'Шаблон, который поможет регулярно писать статьи',
+        timeText: '24 апреля 2020'
+      },
+      {
+        path: 'png',
+        image: 'blog-image-1',
+        format: 'png',
+        width: '370',
+        height: '150',
+        altText: '1 Карточка',
+        textCard: 'Шаблон, который поможет регулярно писать статьи',
+        timeText: '24 апреля 2020'
+      },
+    ];
+
+  main.gray-box
+    section.blog
+      .blog__wrapper.container
+        h1 Блог
+      .blog__box.container
+        ul.blog__list
+          each item in blogList
+            li
+              .blog__card
+                a(href="#")
+                  .blog__image
+                    +img(item.path, item.image, item.format, item.width, item.height, item.altText)
+                    .blog__time
+                      time(datetime=item.timeText)= item.timeText
+                  .blog__text
+                    p= item.textCard
+      +breadcrumbs
+
+block footer
+  +footer
