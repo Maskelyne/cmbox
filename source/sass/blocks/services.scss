@@ -656,3 +656,32 @@
     display: none;
   }
 }
+
+.services__box-portfolio {
+  margin: 70px auto 0 auto;
+
+  h2 {
+    max-width: 500px;
+    margin: 0 auto;
+    text-transform: none;
+    text-align: center;
+    line-height: 36px;
+
+    @media (max-width: $desktop-width-min) {
+      max-width: 350px;
+    }
+
+    @media (max-width: $tablet-width) {
+      line-height: 24px;
+    }
+  }
+
+  a {
+    color: $dark-blue;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $dark-red;
+    }
+  }
+}

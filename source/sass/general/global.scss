@@ -31,15 +31,12 @@ a {
 
 h1 {
   margin: 25px 0;
+  font-family: $proximaBold;
   font-size: 48px;
   line-height: 48px;
   font-weight: $normal;
   text-align: center;
   color: $black;
-
-  @media (max-width: $desktop-width) {
-    font-family: $proximaBold;
-  }
 
   @media (max-width: $tablet-width) {
     font-size: 24px;
@@ -82,7 +79,8 @@ body {
 
 main {
   flex-grow: 1;
-  padding-bottom: 80px;
+  padding-bottom: 55px;
+  overflow: hidden;
 
   @media (max-width: $tablet-width) {
     padding-bottom: 40px;

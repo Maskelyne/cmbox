@@ -1,0 +1,39 @@
+.breadcrumbs__list {
+  @include reset-list;
+  display: grid;
+  grid-template-columns: repeat(7, 3%);
+  justify-content: center;
+
+  @media (max-width: $desktop-width-min) {
+    grid-template-columns: repeat(7, 5%);
+  }
+
+  @media (max-width: $tablet-width) {
+    grid-template-columns: repeat(7, 10%);
+  }
+
+  li {
+    border-radius: 5px;
+  }
+
+  a {
+    padding: 7px 0;
+    font-family: $proximaBold;
+    display: block;
+    text-align: center;
+  }
+
+  span {
+    margin-top: 7px;
+    display: block;
+    text-align: center;
+  }
+
+  .breadcrumbs__link-active {
+    background-color: $dark-blue;
+
+    a {
+      color: $white;
+    }
+  }
+}

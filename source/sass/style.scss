@@ -11,6 +11,7 @@
 
 //header
 @import "blocks/main-header.scss";
+@import "blocks/btn.scss";
 
 //main
 @import "blocks/about-us.scss";
@@ -18,7 +19,7 @@
 @import "blocks/teams.scss";
 
 //buttons
-@import "blocks/buttons.scss";
+//@import "blocks/buttons.scss";
 
 //footer
 @import "blocks/main-footer.scss";
@@ -29,6 +30,11 @@
 //services
 @import "blocks/services.scss";
 
+//blog
+@import "blocks/blog.scss";
+
+//breadcrumbs
+@import "blocks/breadcrumbs.scss";
 //social-nav
 @import "blocks/social-list.scss";
 @import "blocks/footer-social.scss";
