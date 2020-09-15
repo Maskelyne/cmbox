@@ -1,0 +1,57 @@
+mixin sharing()
+
+  -
+    var sharingList = [
+      {
+        path: 'svg',
+        image: 'icon-sharing',
+        format: 'svg',
+        width: '24',
+        height: '24',
+        altText: 'Поделиться',
+        text: 'Поделиться'
+      },
+      {
+        path: 'svg',
+        image: 'icon-twitter',
+        format: 'svg',
+        width: '24',
+        height: '24',
+        altText: 'Твиттер',
+        text: 'Твиттер'
+      },
+      {
+        path: 'svg',
+        image: 'icon-sharing-facebook',
+        format: 'svg',
+        width: '24',
+        height: '24',
+        altText: 'Фэйсбук',
+        text: 'Фэйсбук'
+      },
+      {
+        path: 'svg',
+        image: 'icon-sharing-vk',
+        format: 'svg',
+        width: '24',
+        height: '24',
+        altText: 'Вконтакте',
+        text: 'Вконтакте'
+      },
+      {
+        path: 'svg',
+        image: 'icon-sharing-ok',
+        format: 'svg',
+        width: '24',
+        height: '24',
+        altText: 'Одноклассники',
+        text: 'Одноклассники'
+      },
+    ];
+
+  ul.sharing-list
+    each item in sharingList
+      li
+        a(href="#")
+          span.visually-hidden= item.text
+          +img(item.path, item.image, item.format, item.width, item.height, item.altText)

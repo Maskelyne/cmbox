@@ -1,0 +1,58 @@
+.portfolio__list {
+  @include reset-list;
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 32%);
+  grid-gap: 23px 23px;
+
+  @media (max-width: $desktop-width-min) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: $tablet-width) {
+    grid-template-columns: 1fr;
+    margin-top: 40px;
+  }
+}
+
+.portfolio__card {
+  box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.3),
+    10px 10px 20px rgba(68, 69, 70, 0.15),
+    inset 4px 4px 15px rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  border: solid 4px $white;
+  background-image: url("../img/png/bckg-vodadom.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  perspective: 2000px;
+  transform-style: preserve-3d;
+
+  @media (max-width: $tablet-width) {
+    min-height: 320px;
+  }
+
+  h2 {
+    padding: 10px 0;
+    font-size: 36px;
+    line-height: 36px;
+    color: $dark-blue;
+    text-transform: none;
+    text-align: center;
+  }
+
+  p {
+    margin: 0;
+    padding: 0 16px 10px 16px;
+    font-family: $proximaBold;
+  }
+}
+
+.portfolio__image {
+  padding: 15px 10px 0 10px;
+
+  img {
+    display: block;
+    border: solid 4px #eeeeee;
+    border-radius: 5px;
+  }
+}

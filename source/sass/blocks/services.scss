@@ -331,8 +331,8 @@
 .services__boxes-list {
   @include reset-list;
   position: fixed;
-  top: 12%;
-  left: -16px;
+  top: 9%;
+  left: -20px;
   z-index: 20;
 
   @media (max-width: $tablet-width) {
@@ -341,7 +341,7 @@
 
   li {
     width: 200px;
-    height: 90px;
+    height: 75px;
 
     &:nth-child(2) {
       transform: translateX(5px);
@@ -366,6 +366,18 @@
     &:nth-child(7) {
       transform: translateX(30px);
     }
+
+    &:nth-child(8) {
+      transform: translateX(35px);
+    }
+
+    &:nth-child(9) {
+      transform: translateX(40px);
+    }
+
+    &:nth-child(10) {
+      transform: translateX(45px);
+    }
   }
 
   a {
@@ -374,7 +386,7 @@
 
     img {
       transition: all 1s;
-      transform: translate(-40px, 0);
+      transform: translate(-50px, 0);
     }
 
     &:hover {

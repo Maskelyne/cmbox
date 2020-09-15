@@ -1,0 +1,18 @@
+mixin tabs()
+  ul.tabs
+    li
+      a.tabs__work(href="#")
+        +img('svg', 'icon-work', 'svg', '24', '24', 'Наша работы')
+        | Все работы
+    li
+      a.tabs__process(href="#")
+        +img('svg', 'icon-process', 'svg', '24', '24', 'Наша работы')
+        | В процессе
+    li
+      a.tabs__check(href="#")
+        +img('svg', 'icon-check', 'svg', '24', '24', 'Наша работы')
+        | Завершенные
+    li
+      a.tabs__support(href="#")
+        +img('svg', 'icon-support', 'svg', '24', '24', 'Наша работы')
+        | На обслуживании

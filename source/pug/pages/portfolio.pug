@@ -1,0 +1,157 @@
+extends ../layout/page-layout
+
+block variables
+  - var title = "Портфолио"
+
+block header
+  +header
+
+block main
+
+  -
+    var blogList = [
+      {
+        path: 'png',
+        image: 'blog-image-1',
+        format: 'png',
+        width: '370',
+        height: '150',
+        altText: '1 Карточка',
+        textCard: 'Шаблон, который поможет регулярно писать статьи',
+        timeText: '24 апреля 2020'
+      },
+      {
+        path: 'png',
+        image: 'blog-image-1',
+        format: 'png',
+        width: '370',
+        height: '150',
+        altText: '1 Карточка',
+        textCard: 'Шаблон, который поможет регулярно писать статьи',
+        timeText: '24 апреля 2020'
+      },
+      {
+        path: 'png',
+        image: 'blog-image-1',
+        format: 'png',
+        width: '370',
+        height: '150',
+        altText: '1 Карточка',
+        textCard: 'Шаблон, который поможет регулярно писать статьи',
+        timeText: '24 апреля 2020'
+      },
+      {
+        path: 'png',
+        image: 'blog-image-1',
+        format: 'png',
+        width: '370',
+        height: '150',
+        altText: '1 Карточка',
+        textCard: 'Шаблон, который поможет регулярно писать статьи',
+        timeText: '24 апреля 2020'
+      },
+      {
+        path: 'png',
+        image: 'blog-image-1',
+        format: 'png',
+        width: '370',
+        height: '150',
+        altText: '1 Карточка',
+        textCard: 'Шаблон, который поможет регулярно писать статьи',
+        timeText: '24 апреля 2020'
+      },
+      {
+        path: 'png',
+        image: 'blog-image-1',
+        format: 'png',
+        width: '370',
+        height: '150',
+        altText: '1 Карточка',
+        textCard: 'Шаблон, который поможет регулярно писать статьи',
+        timeText: '24 апреля 2020'
+      },
+    ];
+  -
+    var portfolioList = [
+      {
+        path: 'png',
+        image: 'image-vodadom',
+        format: 'png',
+        width: '340',
+        height: '240',
+        altText: 'Водадом',
+        title: 'Vodadom',
+        text: 'Сайт для бурового предприятия в Беларуси'
+      },
+      {
+        path: 'png',
+        image: 'image-yartruba',
+        format: 'png',
+        width: '340',
+        height: '240',
+        altText: 'Яртруба',
+        title: 'Yartruba',
+        text: 'Сайт для официального поставщика труб нПВХ'
+      },
+      {
+        path: 'png',
+        image: 'image-exim',
+        format: 'png',
+        width: '340',
+        height: '240',
+        altText: 'Эксим',
+        title: 'Exim',
+        text: 'Сайт для поставщика качественной электротехники'
+      },
+      {
+        path: 'png',
+        image: 'image-exim',
+        format: 'png',
+        width: '340',
+        height: '240',
+        altText: 'Эксим',
+        title: 'Exim',
+        text: 'Сайт для поставщика качественной электротехники'
+      },
+      {
+        path: 'png',
+        image: 'image-exim',
+        format: 'png',
+        width: '340',
+        height: '240',
+        altText: 'Эксим',
+        title: 'Exim',
+        text: 'Сайт для поставщика качественной электротехники'
+      },
+      {
+        path: 'png',
+        image: 'image-exim',
+        format: 'png',
+        width: '340',
+        height: '240',
+        altText: 'Эксим',
+        title: 'Exim',
+        text: 'Сайт для поставщика качественной электротехники'
+      },
+    ];
+
+  main.gray-box
+    section.portfolio
+      h1 Портфолио
+      .portfolio__wrapper.container
+        +tabs
+        .portfolio__box
+          ul.portfolio__list
+            each item in portfolioList
+              li
+                a(href="#")
+                  .portfolio__card
+                    .portfolio__image
+                      +img(item.path, item.image, item.format, item.width, item.height, item.altTex)
+                    .portfolio__text
+                      h2= item.title
+                      p= item.text
+
+
+block footer
+  +footer

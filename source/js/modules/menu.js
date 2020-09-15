@@ -4,42 +4,46 @@
 
   var docStyle = document.documentElement.style;
   var aElem = document.querySelector(".btn");
-  var boundingClientRect = aElem.getBoundingClientRect();
 
-  aElem.onmousemove = function(e) {
+  if (aElem) {
 
-    var x = e.clientX - boundingClientRect.left;
-    var y = e.clientY - boundingClientRect.top;
+    var boundingClientRect = aElem.getBoundingClientRect();
 
-    var xc = boundingClientRect.width/2;
-    var yc = boundingClientRect.height/2;
+    aElem.onmousemove = function (e) {
 
-    var dx = x - xc;
-    var dy = y - yc;
+      var x = e.clientX - boundingClientRect.left;
+      var y = e.clientY - boundingClientRect.top;
 
-    docStyle.setProperty('--rx', `${ dy/-1 }deg`);
-    docStyle.setProperty('--ry', `${ dx/10 }deg`);
+      var xc = boundingClientRect.width / 2;
+      var yc = boundingClientRect.height / 2;
 
-  }
+      var dx = x - xc;
+      var dy = y - yc;
 
-  aElem.onmouseleave = function(e) {
+      docStyle.setProperty('--rx', `${dy / -1}deg`);
+      docStyle.setProperty('--ry', `${dx / 10}deg`);
 
-    docStyle.setProperty('--ty', '0');
-    docStyle.setProperty('--rx', '0');
-    docStyle.setProperty('--ry', '0');
+    }
 
-  }
+    aElem.onmouseleave = function (e) {
 
-  aElem.onmousedown = function(e) {
+      docStyle.setProperty('--ty', '0');
+      docStyle.setProperty('--rx', '0');
+      docStyle.setProperty('--ry', '0');
 
-    docStyle.setProperty('--tz', '-25px');
+    }
 
-  }
+    aElem.onmousedown = function (e) {
 
-  document.body.onmouseup = function(e) {
+      docStyle.setProperty('--tz', '-25px');
 
-    docStyle.setProperty('--tz', '-12px');
+    }
 
+    document.body.onmouseup = function (e) {
+
+      docStyle.setProperty('--tz', '-12px');
+
+    }
   }
 
 })();
