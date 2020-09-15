@@ -1,0 +1,27 @@
+extends ../layout/page-layout
+
+block variables
+  - var title = "Блог"
+
+block header
+  +header
+
+block main
+  main.gray-box
+    section.article
+      .article__title.container
+        a(href="#")
+          +img('svg', 'icon-left-arrow', 'svg', '48', '48', 'Вернуться в блог')
+        h1 Блог
+      .article__wrapper
+        +img('png', 'image-article', 'png', '1920', '430', 'Фото статьи')
+        .article__box-sharing.container
+          time(datetime="24 апреля 2020") 24 апреля 2020
+          +sharing
+        .article__box-article.container
+          h2 Как перестать угождать клиентам и начать приносить им пользу
+          p Попытки исполнять все пожелания клиента, не спорить с ним (и, если быть откровенными, попросту не вникать в задачи достаточно глубоко) нередко ведут к началу конца.
+          p Основатель и руководитель коммуникационного агентства Biznesmuza, евангелист экспертного маркетинга Марина Соболева рассказывает, как из режима «угодного специалиста» перейти в «режим мастера». И объясняет, почему важно это сделать.
+
+block footer
+  +footer

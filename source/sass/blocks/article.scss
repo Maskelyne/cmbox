@@ -1,0 +1,22 @@
+.article__title {
+  display: grid;
+  grid-template-columns: 48px auto;
+  grid-gap: 0 20px;
+  align-items: center;
+
+  h1 {
+    text-align: left;
+  }
+}
+
+.article__box-sharing {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 11% 16%;
+  grid-gap: 0 50px;
+  align-items: center;
+
+  time {
+    font-family: $proximaBold;
+  }
+}
