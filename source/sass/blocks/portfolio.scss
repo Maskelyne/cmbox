@@ -15,7 +15,12 @@
   }
 }
 
-.portfolio__card {
+.portfolio__box-card {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.portfolio__card-perspective {
   box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.3),
     10px 10px 20px rgba(68, 69, 70, 0.15),
     inset 4px 4px 15px rgba(255, 255, 255, 0.3);
@@ -24,8 +29,7 @@
   background-image: url("../img/png/bckg-vodadom.png");
   background-repeat: no-repeat;
   background-size: 100%;
-  perspective: 2000px;
-  transform-style: preserve-3d;
+  transition: transform 0.1s;
 
   @media (max-width: $tablet-width) {
     min-height: 320px;

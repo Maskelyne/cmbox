@@ -145,13 +145,14 @@ block main
             each item in portfolioList
               li
                 a(href="#")
-                  .portfolio__card
-                    .portfolio__image
-                      +img(item.path, item.image, item.format, item.width, item.height, item.altTex)
-                    .portfolio__text
-                      h2= item.title
-                      p= item.text
-
+                  .portfolio__box-card
+                    .portfolio__card
+                      .portfolio__card-perspective
+                        .portfolio__image
+                          +img(item.path, item.image, item.format, item.width, item.height, item.altTex)
+                        .portfolio__text
+                          h2= item.title
+                          p= item.text
 
 block footer
   +footer
