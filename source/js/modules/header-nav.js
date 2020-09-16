@@ -2,8 +2,10 @@
 (function () {
   var menuBtn = document.querySelector('.main-header__btn');
   var wrapMenu = document.querySelector(".main-header__wrap-menu");
-  var stageMenuBtn = document.querySelector('.main-header__todo-menu');
+  var stageMenuBtn = document.querySelector('.main-header__link-stage');
   var stageMenu = document.querySelector('.main-header__stage-nav');
+  var servicesMenuBtn = document.querySelector('.main-header__link-services');
+  var servicesMenu = document.querySelector('.main-header__services-nav');
 
   menuBtn.addEventListener('click', function (evt) {
     evt.preventDefault();
@@ -27,10 +29,32 @@
     if (stageMenu.classList.contains('main-header__stage-nav--closed')) {
       stageMenu.classList.remove('main-header__stage-nav--closed');
       stageMenu.classList.add('main-header__stage-nav--opened');
+      stageMenuBtn.classList.remove('main-header__link-stage--closed');
+      stageMenuBtn.classList.add('main-header__link-stage--opened');
       document.body.style.overflow = 'hidden';
     } else {
       stageMenu.classList.add('main-header__stage-nav--closed');
       stageMenu.classList.remove('main-header__stage-nav--opened');
+      stageMenuBtn.classList.add('main-header__link-stage--closed');
+      stageMenuBtn.classList.remove('main-header__link-stage--opened');
+      document.body.style.overflow = '';
+    }
+  });
+
+  servicesMenuBtn.addEventListener('click', function (evt) {
+    evt.preventDefault();
+
+    if (servicesMenu.classList.contains('main-header__services-nav--closed')) {
+      servicesMenu.classList.remove('main-header__services-nav--closed');
+      servicesMenu.classList.add('main-header__services-nav--opened');
+      servicesMenuBtn.classList.remove('main-header__link-services--closed');
+      servicesMenuBtn.classList.add('main-header__link-services--opened');
+      document.body.style.overflow = 'hidden';
+    } else {
+      servicesMenu.classList.add('main-header__services-nav--closed');
+      servicesMenu.classList.remove('main-header__services-nav--opened');
+      servicesMenuBtn.classList.add('main-header__link-services--closed');
+      servicesMenuBtn.classList.remove('main-header__link-services--opened');
       document.body.style.overflow = '';
     }
   });
