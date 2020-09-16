@@ -1,0 +1,62 @@
+extends ../layout/page-layout
+
+block variables
+  - var title = "Анализ"
+
+block header
+  +header
+
+block main
+  -
+    var blogList = [
+      {
+        path: 'png',
+        image: 'blog-image-1',
+        format: 'png',
+        width: '370',
+        height: '150',
+        altText: '1 Карточка',
+        textCard: 'Шаблон, который поможет регулярно писать статьи',
+        timeText: '24 апреля 2020'
+      },
+      {
+        path: 'png',
+        image: 'blog-image-1',
+        format: 'png',
+        width: '370',
+        height: '150',
+        altText: '1 Карточка',
+        textCard: 'Шаблон, который поможет регулярно писать статьи',
+        timeText: '24 апреля 2020'
+      },
+    ];
+
+  main
+    section.stages
+      h1 Этапы
+      ul.stages__nav-list
+        li: .stages__image: a(href="#"): +img('analysis', 'box-design', 'svg', '124', '120', 'Дизайн')
+        li: .stages__image: a(href="#"): +img('analysis', 'box-design', 'svg', '124', '120', 'Дизайн')
+        li: .stages__image: a(href="#"): +img('analysis', 'box-design', 'svg', '124', '120', 'Дизайн')
+        li: .stages__image: a(href="#"): +img('analysis', 'box-design', 'svg', '124', '120', 'Дизайн')
+        li: .stages__image: a(href="#"): +img('analysis', 'box-design', 'svg', '124', '120', 'Дизайн')
+        li: .stages__image: a(href="#"): +img('analysis', 'box-design', 'svg', '124', '120', 'Дизайн')
+        li: .stages__image: a(href="#"): +img('analysis', 'box-design', 'svg', '124', '120', 'Дизайн')
+      .stages__box.container
+        +img('analysis', 'image-analysis-1', 'svg', '720', '510', 'Анализ')
+        +img('analysis', 'image-analysis-2', 'svg', '870', '275', 'Анализ')
+      .stages__text
+        h2 Анализ
+        p Проводим первичный
+          a(href="#")  бесплатный
+          |  базовый анализ рынка. Первый этап в комплексном маркетинге – это проведение анализа ниши вашего бизнеса, анализа вашей целевой аудитории, анализа конкурентов. Всё это позволит максимально точно оценить рынок и определить возможности развития вашего бизнеса.
+        p Что включает анализ:
+        ol.stages__list
+          li: p Составление максимально полного портрета именно вашей целевой аудитории.
+          li: p Поиск прямых и косвенных конкурентов, работающих с вашей целевой аудиторией.
+          li: p Анализ интернет-упаковки конкурентов, использования ими всех современных инструментов продвижения.
+          li: p Определение их сильных и слабых сторон.
+          li: p Определение уникальности вашего бизнеса и способов отстройки от конкурентов.
+
+block footer
+  +footer

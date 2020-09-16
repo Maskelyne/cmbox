@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Главная</title>
+    <title>Блог</title>
     <meta name="description" content="CmBox | Креативная маркетинговая упаковка">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style.min.css">
@@ -11,21 +11,7 @@
   </head>
   <body>
     <header class="main-header">
-      <nav class="main-header__wrapper container">
-        <div class="main-header__stage-box"><a class="main-header__todo-menu" href="#"><span class="visually-hidden">Меню с этапами</span><img src="img/png/bckg-stages.png" width="64" height="64" alt="Этапы"/></a>
-          <div class="main-header__stage-nav main-header__stage-nav--closed">
-            <h1>Этапы</h1>
-            <ul class="main-header__stage-list">
-              <li><a href="#">Стратегия</a></li>
-              <li><a href="#">Анализ</a></li>
-              <li><a href="#">Дизайн</a></li>
-              <li><a href="#">Разработка</a></li>
-              <li><a href="#">Продвижение</a></li>
-              <li><a href="#">Автоматизация</a></li>
-              <li><a href="#">Поддержка</a></li>
-            </ul>
-          </div>
-        </div>
+      <nav class="main-header__wrapper container"><a class="main-header__todo-menu" href="#"><span class="visually-hidden">Портфолио</span></a>
         <div class="main-header__image"><a href="index.html"><img src="img/svg/logo.svg" width="120" height="43" alt="Логотип"/></a></div><a class="main-header__link-services" href="#"><span class="visually-hidden">Услуги</span><img src="img/svg/icon-box.svg" width="26" height="26" alt="Услуги"/></a>
         <button class="main-header__btn main-header__btn--closed" href="#"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-header__wrap-menu">
@@ -54,8 +40,42 @@
         </div>
       </nav>
     </header>
-    <main class="page-main">
-      <h1>Main</h1>
+    <main class="gray-box">
+      <section class="article">
+        <div class="article__wrapper">
+          <div class="article__box-article container">
+            <div class="article__box-articles">
+              <div class="article__box-wrapper">
+                <h3>Свежие статьи</h3>
+                <ul class="blog blog__list">
+                  <li>
+                    <div class="blog__card"><a href="article.html">
+                        <div class="blog__image"><img src="img/png/blog-image-1.png" width="370" height="150" alt="1 Карточка"/>
+                          <div class="blog__time">
+                            <time datetime="24 апреля 2020">24 апреля 2020</time>
+                          </div>
+                        </div>
+                        <div class="blog__text">
+                          <p>Шаблон, который поможет регулярно писать статьи</p>
+                        </div></a></div>
+                  </li>
+                  <li>
+                    <div class="blog__card"><a href="article.html">
+                        <div class="blog__image"><img src="img/png/blog-image-1.png" width="370" height="150" alt="1 Карточка"/>
+                          <div class="blog__time">
+                            <time datetime="24 апреля 2020">24 апреля 2020</time>
+                          </div>
+                        </div>
+                        <div class="blog__text">
+                          <p>Шаблон, который поможет регулярно писать статьи</p>
+                        </div></a></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="main-footer">
       <div class="main-footer__wrapper container">

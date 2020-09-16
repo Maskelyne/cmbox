@@ -47,7 +47,6 @@
   grid-template-rows: repeat(3, max-content);
   grid-gap: 20px 0;
   position: relative;
-  z-index: 1;
 
   @media (max-width: $desktop-width-min) {
     margin: 0 17% 0 28%;

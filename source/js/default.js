@@ -9,3 +9,4 @@
 //= modules/clients-slider.js
 //= modules/validation.js
 //= modules/menu.js
+//= modules/scroll-height.js

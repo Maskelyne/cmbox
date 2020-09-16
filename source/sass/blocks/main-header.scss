@@ -64,7 +64,7 @@
 
 .main-header__box {
   display: grid;
-  grid-template-columns: 60% 36%;
+  grid-template-columns: 62% 36%;
   grid-column-gap: 10px;
   align-items: center;
 
@@ -108,7 +108,7 @@
 
     &--active {
       display: block;
-      z-index: 5;
+      z-index: -2;
     }
   }
 }
@@ -249,38 +249,77 @@
   }
 }
 
+.main-header__stage-box {
+  width: 100%;
+  position: absolute;
+  top: 65px;
+  left: 0;
+  z-index: -1;
+}
+
+.main-header__stage-nav {
+  height: 100vh;
+  background-color: $light-gray;
+
+  h1 {
+    margin: 0;
+    padding: 25px 0;
+  }
+
+  &--closed {
+    display: none;
+  }
+
+  &--opened {
+    display: grid;
+    grid-template-rows: 70px 70%;
+  }
+}
+
+.main-header__stage-list {
+  @include reset-list;
+  padding: 0 50px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 25px 0;
+
+  li {
+    width: 100%;
+  }
+
+  a {
+    padding: 10px 0;
+    font-size: 24px;
+    line-height: 24px;
+    box-shadow: -8px -8px 16px rgba(255, 255, 255, 0.8),
+      8px 8px 16px rgba(186, 198, 216, 0.8);
+    border-radius: 10px;
+    text-align: center;
+    display: grid;
+
+    &:hover {
+      color: $dark-blue;
+    }
+
+    &:active {
+      box-shadow: inset -5px -5px 5px rgba(240, 242, 243, 0.5),
+        inset 5px 5px 10px rgba(166, 180, 200, 0.75);
+    }
+  }
+}
+
 .main-header__todo-menu {
   display: none;
 
   @media (max-width: $tablet-width) {
-    width: 23px;
-    height: 23px;
+    width: 64px;
+    height: 64px;
     display: block;
     position: absolute;
-    z-index: -1;
-
-    &::before {
-      width: 23px;
-      height: 23px;
-      position: absolute;
-      content: "";
-      top: 57px;
-      left: 13px;
-      background-image: url('../img/svg/icon-add-menu.svg');
-      background-repeat: no-repeat;
-      z-index: 2;
-    }
-
-    &::after {
-      width: 128px;
-      height: 128px;
-      position: absolute;
-      content: "";
-      top: -15px;
-      left: -65px;
-      background-color: $white;
-      border-radius: 50%;
-      z-index: 1;
-    }
+    top: 0;
+    left: 0;
+    z-index: 2;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    border-bottom-right-radius: 65px;
   }
 }

@@ -1,7 +1,7 @@
 mixin header()
 
   -
-    const headerList = [
+    var headerList = [
       {
         text: 'О нас',
         link: 'about-us.html'
@@ -28,10 +28,49 @@ mixin header()
       },
     ];
 
+  -
+    var stageList = [
+      {
+        link: '#',
+        text: 'Стратегия'
+      },
+      {
+        link: '#',
+        text: 'Анализ'
+      },
+      {
+        link: '#',
+        text: 'Дизайн'
+      },
+      {
+        link: '#',
+        text: 'Разработка'
+      },
+      {
+        link: '#',
+        text: 'Продвижение'
+      },
+      {
+        link: '#',
+        text: 'Автоматизация'
+      },
+      {
+        link: '#',
+        text: 'Поддержка'
+      },
+    ];
+
   header.main-header
     nav.main-header__wrapper.container
-      a.main-header__todo-menu(href="#")
-        span.visually-hidden Портфолио
+      .main-header__stage-box
+        a.main-header__todo-menu(href="#")
+          span.visually-hidden Меню с этапами
+          +img('png', 'bckg-stages', 'png', '64', '64', 'Этапы')
+        .main-header__stage-nav.main-header__stage-nav--closed
+          h1 Этапы
+          ul.main-header__stage-list
+            each item in stageList
+              li: a(href= item.link)= item.text
       .main-header__image
         a(href="index.html")
           +img('svg', 'logo', 'svg', '120', '43', 'Логотип')
