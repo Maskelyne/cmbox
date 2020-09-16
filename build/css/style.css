@@ -2760,26 +2760,29 @@ textarea {
       grid-template-columns: 1fr;
       margin-top: 40px; } }
 
-.portfolio__card {
+.portfolio__box-card {
+  perspective: 1000px;
+  transform-style: preserve-3d; }
+
+.portfolio__card-perspective {
   box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.3), 10px 10px 20px rgba(68, 69, 70, 0.15), inset 4px 4px 15px rgba(255, 255, 255, 0.3);
   border-radius: 10px;
   border: solid 4px #ffffff;
   background-image: url("../img/png/bckg-vodadom.png");
   background-repeat: no-repeat;
   background-size: 100%;
-  perspective: 2000px;
-  transform-style: preserve-3d; }
+  transition: transform 0.1s; }
   @media (max-width: 767px) {
-    .portfolio__card {
+    .portfolio__card-perspective {
       min-height: 320px; } }
-  .portfolio__card h2 {
+  .portfolio__card-perspective h2 {
     padding: 10px 0;
     font-size: 36px;
     line-height: 36px;
     color: #0a3d76;
     text-transform: none;
     text-align: center; }
-  .portfolio__card p {
+  .portfolio__card-perspective p {
     margin: 0;
     padding: 0 16px 10px 16px;
     font-family: "ProximaNova-Bold", arial, sans-serif; }

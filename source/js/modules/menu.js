@@ -2,48 +2,27 @@
 
 (function () {
 
-  var docStyle = document.documentElement.style;
-  var aElem = document.querySelector(".btn");
+  var cards = document.querySelectorAll(".portfolio__box-card");
 
-  if (aElem) {
+  function rotate (evt) {
+    var cardItem = this.querySelector('.portfolio__card-perspective');
+    var halfHeight = cardItem.offsetHeight / 2;
+    var halfWidth = cardItem.offsetWidth / 2;
 
-    var boundingClientRect = aElem.getBoundingClientRect();
+      cardItem.style.transform = 'rotateX(' + -(evt.offsetY - halfHeight) / 7 + 'deg)' +
+        'rotateY(' + (evt.offsetX - halfWidth) / 7 + 'deg';
+  }
 
-    aElem.onmousemove = function (e) {
+  function rotateNone () {
+    var cardItem = this.querySelector('.portfolio__card-perspective');
 
-      var x = e.clientX - boundingClientRect.left;
-      var y = e.clientY - boundingClientRect.top;
+    cardItem.style.transform = 'rotateX(0deg)' + 'rotateY(0deg)';
+  }
 
-      var xc = boundingClientRect.width / 2;
-      var yc = boundingClientRect.height / 2;
-
-      var dx = x - xc;
-      var dy = y - yc;
-
-      docStyle.setProperty('--rx', `${dy / -1}deg`);
-      docStyle.setProperty('--ry', `${dx / 10}deg`);
-
-    }
-
-    aElem.onmouseleave = function (e) {
-
-      docStyle.setProperty('--ty', '0');
-      docStyle.setProperty('--rx', '0');
-      docStyle.setProperty('--ry', '0');
-
-    }
-
-    aElem.onmousedown = function (e) {
-
-      docStyle.setProperty('--tz', '-25px');
-
-    }
-
-    document.body.onmouseup = function (e) {
-
-      docStyle.setProperty('--tz', '-12px');
-
-    }
+  for (var i = 0; i < cards.length; i++) {
+    var card = cards[i];
+    card.addEventListener('mousemove', rotate);
+    card.addEventListener('mouseout', rotateNone);
   }
 
 })();
