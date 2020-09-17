@@ -1,3 +1,11 @@
+.portfolio {
+  margin-bottom: 70px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+}
+
 .portfolio__list {
   @include reset-list;
   margin-top: 60px;

@@ -1,5 +1,4 @@
 mixin header()
-
   -
     var headerList = [
       {
@@ -12,7 +11,7 @@ mixin header()
       },
       {
         text: 'Этапы',
-        link: 'steps.html'
+        link: 'stage-analysis.html'
       },
       {
         text: 'Портфолио',
@@ -136,8 +135,9 @@ mixin header()
 
   header.main-header
     nav.main-header__wrapper.container
-      .main-header__image
-        +img('svg', 'logo', 'svg', '120', '43', 'Логотип')
+      .main-header__logo
+        a(href="index.html")
+          +img('svg', 'logo', 'svg', '120', '43', 'Логотип')
       .main-header__stage-box
         a.main-header__link-stage.main-header__link-stage--closed(href="#")
           span.visually-hidden Меню с этапами

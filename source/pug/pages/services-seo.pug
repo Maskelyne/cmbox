@@ -9,14 +9,41 @@ block header
 block main
 
   -
-    const boxesList = [
+    var boxesList = [
+      {
+        link: 'services-analytics.html',
+        path: 'services',
+        name: 'box-analytics',
+        format: 'svg',
+        width: '240',
+        height: '160',
+        altText: 'Аналитика'
+      },
+      {
+        link: 'services-strategy.html',
+        path: 'services',
+        name: 'box-strategy',
+        format: 'svg',
+        width: '240',
+        height: '160',
+        altText: 'Стратегия'
+      },
+      {
+        link: 'services-design.html',
+        path: 'services',
+        name: 'box-design',
+        format: 'svg',
+        width: '240',
+        height: '160',
+        altText: 'Дизайн'
+      },
       {
         link: 'services-site.html',
         path: 'services',
         name: 'box-site',
         format: 'svg',
-        width: '260',
-        height: '190',
+        width: '240',
+        height: '160',
         altText: 'Сайт'
       },
       {
@@ -24,8 +51,8 @@ block main
         path: 'services',
         name: 'box-sales',
         format: 'svg',
-        width: '260',
-        height: '190',
+        width: '240',
+        height: '160',
         altText: 'Воронка продаж'
       },
       {
@@ -33,8 +60,8 @@ block main
         path: 'services',
         name: 'box-seo',
         format: 'svg',
-        width: '260',
-        height: '190',
+        width: '240',
+        height: '160',
         altText: 'Seo'
       },
       {
@@ -42,8 +69,8 @@ block main
         path: 'services',
         name: 'box-contecst',
         format: 'svg',
-        width: '260',
-        height: '190',
+        width: '240',
+        height: '160',
         altText: 'Seo'
       },
       {
@@ -51,8 +78,8 @@ block main
         path: 'services',
         name: 'box-social',
         format: 'svg',
-        width: '260',
-        height: '190',
+        width: '240',
+        height: '160',
         altText: 'Seo'
       },
       {
@@ -60,8 +87,8 @@ block main
         path: 'services',
         name: 'box-marketing',
         format: 'svg',
-        width: '260',
-        height: '190',
+        width: '240',
+        height: '160',
         altText: 'Seo'
       },
       {
@@ -69,14 +96,14 @@ block main
         path: 'services',
         name: 'box-crm',
         format: 'svg',
-        width: '260',
-        height: '190',
+        width: '240',
+        height: '160',
         altText: 'Seo'
       },
     ];
 
   -
-    const servicesList = [
+    var servicesList = [
       {
         text: 'Технический анализ.'
       },
@@ -98,7 +125,7 @@ block main
     ];
 
   -
-    const servicesList2 = [
+    var servicesList2 = [
       {
         text: 'Анализ конкурентов и их места в поиске.'
       },
@@ -114,7 +141,7 @@ block main
     ];
 
   -
-    const servicesList3 = [
+    var servicesList3 = [
       {
         text: 'Оценка KPI, которые дают понимание, что SEO продвижение приносит результаты, помогает достигать намеченные цели.'
       },
@@ -124,7 +151,7 @@ block main
     ];
 
   -
-    const servicesList4 = [
+    var servicesList4 = [
       {
         text: 'Вы готовы работать на перспективу. SEO продвижение дает долгосрочный эффект.'
       },
@@ -140,7 +167,7 @@ block main
     ];
 
   -
-    const servicesList5 = [
+    var servicesList5 = [
       {
         text: 'Привлечение целевой аудитории, которая проявляет к вам лояльность, так как сама выбрала зайти на одну из ваших страниц. Что не вызывает у нее некого негатива, в отличие от перехода к вам с рекламы.'
       },
@@ -153,7 +180,7 @@ block main
     ];
 
   -
-    const servicesList6 = [
+    var servicesList6 = [
       {
         text: 'Привлечение целевой аудитории, которая проявляет к вам лояльность, так как сама выбрала зайти на одну из ваших страниц. Что не вызывает у нее некого негатива, в отличие от перехода к вам с рекламы.'
       },
@@ -170,11 +197,12 @@ block main
       .services__box-wrapper
         h1 Услуги
         .services__box
-          ul.services__boxes-list
-            each item in boxesList
-              li
-                a(href= item.link)
-                  +img(item.path, item.name, item.format, item.width, item.height, item.altText)
+          .services__nav-box
+            ul.services__boxes-list
+              each item in boxesList
+                li
+                  a(href= item.link)
+                    +img(item.path, item.name, item.format, item.width, item.height, item.altText)
           .services__box-images
             .services__image
               +img('services', 'icon-seo', 'svg', '220', '220', 'Seo')

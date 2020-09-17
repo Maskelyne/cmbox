@@ -101,7 +101,6 @@
       &:nth-child(4) {
         max-width: 500px;
         margin: -40px 0 0 120px;
-        z-index: -2;
 
         @media (max-width: $desktop-width-min) {
           max-width: 100%;
@@ -171,7 +170,6 @@
 
   &-box--2 {
     margin: -40px 0 0 10%;
-    z-index: -1;
 
     @media (max-width: $desktop-width-min) {
       margin: 0;
@@ -225,7 +223,6 @@
   grid-gap: 15px 0;
   align-items: center;
   position: relative;
-  z-index: 1;
 
   @media (max-width: $desktop-width-min) {
     margin-left: 0;
@@ -254,7 +251,6 @@
   margin: -40px 0 0 -5%;
   background-color: $light-gray;
   position: relative;
-  z-index: -1;
 
   @media (max-width: $desktop-width-min) {
     max-width: 100%;
@@ -327,12 +323,24 @@
   }
 }
 
+.services__nav-box {
+  max-width: 200px;
+  width: 100%;
+  height: 1400px;
+  position: absolute;
+  top: 90px;
+  left: 0;
+
+  @media (max-width: $desktop-width-min) {
+    top: 105px;
+  }
+}
+
 .services__boxes-list {
   @include reset-list;
-  position: fixed;
-  top: 9%;
-  left: -20px;
-  z-index: 20;
+  position: sticky;
+  top: 0;
+  left: 0;
 
   @media (max-width: $tablet-width) {
     display: none;
@@ -526,7 +534,6 @@
   .services__text-box--2 {
     margin: -15px 0 0 13%;
     position: relative;
-    z-index: 1;
 
     @media (max-width: $desktop-width-min) {
       margin: 0;
@@ -669,7 +676,7 @@
 }
 
 .services__box-portfolio {
-  margin: 70px auto 0 auto;
+  margin: 70px auto 70px auto;
 
   h2 {
     max-width: 500px;
@@ -695,4 +702,16 @@
       color: $dark-red;
     }
   }
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+
+.z-index-2 {
+  z-index: -1;
+}
+
+.z-index-3 {
+  z-index: -2;
 }

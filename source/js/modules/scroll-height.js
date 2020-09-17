@@ -25,4 +25,50 @@
     window.addEventListener('resize', setHeight);
   }
 
+  let servicesBoxWrapper = document.querySelector('.services');
+
+  if (servicesBoxWrapper) {
+
+    const TABLET_WIDTH = 767;
+    let servicesBox = document.querySelector('.services__nav-box');
+
+    let setHeight = function () {
+      let isTablet = window.innerWidth > TABLET_WIDTH;
+
+        if (isTablet) {
+          let contentHeight = servicesBoxWrapper.offsetHeight;
+          servicesBox.style.height = contentHeight + 'px';
+        } else {
+          servicesBox.style.height = '';
+        }
+    }
+    setHeight();
+
+    window.addEventListener('scroll', setHeight);
+    window.addEventListener('resize', setHeight);
+  }
+
+  let stageWrapper = document.querySelector('.stages');
+
+  if (stageWrapper) {
+
+    const TABLET_WIDTH = 767;
+    let stageBox = document.querySelector('.stage__nav-box');
+
+    let setHeight = function () {
+      let isTablet = window.innerWidth > TABLET_WIDTH;
+
+        if (isTablet) {
+          let contentHeight = stageWrapper.offsetHeight;
+          stageBox.style.height = contentHeight + 'px';
+        } else {
+          stageBox.style.height = '';
+        }
+    }
+    setHeight();
+
+    window.addEventListener('scroll', setHeight);
+    window.addEventListener('resize', setHeight);
+  }
+
 })();

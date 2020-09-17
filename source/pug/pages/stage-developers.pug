@@ -1,0 +1,91 @@
+extends ../layout/page-layout
+
+block variables
+  - var title = "Разработка"
+
+block header
+  +header
+
+block main
+  -
+    var blogList = [
+      {
+        path: 'png',
+        image: 'blog-image-1',
+        format: 'png',
+        width: '370',
+        height: '150',
+        altText: '1 Карточка',
+        textCard: 'Шаблон, который поможет регулярно писать статьи',
+        timeText: '24 апреля 2020'
+      },
+      {
+        path: 'png',
+        image: 'blog-image-1',
+        format: 'png',
+        width: '370',
+        height: '150',
+        altText: '1 Карточка',
+        textCard: 'Шаблон, который поможет регулярно писать статьи',
+        timeText: '24 апреля 2020'
+      },
+    ];
+
+  main
+    section.stages
+      h1 Этапы
+      .stage__nav-box
+        ul.stages__nav-list
+          li
+            .stages__image
+              a(href='stage-analysis.html')
+                span Анализ
+                +img('stage-boxes', 'stage-box', 'svg', '125', '120', 'Анализ')
+          li
+            .stages__image
+              a(href='stage-strategy.html')
+                span Стратегия
+                +img('stage-boxes', 'stage-box', 'svg', '125', '120', 'Стратегия')
+          li
+            .stages__image
+              a(href='stage-design.html')
+                span Дизайн
+                +img('stage-boxes', 'stage-box', 'svg', '125', '120', 'Дизайн')
+          li
+            .stages__image.stages__image--active
+              a(href='stage-developers.html')
+                span Разработка
+                +img('stage-boxes', 'stage-box-active', 'svg', '220', '175', 'Разработка')
+          li
+            .stages__image
+              a(href='stage-promotion.html')
+                span Продвижение
+                +img('stage-boxes', 'stage-box', 'svg', '125', '120', 'Продвижение')
+          li
+            .stages__image
+              a(href='stage-automation.html')
+                span Автоматизация
+                +img('stage-boxes', 'stage-box', 'svg', '125', '120', 'Автоматизация')
+          li
+            .stages__image
+              a(href='stage-support.html')
+                span Поддержка
+                +img('stage-boxes', 'stage-box', 'svg', '125', '120', 'Поддержка')
+      .stages__box.container
+        +img('stage-analysis', 'image-analysis-1', 'svg', '720', '510', 'Анализ')
+        +img('stage-analysis', 'image-analysis-2', 'svg', '870', '275', 'Анализ')
+      .stages__text
+        h2 Разработка
+        p Проводим первичный
+          a(href="#")  бесплатный
+          |  базовый анализ рынка. Первый этап в комплексном маркетинге – это проведение анализа ниши вашего бизнеса, анализа вашей целевой аудитории, анализа конкурентов. Всё это позволит максимально точно оценить рынок и определить возможности развития вашего бизнеса.
+        p Что включает анализ:
+        ol.stages__list
+          li: p Составление максимально полного портрета именно вашей целевой аудитории.
+          li: p Поиск прямых и косвенных конкурентов, работающих с вашей целевой аудиторией.
+          li: p Анализ интернет-упаковки конкурентов, использования ими всех современных инструментов продвижения.
+          li: p Определение их сильных и слабых сторон.
+          li: p Определение уникальности вашего бизнеса и способов отстройки от конкурентов.
+
+block footer
+  +footer

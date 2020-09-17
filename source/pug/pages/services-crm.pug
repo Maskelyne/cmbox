@@ -9,14 +9,41 @@ block header
 block main
 
   -
-    const boxesList = [
+    var boxesList = [
+      {
+        link: 'services-analytics.html',
+        path: 'services',
+        name: 'box-analytics',
+        format: 'svg',
+        width: '240',
+        height: '160',
+        altText: 'Аналитика'
+      },
+      {
+        link: 'services-strategy.html',
+        path: 'services',
+        name: 'box-strategy',
+        format: 'svg',
+        width: '240',
+        height: '160',
+        altText: 'Стратегия'
+      },
+      {
+        link: 'services-design.html',
+        path: 'services',
+        name: 'box-design',
+        format: 'svg',
+        width: '240',
+        height: '160',
+        altText: 'Дизайн'
+      },
       {
         link: 'services-site.html',
         path: 'services',
         name: 'box-site',
         format: 'svg',
-        width: '260',
-        height: '190',
+        width: '240',
+        height: '160',
         altText: 'Сайт'
       },
       {
@@ -24,8 +51,8 @@ block main
         path: 'services',
         name: 'box-sales',
         format: 'svg',
-        width: '260',
-        height: '190',
+        width: '240',
+        height: '160',
         altText: 'Воронка продаж'
       },
       {
@@ -33,8 +60,8 @@ block main
         path: 'services',
         name: 'box-seo',
         format: 'svg',
-        width: '260',
-        height: '190',
+        width: '240',
+        height: '160',
         altText: 'Seo'
       },
       {
@@ -42,8 +69,8 @@ block main
         path: 'services',
         name: 'box-contecst',
         format: 'svg',
-        width: '260',
-        height: '190',
+        width: '240',
+        height: '160',
         altText: 'Seo'
       },
       {
@@ -51,8 +78,8 @@ block main
         path: 'services',
         name: 'box-social',
         format: 'svg',
-        width: '260',
-        height: '190',
+        width: '240',
+        height: '160',
         altText: 'Seo'
       },
       {
@@ -60,8 +87,8 @@ block main
         path: 'services',
         name: 'box-marketing',
         format: 'svg',
-        width: '260',
-        height: '190',
+        width: '240',
+        height: '160',
         altText: 'Seo'
       },
       {
@@ -69,14 +96,14 @@ block main
         path: 'services',
         name: 'box-crm',
         format: 'svg',
-        width: '260',
-        height: '190',
+        width: '240',
+        height: '160',
         altText: 'Seo'
       },
     ];
 
   -
-    const servicesList = [
+    var servicesList = [
       {
         text: 'собирает базовую и маркетинговую информацию о лидах, клиентах и компаниях в единое ядро'
       },
@@ -95,11 +122,12 @@ block main
     section.services
       h1 Услуги
       .services__box
-        ul.services__boxes-list
-          each item in boxesList
-            li
-              a(href= item.link)
-                +img(item.path, item.name, item.format, item.width, item.height, item.altText)
+        .services__nav-box
+          ul.services__boxes-list
+            each item in boxesList
+              li
+                a(href= item.link)
+                  +img(item.path, item.name, item.format, item.width, item.height, item.altText)
         .services__box-images
           .services__image
             +img('services', 'icon-crm', 'svg', '250', '250', 'CRM')
@@ -111,7 +139,7 @@ block main
           .services__text.services__text-box
             strong CRM
             p — это система для выстраивания взаимоотношений с клиентами, в связке с маркетинговыми инструментами становится максимально эффективной.
-          .services__text.services__text-box--2.services__text-light--gray
+          .services__text.services__text-box--2.services__text-light--gray.z-index-2
             p.services__text-dark Основной функционал:
             ul.services__text-list
               each item in servicesList

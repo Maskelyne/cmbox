@@ -1,8 +1,27 @@
+.stages {
+  margin-bottom: 70px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+}
+
+.stage__nav-box {
+  width: 125px;
+  height: 1200px;
+  position: absolute;
+  top: 90px;
+  left: 40px;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
 .stages__nav-list {
   @include reset-list;
-  position: fixed;
-  top: 8.5%;
-  left: 2%;
+  position: sticky;
+  top: 20px;
 }
 
 .stages__box {
@@ -11,6 +30,19 @@
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
+  position: relative;
+
+  @media (max-width: $desktop-width) {
+    margin: 0 10% 0 20%;
+  }
+
+  @media (max-width: $desktop-width-min) {
+    margin: 0 5% 0 23%;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin: 0 auto;
+  }
 
   img {
     &:nth-child(1) {
@@ -18,22 +50,256 @@
     }
 
     &:nth-child(2) {
-      margin-top: -100px;
+      margin-top: -150px;
       z-index: -1;
+
+      @media (max-width: $desktop-width-min) {
+        margin-top: -100px;
+      }
+
+      @media (max-width: $tablet-width) {
+        margin-top: -70px;
+      }
+    }
+
+    &:nth-child(3) {
+      max-width: 65px;
+      position: absolute;
+      top: 42%;
+      left: 0;
+      animation: teams-svg-top;
+      animation-duration: 1.8s;
+      animation-delay: 0s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+
+      @media (max-width: $desktop-width-min) {
+        max-width: 50px;
+        left: 15px;
+      }
+    }
+
+    &:nth-child(4) {
+      max-width: 50px;
+      position: absolute;
+      top: 57%;
+      left: 18%;
+      animation: teams-svg-top;
+      animation-duration: 2.1s;
+      animation-delay: 0s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+
+      @media (max-width: $desktop-width-min) {
+        max-width: 45px;
+      }
+    }
+
+    &:nth-child(5) {
+      max-width: 60px;
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      animation: teams-svg-top;
+      animation-duration: 2.6s;
+      animation-delay: 0s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+
+      @media (max-width: $desktop-width-min) {
+        max-width: 50px;
+      }
+    }
+
+    &:nth-child(6) {
+      max-width: 70px;
+      position: absolute;
+      top: 19%;
+      left: 17%;
+      animation: teams-svg-top;
+      animation-duration: 2.5s;
+      animation-delay: 0s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+
+      @media (max-width: $desktop-width-min) {
+        max-width: 55px;
+      }
+    }
+
+    &:nth-child(7) {
+      max-width: 90px;
+      position: absolute;
+      top: 0;
+      left: 29%;
+      animation: teams-svg-top;
+      animation-duration: 1.7s;
+      animation-delay: 0s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+
+      @media (max-width: $desktop-width-min) {
+        max-width: 75px;
+      }
+    }
+
+    &:nth-child(8) {
+      max-width: 190px;
+      position: absolute;
+      top: 0;
+      right: 18%;
+      animation: teams-svg-top;
+      animation-duration: 2.1s;
+      animation-delay: 0s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+
+      @media (max-width: $desktop-width-min) {
+        max-width: 135px;
+      }
+    }
+
+    &:nth-child(9) {
+      max-width: 90px;
+      position: absolute;
+      top: 45%;
+      right: 10%;
+      animation: teams-svg-top;
+      animation-duration: 2.7s;
+      animation-delay: 0s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+
+      @media (max-width: $desktop-width-min) {
+        max-width: 60px;
+      }
     }
   }
 }
 
 .stages__image {
-  img {
-    max-width: 110px;
-    display: grid;
+  a {
+    position: relative;
+    color: $black;
+
+    span {
+      width: 122px;
+      padding: 20px 0;
+      position: absolute;
+      transform: translate(0px, 64px);
+      transition: all 0.4s linear;
+      z-index: 1;
+      font-family: $proximaBold;
+      font-size: 15px;
+      line-height: 15px;
+      text-align: center;
+
+      @media (max-width: $desktop-width-min) {
+        width: 110px;
+        padding: 18px 0;
+        font-size: 14px;
+        line-height: 14px;
+        transform: translate(0, 57px);
+      }
+    }
+
+    &:hover {
+      color: $black;
+
+      img {
+        transform: translateX(30px);
+        transition: all 0.4s linear;
+      }
+
+      span {
+        transform: translate(30px, 64px);
+        transition: all 0.4s linear;
+        background-color: $dark-pink;
+
+        @media (max-width: $desktop-width-min) {
+          transform: translate(30px, 57px);
+        }
+      }
+    }
+
+    img {
+      width: 150px;
+      display: grid;
+      transition: all 0.4s linear;
+
+      @media (max-width: $desktop-width-min) {
+        width: 135px;
+      }
+    }
+  }
+
+  &--active {
+    a {
+      span {
+        width: 122px;
+        transform: translate(0, 95px);
+        font-size: 16px;
+        line-height: 16px;
+
+        @media (max-width: $desktop-width-min) {
+          width: 110px;
+          font-size: 15px;
+          line-height: 15px;
+          transform: translate(0, 90px);
+        }
+      }
+
+      img {
+        width: 230px;
+        transform: translateX(-40px);
+
+        @media (max-width: $desktop-width-min) {
+          width: 215px;
+        }
+      }
+
+      &:hover {
+        color: $black;
+
+        img {
+          transform: translateX(-40px);
+          transition: all 0.4s linear;
+        }
+
+        span {
+          transform: translate(0, 95px);
+          transition: all 0.4s linear;
+          background-color: transparent;
+
+          @media (max-width: $desktop-width-min) {
+            transform: translate(0, 90px);
+          }
+        }
+      }
+    }
   }
 }
 
 .stages__text {
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 30px 15% 0 23%;
+
+  @media (max-width: $desktop-width-min) {
+    margin: 40px 5% 0 29%;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin:  0 auto;
+    padding: 0 10px;
+  }
+
   h2 {
     margin-bottom: 10px;
     font-family: $mistral;

@@ -7,56 +7,59 @@
   var servicesMenuBtn = document.querySelector('.main-header__link-services');
   var servicesMenu = document.querySelector('.main-header__services-nav');
 
-  menuBtn.addEventListener('click', function (evt) {
-    evt.preventDefault();
+  if (menuBtn) {
 
-    if (menuBtn.classList.contains('main-header__btn--closed')) {
-      menuBtn.classList.remove('main-header__btn--closed');
-      menuBtn.classList.add('main-header__btn--opened');
-      wrapMenu.classList.add('main-header__wrap-menu--active');
-      document.body.style.overflow = 'hidden';
-    } else {
-      menuBtn.classList.add('main-header__btn--closed');
-      menuBtn.classList.remove('main-header__btn--opened');
-      wrapMenu.classList.remove('main-header__wrap-menu--active');
-      document.body.style.overflow = '';
-    }
-  });
+    menuBtn.addEventListener('click', function (evt) {
+      evt.preventDefault();
 
-  stageMenuBtn.addEventListener('click', function (evt) {
-    evt.preventDefault();
+      if (menuBtn.classList.contains('main-header__btn--closed')) {
+        menuBtn.classList.remove('main-header__btn--closed');
+        menuBtn.classList.add('main-header__btn--opened');
+        wrapMenu.classList.add('main-header__wrap-menu--active');
+        document.body.style.overflow = 'hidden';
+      } else {
+        menuBtn.classList.add('main-header__btn--closed');
+        menuBtn.classList.remove('main-header__btn--opened');
+        wrapMenu.classList.remove('main-header__wrap-menu--active');
+        document.body.style.overflow = '';
+      }
+    });
 
-    if (stageMenu.classList.contains('main-header__stage-nav--closed')) {
-      stageMenu.classList.remove('main-header__stage-nav--closed');
-      stageMenu.classList.add('main-header__stage-nav--opened');
-      stageMenuBtn.classList.remove('main-header__link-stage--closed');
-      stageMenuBtn.classList.add('main-header__link-stage--opened');
-      document.body.style.overflow = 'hidden';
-    } else {
-      stageMenu.classList.add('main-header__stage-nav--closed');
-      stageMenu.classList.remove('main-header__stage-nav--opened');
-      stageMenuBtn.classList.add('main-header__link-stage--closed');
-      stageMenuBtn.classList.remove('main-header__link-stage--opened');
-      document.body.style.overflow = '';
-    }
-  });
+    stageMenuBtn.addEventListener('click', function (evt) {
+      evt.preventDefault();
 
-  servicesMenuBtn.addEventListener('click', function (evt) {
-    evt.preventDefault();
+      if (stageMenu.classList.contains('main-header__stage-nav--closed')) {
+        stageMenu.classList.remove('main-header__stage-nav--closed');
+        stageMenu.classList.add('main-header__stage-nav--opened');
+        stageMenuBtn.classList.remove('main-header__link-stage--closed');
+        stageMenuBtn.classList.add('main-header__link-stage--opened');
+        document.body.style.overflow = 'hidden';
+      } else {
+        stageMenu.classList.add('main-header__stage-nav--closed');
+        stageMenu.classList.remove('main-header__stage-nav--opened');
+        stageMenuBtn.classList.add('main-header__link-stage--closed');
+        stageMenuBtn.classList.remove('main-header__link-stage--opened');
+        document.body.style.overflow = '';
+      }
+    });
 
-    if (servicesMenu.classList.contains('main-header__services-nav--closed')) {
-      servicesMenu.classList.remove('main-header__services-nav--closed');
-      servicesMenu.classList.add('main-header__services-nav--opened');
-      servicesMenuBtn.classList.remove('main-header__link-services--closed');
-      servicesMenuBtn.classList.add('main-header__link-services--opened');
-      document.body.style.overflow = 'hidden';
-    } else {
-      servicesMenu.classList.add('main-header__services-nav--closed');
-      servicesMenu.classList.remove('main-header__services-nav--opened');
-      servicesMenuBtn.classList.add('main-header__link-services--closed');
-      servicesMenuBtn.classList.remove('main-header__link-services--opened');
-      document.body.style.overflow = '';
-    }
-  });
+    servicesMenuBtn.addEventListener('click', function (evt) {
+      evt.preventDefault();
+
+      if (servicesMenu.classList.contains('main-header__services-nav--closed')) {
+        servicesMenu.classList.remove('main-header__services-nav--closed');
+        servicesMenu.classList.add('main-header__services-nav--opened');
+        servicesMenuBtn.classList.remove('main-header__link-services--closed');
+        servicesMenuBtn.classList.add('main-header__link-services--opened');
+        document.body.style.overflow = 'hidden';
+      } else {
+        servicesMenu.classList.add('main-header__services-nav--closed');
+        servicesMenu.classList.remove('main-header__services-nav--opened');
+        servicesMenuBtn.classList.add('main-header__link-services--closed');
+        servicesMenuBtn.classList.remove('main-header__link-services--opened');
+        document.body.style.overflow = '';
+      }
+    });
+  }
 
 })();

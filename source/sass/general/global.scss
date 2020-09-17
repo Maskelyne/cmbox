@@ -79,11 +79,6 @@ body {
 
 main {
   flex-grow: 1;
-  padding-bottom: 55px;
-
-  @media (max-width: $tablet-width) {
-    padding-bottom: 40px;
-  }
 }
 
 .visually-hidden {

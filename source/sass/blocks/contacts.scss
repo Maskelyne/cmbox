@@ -1,3 +1,11 @@
+.contacts {
+  margin-bottom: 70px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+}
+
 .contacts__box-info {
   display: grid;
   grid-template-columns: 31% 35% auto;

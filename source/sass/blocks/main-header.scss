@@ -28,7 +28,7 @@
   }
 }
 
-.main-header__image {
+.main-header__logo {
   max-width: 120px;
 }
 
@@ -58,9 +58,12 @@
       font-family: $proximaBold;
       display: block;
     }
+  }
 
-    &:hover {
-      color: $dark-blue;
+  .main-header__item-active {
+    a {
+      font-weight: $bold;
+      color: $dark-red;
     }
   }
 }

@@ -29,7 +29,7 @@ var path = {
     jsAdd: 'source/js/main.js',
     vendorJs: 'source/js/vendor.js',
     css: 'source/sass/style.scss',
-    cssAdd: 'source/css/style.css',
+    cssAdd: 'source/css/main.css',
     img: 'source/img/**/*.{png,jpg,svg}',
     sprite: 'source/img/svg-sprite/*.svg',
     fonts: 'source/fonts/**/*.{woff,woff2}'
