@@ -7,27 +7,68 @@ block header
   +header
 
 block main
+
   -
-    var blogList = [
+    var imageList = [
       {
-        path: 'png',
-        image: 'blog-image-1',
-        format: 'png',
-        width: '370',
-        height: '150',
-        altText: '1 Карточка',
-        textCard: 'Шаблон, который поможет регулярно писать статьи',
-        timeText: '24 апреля 2020'
+        path: 'stage-promotion',
+        image: 'image-element-1',
+        format: 'svg',
+        width: '800',
+        height: '475',
+        altText: '1 Элемент'
       },
       {
-        path: 'png',
-        image: 'blog-image-1',
-        format: 'png',
-        width: '370',
-        height: '150',
-        altText: '1 Карточка',
-        textCard: 'Шаблон, который поможет регулярно писать статьи',
-        timeText: '24 апреля 2020'
+        path: 'stage-promotion',
+        image: 'image-element-2',
+        format: 'svg',
+        width: '870',
+        height: '275',
+        altText: '2 Элемент'
+      },
+    ];
+
+  -
+    var footerList = [
+      {
+        link: '#',
+        text: 'Вконтакте',
+        path: 'svg',
+        name: 'icon-vk',
+        format: 'svg',
+        width: '24',
+        height: '24',
+        altText: 'Вконтакте'
+      },
+      {
+        link: '#',
+        text: 'Фэйсбук',
+        path: 'svg',
+        name: 'icon-facebook',
+        format: 'svg',
+        width: '24',
+        height: '24',
+        altText: 'Фэйсбук'
+      },
+      {
+        link: '#',
+        text: 'Ютуб',
+        path: 'svg',
+        name: 'icon-youtube',
+        format: 'svg',
+        width: '24',
+        height: '24',
+        altText: 'Ютуб'
+      },
+      {
+        link: '#',
+        text: 'Инстаграм',
+        path: 'svg',
+        name: 'icon-instagram',
+        format: 'svg',
+        width: '24',
+        height: '24',
+        altText: 'Инстаграм'
       },
     ];
 
@@ -71,9 +112,20 @@ block main
               a(href='stage-support.html')
                 span Поддержка
                 +img('stage-boxes', 'stage-box', 'svg', '125', '120', 'Поддержка')
-      .stages__box.container
-        +img('stage-analysis', 'image-analysis-1', 'svg', '720', '510', 'Анализ')
-        +img('stage-analysis', 'image-analysis-2', 'svg', '870', '275', 'Анализ')
+      .stages__box.stages__box--promotions.container
+        +img('stage-promotion', 'image-element-1', 'svg', '800', '475', '1 Элемент')
+        +img('stage-promotion', 'image-element-2', 'svg', '870', '275', '2 Элемент')
+        +img('stage-promotion', 'image-element-3', 'svg', '70', '90', '3 Элемент')
+        +img('stage-promotion', 'image-element-4', 'svg', '60', '50', '4 Элемент')
+        +img('stage-promotion', 'image-element-5', 'svg', '45', '50', '5 Элемент')
+        +img('stage-promotion', 'image-element-6', 'svg', '65', '85', '6 Элемент')
+        +img('stage-promotion', 'image-element-7', 'svg', '50', '55', '7 Элемент')
+        ul.footer-social
+          each item in footerList
+            li
+              a(href= item.link)
+                span.visually-hidden= item.text
+                +img(item.path, item.name, item.format, item.width, item.height, item.altText)
       .stages__text
         h2 Продвижение
         p Проводим первичный

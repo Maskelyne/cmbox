@@ -7,27 +7,64 @@ block header
   +header
 
 block main
+
   -
-    var blogList = [
+    var imageList = [
       {
-        path: 'png',
-        image: 'blog-image-1',
-        format: 'png',
-        width: '370',
-        height: '150',
-        altText: '1 Карточка',
-        textCard: 'Шаблон, который поможет регулярно писать статьи',
-        timeText: '24 апреля 2020'
+        path: 'stage-developers',
+        image: 'image-element-1',
+        format: 'svg',
+        width: '610',
+        height: '525',
+        altText: '1 Элемент'
       },
       {
-        path: 'png',
-        image: 'blog-image-1',
-        format: 'png',
-        width: '370',
-        height: '150',
-        altText: '1 Карточка',
-        textCard: 'Шаблон, который поможет регулярно писать статьи',
-        timeText: '24 апреля 2020'
+        path: 'stage-developers',
+        image: 'image-element-2',
+        format: 'svg',
+        width: '870',
+        height: '275',
+        altText: '2 Элемент'
+      },
+      {
+        path: 'stage-developers',
+        image: 'image-element-3',
+        format: 'svg',
+        width: '97',
+        height: '70',
+        altText: '3 Элемент'
+      },
+      {
+        path: 'stage-developers',
+        image: 'image-element-4',
+        format: 'svg',
+        width: '120',
+        height: '85',
+        altText: '4 Элемент'
+      },
+      {
+        path: 'stage-developers',
+        image: 'image-element-5',
+        format: 'svg',
+        width: '104',
+        height: '70',
+        altText: '5 Элемент'
+      },
+      {
+        path: 'stage-developers',
+        image: 'image-element-6',
+        format: 'svg',
+        width: '104',
+        height: '75',
+        altText: '6 Элемент'
+      },
+      {
+        path: 'stage-developers',
+        image: 'image-element-7',
+        format: 'svg',
+        width: '85',
+        height: '60',
+        altText: '7 Элемент'
       },
     ];
 
@@ -71,9 +108,9 @@ block main
               a(href='stage-support.html')
                 span Поддержка
                 +img('stage-boxes', 'stage-box', 'svg', '125', '120', 'Поддержка')
-      .stages__box.container
-        +img('stage-analysis', 'image-analysis-1', 'svg', '720', '510', 'Анализ')
-        +img('stage-analysis', 'image-analysis-2', 'svg', '870', '275', 'Анализ')
+      .stages__box.stages__box--developers.container
+        each item in imageList
+          +img(item.path, item.image, item.format, item.width, item.height, item.altText)
       .stages__text
         h2 Разработка
         p Проводим первичный

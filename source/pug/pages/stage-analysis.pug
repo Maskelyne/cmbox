@@ -7,30 +7,6 @@ block header
   +header
 
 block main
-  -
-    var blogList = [
-      {
-        path: 'png',
-        image: 'blog-image-1',
-        format: 'png',
-        width: '370',
-        height: '150',
-        altText: '1 Карточка',
-        textCard: 'Шаблон, который поможет регулярно писать статьи',
-        timeText: '24 апреля 2020'
-      },
-      {
-        path: 'png',
-        image: 'blog-image-1',
-        format: 'png',
-        width: '370',
-        height: '150',
-        altText: '1 Карточка',
-        textCard: 'Шаблон, который поможет регулярно писать статьи',
-        timeText: '24 апреля 2020'
-      },
-    ];
-
   main
     section.stages
       h1 Этапы
@@ -71,16 +47,16 @@ block main
               a(href='stage-support.html')
                 span Поддержка
                 +img('stage-boxes', 'stage-box', 'svg', '125', '120', 'Поддержка')
-      .stages__box.container
-        +img('stage-analysis', 'image-analysis-1', 'svg', '720', '510', 'Анализ')
-        +img('stage-analysis', 'image-analysis-2', 'svg', '870', '275', 'Анализ')
-        +img('stage-analysis', 'image-element-1', 'svg', '63', '61', '1 Элемент')
-        +img('stage-analysis', 'image-element-2', 'svg', '48', '48', '2 Элемент')
-        +img('stage-analysis', 'image-element-3', 'svg', '60', '60', '3 Элемент')
-        +img('stage-analysis', 'image-element-4', 'svg', '68', '90', '4 Элемент')
-        +img('stage-analysis', 'image-element-5', 'svg', '90', '71', '5 Элемент')
-        +img('stage-analysis', 'image-element-6', 'svg', '190', '130', '6 Элемент')
-        +img('stage-analysis', 'image-element-7', 'svg', '90', '90', '7 Элемент')
+      .stages__box.stages__box--analysis.container
+        +img('stage-analysis', 'image-element-1', 'svg', '720', '510', 'Анализ')
+        +img('stage-analysis', 'image-element-2', 'svg', '870', '275', 'Анализ')
+        +img('stage-analysis', 'image-element-3', 'svg', '63', '61', '1 Элемент')
+        +img('stage-analysis', 'image-element-4', 'svg', '48', '48', '2 Элемент')
+        +img('stage-analysis', 'image-element-5', 'svg', '60', '60', '3 Элемент')
+        +img('stage-analysis', 'image-element-6', 'svg', '68', '90', '4 Элемент')
+        +img('stage-analysis', 'image-element-7', 'svg', '90', '71', '5 Элемент')
+        +img('stage-analysis', 'image-element-8', 'svg', '190', '130', '6 Элемент')
+        +img('stage-analysis', 'image-element-9', 'svg', '90', '90', '7 Элемент')
       .stages__text
         h2 Анализ
         p Проводим первичный
