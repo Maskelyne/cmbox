@@ -7,6 +7,51 @@ block header
   +header
 
 block main
+
+  -
+    var imageList = [
+      {
+        path: 'stage-design',
+        image: 'image-element-1',
+        format: 'svg',
+        width: '775',
+        height: '500',
+        altText: '1 Элемент'
+      },
+      {
+        path: 'stage-design',
+        image: 'image-element-2',
+        format: 'svg',
+        width: '870',
+        height: '275',
+        altText: '2 Элемент'
+      },
+      {
+        path: 'stage-design',
+        image: 'image-element-3',
+        format: 'svg',
+        width: '45',
+        height: '40',
+        altText: '3 Элемент'
+      },
+      {
+        path: 'stage-design',
+        image: 'image-element-4',
+        format: 'svg',
+        width: '75',
+        height: '75',
+        altText: '4 Элемент'
+      },
+      {
+        path: 'stage-design',
+        image: 'image-element-5',
+        format: 'svg',
+        width: '55',
+        height: '55',
+        altText: '5 Элемент'
+      },
+    ];
+
   main
     section.stages
       h1 Этапы
@@ -47,9 +92,11 @@ block main
               a(href='stage-support.html')
                 span Поддержка
                 +img('stage-boxes', 'stage-box', 'svg', '125', '120', 'Поддержка')
-      .stages__box.container
-        +img('stage-developers', 'image-element-1', 'svg', '610', '525', 'Анализ')
-        +img('stage-developers', 'image-element-2', 'svg', '870', '275', 'Анализ')
+      .stages__box.stages__box--design.container
+        each item in imageList
+          +img(item.path, item.image, item.format, item.width, item.height, item.altText)
+      .stages__box
+        +img('stage-design', 'image-mobile', 'svg', '340', '235', 'Дизайн')
       .stages__text
         h2 Дизайн
         p Проводим первичный

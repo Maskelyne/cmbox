@@ -71,6 +71,65 @@ block main
         altText: 'Инстаграм'
       },
     ];
+  -
+    var imageList = [
+      {
+        path: 'stage-promotion',
+        image: 'image-element-1',
+        format: 'svg',
+        width: '800',
+        height: '475',
+        altText: '1 Элемент'
+      },
+      {
+        path: 'stage-promotion',
+        image: 'image-element-2',
+        format: 'svg',
+        width: '870',
+        height: '275',
+        altText: '2 Элемент'
+      },
+      {
+        path: 'stage-promotion',
+        image: 'image-element-3',
+        format: 'svg',
+        width: '70',
+        height: '90',
+        altText: '3 Элемент'
+      },
+      {
+        path: 'stage-promotion',
+        image: 'image-element-4',
+        format: 'svg',
+        width: '60',
+        height: '50',
+        altText: '4 Элемент'
+      },
+      {
+        path: 'stage-promotion',
+        image: 'image-element-5',
+        format: 'svg',
+        width: '45',
+        height: '50',
+        altText: '5 Элемент'
+      },
+      {
+        path: 'stage-promotion',
+        image: 'image-element-6',
+        format: 'svg',
+        width: '65',
+        height: '85',
+        altText: '6 Элемент'
+      },
+      {
+        path: 'stage-promotion',
+        image: 'image-element-7',
+        format: 'svg',
+        width: '50',
+        height: '55',
+        altText: '7 Элемент'
+      },
+    ];
 
   main
     section.stages
@@ -113,19 +172,16 @@ block main
                 span Поддержка
                 +img('stage-boxes', 'stage-box', 'svg', '125', '120', 'Поддержка')
       .stages__box.stages__box--promotions.container
-        +img('stage-promotion', 'image-element-1', 'svg', '800', '475', '1 Элемент')
-        +img('stage-promotion', 'image-element-2', 'svg', '870', '275', '2 Элемент')
-        +img('stage-promotion', 'image-element-3', 'svg', '70', '90', '3 Элемент')
-        +img('stage-promotion', 'image-element-4', 'svg', '60', '50', '4 Элемент')
-        +img('stage-promotion', 'image-element-5', 'svg', '45', '50', '5 Элемент')
-        +img('stage-promotion', 'image-element-6', 'svg', '65', '85', '6 Элемент')
-        +img('stage-promotion', 'image-element-7', 'svg', '50', '55', '7 Элемент')
+        each item in imageList
+          +img(item.path, item.image, item.format, item.width, item.height, item.altText)
         ul.footer-social
           each item in footerList
             li
               a(href= item.link)
                 span.visually-hidden= item.text
                 +img(item.path, item.name, item.format, item.width, item.height, item.altText)
+      .stages__box
+        +img('stage-promotion', 'image-mobile', 'svg', '340', '235', 'Разработка')
       .stages__text
         h2 Продвижение
         p Проводим первичный

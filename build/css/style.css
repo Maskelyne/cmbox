@@ -1091,6 +1091,30 @@ main {
   100% {
     opacity: 1; } }
 
+@-webkit-keyframes scale {
+  0% {
+    transform: scale(0.8); }
+  100% {
+    transform: scale(1); } }
+
+@keyframes scale {
+  0% {
+    transform: scale(0.8); }
+  100% {
+    transform: scale(1); } }
+
+@-webkit-keyframes scale2 {
+  0% {
+    transform: scale(1); }
+  100% {
+    transform: scale(1.2); } }
+
+@keyframes scale2 {
+  0% {
+    transform: scale(1); }
+  100% {
+    transform: scale(1.2); } }
+
 .main-header {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   background-color: #f5f9ff;
@@ -2862,6 +2886,8 @@ textarea {
   grid-template-columns: 1fr;
   justify-items: center;
   position: relative; }
+  .stages__box:nth-child(4) {
+    display: none; }
   @media (max-width: 1200px) {
     .stages__box {
       margin: 50px 0 0 20%; } }
@@ -2870,7 +2896,11 @@ textarea {
       margin: 0 0 0 23%; } }
   @media (max-width: 767px) {
     .stages__box {
-      margin: 0 auto; } }
+      margin: 0 auto; }
+      .stages__box:nth-child(3) {
+        display: none; }
+      .stages__box:nth-child(4) {
+        display: block; } }
   .stages__box--analysis img:nth-child(1) {
     max-width: 750px;
     -webkit-animation: stage-show-elements-2;
@@ -2957,8 +2987,8 @@ textarea {
             animation: stage-show-elements-3, stage-show-elements-4;
     -webkit-animation-duration: 2s, 2.1s;
             animation-duration: 2s, 2.1s;
-    -webkit-animation-delay: 3.1s, 2.8s;
-            animation-delay: 3.1s, 2.8s;
+    -webkit-animation-delay: 4.1s, 2.8s;
+            animation-delay: 4.1s, 2.8s;
     -webkit-animation-timing-function: ease, ease-in-out;
             animation-timing-function: ease, ease-in-out;
     -webkit-animation-iteration-count: 1, infinite;
@@ -2982,8 +3012,8 @@ textarea {
             animation: stage-show-elements-3, stage-show-elements-4;
     -webkit-animation-duration: 2s, 2.6s;
             animation-duration: 2s, 2.6s;
-    -webkit-animation-delay: 3.1s, 0s;
-            animation-delay: 3.1s, 0s;
+    -webkit-animation-delay: 3.8s, 0s;
+            animation-delay: 3.8s, 0s;
     -webkit-animation-timing-function: ease, ease-in-out;
             animation-timing-function: ease, ease-in-out;
     -webkit-animation-iteration-count: 1, infinite;
@@ -3010,8 +3040,8 @@ textarea {
             animation: stage-show-elements-3, stage-show-elements-4;
     -webkit-animation-duration: 2s, 2.5s;
             animation-duration: 2s, 2.5s;
-    -webkit-animation-delay: 3.1s, 0s;
-            animation-delay: 3.1s, 0s;
+    -webkit-animation-delay: 3.5s, 0s;
+            animation-delay: 3.5s, 0s;
     -webkit-animation-timing-function: ease, ease-in-out;
             animation-timing-function: ease, ease-in-out;
     -webkit-animation-iteration-count: 1, infinite;
@@ -3038,8 +3068,8 @@ textarea {
             animation: stage-show-elements-3, stage-show-elements-4;
     -webkit-animation-duration: 2s, 1.7s;
             animation-duration: 2s, 1.7s;
-    -webkit-animation-delay: 3.1s, 0s;
-            animation-delay: 3.1s, 0s;
+    -webkit-animation-delay: 4.4s, 0s;
+            animation-delay: 4.4s, 0s;
     -webkit-animation-timing-function: ease, ease-in-out;
             animation-timing-function: ease, ease-in-out;
     -webkit-animation-iteration-count: 1, infinite;
@@ -3066,8 +3096,8 @@ textarea {
             animation: stage-show-elements-3, stage-show-elements-4;
     -webkit-animation-duration: 2s, 2.4s;
             animation-duration: 2s, 2.4s;
-    -webkit-animation-delay: 3.1s, 0s;
-            animation-delay: 3.1s, 0s;
+    -webkit-animation-delay: 4.7s, 0s;
+            animation-delay: 4.7s, 0s;
     -webkit-animation-timing-function: ease, ease-in-out;
             animation-timing-function: ease, ease-in-out;
     -webkit-animation-iteration-count: 1, infinite;
@@ -3094,8 +3124,8 @@ textarea {
             animation: stage-show-elements-3, stage-show-elements-4;
     -webkit-animation-duration: 2s, 2.7s;
             animation-duration: 2s, 2.7s;
-    -webkit-animation-delay: 3.1s, 0s;
-            animation-delay: 3.1s, 0s;
+    -webkit-animation-delay: 5s, 0s;
+            animation-delay: 5s, 0s;
     -webkit-animation-timing-function: ease, ease-in-out;
             animation-timing-function: ease, ease-in-out;
     -webkit-animation-iteration-count: 1, infinite;
@@ -3113,6 +3143,96 @@ textarea {
     @media (max-width: 767px) {
       .stages__box--analysis img:nth-child(9) {
         max-width: 35px; } }
+  .stages__box--design {
+    margin-top: 60px; }
+    .stages__box--design img:nth-child(1) {
+      max-width: 775px;
+      -webkit-animation: stage-show-elements-2;
+              animation: stage-show-elements-2;
+      -webkit-animation-duration: 2s;
+              animation-duration: 2s;
+      -webkit-animation-delay: 2s;
+              animation-delay: 2s;
+      -webkit-animation-timing-function: ease;
+              animation-timing-function: ease;
+      -webkit-animation-iteration-count: 1;
+              animation-iteration-count: 1;
+      -webkit-animation-direction: normal;
+              animation-direction: normal;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+      -webkit-animation-play-state: running;
+              animation-play-state: running;
+      opacity: 0; }
+    .stages__box--design img:nth-child(2) {
+      margin-top: -170px;
+      z-index: -1;
+      -webkit-animation: stage-show-elements-1;
+              animation: stage-show-elements-1;
+      -webkit-animation-duration: 2s;
+              animation-duration: 2s;
+      -webkit-animation-delay: 0.5s;
+              animation-delay: 0.5s;
+      -webkit-animation-timing-function: ease;
+              animation-timing-function: ease;
+      -webkit-animation-iteration-count: 1;
+              animation-iteration-count: 1;
+      -webkit-animation-direction: normal;
+              animation-direction: normal;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+      -webkit-animation-play-state: running;
+              animation-play-state: running;
+      opacity: 0; }
+    .stages__box--design img:nth-child(3) {
+      max-width: 40px;
+      position: absolute;
+      top: 39%;
+      left: 11%;
+      -webkit-animation: stage-show-elements-3, stage-show-elements-4;
+              animation: stage-show-elements-3, stage-show-elements-4;
+      -webkit-animation-duration: 2s, 1.8s;
+              animation-duration: 2s, 1.8s;
+      -webkit-animation-delay: 3.1s, 2.8s;
+              animation-delay: 3.1s, 2.8s;
+      -webkit-animation-timing-function: ease, ease-in-out;
+              animation-timing-function: ease, ease-in-out;
+      -webkit-animation-iteration-count: 1, infinite;
+              animation-iteration-count: 1, infinite;
+      -webkit-animation-direction: normal, alternate;
+              animation-direction: normal, alternate;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+      -webkit-animation-play-state: running;
+              animation-play-state: running;
+      opacity: 0; }
+    .stages__box--design img:nth-child(4) {
+      max-width: 75px;
+      position: absolute;
+      top: 10%;
+      left: 14%;
+      -webkit-animation: stage-show-elements-3, stage-show-elements-4;
+              animation: stage-show-elements-3, stage-show-elements-4;
+      -webkit-animation-duration: 2s, 2.3s;
+              animation-duration: 2s, 2.3s;
+      -webkit-animation-delay: 3.1s, 3.1s;
+              animation-delay: 3.1s, 3.1s;
+      -webkit-animation-timing-function: ease, ease-in-out;
+              animation-timing-function: ease, ease-in-out;
+      -webkit-animation-iteration-count: 1, infinite;
+              animation-iteration-count: 1, infinite;
+      -webkit-animation-direction: normal, alternate;
+              animation-direction: normal, alternate;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+      -webkit-animation-play-state: running;
+              animation-play-state: running;
+      opacity: 0; }
+    .stages__box--design img:nth-child(5) {
+      max-width: 55px;
+      position: absolute;
+      top: 0;
+      left: 0; }
   .stages__box--developers {
     margin-top: 60px; }
     @media (max-width: 1023px) {
@@ -3317,6 +3437,9 @@ textarea {
           grid-template-columns: repeat(4, 19%);
           top: 11%;
           left: 53%; } }
+      @media (max-width: 767px) {
+        .stages__box--promotions .footer-social {
+          display: none; } }
       .stages__box--promotions .footer-social li:nth-child(1) {
         margin-top: 80px;
         margin-right: 25px; }
@@ -3584,6 +3707,417 @@ textarea {
         .stages__box--promotions img:nth-child(7) {
           top: 50%;
           right: 15%; } }
+  .stages__box--automation {
+    margin-top: 60px; }
+    .stages__box--automation img:nth-child(1) {
+      max-width: 720px;
+      -webkit-animation: stage-show-elements-2;
+              animation: stage-show-elements-2;
+      -webkit-animation-duration: 2s;
+              animation-duration: 2s;
+      -webkit-animation-delay: 2s;
+              animation-delay: 2s;
+      -webkit-animation-timing-function: ease;
+              animation-timing-function: ease;
+      -webkit-animation-iteration-count: 1;
+              animation-iteration-count: 1;
+      -webkit-animation-direction: normal;
+              animation-direction: normal;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+      -webkit-animation-play-state: running;
+              animation-play-state: running;
+      opacity: 0; }
+      @media (max-width: 1200px) {
+        .stages__box--automation img:nth-child(1) {
+          max-width: 680px; } }
+    .stages__box--automation img:nth-child(2) {
+      margin-top: -190px;
+      z-index: -1;
+      -webkit-animation: stage-show-elements-1;
+              animation: stage-show-elements-1;
+      -webkit-animation-duration: 2s;
+              animation-duration: 2s;
+      -webkit-animation-delay: 0.5s;
+              animation-delay: 0.5s;
+      -webkit-animation-timing-function: ease;
+              animation-timing-function: ease;
+      -webkit-animation-iteration-count: 1;
+              animation-iteration-count: 1;
+      -webkit-animation-direction: normal;
+              animation-direction: normal;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+      -webkit-animation-play-state: running;
+              animation-play-state: running;
+      opacity: 0; }
+      @media (max-width: 1200px) {
+        .stages__box--automation img:nth-child(2) {
+          margin-top: -170px; } }
+      @media (max-width: 1023px) {
+        .stages__box--automation img:nth-child(2) {
+          margin-top: -125px; } }
+    .stages__box--automation img:nth-child(3) {
+      max-width: 90px;
+      position: absolute;
+      top: 0;
+      left: 20%;
+      -webkit-animation: rotateRight, show;
+              animation: rotateRight, show;
+      -webkit-animation-duration: 6s, 3s;
+              animation-duration: 6s, 3s;
+      -webkit-animation-delay: 0s, 3s;
+              animation-delay: 0s, 3s;
+      -webkit-animation-timing-function: linear, ease;
+              animation-timing-function: linear, ease;
+      -webkit-animation-iteration-count: infinite, 1;
+              animation-iteration-count: infinite, 1;
+      -webkit-animation-direction: normal;
+              animation-direction: normal;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+      -webkit-animation-play-state: running;
+              animation-play-state: running;
+      opacity: 0; }
+      @media (max-width: 1200px) {
+        .stages__box--automation img:nth-child(3) {
+          left: 17%; } }
+      @media (max-width: 1023px) {
+        .stages__box--automation img:nth-child(3) {
+          max-width: 60px;
+          left: 14%; } }
+    .stages__box--automation img:nth-child(4) {
+      max-width: 41px;
+      position: absolute;
+      top: -15px;
+      left: 53%;
+      -webkit-animation: rotateRight, show;
+              animation: rotateRight, show;
+      -webkit-animation-duration: 6s, 3s;
+              animation-duration: 6s, 3s;
+      -webkit-animation-delay: 0s, 3.5s;
+              animation-delay: 0s, 3.5s;
+      -webkit-animation-timing-function: linear, ease;
+              animation-timing-function: linear, ease;
+      -webkit-animation-iteration-count: infinite, 1;
+              animation-iteration-count: infinite, 1;
+      -webkit-animation-direction: normal;
+              animation-direction: normal;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+      -webkit-animation-play-state: running;
+              animation-play-state: running;
+      opacity: 0; }
+      @media (max-width: 1023px) {
+        .stages__box--automation img:nth-child(4) {
+          max-width: 40px;
+          top: -30px; } }
+    .stages__box--automation img:nth-child(5) {
+      max-width: 81px;
+      position: absolute;
+      top: 10%;
+      right: 10%;
+      -webkit-animation: stage-show-elements-3, stage-show-elements-4;
+              animation: stage-show-elements-3, stage-show-elements-4;
+      -webkit-animation-duration: 2s, 1.8s;
+              animation-duration: 2s, 1.8s;
+      -webkit-animation-delay: 3.8s, 2.8s;
+              animation-delay: 3.8s, 2.8s;
+      -webkit-animation-timing-function: ease, ease-in-out;
+              animation-timing-function: ease, ease-in-out;
+      -webkit-animation-iteration-count: 1, infinite;
+              animation-iteration-count: 1, infinite;
+      -webkit-animation-direction: normal, alternate;
+              animation-direction: normal, alternate;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+      -webkit-animation-play-state: running;
+              animation-play-state: running;
+      opacity: 0; }
+      @media (max-width: 1023px) {
+        .stages__box--automation img:nth-child(5) {
+          max-width: 60px;
+          top: 6%;
+          right: 8%; } }
+  .stages__box--support {
+    margin-top: 60px; }
+    .stages__box--support img:nth-child(1) {
+      max-width: 860px;
+      -webkit-animation: stage-show-elements-2;
+              animation: stage-show-elements-2;
+      -webkit-animation-duration: 2s;
+              animation-duration: 2s;
+      -webkit-animation-delay: 2s;
+              animation-delay: 2s;
+      -webkit-animation-timing-function: ease;
+              animation-timing-function: ease;
+      -webkit-animation-iteration-count: 1;
+              animation-iteration-count: 1;
+      -webkit-animation-direction: normal;
+              animation-direction: normal;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+      -webkit-animation-play-state: running;
+              animation-play-state: running;
+      opacity: 0; }
+    .stages__box--support img:nth-child(2) {
+      margin-top: -170px;
+      margin-right: 50px;
+      z-index: -1;
+      -webkit-animation: stage-show-elements-1;
+              animation: stage-show-elements-1;
+      -webkit-animation-duration: 2s;
+              animation-duration: 2s;
+      -webkit-animation-delay: 0.5s;
+              animation-delay: 0.5s;
+      -webkit-animation-timing-function: ease;
+              animation-timing-function: ease;
+      -webkit-animation-iteration-count: 1;
+              animation-iteration-count: 1;
+      -webkit-animation-direction: normal;
+              animation-direction: normal;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+      -webkit-animation-play-state: running;
+              animation-play-state: running;
+      opacity: 0; }
+      @media (max-width: 1200px) {
+        .stages__box--support img:nth-child(2) {
+          margin-top: -150px; } }
+      @media (max-width: 1023px) {
+        .stages__box--support img:nth-child(2) {
+          margin-top: -115px; } }
+    .stages__box--support img:nth-child(3) {
+      max-width: 56px;
+      position: absolute;
+      top: 17%;
+      left: 10%;
+      -webkit-animation: stage-show-elements-3, stage-show-elements-4;
+              animation: stage-show-elements-3, stage-show-elements-4;
+      -webkit-animation-duration: 2s, 1.8s;
+              animation-duration: 2s, 1.8s;
+      -webkit-animation-delay: 3.1s, 2.8s;
+              animation-delay: 3.1s, 2.8s;
+      -webkit-animation-timing-function: ease, ease-in-out;
+              animation-timing-function: ease, ease-in-out;
+      -webkit-animation-iteration-count: 1, infinite;
+              animation-iteration-count: 1, infinite;
+      -webkit-animation-direction: normal, alternate;
+              animation-direction: normal, alternate;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+      -webkit-animation-play-state: running;
+              animation-play-state: running;
+      opacity: 0; }
+      @media (max-width: 1023px) {
+        .stages__box--support img:nth-child(3) {
+          max-width: 45px;
+          top: 12%;
+          left: 7%; } }
+    .stages__box--support img:nth-child(4) {
+      max-width: 100px;
+      position: absolute;
+      top: 25%;
+      left: 50%;
+      -webkit-animation: stage-show-elements-3, stage-show-elements-4;
+              animation: stage-show-elements-3, stage-show-elements-4;
+      -webkit-animation-duration: 2s, 2s;
+              animation-duration: 2s, 2s;
+      -webkit-animation-delay: 3.4s, 3.6s;
+              animation-delay: 3.4s, 3.6s;
+      -webkit-animation-timing-function: ease, ease-in-out;
+              animation-timing-function: ease, ease-in-out;
+      -webkit-animation-iteration-count: 1, infinite;
+              animation-iteration-count: 1, infinite;
+      -webkit-animation-direction: normal, alternate;
+              animation-direction: normal, alternate;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+      -webkit-animation-play-state: running;
+              animation-play-state: running;
+      opacity: 0; }
+      @media (max-width: 1023px) {
+        .stages__box--support img:nth-child(4) {
+          max-width: 55px;
+          top: 28%; } }
+    .stages__box--support img:nth-child(5) {
+      max-width: 22px;
+      position: absolute;
+      top: 30%;
+      right: 16%;
+      -webkit-animation: stage-show-elements-3, stage-show-elements-4;
+              animation: stage-show-elements-3, stage-show-elements-4;
+      -webkit-animation-duration: 2s, 2.2s;
+              animation-duration: 2s, 2.2s;
+      -webkit-animation-delay: 3.7s, 4s;
+              animation-delay: 3.7s, 4s;
+      -webkit-animation-timing-function: ease, ease-in-out;
+              animation-timing-function: ease, ease-in-out;
+      -webkit-animation-iteration-count: 1, infinite;
+              animation-iteration-count: 1, infinite;
+      -webkit-animation-direction: normal, alternate;
+              animation-direction: normal, alternate;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+      -webkit-animation-play-state: running;
+              animation-play-state: running;
+      opacity: 0; }
+      @media (max-width: 1023px) {
+        .stages__box--support img:nth-child(5) {
+          top: 17%;
+          right: 10%; } }
+    .stages__box--support img:nth-child(6) {
+      max-width: 65px;
+      position: absolute;
+      top: 0;
+      left: 34%;
+      -webkit-animation: rotateRight, show;
+              animation: rotateRight, show;
+      -webkit-animation-duration: 6s, 3.3s;
+              animation-duration: 6s, 3.3s;
+      -webkit-animation-delay: 0s, 3.2s;
+              animation-delay: 0s, 3.2s;
+      -webkit-animation-timing-function: linear, ease;
+              animation-timing-function: linear, ease;
+      -webkit-animation-iteration-count: infinite, 1;
+              animation-iteration-count: infinite, 1;
+      -webkit-animation-direction: normal;
+              animation-direction: normal;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+      -webkit-animation-play-state: running;
+              animation-play-state: running;
+      opacity: 0; }
+      @media (max-width: 1023px) {
+        .stages__box--support img:nth-child(6) {
+          max-width: 50px;
+          top: -20px;
+          left: 31%; } }
+    .stages__box--support .stages__image-add {
+      width: 140px;
+      position: absolute;
+      top: 0;
+      right: 20%;
+      -webkit-animation: show;
+              animation: show;
+      -webkit-animation-duration: 3.3s;
+              animation-duration: 3.3s;
+      -webkit-animation-delay: 3.2s;
+              animation-delay: 3.2s;
+      -webkit-animation-timing-function: ease;
+              animation-timing-function: ease;
+      -webkit-animation-iteration-count: 1;
+              animation-iteration-count: 1;
+      -webkit-animation-direction: normal;
+              animation-direction: normal;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+      -webkit-animation-play-state: running;
+              animation-play-state: running;
+      opacity: 0; }
+      @media (max-width: 1200px) {
+        .stages__box--support .stages__image-add {
+          top: -30px;
+          right: 13%; } }
+      .stages__box--support .stages__image-add img:nth-child(1) {
+        -webkit-animation: none;
+                animation: none;
+        opacity: 1; }
+      .stages__box--support .stages__image-add img:nth-child(2) {
+        max-width: 35px;
+        margin-top: 0;
+        margin-right: 0;
+        position: absolute;
+        bottom: -10px;
+        left: -10px;
+        z-index: 1;
+        -webkit-animation: show, scale2;
+                animation: show, scale2;
+        -webkit-animation-duration: 1s, 1s;
+                animation-duration: 1s, 1s;
+        -webkit-animation-delay: 0s, 1s;
+                animation-delay: 0s, 1s;
+        -webkit-animation-timing-function: linear, ease-in-out;
+                animation-timing-function: linear, ease-in-out;
+        -webkit-animation-iteration-count: 1, infinite;
+                animation-iteration-count: 1, infinite;
+        -webkit-animation-direction: normal, alternate;
+                animation-direction: normal, alternate;
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+        -webkit-animation-play-state: running;
+                animation-play-state: running;
+        opacity: 0; }
+      .stages__box--support .stages__image-add img:nth-child(3) {
+        max-width: 33px;
+        margin-top: 0;
+        margin-right: 0;
+        position: absolute;
+        top: 5px;
+        bottom: 0;
+        left: 30px;
+        z-index: 1;
+        -webkit-animation: show, scale;
+                animation: show, scale;
+        -webkit-animation-duration: 1s, 1s;
+                animation-duration: 1s, 1s;
+        -webkit-animation-delay: 0s, 0s;
+                animation-delay: 0s, 0s;
+        -webkit-animation-timing-function: linear, ease-in-out;
+                animation-timing-function: linear, ease-in-out;
+        -webkit-animation-iteration-count: 1, infinite;
+                animation-iteration-count: 1, infinite;
+        -webkit-animation-direction: normal, alternate;
+                animation-direction: normal, alternate;
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+        -webkit-animation-play-state: running;
+                animation-play-state: running;
+        opacity: 0; }
+      .stages__box--support .stages__image-add img:nth-child(4) {
+        max-width: 35px;
+        position: absolute;
+        top: 58%;
+        left: 62%;
+        -webkit-animation: show, scale2;
+                animation: show, scale2;
+        -webkit-animation-duration: 1s, 1s;
+                animation-duration: 1s, 1s;
+        -webkit-animation-delay: 0s, 2s;
+                animation-delay: 0s, 2s;
+        -webkit-animation-timing-function: linear, ease-in-out;
+                animation-timing-function: linear, ease-in-out;
+        -webkit-animation-iteration-count: 1, infinite;
+                animation-iteration-count: 1, infinite;
+        -webkit-animation-direction: normal, alternate;
+                animation-direction: normal, alternate;
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+        -webkit-animation-play-state: running;
+                animation-play-state: running;
+        opacity: 0; }
+      .stages__box--support .stages__image-add img:nth-child(5) {
+        max-width: 33px;
+        position: absolute;
+        top: -16%;
+        right: -16px;
+        -webkit-animation: show, scale;
+                animation: show, scale;
+        -webkit-animation-duration: 1s, 1s;
+                animation-duration: 1s, 1s;
+        -webkit-animation-delay: 0s, 1s;
+                animation-delay: 0s, 1s;
+        -webkit-animation-timing-function: linear, ease-in-out;
+                animation-timing-function: linear, ease-in-out;
+        -webkit-animation-iteration-count: 1, infinite;
+                animation-iteration-count: 1, infinite;
+        -webkit-animation-direction: normal, alternate;
+                animation-direction: normal, alternate;
+        -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+        -webkit-animation-play-state: running;
+                animation-play-state: running;
+        opacity: 0; }
 
 .stages__image a {
   position: relative;

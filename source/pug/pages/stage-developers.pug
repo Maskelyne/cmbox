@@ -111,6 +111,8 @@ block main
       .stages__box.stages__box--developers.container
         each item in imageList
           +img(item.path, item.image, item.format, item.width, item.height, item.altText)
+      .stages__box.stages__box--developers
+        +img('stage-developers', 'image-mobile', 'svg', '340', '235', 'Разработка')
       .stages__text
         h2 Разработка
         p Проводим первичный
