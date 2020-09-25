@@ -284,7 +284,7 @@
 
     img {
       &:nth-child(2) {
-        margin-top: -170px;
+        margin-top: -190px;
         z-index: -1;
         animation: stage-show-elements-1;
         animation-duration: 2s;
@@ -295,6 +295,10 @@
         animation-fill-mode: forwards;
         animation-play-state: running;
         opacity: 0;
+
+        @media (max-width: $desktop-width-min) {
+          margin-top: -120px;
+        }
       }
     }
 
@@ -313,6 +317,11 @@
         animation-fill-mode: forwards;
         animation-play-state: running;
         opacity: 0;
+
+        @media (max-width: $desktop-width-min) {
+          top: 50%;
+          left: 10%;
+        }
       }
     }
 
@@ -324,13 +333,18 @@
         left: 14%;
         animation: stage-show-elements-3, stage-show-elements-4;
         animation-duration: 2s, 2.3s;
-        animation-delay: 3.1s, 3.1s;
+        animation-delay: 3.6s, 2.8s;
         animation-timing-function: ease, ease-in-out;
         animation-iteration-count: 1, infinite;
         animation-direction: normal, alternate;
         animation-fill-mode: forwards;
         animation-play-state: running;
         opacity: 0;
+
+        @media (max-width: $desktop-width) {
+          max-width: 50px;
+          left: 10%;
+        }
       }
     }
 
@@ -338,8 +352,66 @@
       &:nth-child(5) {
         max-width: 55px;
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 5%;
+        left: 32%;
+        animation: stage-show-elements-3, stage-show-elements-4;
+        animation-duration: 2s, 2.7s;
+        animation-delay: 4s, 2.8s;
+        animation-timing-function: ease, ease-in-out;
+        animation-iteration-count: 1, infinite;
+        animation-direction: normal, alternate;
+        animation-fill-mode: forwards;
+        animation-play-state: running;
+        opacity: 0;
+
+        @media (max-width: $desktop-width-min) {
+          max-width: 45px;
+        }
+      }
+    }
+
+    img {
+      &:nth-child(6) {
+        max-width: 56px;
+        position: absolute;
+        top: 23%;
+        right: 26%;
+        animation: stage-show-elements-3, stage-show-elements-4;
+        animation-duration: 2s, 2.4s;
+        animation-delay: 4.4s, 2.8s;
+        animation-timing-function: ease, ease-in-out;
+        animation-iteration-count: 1, infinite;
+        animation-direction: normal, alternate;
+        animation-fill-mode: forwards;
+        animation-play-state: running;
+        opacity: 0;
+
+        @media (max-width: $desktop-width-min) {
+          max-width: 45px;
+          right: 24%;
+        }
+      }
+    }
+
+    img {
+      &:nth-child(7) {
+        max-width: 40px;
+        position: absolute;
+        top: 10%;
+        right: 14%;
+        animation: stage-show-elements-3, stage-show-elements-4;
+        animation-duration: 2s, 2s;
+        animation-delay: 4.8s, 2.8s;
+        animation-timing-function: ease, ease-in-out;
+        animation-iteration-count: 1, infinite;
+        animation-direction: normal, alternate;
+        animation-fill-mode: forwards;
+        animation-play-state: running;
+        opacity: 0;
+
+        @media (max-width: $desktop-width-min) {
+          right: 6%;
+        }
       }
     }
   }

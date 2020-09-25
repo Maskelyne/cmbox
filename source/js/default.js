@@ -10,3 +10,4 @@
 //= modules/validation.js
 //= modules/rotate-card.js
 //= modules/scroll-height.js
+//= modules/sliders.js

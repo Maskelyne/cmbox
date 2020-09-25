@@ -165,7 +165,7 @@ gulp.task('build', gulp.series(
     'cssAdd:build',
     'fonts:build',
     'image:build',
-    'sprite:build'
+    // 'sprite:build'
 ));
 
 gulp.task('server', function () {
