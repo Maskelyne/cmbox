@@ -13,9 +13,12 @@
 @import "blocks/main-header.scss";
 
 //main
+@import "blocks/page-main.scss";
+@import "blocks/card-box.scss";
 @import "blocks/about-us.scss";
 @import "blocks/clients.scss";
 @import "blocks/teams.scss";
+@import "blocks/box-list.scss";
 
 //buttons
 @import "blocks/button.scss";
@@ -24,10 +27,13 @@
 @import "blocks/main-footer.scss";
 
 //contacts
-@import "blocks/contacts";
+@import "blocks/contacts.scss";
 
 //services
 @import "blocks/services.scss";
+
+//stages
+@import "blocks/stages.scss";
 
 //blog
 @import "blocks/blog.scss";

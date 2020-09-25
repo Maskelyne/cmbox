@@ -10,6 +10,7 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var rigger = require('gulp-rigger');
 var imagemin = require('gulp-imagemin');
+var pngquant = require('imagemin-pngquant');
 var svgstore = require('gulp-svgstore');
 var pug = require('gulp-pug');
 var del = require('del');
@@ -29,7 +30,7 @@ var path = {
     jsAdd: 'source/js/main.js',
     vendorJs: 'source/js/vendor.js',
     css: 'source/sass/style.scss',
-    cssAdd: 'source/css/style.css',
+    cssAdd: 'source/css/main.css',
     img: 'source/img/**/*.{png,jpg,svg}',
     sprite: 'source/img/svg-sprite/*.svg',
     fonts: 'source/fonts/**/*.{woff,woff2}'
@@ -123,8 +124,9 @@ gulp.task('image:build', function () {
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.mozjpeg({progressive: true, quality: 75}),
-      imagemin.svgo()
-    ]))
+      imagemin.svgo(),
+    ]),
+     pngquant({quality: '65-70', speed: 5}))
     .pipe(gulp.dest(path.build.img))
     .pipe(server.stream());
 });
@@ -163,7 +165,7 @@ gulp.task('build', gulp.series(
     'cssAdd:build',
     'fonts:build',
     'image:build',
-    'sprite:build'
+    // 'sprite:build'
 ));
 
 gulp.task('server', function () {

@@ -1,4 +1,4 @@
-@keyframes show {
+@keyframes services-icon-show {
   0% {
     transform: translateY(15%);
     opacity: 0;
@@ -10,23 +10,13 @@
   }
 }
 
-@keyframes show-space-bottom {
+@keyframes services-icon-movement {
   0% {
     transform: translateY(5%);
   }
 
   100% {
     transform: translateY(10%);
-  }
-}
-
-@keyframes show-space-top {
-  0% {
-    transform: translateY(10%);
-  }
-
-  100% {
-    transform: translateY(5%);
   }
 }
 
@@ -36,17 +26,7 @@
   }
 
   100% {
-    transform: translateY(15%);
-  }
-}
-
-@keyframes teams-svg-bottom {
-  0% {
-    transform: translateY(15%);
-  }
-
-  100% {
-    transform: translateY(0%);
+    transform: translateY(45%);
   }
 }
 
@@ -54,9 +34,11 @@
   0% {
     transform: rotate(90deg);
   }
+
   50% {
     transform: rotate(270deg);
   }
+
   100% {
     transform: rotate(450deg);
   }
@@ -66,11 +48,27 @@
   0% {
     transform: rotate(0deg);
   }
+
   50% {
     transform: rotate(-180deg);
   }
+
   100% {
     transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotateRight {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }
 
@@ -78,15 +76,19 @@
   0% {
     transform: rotate(0deg) translate3d(0, 0, 0);
   }
+
   25% {
     transform: rotate(3deg) translate3d(0, 0, 0);
   }
+
   50% {
     transform: rotate(-3deg) translate3d(0, 0, 0);
   }
+
   75% {
     transform: rotate(1deg) translate3d(0, 0, 0);
   }
+
   100% {
     transform: rotate(0deg) translate3d(0, 0, 0);
   }
@@ -96,16 +98,101 @@
   0% {
     transform: translate3d(0, 0, 0) translateZ(0);
   }
+
   25% {
     transform: translate3d(4px, 0, 0) translateZ(0);
   }
+
   50% {
     transform: translate3d(-3px, 0, 0) translateZ(0);
   }
+
   75% {
     transform: translate3d(1px, 0, 0) translateZ(0);
   }
+
   100% {
     transform: translate3d(0, 0, 0) translateZ(0);
+  }
+}
+
+@keyframes stage-show-elements-1 {
+  0% {
+    opacity: 0;
+    transform: translateY(35%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes stage-show-elements-2 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes stage-show-elements-3 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes stage-show-elements-4 {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(45%);
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes show-1 {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes scale2 {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.2);
   }
 }

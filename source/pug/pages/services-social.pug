@@ -9,14 +9,41 @@ block header
 block main
 
   -
-    const boxesList = [
+    var boxesList = [
+      {
+        link: 'services-analytics.html',
+        path: 'services',
+        name: 'box-analytics',
+        format: 'svg',
+        width: '240',
+        height: '160',
+        altText: 'Аналитика'
+      },
+      {
+        link: 'services-strategy.html',
+        path: 'services',
+        name: 'box-strategy',
+        format: 'svg',
+        width: '240',
+        height: '160',
+        altText: 'Стратегия'
+      },
+      {
+        link: 'services-design.html',
+        path: 'services',
+        name: 'box-design',
+        format: 'svg',
+        width: '240',
+        height: '160',
+        altText: 'Дизайн'
+      },
       {
         link: 'services-site.html',
         path: 'services',
         name: 'box-site',
         format: 'svg',
-        width: '260',
-        height: '190',
+        width: '240',
+        height: '160',
         altText: 'Сайт'
       },
       {
@@ -24,8 +51,8 @@ block main
         path: 'services',
         name: 'box-sales',
         format: 'svg',
-        width: '260',
-        height: '190',
+        width: '240',
+        height: '160',
         altText: 'Воронка продаж'
       },
       {
@@ -33,8 +60,8 @@ block main
         path: 'services',
         name: 'box-seo',
         format: 'svg',
-        width: '260',
-        height: '190',
+        width: '240',
+        height: '160',
         altText: 'Seo'
       },
       {
@@ -42,8 +69,8 @@ block main
         path: 'services',
         name: 'box-contecst',
         format: 'svg',
-        width: '260',
-        height: '190',
+        width: '240',
+        height: '160',
         altText: 'Seo'
       },
       {
@@ -51,8 +78,8 @@ block main
         path: 'services',
         name: 'box-social',
         format: 'svg',
-        width: '260',
-        height: '190',
+        width: '240',
+        height: '160',
         altText: 'Seo'
       },
       {
@@ -60,8 +87,8 @@ block main
         path: 'services',
         name: 'box-marketing',
         format: 'svg',
-        width: '260',
-        height: '190',
+        width: '240',
+        height: '160',
         altText: 'Seo'
       },
       {
@@ -69,14 +96,14 @@ block main
         path: 'services',
         name: 'box-crm',
         format: 'svg',
-        width: '260',
-        height: '190',
+        width: '240',
+        height: '160',
         altText: 'Seo'
       },
     ];
 
   -
-    const servicesList = [
+    var servicesList = [
       {
         text: 'воронка продаж'
       },
@@ -101,11 +128,12 @@ block main
     section.services
       h1 Услуги
       .services__box
-        ul.services__boxes-list
-          each item in boxesList
-            li
-              a(href= item.link)
-                +img(item.path, item.name, item.format, item.width, item.height, item.altText)
+        .services__nav-box
+          ul.services__boxes-list
+            each item in boxesList
+              li
+                a(href= item.link)
+                  +img(item.path, item.name, item.format, item.width, item.height, item.altText)
         .services__box-images
           .services__image
             +img('services', 'icon-social', 'svg', '250', '250', 'Соцсети')
@@ -116,14 +144,14 @@ block main
           h2 Спланируем и запустим продвижение в социальных сетях и Youtube
           .services__text
             p С развитием скоростного интернета и мобильных устройств, просмотр видео стало одним из самых популярных развлечений в интернете. Из-за чего большинство людей перестало читать статьи, и переключились на просмотр видео.
-          .services__text.services__text-box--2.services__text-light--gray
+          .services__text.services__text-box--2.services__text-light--gray.z-index-2
             p
               span Youtube
               |  сейчас это эффективный и пока не дорогой инструмент маркетинга.
             p Видео очень плотно связано с
               span  маркетингом в социальных сетях,
               |  так как большая часть аудитории именно там.
-          .services__text
+          .services__text.z-index-3
             h3 SSM
               br
               | (Social Media Marketing)

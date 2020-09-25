@@ -8,4 +8,6 @@
 //= modules/header-nav.js
 //= modules/clients-slider.js
 //= modules/validation.js
-//= modules/menu.js
+//= modules/rotate-card.js
+//= modules/scroll-height.js
+//= modules/sliders.js

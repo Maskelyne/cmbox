@@ -1,0 +1,199 @@
+extends ../layout/page-layout
+
+block variables
+  - var title = "Продвижение"
+
+block header
+  +header
+
+block main
+
+  -
+    var imageList = [
+      {
+        path: 'stage-promotion',
+        image: 'image-element-1',
+        format: 'svg',
+        width: '800',
+        height: '475',
+        altText: '1 Элемент'
+      },
+      {
+        path: 'stage-promotion',
+        image: 'image-element-2',
+        format: 'svg',
+        width: '870',
+        height: '275',
+        altText: '2 Элемент'
+      },
+    ];
+
+  -
+    var footerList = [
+      {
+        link: '#',
+        text: 'Вконтакте',
+        path: 'svg',
+        name: 'icon-vk',
+        format: 'svg',
+        width: '24',
+        height: '24',
+        altText: 'Вконтакте'
+      },
+      {
+        link: '#',
+        text: 'Фэйсбук',
+        path: 'svg',
+        name: 'icon-facebook',
+        format: 'svg',
+        width: '24',
+        height: '24',
+        altText: 'Фэйсбук'
+      },
+      {
+        link: '#',
+        text: 'Ютуб',
+        path: 'svg',
+        name: 'icon-youtube',
+        format: 'svg',
+        width: '24',
+        height: '24',
+        altText: 'Ютуб'
+      },
+      {
+        link: '#',
+        text: 'Инстаграм',
+        path: 'svg',
+        name: 'icon-instagram',
+        format: 'svg',
+        width: '24',
+        height: '24',
+        altText: 'Инстаграм'
+      },
+    ];
+  -
+    var imageList = [
+      {
+        path: 'stage-promotion',
+        image: 'image-element-1',
+        format: 'svg',
+        width: '800',
+        height: '475',
+        altText: '1 Элемент'
+      },
+      {
+        path: 'stage-promotion',
+        image: 'image-element-2',
+        format: 'svg',
+        width: '870',
+        height: '275',
+        altText: '2 Элемент'
+      },
+      {
+        path: 'stage-promotion',
+        image: 'image-element-3',
+        format: 'svg',
+        width: '70',
+        height: '90',
+        altText: '3 Элемент'
+      },
+      {
+        path: 'stage-promotion',
+        image: 'image-element-4',
+        format: 'svg',
+        width: '60',
+        height: '50',
+        altText: '4 Элемент'
+      },
+      {
+        path: 'stage-promotion',
+        image: 'image-element-5',
+        format: 'svg',
+        width: '45',
+        height: '50',
+        altText: '5 Элемент'
+      },
+      {
+        path: 'stage-promotion',
+        image: 'image-element-6',
+        format: 'svg',
+        width: '65',
+        height: '85',
+        altText: '6 Элемент'
+      },
+      {
+        path: 'stage-promotion',
+        image: 'image-element-7',
+        format: 'svg',
+        width: '50',
+        height: '55',
+        altText: '7 Элемент'
+      },
+    ];
+
+  main
+    section.stages
+      h1 Этапы
+      .stage__nav-box
+        ul.stages__nav-list
+          li
+            .stages__image
+              a(href='stage-analysis.html')
+                span Анализ
+                +img('stage-boxes', 'stage-box', 'svg', '125', '120', 'Анализ')
+          li
+            .stages__image
+              a(href='stage-strategy.html')
+                span Стратегия
+                +img('stage-boxes', 'stage-box', 'svg', '125', '120', 'Стратегия')
+          li
+            .stages__image
+              a(href='stage-design.html')
+                span Дизайн
+                +img('stage-boxes', 'stage-box', 'svg', '125', '120', 'Дизайн')
+          li
+            .stages__image
+              a(href='stage-developers.html')
+                span Разработка
+                +img('stage-boxes', 'stage-box', 'svg', '125', '120', 'Разработка')
+          li
+            .stages__image.stages__image--active
+              a(href='stage-promotion.html')
+                span Продвижение
+                +img('stage-boxes', 'stage-box-active', 'svg', '220', '175', 'Продвижение')
+          li
+            .stages__image
+              a(href='stage-automation.html')
+                span Автоматизация
+                +img('stage-boxes', 'stage-box', 'svg', '125', '120', 'Автоматизация')
+          li
+            .stages__image
+              a(href='stage-support.html')
+                span Поддержка
+                +img('stage-boxes', 'stage-box', 'svg', '125', '120', 'Поддержка')
+      .stages__box.stages__box--promotions.container
+        each item in imageList
+          +img(item.path, item.image, item.format, item.width, item.height, item.altText)
+        ul.footer-social
+          each item in footerList
+            li
+              a(href= item.link)
+                span.visually-hidden= item.text
+                +img(item.path, item.name, item.format, item.width, item.height, item.altText)
+      .stages__box
+        +img('stage-promotion', 'image-mobile', 'svg', '340', '235', 'Разработка')
+      .stages__text
+        h2 Продвижение
+        p Проводим первичный
+          a(href="#")  бесплатный
+          |  базовый анализ рынка. Первый этап в комплексном маркетинге – это проведение анализа ниши вашего бизнеса, анализа вашей целевой аудитории, анализа конкурентов. Всё это позволит максимально точно оценить рынок и определить возможности развития вашего бизнеса.
+        p Что включает анализ:
+        ol.stages__list
+          li: p Составление максимально полного портрета именно вашей целевой аудитории.
+          li: p Поиск прямых и косвенных конкурентов, работающих с вашей целевой аудиторией.
+          li: p Анализ интернет-упаковки конкурентов, использования ими всех современных инструментов продвижения.
+          li: p Определение их сильных и слабых сторон.
+          li: p Определение уникальности вашего бизнеса и способов отстройки от конкурентов.
+
+block footer
+  +footer

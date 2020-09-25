@@ -1,3 +1,11 @@
+.contacts {
+  margin-bottom: 70px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+}
+
 .contacts__box-info {
   display: grid;
   grid-template-columns: 31% 35% auto;
@@ -77,7 +85,6 @@
     top: -145px;
     left: -65px;
     animation: rotateRight1 15s infinite linear;
-    //background-color: rgba(0, 0, 0, 0.3);
 
     @media (max-width: $desktop-width) {
       left: -95px;
@@ -90,7 +97,6 @@
     @media (max-width: $tablet-width) {
       width: 120px;
       height: 120px;
-      //animation: none;
       left: 30%;
       top: -80%;
       transform: translate(-50%, -50%);
@@ -112,7 +118,6 @@
         animation: rotateLeft 4s infinite linear;
 
         @media (max-width: $tablet-width) {
-          //animation: none;
           top: 0;
           left: -50px;
         }
@@ -124,7 +129,6 @@
         animation: rotateLeft 4.5s infinite linear;
 
         @media (max-width: $tablet-width) {
-          //animation: none;
           bottom: -20px;
           left: -35px;
         }
@@ -136,7 +140,6 @@
         animation: rotateLeft 4s infinite linear;
 
         @media (max-width: $tablet-width) {
-          //animation: none;
           top: -55px;
           left: 25px;
         }
@@ -148,7 +151,6 @@
         animation: rotateLeft 4.5s infinite linear;
 
         @media (max-width: $tablet-width) {
-          //animation: none;
           bottom: -55px;
           left: 45px;
         }
@@ -160,7 +162,6 @@
         animation: rotateLeft 4s infinite linear;
 
         @media (max-width: $tablet-width) {
-          //animation: none;
           top: -20px;
           right: -40px;
         }
@@ -172,7 +173,6 @@
         animation: rotateLeft 4.5s infinite linear;
 
         @media (max-width: $tablet-width) {
-          //animation: none;
           top: 75px;
           right: -50px;
         }
