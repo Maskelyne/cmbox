@@ -24,7 +24,7 @@ a {
   color: $dark-black;
 
   &:hover {
-    font-family: $proximaBold;
+    font-weight: $bold;
     color: $dark-red;
   }
 }
@@ -106,4 +106,10 @@ main {
 
 .gray-box {
   background-color: $light-gray;
+}
+
+.page-main {
+  background-image: url("../img/png/bckg-main.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }

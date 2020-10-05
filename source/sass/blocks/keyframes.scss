@@ -94,6 +94,26 @@
   }
 }
 
+@keyframes rotateSeo {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(12deg);
+  }
+}
+
+@keyframes rotateKaterina {
+  0% {
+    transform: rotate(-1deg);
+  }
+
+  100% {
+    transform: rotate(1deg);
+  }
+}
+
 @keyframes storm {
   0% {
     transform: translate3d(0, 0, 0) translateZ(0);

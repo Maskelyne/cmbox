@@ -1,5 +1,5 @@
 mixin picture(path, imageDesk, imageTab, format, width, height, altText, mediaImg)
   picture
-    source(media= "(max-width: " + mediaImg + "px)", srcset= "img/" + path + "/" + imageTab + "." + format)
-    img(src="img/" + path + "/" + imageDesk + '.' + format, width= width, height= height, alt= altText)
+    source(media= "(max-width: " + mediaImg + "px)", srcset= "assets/img/" + path + "/" + imageTab + "." + format)
+    img(src="assets/img/" + path + "/" + imageDesk + '.' + format, width= width, height= height, alt= altText)
 

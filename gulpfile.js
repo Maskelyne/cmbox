@@ -19,18 +19,18 @@ var server = require('browser-sync').create();
 var path = {
   build: {
     html: 'build/',
-    js: 'build/js/',
-    css: 'build/css/',
-    img: 'build/img/',
-    fonts: 'build/fonts/'
+    js: 'build/assets/js/',
+    css: 'build/assets/css/',
+    img: 'build/assets/img/',
+    fonts: 'build/assets/fonts/'
   },
   source: {
     html: 'source/*.html',
-    js: 'source/js/default.js',
-    jsAdd: 'source/js/main.js',
+    js: 'source/js/main.js',
+    jsAdd: 'source/js/default.js',
     vendorJs: 'source/js/vendor.js',
     css: 'source/sass/style.scss',
-    cssAdd: 'source/css/main.css',
+    cssAdd: 'source/css/default.css',
     img: 'source/img/**/*.{png,jpg,svg}',
     sprite: 'source/img/svg-sprite/*.svg',
     fonts: 'source/fonts/**/*.{woff,woff2}'
@@ -122,7 +122,7 @@ gulp.task('cssAdd:build', function () {
 gulp.task('image:build', function () {
   return gulp.src(path.source.img)
     .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.optipng({optimizationLevel: 5}),
       imagemin.mozjpeg({progressive: true, quality: 75}),
       imagemin.svgo(),
     ]),
@@ -165,7 +165,7 @@ gulp.task('build', gulp.series(
     'cssAdd:build',
     'fonts:build',
     'image:build',
-    // 'sprite:build'
+    'sprite:build'
 ));
 
 gulp.task('server', function () {

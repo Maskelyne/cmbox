@@ -1,4 +1,32 @@
 .box {
+  position: relative;
+
+  @media (max-width: $desktop-width-min) {
+    max-width: 450px;
+    margin: 0 auto;
+    grid-row: 1;
+    display: grid;
+    justify-content: center;
+  }
+
+  @media (max-width: $tablet-width) {
+    max-width: 345px;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: 230px;
+  }
+
+  img {
+    display: block;
+
+    @media (max-width: $desktop-width-min) {
+      max-width: 410px;
+    }
+  }
+}
+
+.box__list {
   @include reset-list;
   position: absolute;
   top: 0;
@@ -7,37 +35,67 @@
 
 .box__link {
   font-size: 14px;
-  line-height: 16px;
+  line-height: 14px;
   text-transform: uppercase;
   text-align: center;
 
+  @media (max-width: $tablet-width) {
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 11px;
+    line-height: 11px;
+  }
+
   &--design {
     position: absolute;
-    top: 165px;
+    top: 170px;
     left: -30px;
 
     @media (max-width: $desktop-width) {
-      top: 145px;
+      top: 180px;
     }
 
     @media (max-width: $desktop-width-min) {
-      top: 205px;
-      left: -10px;
+      top: 185px;
+      left: -25px;
+    }
+
+    @media (max-width: $tablet-width) {
+      top: 160px;
+      left: -20px;
+    }
+
+    @media (max-width: $mobile-width) {
+      top: 105px;
+      left: -30px;
     }
   }
 
   &--seo {
     position: absolute;
-    top: 107px;
+    top: 110px;
     left: -25px;
 
     @media (max-width: $desktop-width) {
-      top: 92px;
+      top: 115px;
     }
 
     @media (max-width: $desktop-width-min) {
-      top: 135px;
-      left: -15px;
+      top: 120px;
+      left: -25px;
+    }
+
+    @media (max-width: $tablet-width) {
+      top: 102px;
+      left: -20px;
+    }
+
+    @media (max-width: $mobile-width) {
+      top: 65px;
+      left: -20px;
     }
   }
 
@@ -47,121 +105,199 @@
     left: -30px;
 
     @media (max-width: $desktop-width) {
-      top: 30px;
-      left: -35px;
+      top: 44px;
+      left: -30px;
     }
 
     @media (max-width: $desktop-width-min) {
-      top: 50px;
-      left: -10px;
+      top: 45px;
+      left: -25px;
+    }
+
+    @media (max-width: $tablet-width) {
+      top: 40px;
+      left: -20px;
+    }
+
+    @media (max-width: $mobile-width) {
+      top: 23px;
+      left: -30px;
     }
   }
 
   &--context {
     position: absolute;
-    top: 10px;
-    left: 35px;
+    top: 15px;
+    left: 40px;
 
     @media (max-width: $desktop-width) {
-      top: 7px;
-      left: 25px;
+      top: 20px;
+      left: 45px;
     }
 
     @media (max-width: $desktop-width-min) {
-      top: 20px;
-      left: 70px;
+      top: 15px;
+      left: 45px;
+    }
+
+    @media (max-width: $tablet-width) {
+      top: 15px;
+      left: 40px;
+    }
+
+    @media (max-width: $mobile-width) {
+      top: 5px;
+      left: 10px;
     }
   }
 
   &--marketing {
     position: absolute;
     top: -20px;
-    left: 110px;
+    left: 120px;
 
     @media (max-width: $desktop-width) {
-      left: 90px;
+      left: 130px;
     }
 
-    @media (max-width: $desktop-width-min) {
-      left: 160px;
+    @media (max-width: $tablet-width) {
+      top: -15px;
+      left: 110px;
+    }
+
+    @media (max-width: $mobile-width) {
+      top: -15px;
+      left: 55px;
     }
   }
 
   &--analytics {
     position: absolute;
     top: 15px;
-    left: 210px;
+    left: 215px;
 
     @media (max-width: $desktop-width) {
-      top: 8px;
-      left: 185px;
+      top: 20px;
+      left: 230px;
     }
 
     @media (max-width: $desktop-width-min) {
-      top: 25px;
-      left: 280px;
+      top: 20px;
+      left: 240px;
+    }
+
+    @media (max-width: $tablet-width) {
+      top: 20px;
+      left: 195px;
+    }
+
+    @media (max-width: $mobile-width) {
+      top: 5px;
+      left: 125px;
     }
   }
 
   &--social {
     position: absolute;
-    top: 30px;
-    left: 300px;
+    top: 40px;
+    left: 335px;
 
     @media (max-width: $desktop-width) {
-      left: 280px;
+      left: 355px;
+      top: 35px;
     }
 
     @media (max-width: $desktop-width-min) {
-      left: 405px;
-      top: 50px;
+      left: 350px;
+      top: 35px;
+    }
+
+    @media (max-width: $tablet-width) {
+      top: 35px;
+      left: 300px;
+    }
+
+    @media (max-width: $mobile-width) {
+      top: 17px;
+      left: 200px;
     }
   }
 
   &--strategy {
     position: absolute;
-    top: 80px;
-    left: 350px;
+    top: 95px;
+    left: 365px;
 
     @media (max-width: $desktop-width) {
-      left: 308px;
+      left: 375px;
+      top: 86px;
     }
 
     @media (max-width: $desktop-width-min) {
-      left: 445px;
-      top: 135px;
+      left: 365px;
+      top: 90px;
+    }
+
+    @media (max-width: $tablet-width) {
+      top: 75px;
+      left: 310px;
+    }
+
+    @media (max-width: $mobile-width) {
+      top: 47px;
+      left: 200px;
     }
   }
 
   &--crm {
     position: absolute;
-    top: 135px;
-    left: 370px;
+    top: 145px;
+    left: 385px;
 
     @media (max-width: $desktop-width) {
-      top: 123px;
-      left: 325px;
+      top: 155px;
+      left: 405px;
     }
 
     @media (max-width: $desktop-width-min) {
-      top: 195px;
-      left: 470px;
+      top: 160px;
+      left: 417px;
+    }
+
+    @media (max-width: $tablet-width) {
+      top: 135px;
+      left: 351px;
+    }
+
+    @media (max-width: $mobile-width) {
+      top: 88px;
+      left: 235px;
     }
   }
 
   &--site {
     position: absolute;
-    top: 200px;
-    left: 345px;
+    top: 203px;
+    left: 355px;
 
     @media (max-width: $desktop-width) {
-      top: 170px;
-      left: 300px;
+      top: 215px;
+      left: 375px;
     }
 
     @media (max-width: $desktop-width-min) {
-      top: 260px;
-      left: 440px;
+      top: 225px;
+      left: 385px;
+    }
+
+    @media (max-width: $tablet-width) {
+      top: 190px;
+      left: 325px;
+    }
+
+    @media (max-width: $mobile-width) {
+      top: 125px;
+      left: 218px;
     }
   }
 }
