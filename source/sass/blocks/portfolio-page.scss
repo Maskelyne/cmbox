@@ -1,0 +1,25 @@
+.orange {
+  background-image: linear-gradient(90deg, #FDA905 0%, #EE7900 100%);
+}
+
+.portfolio-page__wrapper {
+  margin: 200px auto 0 auto;
+  display: grid;
+  grid-template-columns: 50% auto;
+  grid-gap: 0 17%;
+}
+
+.portfolio-page__box {
+  h1 {
+    font-size: 64px;
+    line-height: 64px;
+    color: $white;
+  }
+
+  p {
+    font-family: $proximaBold;
+    font-size: 24px;
+    line-height: 24px;
+    color: $white;
+  }
+}

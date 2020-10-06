@@ -11,3 +11,4 @@
 //= modules/rotate-card.js
 //= modules/scroll-height.js
 //= modules/sliders.js
+//= modules/bg-main.js

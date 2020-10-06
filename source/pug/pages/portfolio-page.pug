@@ -1,0 +1,17 @@
+extends ../layout/page-layout
+
+block variables
+  - var title = "Vodadom"
+
+block header
+  +header
+
+block main
+  main.orange
+    section.portfolio-page
+      .portfolio-page__wrapper.container
+        .portfolio-page__image
+          +img('jpg', 'image-vodadom', 'jpg', '340', '240', 'Водадом')
+        .portfolio-page__box
+          h1 Vodadom
+          p Сайт для бурового предприятия в Беларуси

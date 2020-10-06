@@ -75,10 +75,26 @@
         <h1>Портфолио</h1>
         <div class="portfolio__wrapper container">
           <ul class="tabs">
-            <li><a class="tabs__work" href="#"><img src="assets/img/svg/icon-work.svg" width="24" height="24" alt="Наша работы"/>Все работы</a></li>
-            <li><a class="tabs__process" href="#"><img src="assets/img/svg/icon-process.svg" width="24" height="24" alt="Наша работы"/>В процессе</a></li>
-            <li><a class="tabs__check" href="#"><img src="assets/img/svg/icon-check.svg" width="24" height="24" alt="Наша работы"/>Завершенные</a></li>
-            <li><a class="tabs__support" href="#"><img src="assets/img/svg/icon-support.svg" width="24" height="24" alt="Наша работы"/>На обслуживании</a></li>
+            <li>
+              <input class="visually-hidden" id="work" type="checkbox" name="work" value="Все работы"/>
+              <label for="work"><img src="assets/img/svg/icon-work.svg" width="24" height="24" alt="Все работы"/>Все работы
+              </label>
+            </li>
+            <li>
+              <input class="visually-hidden" id="process" type="checkbox" name="work" value="В процессе"/>
+              <label for="process"><img src="assets/img/svg/icon-process.svg" width="24" height="24" alt="В процессе"/>В процессе
+              </label>
+            </li>
+            <li>
+              <input class="visually-hidden" id="check" type="checkbox" name="work" value="Завершенные"/>
+              <label for="check"><img src="assets/img/svg/icon-check.svg" width="24" height="24" alt="Завершенные"/>Завершенные
+              </label>
+            </li>
+            <li>
+              <input class="visually-hidden" id="support" type="checkbox" name="work" value="На обслуживании"/>
+              <label for="support"><img src="assets/img/svg/icon-support.svg" width="24" height="24" alt="На обслуживании"/>На обслуживании
+              </label>
+            </li>
           </ul>
           <div class="portfolio__box">
             <ul class="portfolio__list">
