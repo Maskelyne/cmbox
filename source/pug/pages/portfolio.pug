@@ -81,7 +81,8 @@ block main
         height: '240',
         altText: 'Водадом',
         title: 'Vodadom',
-        text: 'Сайт для бурового предприятия в Беларуси'
+        text: 'Сайт для бурового предприятия в Беларуси',
+        link: 'portfolio-page.html'
       },
       {
         path: 'jpg',
@@ -91,7 +92,8 @@ block main
         height: '240',
         altText: 'Яртруба',
         title: 'Yartruba',
-        text: 'Сайт для официального поставщика труб нПВХ'
+        text: 'Сайт для официального поставщика труб нПВХ',
+        link: '#'
       },
       {
         path: 'jpg',
@@ -101,7 +103,8 @@ block main
         height: '240',
         altText: 'Эксим',
         title: 'Exim',
-        text: 'Сайт для поставщика качественной электротехники'
+        text: 'Сайт для поставщика качественной электротехники',
+        link: '#'
       },
       {
         path: 'jpg',
@@ -111,7 +114,8 @@ block main
         height: '240',
         altText: 'Эксим',
         title: 'Exim',
-        text: 'Сайт для поставщика качественной электротехники'
+        text: 'Сайт для поставщика качественной электротехники',
+        link: '#'
       },
       {
         path: 'jpg',
@@ -121,7 +125,8 @@ block main
         height: '240',
         altText: 'Эксим',
         title: 'Exim',
-        text: 'Сайт для поставщика качественной электротехники'
+        text: 'Сайт для поставщика качественной электротехники',
+        link: '#'
       },
       {
         path: 'jpg',
@@ -131,7 +136,8 @@ block main
         height: '240',
         altText: 'Эксим',
         title: 'Exim',
-        text: 'Сайт для поставщика качественной электротехники'
+        text: 'Сайт для поставщика качественной электротехники',
+        link: '#'
       },
     ];
 
@@ -144,12 +150,12 @@ block main
           ul.portfolio__list
             each item in portfolioList
               li
-                a(href="#")
+                a(href= item.link)
                   .portfolio__box-card
                     .portfolio__card
                       .portfolio__card-perspective
                         .portfolio__image
-                          +img(item.path, item.image, item.format, item.width, item.height, item.altTex)
+                          +img(item.path, item.image, item.format, item.width, item.height, item.altText)
                         .portfolio__text
                           h2= item.title
                           p= item.text

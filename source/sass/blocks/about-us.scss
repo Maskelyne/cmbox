@@ -227,21 +227,18 @@
   max-width: 495px;
   margin-left: 10px;
 
+  li {
+    display: grid;
+    grid-template-columns: 45px auto;
+    grid-gap: 0 10px;
+
+    @media (max-width: $tablet-width) {
+      grid-template-columns: 35px auto;
+    }
+  }
+
   p {
     margin: 0 0 15px 0;
-    padding-left: 60px;
-    position: relative;
-
-    &::before {
-      width: 48px;
-      height: 48px;
-      position: absolute;
-      content: "";
-      top: 0;
-      left: 0;
-      background-image: url("../img/about-us/icon-loupe.svg");
-      background-repeat: no-repeat;
-    }
   }
 
   @media (max-width: $tablet-width) {

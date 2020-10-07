@@ -3,10 +3,15 @@
 }
 
 .portfolio-page__wrapper {
-  margin: 200px auto 0 auto;
+  margin: 200px auto 10px auto;
   display: grid;
   grid-template-columns: 50% auto;
   grid-gap: 0 17%;
+  position: relative;
+
+  @media (max-width: $desktop-width) {
+    grid-gap: 0 10%;
+  }
 }
 
 .portfolio-page__box {
@@ -14,6 +19,7 @@
     font-size: 64px;
     line-height: 64px;
     color: $white;
+    text-align: left;
   }
 
   p {
@@ -21,5 +27,295 @@
     font-size: 24px;
     line-height: 24px;
     color: $white;
+  }
+}
+
+.portfolio-page__scroll {
+  display: grid;
+  grid-template-columns: 50% auto;
+  grid-gap: 10%;
+  align-items: center;
+
+  p {
+    font-family: $proximaBold;
+    font-size: 16px;
+    line-height: 21px;
+    color: $white;
+  }
+}
+
+.portfolio-page__box-image {
+  display: grid;
+  grid-template-columns: 10% auto;
+  align-items: center;
+}
+
+.portfolio-page__image {
+  border: solid 8px #eeeeee;
+  border-radius: 10px;
+  box-shadow: -8px -8px 20px rgba(0, 0, 0, 0.2), 8px 8px 20px rgba(0, 0, 0, 0.2);
+
+  &::before {
+    width: 33px;
+    height: 233px;
+    position: absolute;
+    content: "";
+    top: -232px;
+    left: 10%;
+    background-image: url("../img/svg/latch.svg");
+    background-repeat: no-repeat;
+  }
+
+  &::after {
+    width: 33px;
+    height: 233px;
+    position: absolute;
+    content: "";
+    top: -232px;
+    left: 44%;
+    background-image: url("../img/svg/latch.svg");
+    background-repeat: no-repeat;
+  }
+
+  img {
+    display: block;
+  }
+
+  a {
+    display: grid;
+    position: relative;
+
+    &:hover::before {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      background-image: url("../img/svg/icon-eye.svg");
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+    }
+  }
+}
+
+.portfolio-page__controls {
+  display: grid;
+  grid-gap: 15px 0;
+
+  a {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    position: relative;
+
+    &:nth-child(1) {
+      &::before {
+        width: 13px;
+        height: 20px;
+        position: absolute;
+        content: "";
+        top: 10px;
+        left: 15px;
+        background-image: url("../img/svg/icon-arrow-portfolio.svg");
+        background-repeat: no-repeat;
+      }
+
+      &:hover::before {
+        background-image: url("../img/svg/icon-arrow-portfolio-2.svg");
+        background-repeat: no-repeat;
+        transform: rotate(180deg);
+      }
+    }
+
+    &:nth-child(2) {
+      &::before {
+        width: 13px;
+        height: 20px;
+        position: absolute;
+        content: "";
+        top: 10px;
+        left: 13px;
+        background-image: url("../img/svg/icon-arrow-portfolio.svg");
+        background-repeat: no-repeat;
+        transform: rotate(180deg);
+      }
+
+      &:hover::before {
+        background-image: url("../img/svg/icon-arrow-portfolio-2.svg");
+        background-repeat: no-repeat;
+        transform: rotate(0deg);
+      }
+    }
+  }
+}
+
+.portfolio-page__company {
+  padding: 0 70px;
+  max-width: 1200px;
+  height: 100vh;
+  overflow-y: scroll;
+  position: fixed;
+  top: 75px;
+  right: -70%;
+}
+
+.portfolio-page__title {
+  display: grid;
+  grid-template-columns: 48px auto;
+  grid-gap: 0 20px;
+  align-items: center;
+  padding: 25px 0 40px 0;
+
+  h2 {
+    font-size: 48px;
+    line-height: 48px;
+    text-transform: none;
+  }
+
+  img {
+    display: grid;
+    transition: all 0.2s linear;
+
+    &:hover {
+      transform: translateX(-10px);
+      transition: all 0.2s linear;
+    }
+  }
+}
+
+.portfolio-page__info {
+  h3 {
+    margin-bottom: 15px;
+    font-family: $proximaBold;
+    font-size: 24px;
+    line-height: 31px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $dark-blue;
+  }
+
+  p {
+    margin: 0 0 10px 0;
+  }
+}
+
+.portfolio-page__list-info {
+  @include reset-list;
+
+  p {
+    padding-left: 20px;
+    position: relative;
+
+    &::before {
+      width: 10px;
+      height: 2px;
+      position: absolute;
+      content: "";
+      top: 10px;
+      left: 0;
+      background-color: $dark-red;
+    }
+  }
+}
+
+.portfolio-page__list-purposes {
+  @include reset-list;
+
+  li {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    margin-bottom: 50px;
+
+    img {
+      max-width: 500px;
+    }
+
+    &:hover img {
+      &:nth-child(1) {
+        transform: translateY(-50px);
+        transition: all 0.3s linear;
+      }
+
+      &:nth-child(2) {
+        display: none;
+      }
+
+      &:nth-child(3) {
+        display: grid;
+      }
+    }
+  }
+
+  strong {
+    font-family: $proximaBold;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $dark-blue;
+  }
+}
+
+.portfolio-page__purposes-img {
+  display: grid;
+  grid-template-rows: 0 auto;
+
+  img {
+    &:nth-child(1) {
+      max-width: 85px;
+      transform: translateY(-30px);
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      transition: all 0.3s linear;
+    }
+
+    &:nth-child(2) {
+      max-width: 170px;
+    }
+
+    &:nth-child(3) {
+      max-width: 170px;
+      display: none;
+    }
+  }
+}
+
+.portfolio-page__company-image {
+  display: grid;
+  grid-template-columns: 45% 30%;
+  align-items: center;
+}
+
+.portfolio-page__scroll-mouse {
+  @include bgGradient;
+  position: relative;
+  width: 26px;
+  height: 42px;
+  border-radius: 100px;
+  background-size: 100% 200%;
+  animation:
+    colorSlide $animDuration linear infinite,
+    nudgeMouse $animDuration ease-out infinite;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    margin: auto;
+  }
+  &:before {
+    width: 20px;
+    height: 36px;
+    background-color: $colorBg;
+    border-radius: 100px;
+  }
+  &:after {
+    background-color: $colorOutline;
+    width: $sizeTrackball;
+    height: $sizeTrackball;
+    border-radius: 100%;
+    animation: trackBallSlide $animDuration linear infinite;
   }
 }

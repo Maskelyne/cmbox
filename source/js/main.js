@@ -12,3 +12,4 @@
 //= modules/scroll-height.js
 //= modules/sliders.js
 //= modules/bg-main.js
+//= modules/portfolio-page-scroll.js
