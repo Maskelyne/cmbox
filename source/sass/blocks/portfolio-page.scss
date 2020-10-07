@@ -3,19 +3,38 @@
 }
 
 .portfolio-page__wrapper {
-  margin: 200px auto 10px auto;
+  transform: translateY(60%);
   display: grid;
   grid-template-columns: 50% auto;
   grid-gap: 0 17%;
   position: relative;
+  align-items: flex-start;
+  max-height: 367px;
 
   @media (max-width: $desktop-width) {
     grid-gap: 0 10%;
   }
+
+  &--active {
+    transform: translateY(14%);
+    transition: all 0.7s linear;
+  }
+
+  &--active > .portfolio-page__box-image {
+    @media (max-width: $desktop-width) {
+      grid-template-columns: 10% 430px;
+      align-items: flex-start;
+    }
+  }
 }
 
 .portfolio-page__box {
+  display: grid;
+  grid-template-rows: repeat(3, max-content);
+  align-self: center;
+
   h1 {
+    margin: 0 0 10px 0;
     font-size: 64px;
     line-height: 64px;
     color: $white;
@@ -23,10 +42,75 @@
   }
 
   p {
+    margin: 0 0 10px 0;
     font-family: $proximaBold;
     font-size: 24px;
     line-height: 24px;
     color: $white;
+  }
+
+  strong {
+    margin-bottom: 10px;
+    font-family: $proximaBold;
+    font-size: 24px;
+    line-height: 31px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $white;
+    display: none;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0 0 0 20px;
+    display: none;
+
+    li {
+      color: $white;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 0;
+      font-family: $proximaNova;
+      font-weight: $normal;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  a {
+    font-family: $proximaBold;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.05em;
+    color: $white;
+    display: none;
+
+    &:hover {
+      color: $dark-red;
+    }
+  }
+
+  &--active {
+    max-width: 350px;
+    transform: translate(-224%, 91%);
+    transition: all 0.7s linear;
+
+    @media (max-width: $desktop-width) {
+      max-width: 310px;
+      transform: translate(-193%, 74%);
+    }
+  }
+
+  &--active > .portfolio-page__scroll {
+    display: none;
+  }
+
+  &--active > strong,
+  &--active > ul,
+  &--active > a {
+    display: grid;
   }
 }
 
@@ -47,7 +131,6 @@
 .portfolio-page__box-image {
   display: grid;
   grid-template-columns: 10% auto;
-  align-items: center;
 }
 
 .portfolio-page__image {
@@ -103,6 +186,8 @@
 .portfolio-page__controls {
   display: grid;
   grid-gap: 15px 0;
+  align-content: center;
+  align-items: center;
 
   a {
     width: 40px;
@@ -159,7 +244,20 @@
   overflow-y: scroll;
   position: fixed;
   top: 75px;
-  right: -70%;
+  right: -110%;
+  box-shadow: -2px 0px 8px rgba(0, 48, 121, 0.3);
+
+  @media (max-width: $desktop-width) {
+    right: -140%;
+  }
+
+  &--active {
+    transition: all 0.7s linear;
+    width: calc(100% / 1.55);
+    position: fixed;
+    top: 75px;
+    right: 0;
+  }
 }
 
 .portfolio-page__title {
@@ -298,20 +396,26 @@
   animation:
     colorSlide $animDuration linear infinite,
     nudgeMouse $animDuration ease-out infinite;
-  &:before,
-  &:after {
+
+  &::before,
+  &::after {
     content: "";
     position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     margin: auto;
   }
-  &:before {
+
+  &::before {
     width: 20px;
     height: 36px;
     background-color: $colorBg;
     border-radius: 100px;
   }
-  &:after {
+
+  &::after {
     background-color: $colorOutline;
     width: $sizeTrackball;
     height: $sizeTrackball;
