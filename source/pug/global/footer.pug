@@ -1,7 +1,7 @@
 mixin footer()
 
   -
-    const footerNav = [
+    var footerNav = [
       {
         link: '#',
         text: 'О нас'
@@ -28,7 +28,7 @@ mixin footer()
       },
     ];
 
-  footer.main-footer
+  footer.main-footer(class!=attributes.class)
     .main-footer__wrapper.container
       .main-footer__box
         .main-footer__box-image
