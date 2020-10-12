@@ -10,6 +10,8 @@
 
     if (window.innerWidth > 1023) {
 
+      document.body.style.overflow = 'hidden';
+
       window.addEventListener('wheel', function () {
 
         if (window.innerWidth > 1200) {

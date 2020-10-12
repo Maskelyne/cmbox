@@ -5,7 +5,7 @@
 .portfolio-page {
   @media (max-width: $desktop-width-min) {
     display: grid;
-    grid-template-rows: 71% auto;
+    grid-template-rows: 15% auto;
   }
 }
 
@@ -21,10 +21,16 @@
 
   @media (max-width: $desktop-width) {
     grid-gap: 0 10%;
+    position: static;
   }
 
   @media (max-width: $desktop-width-min) {
+    margin: 0;
+    padding: 0 30px;
+    max-height: 100%;
+    grid-template-rows: 55% 26%;
     grid-template-columns: 1fr;
+    transform: translateY(15%);
   }
 
   &--active {
@@ -57,6 +63,11 @@
     line-height: 64px;
     color: $white;
     text-align: left;
+
+    @media (max-width: $tablet-width) {
+      font-size: 36px;
+      line-height: 36px;
+    }
   }
 
   p {
@@ -65,6 +76,11 @@
     font-size: 24px;
     line-height: 24px;
     color: $white;
+
+    @media (max-width: $tablet-width) {
+      font-size: 16px;
+      line-height: 16px;
+    }
   }
 
   strong {
@@ -146,7 +162,15 @@
   grid-template-columns: 10% auto;
 
   @media (max-width: $desktop-width-min) {
-    grid-template-columns: 10% auto 10%;
+    max-width: 710px;
+    width: 100%;
+    margin: 0 auto;
+    grid-template-columns: 8% auto 8%;
+    position: relative;
+  }
+
+  @media (max-width: $tablet-width) {
+    max-width: 320px;
   }
 }
 
@@ -164,6 +188,10 @@
     left: 10%;
     background-image: url("../img/svg/latch.svg");
     background-repeat: no-repeat;
+
+    @media (max-width: $desktop-width-min) {
+      left: 16%;
+    }
   }
 
   &::after {
@@ -175,6 +203,10 @@
     left: 44%;
     background-image: url("../img/svg/latch.svg");
     background-repeat: no-repeat;
+
+    @media (max-width: $desktop-width-min) {
+      left: 78%;
+    }
   }
 
   img {
@@ -213,6 +245,11 @@
     border-radius: 50%;
     position: relative;
 
+    @media (max-width: $tablet-width) {
+      width: 35px;
+      height: 35px;
+    }
+
     &:nth-child(1) {
       &::before {
         width: 13px;
@@ -230,6 +267,10 @@
         background-repeat: no-repeat;
         transform: rotate(180deg);
       }
+
+      @media (max-width: $desktop-width-min) {
+        display: none;
+      }
     }
 
     &:nth-child(2) {
@@ -243,12 +284,35 @@
         background-image: url("../img/svg/icon-arrow-portfolio.svg");
         background-repeat: no-repeat;
         transform: rotate(180deg);
+
+        @media (max-width: $tablet-width) {
+          top: 8px;
+          left: 10px;
+        }
       }
 
       &:hover::before {
         background-image: url("../img/svg/icon-arrow-portfolio-2.svg");
         background-repeat: no-repeat;
         transform: rotate(0deg);
+      }
+    }
+  }
+
+  &--tablet {
+    a {
+      &:nth-child(1) {
+        display: none;
+
+        @media (max-width: $desktop-width-min) {
+          display: grid;
+          justify-self: flex-end;
+        }
+
+        @media (max-width: $tablet-width) {
+          top: 8px;
+          left: 12px;
+        }
       }
     }
   }
@@ -261,7 +325,7 @@
   position: fixed;
   top: 75px;
   right: -110%;
-  box-shadow: -2px 0px 8px rgba(0, 48, 121, 0.3);
+  box-shadow: -2px 0 8px rgba(0, 48, 121, 0.3);
   transition: all 1s linear;
 
   @media (max-width: $desktop-width) {
@@ -270,6 +334,8 @@
 
   @media (max-width: $desktop-width-min) {
     position: static;
+    overflow: inherit;
+    height: auto;
   }
 
   &--active {
@@ -288,10 +354,19 @@
   align-items: center;
   padding: 25px 70px 40px 70px;
 
+  @media (max-width: $tablet-width) {
+    padding: 0 30px;
+  }
+
   h2 {
     font-size: 48px;
     line-height: 48px;
     text-transform: none;
+
+    @media (max-width: $tablet-width) {
+      font-size: 24px;
+      line-height: 24px;
+    }
   }
 
   img {
@@ -350,6 +425,10 @@
     grid-template-columns: 1fr auto;
     margin-bottom: 50px;
 
+    @media (max-width: $tablet-width) {
+      grid-template-columns: 1fr;
+    }
+
     img {
       max-width: 500px;
     }
@@ -382,11 +461,15 @@
   display: grid;
   grid-template-rows: 0 auto;
 
+  @media (max-width: $tablet-width) {
+    grid-row: 1;
+  }
+
   img {
     &:nth-child(1) {
       max-width: 85px;
       transform: translateY(-30px);
-      margin: 0 auto;
+      margin: 0 auto 0 55px;
       position: relative;
       z-index: 1;
       transition: all 0.3s linear;
