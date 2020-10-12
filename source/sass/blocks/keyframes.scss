@@ -217,33 +217,6 @@
   }
 }
 
-@keyframes colorSlide {
-  0% { background-position: 0% 100%; }
-  20% { background-position: 0% 0%; }
-  21% { background-color: $colorOutlineFade; }
-  29.99% {
-    background-color: $colorOutline;
-    background-position: 0% 0%;
-  }
-  30% {
-    background-color: $colorOutlineFade;
-    background-position: 0% 100%;
-  }
-  50% { background-position: 0% 0%; }
-  51% { background-color: $colorOutlineFade; }
-  59% {
-    background-color: $colorOutline;
-    background-position: 0% 0%;
-  }
-  60% {
-    background-color: $colorOutlineFade;
-    background-position: 0% 100%;
-  }
-  80% { background-position: 0% 0%; }
-  81% { background-color: $colorOutlineFade; }
-  90%, 100% { background-color: $colorOutline; }
-}
-
 @keyframes trackBallSlide {
   0% {
     opacity: 1;

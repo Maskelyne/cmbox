@@ -36,7 +36,7 @@ block main
       },
     ];
 
-  main.orange
+  main(style="background: linear-gradient(90deg, #00A0FF 0%, #011C3B 100%)")
     section.portfolio-page
       .portfolio-page__wrapper.container
         .portfolio-page__box-image
@@ -51,7 +51,7 @@ block main
           .portfolio-page__controls.portfolio-page__controls--tablet
             a(href="#")
               span.visually-hidden Назад
-        .portfolio-page__box
+        .portfolio-page__box(style="color: #ffffff")
           h1 Vodadom
           p Сайт для бурового предприятия в Беларуси
           strong Цели
@@ -79,13 +79,20 @@ block main
           p Компания является официальным дилером европейских производителей на территории РБ. Большой ассортимент позиций представлен в шоу руме. Европейское качество, подтвержденное многочисленными сертификатами. Положительный опыт использования на предприятиях на протяжении всего срока эксплуатации.
           p Они предлагают надежную, качественную, профессиональную продукцию для всех отраслей промышленности, включая сельское хозяйство, строительство и транспорт.
           h3 Проблема
-          ul.portfolio-page__list-info
+          .portfolio-page__trabls
+            p Устаревший сайт со слабым функционалом
+            p Отсутствие всех видов продвижения
+            p Желание увеличить продажи и нарастить базу постоянных клиентов
+          h3 Цели
+          ul.portfolio-page__list-purpose
             li
-              p Устаревший сайт со слабым функционалом
+              p Разработка стратегии для увеличения продаж в интернете
             li
-              p Отсутствие всех видов продвижения
+              p Ребрендинг торговой марки
             li
-              p Желание увеличить продажи и нарастить базу постоянных клиентов
+              p Создание многофункционального сайта магазина
+            li
+              p Подключение всех инструментов продвижения
           .portfolio-page__company-image
             +img('png', 'image-company-vodadom', 'png', '510', '420', 'Водадом')
             +img('svg', 'logo-vodadom', 'svg', '170', '110', 'Водадом')
@@ -111,11 +118,12 @@ block main
               .portfolio-page__purposes
                 strong Дизайн
                 p Компания является официальным дилером европейских производителей на территории РБ. Большой ассортимент позиций представлен в шоу руме. Европейское качество, подтвержденное многочисленными сертификатами. Положительный опыт использования на предприятиях на протяжении всего срока эксплуатации.
+                p
+                  +img('png', 'image-company-1', 'png', '500', '232', 'Дизайн')
               .portfolio-page__purposes-img
                 +img('services', 'icon-design', 'svg', '250', '250', 'Дизайн')
                 +img('svg', 'box-open', 'svg', '170', '124', 'Дизайн')
                 +img('svg', 'box-open-hover', 'svg', '170', '124', 'Дизайн')
-              +img('png', 'image-company-1', 'png', '500', '232', 'Дизайн')
             li
               .portfolio-page__purposes
                 strong Сайт
@@ -195,17 +203,18 @@ block main
               a.button.intro__link(href="#")
                 span Напишите нам
         .portfolio-page__breadcrumbs
-          .portfolio-page__button-prev
-            a(href="#")
-            span Exim
-          .portfolio-page__prev-portfolio
-            a(href="#")
-              +img('svg', 'icon-portfolio', 'svg', '38', '38', 'Портфолио')
-              +img('svg', 'icon-portfolio-2', 'svg', '38', '38', 'Портфолио')
-              span Назад в портфолио
-          .portfolio-page__button-next
-            a(href="#")
-            span Yartruba
+          .portfolio-page__wrapper-breadcrumbs.container
+            .portfolio-page__button-prev
+              a(href="#")
+              span Exim
+            .portfolio-page__prev-portfolio
+              a(href="#")
+                +img('svg', 'icon-portfolio', 'svg', '38', '38', 'Портфолио')
+                +img('svg', 'icon-portfolio-2', 'svg', '38', '38', 'Портфолио')
+                span Назад в портфолио
+            .portfolio-page__button-next
+              a(href="#")
+              span Yartruba
         .main-footer.portfolio-page__footer
           .main-footer__wrapper.container
             .main-footer__box
