@@ -265,13 +265,35 @@
   }
 
   &--strategy {
-    //img {
-    //  &:nth-child(3) {
-    //    @media (max-width: $tablet-width) {
-    //      display: block;
-    //    }
-    //  }
-    //}
+    img {
+      &:nth-child(1) {
+        max-width: 600px;
+        animation: stage-show-elements-2;
+        animation-duration: 2s;
+        animation-delay: 2s;
+        animation-timing-function: ease;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+        animation-play-state: running;
+        opacity: 0;
+      }
+
+      &:nth-child(2) {
+        margin-top: -230px;
+        margin-left: 80px;
+        z-index: -1;
+        animation: stage-show-elements-1;
+        animation-duration: 2s;
+        animation-delay: 0.5s;
+        animation-timing-function: ease;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+        animation-play-state: running;
+        opacity: 0;
+      }
+    }
   }
 
   &--design {
