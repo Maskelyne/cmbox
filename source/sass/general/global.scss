@@ -74,6 +74,7 @@ body {
   color: $dark-black;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 main {
@@ -127,9 +128,17 @@ main {
 }
 
 .black {
-  color: $dark-black;
+  color: $black;
 }
 
 .white {
   color: $white;
+}
+
+.black .portfolio-page__scroll-mouse {
+  border: solid 2px $black;
+
+  &::after {
+    background-color: $black;
+  }
 }

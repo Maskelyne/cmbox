@@ -63,6 +63,15 @@
   transition: all 1s linear;
   transform: translate(180%, -150%);
   z-index: -1;
+  animation: stage-show-elements-2;
+  animation-duration: 2.3s;
+  animation-delay: 1.5s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  opacity: 0;
 
   @media (max-width: $desktop-width) {
     transform: translate(153%, -130%);
@@ -188,6 +197,8 @@
   border: solid 8px #eeeeee;
   border-radius: 10px;
   box-shadow: -8px -8px 20px rgba(0, 0, 0, 0.2), 8px 8px 20px rgba(0, 0, 0, 0.2);
+  animation: showBox 2s ease;
+  transform: translateY(0);
 
   @media (max-width: $tablet-width) {
     border-radius: 5px;
@@ -199,13 +210,17 @@
     height: 233px;
     position: absolute;
     content: "";
-    top: -232px;
-    left: 10%;
+    top: -240px;
+    left: 8%;
     background-image: url("../img/svg/latch.svg");
     background-repeat: no-repeat;
 
     @media (max-width: $desktop-width-min) {
-      left: 16%;
+      left: 7%;
+    }
+
+    @media (max-width: $desktop-width-min) {
+      top: -237px;
     }
   }
 
@@ -214,17 +229,18 @@
     height: 233px;
     position: absolute;
     content: "";
-    top: -232px;
-    left: 44%;
+    top: -240px;
+    left: 85%;
     background-image: url("../img/svg/latch.svg");
     background-repeat: no-repeat;
 
     @media (max-width: $desktop-width-min) {
-      left: 78%;
+      left: 86%;
     }
 
     @media (max-width: $tablet-width) {
-      left: 73%;
+      top: -237px;
+      left: 76%;
     }
   }
 
@@ -669,6 +685,7 @@
 
     @media (max-width: $tablet-width) {
       grid-template-columns: repeat(3, 30%);
+      padding: 0 15px;
     }
   }
 
@@ -832,24 +849,6 @@
   }
 }
 
-.portfolio-page__list-purpose {
-  margin: 0;
-  padding: 0 0 0 20px;
-  display: none;
-
-  @media (max-width: $desktop-width-min) {
-    display: grid;
-
-    li {
-      color: $dark-red;
-    }
-
-    p {
-      color: $dark-black;
-    }
-  }
-}
-
 .portfolio-page__footer {
   .main-footer__wrapper {
     padding: 10px 50px;
@@ -857,6 +856,7 @@
     grid-column-gap: 0;
 
     @media (max-width: $desktop-width) {
+      padding: 10px 70px;
       grid-template-columns: 45% 49%;
       justify-content: space-between;
     }
@@ -886,6 +886,27 @@
 
   .main-footer__contacts {
     justify-self: flex-end;
+  }
+}
+
+.portfolio-page__cell {
+  display: none;
+
+  @media (max-width: $desktop-width-min) {
+    display: grid;
+
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    li {
+      color: $dark-red;
+    }
+
+    p {
+      color: $dark-black;
+    }
   }
 }
 

@@ -13,3 +13,4 @@
 //= modules/sliders.js
 //= modules/bg-main.js
 //= modules/portfolio-page-scroll.js
+//= modules/modals.js
