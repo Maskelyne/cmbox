@@ -347,15 +347,58 @@
   }
 
   li {
-    width: 200px;
+    width: 207px;
     height: 75px;
+    position: relative;
+    z-index: 1;
+
+    &:nth-child(1) {
+      span {
+        &::after {
+          width: 45px;
+          transform: translate(0px, -2px) skew(0deg, 20deg);
+          position: absolute;
+          content: "";
+          border-top: solid 15px transparent;
+          border-bottom: solid 16px transparent;
+          border-right: 7px solid transparent;
+          transition: all 1s ease;
+        }
+      }
+    }
 
     &:nth-child(2) {
       transform: translateX(5px);
+
+      span {
+        &::after {
+          width: 45px;
+          transform: translate(0px, -2px) skew(0deg, 20deg);
+          position: absolute;
+          content: "";
+          border-top: solid 15px transparent;
+          border-bottom: solid 16px transparent;
+          border-right: 7px solid transparent;
+          transition: all 1s ease;
+        }
+      }
     }
 
     &:nth-child(3) {
       transform: translateX(10px);
+
+      span {
+        &::after {
+          width: 45px;
+          transform: translate(0px, -2px) skew(0deg, 20deg);
+          position: absolute;
+          content: "";
+          border-top: solid 15px transparent;
+          border-bottom: solid 16px transparent;
+          border-right: 7px solid transparent;
+          transition: all 1s ease;
+        }
+      }
     }
 
     &:nth-child(4) {
@@ -364,6 +407,10 @@
 
     &:nth-child(5) {
       transform: translateX(20px);
+
+      span {
+        padding: 5px 0;
+      }
     }
 
     &:nth-child(6) {
@@ -380,42 +427,94 @@
 
     &:nth-child(9) {
       transform: translateX(40px);
+
+      span {
+        padding: 5px 0;
+      }
     }
 
     &:nth-child(10) {
       transform: translateX(45px);
     }
-  }
 
-  a {
-    position: relative;
-    display: block;
+    a {
+      position: relative;
+      display: block;
 
-    span {
-      position: absolute;
-      z-index: 1;
-      font-size: 10px;
-      line-height: 10px;
-      font-weight: $bold;
-      text-transform: uppercase;
-      transform: skewY(-20deg) translate(51%, 62px);
-      transition: all 1s linear;
-    }
+      span {
+        width: 68px;
+        padding: 10px 0 9px 0;
+        position: absolute;
+        z-index: 1;
+        font-size: 11px;
+        line-height: 11px;
+        font-weight: $bold;
+        text-align: center;
+        text-transform: uppercase;
+        transform: skewY(-21deg) translate(45%, 55px);
+        transition: all 1s ease;
+      }
 
-    img {
-      transition: all 1s;
-      transform: translate(-50px, 0);
-    }
+      img {
+        transition: all 1s ease;
+        transform: translate(-50px, 0);
 
-    &:hover {
+        &:nth-child(3) {
+          width: 40px;
+          height: 40px;
+          position: absolute;
+          transform: translate(-107px, 23px);
+          z-index: 1;
+        }
+      }
+
+      &:hover {
+
         span {
-          transform: skewY(-20deg) translate(100%, 73px);
-          transition: all 1s linear;
+          transform: skewY(-21deg) translate(89%, 66px);
+          transition: all 1s ease;
+          color: $dark-black;
+          background-color: $pink;
+
+          &::after {
+            transform: translate(0px, -2px) skew(0deg, 20deg);
+            transition: all 1s ease;
+            border-top: solid 15px $pink;
+            border-bottom: solid 16px $pink;
+            border-right: 7px solid transparent;
+            filter: brightness(0.9);
+          }
         }
 
         img {
-        transition: all 1s;
-        transform: translate(-20px, 0);
+          transition: all 1s ease;
+          transform: translate(-20px, 0);
+
+          &:nth-child(3) {
+            transform: translate(-78px, 23px);
+          }
+        }
+      }
+    }
+  }
+
+  .services__link-active {
+
+    &::after {
+      transform: translate(-78px, 29px);
+      filter: brightness(0.9);
+    }
+
+    span {
+      transform: skewY(-20deg) translate(91%, 62px);
+      background-color: $pink;
+    }
+
+    img {
+      transform: translate(-20px, 0);
+
+      &:nth-child(3) {
+        transform: translate(-78px, 23px);
       }
     }
   }

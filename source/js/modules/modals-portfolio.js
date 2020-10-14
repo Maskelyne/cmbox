@@ -5,7 +5,7 @@
   const KEY_CODE = 27;
 
   var overlayModal = document.querySelector('.modal');
-  var portfolioCard = document.querySelector('.modals-development');
+  var portfolioCard = document.querySelectorAll('.modals-development');
   var modalDevelopment = document.querySelector('.modal-development');
   var modalClose = document.querySelectorAll('.modal__btn-closed');
 
@@ -20,13 +20,15 @@
       });
     }
 
-    portfolioCard.addEventListener('click', function (evt) {
-      evt.preventDefault();
+    for (var i = 0; i < portfolioCard.length; i++) {
+      portfolioCard[i].addEventListener('click', function (evt) {
+        evt.preventDefault();
 
-      modalDevelopment.classList.add('modal-active');
-      document.body.style.overflow = 'hidden';
+        modalDevelopment.classList.add('modal-active');
+        document.body.style.overflow = 'hidden';
 
-    });
+      });
+    }
 
     window.addEventListener(`keydown`, function (evt) {
 

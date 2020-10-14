@@ -1,5 +1,5 @@
 .orange {
-  background-image: linear-gradient(90deg, #FDA905 0%, #EE7900 100%);
+  background-image: linear-gradient(90deg, #fda905 0%, #ee7900 100%);
 }
 
 .portfolio-page {
@@ -359,7 +359,7 @@
 
 .portfolio-page__company {
   width: 100%;
-  height: 93vh;
+  height: 90vh;
   overflow-y: scroll;
   position: fixed;
   top: 75px;
@@ -384,6 +384,16 @@
     top: 75px;
     right: 0;
   }
+}
+
+.portfolio-page__company::-webkit-scrollbar {
+  width: 5px; /* ширина для вертикального скролла */
+  background-color: $light-gray;
+}
+
+.portfolio-page__company::-webkit-scrollbar-thumb {
+  background-color: $dark-blue;
+  border-radius: 10px;
 }
 
 .portfolio-page__title {

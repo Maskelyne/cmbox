@@ -1,8 +1,8 @@
 .intro__wrapper {
   padding: 340px 30px 230px 30px;
   display: grid;
-  grid-template-columns: 54% 36%;
-  grid-gap: 0 7%;
+  grid-template-columns: 54% 41%;
+  grid-gap: 0 5%;
 
   @media (max-width: $desktop-width) {
     grid-gap: 0 4%;
@@ -82,7 +82,7 @@
 
 .intro__link-box {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 170px 1fr;
   grid-gap: 0 25px;
   align-items: center;
 
@@ -114,7 +114,7 @@
 
   .swiper-container {
     position: static;
-    height: 350px;
+    height: 415px;
 
     @media (max-width: $desktop-width) {
       height: 380px;
