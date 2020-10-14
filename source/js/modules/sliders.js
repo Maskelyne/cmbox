@@ -2,7 +2,7 @@
 
 (function () {
 
-  var mainSlider = document.querySelector('.page-main__box-swiper-container');
+  var mainSlider = document.querySelector('.intro__box-swiper-container');
 
   var createSlider = function (el) {
     return new Swiper(el, {

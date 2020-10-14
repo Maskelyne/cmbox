@@ -1,18 +1,26 @@
 mixin tabs()
   ul.tabs
     li
-      a.tabs__work(href="#")
-        +img('svg', 'icon-work', 'svg', '24', '24', 'Наша работы')
+      input(id="work" type="checkbox" name="work" value="Все работы").visually-hidden
+      label(for="work")
+        +img('svg', 'icon-work', 'svg', '24', '24', 'Все работы')
         | Все работы
     li
-      a.tabs__process(href="#")
-        +img('svg', 'icon-process', 'svg', '24', '24', 'Наша работы')
+      input(id="process" type="checkbox" name="work" value="В процессе").visually-hidden
+      label(for="process")
+        +img('svg', 'icon-process', 'svg', '24', '24', 'В процессе')
         | В процессе
     li
-      a.tabs__check(href="#")
-        +img('svg', 'icon-check', 'svg', '24', '24', 'Наша работы')
+      input(id="check" type="checkbox" name="work" value="Завершенные").visually-hidden
+      label(for="check")
+        +img('svg', 'icon-check', 'svg', '24', '24', 'Завершенные')
         | Завершенные
     li
-      a.tabs__support(href="#")
-        +img('svg', 'icon-support', 'svg', '24', '24', 'Наша работы')
+      input(id="support" type="checkbox" name="work" value="На обслуживании").visually-hidden
+      label(for="support")
+        +img('svg', 'icon-support', 'svg', '24', '24', 'На обслуживании')
         | На обслуживании
+    li
+      button.tabs__start Фильтровать
+    li
+      button.tabs__reset Сбросить

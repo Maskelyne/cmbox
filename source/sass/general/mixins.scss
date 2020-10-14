@@ -28,3 +28,14 @@
     @content;
   }
 }
+
+@mixin bgGradient {
+  background:
+    $colorOutlineFade
+    linear-gradient(
+        transparent 0%,
+        transparent 50%,
+        $colorOutline 50%,
+        $colorOutline 100%
+    );
+}

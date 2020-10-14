@@ -24,7 +24,7 @@ a {
   color: $dark-black;
 
   &:hover {
-    font-family: $proximaBold;
+    font-weight: $bold;
     color: $dark-red;
   }
 }
@@ -36,7 +36,6 @@ h1 {
   line-height: 48px;
   font-weight: $normal;
   text-align: center;
-  color: $black;
 
   @media (max-width: $tablet-width) {
     font-size: 24px;
@@ -75,6 +74,7 @@ body {
   color: $dark-black;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 main {
@@ -106,4 +106,39 @@ main {
 
 .gray-box {
   background-color: $light-gray;
+}
+
+.page-main {
+  position: absolute;
+  top: 75px;
+  left: 0;
+  z-index: -1;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.main {
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/png/bckg-main.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.black {
+  color: $black;
+}
+
+.white {
+  color: $white;
+}
+
+.black .portfolio-page__scroll-mouse {
+  border: solid 2px $black;
+
+  &::after {
+    background-color: $black;
+  }
 }

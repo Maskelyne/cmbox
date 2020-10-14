@@ -7,76 +7,147 @@ block header
   +header
 
 block main
-  main.page-main
-    section
-      .page-main__wrapper.container
-        .page-main__box
-          h1 Создадим интернет упаковку вашего бизнеса используя самые эффективные инструменты
-          a.button.page-main__link(href="#")
+  main.main
+    div#bg.page-main
+    #fullpage
+      section.intro.section
+        .intro__wrapper.container
+          .intro__box
+            h1 Создадим интернет упаковку вашего бизнеса используя самые эффективные инструменты
+            a.button.intro__link(href="#")
+              span Портфолио
+          .intro__box-swiper-wrapper
+            .intro__box.intro__box-swiper-container.swiper-container
+              ul.intro__list.swiper-wrapper
+                li.swiper-slide
+                  a.intro__link-box(href="#")
+                    +img('services', 'icon-sales', 'svg', '250', '250', 'Воронка')
+                    .into__text
+                      h2 Разработаем маркетинговую стратегию
+                      p Первичная аналитика и стратегия
+                        strong  бесплатно
+                li.swiper-slide
+                  a.intro__link-box(href="#")
+                    +img('services', 'icon-sales', 'svg', '250', '250', 'Воронка')
+                    .into__text
+                      h2 Разработаем маркетинговую стратегию
+                      p Первичная аналитика и стратегия
+                        strong  бесплатно
+                li.swiper-slide
+                  a.intro__link-box(href="#")
+                    +img('services', 'icon-sales', 'svg', '250', '250', 'Воронка')
+                    .into__text
+                      h2 Разработаем маркетинговую стратегию
+                      p Первичная аналитика и стратегия
+                        strong  бесплатно
+                li.swiper-slide
+                  a.intro__link-box(href="#")
+                    +img('services', 'icon-sales', 'svg', '250', '250', 'Воронка')
+                    .into__text
+                      h2 Разработаем маркетинговую стратегию
+                      p Первичная аналитика и стратегия
+                        strong  бесплатно
+              .swiper-pagination
+          a.button.intro__link.intro__link--tablet(href="#")
             span Портфолио
-        .page-main__box-swiper-wrapper
-          .page-main__box.page-main__box-swiper-container.swiper-container
-            ul.page-main__list.swiper-wrapper
-              li.swiper-slide
-                a.page-main__link-box(href="#")
-                  +img('services', 'icon-sales', 'svg', '250', '250', 'Воронка')
-                  .page-main__text
-                    h2 Разработаем маркетинговую стратегию
-                    p Первичная аналитика и стратегия
-                      strong  бесплатно
-              li.swiper-slide
-                a.page-main__link-box(href="#")
-                  +img('services', 'icon-sales', 'svg', '250', '250', 'Воронка')
-                  .page-main__text
-                    h2 Разработаем маркетинговую стратегию
-                    p Первичная аналитика и стратегия
-                      strong  бесплатно
-              li.swiper-slide
-                a.page-main__link-box(href="#")
-                  +img('services', 'icon-sales', 'svg', '250', '250', 'Воронка')
-                  .page-main__text
-                    h2 Разработаем маркетинговую стратегию
-                    p Первичная аналитика и стратегия
-                      strong  бесплатно
-              li.swiper-slide
-                a.page-main__link-box(href="#")
-                  +img('services', 'icon-sales', 'svg', '250', '250', 'Воронка')
-                  .page-main__text
-                    h2 Разработаем маркетинговую стратегию
-                    p Первичная аналитика и стратегия
-                      strong  бесплатно
-            .swiper-pagination
-        a.button.page-main__link.page-main__link--tablet(href="#")
-          span Портфолио
-    section.card-box
-      .card-box__wrapper.container
-        .card-box__box
-          .card__box-text
-            h2 Комплексная интернет-упаковка
-            p — это извлечение самой сути вашего бизнеса, ценностей, выявление преимуществ компании и донесение их вашим клиентам в Интернете, используя современные маркетинговые инструменты.
-          .card-box__image
-            +img('svg', 'box-services', 'svg', '660', '700', 'Услуги')
-            ul.box
-              li
-                a.box__link.box__link--design(href="#") Дизайн
-              li
-                a.box__link.box__link--seo(href="#") SEO
-              li
-                a.box__link.box__link--sales(href="#") Воронка продаж
-              li
-                a.box__link.box__link--context(href="#") Контекст
-              li
-                a.box__link.box__link--marketing(href="#") Видеомаркетинг
-              li
-                a.box__link.box__link--analytics(href="#") Аналитика
-              li
-                a.box__link.box__link--social(href="#") Соцсети
-              li
-                a.box__link.box__link--strategy(href="#") Стратегия
-              li
-                a.box__link.box__link--crm(href="#") CRM
-              li
-                a.box__link.box__link--site(href="#") Сайт
+      section.card-box.section
+        .card-box__wrapper.container
+          .card-box__box
+            span
+              +img('svg', 'img-corners', 'svg', '50', '50', 'Фон')
+            .card-box__inner
+              .card__box-text
+                h2 Комплексная интернет-упаковка
+                p — это извлечение самой сути вашего бизнеса, ценностей, выявление преимуществ компании и донесение их вашим клиентам в Интернете, используя современные маркетинговые инструменты.
+              +box-list
+            span
+              +img('svg', 'img-corners', 'svg', '50', '50', 'Фон')
+      section.advantages.section
+        .advantages__wrapper.container
+          h2 Преимущества комплексного подхода
+          .advantages__box-list
+            .advantages__box
+              +img('svg', 'icon-business', 'svg', '100', '100', 'Бизнес')
+              p Полное погружение в ваш бизнес
+            .advantages__box
+              +img('svg', 'icon-money', 'svg', '100', '100', 'Доход')
+              p Прибыль увеличивается в
+                strong  3 раза
+            .advantages__box
+              +img('svg', 'icon-time', 'svg', '100', '100', 'Время')
+              p Мы экономим ваше время
+      section.business.section
+        .business__wrapper.container
+          .business__box
+            .business__box-info
+              h2 Причины для переупаковки вашего бизнеса
+              .business__box-image
+                +img('svg', 'circle-main', 'svg', '406', '406', 'Элемент 1')
+                +img('svg', 'main-box-form', 'svg', '238', '174', 'Элемент 2')
+                ul.business__list
+                  li: p Устаревший сайт
+                  li: p Желание стать лидером
+                  li: p Новый продукт\ услуга
+                  li: p Конкурировать наравне с лидерами
+                  li: p Реклама приводит мало клиентов
+                  li: p Мало продаж
+                  li: p Теряются заказы
+            .business__box-form
+              h2 Бесплатный аудит
+              form(method="POST" action="#")
+                .business__name
+                  input(id="user_name" type="text" name="user_name")
+                  label(for="user_name") Имя
+                .business__company
+                  input(id="user_company" type="text" name="user_company")
+                  label(for="user_company") Сфера деятельности компании
+                .business__phone
+                  input(id="user_phone" type="text" name="user_phone" required)
+                  label(for="user_phone") Номер телефона
+                .business__comments
+                  textarea(id="user_comments" name="user_comments")
+                  label(for="user_comments") Комментарий
+                button.button(type="submit")
+                  span Отправить
+      section.steps.section
+        .steps__wrapper.container
+          h2 Этапы комплексной интернет-упаковки
+          ul.steps__list
+            li
+              .steps__box
+                a(href="#")
+                  span Анализ
+                  +img('stage-boxes', 'stage-box', 'svg', '124', '120', 'Анализ')
+            li
+              .steps__box
+                a(href="#")
+                  span Стратегия
+                  +img('stage-boxes', 'stage-box', 'svg', '124', '120', 'Стратегия')
+            li
+              .steps__box
+                a(href="#")
+                  span Дизайн
+                  +img('stage-boxes', 'stage-box', 'svg', '124', '120', 'Дизайн')
+            li
+              .steps__box
+                a(href="#")
+                  span Разработка
+                  +img('stage-boxes', 'stage-box', 'svg', '124', '120', 'Разработка')
+            li
+              .steps__box
+                a(href="#")
+                  span Продвижение
+                  +img('stage-boxes', 'stage-box', 'svg', '124', '120', 'Продвижение')
+            li
+              .steps__box
+                a(href="#")
+                  span Автоматизация
+                  +img('stage-boxes', 'stage-box', 'svg', '124', '120', 'Автоматизация')
+            li
+              .steps__box
+                a(href="#")
+                  span Поддержка
+                  +img('stage-boxes', 'stage-box', 'svg', '124', '120', 'Поддержка')
 
 block footer
   +footer

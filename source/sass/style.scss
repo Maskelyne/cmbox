@@ -1,5 +1,6 @@
 //general
 @import "general/normalize.scss";
+@import "general/fullpage.scss";
 @import "general/swiper-bundle.min.scss";
 @import "general/variables.scss";
 @import "general/global.scss";
@@ -12,28 +13,27 @@
 //header
 @import "blocks/main-header.scss";
 
-//main
-@import "blocks/page-main.scss";
-@import "blocks/card-box.scss";
-@import "blocks/about-us.scss";
-@import "blocks/clients.scss";
-@import "blocks/teams.scss";
-@import "blocks/box-list.scss";
-
-//buttons
-@import "blocks/button.scss";
-
 //footer
 @import "blocks/main-footer.scss";
 
-//contacts
+//main
+@import "blocks/intro.scss";
+@import "blocks/card-box.scss";
+@import "blocks/advantages.scss";
+@import "blocks/business.scss";
+@import "blocks/steps.scss";
+@import "blocks/about-us.scss";
+@import "blocks/clients.scss";
+@import "blocks/teams.scss";
+@import "blocks/box.scss";
 @import "blocks/contacts.scss";
-
-//services
 @import "blocks/services.scss";
-
-//stages
 @import "blocks/stages.scss";
+@import "blocks/breadcrumbs.scss";
+@import "blocks/404.scss";
+
+//buttons
+@import "blocks/button.scss";
 
 //blog
 @import "blocks/blog.scss";
@@ -42,11 +42,12 @@
 
 //portfolio
 @import "blocks/portfolio.scss";
+@import "blocks/portfolio-page.scss";
 @import "blocks/tabs.scss";
-
-//breadcrumbs
-@import "blocks/breadcrumbs.scss";
 
 //social-nav
 @import "blocks/social-list.scss";
 @import "blocks/footer-social.scss";
+
+//modals
+@import "blocks/modals.scss";

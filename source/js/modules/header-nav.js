@@ -1,4 +1,5 @@
 'use strict';
+
 (function () {
   var menuBtn = document.querySelector('.main-header__btn');
   var wrapMenu = document.querySelector(".main-header__wrap-menu");

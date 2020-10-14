@@ -41,6 +41,7 @@
   text-align: center;
 
   @media (max-width: $tablet-width) {
+    max-width: 100%;
     width: 100%;
     padding-top: 40px;
     grid-template-columns: auto;
@@ -75,12 +76,54 @@
   align-items: center;
 
   @media (max-width: $desktop-width-min) {
-    grid-template-columns: auto;
+    grid-template-columns: auto auto;
     justify-content: center;
   }
 
   @media (max-width: $tablet-width) {
     display: none;
+  }
+
+  .main-header__social {
+    display: none;
+
+    @media (max-width: $desktop-width-min) {
+      position: relative;
+      display: block;
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+
+      &::before {
+        width: 8px;
+        height: 2px;
+        position: absolute;
+        content: "";
+        top: 10px;
+        right: 8px;
+        background-color: $dark-blue;
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        width: 8px;
+        height: 2px;
+        position: absolute;
+        content: "";
+        top: 10px;
+        right: 3px;
+        background-color: $dark-blue;
+        transform: rotate(-45deg);
+      }
+
+      &:hover + .social-list {
+        display: block;
+      }
+    }
+
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
   }
 
   &-tablet {
@@ -129,32 +172,9 @@
   grid-template-columns: 8% auto;
 
   @media (max-width: $desktop-width-min) {
-    padding: 15px;
+    padding: 10px;
     grid-template-columns: auto;
     position: relative;
-
-
-    &::before {
-      width: 8px;
-      height: 2px;
-      position: absolute;
-      content: "";
-      top: 23px;
-      right: -5px;
-      background-color: $dark-blue;
-      transform: rotate(45deg);
-    }
-
-    &::after {
-      width: 8px;
-      height: 2px;
-      position: absolute;
-      content: "";
-      top: 23px;
-      right: -10px;
-      background-color: $dark-blue;
-      transform: rotate(-45deg);
-    }
   }
 
   span {
@@ -163,12 +183,6 @@
     @media (max-width: $desktop-width-min) {
       display: none;
     }
-  }
-}
-
-@media (max-width: $desktop-width-min) {
-  .main-header__link-phone:hover + .social-list {
-    display: block;
   }
 }
 

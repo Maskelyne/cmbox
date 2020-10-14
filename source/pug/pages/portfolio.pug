@@ -81,7 +81,8 @@ block main
         height: '240',
         altText: 'Водадом',
         title: 'Vodadom',
-        text: 'Сайт для бурового предприятия в Беларуси'
+        text: 'Сайт для бурового предприятия в Беларуси',
+        link: 'portfolio-page.html'
       },
       {
         path: 'jpg',
@@ -91,7 +92,8 @@ block main
         height: '240',
         altText: 'Яртруба',
         title: 'Yartruba',
-        text: 'Сайт для официального поставщика труб нПВХ'
+        text: 'Сайт для официального поставщика труб нПВХ',
+        link: '#'
       },
       {
         path: 'jpg',
@@ -101,37 +103,8 @@ block main
         height: '240',
         altText: 'Эксим',
         title: 'Exim',
-        text: 'Сайт для поставщика качественной электротехники'
-      },
-      {
-        path: 'jpg',
-        image: 'image-vodadom',
-        format: 'jpg',
-        width: '340',
-        height: '240',
-        altText: 'Эксим',
-        title: 'Exim',
-        text: 'Сайт для поставщика качественной электротехники'
-      },
-      {
-        path: 'jpg',
-        image: 'image-yartruba',
-        format: 'jpg',
-        width: '340',
-        height: '240',
-        altText: 'Эксим',
-        title: 'Exim',
-        text: 'Сайт для поставщика качественной электротехники'
-      },
-      {
-        path: 'jpg',
-        image: 'image-exim',
-        format: 'jpg',
-        width: '340',
-        height: '240',
-        altText: 'Эксим',
-        title: 'Exim',
-        text: 'Сайт для поставщика качественной электротехники'
+        text: 'Сайт для поставщика качественной электротехники',
+        link: '#'
       },
     ];
 
@@ -144,15 +117,28 @@ block main
           ul.portfolio__list
             each item in portfolioList
               li
-                a(href="#")
+                a(href= item.link)
                   .portfolio__box-card
                     .portfolio__card
                       .portfolio__card-perspective
                         .portfolio__image
-                          +img(item.path, item.image, item.format, item.width, item.height, item.altTex)
+                          +img(item.path, item.image, item.format, item.width, item.height, item.altText)
                         .portfolio__text
                           h2= item.title
                           p= item.text
 
 block footer
   +footer
+
+  section.modal.modal-development
+    .modal__wrapper
+      .modal__box
+        h3 Проект находится на стадии реализации!
+        p Оставайтесь с нами, чтобы увидеть как мы делали новый проект. А пока ознакомьтесь с нашими другими реализованными проектами.
+        a.button(href="#")
+          span Портфолио
+      .modal__image
+        +img('svg', 'modals-service', 'svg', '190', '200', 'Элемент 2')
+        +img('svg', 'modals-box', 'svg', '460', '200', 'Элемент 1')
+      a.modal__btn-closed(href="#")
+        span.visually-hidden Закрыть модальное окно

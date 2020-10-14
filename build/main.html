@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Главная</title>
     <meta name="description" content="CmBox | Креативная маркетинговая упаковка">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/style.min.css">
-    <link rel="shortcut icon" href="img/favicons/icon-favicon.svg" type="image/svg">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="stylesheet" href="assets/css/default.css">
+    <link rel="shortcut icon" href="assets/img/favicons/icon-favicon.svg" type="image/svg">
+    <link href="assets/fonts/ProximaNova-Regular.woff2" as="font" rel="preload" crossorigin="anonymous">
+    <link href="assets/fonts/ProximaNova-Bold.woff2" as="font" rel="preload" crossorigin="anonymous">
   </head>
   <body>
     <header class="main-header">
       <nav class="main-header__wrapper container">
-        <div class="main-header__logo"><a href="index.html"><img src="img/svg/logo.svg" width="120" height="43" alt="Логотип"/></a></div>
+        <div class="main-header__logo"><a href="index.html"><img src="assets/img/svg/logo.svg" width="120" height="43" alt="Логотип"/></a></div>
         <div class="main-header__stage-box"><a class="main-header__link-stage main-header__link-stage--closed" href="#"><span class="visually-hidden">Меню с этапами</span></a>
           <div class="main-header__stage-nav main-header__stage-nav--closed">
             <h1>Этапы</h1>
@@ -31,13 +33,13 @@
           <div class="main-header__services-nav main-header__services-nav--closed">
             <h1>Услуги</h1>
             <ul class="main-header__services-list">
-              <li><a href="#"><img src="img/svg/icon-site.svg" width="48" height="48" alt="Сайт"/>Сайт</a></li>
-              <li><a href="#"><img src="img/svg/icon-sale.svg" width="48" height="48" alt="Воронка продаж"/>Воронка продаж</a></li>
-              <li><a href="#"><img src="img/svg/icon-seo.svg" width="48" height="48" alt="Сео"/>SEO</a></li>
-              <li><a href="#"><img src="img/svg/icon-contecst.svg" width="48" height="48" alt="Контекст"/>Контекст</a></li>
-              <li><a href="#"><img src="img/svg/icon-social.svg" width="48" height="48" alt="Соцсети"/>Соцсети</a></li>
-              <li><a href="#"><img src="img/svg/icon-video.svg" width="48" height="48" alt="Видеомаркетинг"/>Видеомаркетинг</a></li>
-              <li><a href="#"><img src="img/svg/icon-crm.svg" width="48" height="48" alt="ЦРМ"/>CRM</a></li>
+              <li><a href="#"><img src="assets/img/svg/icon-site.svg" width="48" height="48" alt="Сайт"/>Сайт</a></li>
+              <li><a href="#"><img src="assets/img/svg/icon-sale.svg" width="48" height="48" alt="Воронка продаж"/>Воронка продаж</a></li>
+              <li><a href="#"><img src="assets/img/svg/icon-seo.svg" width="48" height="48" alt="Сео"/>SEO</a></li>
+              <li><a href="#"><img src="assets/img/svg/icon-contecst.svg" width="48" height="48" alt="Контекст"/>Контекст</a></li>
+              <li><a href="#"><img src="assets/img/svg/icon-social.svg" width="48" height="48" alt="Соцсети"/>Соцсети</a></li>
+              <li><a href="#"><img src="assets/img/svg/icon-video.svg" width="48" height="48" alt="Видеомаркетинг"/>Видеомаркетинг</a></li>
+              <li><a href="#"><img src="assets/img/svg/icon-crm.svg" width="48" height="48" alt="ЦРМ"/>CRM</a></li>
             </ul>
           </div>
         </div>
@@ -46,7 +48,7 @@
           <div class="main-header__wrap-menu">
             <ul class="main-header__list">
               <li><a href="about-us.html">О нас</a></li>
-              <li><a href="services-site.html">Услуги</a></li>
+              <li><a href="services-analytics.html">Услуги</a></li>
               <li><a href="stage-analysis.html">Этапы</a></li>
               <li><a href="portfolio.html">Портфолио</a></li>
               <li><a href="blog.html">Блог</a></li>
@@ -54,94 +56,199 @@
             </ul>
             <div class="main-header__box-tablet"><a href="tel:375296086368">+375 (29) 608-63-68</a>
               <ul class="social-list social-list--tablet">
-                <li><a href="#"><span class="visually-hidden">Телеграм</span><img src="img/svg/icon-telegram.svg" width="24" height="24" alt="Телеграм"/></a></li>
-                <li><a href="#"><span class="visually-hidden">Вайбер</span><img src="img/svg/icon-viber.svg" width="24" height="24" alt="Вайбер"/></a></li>
-                <li><a href="#"><span class="visually-hidden">Ватсап</span><img src="img/svg/icon-whatsapp.svg" width="24" height="24" alt="Ватсап"/></a></li>
+                <li><a href="#"><span class="visually-hidden">Телеграм</span><img src="assets/img/svg/icon-telegram.svg" width="24" height="24" alt="Телеграм"/></a></li>
+                <li><a href="#"><span class="visually-hidden">Вайбер</span><img src="assets/img/svg/icon-viber.svg" width="24" height="24" alt="Вайбер"/></a></li>
+                <li><a href="#"><span class="visually-hidden">Ватсап</span><img src="assets/img/svg/icon-whatsapp.svg" width="24" height="24" alt="Ватсап"/></a></li>
               </ul>
             </div>
           </div>
         </div>
-        <div class="main-header__box"><a class="main-header__link-phone" href="tel:375296086368"><img src="img/svg/icon-mobile.svg" width="9" height="18" alt="Телефон"/><span>+375 (29) 608-63-68</span></a>
+        <div class="main-header__box"><a class="main-header__link-phone" href="tel:375296086368"><img src="assets/img/svg/icon-mobile.svg" width="9" height="18" alt="Телефон"/><span>+375 (29) 608-63-68</span></a><span class="main-header__social"></span>
           <ul class="social-list">
-            <li><a href="#"><span class="visually-hidden">Телеграм</span><img src="img/svg/icon-telegram.svg" width="24" height="24" alt="Телеграм"/></a></li>
-            <li><a href="#"><span class="visually-hidden">Вайбер</span><img src="img/svg/icon-viber.svg" width="24" height="24" alt="Вайбер"/></a></li>
-            <li><a href="#"><span class="visually-hidden">Ватсап</span><img src="img/svg/icon-whatsapp.svg" width="24" height="24" alt="Ватсап"/></a></li>
+            <li><a href="#"><span class="visually-hidden">Телеграм</span><img src="assets/img/svg/icon-telegram.svg" width="24" height="24" alt="Телеграм"/></a></li>
+            <li><a href="#"><span class="visually-hidden">Вайбер</span><img src="assets/img/svg/icon-viber.svg" width="24" height="24" alt="Вайбер"/></a></li>
+            <li><a href="#"><span class="visually-hidden">Ватсап</span><img src="assets/img/svg/icon-whatsapp.svg" width="24" height="24" alt="Ватсап"/></a></li>
           </ul>
         </div>
       </nav>
     </header>
-    <main class="page-main">
-      <section>
-        <div class="page-main__wrapper container">
-          <div class="page-main__box">
-            <h1>Создадим интернет упаковку вашего бизнеса используя самые эффективные инструменты</h1><a class="button page-main__link" href="#"><span>Портфолио</span></a>
+    <main class="main">
+      <div class="page-main" id="bg"></div>
+      <div id="fullpage">
+        <section class="intro section">
+          <div class="intro__wrapper container">
+            <div class="intro__box">
+              <h1>Создадим интернет упаковку вашего бизнеса используя самые эффективные инструменты</h1><a class="button intro__link" href="#"><span>Портфолио</span></a>
+            </div>
+            <div class="intro__box-swiper-wrapper">
+              <div class="intro__box intro__box-swiper-container swiper-container">
+                <ul class="intro__list swiper-wrapper">
+                  <li class="swiper-slide"><a class="intro__link-box" href="#"><img src="assets/img/services/icon-sales.svg" width="250" height="250" alt="Воронка"/>
+                      <div class="into__text">
+                        <h2>Разработаем маркетинговую стратегию</h2>
+                        <p>Первичная аналитика и стратегия<strong> бесплатно</strong></p>
+                      </div></a></li>
+                  <li class="swiper-slide"><a class="intro__link-box" href="#"><img src="assets/img/services/icon-sales.svg" width="250" height="250" alt="Воронка"/>
+                      <div class="into__text">
+                        <h2>Разработаем маркетинговую стратегию</h2>
+                        <p>Первичная аналитика и стратегия<strong> бесплатно</strong></p>
+                      </div></a></li>
+                  <li class="swiper-slide"><a class="intro__link-box" href="#"><img src="assets/img/services/icon-sales.svg" width="250" height="250" alt="Воронка"/>
+                      <div class="into__text">
+                        <h2>Разработаем маркетинговую стратегию</h2>
+                        <p>Первичная аналитика и стратегия<strong> бесплатно</strong></p>
+                      </div></a></li>
+                  <li class="swiper-slide"><a class="intro__link-box" href="#"><img src="assets/img/services/icon-sales.svg" width="250" height="250" alt="Воронка"/>
+                      <div class="into__text">
+                        <h2>Разработаем маркетинговую стратегию</h2>
+                        <p>Первичная аналитика и стратегия<strong> бесплатно</strong></p>
+                      </div></a></li>
+                </ul>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div><a class="button intro__link intro__link--tablet" href="#"><span>Портфолио</span></a>
           </div>
-          <div class="page-main__box-swiper-wrapper">
-            <div class="page-main__box page-main__box-swiper-container swiper-container">
-              <ul class="page-main__list swiper-wrapper">
-                <li class="swiper-slide"><a class="page-main__link-box" href="#"><img src="img/services/icon-sales.svg" width="250" height="250" alt="Воронка"/>
-                    <div class="page-main__text">
-                      <h2>Разработаем маркетинговую стратегию</h2>
-                      <p>Первичная аналитика и стратегия<strong> бесплатно</strong></p>
-                    </div></a></li>
-                <li class="swiper-slide"><a class="page-main__link-box" href="#"><img src="img/services/icon-sales.svg" width="250" height="250" alt="Воронка"/>
-                    <div class="page-main__text">
-                      <h2>Разработаем маркетинговую стратегию</h2>
-                      <p>Первичная аналитика и стратегия<strong> бесплатно</strong></p>
-                    </div></a></li>
-                <li class="swiper-slide"><a class="page-main__link-box" href="#"><img src="img/services/icon-sales.svg" width="250" height="250" alt="Воронка"/>
-                    <div class="page-main__text">
-                      <h2>Разработаем маркетинговую стратегию</h2>
-                      <p>Первичная аналитика и стратегия<strong> бесплатно</strong></p>
-                    </div></a></li>
-                <li class="swiper-slide"><a class="page-main__link-box" href="#"><img src="img/services/icon-sales.svg" width="250" height="250" alt="Воронка"/>
-                    <div class="page-main__text">
-                      <h2>Разработаем маркетинговую стратегию</h2>
-                      <p>Первичная аналитика и стратегия<strong> бесплатно</strong></p>
-                    </div></a></li>
-              </ul>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div><a class="button page-main__link page-main__link--tablet" href="#"><span>Портфолио</span></a>
-        </div>
-      </section>
-      <section class="card-box">
-        <div class="card-box__wrapper container">
-          <div class="card-box__box">
-            <div class="card__box-text">
-              <h2>Комплексная интернет-упаковка</h2>
-              <p>— это извлечение самой сути вашего бизнеса, ценностей, выявление преимуществ компании и донесение их вашим клиентам в Интернете, используя современные маркетинговые инструменты.</p>
-            </div>
-            <div class="card-box__image"><img src="img/svg/box-services.svg" width="660" height="700" alt="Услуги"/>
-              <ul class="box">
-                <li><a class="box__link box__link--design" href="#">Дизайн</a></li>
-                <li><a class="box__link box__link--seo" href="#">SEO</a></li>
-                <li><a class="box__link box__link--sales" href="#">Воронка продаж</a></li>
-                <li><a class="box__link box__link--context" href="#">Контекст</a></li>
-                <li><a class="box__link box__link--marketing" href="#">Видеомаркетинг</a></li>
-                <li><a class="box__link box__link--analytics" href="#">Аналитика</a></li>
-                <li><a class="box__link box__link--social" href="#">Соцсети</a></li>
-                <li><a class="box__link box__link--strategy" href="#">Стратегия</a></li>
-                <li><a class="box__link box__link--crm" href="#">CRM</a></li>
-                <li><a class="box__link box__link--site" href="#">Сайт</a></li>
-              </ul>
+        </section>
+        <section class="card-box section">
+          <div class="card-box__wrapper container">
+            <div class="card-box__box"><span><img src="assets/img/svg/img-corners.svg" width="50" height="50" alt="Фон"/></span>
+              <div class="card-box__inner">
+                <div class="card__box-text">
+                  <h2>Комплексная интернет-упаковка</h2>
+                  <p>— это извлечение самой сути вашего бизнеса, ценностей, выявление преимуществ компании и донесение их вашим клиентам в Интернете, используя современные маркетинговые инструменты.</p>
+                </div>
+                <div class="box"><img src="assets/img/svg/box-services.svg" width="660" height="700" alt="Услуги"/>
+                  <ul class="box__list">
+                    <li><a class="box__link box__link--design" href="#">Дизайн</a></li>
+                    <li><a class="box__link box__link--seo" href="#">SEO</a></li>
+                    <li><a class="box__link box__link--sales" href="#">Воронка продаж</a></li>
+                    <li><a class="box__link box__link--context" href="#">Контекст</a></li>
+                    <li><a class="box__link box__link--marketing" href="#">Видеомаркетинг</a></li>
+                    <li><a class="box__link box__link--analytics" href="#">Аналитика</a></li>
+                    <li><a class="box__link box__link--social" href="#">Соцсети</a></li>
+                    <li><a class="box__link box__link--strategy" href="#">Стратегия</a></li>
+                    <li><a class="box__link box__link--crm" href="#">CRM</a></li>
+                    <li><a class="box__link box__link--site" href="#">Сайт</a></li>
+                  </ul>
+                </div>
+              </div><span><img src="assets/img/svg/img-corners.svg" width="50" height="50" alt="Фон"/></span>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+        <section class="advantages section">
+          <div class="advantages__wrapper container">
+            <h2>Преимущества комплексного подхода</h2>
+            <div class="advantages__box-list">
+              <div class="advantages__box"><img src="assets/img/svg/icon-business.svg" width="100" height="100" alt="Бизнес"/>
+                <p>Полное погружение в ваш бизнес</p>
+              </div>
+              <div class="advantages__box"><img src="assets/img/svg/icon-money.svg" width="100" height="100" alt="Доход"/>
+                <p>Прибыль увеличивается в<strong> 3 раза</strong></p>
+              </div>
+              <div class="advantages__box"><img src="assets/img/svg/icon-time.svg" width="100" height="100" alt="Время"/>
+                <p>Мы экономим ваше время</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="business section">
+          <div class="business__wrapper container">
+            <div class="business__box">
+              <div class="business__box-info">
+                <h2>Причины для переупаковки вашего бизнеса</h2>
+                <div class="business__box-image"><img src="assets/img/svg/circle-main.svg" width="406" height="406" alt="Элемент 1"/><img src="assets/img/svg/main-box-form.svg" width="238" height="174" alt="Элемент 2"/>
+                  <ul class="business__list">
+                    <li>
+                      <p>Устаревший сайт</p>
+                    </li>
+                    <li>
+                      <p>Желание стать лидером</p>
+                    </li>
+                    <li>
+                      <p>Новый продукт\ услуга</p>
+                    </li>
+                    <li>
+                      <p>Конкурировать наравне с лидерами</p>
+                    </li>
+                    <li>
+                      <p>Реклама приводит мало клиентов</p>
+                    </li>
+                    <li>
+                      <p>Мало продаж</p>
+                    </li>
+                    <li>
+                      <p>Теряются заказы</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="business__box-form">
+                <h2>Бесплатный аудит</h2>
+                <form method="POST" action="#">
+                  <div class="business__name">
+                    <input id="user_name" type="text" name="user_name">
+                    <label for="user_name">Имя</label>
+                  </div>
+                  <div class="business__company">
+                    <input id="user_company" type="text" name="user_company">
+                    <label for="user_company">Сфера деятельности компании</label>
+                  </div>
+                  <div class="business__phone">
+                    <input id="user_phone" type="text" name="user_phone" required>
+                    <label for="user_phone">Номер телефона</label>
+                  </div>
+                  <div class="business__comments">
+                    <textarea id="user_comments" name="user_comments"></textarea>
+                    <label for="user_comments">Комментарий</label>
+                  </div>
+                  <button class="button" type="submit"><span>Отправить</span></button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="steps section">
+          <div class="steps__wrapper container">
+            <h2>Этапы комплексной интернет-упаковки</h2>
+            <ul class="steps__list">
+              <li>
+                <div class="steps__box"><a href="#"><span>Анализ</span><img src="assets/img/stage-boxes/stage-box.svg" width="124" height="120" alt="Анализ"/></a></div>
+              </li>
+              <li>
+                <div class="steps__box"><a href="#"><span>Стратегия</span><img src="assets/img/stage-boxes/stage-box.svg" width="124" height="120" alt="Стратегия"/></a></div>
+              </li>
+              <li>
+                <div class="steps__box"><a href="#"><span>Дизайн</span><img src="assets/img/stage-boxes/stage-box.svg" width="124" height="120" alt="Дизайн"/></a></div>
+              </li>
+              <li>
+                <div class="steps__box"><a href="#"><span>Разработка</span><img src="assets/img/stage-boxes/stage-box.svg" width="124" height="120" alt="Разработка"/></a></div>
+              </li>
+              <li>
+                <div class="steps__box"><a href="#"><span>Продвижение</span><img src="assets/img/stage-boxes/stage-box.svg" width="124" height="120" alt="Продвижение"/></a></div>
+              </li>
+              <li>
+                <div class="steps__box"><a href="#"><span>Автоматизация</span><img src="assets/img/stage-boxes/stage-box.svg" width="124" height="120" alt="Автоматизация"/></a></div>
+              </li>
+              <li>
+                <div class="steps__box"><a href="#"><span>Поддержка</span><img src="assets/img/stage-boxes/stage-box.svg" width="124" height="120" alt="Поддержка"/></a></div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
     </main>
     <footer class="main-footer">
       <div class="main-footer__wrapper container">
         <div class="main-footer__box">
           <div class="main-footer__box-image">
-            <div class="main-footer__image"><a href="#"><img src="img/svg/logo.svg" width="120" height="43" alt="Логотип"/></a></div>
+            <div class="main-footer__image"><a href="#"><img src="assets/img/svg/logo.svg" width="120" height="43" alt="Логотип"/></a></div>
             <ul class="footer-social">
-              <li><a href="#"><span class="visually-hidden">Одноклассники</span><img src="img/svg/icon-ok.svg" width="24" height="24" alt="Одноклассники"/></a></li>
-              <li><a href="#"><span class="visually-hidden">Вконтакте</span><img src="img/svg/icon-vk.svg" width="24" height="24" alt="Вконтакте"/></a></li>
-              <li><a href="#"><span class="visually-hidden">Фэйсбук</span><img src="img/svg/icon-facebook.svg" width="24" height="24" alt="Фэйсбук"/></a></li>
-              <li><a href="#"><span class="visually-hidden">Ютуб</span><img src="img/svg/icon-youtube.svg" width="24" height="24" alt="Ютуб"/></a></li>
-              <li><a href="#"><span class="visually-hidden">Линкедин</span><img src="img/svg/icon-linkedin.svg" width="24" height="24" alt="Линкедин"/></a></li>
-              <li><a href="#"><span class="visually-hidden">Инстаграм</span><img src="img/svg/icon-instagram.svg" width="24" height="24" alt="Инстаграм"/></a></li>
+              <li><a href="#"><span class="visually-hidden">Одноклассники</span><img src="assets/img/svg/icon-ok.svg" width="24" height="24" alt="Одноклассники"/></a></li>
+              <li><a href="#"><span class="visually-hidden">Вконтакте</span><img src="assets/img/svg/icon-vk.svg" width="24" height="24" alt="Вконтакте"/></a></li>
+              <li><a href="#"><span class="visually-hidden">Фэйсбук</span><img src="assets/img/svg/icon-facebook.svg" width="24" height="24" alt="Фэйсбук"/></a></li>
+              <li><a href="#"><span class="visually-hidden">Ютуб</span><img src="assets/img/svg/icon-youtube.svg" width="24" height="24" alt="Ютуб"/></a></li>
+              <li><a href="#"><span class="visually-hidden">Линкедин</span><img src="assets/img/svg/icon-linkedin.svg" width="24" height="24" alt="Линкедин"/></a></li>
+              <li><a href="#"><span class="visually-hidden">Инстаграм</span><img src="assets/img/svg/icon-instagram.svg" width="24" height="24" alt="Инстаграм"/></a></li>
             </ul>
           </div><span>© 2019 - ∞</span>
           <p>ООО "Дигитал Креатив Маркетинг"</p>
@@ -157,16 +264,16 @@
         <div class="main-footer__contacts"><a class="main-footer__link-location" href="#">ул. Калиновского 77а, офис 310</a><a class="main-footer__link-mail" href="mail:info@cmbox.by">info@cmbox.by</a>
           <div class="main-footer__link-box"><a class="main-footer__link-phone" href="tel:+375296086368">+375 (29) 608-63-68</a>
             <ul class="social-list">
-              <li><a href="#"><span class="visually-hidden">Телеграм</span><img src="img/svg/icon-telegram.svg" width="24" height="24" alt="Телеграм"/></a></li>
-              <li><a href="#"><span class="visually-hidden">Вайбер</span><img src="img/svg/icon-viber.svg" width="24" height="24" alt="Вайбер"/></a></li>
-              <li><a href="#"><span class="visually-hidden">Ватсап</span><img src="img/svg/icon-whatsapp.svg" width="24" height="24" alt="Ватсап"/></a></li>
+              <li><a href="#"><span class="visually-hidden">Телеграм</span><img src="assets/img/svg/icon-telegram.svg" width="24" height="24" alt="Телеграм"/></a></li>
+              <li><a href="#"><span class="visually-hidden">Вайбер</span><img src="assets/img/svg/icon-viber.svg" width="24" height="24" alt="Вайбер"/></a></li>
+              <li><a href="#"><span class="visually-hidden">Ватсап</span><img src="assets/img/svg/icon-whatsapp.svg" width="24" height="24" alt="Ватсап"/></a></li>
             </ul>
           </div>
         </div>
       </div>
     </footer>
-    <script src="js/vendor.min.js"></script>
-    <script src="js/default.js"></script>
-    <script src="js/main.js"></script>
+    <script src="assets/js/vendor.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/default.js"></script>
   </body>
 </html>
