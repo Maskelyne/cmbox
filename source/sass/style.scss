@@ -24,7 +24,7 @@
 @import "blocks/about-us.scss";
 @import "blocks/clients.scss";
 @import "blocks/teams.scss";
-@import "blocks/box-list.scss";
+@import "blocks/box.scss";
 @import "blocks/contacts.scss";
 @import "blocks/services.scss";
 @import "blocks/stages.scss";
@@ -47,3 +47,6 @@
 //social-nav
 @import "blocks/social-list.scss";
 @import "blocks/footer-social.scss";
+
+//modals
+@import "blocks/modals.scss";

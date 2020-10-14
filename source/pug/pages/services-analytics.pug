@@ -13,11 +13,12 @@ block main
       {
         link: 'services-analytics.html',
         path: 'services',
-        name: 'box-analytics',
+        name: 'box-close',
         format: 'svg',
         width: '240',
         height: '160',
-        altText: 'Аналитика'
+        altText: 'Аналитика',
+        text: 'Аналитика'
       },
       {
         link: 'services-strategy.html',
@@ -124,6 +125,7 @@ block main
             each item in boxesList
               li
                 a(href= item.link)
+                  span= item.text
                   +img(item.path, item.name, item.format, item.width, item.height, item.altText)
         .services__box-images
           .services__image

@@ -9,9 +9,6 @@
     var cards = document.querySelectorAll(".portfolio__box-card");
     var btnMore = document.querySelector('.btn-more');
 
-    btnMore.addEventListener('click', function (evt) {
-      evt.preventDefault();
-
       function rotate(evt) {
         var cardItem = this.querySelector('.portfolio__card-perspective');
         var halfHeight = cardItem.offsetHeight / 2;
@@ -32,7 +29,6 @@
         card.addEventListener('mousemove', rotate);
         card.addEventListener('mouseout', rotateNone);
       }
-    });
   }
 
 })();

@@ -72,8 +72,8 @@
         </div>
       </nav>
     </header>
-    <main style="background: linear-gradient(90deg, #00A0FF 0%, #011C3B 100%)">
-      <section class="portfolio-page">
+    <main class="box-closed" style="background: linear-gradient(90deg, #00A0FF 0%, #011C3B 100%)">
+      <section class="portfolio-page text-closed">
         <div class="portfolio-page__wrapper container">
           <div class="portfolio-page__box-image">
             <div class="portfolio-page__controls"><a href="#"><span class="visually-hidden">Вперед</span></a><a href="#"><span class="visually-hidden">Назад</span></a></div>
@@ -103,7 +103,7 @@
             </div>
           </div>
         </div>
-        <div class="portfolio-page__company gray-box">
+        <div class="portfolio-page__company gray-box" id="page">
           <div class="portfolio-page__title"><a href="#"><img src="assets/img/svg/icon-left-arrow.svg" width="48" height="48" alt="Вернуться в портфолио"/></a>
             <h2>Портфолио</h2>
           </div>
@@ -118,21 +118,23 @@
               <p>Отсутствие всех видов продвижения</p>
               <p>Желание увеличить продажи и нарастить базу постоянных клиентов</p>
             </div>
-            <h3>Цели</h3>
-            <ul class="portfolio-page__list-purpose">
-              <li>
-                <p>Разработка стратегии для увеличения продаж в интернете</p>
-              </li>
-              <li>
-                <p>Ребрендинг торговой марки</p>
-              </li>
-              <li>
-                <p>Создание многофункционального сайта магазина</p>
-              </li>
-              <li>
-                <p>Подключение всех инструментов продвижения</p>
-              </li>
-            </ul>
+            <div class="portfolio-page__cell">
+              <h3>Цели</h3>
+              <ul>
+                <li>
+                  <p>Разработка стратегии для увеличения продаж в интернете</p>
+                </li>
+                <li>
+                  <p>Ребрендинг торговой марки</p>
+                </li>
+                <li>
+                  <p>Создание многофункционального сайта магазина</p>
+                </li>
+                <li>
+                  <p>Подключение всех инструментов продвижения</p>
+                </li>
+              </ul>
+            </div>
             <div class="portfolio-page__company-image"><img src="assets/img/png/image-company-vodadom.png" width="510" height="420" alt="Водадом"/><img src="assets/img/svg/logo-vodadom.svg" width="170" height="110" alt="Водадом"/>
             </div>
             <h3>Как мы реализовали</h3>
@@ -226,7 +228,7 @@
                 <p>Посетить сайт</p><a href="#">www.vodadom.by</a>
               </div>
               <div class="portfolio-page__box-button">
-                <p>Вам понравился проект?</p><a class="button intro__link" href="#"><span>Напишите нам</span></a>
+                <p>Вам понравился проект?</p><a class="button button--consultation" href="#"><span>Напишите нам</span></a>
               </div>
             </div>
           </div>
@@ -275,6 +277,37 @@
         </div>
       </section>
     </main>
+    <section class="modal contacts modal-consultation">
+      <div class="modal-consultation__wrapper">
+        <div class="contacts__form">
+          <p>Как нам с Вами связаться?</p>
+          <form id="form" action="#" method="get">
+            <div class="contacts__user-name">
+              <input id="user_name" type="text" name="user_name" required>
+              <label for="user_name">Имя</label>
+            </div>
+            <div class="contacts__user-tel">
+              <input id="user_phone" type="tel" name="user_phone" required>
+              <label for="user_phone">Телефон</label>
+            </div>
+            <div class="contacts__user-comment">
+              <textarea id="user_comment" name="user_comment"></textarea>
+              <label for="user_comment">Комментарий</label>
+            </div><a class="button button-form-close" href="#"><span>Отправить</span></a>
+          </form>
+        </div><a class="modal__btn-closed" href="#"><span class="visually-hidden">Закрыть модальное окно</span></a>
+      </div>
+    </section>
+    <section class="modal modal-thanks">
+      <div class="modal__wrapper">
+        <div class="modal__box">
+          <h3>Ваша заявка отправлена!</h3>
+          <p>В ближайшее время мы<br>с вами свяжемся.</p><a class="button" href="#"><span>На главную</span></a>
+        </div>
+        <div class="modal__image"><img src="assets/img/svg/modals-check.svg" width="190" height="200" alt="Элемент 2"/><img src="assets/img/svg/modals-box.svg" width="460" height="200" alt="Элемент 1"/>
+        </div><a class="modal__btn-closed" href="#"><span class="visually-hidden">Закрыть модальное окно</span></a>
+      </div>
+    </section>
     <script src="assets/js/vendor.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/default.js"></script>

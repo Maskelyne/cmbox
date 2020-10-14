@@ -36,8 +36,8 @@ block main
       },
     ];
 
-  main(style="background: linear-gradient(90deg, #00A0FF 0%, #011C3B 100%)")
-    section.portfolio-page
+  main.box-closed(style="background: linear-gradient(90deg, #00A0FF 0%, #011C3B 100%)")
+    section.portfolio-page.text-closed
       .portfolio-page__wrapper.container
         .portfolio-page__box-image
           .portfolio-page__controls
@@ -68,7 +68,7 @@ block main
           .portfolio-page__scroll
             p Скролл для дальнейшей информации
             .portfolio-page__scroll-mouse
-      .portfolio-page__company.gray-box
+      #page.portfolio-page__company.gray-box
         .portfolio-page__title
           a(href="#")
             +img('svg', 'icon-left-arrow', 'svg', '48', '48', 'Вернуться в портфолио')
@@ -83,16 +83,17 @@ block main
             p Устаревший сайт со слабым функционалом
             p Отсутствие всех видов продвижения
             p Желание увеличить продажи и нарастить базу постоянных клиентов
-          h3 Цели
-          ul.portfolio-page__list-purpose
-            li
-              p Разработка стратегии для увеличения продаж в интернете
-            li
-              p Ребрендинг торговой марки
-            li
-              p Создание многофункционального сайта магазина
-            li
-              p Подключение всех инструментов продвижения
+          .portfolio-page__cell
+            h3 Цели
+            ul
+              li
+                p Разработка стратегии для увеличения продаж в интернете
+              li
+                p Ребрендинг торговой марки
+              li
+                p Создание многофункционального сайта магазина
+              li
+                p Подключение всех инструментов продвижения
           .portfolio-page__company-image
             +img('png', 'image-company-vodadom', 'png', '510', '420', 'Водадом')
             +img('svg', 'logo-vodadom', 'svg', '170', '110', 'Водадом')
@@ -200,7 +201,7 @@ block main
               a(href="#") www.vodadom.by
             .portfolio-page__box-button
               p Вам понравился проект?
-              a.button.intro__link(href="#")
+              a.button.button--consultation(href="#")
                 span Напишите нам
         .portfolio-page__breadcrumbs
           .portfolio-page__wrapper-breadcrumbs.container
@@ -235,3 +236,36 @@ block main
               .main-footer__link-box
                 a.main-footer__link-phone(href="tel:+375296086368") +375 (29) 608-63-68
                 +social-list
+
+  section.modal.contacts.modal-consultation
+    .modal-consultation__wrapper
+      .contacts__form
+        p Как нам с Вами связаться?
+        form(id="form" action="#" method="get")
+          .contacts__user-name
+            input(id="user_name" type="text" name="user_name" required)
+            label(for="user_name") Имя
+          .contacts__user-tel
+            input(id="user_phone" type="tel" name="user_phone" required)
+            label(for="user_phone") Телефон
+          .contacts__user-comment
+            textarea(id="user_comment" name="user_comment")
+            label(for="user_comment") Комментарий
+          a(href="#").button.button-form-close
+            span Отправить
+      a.modal__btn-closed(href="#")
+        span.visually-hidden Закрыть модальное окно
+  section.modal.modal-thanks
+    .modal__wrapper
+      .modal__box
+        h3 Ваша заявка отправлена!
+        p В ближайшее время мы
+          br
+          | с вами свяжемся.
+        a.button(href="#")
+          span На главную
+      .modal__image
+        +img('svg', 'modals-check', 'svg', '190', '200', 'Элемент 2')
+        +img('svg', 'modals-box', 'svg', '460', '200', 'Элемент 1')
+      a.modal__btn-closed(href="#")
+        span.visually-hidden Закрыть модальное окно

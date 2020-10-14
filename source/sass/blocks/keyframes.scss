@@ -217,6 +217,16 @@
   }
 }
 
+@keyframes showBox {
+  0% {
+    transform: translateY(-170px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
 @keyframes trackBallSlide {
   0% {
     opacity: 1;
