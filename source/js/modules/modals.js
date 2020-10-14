@@ -6,12 +6,12 @@
 
   var overlayModal = document.querySelector('.modal');
   var modalConsultation = document.querySelector('.modal-consultation');
-  var modalConsultationBtn = document.querySelector('.button--consultation');
-  var modalClose = document.querySelectorAll('.modal__btn-closed');
   var modalThanks = document.querySelector('.modal-thanks');
+  var modalConsultationBtn = document.querySelector('.button--consultation');
   var buttonFormClose = document.querySelector('.button-form-close');
+  var modalClose = document.querySelectorAll('.modal__btn-closed');
 
-  if (overlayModal) {
+  if (modalConsultation) {
 
     modalConsultationBtn.addEventListener('click', function (evt) {
       evt.preventDefault();

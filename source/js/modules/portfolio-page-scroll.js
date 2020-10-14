@@ -15,7 +15,6 @@
       document.body.style.overflow = 'hidden';
 
       window.addEventListener('wheel', function (evt) {
-        // console.log(evt.deltaY);
 
         if (evt.deltaY > 0 && window.innerWidth > 1200) {
           portfolioWrapper.classList.add('portfolio-page__wrapper--active');
@@ -41,40 +40,8 @@
         function show() {
           portfolioBox.classList.add('portfolio-page__box--active');
         }
-        // } else if (window.innerWidth > 1023) {
-        //   portfolioBox.style.transform = 'translate(0%, 10%)';
-        // } else {
-        //   portfolioBox.style.transform = '';
-        // }
-
-        // portfolioWrapper.classList.add('portfolio-page__wrapper--active');
-        // portfolioPage.classList.add('portfolio-page__company--active');
-        //
 
       });
-
-      // portfolioPage.addEventListener('scroll', function () {
-      //   if (portfolioPage.scrollTop === 0) {
-      //
-      //     if (window.innerWidth > 1200) {
-      //       portfolioBox.style.transform = 'translate(180%, -150%)';
-      //     } else if (window.innerWidth > 1023) {
-      //       portfolioBox.style.transform = 'translate(153%, -130%)';
-      //     } else {
-      //       portfolioBox.style.transform = '';
-      //     }
-      //
-      //     portfolioWrapper.classList.remove('portfolio-page__wrapper--active');
-      //     portfolioPage.classList.remove('portfolio-page__company--active');
-      //
-      //     // function none() {
-      //     //   portfolioBox.classList.remove('portfolio-page__box--active');
-      //     // }
-      //     //
-      //     // setTimeout(none, 500);
-      //   }
-      //
-      // });
 
       main.addEventListener('click', function (evt) {
 
