@@ -91,6 +91,10 @@
         grid-template-columns: 31% 57%;
       }
 
+      img:nth-child(1) {
+        max-width: 240px;
+      }
+
       img:first-child {
         margin-top: 30px;
       }
@@ -688,6 +692,12 @@
           display: grid;
         }
       }
+    }
+  }
+
+  &--smm {
+    img {
+      max-width: 340px;
     }
   }
 
