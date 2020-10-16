@@ -79,7 +79,7 @@
       @media (max-width: $desktop-width-min) {
         max-width: 600px;
         margin: -130px auto 0 auto;
-        grid-template-columns: 27% 50%;
+        grid-template-columns: 27% 62%;
       }
 
       @media (max-width: $tablet-width) {
@@ -91,12 +91,44 @@
         grid-template-columns: 31% 57%;
       }
 
-      img:nth-child(1) {
-        max-width: 240px;
+      img {
+        &:nth-child(1) {
+          max-width: 240px;
+        }
       }
 
       img:first-child {
         margin-top: 30px;
+      }
+    }
+
+    .teams__katerina {
+      position: relative;
+
+      img {
+        &:nth-child(1) {
+          max-width: 100%;
+        }
+
+        &:nth-child(2) {
+          width: 90px;
+          height: 155px;
+          position: absolute;
+          top: 24.5%;
+          right: 14%;
+          animation: rotateKaterina;
+          animation-duration: 2s;
+          animation-delay: 0s;
+          animation-timing-function: ease-in-out;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+
+          @media (max-width: $desktop-width-min) {
+            width: 55px;
+            height: 90px;
+            top: 26.5%;
+          }
+        }
       }
     }
   }
@@ -287,7 +319,7 @@
         top: 38%;
         left: 0;
         animation: teams-svg-top;
-        animation-duration: 2.1s;
+        animation-duration: 2s;
         animation-delay: 0s;
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
@@ -305,7 +337,7 @@
         top: 10%;
         left: -15px;
         animation: teams-svg-top;
-        animation-duration: 2.3s;
+        animation-duration: 1.5s;
         animation-delay: 0.5s;
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
@@ -323,7 +355,7 @@
         top: -30px;
         left: 16%;
         animation: teams-svg-top;
-        animation-duration: 2.5s;
+        animation-duration: 1.5s;
         animation-delay: 0.8s;
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
@@ -341,7 +373,7 @@
         top: 0;
         right: 5%;
         animation: teams-svg-top;
-        animation-duration: 1.8s;
+        animation-duration: 1.5s;
         animation-delay: 1.2s;
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
@@ -359,7 +391,7 @@
         top: 31%;
         right: 0;
         animation: teams-svg-top;
-        animation-duration: 2.2s;
+        animation-duration: 2s;
         animation-delay: 1.5s;
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
@@ -377,7 +409,7 @@
         top: -15%;
         right: 44%;
         animation: teams-svg-top;
-        animation-duration: 2.2s;
+        animation-duration: 2s;
         animation-delay: 1.1s;
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
@@ -400,7 +432,7 @@
         top: -23%;
         right: 18%;
         animation: teams-svg-top;
-        animation-duration: 2.2s;
+        animation-duration: 2s;
         animation-delay: 1.4s;
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
@@ -446,7 +478,7 @@
         top: 50%;
         left: 15%;
         animation: teams-svg-top;
-        animation-duration: 1.8s;
+        animation-duration: 1.4s;
         animation-delay: 0s;
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
@@ -457,8 +489,8 @@
         width: 62px;
         height: 53px;
         position: absolute;
-        top: 2%;
-        left: 10%;
+        top: -3%;
+        left: 3%;
         animation: teams-svg-top;
         animation-duration: 2.1s;
         animation-delay: 0.3s;
@@ -477,7 +509,7 @@
         height: 75px;
         position: absolute;
         top: -20%;
-        left: 23%;
+        left: 33%;
         animation: teams-svg-top;
         animation-duration: 2.4s;
         animation-delay: 0.6s;
@@ -497,7 +529,7 @@
         height: 80px;
         position: absolute;
         top: -20%;
-        left: 45%;
+        left: 65%;
         animation: teams-svg-top;
         animation-duration: 2.5s;
         animation-delay: 1s;
@@ -566,7 +598,7 @@
         top: -4%;
         left: 5%;
         animation: teams-svg-top;
-        animation-duration: 1.8s;
+        animation-duration: 2s;
         animation-delay: 0s;
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
@@ -585,7 +617,7 @@
         top: -27%;
         left: 30%;
         animation: teams-svg-top;
-        animation-duration: 2.1s;
+        animation-duration: 2s;
         animation-delay: 0.3s;
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
@@ -604,7 +636,7 @@
         top: -14%;
         right: 18%;
         animation: teams-svg-top;
-        animation-duration: 2.4s;
+        animation-duration: 2s;
         animation-delay: 0.6s;
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
@@ -623,7 +655,7 @@
         top: 19%;
         right: 9%;
         animation: teams-svg-top;
-        animation-duration: 2.1s;
+        animation-duration: 2s;
         animation-delay: 1s;
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
@@ -652,12 +684,14 @@
         position: absolute;
         top: 22%;
         left: 25%;
-        animation: teams-svg-top;
-        animation-duration: 1.8s;
+        animation: rotateSeo;
+        animation-duration: 2s;
         animation-delay: 0s;
-        animation-timing-function: ease-in-out;
+        animation-timing-function: linear;
         animation-iteration-count: infinite;
         animation-direction: alternate;
+        animation-fill-mode: forwards;
+        animation-play-state: running;
 
         @media (max-width: $desktop-width-min) {
           width: 80px;
@@ -697,7 +731,74 @@
 
   &--smm {
     img {
-      max-width: 340px;
+      &:nth-child(1) {
+        max-width: 340px;
+      }
+
+      &:nth-child(2) {
+        width: 425px;
+        height: 280px;
+        position: absolute;
+        top: -45%;
+        left: 3%;
+        animation: teams-svg-smm;
+        animation-duration: 2s;
+        animation-delay: 0s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      &:nth-child(3) {
+        width: 72px;
+        height: 72px;
+        position: absolute;
+        top: 0;
+        left: 5%;
+        animation: show, scale4;
+        animation-duration: 1s, 1.5s;
+        animation-delay: 0s, 1s;
+        animation-timing-function: linear, ease-in-out;
+        animation-iteration-count: 1, infinite;
+        animation-direction: normal, alternate;
+        animation-fill-mode: forwards;
+        animation-play-state: running;
+        opacity: 0;
+      }
+
+      &:nth-child(4) {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: -29%;
+        left: 5%;
+        animation: show, scale4;
+        animation-duration: 1s, 1.5s;
+        animation-delay: 0s, 1s;
+        animation-timing-function: linear, ease-in-out;
+        animation-iteration-count: 1, infinite;
+        animation-direction: normal, alternate;
+        animation-fill-mode: forwards;
+        animation-play-state: running;
+        opacity: 0;
+      }
+
+      &:nth-child(5) {
+        width: 72px;
+        height: 72px;
+        position: absolute;
+        top: -28%;
+        left: 29%;
+        animation: show, scale3;
+        animation-duration: 1s, 1.5s;
+        animation-delay: 0s, 1s;
+        animation-timing-function: linear, ease-in-out;
+        animation-iteration-count: 1, infinite;
+        animation-direction: normal, alternate;
+        animation-fill-mode: forwards;
+        animation-play-state: running;
+        opacity: 0;
+      }
     }
   }
 

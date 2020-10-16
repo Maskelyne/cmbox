@@ -983,6 +983,7 @@ button.swiper-pagination-bullet {
   height: 100%;
   background: #000;
   opacity: .6;
+  -webkit-filter: blur(50px);
   filter: blur(50px);
   z-index: 0; }
 
@@ -1178,13 +1179,25 @@ main {
   0% {
     transform: translateY(0%); }
   100% {
-    transform: translateY(45%); } }
+    transform: translateY(30%); } }
 
 @keyframes teams-svg-top {
   0% {
     transform: translateY(0%); }
   100% {
-    transform: translateY(45%); } }
+    transform: translateY(30%); } }
+
+@-webkit-keyframes teams-svg-smm {
+  0% {
+    transform: translateY(0%); }
+  100% {
+    transform: translateY(4%); } }
+
+@keyframes teams-svg-smm {
+  0% {
+    transform: translateY(0%); }
+  100% {
+    transform: translateY(4%); } }
 
 @-webkit-keyframes rotateRight1 {
   0% {
@@ -1260,27 +1273,39 @@ main {
 
 @-webkit-keyframes rotateSeo {
   0% {
-    transform: rotate(0deg); }
+    transform: rotate(12deg) translate(10px, 20px); }
   100% {
-    transform: rotate(12deg); } }
+    transform: rotate(-12deg); } }
 
 @keyframes rotateSeo {
   0% {
-    transform: rotate(0deg); }
+    transform: rotate(12deg) translate(10px, 20px); }
   100% {
-    transform: rotate(12deg); } }
+    transform: rotate(-12deg); } }
+
+@-webkit-keyframes rotateSeo1 {
+  0% {
+    transform: rotate(-12deg) translateY(30%); }
+  100% {
+    transform: rotate(12deg) translateY(0%); } }
+
+@keyframes rotateSeo1 {
+  0% {
+    transform: rotate(-12deg) translateY(30%); }
+  100% {
+    transform: rotate(12deg) translateY(0%); } }
 
 @-webkit-keyframes rotateKaterina {
   0% {
-    transform: rotate(-1deg); }
+    transform: rotate(-2deg); }
   100% {
-    transform: rotate(1deg); } }
+    transform: rotate(2deg); } }
 
 @keyframes rotateKaterina {
   0% {
-    transform: rotate(-1deg); }
+    transform: rotate(-2deg); }
   100% {
-    transform: rotate(1deg); } }
+    transform: rotate(2deg); } }
 
 @-webkit-keyframes storm {
   0% {
@@ -1405,6 +1430,30 @@ main {
     transform: scale(1); }
   100% {
     transform: scale(1.2); } }
+
+@-webkit-keyframes scale3 {
+  0% {
+    transform: scale(0.6); }
+  100% {
+    transform: scale(0.8); } }
+
+@keyframes scale3 {
+  0% {
+    transform: scale(0.6); }
+  100% {
+    transform: scale(0.8); } }
+
+@-webkit-keyframes scale4 {
+  0% {
+    transform: scale(0.8); }
+  100% {
+    transform: scale(1); } }
+
+@keyframes scale4 {
+  0% {
+    transform: scale(0.8); }
+  100% {
+    transform: scale(1); } }
 
 @-webkit-keyframes showBox {
   0% {
@@ -3064,10 +3113,12 @@ main {
   justify-content: center; }
   .clients__image-box img {
     width: auto;
-    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+            filter: grayscale(1);
     transition: all 0.5s linear; }
     .clients__image-box img:hover {
-      filter: grayscale(0);
+      -webkit-filter: grayscale(0);
+              filter: grayscale(0);
       transform: scale(1.1);
       transition: all 0.5s linear; }
 
@@ -3135,7 +3186,7 @@ main {
         .teams__box--mans .teams__image-svg-animate {
           max-width: 600px;
           margin: -130px auto 0 auto;
-          grid-template-columns: 27% 50%; } }
+          grid-template-columns: 27% 62%; } }
       @media (max-width: 767px) {
         .teams__box--mans .teams__image-svg-animate {
           display: none; } }
@@ -3147,6 +3198,33 @@ main {
         max-width: 240px; }
       .teams__box--mans .teams__image-svg-animate img:first-child {
         margin-top: 30px; }
+    .teams__box--mans .teams__katerina {
+      position: relative; }
+      .teams__box--mans .teams__katerina img:nth-child(1) {
+        max-width: 100%; }
+      .teams__box--mans .teams__katerina img:nth-child(2) {
+        width: 90px;
+        height: 155px;
+        position: absolute;
+        top: 24.5%;
+        right: 14%;
+        -webkit-animation: rotateKaterina;
+                animation: rotateKaterina;
+        -webkit-animation-duration: 2s;
+                animation-duration: 2s;
+        -webkit-animation-delay: 0s;
+                animation-delay: 0s;
+        -webkit-animation-timing-function: ease-in-out;
+                animation-timing-function: ease-in-out;
+        -webkit-animation-iteration-count: infinite;
+                animation-iteration-count: infinite;
+        -webkit-animation-direction: alternate;
+                animation-direction: alternate; }
+        @media (max-width: 1023px) {
+          .teams__box--mans .teams__katerina img:nth-child(2) {
+            width: 55px;
+            height: 90px;
+            top: 26.5%; } }
 
 @media (max-width: 1023px) {
   .teams__box-text {
@@ -3303,8 +3381,8 @@ main {
     left: 0;
     -webkit-animation: teams-svg-top;
             animation: teams-svg-top;
-    -webkit-animation-duration: 2.1s;
-            animation-duration: 2.1s;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
     -webkit-animation-delay: 0s;
             animation-delay: 0s;
     -webkit-animation-timing-function: ease-in-out;
@@ -3324,8 +3402,8 @@ main {
     left: -15px;
     -webkit-animation: teams-svg-top;
             animation: teams-svg-top;
-    -webkit-animation-duration: 2.3s;
-            animation-duration: 2.3s;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
     -webkit-animation-delay: 0.5s;
             animation-delay: 0.5s;
     -webkit-animation-timing-function: ease-in-out;
@@ -3345,8 +3423,8 @@ main {
     left: 16%;
     -webkit-animation: teams-svg-top;
             animation: teams-svg-top;
-    -webkit-animation-duration: 2.5s;
-            animation-duration: 2.5s;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
     -webkit-animation-delay: 0.8s;
             animation-delay: 0.8s;
     -webkit-animation-timing-function: ease-in-out;
@@ -3366,8 +3444,8 @@ main {
     right: 5%;
     -webkit-animation: teams-svg-top;
             animation: teams-svg-top;
-    -webkit-animation-duration: 1.8s;
-            animation-duration: 1.8s;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
     -webkit-animation-delay: 1.2s;
             animation-delay: 1.2s;
     -webkit-animation-timing-function: ease-in-out;
@@ -3387,8 +3465,8 @@ main {
     right: 0;
     -webkit-animation: teams-svg-top;
             animation: teams-svg-top;
-    -webkit-animation-duration: 2.2s;
-            animation-duration: 2.2s;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
     -webkit-animation-delay: 1.5s;
             animation-delay: 1.5s;
     -webkit-animation-timing-function: ease-in-out;
@@ -3408,8 +3486,8 @@ main {
     right: 44%;
     -webkit-animation: teams-svg-top;
             animation: teams-svg-top;
-    -webkit-animation-duration: 2.2s;
-            animation-duration: 2.2s;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
     -webkit-animation-delay: 1.1s;
             animation-delay: 1.1s;
     -webkit-animation-timing-function: ease-in-out;
@@ -3433,8 +3511,8 @@ main {
     right: 18%;
     -webkit-animation: teams-svg-top;
             animation: teams-svg-top;
-    -webkit-animation-duration: 2.2s;
-            animation-duration: 2.2s;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
     -webkit-animation-delay: 1.4s;
             animation-delay: 1.4s;
     -webkit-animation-timing-function: ease-in-out;
@@ -3471,8 +3549,8 @@ main {
     left: 15%;
     -webkit-animation: teams-svg-top;
             animation: teams-svg-top;
-    -webkit-animation-duration: 1.8s;
-            animation-duration: 1.8s;
+    -webkit-animation-duration: 1.4s;
+            animation-duration: 1.4s;
     -webkit-animation-delay: 0s;
             animation-delay: 0s;
     -webkit-animation-timing-function: ease-in-out;
@@ -3485,8 +3563,8 @@ main {
     width: 62px;
     height: 53px;
     position: absolute;
-    top: 2%;
-    left: 10%;
+    top: -3%;
+    left: 3%;
     -webkit-animation: teams-svg-top;
             animation: teams-svg-top;
     -webkit-animation-duration: 2.1s;
@@ -3508,7 +3586,7 @@ main {
     height: 75px;
     position: absolute;
     top: -20%;
-    left: 23%;
+    left: 33%;
     -webkit-animation: teams-svg-top;
             animation: teams-svg-top;
     -webkit-animation-duration: 2.4s;
@@ -3531,7 +3609,7 @@ main {
     height: 80px;
     position: absolute;
     top: -20%;
-    left: 45%;
+    left: 65%;
     -webkit-animation: teams-svg-top;
             animation: teams-svg-top;
     -webkit-animation-duration: 2.5s;
@@ -3596,8 +3674,8 @@ main {
     left: 5%;
     -webkit-animation: teams-svg-top;
             animation: teams-svg-top;
-    -webkit-animation-duration: 1.8s;
-            animation-duration: 1.8s;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
     -webkit-animation-delay: 0s;
             animation-delay: 0s;
     -webkit-animation-timing-function: ease-in-out;
@@ -3618,8 +3696,8 @@ main {
     left: 30%;
     -webkit-animation: teams-svg-top;
             animation: teams-svg-top;
-    -webkit-animation-duration: 2.1s;
-            animation-duration: 2.1s;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
     -webkit-animation-delay: 0.3s;
             animation-delay: 0.3s;
     -webkit-animation-timing-function: ease-in-out;
@@ -3640,8 +3718,8 @@ main {
     right: 18%;
     -webkit-animation: teams-svg-top;
             animation: teams-svg-top;
-    -webkit-animation-duration: 2.4s;
-            animation-duration: 2.4s;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
     -webkit-animation-delay: 0.6s;
             animation-delay: 0.6s;
     -webkit-animation-timing-function: ease-in-out;
@@ -3662,8 +3740,8 @@ main {
     right: 9%;
     -webkit-animation: teams-svg-top;
             animation: teams-svg-top;
-    -webkit-animation-duration: 2.1s;
-            animation-duration: 2.1s;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
     -webkit-animation-delay: 1s;
             animation-delay: 1s;
     -webkit-animation-timing-function: ease-in-out;
@@ -3686,18 +3764,22 @@ main {
     position: absolute;
     top: 22%;
     left: 25%;
-    -webkit-animation: teams-svg-top;
-            animation: teams-svg-top;
-    -webkit-animation-duration: 1.8s;
-            animation-duration: 1.8s;
+    -webkit-animation: rotateSeo;
+            animation: rotateSeo;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
     -webkit-animation-delay: 0s;
             animation-delay: 0s;
-    -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
     -webkit-animation-iteration-count: infinite;
             animation-iteration-count: infinite;
     -webkit-animation-direction: alternate;
-            animation-direction: alternate; }
+            animation-direction: alternate;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-play-state: running;
+            animation-play-state: running; }
     @media (max-width: 1023px) {
       .teams__image--operators img:nth-child(2) {
         width: 80px;
@@ -3730,8 +3812,95 @@ main {
     @media (max-width: 767px) {
       .teams__image--operators img:nth-child(4) {
         display: grid; } }
-  .teams__image--smm img {
+  .teams__image--smm img:nth-child(1) {
     max-width: 340px; }
+  .teams__image--smm img:nth-child(2) {
+    width: 425px;
+    height: 280px;
+    position: absolute;
+    top: -45%;
+    left: 3%;
+    -webkit-animation: teams-svg-smm;
+            animation: teams-svg-smm;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate; }
+  .teams__image--smm img:nth-child(3) {
+    width: 72px;
+    height: 72px;
+    position: absolute;
+    top: 0;
+    left: 5%;
+    -webkit-animation: show, scale4;
+            animation: show, scale4;
+    -webkit-animation-duration: 1s, 1.5s;
+            animation-duration: 1s, 1.5s;
+    -webkit-animation-delay: 0s, 1s;
+            animation-delay: 0s, 1s;
+    -webkit-animation-timing-function: linear, ease-in-out;
+            animation-timing-function: linear, ease-in-out;
+    -webkit-animation-iteration-count: 1, infinite;
+            animation-iteration-count: 1, infinite;
+    -webkit-animation-direction: normal, alternate;
+            animation-direction: normal, alternate;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-play-state: running;
+            animation-play-state: running;
+    opacity: 0; }
+  .teams__image--smm img:nth-child(4) {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: -29%;
+    left: 5%;
+    -webkit-animation: show, scale4;
+            animation: show, scale4;
+    -webkit-animation-duration: 1s, 1.5s;
+            animation-duration: 1s, 1.5s;
+    -webkit-animation-delay: 0s, 1s;
+            animation-delay: 0s, 1s;
+    -webkit-animation-timing-function: linear, ease-in-out;
+            animation-timing-function: linear, ease-in-out;
+    -webkit-animation-iteration-count: 1, infinite;
+            animation-iteration-count: 1, infinite;
+    -webkit-animation-direction: normal, alternate;
+            animation-direction: normal, alternate;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-play-state: running;
+            animation-play-state: running;
+    opacity: 0; }
+  .teams__image--smm img:nth-child(5) {
+    width: 72px;
+    height: 72px;
+    position: absolute;
+    top: -28%;
+    left: 29%;
+    -webkit-animation: show, scale3;
+            animation: show, scale3;
+    -webkit-animation-duration: 1s, 1.5s;
+            animation-duration: 1s, 1.5s;
+    -webkit-animation-delay: 0s, 1s;
+            animation-delay: 0s, 1s;
+    -webkit-animation-timing-function: linear, ease-in-out;
+            animation-timing-function: linear, ease-in-out;
+    -webkit-animation-iteration-count: 1, infinite;
+            animation-iteration-count: 1, infinite;
+    -webkit-animation-direction: normal, alternate;
+            animation-direction: normal, alternate;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-play-state: running;
+            animation-play-state: running;
+    opacity: 0; }
   .teams__image--row {
     grid-row: 1; }
     @media (max-width: 1023px) {
@@ -4528,6 +4697,7 @@ main {
   margin: 0;
   padding: 0;
   list-style: none;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   left: 0; }
@@ -4553,7 +4723,8 @@ main {
       border-top: solid 15px #ffb4c5;
       border-bottom: solid 16px #ffb4c5;
       border-right: 7px solid transparent;
-      filter: brightness(0.9); }
+      -webkit-filter: brightness(0.9);
+              filter: brightness(0.9); }
     .services__boxes-list li:nth-child(1) .services__link-active {
       transform: translateX(30px); }
       .services__boxes-list li:nth-child(1) .services__link-active:hover span {
@@ -4567,7 +4738,8 @@ main {
         .services__boxes-list li:nth-child(1) .services__link-active span::after {
           border-top: solid 15px #ffb4c5;
           border-bottom: solid 16px #ffb4c5;
-          filter: brightness(0.9); }
+          -webkit-filter: brightness(0.9);
+                  filter: brightness(0.9); }
     .services__boxes-list li:nth-child(2) {
       transform: translateX(5px); }
       .services__boxes-list li:nth-child(2) a span::after {
@@ -4584,7 +4756,8 @@ main {
         border-top: solid 15px #ffb4c5;
         border-bottom: solid 16px #ffb4c5;
         border-right: 7px solid transparent;
-        filter: brightness(0.9); }
+        -webkit-filter: brightness(0.9);
+                filter: brightness(0.9); }
       .services__boxes-list li:nth-child(2) .services__link-active {
         transform: translateX(30px); }
         .services__boxes-list li:nth-child(2) .services__link-active:hover span {
@@ -4598,7 +4771,8 @@ main {
           .services__boxes-list li:nth-child(2) .services__link-active span::after {
             border-top: solid 15px #ffb4c5;
             border-bottom: solid 16px #ffb4c5;
-            filter: brightness(0.9); }
+            -webkit-filter: brightness(0.9);
+                    filter: brightness(0.9); }
     .services__boxes-list li:nth-child(3) {
       transform: translateX(10px); }
       .services__boxes-list li:nth-child(3) a span::after {
@@ -4615,7 +4789,8 @@ main {
         border-top: solid 15px #ffb4c5;
         border-bottom: solid 16px #ffb4c5;
         border-right: 7px solid transparent;
-        filter: brightness(0.9); }
+        -webkit-filter: brightness(0.9);
+                filter: brightness(0.9); }
     .services__boxes-list li:nth-child(4) {
       transform: translateX(15px); }
       .services__boxes-list li:nth-child(4) a span::after {
@@ -4632,7 +4807,8 @@ main {
         border-top: solid 15px #ffb4c5;
         border-bottom: solid 16px #ffb4c5;
         border-right: 7px solid transparent;
-        filter: brightness(0.9); }
+        -webkit-filter: brightness(0.9);
+                filter: brightness(0.9); }
     .services__boxes-list li:nth-child(5) {
       transform: translateX(20px); }
       .services__boxes-list li:nth-child(5) a span {
@@ -4651,7 +4827,8 @@ main {
         border-top: solid 15px #ffb4c5;
         border-bottom: solid 16px #ffb4c5;
         border-right: 7px solid transparent;
-        filter: brightness(0.9); }
+        -webkit-filter: brightness(0.9);
+                filter: brightness(0.9); }
     .services__boxes-list li:nth-child(6) {
       transform: translateX(25px); }
       .services__boxes-list li:nth-child(6) a span::after {
@@ -4668,7 +4845,8 @@ main {
         border-top: solid 15px #ffb4c5;
         border-bottom: solid 16px #ffb4c5;
         border-right: 7px solid transparent;
-        filter: brightness(0.9); }
+        -webkit-filter: brightness(0.9);
+                filter: brightness(0.9); }
     .services__boxes-list li:nth-child(7) {
       transform: translateX(30px); }
       .services__boxes-list li:nth-child(7) a span::after {
@@ -4685,7 +4863,8 @@ main {
         border-top: solid 15px #ffb4c5;
         border-bottom: solid 16px #ffb4c5;
         border-right: 7px solid transparent;
-        filter: brightness(0.9); }
+        -webkit-filter: brightness(0.9);
+                filter: brightness(0.9); }
     .services__boxes-list li:nth-child(8) {
       transform: translateX(35px); }
       .services__boxes-list li:nth-child(8) a span::after {
@@ -4702,7 +4881,8 @@ main {
         border-top: solid 15px #ffb4c5;
         border-bottom: solid 16px #ffb4c5;
         border-right: 7px solid transparent;
-        filter: brightness(0.9); }
+        -webkit-filter: brightness(0.9);
+                filter: brightness(0.9); }
     .services__boxes-list li:nth-child(9) {
       transform: translateX(40px); }
       .services__boxes-list li:nth-child(9) a span {
@@ -4721,7 +4901,8 @@ main {
         border-top: solid 15px #ffb4c5;
         border-bottom: solid 16px #ffb4c5;
         border-right: 7px solid transparent;
-        filter: brightness(0.9); }
+        -webkit-filter: brightness(0.9);
+                filter: brightness(0.9); }
     .services__boxes-list li:nth-child(10) {
       transform: translateX(45px); }
       .services__boxes-list li:nth-child(10) a span::after {
@@ -4738,7 +4919,8 @@ main {
         border-top: solid 15px #ffb4c5;
         border-bottom: solid 16px #ffb4c5;
         border-right: 7px solid transparent;
-        filter: brightness(0.9); }
+        -webkit-filter: brightness(0.9);
+                filter: brightness(0.9); }
     .services__boxes-list li a {
       position: relative;
       display: block; }
@@ -5027,6 +5209,7 @@ main {
   margin: 0;
   padding: 0;
   list-style: none;
+  position: -webkit-sticky;
   position: sticky;
   top: 20px; }
 
@@ -6749,6 +6932,7 @@ main {
       width: auto;
       position: static; } }
   .article__box-articles .article__box-wrapper {
+    position: -webkit-sticky;
     position: sticky;
     top: 20px; }
     .article__box-articles .article__box-wrapper h3 {
