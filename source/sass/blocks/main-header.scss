@@ -1,8 +1,11 @@
 .main-header {
+  width: 100%;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   background-color: $light-gray;
-  position: relative;
-  z-index: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
 }
 
 .main-header__wrapper {
@@ -29,7 +32,11 @@
 }
 
 .main-header__logo {
-  max-width: 120px;
+  max-width: 140px;
+
+  @media (max-width: $desktop-width-min) {
+    max-width: 120px;
+  }
 }
 
 .main-header__list {
@@ -39,6 +46,14 @@
   grid-template-columns: repeat(6, auto);
   flex-wrap: wrap;
   text-align: center;
+
+  @media (max-width: $desktop-width) {
+    margin: 0 auto;
+  }
+
+  @media (max-width: $desktop-width-min) {
+    margin: 0;
+  }
 
   @media (max-width: $tablet-width) {
     max-width: 100%;
@@ -297,8 +312,9 @@
 .main-header__services-nav {
   width: 100%;
   height: 100vh;
+  padding-top: 65px;
   position: absolute;
-  top: 65px;
+  top: 0;
   left: 0;
   background-color: $light-gray;
   z-index: -2;
@@ -320,7 +336,7 @@
 
 .main-header__services-list {
   @include reset-list;
-  padding: 0 30px;
+  padding: 0 30px 30px 30px;
   display: grid;
   grid-gap: 25px 0;
 
@@ -358,8 +374,9 @@
 
 .main-header__stage-box {
   width: 100%;
+  padding-top: 65px;
   position: absolute;
-  top: 65px;
+  top: 0;
   left: 0;
   z-index: -1;
 }
@@ -380,12 +397,13 @@
   &--opened {
     display: grid;
     grid-template-rows: 70px auto;
+    overflow-y: scroll;
   }
 }
 
 .main-header__stage-list {
   @include reset-list;
-  padding: 0 30px;
+  padding: 0 30px 90px 30px;
   display: grid;
   grid-gap: 25px 0;
 
@@ -422,7 +440,7 @@
     height: 64px;
     display: grid;
     position: absolute;
-    top: 0;
+    top: 65px;
     left: 0;
     z-index: 2;
     background-color: $light-gray;

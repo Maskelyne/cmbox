@@ -2,6 +2,7 @@ extends ../layout/page-layout
 
 block variables
   - var title = "Стратегия"
+  - var activePage = 1
 
 block header
   +header
@@ -171,12 +172,19 @@ block main
       .services__box
         .services__nav-box
           ul.services__boxes-list
-            each item in boxesList
-              li
-                a(href= item.link)
-                  span= item.text
-                  +img(item.path, item.name, item.format, item.width, item.height, item.altText)
-                  +img(item.iconPath, item.iconName, item.format, item.iconWidth, item.iconHeight, item.altText)
+            each item, index in boxesList
+              if (index === activePage)
+                li
+                  a(href= item.link).services__link-active
+                    span= item.text
+                    +img(item.path, item.name, item.format, item.width, item.height, item.altText)
+                    +img(item.iconPath, item.iconName, item.format, item.iconWidth, item.iconHeight, item.altText)
+              else
+                li
+                  a(href= item.link)
+                    span= item.text
+                    +img(item.path, item.name, item.format, item.width, item.height, item.altText)
+                    +img(item.iconPath, item.iconName, item.format, item.iconWidth, item.iconHeight, item.altText)
         .services__box-images
           .services__image
             +img('services', 'icon-strategy', 'svg', '200', '200', 'Стратегия')

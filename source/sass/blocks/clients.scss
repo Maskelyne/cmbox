@@ -47,6 +47,10 @@
     font-size: 24px;
     font-weight: $bold;
   }
+
+  &:hover::after {
+    color: $dark-red;
+  }
 }
 
 .clients__swiper-button-next {
@@ -64,6 +68,10 @@
   &::after {
     font-size: 24px;
     font-weight: $bold;
+  }
+
+  &:hover::after {
+    color: $dark-red;
   }
 }
 

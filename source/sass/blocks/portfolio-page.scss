@@ -3,6 +3,8 @@
 }
 
 .portfolio-page {
+  margin-top: 80px;
+
   @media (max-width: $desktop-width-min) {
     display: grid;
     grid-template-rows: 15% auto;
