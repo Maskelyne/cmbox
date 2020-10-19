@@ -13,8 +13,8 @@
       var setHeight = blogItem.offsetHeight / 2;
       var setWidth = blogItem.offsetWidth / 2;
 
-      blogItem.style.transform = 'rotateX(' + -(evt.offsetY - setHeight) / 7 + 'deg)' +
-        'rotateY(' + (evt.offsetX - setWidth) / 7 + 'deg';
+      blogItem.style.transform = 'rotateX(' + -(evt.offsetY - setHeight) / 15 + 'deg)' +
+        'rotateY(' + (evt.offsetX - setWidth) / 15 + 'deg';
     }
 
     function rotateNone() {

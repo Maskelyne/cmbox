@@ -13,8 +13,8 @@
       var halfHeight = cardItem.offsetHeight / 2;
       var halfWidth = cardItem.offsetWidth / 2;
 
-      cardItem.style.transform = 'rotateX(' + -(evt.offsetY - halfHeight) / 7 + 'deg)' +
-        'rotateY(' + (evt.offsetX - halfWidth) / 7 + 'deg';
+      cardItem.style.transform = 'rotateX(' + -(evt.offsetY - halfHeight) / 12 + 'deg)' +
+        'rotateY(' + (evt.offsetX - halfWidth) / 12 + 'deg';
     }
 
     function rotateNone() {

@@ -1,7 +1,7 @@
 .cubs {
   position: absolute;
-  top: 65px;
-  left: 40%;
+  top: 25px;
+  left: 45%;
   perspective: 1000px;
   perspective-origin: 50% 50%;
 }
@@ -9,10 +9,15 @@
 .cube {
   margin: auto;
   position: relative;
-  height: 90px;
-  width: 90px;
+  height: 110px;
+  width: 110px;
   transform-style: preserve-3d;
   animation: rotate1 20s infinite linear;
+
+  @media (max-width: $desktop-width-min) {
+    width: 90px;
+    height: 90px;
+  }
 
   div {
     position: absolute;
@@ -21,12 +26,27 @@
     height: 100%;
     width: 100%;
     color: #ffffff;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+
+  span {
+    display: block;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.05em;
   }
 }
 
 .front {
-  transform: translateZ(-10px);
+  transform: translateZ(10px);
   background: linear-gradient(180deg, #0A3D76 0%, #0C53A3 100%);
+
+  @media (max-width: $desktop-width-min) {
+    transform: translateZ(-10px);
+  }
 }
 
 .back {
@@ -60,23 +80,32 @@
 
 .cubs--acca {
   position: absolute;
-  top: 250px;
-  left: 15%;
+  top: 205px;
+  left: 36%;
   perspective: 1000px;
   perspective-origin: 50% 50%;
+
+  @media (max-width: $desktop-width) {
+    top: 210px;
+    left: 35%;
+  }
 
   .cube {
     margin: auto;
     position: relative;
-    height: 90px;
-    width: 90px;
+    height: 110px;
+    width: 110px;
     transform-style: preserve-3d;
-    animation: rotate2 20s infinite linear;
+    animation: rotate1 10s 0.5s infinite linear;
+
+    @media (max-width: $desktop-width-min) {
+      width: 90px;
+      height: 90px;
+    }
 
     div {
       position: absolute;
       box-sizing: border-box;
-      padding: 10px;
       height: 100%;
       width: 100%;
       color: #ffffff;
@@ -84,8 +113,12 @@
   }
 
   .front {
-    transform: translateZ(-10px);
+    transform: translateZ(10px);
     background: linear-gradient(271.23deg, #A62E41 4.07%, #E13152 96.09%);
+
+    @media (max-width: $desktop-width-min) {
+      transform: translateZ(-10px);
+    }
   }
 
   .back {
@@ -120,18 +153,27 @@
 
 .cubs--odc {
   position: absolute;
-  top: 220px;
-  left: 75%;
+  top: 170px;
+  left: 57%;
   perspective: 1000px;
   perspective-origin: 50% 50%;
+
+  @media (max-width: $desktop-width) {
+    left: 62%;
+  }
 
   .cube {
     margin: auto;
     position: relative;
-    height: 90px;
-    width: 90px;
+    height: 110px;
+    width: 110px;
     transform-style: preserve-3d;
-    animation: rotate3 20s infinite linear;
+    animation: rotate3 10s 0.5s infinite linear;
+
+    @media (max-width: $desktop-width-min) {
+      width: 90px;
+      height: 90px;
+    }
 
     div {
       position: absolute;
@@ -144,8 +186,12 @@
   }
 
   .front {
-    transform: translateZ(-10px);
+    transform: translateZ(10px);
     background: linear-gradient(179.71deg, #B4D1FA 0.25%, #69A7FF 94.22%);
+
+    @media (max-width: $desktop-width-min) {
+      transform: translateZ(-10px);
+    }
   }
 
   .back {

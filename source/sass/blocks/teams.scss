@@ -101,7 +101,43 @@
 
       img {
         &:nth-child(1) {
-          max-width: 240px;
+          max-width: 280px;
+
+          @media (max-width: $desktop-width) {
+            max-width: 260px;
+          }
+
+          @media (max-width: $desktop-width-min) {
+            max-width: 300px;
+          }
+        }
+
+        &:nth-child(2) {
+          width: 215px;
+          height: 135px;
+          position: absolute;
+          top: 138px;
+          left: 55px;
+          animation: rotateKaterina;
+          animation-duration: 2s;
+          animation-delay: 0s;
+          animation-timing-function: ease-in-out;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+
+          @media (max-width: $desktop-width) {
+            width: 204px;
+            height: 124px;
+            top: 131px;
+            left: 51px;
+          }
+
+          @media (max-width: $desktop-width-min) {
+            width: 126px;
+            height: 76px;
+            top: 93px;
+            left: 32px;
+          }
         }
       }
 
@@ -116,14 +152,18 @@
       img {
         &:nth-child(1) {
           max-width: 100%;
+
+          @media (max-width: $desktop-width-min) {
+            max-width: 320px;
+          }
         }
 
-        &:nth-child(2) {
+        &:last-child {
           width: 90px;
           height: 155px;
           position: absolute;
           top: 24.5%;
-          right: 14%;
+          left: 70%;
           animation: rotateKaterina;
           animation-duration: 2s;
           animation-delay: 0s;
@@ -131,10 +171,16 @@
           animation-iteration-count: infinite;
           animation-direction: alternate;
 
+          @media (max-width: $desktop-width) {
+            top: 25%;
+            left: 69%;
+          }
+
           @media (max-width: $desktop-width-min) {
             width: 55px;
             height: 90px;
-            top: 26.5%;
+            top: 27.5%;
+            left: 60%;
           }
         }
       }
@@ -521,8 +567,8 @@
         top: 210px;
         left: -20px;
         animation: teams-svg-developers;
-        animation-duration: 1.6s;
-        animation-delay: 0s;
+        animation-duration: 2s;
+        animation-delay: 0.5s;
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
         animation-direction: alternate;
@@ -539,8 +585,8 @@
         top: 125px;
         left: 60px;
         animation: teams-svg-top;
-        animation-duration: 1.6s;
-        animation-delay: 0s;
+        animation-duration: 2.3s;
+        animation-delay: 0.3s;
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
         animation-direction: alternate;
@@ -557,7 +603,7 @@
         top: 35px;
         left: 110px;
         animation: teams-svg-top;
-        animation-duration: 1.6s;
+        animation-duration: 2s;
         animation-delay: 0s;
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
@@ -575,8 +621,8 @@
         top: 100px;
         left: 175px;
         animation: teams-svg-top;
-        animation-duration: 1.6s;
-        animation-delay: 0s;
+        animation-duration: 2s;
+        animation-delay: 0.5s;
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
         animation-direction: alternate;
@@ -594,8 +640,8 @@
         top: 115px;
         left: 360px;
         animation: teams-svg-top;
-        animation-duration: 1.6s;
-        animation-delay: 0s;
+        animation-duration: 1.7s;
+        animation-delay: 0.3s;
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
         animation-direction: alternate;
@@ -612,7 +658,7 @@
         top: 60px;
         left: 360px;
         animation: teams-svg-top;
-        animation-duration: 1.6s;
+        animation-duration: 1.8s;
         animation-delay: 0s;
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
@@ -625,14 +671,14 @@
       }
 
       &:nth-child(8) {
-        width: 70px;
-        height: 50px;
+        width: 55px;
+        height: 40px;
         position: absolute;
-        top: 120px;
-        left: 445px;
+        top: 140px;
+        left: 450px;
         animation: teams-svg-top;
-        animation-duration: 1.6s;
-        animation-delay: 0s;
+        animation-duration: 1.8s;
+        animation-delay: 0.5s;
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
         animation-direction: alternate;
@@ -643,32 +689,14 @@
       }
 
       &:nth-child(9) {
-        width: 55px;
-        height: 40px;
-        position: absolute;
-        top: 205px;
-        left: 520px;
-        animation: teams-svg-top;
-        animation-duration: 1.6s;
-        animation-delay: 0s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-
-        @media (max-width: $desktop-width) {
-          left: 445px;
-        }
-      }
-
-      &:nth-child(10) {
         width: 62px;
         height: 63px;
         position: absolute;
-        top: 275px;
-        left: 530px;
+        top: 215px;
+        left: 510px;
         animation: teams-svg-top;
-        animation-duration: 1.6s;
-        animation-delay: 0s;
+        animation-duration: 2s;
+        animation-delay: 0.3s;
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
         animation-direction: alternate;
