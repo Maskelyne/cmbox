@@ -14,7 +14,7 @@
   @include reset-list;
   display: grid;
   grid-template-columns: repeat(3, 32%);
-  grid-gap: 25px;
+  grid-gap: 30px;
 
   @media (max-width: $desktop-width-min) {
     grid-template-columns: repeat(2, 1fr);

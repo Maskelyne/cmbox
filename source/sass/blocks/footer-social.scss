@@ -2,7 +2,7 @@
   @include reset-list;
   display: grid;
   grid-template-columns: repeat(6, 9.5%);
-  grid-gap: 5px;
+  grid-gap: 10px;
 
   img {
     border-radius: 5px;
@@ -25,6 +25,7 @@
 
   @media (max-width: $tablet-width) {
     grid-template-columns: repeat(6, minmax(5%, 35px));
+    grid-gap: 0 5px;
 
     img {
       max-width: 30px;

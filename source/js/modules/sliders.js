@@ -11,9 +11,9 @@
       spaceBetween: 30,
       loop: true,
       speed: 1200,
-      // autoplay: {
-      //   delay: 6000,
-      // },
+      autoplay: {
+        delay: 5000,
+      },
       mousewheel: true,
       pagination: {
         el: '.swiper-pagination',

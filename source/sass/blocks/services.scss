@@ -1,5 +1,9 @@
 .services {
   margin-top: 110px;
+
+  h1 {
+    margin: 0 0 20px 0;
+  }
 }
 
 .services__box-wrapper {
@@ -73,9 +77,9 @@
     max-width: 535px;
     justify-self: center;
     font-family: $mistral;
-    font-size: 36px;
-    line-height: 36px;
-    font-weight: $normal;
+    font-size: 48px;
+    line-height: 48px;
+    font-weight: 600;
     color: $dark-blue;
     letter-spacing: 0.1em;
 
