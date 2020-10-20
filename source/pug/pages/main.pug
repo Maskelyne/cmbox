@@ -151,3 +151,18 @@ block main
 
 block footer
   +footer
+
+  section.modal.modal-thanks
+    .modal__wrapper
+      .modal__box
+        h3 Ваша заявка отправлена!
+        p В ближайшее время мы
+          br
+          | с вами свяжемся.
+        a.button(href="#")
+          span На главную
+      .modal__image
+        +img('svg', 'modals-check', 'svg', '190', '200', 'Элемент 2')
+        +img('svg', 'modals-box', 'svg', '460', '200', 'Элемент 1')
+      a.modal__btn-closed(href="#")
+        span.visually-hidden Закрыть модальное окно

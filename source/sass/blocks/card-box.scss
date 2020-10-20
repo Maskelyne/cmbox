@@ -4,7 +4,12 @@
   }
 
   @media (max-width: $tablet-width) {
+    max-width: 520px;
     padding: 0 5px;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: 375px;
   }
 }
 
