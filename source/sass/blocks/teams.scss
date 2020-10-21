@@ -1026,10 +1026,10 @@
       }
 
       &:nth-child(2) {
-        width: 425px;
-        height: 280px;
+        width: 440px;
+        height: 340px;
         position: absolute;
-        top: -37%;
+        top: -42%;
         left: 20px;
         animation: teams-svg-smm;
         animation-duration: 2s;
@@ -1039,7 +1039,7 @@
         animation-direction: alternate;
 
         @media (max-width: $desktop-width) {
-          top: -130px;
+          top: -160px;
         }
       }
 

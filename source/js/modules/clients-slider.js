@@ -39,6 +39,7 @@
 
   let servicesSliderDesk = function (el) {
     return new Swiper(el, {
+      loop: true,
       speed: 1000,
       navigation: {
         nextEl: '.swiper-button-next',
@@ -52,7 +53,7 @@
           slidesPerView: 2,
         },
         1024: {
-          slidesPerView: 3,
+          slidesPerView: 2,
         }
       }
     });

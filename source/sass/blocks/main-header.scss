@@ -74,6 +74,10 @@
       font-family: $proximaBold;
       display: block;
     }
+
+    &:active {
+      color: $dark-blue;
+    }
   }
 
   .main-header__item-active {
@@ -157,7 +161,7 @@
         color: $white;
         display: block;
 
-        &:hover {
+        &:active {
           color: $dark-blue;
         }
       }
@@ -457,6 +461,7 @@
       background-image: url("../img/svg/icon-stage-active.svg");
       background-repeat: no-repeat;
       background-position: 12px 14px;
+      box-shadow: none;
     }
   }
 }

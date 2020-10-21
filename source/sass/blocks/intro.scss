@@ -34,7 +34,6 @@
       display: none;
 
       @media (max-width: $desktop-width-min) {
-        margin-top: 60px;
         display: grid;
       }
 
@@ -89,7 +88,7 @@
 .intro__link-box {
   display: grid;
   grid-template-columns: 170px 1fr;
-  grid-gap: 0 25px;
+  grid-gap: 0 15px;
   align-items: center;
 
   @media (max-width: $desktop-width) {
@@ -102,8 +101,12 @@
   }
 
   &:hover {
-    color: $dark-red;
-    font-family: $proximaNova;
+    color: $dark-black;
+    font-weight: $normal;
+
+    h2 {
+      color: $dark-red;
+    }
   }
 }
 

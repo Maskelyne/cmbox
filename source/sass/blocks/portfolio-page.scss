@@ -533,11 +533,13 @@
 }
 
 .portfolio-page__purposes-img {
+  margin-top: 35px;
   display: grid;
   grid-template-rows: 0 auto;
 
   @media (max-width: $tablet-width) {
     grid-row: 1;
+    margin-top: 0;
   }
 
   img {
@@ -777,6 +779,7 @@
         font-size: 12px;
         line-height: 12px;
         grid-column: 2;
+        color: #eeeeee;
       }
     }
   }
@@ -850,6 +853,7 @@
         line-height: 12px;
         grid-column: 1;
         text-align: right;
+        color: #eeeeee;
       }
     }
   }
