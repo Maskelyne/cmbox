@@ -12,11 +12,11 @@
 
 @keyframes services-icon-movement {
   0% {
-    transform: translateY(-5%);
+    transform: translateY(5%);
   }
 
   100% {
-    transform: translateY(5%);
+    transform: translateY(13%);
   }
 }
 
@@ -47,6 +47,16 @@
 
   100% {
     transform: translateY(100%);
+  }
+}
+
+@keyframes rotateClose {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(180deg);
   }
 }
 
@@ -438,5 +448,99 @@
 
   100% {
     transform: rotateX(360deg) rotateZ(360deg);
+  }
+}
+
+@keyframes sliderSkew {
+  0% {
+    transform: skew(15deg, -10deg);
+  }
+
+  100% {
+    transform: skew(0deg, 0deg);
+  }
+}
+
+@keyframes span-first-off {
+  0% {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  30% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -400%);
+  }
+}
+
+@keyframes span-second-off {
+  0% {
+    transform: translate(-150%, -50%) scale(0);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes span-third-off {
+  0% {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  30% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, 330%);
+  }
+}
+
+@keyframes span-first-on {
+  0% {
+    transform: translate(-50%, -300%);
+  }
+
+  30% {
+    transform: translate(-50%, -50%);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+@keyframes span-second-on {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    transform: translate(-150%, -50%) scale(0);
+  }
+}
+
+@keyframes span-third-on {
+  0% {
+    transform: translate(-50%, 200%);
+  }
+
+  30% {
+    transform: translate(-50%, -50%);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(45deg);
   }
 }

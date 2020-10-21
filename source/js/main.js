@@ -17,4 +17,5 @@
 //= modules/modals.js
 //= modules/modals-portfolio.js
 //= modules/modal-thanks.js
+//= modules/forms.js
 

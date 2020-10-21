@@ -127,6 +127,55 @@
     height: 200px;
   }
 
+  .swiper-slide-active {
+    .intro__text {
+      animation: sliderSkew;
+      animation-duration: 1.5s;
+      animation-delay: 1s;
+      animation-timing-function: ease;
+      animation-iteration-count: 1;
+      animation-direction: normal;
+      animation-fill-mode: forwards;
+      animation-play-state: running;
+    }
+
+    img {
+      animation: services-icon-show;
+      animation-duration: 1.2s;
+      animation-delay: 0.8s;
+      animation-timing-function: ease;
+      animation-iteration-count: 1;
+      animation-direction: normal;
+      animation-fill-mode: forwards;
+      animation-play-state: running;
+      opacity: 0;
+    }
+
+    h2 {
+      animation: services-icon-show;
+      animation-duration: 1.3s;
+      animation-delay: 1.2s;
+      animation-timing-function: ease;
+      animation-iteration-count: 1;
+      animation-direction: normal;
+      animation-fill-mode: forwards;
+      animation-play-state: running;
+      opacity: 0;
+    }
+
+    p {
+      animation: services-icon-show;
+      animation-duration: 1.3s;
+      animation-delay: 1.7s;
+      animation-timing-function: ease;
+      animation-iteration-count: 1;
+      animation-direction: normal;
+      animation-fill-mode: forwards;
+      animation-play-state: running;
+      opacity: 0;
+    }
+  }
+
   .swiper-pagination {
     right: -35px;
     display: flex;

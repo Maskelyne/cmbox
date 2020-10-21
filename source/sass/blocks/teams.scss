@@ -850,11 +850,15 @@
         display: none;
       }
 
+      &:nth-child(1) {
+        margin-top: 50px;
+      }
+
       &:nth-child(2) {
         width: 87px;
         height: 87px;
         position: absolute;
-        top: -4%;
+        top: 4%;
         left: 5%;
         animation: teams-svg-top;
         animation-duration: 2s;
@@ -873,7 +877,7 @@
         width: 85px;
         height: 105px;
         position: absolute;
-        top: -27%;
+        top: -17%;
         left: 30%;
         animation: teams-svg-top;
         animation-duration: 2s;
@@ -892,7 +896,7 @@
         width: 85px;
         height: 105px;
         position: absolute;
-        top: -14%;
+        top: -10%;
         right: 18%;
         animation: teams-svg-top;
         animation-duration: 2s;
@@ -911,7 +915,7 @@
         width: 55px;
         height: 55px;
         position: absolute;
-        top: 19%;
+        top: 23%;
         right: 9%;
         animation: teams-svg-top;
         animation-duration: 2s;

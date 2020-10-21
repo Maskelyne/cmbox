@@ -61,7 +61,7 @@
   z-index: 1;
 
   &:hover {
-    animation: rotateRight 1s linear;
+    animation: rotateClose 0.3s ease-out;
   }
 
   @media (max-width: $mobile-width) {
