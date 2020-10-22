@@ -1,9 +1,9 @@
 .intro__wrapper {
-  min-height: 1060px;
+  min-height: 1100px;
   display: grid;
   align-items: center;
   justify-content: center;
-  grid-template-columns: 54% 41%;
+  grid-template-columns: 55% 42%;
   grid-gap: 0 5%;
 
   @media (max-width: $desktop-width) {
@@ -86,12 +86,14 @@
 }
 
 .intro__link-box {
+  margin-left: 25px;
   display: grid;
   grid-template-columns: 170px 1fr;
   grid-gap: 0 15px;
   align-items: center;
 
   @media (max-width: $desktop-width) {
+    margin-left: 0;
     grid-template-columns: 150px 250px;
     justify-content: center;
 
@@ -111,7 +113,7 @@
 }
 
 .intro__box-swiper-wrapper {
-  height: 415px;
+  height: 435px;
   position: relative;
   background-image: url("../img/svg/bckg-slide-main.svg");
   background-repeat: no-repeat;
@@ -124,7 +126,7 @@
 
   .swiper-container {
     position: static;
-    height: 200px;
+    height: 220px;
   }
 
   .swiper-slide-active {
