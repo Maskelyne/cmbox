@@ -2,7 +2,7 @@
 
 (function () {
 
-  $(document).on('af_complete', function(event, response) {
+  $(document).on('af_complete', function (event, response) {
 
     var modalConsultation = document.querySelector('.modal-consultation');
     var modalThanks = document.querySelector('.modal-thanks');
@@ -13,13 +13,13 @@
       modalThanks.classList.add('modal-active');
       modalConsultation.classList.remove('modal-active');
       document.body.style.overflow = '';
-      response.message = '';
+      // response.message = '';
 
     } else if (form.attr('id') === 'form_main') {
       modalThanks.classList.add('modal-active');
       modalConsultation.classList.remove('modal-active');
       document.body.style.overflow = '';
-      response.message = '';
+      // response.message = '';
     }
 
     else {
