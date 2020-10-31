@@ -54,6 +54,21 @@
   &--active {
     transform: translateY(14%);
     transition: all 1s linear;
+
+    .portfolio-page__image {
+      a:hover::before {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        background-image: url("../img/svg/icon-eye.svg");
+        background-repeat: no-repeat;
+        background-position: 46% 50%;
+      }
+    }
   }
 }
 
@@ -63,7 +78,7 @@
   grid-template-rows: repeat(3, max-content);
   align-self: center;
   transition: all 1s linear;
-  transform: translate(180%, -150%);
+  transform: translate(180%, -200%);
   z-index: -1;
   animation: stage-show-elements-2;
   animation-duration: 2.3s;
@@ -85,8 +100,8 @@
   }
 
   h1 {
-    margin: 0 0 16px 0;
-    font-size: 64px;
+    margin: 0;
+    font-size: 48px;
     line-height: 64px;
     text-align: left;
 
@@ -264,7 +279,7 @@
       background-color: rgba(0, 0, 0, 0.5);
       background-image: url("../img/svg/icon-eye.svg");
       background-repeat: no-repeat;
-      background-position: 50% 50%;
+      background-position: 56% 50%;
     }
   }
 }
@@ -404,13 +419,35 @@
   display: grid;
   grid-template-columns: 48px auto;
   grid-gap: 0 20px;
-  align-items: center;
   padding: 25px 70px 40px 70px;
 
   @media (max-width: $tablet-width) {
     padding: 15px 15px 0 15px;
     grid-gap: 0;
     grid-template-columns: 35px auto;
+  }
+
+  a {
+    display: grid;
+    grid-gap: 0 20px;
+    grid-template-columns: 48px auto;
+    align-items: center;
+
+    img {
+      display: grid;
+      transition: all 0.2s linear;
+    }
+
+    &:hover {
+      h2 {
+        color: $dark-red;
+      }
+
+      img {
+        transform: translateX(-10px);
+        transition: all 0.2s linear;
+      }
+    }
   }
 
   h2 {
@@ -422,16 +459,6 @@
       padding: 0 15px;
       font-size: 24px;
       line-height: 24px;
-    }
-  }
-
-  img {
-    display: grid;
-    transition: all 0.2s linear;
-
-    &:hover {
-      transform: translateX(-10px);
-      transition: all 0.2s linear;
     }
   }
 }

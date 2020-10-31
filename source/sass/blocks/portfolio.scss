@@ -2,7 +2,7 @@
   margin: 110px 0 70px 0;
 
   @media (max-width: $tablet-width) {
-    margin-bottom: 40px;
+    margin: 90px 0 40px 0;
   }
 }
 
@@ -19,7 +19,6 @@
 
   @media (max-width: $tablet-width) {
     grid-template-columns: 1fr;
-    margin-top: 40px;
   }
 
   a:hover {
@@ -28,7 +27,7 @@
     }
 
     p {
-      color: $dark-red;
+      color: $dark-black;
     }
 
     img {

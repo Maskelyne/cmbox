@@ -358,7 +358,7 @@
 .services__boxes-list {
   @include reset-list;
   position: sticky;
-  top: 0;
+  top: 90px;
   left: 0;
   z-index: 1;
 

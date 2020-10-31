@@ -851,14 +851,18 @@
       }
 
       &:nth-child(1) {
-        margin-top: 50px;
+        margin-top: 100px;
+
+        @media (max-width: $desktop-width-min) {
+          margin-top: 0;
+        }
       }
 
       &:nth-child(2) {
         width: 87px;
         height: 87px;
         position: absolute;
-        top: 4%;
+        top: 11%;
         left: 5%;
         animation: teams-svg-top;
         animation-duration: 2s;
@@ -870,6 +874,7 @@
         @media (max-width: $desktop-width) {
           width: 80px;
           height: 80px;
+          top: 0;
         }
       }
 
@@ -877,7 +882,7 @@
         width: 85px;
         height: 105px;
         position: absolute;
-        top: -17%;
+        top: -6%;
         left: 30%;
         animation: teams-svg-top;
         animation-duration: 2s;
@@ -889,6 +894,7 @@
         @media (max-width: $desktop-width) {
           width: 75px;
           height: 95px;
+          top: -25%;
         }
       }
 
@@ -896,7 +902,7 @@
         width: 85px;
         height: 105px;
         position: absolute;
-        top: -10%;
+        top: 2%;
         right: 18%;
         animation: teams-svg-top;
         animation-duration: 2s;
@@ -908,6 +914,7 @@
         @media (max-width: $desktop-width) {
           width: 75px;
           height: 95px;
+          top: -16%;
         }
       }
 
@@ -915,7 +922,7 @@
         width: 55px;
         height: 55px;
         position: absolute;
-        top: 23%;
+        top: 30%;
         right: 9%;
         animation: teams-svg-top;
         animation-duration: 2s;
@@ -923,6 +930,10 @@
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
         animation-direction: alternate;
+
+        @media (max-width: $desktop-width-min) {
+          top: 12%;
+        }
       }
 
       &:nth-child(6) {
@@ -1021,7 +1032,7 @@
       }
 
       &:nth-child(1) {
-        margin-top: 20px;
+        margin-top: 70px;
         max-width: 340px;
 
         @media (max-width: $desktop-width) {
@@ -1033,7 +1044,7 @@
         width: 440px;
         height: 340px;
         position: absolute;
-        top: -42%;
+        top: -30%;
         left: 20px;
         animation: teams-svg-smm;
         animation-duration: 2s;
@@ -1051,7 +1062,7 @@
         width: 72px;
         height: 72px;
         position: absolute;
-        top: 25px;
+        top: 65px;
         left: 30px;
         animation: show, scale4;
         animation-duration: 1s, 1.7s;
@@ -1072,7 +1083,7 @@
         width: 100px;
         height: 100px;
         position: absolute;
-        top: -100px;
+        top: -56px;
         left: 30px;
         animation: show, scale;
         animation-duration: 1s, 1.7s;
@@ -1093,7 +1104,7 @@
         width: 72px;
         height: 72px;
         position: absolute;
-        top: -98px;
+        top: -50px;
         left: 155px;
         animation: show, scale3;
         animation-duration: 1s, 1.7s;
@@ -1114,7 +1125,7 @@
         width: 90px;
         height: 90px;
         position: absolute;
-        top: -140px;
+        top: -90px;
         left: 270px;
         animation: show, scale;
         animation-duration: 1s, 1.7s;
@@ -1135,7 +1146,7 @@
         width: 74px;
         height: 74px;
         position: absolute;
-        top: -25px;
+        top: 15px;
         left: 275px;
         animation: show, scale3;
         animation-duration: 1s, 1.7s;
@@ -1156,7 +1167,7 @@
         width: 73px;
         height: 71px;
         position: absolute;
-        top: -12px;
+        top: 25px;
         left: 395px;
         animation: show, scale;
         animation-duration: 1s, 1.7s;
@@ -1177,7 +1188,7 @@
         width: 100px;
         height: 100px;
         position: absolute;
-        top: 40px;
+        top: 75px;
         left: 310px;
         animation: show, scale;
         animation-duration: 1s, 1.7s;
