@@ -1,0 +1,225 @@
+.cubs {
+  position: absolute;
+  top: 25px;
+  left: 45%;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+}
+
+.cube {
+  margin: auto;
+  position: relative;
+  height: 110px;
+  width: 110px;
+  transform-style: preserve-3d;
+  animation: rotate1 20s infinite linear;
+
+  @media (max-width: $desktop-width-min) {
+    width: 90px;
+    height: 90px;
+  }
+
+  div {
+    position: absolute;
+    box-sizing: border-box;
+    padding: 10px;
+    height: 100%;
+    width: 100%;
+    color: #ffffff;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+  }
+
+  span {
+    display: block;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.05em;
+  }
+}
+
+.front {
+  transform: translateZ(10px);
+  background: linear-gradient(180deg, #0A3D76 0%, #0C53A3 100%);
+
+  @media (max-width: $desktop-width-min) {
+    transform: translateZ(-10px);
+  }
+}
+
+.back {
+  transform: translateZ(-100px) rotateY(180deg);
+  background: linear-gradient(180deg, #0A3D76 0%, #0C53A3 100%)
+}
+
+.right {
+  transform: rotateY(-270deg) translateX(100px);
+  transform-origin: top right;
+  background: linear-gradient(134.29deg, #0A3D76 6.98%, #1072DF 88.54%);
+}
+
+.left {
+  transform: rotateY(270deg) translateX(-100px);
+  transform-origin: center left;
+  background: linear-gradient(180deg, #0A3D76 0%, #0C53A3 100%);
+}
+
+.top {
+  transform: rotateX(-270deg) translateY(-100px);
+  transform-origin: top center;
+  background: linear-gradient(180deg, #0a3d76 0%, #0067db 100%);
+}
+
+.bottom {
+  transform: rotateX(270deg) translateY(100px);
+  transform-origin: bottom center;
+  background: linear-gradient(180deg, #0a3d76 0%, #0d65c7 100%);
+}
+
+.cubs--acca {
+  position: absolute;
+  top: 205px;
+  left: 36%;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+
+  @media (max-width: $desktop-width) {
+    top: 210px;
+    left: 35%;
+  }
+
+  .cube {
+    margin: auto;
+    position: relative;
+    height: 110px;
+    width: 110px;
+    transform-style: preserve-3d;
+    animation: rotate1 10s 0.5s infinite linear;
+
+    @media (max-width: $desktop-width-min) {
+      width: 90px;
+      height: 90px;
+    }
+
+    div {
+      position: absolute;
+      box-sizing: border-box;
+      height: 100%;
+      width: 100%;
+      color: #ffffff;
+    }
+  }
+
+  .front {
+    transform: translateZ(10px);
+    background: linear-gradient(271.23deg, #A62E41 4.07%, #E13152 96.09%);
+
+    @media (max-width: $desktop-width-min) {
+      transform: translateZ(-10px);
+    }
+  }
+
+  .back {
+    transform: translateZ(-100px) rotateY(180deg);
+    background: linear-gradient(314.81deg, #8F1A2D 10.67%, #E13152 92.69%);
+  }
+
+  .right {
+    transform: rotateY(-270deg) translateX(100px);
+    transform-origin: top right;
+    background: linear-gradient(310.84deg, #A62E41 5.99%, #FD224B 96.13%);
+  }
+
+  .left {
+    transform: rotateY(270deg) translateX(-100px);
+    transform-origin: center left;
+    background: linear-gradient(271.23deg, #961D30 4.07%, #E13152 96.09%);
+  }
+
+  .top {
+    transform: rotateX(-270deg) translateY(-100px);
+    transform-origin: top center;
+    background: linear-gradient(289.84deg, #891B2D 15.52%, #E13152 93.43%);
+  }
+
+  .bottom {
+    transform: rotateX(270deg) translateY(100px);
+    transform-origin: bottom center;
+    background: linear-gradient(307.94deg, #892031 12.72%, #E13152 91.13%);
+  }
+}
+
+.cubs--odc {
+  position: absolute;
+  top: 170px;
+  left: 57%;
+  perspective: 1000px;
+  perspective-origin: 50% 50%;
+
+  @media (max-width: $desktop-width) {
+    left: 62%;
+  }
+
+  .cube {
+    margin: auto;
+    position: relative;
+    height: 110px;
+    width: 110px;
+    transform-style: preserve-3d;
+    animation: rotate3 10s 0.5s infinite linear;
+
+    @media (max-width: $desktop-width-min) {
+      width: 90px;
+      height: 90px;
+    }
+
+    div {
+      position: absolute;
+      box-sizing: border-box;
+      padding: 10px;
+      height: 100%;
+      width: 100%;
+      color: #ffffff;
+    }
+  }
+
+  .front {
+    transform: translateZ(10px);
+    background: linear-gradient(179.71deg, #B4D1FA 0.25%, #69A7FF 94.22%);
+
+    @media (max-width: $desktop-width-min) {
+      transform: translateZ(-10px);
+    }
+  }
+
+  .back {
+    transform: translateZ(-100px) rotateY(180deg);
+    background: linear-gradient(179.71deg, #B4D1FA 0.25%, #69A7FF 94.22%);
+  }
+
+  .right {
+    transform: rotateY(-270deg) translateX(100px);
+    transform-origin: top right;
+    background: linear-gradient(254.83deg, #B4D1FA 8.51%, #69A7FF 93.05%);
+  }
+
+  .left {
+    transform: rotateY(270deg) translateX(-100px);
+    transform-origin: center left;
+    background: linear-gradient(254.83deg, #B4D1FA 8.51%, #69A7FF 93.05%);
+  }
+
+  .top {
+    transform: rotateX(-270deg) translateY(-100px);
+    transform-origin: top center;
+    background: linear-gradient(179.71deg, #B4D1FA 0.25%, #69A7FF 94.22%);
+  }
+
+  .bottom {
+    transform: rotateX(270deg) translateY(100px);
+    transform-origin: bottom center;
+    background: linear-gradient(179.89deg, #B4D1FA -5.51%, #69A7FF 58.32%);
+  }
+}

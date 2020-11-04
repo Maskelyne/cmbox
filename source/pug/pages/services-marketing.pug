@@ -2,6 +2,7 @@ extends ../layout/page-layout
 
 block variables
   - var title = "Видеомаркетинг"
+  - var activePage = 8
 
 block header
   +header
@@ -13,92 +14,142 @@ block main
       {
         link: 'services-analytics.html',
         path: 'services',
-        name: 'box-analytics',
+        name: 'box-close',
         format: 'svg',
         width: '240',
         height: '160',
-        altText: 'Аналитика'
+        altText: 'Аналитика',
+        text: 'Аналитика',
+        iconPath: 'svg',
+        iconName: 'icon-analytics',
+        iconWidth: '48',
+        iconHeight: '48'
       },
       {
         link: 'services-strategy.html',
         path: 'services',
-        name: 'box-strategy',
+        name: 'box-close',
         format: 'svg',
         width: '240',
         height: '160',
-        altText: 'Стратегия'
+        altText: 'Стратегия',
+        text: 'Стратегия',
+        iconPath: 'svg',
+        iconName: 'icon-analytics',
+        iconWidth: '48',
+        iconHeight: '48'
       },
       {
         link: 'services-design.html',
         path: 'services',
-        name: 'box-design',
+        name: 'box-close',
         format: 'svg',
         width: '240',
         height: '160',
-        altText: 'Дизайн'
+        altText: 'Дизайн',
+        text: 'Дизайн',
+        iconPath: 'svg',
+        iconName: 'icon-analytics',
+        iconWidth: '48',
+        iconHeight: '48'
       },
       {
         link: 'services-site.html',
         path: 'services',
-        name: 'box-site',
+        name: 'box-close',
         format: 'svg',
         width: '240',
         height: '160',
-        altText: 'Сайт'
+        altText: 'Сайт',
+        text: 'Сайт',
+        iconPath: 'svg',
+        iconName: 'icon-analytics',
+        iconWidth: '48',
+        iconHeight: '48'
       },
       {
         link: 'services-sales.html',
         path: 'services',
-        name: 'box-sales',
+        name: 'box-close',
         format: 'svg',
         width: '240',
         height: '160',
-        altText: 'Воронка продаж'
+        altText: 'Воронка продаж',
+        text: 'Воронка продаж',
+        iconPath: 'svg',
+        iconName: 'icon-analytics',
+        iconWidth: '48',
+        iconHeight: '48'
       },
       {
         link: 'services-seo.html',
         path: 'services',
-        name: 'box-seo',
+        name: 'box-close',
         format: 'svg',
         width: '240',
         height: '160',
-        altText: 'Seo'
+        altText: 'Seo',
+        text: 'Seo',
+        iconPath: 'svg',
+        iconName: 'icon-analytics',
+        iconWidth: '48',
+        iconHeight: '48'
       },
       {
         link: 'services-context.html',
         path: 'services',
-        name: 'box-contecst',
+        name: 'box-close',
         format: 'svg',
         width: '240',
         height: '160',
-        altText: 'Seo'
+        altText: 'Контекст',
+        text: 'Контекст',
+        iconPath: 'svg',
+        iconName: 'icon-analytics',
+        iconWidth: '48',
+        iconHeight: '48'
       },
       {
         link: 'services-social.html',
         path: 'services',
-        name: 'box-social',
+        name: 'box-close',
         format: 'svg',
         width: '240',
         height: '160',
-        altText: 'Seo'
+        altText: 'Соцсети',
+        text: 'Соцсети',
+        iconPath: 'svg',
+        iconName: 'icon-analytics',
+        iconWidth: '48',
+        iconHeight: '48'
       },
       {
         link: 'services-marketing.html',
         path: 'services',
-        name: 'box-marketing',
+        name: 'box-close',
         format: 'svg',
         width: '240',
         height: '160',
-        altText: 'Seo'
+        altText: 'Видео-маркетинг',
+        text: 'Видео-маркетинг',
+        iconPath: 'svg',
+        iconName: 'icon-analytics',
+        iconWidth: '48',
+        iconHeight: '48'
       },
       {
         link: 'services-crm.html',
         path: 'services',
-        name: 'box-crm',
+        name: 'box-close',
         format: 'svg',
         width: '240',
         height: '160',
-        altText: 'Seo'
+        altText: 'Crm',
+        text: 'Crm',
+        iconPath: 'svg',
+        iconName: 'icon-analytics',
+        iconWidth: '48',
+        iconHeight: '48'
       },
     ];
 
@@ -121,10 +172,19 @@ block main
       .services__box
         .services__nav-box
           ul.services__boxes-list
-            each item in boxesList
-              li
-                a(href= item.link)
-                  +img(item.path, item.name, item.format, item.width, item.height, item.altText)
+            each item, index in boxesList
+              if (index === activePage)
+                li
+                  a(href= item.link).services__link-active
+                    span= item.text
+                    +img(item.path, item.name, item.format, item.width, item.height, item.altText)
+                    +img(item.iconPath, item.iconName, item.format, item.iconWidth, item.iconHeight, item.altText)
+              else
+                li
+                  a(href= item.link)
+                    span= item.text
+                    +img(item.path, item.name, item.format, item.width, item.height, item.altText)
+                    +img(item.iconPath, item.iconName, item.format, item.iconWidth, item.iconHeight, item.altText)
         .services__box-images
           .services__image
             +img('services', 'icon-video', 'svg', '200', '200', 'Видеомаркетинг')
@@ -132,7 +192,7 @@ block main
             +img('services', 'big-box-active', 'svg', '640', '380', 'Коробка')
             +img('services', 'big-box-hover', 'svg', '640', '380', 'Коробка')
         .services__box-text.services__box-text--marketing
-          h2 Почему вашему бизнесу нужен видеомаркетинг
+          h2 Видеомаркетинг
           .services__text.z-index-1
             p
               span Видеомаркетинг
@@ -151,24 +211,20 @@ block main
             ul.swiper-wrapper
               li.swiper-slide
                 .services__slide-image
-                  a(href="#")
-                    +img('png', 'img-video-1', 'png', '278', '152', 'Видео')
+                  a(href="https://www.youtube.com/watch?v=cBUcdDmS-1A&feature=emb_logo" target="_blank")
+                    +img('png', 'img-video-1', 'png', '400', '220', 'Видео')
               li.swiper-slide
                 .services__slide-image
-                  a(href="#")
-                    +img('png', 'img-video-2', 'png', '278', '152', 'Видео')
+                  a(href="https://www.youtube.com/watch?v=8lndFrEMLvM&feature=emb_logo" target="_blank")
+                    +img('png', 'img-video-1', 'png', '400', '220', 'Видео')
               li.swiper-slide
                 .services__slide-image
-                  a(href="#")
-                    +img('png', 'img-video-3', 'png', '278', '152', 'Видео')
+                  a(href="https://www.youtube.com/watch?v=8lndFrEMLvM&feature=emb_logo" target="_blank")
+                    +img('png', 'img-video-1', 'png', '400', '220', 'Видео')
               li.swiper-slide
                 .services__slide-image
-                  a(href="#")
-                    +img('png', 'img-video-3', 'png', '278', '152', 'Видео')
-              li.swiper-slide
-                .services__slide-image
-                  a(href="#")
-                    +img('png', 'img-video-3', 'png', '278', '152', 'Видео')
+                  a(href="https://www.youtube.com/watch?v=8lndFrEMLvM&feature=emb_logo" target="_blank")
+                    +img('png', 'img-video-1', 'png', '400', '220', 'Видео')
             .services__swiper-button-prev.swiper-button-prev
             .services__swiper-button-next.swiper-button-next
       .services__box-portfolio.container

@@ -1,5 +1,5 @@
 .blog {
-  margin-bottom: 70px;
+  margin: 110px 0 70px 0;
 
   @media (max-width: $tablet-width) {
     margin-bottom: 40px;
@@ -14,7 +14,7 @@
   @include reset-list;
   display: grid;
   grid-template-columns: repeat(3, 32%);
-  grid-gap: 25px;
+  grid-gap: 30px;
 
   @media (max-width: $desktop-width-min) {
     grid-template-columns: repeat(2, 1fr);
@@ -26,6 +26,7 @@
 }
 
 .blog__card {
+  height: 100%;
   min-height: 260px;
   border: solid 4px $white;
   border-radius: 10px;

@@ -7,7 +7,7 @@ block header
   +header
 
 block main
-  main
+  main.gray-box
     section.contacts
       .contacts__wrapper.container
         h1 Контакты
@@ -34,7 +34,7 @@ block main
               p Как с Вами связаться?
               form(id="form" action="#" method="get")
                 .contacts__user-name
-                  input(id="user_name" type="text" name="user_name" required)
+                  input(id="user_name" type="text" name="user_name" required invalid)
                   label(for="user_name") Имя
                 .contacts__user-tel
                   input(id="user_phone" type="tel" name="user_phone" required)

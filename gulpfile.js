@@ -121,12 +121,12 @@ gulp.task('cssAdd:build', function () {
 
 gulp.task('image:build', function () {
   return gulp.src(path.source.img)
-    .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 5}),
-      imagemin.mozjpeg({progressive: true, quality: 75}),
-      imagemin.svgo(),
-    ]),
-     pngquant({quality: '65-70', speed: 5}))
+    // .pipe(imagemin([
+    //   imagemin.optipng({optimizationLevel: 5}),
+    //   imagemin.mozjpeg({progressive: true, quality: 75}),
+    //   imagemin.svgo(),
+    // ]),
+     // pngquant({quality: '65-70', speed: 5}))
     .pipe(gulp.dest(path.build.img))
     .pipe(server.stream());
 });

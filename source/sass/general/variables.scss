@@ -4,6 +4,7 @@ $desktop-width: 1200px;
 $desktop-width-min: 1023px;
 $tablet-width: 767px;
 $mobile-width: 480px;
+$mobile-width-min: 375px;
 
 //padding
 $desktop-padding: 0 30px;
@@ -40,12 +41,12 @@ $colorBg: #EE7900;
 $colorOutline: #ffffff;
 $colorOutlineFade: #4e5559;
 
-$borderMouse: 5px;
+//$borderMouse: 3px;
 
-$posMouse: 8px;
+$posMouse: 4px;
 
-$sizeTrackball: 5px;
-$posTrackball: 10px;
+$sizeTrackball: 4px;
+$posTrackball: 7px;
 $shrinkTrackball: 0.4;
 
-$animDuration: 5s;
+$animDuration: 6s;

@@ -7,6 +7,7 @@
   if (portfolioPage) {
     var portfolioBox = document.querySelector('.portfolio-page__box');
     var portfolioWrapper = document.querySelector('.portfolio-page__wrapper');
+    var portfolioBoxImage = document.querySelector('.portfolio-page__box-image');
     var main = document.querySelector('.box-closed');
     var text = document.querySelector('.text-closed');
 
@@ -19,17 +20,20 @@
         if (evt.deltaY > 0 && window.innerWidth > 1200) {
           portfolioWrapper.classList.add('portfolio-page__wrapper--active');
           portfolioPage.classList.add('portfolio-page__company--active');
-          portfolioBox.style.transform = 'translate(-10%, 10%)';
+          portfolioBox.style.transform = 'translate(-54%, 10%)';
+          portfolioBoxImage.style.transform = 'translate(-46%, 0)';
           setTimeout(show, 400);
         } else if (evt.deltaY > 0 && window.innerWidth > 1023) {
           portfolioWrapper.classList.add('portfolio-page__wrapper--active');
           portfolioPage.classList.add('portfolio-page__company--active');
           portfolioBox.style.transform = 'translate(0%, 10%)';
+          portfolioBoxImage.style.transform = 'translate(0, 0)';
           setTimeout(show, 400);
         } else if (portfolioPage.scrollTop === 0) {
           portfolioWrapper.classList.remove('portfolio-page__wrapper--active');
           portfolioPage.classList.remove('portfolio-page__company--active');
           portfolioBox.style.transform = '';
+          portfolioBoxImage.style.transform = '';
           setTimeout(none, 500);
         }
 

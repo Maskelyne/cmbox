@@ -39,7 +39,11 @@
 
   let servicesSliderDesk = function (el) {
     return new Swiper(el, {
+      loop: true,
       speed: 1000,
+      autoplay: {
+        delay: 1200,
+      },
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -52,7 +56,7 @@
           slidesPerView: 2,
         },
         1024: {
-          slidesPerView: 3,
+          slidesPerView: 2,
         }
       }
     });

@@ -8,17 +8,15 @@
   var modalConsultation = document.querySelector('.modal-consultation');
   var modalThanks = document.querySelector('.modal-thanks');
   var modalConsultationBtn = document.querySelector('.button--consultation');
-  var buttonFormClose = document.querySelector('.button-form-close');
   var modalClose = document.querySelectorAll('.modal__btn-closed');
 
-  if (modalConsultation) {
+  if (modalConsultationBtn) {
 
     modalConsultationBtn.addEventListener('click', function (evt) {
       evt.preventDefault();
 
       modalConsultation.classList.add('modal-active');
       document.body.style.overflow = 'hidden';
-
     });
 
     for (var i = 0; i < modalClose.length; i++) {
@@ -30,13 +28,6 @@
         document.body.style.overflow = '';
       });
     }
-
-    buttonFormClose.addEventListener('click', function (evt) {
-      evt.preventDefault();
-
-      modalConsultation.classList.remove('modal-active');
-      modalThanks.classList.add('modal-active');
-    });
 
     window.addEventListener(`keydown`, function (evt) {
 

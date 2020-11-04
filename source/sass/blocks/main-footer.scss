@@ -68,6 +68,7 @@
   @include reset-list;
   display: grid;
   grid-template-columns: 30% 50%;
+  grid-template-rows: 40px 40px 20px;
   justify-content: center;
 
   @media (max-width: $desktop-width-min) {
@@ -112,7 +113,7 @@
     height: 11px;
     position: absolute;
     content: "";
-    top: 5px;
+    top: 7px;
     left: -3px;
     background-image: url("../img/svg/icon-mail.svg");
     background-repeat: no-repeat;
@@ -129,7 +130,7 @@
     height: 18px;
     position: absolute;
     content: "";
-    top: 0;
+    top: 3px;
     left: 0;
     background-image: url("../img/svg/icon-mobile.svg");
     background-repeat: no-repeat;
@@ -138,7 +139,7 @@
 
 .main-footer__link-box {
   display: grid;
-  grid-template-columns: 190px auto;
+  grid-template-columns: 180px auto;
   align-items: center;
 
   .social-list {

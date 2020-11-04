@@ -1,12 +1,14 @@
 .intro__wrapper {
-  padding: 340px 30px 230px 30px;
+  min-height: 1100px;
   display: grid;
-  grid-template-columns: 54% 41%;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 55% 42%;
   grid-gap: 0 5%;
 
   @media (max-width: $desktop-width) {
-    grid-gap: 0 4%;
-    grid-template-columns: 50% 42%;
+    grid-gap: 0 0;
+    grid-template-columns: 50% 44%;
   }
 
   @media (max-width: $desktop-width-min) {
@@ -15,8 +17,12 @@
   }
 
   @media (max-width: $tablet-width) {
+    min-height: auto;
+  }
+
+  @media (max-width: $tablet-width) {
     max-width: 430px;
-    padding: 90px 15px;
+    padding: 130px 15px 90px 15px;
   }
 
   .intro__link {
@@ -28,7 +34,6 @@
       display: none;
 
       @media (max-width: $desktop-width-min) {
-        margin-top: 60px;
         display: grid;
       }
 
@@ -66,9 +71,9 @@
   @include reset-list;
 
   h2 {
-    margin-bottom: 15px;
-    font-size: 24px;
-    line-height: 31px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    line-height: 25px;
   }
 
   p {
@@ -81,27 +86,38 @@
 }
 
 .intro__link-box {
+  margin-left: 12px;
   display: grid;
-  grid-template-columns: 170px 1fr;
-  grid-gap: 0 25px;
+  grid-template-columns: 140px 1fr;
+  grid-gap: 0 30px;
   align-items: center;
 
+  img {
+    max-width: 140px;
+  }
+
   @media (max-width: $desktop-width) {
+    margin-left: 0;
     grid-template-columns: 150px 250px;
     justify-content: center;
 
     img {
-      max-width: 150px;
+      max-width: 140px;
     }
   }
 
   &:hover {
-    color: $black;
-    font-family: $proximaNova;
+    color: $dark-black;
+    font-weight: $normal;
+
+    h2 {
+      color: $dark-red;
+    }
   }
 }
 
 .intro__box-swiper-wrapper {
+  height: 410px;
   position: relative;
   background-image: url("../img/svg/bckg-slide-main.svg");
   background-repeat: no-repeat;
@@ -114,14 +130,55 @@
 
   .swiper-container {
     position: static;
-    height: 415px;
+    height: 220px;
+  }
 
-    @media (max-width: $desktop-width) {
-      height: 380px;
+  .swiper-slide-active {
+    .intro__text {
+      animation: sliderSkew;
+      animation-duration: 1.5s;
+      animation-delay: 1s;
+      animation-timing-function: ease;
+      animation-iteration-count: 1;
+      animation-direction: normal;
+      animation-fill-mode: forwards;
+      animation-play-state: running;
     }
 
-    @media (max-width: $desktop-width-min) {
-      height: 420px;
+    img {
+      animation: services-icon-show;
+      animation-duration: 1.2s;
+      animation-delay: 0.8s;
+      animation-timing-function: ease;
+      animation-iteration-count: 1;
+      animation-direction: normal;
+      animation-fill-mode: forwards;
+      animation-play-state: running;
+      opacity: 0;
+    }
+
+    h2 {
+      animation: services-icon-show;
+      animation-duration: 1.3s;
+      animation-delay: 1.2s;
+      animation-timing-function: ease;
+      animation-iteration-count: 1;
+      animation-direction: normal;
+      animation-fill-mode: forwards;
+      animation-play-state: running;
+      opacity: 0;
+    }
+
+    p {
+      animation: services-icon-show;
+      animation-duration: 1.3s;
+      animation-delay: 1.7s;
+      animation-timing-function: ease;
+      animation-iteration-count: 1;
+      animation-direction: normal;
+      animation-fill-mode: forwards;
+      animation-play-state: running;
+      opacity: 0;
     }
   }
 
@@ -136,13 +193,19 @@
     background: $dark-blue;
     opacity: 1;
     width: 12px;
-    height: 4px;
+    height: 5px;
     border-radius: 0;
+    outline: none;
+
+    &:hover {
+      background: $dark-red;
+      width: 20px;
+    }
   }
 
   .swiper-pagination-bullet-active {
     background: $dark-red;
     width: 20px;
-    height: 6px;
+    height: 7px;
   }
 }

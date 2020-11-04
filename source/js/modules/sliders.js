@@ -10,10 +10,10 @@
       slidesPerView: 1,
       spaceBetween: 30,
       loop: true,
-      speed: 1200,
-      // autoplay: {
-      //   delay: 6000,
-      // },
+      speed: 1000,
+      autoplay: {
+        delay: 7000,
+      },
       mousewheel: true,
       pagination: {
         el: '.swiper-pagination',

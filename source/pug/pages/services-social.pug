@@ -2,6 +2,7 @@ extends ../layout/page-layout
 
 block variables
   - var title = "Соцсети"
+  - var activePage = 7
 
 block header
   +header
@@ -13,92 +14,142 @@ block main
       {
         link: 'services-analytics.html',
         path: 'services',
-        name: 'box-analytics',
+        name: 'box-close',
         format: 'svg',
         width: '240',
         height: '160',
-        altText: 'Аналитика'
+        altText: 'Аналитика',
+        text: 'Аналитика',
+        iconPath: 'svg',
+        iconName: 'icon-analytics',
+        iconWidth: '48',
+        iconHeight: '48'
       },
       {
         link: 'services-strategy.html',
         path: 'services',
-        name: 'box-strategy',
+        name: 'box-close',
         format: 'svg',
         width: '240',
         height: '160',
-        altText: 'Стратегия'
+        altText: 'Стратегия',
+        text: 'Стратегия',
+        iconPath: 'svg',
+        iconName: 'icon-analytics',
+        iconWidth: '48',
+        iconHeight: '48'
       },
       {
         link: 'services-design.html',
         path: 'services',
-        name: 'box-design',
+        name: 'box-close',
         format: 'svg',
         width: '240',
         height: '160',
-        altText: 'Дизайн'
+        altText: 'Дизайн',
+        text: 'Дизайн',
+        iconPath: 'svg',
+        iconName: 'icon-analytics',
+        iconWidth: '48',
+        iconHeight: '48'
       },
       {
         link: 'services-site.html',
         path: 'services',
-        name: 'box-site',
+        name: 'box-close',
         format: 'svg',
         width: '240',
         height: '160',
-        altText: 'Сайт'
+        altText: 'Сайт',
+        text: 'Сайт',
+        iconPath: 'svg',
+        iconName: 'icon-analytics',
+        iconWidth: '48',
+        iconHeight: '48'
       },
       {
         link: 'services-sales.html',
         path: 'services',
-        name: 'box-sales',
+        name: 'box-close',
         format: 'svg',
         width: '240',
         height: '160',
-        altText: 'Воронка продаж'
+        altText: 'Воронка продаж',
+        text: 'Воронка продаж',
+        iconPath: 'svg',
+        iconName: 'icon-analytics',
+        iconWidth: '48',
+        iconHeight: '48'
       },
       {
         link: 'services-seo.html',
         path: 'services',
-        name: 'box-seo',
+        name: 'box-close',
         format: 'svg',
         width: '240',
         height: '160',
-        altText: 'Seo'
+        altText: 'Seo',
+        text: 'Seo',
+        iconPath: 'svg',
+        iconName: 'icon-analytics',
+        iconWidth: '48',
+        iconHeight: '48'
       },
       {
         link: 'services-context.html',
         path: 'services',
-        name: 'box-contecst',
+        name: 'box-close',
         format: 'svg',
         width: '240',
         height: '160',
-        altText: 'Seo'
+        altText: 'Контекст',
+        text: 'Контекст',
+        iconPath: 'svg',
+        iconName: 'icon-analytics',
+        iconWidth: '48',
+        iconHeight: '48'
       },
       {
         link: 'services-social.html',
         path: 'services',
-        name: 'box-social',
+        name: 'box-close',
         format: 'svg',
         width: '240',
         height: '160',
-        altText: 'Seo'
+        altText: 'Соцсети',
+        text: 'Соцсети',
+        iconPath: 'svg',
+        iconName: 'icon-analytics',
+        iconWidth: '48',
+        iconHeight: '48'
       },
       {
         link: 'services-marketing.html',
         path: 'services',
-        name: 'box-marketing',
+        name: 'box-close',
         format: 'svg',
         width: '240',
         height: '160',
-        altText: 'Seo'
+        altText: 'Видео-маркетинг',
+        text: 'Видео-маркетинг',
+        iconPath: 'svg',
+        iconName: 'icon-analytics',
+        iconWidth: '48',
+        iconHeight: '48'
       },
       {
         link: 'services-crm.html',
         path: 'services',
-        name: 'box-crm',
+        name: 'box-close',
         format: 'svg',
         width: '240',
         height: '160',
-        altText: 'Seo'
+        altText: 'Crm',
+        text: 'Crm',
+        iconPath: 'svg',
+        iconName: 'icon-analytics',
+        iconWidth: '48',
+        iconHeight: '48'
       },
     ];
 
@@ -124,16 +175,25 @@ block main
       }
     ];
 
-  main
+  main.gray-box
     section.services
       h1 Услуги
       .services__box
         .services__nav-box
           ul.services__boxes-list
-            each item in boxesList
-              li
-                a(href= item.link)
-                  +img(item.path, item.name, item.format, item.width, item.height, item.altText)
+            each item, index in boxesList
+              if (index === activePage)
+                li
+                  a(href= item.link).services__link-active
+                    span= item.text
+                    +img(item.path, item.name, item.format, item.width, item.height, item.altText)
+                    +img(item.iconPath, item.iconName, item.format, item.iconWidth, item.iconHeight, item.altText)
+              else
+                li
+                  a(href= item.link)
+                    span= item.text
+                    +img(item.path, item.name, item.format, item.width, item.height, item.altText)
+                    +img(item.iconPath, item.iconName, item.format, item.iconWidth, item.iconHeight, item.altText)
         .services__box-images
           .services__image
             +img('services', 'icon-social', 'svg', '250', '250', 'Соцсети')
@@ -141,7 +201,7 @@ block main
             +img('services', 'big-box-active', 'svg', '640', '380', 'Коробка')
             +img('services', 'big-box-hover', 'svg', '640', '380', 'Коробка')
         .services__box-text.services__box-text--ssm
-          h2 Спланируем и запустим продвижение в социальных сетях и Youtube
+          h2 Социальные сети
           .services__text
             p С развитием скоростного интернета и мобильных устройств, просмотр видео стало одним из самых популярных развлечений в интернете. Из-за чего большинство людей перестало читать статьи, и переключились на просмотр видео.
           .services__text.services__text-box--2.services__text-light--gray.z-index-2

@@ -1,8 +1,8 @@
 .portfolio {
-  margin-bottom: 70px;
+  margin: 110px 0 70px 0;
 
   @media (max-width: $tablet-width) {
-    margin-bottom: 40px;
+    margin: 90px 0 40px 0;
   }
 }
 
@@ -19,16 +19,36 @@
 
   @media (max-width: $tablet-width) {
     grid-template-columns: 1fr;
-    margin-top: 40px;
+  }
+
+  a:hover {
+    h2 {
+      color: $dark-red;
+    }
+
+    p {
+      color: $dark-black;
+    }
+
+    img {
+      transform: scale(1.02);
+      transition: all 0.3s ease;
+    }
   }
 }
 
 .portfolio__box-card {
+  height: 100%;
   perspective: 1000px;
   transform-style: preserve-3d;
 }
 
+.portfolio__card {
+  height: 100%;
+}
+
 .portfolio__card-perspective {
+  height: 100%;
   box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.3),
     10px 10px 20px rgba(68, 69, 70, 0.15),
     inset 4px 4px 15px rgba(255, 255, 255, 0.3);
@@ -66,5 +86,6 @@
     display: block;
     border: solid 4px #eeeeee;
     border-radius: 5px;
+    transition: all 0.3s ease;
   }
 }

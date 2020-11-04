@@ -1,6 +1,5 @@
 //general
 @import "general/normalize.scss";
-@import "general/fullpage.scss";
 @import "general/swiper-bundle.min.scss";
 @import "general/variables.scss";
 @import "general/global.scss";
@@ -34,6 +33,9 @@
 
 //buttons
 @import "blocks/button.scss";
+
+//cubs
+@import "blocks/cubs.scss";
 
 //blog
 @import "blocks/blog.scss";

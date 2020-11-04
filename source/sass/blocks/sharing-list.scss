@@ -4,6 +4,10 @@
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 0 15px;
 
+  @media (max-width: $desktop-width-min) {
+    grid-template-columns: repeat(5, 20px);
+  }
+
   @media (max-width: $tablet-width) {
     grid-gap: 0 10px;
   }
