@@ -13,13 +13,13 @@
       modalThanks.classList.add('modal-active');
       modalConsultation.classList.remove('modal-active');
       document.body.style.overflow = '';
-      response.message = '';
+      // response.message = '';
 
     } else if (form.attr('id') === 'form_main') {
       modalThanks.classList.add('modal-active');
       modalConsultation.classList.remove('modal-active');
       document.body.style.overflow = '';
-      response.message = '';
+      // response.message = '';
     }
 
     else {

@@ -10,13 +10,6 @@
   display: grid;
   grid-template-columns: 48px auto;
   grid-gap: 0 20px;
-  align-items: center;
-
-  @media (max-width: $tablet-width) {
-    grid-template-columns: 30px auto;
-    grid-gap: 0 10px;
-    margin-left: 50px;
-  }
 
   h1 {
     text-align: left;
@@ -26,14 +19,33 @@
     }
   }
 
-  img {
+  a {
     display: grid;
-    transition: all 0.2s linear;
-  }
+    grid-template-columns: 48px auto;
+    grid-gap: 0 20px;
+    align-items: center;
 
-  img:hover {
-    transform: translateX(-10px);
-    transition: all 0.2s linear;
+    @media (max-width: $tablet-width) {
+      grid-template-columns: 30px auto;
+      grid-gap: 0 10px;
+      margin-left: 50px;
+    }
+
+    img {
+      display: grid;
+      transition: all 0.2s linear;
+    }
+
+    &:hover {
+      img {
+        transform: translateX(-10px);
+        transition: all 0.2s linear;
+
+        @media (max-width: $tablet-width) {
+          transform: translateX(0);
+        }
+      }
+    }
   }
 }
 

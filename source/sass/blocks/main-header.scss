@@ -37,6 +37,10 @@
   @media (max-width: $desktop-width-min) {
     max-width: 120px;
   }
+
+  img {
+    display: block;
+  }
 }
 
 .main-header__list {
