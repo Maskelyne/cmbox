@@ -2,7 +2,7 @@
 
 (function () {
 
-  $(document).on('af_complete', function(event, response) {
+  $(document).on('af_complete', function (event, response) {
 
     var modalConsultation = document.querySelector('.modal-consultation');
     var modalThanks = document.querySelector('.modal-thanks');
