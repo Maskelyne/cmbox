@@ -73,12 +73,12 @@
 }
 
 .portfolio-page__box {
-  max-width: 385px;
+  max-width: 500px;
   display: grid;
   grid-template-rows: repeat(3, max-content);
   align-self: center;
   transition: all 1s linear;
-  transform: translate(180%, -200%);
+  transform: translate(135%, -160%);
   z-index: -1;
   animation: stage-show-elements-2;
   animation-duration: 2.3s;
@@ -101,9 +101,10 @@
 
   h1 {
     margin: 0;
-    font-size: 48px;
+    font-size: 64px;
     line-height: 64px;
     text-align: left;
+    margin-bottom: 15px;
 
     @media (max-width: $tablet-width) {
       font-size: 36px;
@@ -114,8 +115,9 @@
   p {
     margin: 0 0 16px 0;
     font-family: $proximaBold;
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 0.05em;
 
     @media (max-width: $tablet-width) {
       font-size: 16px;
@@ -127,7 +129,7 @@
     margin-bottom: 10px;
     font-family: $proximaBold;
     font-size: 24px;
-    line-height: 31px;
+    line-height: 24px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     display: none;
@@ -146,27 +148,25 @@
       margin: 0;
       font-family: $proximaNova;
       font-weight: $normal;
-      font-size: 16px;
-      line-height: 24px;
-    }
-  }
-
-  a {
-    font-family: $proximaBold;
-    font-size: 24px;
-    line-height: 36px;
-    letter-spacing: 0.05em;
-    display: none;
-
-
-    &:hover {
-      color: $dark-red;
+      font-size: 18px;
+      line-height: 23px;
     }
   }
 
   &--active {
-    max-width: 310px;
+    max-width: 480px;
     transition: all 1s linear;
+
+    h1 {
+      font-size: 36px;
+      line-height: 36px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 23px;
+      letter-spacing: normal;
+    }
   }
 
   &--active > .portfolio-page__scroll {
@@ -182,7 +182,7 @@
 
 .portfolio-page__scroll {
   display: grid;
-  grid-template-columns: 50% auto;
+  grid-template-columns: 42% auto;
   align-items: center;
 
   @media (max-width: $tablet-width) {
@@ -191,15 +191,17 @@
 
   p {
     margin: 0;
-    font-family: $proximaNova;
-    font-size: 14px;
-    line-height: 20px;
+    font-family: $proximaBold;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: normal;
   }
 }
 
 .portfolio-page__box-image {
   display: grid;
   grid-template-columns: 10% auto;
+  transition: all 1s linear;
 
   @media (max-width: $desktop-width-min) {
     max-width: 710px;
@@ -398,7 +400,7 @@
 
   &--active {
     transition: all 1s linear;
-    width: calc(100% / 1.55);
+    width: calc(100% / 1.43);
     position: fixed;
     top: 0;
     right: 0;
@@ -507,105 +509,110 @@
   }
 }
 
-.portfolio-page__list-purposes {
-  @include reset-list;
+.portfolio-page__purposes {
+  margin: 50px 0 50px 0;
+  padding: 55px 0 100px 85px;
+  position: relative;
 
-  li {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    margin-bottom: 50px;
-
-    @media (max-width: $tablet-width) {
-      margin-top: 80px;
-      grid-template-columns: 1fr;
-      justify-items: center;
-    }
-
-    img {
-      max-width: 500px;
-    }
-
-    &:hover .portfolio-page__purposes-img img {
-      &:nth-child(1) {
-        transform: translateY(-50px);
-        transition: all 0.3s linear;
-      }
-
-      &:nth-child(2) {
-        display: none;
-      }
-
-      &:nth-child(3) {
-        display: grid;
-      }
-    }
-  }
-
-  strong {
-    display: grid;
-    padding: 15px 0 5px 0;
-    font-family: $proximaBold;
+  p {
+    padding-left: 20px;
+    line-height: 16px;
     letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: $dark-blue;
-  }
+    position: relative;
 
-  .portfolio-page__purposes p img {
-    margin: 10px;
-
-    @media (max-width: $tablet-width) {
-      margin: 0;
+    &::before {
+      width: 10px;
+      height: 2px;
+      position: absolute;
+      content: "";
+      top: 7px;
+      left: 0;
+      background-color: $black;
     }
-  }
-}
-
-.portfolio-page__purposes-img {
-  margin-top: 35px;
-  display: grid;
-  grid-template-rows: 0 auto;
-
-  @media (max-width: $tablet-width) {
-    grid-row: 1;
-    margin-top: 0;
   }
 
   img {
-    &:nth-child(1) {
-      max-width: 75px;
-      transform: translateY(-35px);
-      margin: 0 auto 0 45px;
-      position: relative;
-      z-index: 1;
-      transition: all 0.3s linear;
-    }
-
-    &:nth-child(2) {
-      max-width: 170px;
-    }
-
-    &:nth-child(3) {
-      max-width: 170px;
-      display: none;
-    }
+    max-width: 850px;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 }
 
 .portfolio-page__company-image {
-  display: grid;
-  grid-template-columns: 45% 30%;
-  align-items: center;
-  grid-gap: 10%;
+  img {
+    max-width: 675px;
+  }
+}
 
-  @media (max-width: $tablet-width) {
-    max-width: 500px;
-    margin: 0 auto;
-    grid-template-columns: 1fr;
-    grid-gap: 0;
+.portfolio-page__advantages {
+  @include reset-list;
 
-    img:nth-child(2) {
-      max-width: 190px;
-      margin: 0 auto;
+  img {
+    margin: 30px 0 60px 0;
+    max-width: 700px;
+  }
+
+  p {
+    max-width: 750px;
+    font-size: 16px;
+    line-height: 16px;
+    padding-left: 24px;
+    font-family: $proximaBold;
+    color: $dark-blue;
+    position: relative;
+
+    &:nth-child(6),
+    &:nth-child(7) {
+      img {
+        max-width: 400px;
+      }
     }
+
+    &::before {
+      width: 20px;
+      height: 22px;
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      background-image: url("../img/svg/icon-stick.svg");
+      background-repeat: no-repeat;
+    }
+
+    strong {
+      color: $dark-red;
+    }
+  }
+
+  .portfolio-page__image-box {
+    display: flex;
+    gap: 30px;
+
+    img {
+      max-width: 180px;
+      box-shadow: 2px 2px 10px rgba(5, 56, 102, 0.5);
+      border-radius: 5px;
+    }
+  }
+}
+
+.portfolio-page__developers {
+  .portfolio-page__box-developers {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(125px, 125px));
+    grid-gap: 30px 30px;
+  }
+
+  img {
+    margin: 0;
+    max-width: 125px;
+  }
+
+  strong {
+    display: block;
+    text-align: center;
+    color: $dark-red;
   }
 }
 
