@@ -122,10 +122,11 @@ block main
               p Создание многофункционального сайта магазина
             li
               p Подключение всех инструментов продвижения
+          +img('svg', 'lead-magnit', 'svg', '240', '190', 'Заказать проект')
           .portfolio-page__scroll
             p Скролл для дальнейшей информации
             .portfolio-page__scroll-mouse
-      #page.portfolio-page__company.gray-box
+      .portfolio-page__company.gray-box
         .portfolio-page__title
           a(href="#")
             +img('svg', 'icon-left-arrow', 'svg', '48', '48', 'Вернуться в портфолио')
@@ -174,15 +175,23 @@ block main
             p За первый месяц без бюджета на рекламу
               strong  привлекли 317 подписчиков в Instagram.
               +img('svg', 'people-element-1', 'svg', '430', '280', 'Пользователи')
-            .portfolio-page__developers
-              h3 В проекте участвовали:
-              .portfolio-page__box-developers
-                each item in developers
-                  article
-                    +img(item.path, item.image, item.format, item.width, item.height, item.altText)
-                    strong= item.text
-        //  .portfolio-page__box-video
-        //    <iframe src="https://www.youtube.com/embed/EeqPIAYPtiQ"></iframe>
+          .feedback__box.portfolio-page__feedback
+            article
+              +img('jpg', 'author-1', 'jpg', '80', '80', 'Автор')
+              .feedback__title
+                strong Стив Джобс
+                span Генеральный директор Torwood
+              p Мы являемся агентством веб- и бизнес-аналитики. Основное направление нашей деятельности – это бизнес-аналитика и ключевые течения интернет-маркетинга: веб-аналитика, SEO-продвижение, контекстная реклама, SMM, а также ряд других сопутствующих услуг.
+            +img('svg', 'arm', 'svg', '1000', '180', 'Рука')
+          .portfolio-page__developers
+            h3 В проекте участвовали:
+            .portfolio-page__box-developers
+              each item in developers
+                article
+                  +img(item.path, item.image, item.format, item.width, item.height, item.altText)
+                  strong= item.text
+          // .portfolio-page__box-video
+          //    <iframe src="https://www.youtube.com/embed/EeqPIAYPtiQ"></iframe>
         .portfolio-page__breadcrumbs
           .portfolio-page__wrapper-breadcrumbs.container
             .portfolio-page__button-prev

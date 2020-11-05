@@ -21,11 +21,9 @@
 }
 
 .portfolio-page__wrapper {
+  margin: 0;
   transition: all 1s linear;
-  transform: translateY(60%);
-  display: grid;
-  grid-template-columns: 50%;
-  grid-gap: 0 17%;
+  transform: translate(18%, 60%);
   position: relative;
   align-items: flex-start;
   max-height: 367px;
@@ -77,18 +75,9 @@
   display: grid;
   grid-template-rows: repeat(3, max-content);
   align-self: center;
-  transition: all 1s linear;
-  transform: translate(135%, -160%);
+  transition: all 0.1s ease;
+  transform: translate(150%, -160%);
   z-index: -1;
-  animation: stage-show-elements-2;
-  animation-duration: 2.3s;
-  animation-delay: 1.5s;
-  animation-timing-function: ease;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: forwards;
-  animation-play-state: running;
-  opacity: 0;
 
   @media (max-width: $desktop-width) {
     transform: translate(153%, -130%);
@@ -100,11 +89,10 @@
   }
 
   h1 {
-    margin: 0;
+    margin: 0 0 15px 0;
     font-size: 64px;
     line-height: 64px;
     text-align: left;
-    margin-bottom: 15px;
 
     @media (max-width: $tablet-width) {
       font-size: 36px;
@@ -153,9 +141,25 @@
     }
   }
 
+  img {
+    max-width: 240px;
+    display: none;
+  }
+
   &--active {
-    max-width: 480px;
-    transition: all 1s linear;
+    max-width: 100%;
+    grid-template-columns: 39%;
+    transition: all 0.1s ease;
+    transform: translate(0%, 10%);
+    animation: stage-show-elements-2;
+    animation-duration: 1s;
+    animation-delay: 0.6s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    opacity: 0;
 
     h1 {
       font-size: 36px;
@@ -175,7 +179,8 @@
 
   &--active > strong,
   &--active > ul,
-  &--active > a {
+  &--active > a,
+  &--active img {
     display: grid;
   }
 }
@@ -200,7 +205,7 @@
 
 .portfolio-page__box-image {
   display: grid;
-  grid-template-columns: 10% auto;
+  grid-template-columns: 5% 38%;
   transition: all 1s linear;
 
   @media (max-width: $desktop-width-min) {
@@ -364,8 +369,6 @@
         }
 
         @media (max-width: $tablet-width) {
-
-
           &::before {
             top: 6px;
             left: 11px;
@@ -381,6 +384,7 @@
   width: 100%;
   height: 100vh;
   overflow-y: scroll;
+  overflow-x: hidden;
   position: fixed;
   top: 0;
   right: -110%;
@@ -582,6 +586,7 @@
 
     strong {
       color: $dark-red;
+      display: inline-block;
     }
   }
 
@@ -600,7 +605,7 @@
 .portfolio-page__developers {
   .portfolio-page__box-developers {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(125px, 125px));
+    grid-template-columns: repeat(4, 125px);
     grid-gap: 30px 30px;
   }
 
@@ -632,32 +637,6 @@
   iframe {
     width: 100%;
     height: 100%;
-  }
-}
-
-.portfolio-page__graph {
-  display: grid;
-  grid-template-columns: 295px auto;
-  grid-gap: 0 5%;
-  align-items: center;
-  margin-top: 30px;
-
-  @media (max-width: $tablet-width) {
-    grid-template-columns: 1fr;
-
-    img {
-      max-width: 400px;
-      margin: 0 auto;
-    }
-  }
-
-  p {
-    font-family: $proximaBold;
-    margin: 10px 0;
-  }
-
-  span {
-    color: $dark-red;
   }
 }
 
@@ -726,6 +705,16 @@
       line-height: 24px;
       color: $dark-blue;
     }
+  }
+}
+
+.portfolio-page__feedback {
+  position: relative;
+
+  img:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: -50%;
   }
 }
 

@@ -5,7 +5,6 @@
   var portfolioPage = document.querySelector('.portfolio-page__company');
 
   if (portfolioPage) {
-    var portfolioPageBox = document.querySelector('.portfolio-page');
     var portfolioBox = document.querySelector('.portfolio-page__box');
     var portfolioWrapper = document.querySelector('.portfolio-page__wrapper');
     var portfolioBoxImage = document.querySelector('.portfolio-page__box-image');
@@ -21,39 +20,22 @@
         if (evt.deltaY > 0 && window.innerWidth > 1200) {
           portfolioWrapper.classList.add('portfolio-page__wrapper--active');
           portfolioPage.classList.add('portfolio-page__company--active');
-          portfolioBox.style.transform = 'translate(-54%, 10%)';
+          portfolioBox.style.opacity = '0';
           portfolioBoxImage.style.transform = 'translate(0%, 0%)';
-          setTimeout(show, 400);
-          // setTimeout(grid, 500);
+          setTimeout(show, 800);
         } else if (evt.deltaY > 0 && window.innerWidth > 1023) {
           portfolioWrapper.classList.add('portfolio-page__wrapper--active');
           portfolioPage.classList.add('portfolio-page__company--active');
-          portfolioBox.style.transform = 'translate(0%, 10%)';
           portfolioBoxImage.style.transform = 'translate(0, 0)';
-          setTimeout(show, 400);
+          setTimeout(show, 800);
         } else if (portfolioPage.scrollTop === 0) {
           portfolioWrapper.classList.remove('portfolio-page__wrapper--active');
           portfolioPage.classList.remove('portfolio-page__company--active');
           portfolioBox.style.transform = '';
           portfolioBoxImage.style.transform = '';
-          setTimeout(none, 500);
-        }
-
-        function none() {
           portfolioBox.classList.remove('portfolio-page__box--active');
-          portfolioPageBox.style.display = '';
+          setTimeout(opacity, 1300);
         }
-
-        function show() {
-          portfolioBox.classList.add('portfolio-page__box--active');
-        }
-
-        function grid() {
-          portfolioPageBox.style.display = 'grid';
-          portfolioPageBox.style.gridTemplateColumns = '30% auto';
-          portfolioBoxImage.style.transform = 'translate(0%, 0)';
-        }
-
       });
 
       main.addEventListener('click', function (evt) {
@@ -64,6 +46,7 @@
           portfolioPage.classList.remove('portfolio-page__company--active');
           portfolioBox.classList.remove('portfolio-page__box--active');
           portfolioBox.style.transform = '';
+          setTimeout(opacity, 800);
 
         }
 
@@ -77,11 +60,20 @@
           portfolioPage.classList.remove('portfolio-page__company--active');
           portfolioBox.classList.remove('portfolio-page__box--active');
           portfolioBox.style.transform = '';
+          setTimeout(opacity, 800);
 
         }
 
       });
     }
+  }
+
+  function show() {
+    portfolioBox.classList.add('portfolio-page__box--active');
+  }
+
+  function opacity() {
+    portfolioBox.style.opacity = '1';
   }
 
 })();

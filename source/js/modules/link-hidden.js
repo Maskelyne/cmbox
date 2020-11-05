@@ -20,4 +20,6 @@
     item.addEventListener('resize', resizeWindow);
   });
 
+  new WOW().init();
+
 })();

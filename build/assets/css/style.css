@@ -7624,6 +7624,30 @@ main {
       line-height: 24px;
       margin-bottom: 20px; } }
 
+.feedback__box {
+  position: relative; }
+  .feedback__box article {
+    display: grid;
+    grid-template-columns: 80px auto;
+    align-items: center;
+    grid-gap: 0 30px; }
+    .feedback__box article strong {
+      font-family: "ProximaNova-Bold", arial, sans-serif;
+      font-size: 24px;
+      line-height: 36px; }
+    .feedback__box article span {
+      display: block; }
+    .feedback__box article p {
+      max-width: 550px;
+      margin: 30px 0;
+      font-family: "ProximaNova-Bold", arial, sans-serif;
+      font-style: italic;
+      grid-column: 1 / 3; }
+    .feedback__box article img {
+      max-width: 100px;
+      border-radius: 50%;
+      box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.3), 10px 10px 20px rgba(68, 69, 70, 0.15); }
+
 .button {
   max-width: 235px;
   width: 100%;
@@ -8212,11 +8236,9 @@ main {
       grid-gap: 1.4% 0; } }
 
 .portfolio-page__wrapper {
+  margin: 0;
   transition: all 1s linear;
-  transform: translateY(60%);
-  display: grid;
-  grid-template-columns: 50%;
-  grid-gap: 0 17%;
+  transform: translate(18%, 60%);
   position: relative;
   align-items: flex-start;
   max-height: 367px; }
@@ -8259,26 +8281,9 @@ main {
   grid-template-rows: repeat(3, -webkit-max-content);
   grid-template-rows: repeat(3, max-content);
   align-self: center;
-  transition: all 1s linear;
-  transform: translate(135%, -160%);
-  z-index: -1;
-  -webkit-animation: stage-show-elements-2;
-          animation: stage-show-elements-2;
-  -webkit-animation-duration: 2.3s;
-          animation-duration: 2.3s;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
-  -webkit-animation-timing-function: ease;
-          animation-timing-function: ease;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
-  opacity: 0; }
+  transition: all 0.1s ease;
+  transform: translate(150%, -160%);
+  z-index: -1; }
   @media (max-width: 1200px) {
     .portfolio-page__box {
       transform: translate(153%, -130%); } }
@@ -8287,11 +8292,10 @@ main {
       transform: translate(0, 0);
       justify-self: center; } }
   .portfolio-page__box h1 {
-    margin: 0;
+    margin: 0 0 15px 0;
     font-size: 64px;
     line-height: 64px;
-    text-align: left;
-    margin-bottom: 15px; }
+    text-align: left; }
     @media (max-width: 767px) {
       .portfolio-page__box h1 {
         font-size: 36px;
@@ -8326,9 +8330,31 @@ main {
       font-weight: 400;
       font-size: 18px;
       line-height: 23px; }
+  .portfolio-page__box img {
+    max-width: 240px;
+    display: none; }
   .portfolio-page__box--active {
-    max-width: 480px;
-    transition: all 1s linear; }
+    max-width: 100%;
+    grid-template-columns: 39%;
+    transition: all 0.1s ease;
+    transform: translate(0%, 10%);
+    -webkit-animation: stage-show-elements-2;
+            animation: stage-show-elements-2;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-delay: 0.6s;
+            animation-delay: 0.6s;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-direction: normal;
+            animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-play-state: running;
+            animation-play-state: running;
+    opacity: 0; }
     .portfolio-page__box--active h1 {
       font-size: 36px;
       line-height: 36px; }
@@ -8340,7 +8366,8 @@ main {
     display: none; }
   .portfolio-page__box--active > strong,
   .portfolio-page__box--active > ul,
-  .portfolio-page__box--active > a {
+  .portfolio-page__box--active > a,
+  .portfolio-page__box--active img {
     display: grid; }
 
 .portfolio-page__scroll {
@@ -8359,7 +8386,7 @@ main {
 
 .portfolio-page__box-image {
   display: grid;
-  grid-template-columns: 10% auto;
+  grid-template-columns: 5% 38%;
   transition: all 1s linear; }
   @media (max-width: 1023px) {
     .portfolio-page__box-image {
@@ -8493,6 +8520,7 @@ main {
   width: 100%;
   height: 100vh;
   overflow-y: scroll;
+  overflow-x: hidden;
   position: fixed;
   top: 0;
   right: -110%;
@@ -8639,7 +8667,8 @@ main {
       background-image: url("../img/svg/icon-stick.svg");
       background-repeat: no-repeat; }
     .portfolio-page__advantages p strong {
-      color: #a62e41; }
+      color: #a62e41;
+      display: inline-block; }
   .portfolio-page__advantages .portfolio-page__image-box {
     display: flex;
     gap: 30px; }
@@ -8650,7 +8679,7 @@ main {
 
 .portfolio-page__developers .portfolio-page__box-developers {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(125px, 125px));
+  grid-template-columns: repeat(4, 125px);
   grid-gap: 30px 30px; }
 
 .portfolio-page__developers img {
@@ -8675,24 +8704,6 @@ main {
   .portfolio-page__box-video iframe {
     width: 100%;
     height: 100%; }
-
-.portfolio-page__graph {
-  display: grid;
-  grid-template-columns: 295px auto;
-  grid-gap: 0 5%;
-  align-items: center;
-  margin-top: 30px; }
-  @media (max-width: 767px) {
-    .portfolio-page__graph {
-      grid-template-columns: 1fr; }
-      .portfolio-page__graph img {
-        max-width: 400px;
-        margin: 0 auto; } }
-  .portfolio-page__graph p {
-    font-family: "ProximaNova-Bold", arial, sans-serif;
-    margin: 10px 0; }
-  .portfolio-page__graph span {
-    color: #a62e41; }
 
 .portfolio-page__box-info {
   margin: 40px 0 0 0;
@@ -8743,6 +8754,13 @@ main {
       font-size: 24px;
       line-height: 24px;
       color: #0a3d76; }
+
+.portfolio-page__feedback {
+  position: relative; }
+  .portfolio-page__feedback img:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: -50%; }
 
 .portfolio-page__breadcrumbs .portfolio-page__wrapper-breadcrumbs {
   max-width: 100%;
