@@ -98,17 +98,18 @@ block main
     section.portfolio-page.text-closed
       .portfolio-page__wrapper.container
         .portfolio-page__box-image
-          .portfolio-page__controls
-            a(href="#")
-              span.visually-hidden Вперед
-            a(href="#")
-              span.visually-hidden Назад
           .portfolio-page__image
             a(href="#")
               +img('jpg', 'image-vodadom', 'jpg', '340', '240', 'Водадом')
-          .portfolio-page__controls.portfolio-page__controls--tablet
-            a(href="#")
-              span.visually-hidden Назад
+          .portfolio-page__controls.black
+            .portfolio-page__button-prev
+              a(href="#")
+              span Exim
+              span Предыдущий проект
+            .portfolio-page__button-next
+              a(href="#")
+              span Yartruba
+              span Следующий проект
         .portfolio-page__box.black
           h1 Exim.by
           p ЗАО «Эксимэлектро» более 17 лет поставщики качественной электротехнической продукции в РБ
@@ -192,21 +193,6 @@ block main
                   strong= item.text
           // .portfolio-page__box-video
           //    <iframe src="https://www.youtube.com/embed/EeqPIAYPtiQ"></iframe>
-        .portfolio-page__breadcrumbs
-          .portfolio-page__wrapper-breadcrumbs.container
-            .portfolio-page__button-prev
-              a(href="#")
-              span Exim
-              span Предыдущий проект
-            .portfolio-page__prev-portfolio
-              a(href="#")
-                +img('svg', 'icon-portfolio', 'svg', '38', '38', 'Портфолио')
-                +img('svg', 'icon-portfolio-2', 'svg', '38', '38', 'Портфолио')
-                span Назад в портфолио
-            .portfolio-page__button-next
-              a(href="#")
-              span Yartruba
-              span Следующий проект
         .main-footer.portfolio-page__footer
           .main-footer__wrapper.container
             .main-footer__box
