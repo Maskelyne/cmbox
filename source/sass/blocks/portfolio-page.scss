@@ -21,12 +21,12 @@
 }
 
 .portfolio-page__wrapper {
-  margin: 0;
-  transition: all 1s linear;
-  transform: translate(30%, 50%);
+  max-width: 100%;
+  padding: 0 20px;
   position: relative;
-  align-items: flex-start;
-  max-height: 367px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 21% 550px auto;
 
   @media (max-width: $desktop-width) {
     grid-gap: 0 10%;
@@ -50,7 +50,7 @@
   }
 
   &--active {
-    transform: translateY(10%);
+    transform: translateY(0%);
     transition: all 1s linear;
 
     .portfolio-page__image {
@@ -72,21 +72,9 @@
 
 .portfolio-page__box {
   max-width: 500px;
+  margin: 10% 0 0 10%;
   display: grid;
   grid-template-rows: repeat(3, max-content);
-  align-self: center;
-  transition: all 0.1s ease;
-  transform: translate(125%, -185%);
-  z-index: -1;
-
-  @media (max-width: $desktop-width) {
-    transform: translate(153%, -130%);
-  }
-
-  @media (max-width: $desktop-width-min) {
-    transform: translate(0, 0);
-    justify-self: center;
-  }
 
   h1 {
     margin: 0 0 15px 0;
@@ -113,39 +101,6 @@
     }
   }
 
-  strong {
-    margin-bottom: 10px;
-    font-family: $proximaBold;
-    font-size: 24px;
-    line-height: 24px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    display: none;
-  }
-
-  ul {
-    margin: 0;
-    padding: 0 0 0 20px;
-    display: none;
-
-    li {
-      margin-bottom: 10px;
-    }
-
-    p {
-      margin: 0;
-      font-family: $proximaNova;
-      font-weight: $normal;
-      font-size: 18px;
-      line-height: 23px;
-    }
-  }
-
-  img {
-    max-width: 240px;
-    display: none;
-  }
-
   &--active {
     max-width: 100%;
     grid-template-columns: 28%;
@@ -153,7 +108,7 @@
     transform: translate(0%, 6%);
     animation: stage-show-elements-2;
     animation-duration: 1s;
-    animation-delay: 0.6s;
+    animation-delay: 0.7s;
     animation-timing-function: ease;
     animation-iteration-count: 1;
     animation-direction: normal;
@@ -185,6 +140,81 @@
   }
 }
 
+.portfolio-page__box-add {
+  max-width: 360px;
+  margin-top: 5%;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 1s ease;
+
+  h2 {
+    font-family: $proximaBold;
+    font-size: 36px;
+    line-height: 36px;
+    text-transform: none;
+  }
+
+  p {
+    font-family: $proximaBold;
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  strong {
+    margin-bottom: 10px;
+    display: inline-block;
+    font-family: $proximaBold;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  ul {
+    @include reset-list;
+
+    li {
+      margin-bottom: 10px;
+
+      p {
+        margin: 0;
+        padding-left: 20px;
+        font-family: $proximaNova;
+        font-weight: $normal;
+        font-size: 18px;
+        line-height: 23px;
+        position: relative;
+
+        &::before {
+          width: 10px;
+          height: 2px;
+          position: absolute;
+          content: "";
+          top: 10px;
+          left: 0;
+          background-color: $black;
+        }
+      }
+    }
+  }
+
+  img {
+    max-width: 240px;
+    margin-top: 10px;
+  }
+
+  &--active {
+    transition: all 1s ease;
+    transition-delay: 1s;
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .portfolio-page__controls {
+    margin-bottom: 20px;
+  }
+}
+
 .portfolio-page__scroll {
   display: grid;
   grid-template-columns: 42% auto;
@@ -204,10 +234,10 @@
 }
 
 .portfolio-page__box-image {
+  margin-top: 20%;
   display: grid;
-  grid-template-columns: 45%;
+  grid-template-columns: 1fr;
   grid-gap: 40px 0;
-  transition: all 1s linear;
 
   @media (max-width: $desktop-width-min) {
     max-width: 710px;
@@ -222,7 +252,7 @@
   border: solid 8px #eeeeee;
   border-radius: 10px;
   box-shadow: -8px -8px 20px rgba(0, 0, 0, 0.2), 8px 8px 20px rgba(0, 0, 0, 0.2);
-  animation: showBox 2s ease;
+  animation: showBox 1.5s ease;
   transform: translateY(0);
 
   @media (max-width: $tablet-width) {
@@ -461,7 +491,7 @@
 
   &--active {
     transition: all 1s linear;
-    width: calc(100% / 1.43);
+    width: calc(100% / 1.26);
     position: fixed;
     top: 0;
     right: 0;
