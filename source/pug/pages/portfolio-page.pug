@@ -145,23 +145,11 @@ block main
             +img('svg', 'icon-left-arrow', 'svg', '48', '48', 'Вернуться в портфолио')
             h2 Портфолио
         .portfolio-page__info
-          h3 Клиент пришел с:
           .portfolio-page__trabls
+            h3 Клиент пришел с:
             p Устаревший сайт со слабым функционалом
             p Отсутствие всех видов продвижения
             p Желание увеличить продажи и нарастить базу постоянных клиентов
-          .portfolio-page__cell
-            h3 Цели
-            ul
-              li
-                p Разработка стратегии для увеличения продаж в интернете
-              li
-                p Ребрендинг торговой марки
-              li
-                p Создание многофункционального сайта магазина
-              li
-                p Подключение всех инструментов продвижения
-          .portfolio-page__company-image
             +img('png', 'company-exim-prev', 'png', '700', '350', 'Эксим')
           .portfolio-page__purposes
             h3 Как мы реализовали:
@@ -190,11 +178,13 @@ block main
               +img('svg', 'people-element-1', 'svg', '430', '280', 'Пользователи')
           .feedback__box.portfolio-page__feedback
             article
-              +img('jpg', 'author-1', 'jpg', '80', '80', 'Автор')
               .feedback__title
-                strong Стив Джобс
-                span Генеральный директор Torwood
+                +img('jpg', 'author-1', 'jpg', '80', '80', 'Автор')
+                .feedback__title-text
+                  strong Стив Джобс
+                  span Генеральный директор Torwood
               p Мы являемся агентством веб- и бизнес-аналитики. Основное направление нашей деятельности – это бизнес-аналитика и ключевые течения интернет-маркетинга: веб-аналитика, SEO-продвижение, контекстная реклама, SMM, а также ряд других сопутствующих услуг.
+              <iframe src="https://www.youtube.com/embed/EeqPIAYPtiQ"></iframe>
             +img('svg', 'arm', 'svg', '1000', '180', 'Рука')
           .portfolio-page__developers
             h3 В проекте участвовали:
@@ -203,8 +193,6 @@ block main
                 article
                   +img(item.path, item.image, item.format, item.width, item.height, item.altText)
                   strong= item.text
-          // .portfolio-page__box-video
-          //    <iframe src="https://www.youtube.com/embed/EeqPIAYPtiQ"></iframe>
         .main-footer.portfolio-page__footer
           .main-footer__wrapper.container
             .main-footer__box

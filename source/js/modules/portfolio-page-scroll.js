@@ -1,62 +1,102 @@
 'use strict';
 
 (function () {
-
   var portfolioPage = document.querySelector('.portfolio-page__company');
 
   if (portfolioPage) {
+
+    const DESKTOP_WIDTH = 1023;
+
     var portfolioBox = document.querySelector('.portfolio-page__box');
     var portfolioBoxAdd = document.querySelector('.portfolio-page__box-add');
     var portfolioWrapper = document.querySelector('.portfolio-page__wrapper');
-    var portfolioBoxImage = document.querySelector('.portfolio-page__box-image');
+    var portfolioBoxImage = document.querySelector('.portfolio-page__box-image')
+    var portfolioFeedback = document.querySelector('.portfolio-page__feedback');
+    var portfolioCompany = document.querySelector('.portfolio-page__company');
     var main = document.querySelector('.box-closed');
     var text = document.querySelector('.text-closed');
 
-    if (window.innerWidth > 1023) {
+    if (window.innerWidth > DESKTOP_WIDTH) {
 
       document.body.style.overflow = 'hidden';
 
       var open = function () {
+        portfolioBoxImage.style.transform = 'translateY(-170%)';
+        portfolioBox.style.transform = 'translateY(-320%)';
+        portfolioBox.style.transitionDelay = '';
+        portfolioBoxImage.style.transitionDelay = '';
         portfolioPage.classList.add('portfolio-page__company--active');
         portfolioBoxAdd.classList.add('portfolio-page__box-add--active');
+        setTimeout(gridOpen, 600);
       };
 
       var closed = function () {
+        portfolioBoxImage.style.transform = '';
+        portfolioBox.style.transform = '';
+        portfolioBox.style.transitionDelay = '0.3s';
+        portfolioBoxImage.style.transitionDelay = '0.3s';
         portfolioPage.classList.remove('portfolio-page__company--active');
         portfolioBoxAdd.classList.remove('portfolio-page__box-add--active');
-      }
+        setTimeout(gridClosed, 400);
+      };
 
-      window.addEventListener('wheel', function (evt) {
-        if (evt.deltaY > 0 && window.innerWidth > 1200) {
-          open();
-        } else if (portfolioPage.scrollTop === 0) {
-          closed();
-        }
-
-      });
-
-
-      main.addEventListener('click', function (evt) {
+      var closedMain = function (evt) {
 
         if (evt.target === main) {
 
           portfolioPage.classList.remove('portfolio-page__company--active');
           portfolioBoxAdd.classList.remove('portfolio-page__box-add--active');
+          portfolioBoxImage.style.transform = '';
+          portfolioBox.style.transform = '';
+          portfolioBox.style.transitionDelay = '';
+          portfolioBoxImage.style.transitionDelay = '';
 
         }
 
-      });
+      };
 
-      text.addEventListener('click', function (evt) {
+      var closedText = function (evt) {
 
         if (evt.target === text) {
 
           portfolioPage.classList.remove('portfolio-page__company--active');
           portfolioBoxAdd.classList.remove('portfolio-page__box-add--active');
+          portfolioBoxImage.style.transform = '';
+          portfolioBox.style.transform = '';
+          portfolioBox.style.transitionDelay = '';
+          portfolioBoxImage.style.transitionDelay = '';
 
         }
 
-      });
+      };
+
+      window.addEventListener('wheel', function (evt) {
+
+        if (evt.deltaY > 0 && window.innerWidth > DESKTOP_WIDTH) {
+          open();
+        } else if (portfolioPage.scrollTop === 0) {
+          closed();
+        }
+
+      })
+
+      var scrollHeight = function () {
+        if (portfolioCompany.scrollTop > 1000) {
+          console.log('scroll');
+        }
+      };
+
+      main.addEventListener('click', closedMain);
+      text.addEventListener('click', closedText);
+      portfolioCompany.addEventListener('scroll', scrollHeight);
+
+      function gridOpen() {
+        portfolioWrapper.style.gridTemplateColumns = '28% auto auto';
+      }
+
+      function gridClosed() {
+        portfolioWrapper.style.gridTemplateColumns = '';
+      }
     }
   }
 

@@ -1,22 +1,8 @@
 .feedback__box {
   position: relative;
+  margin-bottom: 60px;
 
   article {
-    display: grid;
-    grid-template-columns: 80px auto;
-    align-items: center;
-    grid-gap: 0 30px;
-
-    strong {
-      font-family: $proximaBold;
-      font-size: 24px;
-      line-height: 36px;
-    }
-
-    span {
-      display: block;
-    }
-
     p {
       max-width: 550px;
       margin: 30px 0;
@@ -30,5 +16,29 @@
       border-radius: 50%;
       box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.3), 10px 10px 20px rgba(68, 69, 70, 0.15);
     }
+
+    iframe {
+      width: 600px;
+      height: 340px;
+      border: none;
+      display: block;
+    }
+  }
+}
+
+.feedback__title {
+  display: grid;
+  grid-template-columns: 80px auto;
+  align-items: center;
+  grid-gap: 0 30px;
+
+  strong {
+    font-family: $proximaBold;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  span {
+    display: block;
   }
 }
