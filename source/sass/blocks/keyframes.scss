@@ -544,3 +544,13 @@
     transform: translate(-50%, -50%) rotate(45deg);
   }
 }
+
+@keyframes armRight {
+  0% {
+    right: -45%;
+  }
+
+  100% {
+    right: -75px;
+  }
+}

@@ -129,6 +129,7 @@ block main
               a(href="#")
               span Exim
               span Предыдущий проект
+            h1 Exim.by
             .portfolio-page__button-next
               a(href="#")
               span Yartruba
@@ -145,13 +146,19 @@ block main
             +img('svg', 'icon-left-arrow', 'svg', '48', '48', 'Вернуться в портфолио')
             h2 Портфолио
         .portfolio-page__info
+          .portfolio-page__cell
+            h3 Цели
+            p Разработка стратегии для увеличения продаж в интернете
+            p Ребрендинг торговой марки
+            p Создание многофункционального интернет-магазина
+            p Подключение всех инструментов продвижения
           .portfolio-page__trabls
             h3 Клиент пришел с:
             p Устаревший сайт со слабым функционалом
             p Отсутствие всех видов продвижения
             p Желание увеличить продажи и нарастить базу постоянных клиентов
             +img('png', 'company-exim-prev', 'png', '700', '350', 'Эксим')
-          .portfolio-page__purposes
+          .portfolio-page__purposes(style="background: linear-gradient(134.17deg, #F1F7FF 4.98%, #F5F9FF 94.88%);")
             h3 Как мы реализовали:
             p Провели комплексное маркетинговое исследование рынка и конкурентов.
             p Сделали комплексный ребрендинг дизайна сайта, логотипа, визиток,  социальных сетей.
@@ -159,7 +166,6 @@ block main
             p Сделали комплексное SEO.
             p Создали социальные сети и разработали стратегию ведения.
             p Настроили контекстную рекламу Google и Яндекс.
-            +img('svg', 'icon-element-3', 'svg', '850', '290', 'Облако')
           .portfolio-page__advantages
             h3 Результаты:
             p Обновлённый удобный сайт, стал возвращать старых клиентов.
@@ -174,18 +180,21 @@ block main
               strong  увеличился на 30%.
               +img('svg', 'graph-1', 'svg', '430', '280', 'Пользователи')
             p За первый месяц без бюджета на рекламу
-              strong  привлекли 317 подписчиков в Instagram.
+              strong   привлекли 317 подписчиков в Instagram.
               +img('svg', 'people-element-1', 'svg', '430', '280', 'Пользователи')
           .feedback__box.portfolio-page__feedback
             article
               .feedback__title
                 +img('jpg', 'author-1', 'jpg', '80', '80', 'Автор')
+                +img('svg', 'feedback', 'svg', '380', '160', 'Цитата')
+                p Все цели достигнуты, заказчик удовлетворен полученными результатами.
                 .feedback__title-text
                   strong Стив Джобс
                   span Генеральный директор Torwood
+                a(href="#") Больше отзывов
               p Мы являемся агентством веб- и бизнес-аналитики. Основное направление нашей деятельности – это бизнес-аналитика и ключевые течения интернет-маркетинга: веб-аналитика, SEO-продвижение, контекстная реклама, SMM, а также ряд других сопутствующих услуг.
               <iframe src="https://www.youtube.com/embed/EeqPIAYPtiQ"></iframe>
-            +img('svg', 'arm', 'svg', '1000', '180', 'Рука')
+              a(href="#") Больше отзывов
           .portfolio-page__developers
             h3 В проекте участвовали:
             .portfolio-page__box-developers
@@ -193,6 +202,11 @@ block main
                 article
                   +img(item.path, item.image, item.format, item.width, item.height, item.altText)
                   strong= item.text
+          .portfolio-page__leadmagnit
+            a(href="#")
+              +img('svg', 'lead-magnit', 'svg', '240', '197', 'Заказать проект')
+            p Посетить сайт
+              a(href="#")  www.exim.by
         .main-footer.portfolio-page__footer
           .main-footer__wrapper.container
             .main-footer__box
