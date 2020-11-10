@@ -107,7 +107,8 @@ block main
               a(href="#")
               span Yartruba
               span Следующий проект
-          h2 Exim.by
+          h2
+            a(href="#") Exim.by
           p ЗАО «Эксимэлектро» более 17 лет поставщики качественной электротехнической продукции в РБ
           strong Цели
           ul
@@ -119,7 +120,8 @@ block main
               p Создание многофункционального сайта магазина
             li
               p Подключение всех инструментов продвижения
-          +img('svg', 'lead-magnit', 'svg', '240', '190', 'Заказать проект')
+          a(href="#")
+            +img('svg', 'lead-magnit', 'svg', '240', '190', 'Заказать проект')
         .portfolio-page__box-image
           .portfolio-page__image
             a(href="#")
@@ -158,7 +160,7 @@ block main
             p Отсутствие всех видов продвижения
             p Желание увеличить продажи и нарастить базу постоянных клиентов
             +img('png', 'company-exim-prev', 'png', '700', '350', 'Эксим')
-          .portfolio-page__purposes(style="background: linear-gradient(134.17deg, #F1F7FF 4.98%, #F5F9FF 94.88%);")
+          .portfolio-page__purposes
             h3 Как мы реализовали:
             p Провели комплексное маркетинговое исследование рынка и конкурентов.
             p Сделали комплексный ребрендинг дизайна сайта, логотипа, визиток,  социальных сетей.
@@ -183,11 +185,9 @@ block main
               strong   привлекли 317 подписчиков в Instagram.
               +img('svg', 'people-element-1', 'svg', '430', '280', 'Пользователи')
           .feedback__box.portfolio-page__feedback
+            +picture('svg', 'arm', 'arm-mobile', 'svg', '1130', '180', 'Цель достигнута', '767')
             article
               .feedback__title
-                +img('jpg', 'author-1', 'jpg', '80', '80', 'Автор')
-                +img('svg', 'feedback', 'svg', '380', '160', 'Цитата')
-                p Все цели достигнуты, заказчик удовлетворен полученными результатами.
                 .feedback__title-text
                   strong Стив Джобс
                   span Генеральный директор Torwood

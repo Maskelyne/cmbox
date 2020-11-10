@@ -200,6 +200,7 @@
     font-family: $proximaBold;
     font-size: 18px;
     line-height: 23px;
+    color: $dark-black;
   }
 
   strong {
@@ -210,6 +211,7 @@
     line-height: 24px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
+    color: $dark-black;
   }
 
   ul {
@@ -245,10 +247,14 @@
     }
   }
 
-  img {
+  a {
     max-width: 240px;
     margin-top: 10px;
     justify-self: center;
+
+    &:hover {
+      color: $white;
+    }
   }
 
   &--active {
@@ -260,6 +266,7 @@
 
   .portfolio-page__controls {
     margin-bottom: 20px;
+    color: $dark-black;
   }
 
 
@@ -613,6 +620,7 @@
     padding-top: 0;
     position: static;
     overflow: inherit;
+    overflow-x: hidden;
     height: auto;
   }
 
@@ -684,7 +692,11 @@
 }
 
 .portfolio-page__info {
-  padding: 0 70px;
+  padding-left: 70px;
+
+  @media (max-width: $desktop-width-min) {
+    padding: 0 70px;
+  }
 
   @media (max-width: $tablet-width) {
     padding: 0 15px;
@@ -736,6 +748,7 @@
   max-width: 900px;
   margin: 50px 0 50px 0;
   padding: 30px;
+  background-image: linear-gradient(134.17deg, #F1F7FF 4.98%, #F5F9FF 94.88%);
   box-shadow: inset -5px -5px 5px rgba(240, 242, 243, 0.5), inset 5px 5px 10px rgba(166, 180, 200, 0.75);
   border-radius: 10px;
 
@@ -769,9 +782,9 @@
   @include reset-list;
 
   img {
-    margin: 30px 0 60px 0;
-    max-width: 700px;
-  }
+      margin: 30px 0 60px 0;
+      max-width: 700px;
+    }
 
   p {
     max-width: 750px;
@@ -922,8 +935,28 @@
 }
 
 .portfolio-page__feedback {
-  margin-top: 130px;
-  max-width: 600px;
+  padding-top: 170px;
+  position: relative;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 45px;
+  }
+
+  picture {
+    width: 1300px;
+    position: absolute;
+    top: -80px;
+    left: 0;
+
+    @media (max-width: $tablet-width) {
+      max-width: 750px;
+      top: -100px;
+    }
+  }
+
+  article {
+    max-width: 600px;
+  }
 
   a:last-child {
     margin-top: 30px;
@@ -960,41 +993,32 @@
   }
 
   .feedback__title {
-    grid-template-columns: 80px 290px auto;
+    grid-template-columns: 1fr auto;
     position: relative;
 
-    @media (max-width: $desktop-width) {
-      grid-template-columns: 80px 260px auto;
-    }
-
-    @media (max-width: $desktop-width-min) {
-      grid-template-columns: 80px 290px auto;
-    }
-
     @media (max-width: $tablet-width) {
-      grid-template-columns: 80px auto;
+      grid-template-columns: 1fr;
     }
 
     img {
-      &:nth-child(2) {
-        max-width: 380px;
-        position: absolute;
-        top: -140px;
-        left: 40px;
+      max-width: 380px;
+      position: absolute;
+      top: -150px;
+      left: 25px;
 
-        @media (max-width: $tablet-width) {
-          top: -110px;
-          left: 0;
-          max-width: 290px;
-        }
+      @media (max-width: $tablet-width) {
+        top: -110px;
+        left: 0;
+        max-width: 290px;
       }
     }
 
     p {
+      max-width: 400px;
       margin: 0;
       position: absolute;
-      top: -115px;
-      left: 95px;
+      top: -125px;
+      left: 80px;
       font-family: $proximaBold;
       font-size: 20px;
       line-height: 26px;
@@ -1011,6 +1035,8 @@
     }
 
     a {
+      padding-right: 25px;
+      text-align: right;
       display: inline-block;
       font-weight: $bold;
       color: $dark-blue;

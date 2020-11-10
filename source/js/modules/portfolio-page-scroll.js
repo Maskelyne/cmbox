@@ -11,8 +11,6 @@
     var portfolioBoxAdd = document.querySelector('.portfolio-page__box-add');
     var portfolioWrapper = document.querySelector('.portfolio-page__wrapper');
     var portfolioBoxImage = document.querySelector('.portfolio-page__box-image')
-    var portfolioFeedback = document.querySelector('.portfolio-page__feedback');
-    var portfolioCompany = document.querySelector('.portfolio-page__company');
     var main = document.querySelector('.box-closed');
     var text = document.querySelector('.text-closed');
 
@@ -80,15 +78,8 @@
 
       })
 
-      var scrollHeight = function () {
-        if (portfolioCompany.scrollTop > 1000) {
-          console.log('scroll');
-        }
-      };
-
       main.addEventListener('click', closedMain);
       text.addEventListener('click', closedText);
-      portfolioCompany.addEventListener('scroll', scrollHeight);
 
       function gridOpen() {
         portfolioWrapper.style.gridTemplateColumns = '28% auto auto';
