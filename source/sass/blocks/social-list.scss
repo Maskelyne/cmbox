@@ -45,8 +45,6 @@
   //}
 
   &--tablet {
-    display: none;
-
     @media (max-width: $tablet-width) {
       width: auto;
       padding: 0;
