@@ -881,7 +881,7 @@ main {
 
 @media (max-width: 767px) {
   .main {
-    background-image: url("../img/png/bckg-main.png");
+    background-image: url("../img/jpg/bckg-main.jpg");
     background-repeat: no-repeat;
     background-size: cover; } }
 

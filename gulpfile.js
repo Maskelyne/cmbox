@@ -123,7 +123,7 @@ gulp.task('image:build', function () {
   return gulp.src(path.source.img)
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 5}),
-      imagemin.mozjpeg({progressive: true, quality: 75}),
+      imagemin.mozjpeg({progressive: true, quality: 80}),
       imagemin.svgo(),
     ]),
      pngquant({quality: '65-70', speed: 5}))
