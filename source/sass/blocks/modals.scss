@@ -1,4 +1,5 @@
 .modal {
+  padding: 0 10px;
   width: 100%;
   height: 100%;
   position: fixed;
@@ -11,8 +12,28 @@
   align-items: center;
   margin: 0;
 
+  h3 {
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    color: $dark-blue;
+
+    @media (max-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
   form {
     margin-right: 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    .button {
+      font-size: 16px;
+      line-height: 16px;
+      width: 200px;
+    }
   }
 }
 
@@ -25,13 +46,8 @@
   width: 100%;
   position: relative;
 
-  @media (max-width: $mobile-width) {
-    padding: 0 10px;
-  }
-
   .contacts__form {
     box-shadow: none;
-    background-color: #dfecfc;
 
     @media (max-width: $mobile-width) {
       padding: 40px 40px;
@@ -64,9 +80,9 @@
     animation: rotateClose 0.3s ease-out;
   }
 
-  @media (max-width: $mobile-width) {
-    top: 7px;
-    right: 17px;
+  @media (max-width: $tablet-width) {
+    top: 10px;
+    right: 10px;
   }
 
   &::before {
@@ -96,10 +112,6 @@
 .modal-thanks {
   display: none;
 
-  @media (max-width: $tablet-width) {
-    padding: 0 10px;
-  }
-
   .modal__image {
     margin-top: 40px;
     grid-row: 2;
@@ -110,6 +122,8 @@
     @media (max-width: $mobile-width) {
       grid-row: 3;
       background-color: $white;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
     }
 
     img {
@@ -175,6 +189,7 @@
     font-family: $proximaBold;
     font-size: 24px;
     line-height: 24px;
+    text-align: left;
     color: $dark-blue;
   }
 
@@ -201,7 +216,6 @@
 }
 
 .modal-development {
-  padding: 0 10px;
   display: none;
 
   .modal__wrapper {
@@ -263,12 +277,108 @@
       }
     }
   }
+}
 
-  .modal__btn-closed {
-    @media (max-width: $tablet-width) {
-      right: 10px;
+.modal-feedback,
+.modal-analysis {
+  display: none;
+}
+
+.modal-feedback__wrapper,
+.modal-analysis__wrapper {
+  max-width: 400px;
+  width: 100%;
+  position: relative;
+}
+
+.modal__form,
+.contacts__form {
+  padding: 30px 50px;
+  display: grid;
+  grid-gap: 25px 0;
+  background-color: $light-gray;
+  border-radius: 10px;
+  position: relative;
+
+  @media (max-width: $tablet-width) {
+    padding: 30px;
+  }
+
+  form {
+    display: grid;
+    grid-gap: 30px 0;
+  }
+
+  label {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    cursor: text;
+    transition: all 0.3s linear;
+  }
+
+  input {
+    width: 100%;
+    padding: 0;
+    border: none;
+    border-bottom: solid 1px $dark-black;
+    outline: none;
+    background-color: transparent;
+
+    &:required {
+      + label {
+        &::after {
+          position: absolute;
+          content: "*";
+          top: 0;
+          right: -8px;
+        }
+      }
+    }
+
+    &:focus,
+    &.not-empty {
+      + label {
+        color: #666666;
+        font-size: 15px;
+        transform: translateY(-15px);
+        transition: all 0.3s linear;
+      }
     }
   }
+
+  textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-bottom: solid 1px $dark-black;
+    outline: none;
+    background-color: transparent;
+    transition: all 0.3s linear;
+    resize: none;
+
+    &:focus,
+    &.not-empty {
+      + label {
+        color: #666666;
+        font-size: 15px;
+        transform: translateY(-15px);
+        transition: all 0.3s linear;
+      }
+    }
+  }
+}
+
+.modal__user-name,
+.modal__user-email,
+.modal__user-position,
+.modal__user-company,
+.modal__user-comment,
+.modal__user-phone,
+.modal__user-site {
+  position: relative;
 }
 
 .modal-active {

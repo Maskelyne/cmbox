@@ -1,0 +1,42 @@
+.benefit__wrapper {
+  @media (max-width: $desktop-width-min) {
+    padding: 0 120px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 0 15px;
+  }
+
+  h2 {
+    margin: 40px 0 30px 0;
+    text-align: center;
+  }
+
+  article {
+    p {
+      margin: 0 0 5px 0;
+      padding-left: 20px;
+      position: relative;
+
+      &::before {
+        width: 10px;
+        height: 2px;
+        position: absolute;
+        content: "";
+        top: 10px;
+        left: 0;
+        background-color: $dark-red;
+      }
+    }
+  }
+
+  .benefit__box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 40px;
+
+    @media (max-width: $desktop-width-min) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

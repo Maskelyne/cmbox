@@ -120,7 +120,7 @@ block main
               p Создание многофункционального сайта магазина
             li
               p Подключение всех инструментов продвижения
-          a(href="#")
+          a(href="#").button--consultation
             +img('svg', 'lead-magnit', 'svg', '240', '190', 'Заказать проект')
         .portfolio-page__box-image
           .portfolio-page__image
@@ -203,7 +203,7 @@ block main
                   +img(item.path, item.image, item.format, item.width, item.height, item.altText)
                   strong= item.text
           .portfolio-page__leadmagnit
-            a(href="#")
+            a(href="#").button--consultation
               +img('svg', 'lead-magnit', 'svg', '240', '197', 'Заказать проект')
             p Посетить сайт
               a(href="#")  www.exim.by
@@ -231,18 +231,18 @@ block main
   section.modal.contacts.modal-consultation
     .modal-consultation__wrapper
       .contacts__form
-        p Как нам с Вами связаться?
+        h3 Заказать проект
         form(id="form" action="#" method="get")
-          .contacts__user-name
+          .modal__user-name
             input(id="user_name" type="text" name="user_name" required)
             label(for="user_name") Имя
-          .contacts__user-tel
+          .modal__user-phone
             input(id="user_phone" type="tel" name="user_phone" required)
             label(for="user_phone") Телефон
-          .contacts__user-comment
+          .modal__user-comment
             textarea(id="user_comment" name="user_comment")
             label(for="user_comment") Комментарий
-          a(href="#").button.button-form-close
+          a(href="#").button
             span Отправить
       a.modal__btn-closed(href="#")
         span.visually-hidden Закрыть модальное окно

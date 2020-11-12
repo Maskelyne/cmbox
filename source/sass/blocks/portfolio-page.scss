@@ -935,7 +935,7 @@
 }
 
 .portfolio-page__feedback {
-  padding-top: 170px;
+  padding: 170px 0 0 0;
   position: relative;
 
   @media (max-width: $tablet-width) {
@@ -956,6 +956,7 @@
 
   article {
     max-width: 600px;
+    display: block;
   }
 
   a:last-child {

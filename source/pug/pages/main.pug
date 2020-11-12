@@ -52,29 +52,29 @@ block main
     section.card-box
       .card-box__wrapper.container
         .card-box__box
-          span
-            +img('svg', 'img-corners', 'svg', '50', '50', 'Фон')
           .card-box__inner
             .card__box-text
               h2 Комплексная интернет-упаковка
               p — это извлечение самой сути вашего бизнеса, ценностей, выявление преимуществ компании и донесение их вашим клиентам в Интернете, используя современные маркетинговые инструменты.
             +box-list
-          span
-            +img('svg', 'img-corners', 'svg', '50', '50', 'Фон')
     section.advantages
       .advantages__wrapper.container
         h2 Преимущества комплексного подхода
         .advantages__box-list
           .advantages__box
             +img('svg', 'icon-business', 'svg', '100', '100', 'Бизнес')
-            p Полное погружение в ваш бизнес
+            p
+              strong Мы сопровождаем на всем пути развития
+              |  вашего бизнеса в Интернете.
           .advantages__box
             +img('svg', 'icon-money', 'svg', '100', '100', 'Доход')
-            p Прибыль увеличивается в
-              strong  3 раза
+            p
+              strong Мы полностью погружаемся в ваш бизнес,
+              |  чтобы понять его тонкости и нюансы.
           .advantages__box
             +img('svg', 'icon-time', 'svg', '100', '100', 'Время')
-            p Мы экономим ваше время
+            p Всегда работаем на
+              strong  результат
     section.business
       .business__wrapper.container
         .business__box
@@ -94,16 +94,16 @@ block main
           .business__box-form
             h2 Бесплатный аудит
             form(method="POST" action="#")
-              .business__name
+              .modal__user-name
                 input(id="user_name" type="text" name="user_name")
                 label(for="user_name") Имя
-              .business__company
+              .modal__user-company
                 input(id="user_company" type="text" name="user_company")
                 label(for="user_company") Сфера деятельности компании
-              .business__phone
+              .modal__user-phone
                 input(id="user_phone" type="text" name="user_phone" required)
                 label(for="user_phone") Номер телефона
-              .business__comments
+              .modal__user-comment
                 textarea(id="user_comments" name="user_comments")
                 label(for="user_comments") Комментарий
               button.button(type="submit")

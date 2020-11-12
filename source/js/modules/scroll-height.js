@@ -53,7 +53,7 @@
   if (stageWrapper) {
 
     const TABLET_WIDTH = 767;
-    let stageBox = document.querySelector('.stage__nav-box');
+    let stageBox = document.querySelector('.stages__nav-box');
 
     let setHeight = function () {
       let isTablet = window.innerWidth > TABLET_WIDTH;

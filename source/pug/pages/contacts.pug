@@ -33,16 +33,16 @@ block main
             .contacts__form
               p Как с Вами связаться?
               form(id="form" action="#" method="get")
-                .contacts__user-name
-                  input(id="user_name" type="text" name="user_name" required invalid)
+                .modal__user-name
+                  input(id="user_name" type="text" name="user_name" required)
                   label(for="user_name") Имя
-                .contacts__user-tel
+                .modal__user-phone
                   input(id="user_phone" type="tel" name="user_phone" required)
                   label(for="user_phone") Телефон
-                .contacts__user-email
+                .modal__user-email
                   input(id="user_email" type="tel" name="user_email")
                   label(for="user_email") Email
-                .contacts__user-comment
+                .modal__user-comment
                   textarea(id="user_comment" name="user_comment")
                   label(for="user_comment") Комментарий
                 button.button(type="submit")

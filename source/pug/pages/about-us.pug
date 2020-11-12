@@ -88,47 +88,48 @@ block main
         h1 О нас
         .about-us__box
           .about-us__box-text
-            p Мы являемся агентством веб- и бизнес-аналитики. Основное направление нашей деятельности – это бизнес-аналитика и ключевые течения интернет-маркетинга: веб-аналитика, SEO-продвижение, контекстная реклама, SMM, а также ряд других сопутствующих услуг.
-            ul.about-us__list
-              li
-                +img('about-us', 'icon-loupe', 'svg', '48', '48', 'Инструменты')
-                p Используем
-                  span  самые эффективные инструменты
-                  |  для создания комплексного продвижения в интернете.
-              li
-                +img('about-us', 'icon-loupe', 'svg', '48', '48', 'Инструменты')
-                p Всегда
-                  span  ход рекламной компании,
-                  |  чтобы оперативно внести корректировки для повышения её эффективности.
-              li
-                +img('about-us', 'icon-loupe', 'svg', '48', '48', 'Инструменты')
-                p Всегда
-                  span  ответственно относимся
-                  |  к исполнению нашей работы.
-              li
-                +img('about-us', 'icon-loupe', 'svg', '48', '48', 'Инструменты')
-                p
-                  span  Гарантируем хороший результат
-                  |  и фиксируем это в договоре для вашего спокойствия.
+            p
+              strong «CMbox»
+              |  - маркетинговое агентство, предоставляющее комплекс услуг по интернет-упаковке бизнеса.
+            p
+              strong Наши направления
+              |  – комплексный анализ интернет-рынка, разработка маркетинговой стратегии, разработка дизайна и брендинга, разработка сайтов, SEO-продвижение, контекстная реклама, SMM-продвижение, видеомаркетинг, подбор и внедрение CRM-систем.
+            strong Мы всегда работаем на результат!
           .about-us__image
             +picture('about-us', 'img-boss', 'img-boss-mobile', 'png', '815', '430', 'Руководство', '767')
             ul.about-us__nav-list
               each item in navList
                 li
                   a(href="#")= item.linkText
-    section.clients
-      .clients__wrapper.container
-        h2 Наши клиенты
-        .clients__slider-wrapper
-          .clients__swiper-container.swiper-container
-            ul.clients__image-list.swiper-wrapper
-              each item in imageList
-                li.swiper-slide
-                  .clients__image-box
-                    a(href= item.link)
-                      +img(item.path, item.name, item.format, item.width, item.height, item.altText)
-            .clients__swiper-button-prev.swiper-button-prev
-            .clients__swiper-button-next.swiper-button-next
+    section.benefit
+      .benefit__wrapper.container
+        h2 Наши преимущества
+        .benefit__box
+          article
+            p Мы сопровождаем на всем пути развития вашего бизнеса в Интернете.
+            p Вы сокращаете количество подрядчиков до одного агентства, что уменьшает риски и экономит деньги.
+            p Мы полностью погружаемся в ваш бизнес, чтобы понять его тонкости и нюансы.
+            p Соблюдаем сроки и оговоренные объемы работ, потому как ответственно относимся к нашим обещаниям.
+            p Помогаем увеличить ваши продажи и прибыль, используя самые эффективные инструменты комплексного продвижения и продаж.
+          article
+            p С нами ваш сайт займет ТОП-позиции в Google, Яндекс и других поисковиках.
+            p Разрабатываем выгодную стратегию продвижения вашего бизнеса в Интернете.
+            p Во время обслуживания у нас вы всегда знаете ход рекламных кампаний, результаты по продвижению SEO, динамик SMM - сообществ, потому что мы предоставляем короткие и понятные отчеты в цифрах о результативности продвижения.
+            p
+              strong Мы думаем, этот пункт вы захотите написать сами после нашей работы.
+    //section.clients
+    //  .clients__wrapper.container
+    //    h2 Наши клиенты
+    //    .clients__slider-wrapper
+    //      .clients__swiper-container.swiper-container
+    //        ul.clients__image-list.swiper-wrapper
+    //          each item in imageList
+    //            li.swiper-slide
+    //              .clients__image-box
+    //                a(href= item.link)
+    //                  +img(item.path, item.name, item.format, item.width, item.height, item.altText)
+    //        .clients__swiper-button-prev.swiper-button-prev
+    //        .clients__swiper-button-next.swiper-button-next
     section.teams
       .teams__wrapper.container
         h2 Наша команда

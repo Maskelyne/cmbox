@@ -13,7 +13,7 @@
   }
 
   p {
-    margin: 0 0 30px 0;
+    margin: 0 0 15px 0;
 
     @media (max-width: $tablet-width) {
       margin-bottom: 15px;
@@ -22,6 +22,27 @@
 }
 
 .about-us__box-text {
+  p {
+    strong {
+      font-family: $proximaBold;
+      font-size: 16px;
+      line-height: 16px;
+      color: $dark-blue;
+    }
+  }
+
+  strong {
+    font-family: $proximaBold;
+    font-size: 24px;
+    line-height: 36px;
+    color: $dark-red;
+
+    @media (max-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
   @media (max-width: $desktop-width-min) {
     padding: 0 90px;
   }
@@ -218,30 +239,3 @@
   }
 }
 
-.about-us__list {
-  @include reset-list;
-  max-width: 495px;
-  margin-left: 10px;
-
-  li {
-    display: grid;
-    grid-template-columns: 45px auto;
-    grid-gap: 0 10px;
-
-    @media (max-width: $tablet-width) {
-      grid-template-columns: 35px auto;
-    }
-  }
-
-  p {
-    margin: 0 0 15px 0;
-  }
-
-  @media (max-width: $tablet-width) {
-    margin-left: 0;
-  }
-
-  span {
-    font-family: $proximaBold;
-  }
-}
