@@ -5,31 +5,26 @@
   const KEY_CODE = 27;
 
   var overlayModal = document.querySelector('.modal');
-  var modalConsultation = document.querySelector('.modal-consultation');
+  var modalAnalysis = document.querySelector('.modal-analysis');
+  var modalAnalysisBtn = document.querySelector('.analysis-btn');
+  // var modalThanks = document.querySelector('.modal-thanks');
+  var modalClose = document.querySelectorAll('.modal__btn-closed');
 
-  if (modalConsultation) {
+  if (modalAnalysis) {
 
-    // var modalThanks = document.querySelector('.modal-thanks');
-    var modalConsultationBtn = document.querySelectorAll('.button--consultation');
-    var modalClose = document.querySelectorAll('.modal__btn-closed');
+    modalAnalysisBtn.addEventListener('click', function (evt) {
+      evt.preventDefault();
 
-    for(var y = 0; y < modalConsultationBtn.length; y++) {
-
-      modalConsultationBtn[y].addEventListener('click', function (evt) {
-        evt.preventDefault();
-
-        modalConsultation.classList.add('modal-active');
-        document.body.style.overflow = 'hidden';
-      });
-
-    }
+      modalAnalysis.classList.add('modal-active');
+      document.body.style.overflow = 'hidden';
+    });
 
     for (var i = 0; i < modalClose.length; i++) {
       modalClose[i].addEventListener('click', function (evt) {
         evt.preventDefault();
 
         // modalThanks.classList.remove('modal-active');
-        modalConsultation.classList.remove('modal-active');
+        modalAnalysis.classList.remove('modal-active');
         document.body.style.overflow = '';
       });
     }
@@ -39,8 +34,8 @@
       if (evt.keyCode === KEY_CODE) {
         evt.preventDefault();
 
-        modalConsultation.classList.contains(`modal-active`);
-        modalConsultation.classList.remove(`modal-active`);
+        modalAnalysis.classList.contains(`modal-active`);
+        modalAnalysis.classList.remove(`modal-active`);
         // modalThanks.classList.contains('modal-active');
         // modalThanks.classList.remove('modal-active');
         document.body.style.overflow = ``;
@@ -53,8 +48,8 @@
 
       if (evt.target === overlayModal) {
 
-        modalConsultation.classList.remove(`modal-active`);
-        modalConsultation.classList.add(`modal-closed`);
+        modalAnalysis.classList.remove(`modal-active`);
+        modalAnalysis.classList.add(`modal-closed`);
         document.body.style.overflow = ``;
 
       }

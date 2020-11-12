@@ -279,17 +279,20 @@
   }
 }
 
-.modal-feedback {
+.modal-feedback,
+.modal-analysis {
   display: none;
 }
 
-.modal-feedback__wrapper {
+.modal-feedback__wrapper,
+.modal-analysis__wrapper {
   max-width: 400px;
   width: 100%;
   position: relative;
 }
 
-.modal-feedback__form {
+.modal__form,
+.contacts__form {
   padding: 30px 50px;
   display: grid;
   grid-gap: 25px 0;
@@ -368,10 +371,13 @@
   }
 }
 
-.modal-feedback__user-name,
-.modal-feedback__user-position,
-.modal-feedback__user-company,
-.modal-feedback__user-comment {
+.modal__user-name,
+.modal__user-email,
+.modal__user-position,
+.modal__user-company,
+.modal__user-comment,
+.modal__user-phone,
+.modal__user-site {
   position: relative;
 }
 

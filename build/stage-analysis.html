@@ -79,7 +79,7 @@
     <main>
       <section class="stages">
         <h1>Этапы</h1>
-        <div class="stage__nav-box">
+        <div class="stages__nav-box">
           <ul class="stages__nav-list">
             <li>
               <div class="stages__image stages__image--active"><a href="stage-analysis.html"><span>Анализ</span><img src="assets/img/stage-boxes/stage-box-active.svg" width="220" height="175" alt="Анализ"/></a></div>
@@ -110,25 +110,25 @@
         </div>
         <div class="stages__text">
           <h2>Анализ</h2>
-          <p>Проводим первичный<a href="#"> бесплатный</a> базовый анализ рынка. Первый этап в комплексном маркетинге – это проведение анализа ниши вашего бизнеса, анализа вашей целевой аудитории, анализа конкурентов. Всё это позволит максимально точно оценить рынок и определить возможности развития вашего бизнеса.</p>
-          <p>Что включает анализ:</p>
-          <ol class="stages__list">
-            <li>
-              <p>Составление максимально полного портрета именно вашей целевой аудитории.</p>
-            </li>
-            <li>
-              <p>Поиск прямых и косвенных конкурентов, работающих с вашей целевой аудиторией.</p>
-            </li>
-            <li>
-              <p>Анализ интернет-упаковки конкурентов, использования ими всех современных инструментов продвижения.</p>
-            </li>
-            <li>
-              <p>Определение их сильных и слабых сторон.</p>
-            </li>
-            <li>
-              <p>Определение уникальности вашего бизнеса и способов отстройки от конкурентов.</p>
-            </li>
-          </ol>
+          <p>Первый этап в комплексном маркетинге – это анализ ниши вашего бизнеса, вашей целевой аудитории и конкурентов. Всё это позволяет максимально точно оценить рынок и определить возможности развития компании.</p>
+          <div class="stages__list">
+            <p>Что входит в<strong> полный анализ:</strong></p>
+            <p>1. Оценка потенциала рынка и покупательского спроса на ваши товары или услуги.</p>
+            <p>2. Составление портрета именно ваших потенциальных покупателей.</p>
+            <p>3. Поиск компаний с такой же целевой аудиторией, как у вас.</p>
+            <p>4. Аналитика интернет-упаковки основных конкурирующих фирм, инструментов продвижения, которые они используют.</p>
+            <p>5. Определение преимуществ и недостатков всех инструментов продаж конкурентов.</p>
+            <p>6. Определение главных конкурентных преимуществ вашего бизнеса и его позиционирования в нише.</p>
+          </div>
+          <div class="stages__list">
+            <p>Что входит в<strong> базовый анализ</strong></p>
+            <p>1. В него входит оценка рынка и покупательского спроса.</p>
+          </div>
+          <div class="stages__coffee">
+            <div class="stages__coffee-box"><img src="assets/img/svg/icon-coffee.svg" width="260" height="175" alt="Чашка кофе"/>
+              <p>Базовый анализ<br><strong> по цене</strong> чашки кофе</p>
+            </div><a class="button analysis-btn" href="#"><span>Заказать</span></a>
+          </div>
         </div>
       </section>
     </main>
@@ -167,6 +167,37 @@
         </div>
       </div>
     </footer>
+    <section class="modal modal-analysis">
+      <div class="modal-analysis__wrapper">
+        <div class="modal__form">
+          <h3>Заказать анализ</h3>
+          <form id="form" action="#" method="get">
+            <div class="modal__user-name">
+              <input id="user_name" type="text" name="user_name" required>
+              <label for="user_name">Имя</label>
+            </div>
+            <div class="modal__user-phone">
+              <input id="user_phone" type="text" name="user_phone" required>
+              <label for="user_phone">Номер телефона</label>
+            </div>
+            <div class="modal__user-site">
+              <input id="user_site" type="text" name="user_site">
+              <label for="user_site">Сайт</label>
+            </div><a class="button" href="#"><span>Отправить</span></a>
+          </form>
+        </div><a class="modal__btn-closed" href="#"><span class="visually-hidden">Закрыть модальное окно</span></a>
+      </div>
+    </section>
+    <section class="modal modal-thanks">
+      <div class="modal__wrapper">
+        <div class="modal__box">
+          <h3>Ваша заявка отправлена!</h3>
+          <p>В ближайшее время мы<br>с вами свяжемся.</p><a class="button" href="#"><span>На главную</span></a>
+        </div>
+        <div class="modal__image"><img src="assets/img/svg/modals-check.svg" width="190" height="200" alt="Элемент 2"/><img src="assets/img/svg/modals-box.svg" width="460" height="200" alt="Элемент 1"/>
+        </div><a class="modal__btn-closed" href="#"><span class="visually-hidden">Закрыть модальное окно</span></a>
+      </div>
+    </section>
     <script src="assets/js/vendor.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/default.js"></script>

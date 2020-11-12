@@ -80,7 +80,7 @@ block main
               strong Стив Джобс
               span Генеральный директор Torwood
             p Мы являемся агентством веб- и бизнес-аналитики. Основное направление нашей деятельности – это бизнес-аналитика и ключевые течения интернет-маркетинга: веб-аналитика, SEO-продвижение, контекстная реклама, SMM, а также ряд других сопутствующих услуг.
-            <iframe src="https://www.youtube.com/embed/EeqPIAYPtiQ"></iframe>
+            +img('png', 'feedback-1', 'png', '225', '300', 'Сертификат')
           article
             .feedback__title
               strong Илон Маск
@@ -112,19 +112,19 @@ block main
 
     section.modal.modal-feedback
       .modal-feedback__wrapper
-        .modal-feedback__form
+        .modal__form
           h3 Написать отзыв
           form(id="form" action="#" method="get")
-            .modal-feedback__user-name
+            .modal__user-name
               input(id="user_name" type="text" name="user_name" required)
               label(for="user_name") Имя
-            .modal-feedback__user-position
+            .modal__user-position
               input(id="user_position" type="tel" name="user_position" required)
               label(for="user_position") Должность
-            .modal-feedback__user-company
+            .modal__user-company
               input(id="user_company" type="text" name="user_company" required)
               label(for="user_company") Название компании
-            .modal-feedback__user-comment
+            .modal__user-comment
               textarea(id="user_comment" name="user_comment")
               label(for="user_comment") Комментарий
             a(href="#").button
