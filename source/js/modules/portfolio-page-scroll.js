@@ -1,7 +1,7 @@
 'use strict';
 
 (function () {
-  var portfolioPage = document.querySelector('.portfolio-page__company');
+  var portfolioPage = document.querySelector('.portfolio-page__company')
 
   if (portfolioPage) {
 
@@ -76,7 +76,7 @@
           closed();
         }
 
-      })
+      });
 
       main.addEventListener('click', closedMain);
       text.addEventListener('click', closedText);
