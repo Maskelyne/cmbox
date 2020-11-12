@@ -6,24 +6,28 @@
 
   var overlayModal = document.querySelector('.modal');
   var modalConsultation = document.querySelector('.modal-consultation');
-  var modalThanks = document.querySelector('.modal-thanks');
-  var modalConsultationBtn = document.querySelector('.button--consultation');
+  // var modalThanks = document.querySelector('.modal-thanks');
+  var modalConsultationBtn = document.querySelectorAll('.button--consultation');
   var modalClose = document.querySelectorAll('.modal__btn-closed');
 
   if (modalConsultationBtn) {
 
-    modalConsultationBtn.addEventListener('click', function (evt) {
-      evt.preventDefault();
+    for(var y = 0; y < modalConsultationBtn.length; y++) {
 
-      modalConsultation.classList.add('modal-active');
-      document.body.style.overflow = 'hidden';
-    });
+      modalConsultationBtn[y].addEventListener('click', function (evt) {
+        evt.preventDefault();
+
+        modalConsultation.classList.add('modal-active');
+        document.body.style.overflow = 'hidden';
+      });
+
+    }
 
     for (var i = 0; i < modalClose.length; i++) {
       modalClose[i].addEventListener('click', function (evt) {
         evt.preventDefault();
 
-        modalThanks.classList.remove('modal-active');
+        // modalThanks.classList.remove('modal-active');
         modalConsultation.classList.remove('modal-active');
         document.body.style.overflow = '';
       });
@@ -36,8 +40,8 @@
 
         modalConsultation.classList.contains(`modal-active`);
         modalConsultation.classList.remove(`modal-active`);
-        modalThanks.classList.contains('modal-active');
-        modalThanks.classList.remove('modal-active');
+        // modalThanks.classList.contains('modal-active');
+        // modalThanks.classList.remove('modal-active');
         document.body.style.overflow = ``;
 
       }
@@ -56,15 +60,15 @@
 
     });
 
-    modalThanks.addEventListener('click', function (evt) {
-
-      if (evt.target === modalThanks) {
-        modalThanks.classList.contains('modal-active');
-        modalThanks.classList.remove('modal-active');
-        document.body.style.overflow = ``;
-      }
-
-    })
+    // modalThanks.addEventListener('click', function (evt) {
+    //
+    //   if (evt.target === modalThanks) {
+    //     modalThanks.classList.contains('modal-active');
+    //     modalThanks.classList.remove('modal-active');
+    //     document.body.style.overflow = ``;
+    //   }
+    //
+    // })
 
   }
 

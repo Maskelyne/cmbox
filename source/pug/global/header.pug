@@ -18,6 +18,10 @@ mixin header()
         link: 'portfolio.html'
       },
       {
+        text: 'Отзывы',
+        link: 'feedback.html'
+      },
+      {
         text: 'Блог',
         link: 'blog.html'
       },
@@ -169,11 +173,18 @@ mixin header()
               li
                 a(href= item.link)= item.text
           .main-header__box-tablet
-            a(href="tel:375296086368") +375 (29) 608-63-68
-            +social-list.social-list--tablet
+            .main-header__box-info
+              a(href="#")
+                +img('svg', 'icon-pin-white', 'svg', '40', '40', 'Адрес')
+                span ул. Калиновского 77а, офис 310
+              a(href="mailto:info@cmbox.by")
+                +img('svg', 'icon-mail-white', 'svg', '40', '40', 'Почта')
+                span info@cmbox.by
+            .main-header__box-tel
+              a(href="tel:375296086368") +375 (29) 608-63-68
+              +social-list.social-list--tablet
       .main-header__box
         a.main-header__link-phone(href="tel:375296086368")
           +img('svg', 'icon-mobile', 'svg', '9', '18', 'Телефон')
           span +375 (29) 608-63-68
-        span.main-header__social
         +social-list

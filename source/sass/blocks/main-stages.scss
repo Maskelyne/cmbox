@@ -18,7 +18,7 @@
       span {
         transform: translate(30px, 59px);
         transition: all 0.4s linear;
-        background-color: $dark-pink;
+        background-color: $middle-pink;
 
         @media (max-width: $desktop-width-min) {
           transform: translate(30px, 57px);

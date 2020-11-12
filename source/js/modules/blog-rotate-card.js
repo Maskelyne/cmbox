@@ -9,16 +9,16 @@
     var blogCards = document.querySelectorAll('.blog__card-box');
 
     function rotate(evt) {
-      var blogItem = this.querySelector('.blog__card-text');
+      var blogItem = this.querySelector('.blog__card');
       var setHeight = blogItem.offsetHeight / 2;
       var setWidth = blogItem.offsetWidth / 2;
 
-      blogItem.style.transform = 'rotateX(' + -(evt.offsetY - setHeight) / 15 + 'deg)' +
-        'rotateY(' + (evt.offsetX - setWidth) / 15 + 'deg';
+      blogItem.style.transform = 'rotateX(' + -(evt.offsetY - setHeight) / 10 + 'deg)' +
+        'rotateY(' + (evt.offsetX - setWidth) / 10 + 'deg';
     }
 
     function rotateNone() {
-      var cardItem = this.querySelector('.blog__card-text');
+      var cardItem = this.querySelector('.blog__card');
 
       cardItem.style.transform = 'rotateX(0deg)' + 'rotateY(0deg)';
     }

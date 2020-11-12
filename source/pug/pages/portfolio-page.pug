@@ -95,22 +95,20 @@ block main
     ];
 
   main.box-closed(style="background: linear-gradient(90deg, #FEED01 0%, #C1B500 100%);")
-    section.portfolio-page
+    section.portfolio-page.text-closed
       .portfolio-page__wrapper.container
-        .portfolio-page__box-image
-          .portfolio-page__controls
-            a(href="#")
-              span.visually-hidden Вперед
-            a(href="#")
-              span.visually-hidden Назад
-          .portfolio-page__image
-            a(href="#")
-              +img('jpg', 'image-vodadom', 'jpg', '340', '240', 'Водадом')
-          .portfolio-page__controls.portfolio-page__controls--tablet
-            a(href="#")
-              span.visually-hidden Назад
-        .portfolio-page__box.black
-          h1 Exim.by
+        .portfolio-page__box-add.black
+          .portfolio-page__controls.black
+            .portfolio-page__button-prev
+              a(href="#")
+              span Exim
+              span Предыдущий проект
+            .portfolio-page__button-next
+              a(href="#")
+              span Yartruba
+              span Следующий проект
+          h2
+            a(href="#") Exim.by
           p ЗАО «Эксимэлектро» более 17 лет поставщики качественной электротехнической продукции в РБ
           strong Цели
           ul
@@ -122,32 +120,45 @@ block main
               p Создание многофункционального сайта магазина
             li
               p Подключение всех инструментов продвижения
+          a(href="#").button--consultation
+            +img('svg', 'lead-magnit', 'svg', '240', '190', 'Заказать проект')
+        .portfolio-page__box-image
+          .portfolio-page__image
+            a(href="#")
+              +img('jpg', 'image-vodadom', 'jpg', '340', '240', 'Водадом')
+          .portfolio-page__controls.black
+            .portfolio-page__button-prev
+              a(href="#")
+              span Exim
+              span Предыдущий проект
+            h1 Exim.by
+            .portfolio-page__button-next
+              a(href="#")
+              span Yartruba
+              span Следующий проект
+        .portfolio-page__box.black
+          h1 Exim.by
+          p ЗАО «Эксимэлектро» более 17 лет поставщики качественной электротехнической продукции в РБ
           .portfolio-page__scroll
             p Скролл для дальнейшей информации
             .portfolio-page__scroll-mouse
-      #page.portfolio-page__company.gray-box
+      .portfolio-page__company.gray-box
         .portfolio-page__title
           a(href="#")
             +img('svg', 'icon-left-arrow', 'svg', '48', '48', 'Вернуться в портфолио')
             h2 Портфолио
         .portfolio-page__info
-          h3 Клиент пришел с:
+          .portfolio-page__cell
+            h3 Цели
+            p Разработка стратегии для увеличения продаж в интернете
+            p Ребрендинг торговой марки
+            p Создание многофункционального интернет-магазина
+            p Подключение всех инструментов продвижения
           .portfolio-page__trabls
+            h3 Клиент пришел с:
             p Устаревший сайт со слабым функционалом
             p Отсутствие всех видов продвижения
             p Желание увеличить продажи и нарастить базу постоянных клиентов
-          .portfolio-page__cell
-            h3 Цели
-            ul
-              li
-                p Разработка стратегии для увеличения продаж в интернете
-              li
-                p Ребрендинг торговой марки
-              li
-                p Создание многофункционального сайта магазина
-              li
-                p Подключение всех инструментов продвижения
-          .portfolio-page__company-image
             +img('png', 'company-exim-prev', 'png', '700', '350', 'Эксим')
           .portfolio-page__purposes
             h3 Как мы реализовали:
@@ -157,7 +168,6 @@ block main
             p Сделали комплексное SEO.
             p Создали социальные сети и разработали стратегию ведения.
             p Настроили контекстную рекламу Google и Яндекс.
-            +img('svg', 'icon-element-3', 'svg', '850', '290', 'Облако')
           .portfolio-page__advantages
             h3 Результаты:
             p Обновлённый удобный сайт, стал возвращать старых клиентов.
@@ -172,32 +182,31 @@ block main
               strong  увеличился на 30%.
               +img('svg', 'graph-1', 'svg', '430', '280', 'Пользователи')
             p За первый месяц без бюджета на рекламу
-              strong  привлекли 317 подписчиков в Instagram.
+              strong   привлекли 317 подписчиков в Instagram.
               +img('svg', 'people-element-1', 'svg', '430', '280', 'Пользователи')
-            .portfolio-page__developers
-              h3 В проекте участвовали:
-              .portfolio-page__box-developers
-                each item in developers
-                  article
-                    +img(item.path, item.image, item.format, item.width, item.height, item.altText)
-                    strong= item.text
-        //  .portfolio-page__box-video
-        //    <iframe src="https://www.youtube.com/embed/EeqPIAYPtiQ"></iframe>
-        .portfolio-page__breadcrumbs
-          .portfolio-page__wrapper-breadcrumbs.container
-            .portfolio-page__button-prev
-              a(href="#")
-              span Exim
-              span Предыдущий проект
-            .portfolio-page__prev-portfolio
-              a(href="#")
-                +img('svg', 'icon-portfolio', 'svg', '38', '38', 'Портфолио')
-                +img('svg', 'icon-portfolio-2', 'svg', '38', '38', 'Портфолио')
-                span Назад в портфолио
-            .portfolio-page__button-next
-              a(href="#")
-              span Yartruba
-              span Следующий проект
+          .feedback__box.portfolio-page__feedback
+            +picture('svg', 'arm', 'arm-mobile', 'svg', '1130', '180', 'Цель достигнута', '767')
+            article
+              .feedback__title
+                .feedback__title-text
+                  strong Стив Джобс
+                  span Генеральный директор Torwood
+                a(href="#") Больше отзывов
+              p Мы являемся агентством веб- и бизнес-аналитики. Основное направление нашей деятельности – это бизнес-аналитика и ключевые течения интернет-маркетинга: веб-аналитика, SEO-продвижение, контекстная реклама, SMM, а также ряд других сопутствующих услуг.
+              <iframe src="https://www.youtube.com/embed/EeqPIAYPtiQ"></iframe>
+              a(href="#") Больше отзывов
+          .portfolio-page__developers
+            h3 В проекте участвовали:
+            .portfolio-page__box-developers
+              each item in developers
+                article
+                  +img(item.path, item.image, item.format, item.width, item.height, item.altText)
+                  strong= item.text
+          .portfolio-page__leadmagnit
+            a(href="#").button--consultation
+              +img('svg', 'lead-magnit', 'svg', '240', '197', 'Заказать проект')
+            p Посетить сайт
+              a(href="#")  www.exim.by
         .main-footer.portfolio-page__footer
           .main-footer__wrapper.container
             .main-footer__box
@@ -222,7 +231,7 @@ block main
   section.modal.contacts.modal-consultation
     .modal-consultation__wrapper
       .contacts__form
-        p Как нам с Вами связаться?
+        h3 Заказать проект
         form(id="form" action="#" method="get")
           .contacts__user-name
             input(id="user_name" type="text" name="user_name" required)
@@ -233,7 +242,7 @@ block main
           .contacts__user-comment
             textarea(id="user_comment" name="user_comment")
             label(for="user_comment") Комментарий
-          a(href="#").button.button-form-close
+          a(href="#").button
             span Отправить
       a.modal__btn-closed(href="#")
         span.visually-hidden Закрыть модальное окно
