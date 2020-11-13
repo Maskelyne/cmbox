@@ -58,11 +58,13 @@
     @media (max-width: $desktop-width-min) {
       font-size: 24px;
       line-height: 36px;
+      text-align: center;
     }
 
     @media (max-width: $tablet-width) {
       font-size: 22px;
       line-height: 32px;
+      text-align: left;
     }
   }
 }
@@ -123,6 +125,10 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom;
+
+  @media (max-width: $desktop-width-min) {
+    margin: 0 auto;
+  }
 
   @media (max-width: $tablet-width) {
     display: none;

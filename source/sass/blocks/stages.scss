@@ -2,7 +2,7 @@
   margin: 110px 0 70px 0;
 
   @media (max-width: $tablet-width) {
-    margin-bottom: 40px;
+    margin: 90px 0 40px 0;
   }
 }
 
@@ -654,7 +654,7 @@
       &:nth-child(10) {
         max-width: 225px;
         position: absolute;
-        top: 59%;
+        top: 57%;
         left: 22%;
         animation: stage-show-elements-3, rotateKaterina;
         animation-duration: 2s, 2s;

@@ -35,7 +35,7 @@ block main
         altText: 'Стратегия',
         text: 'Стратегия',
         iconPath: 'svg',
-        iconName: 'icon-analytics',
+        iconName: 'icon-strategy',
         iconWidth: '48',
         iconHeight: '48'
       },
@@ -49,7 +49,7 @@ block main
         altText: 'Дизайн',
         text: 'Дизайн',
         iconPath: 'svg',
-        iconName: 'icon-analytics',
+        iconName: 'icon-design',
         iconWidth: '48',
         iconHeight: '48'
       },
@@ -63,7 +63,7 @@ block main
         altText: 'Сайт',
         text: 'Сайт',
         iconPath: 'svg',
-        iconName: 'icon-analytics',
+        iconName: 'icon-site',
         iconWidth: '48',
         iconHeight: '48'
       },
@@ -77,7 +77,7 @@ block main
         altText: 'Воронка продаж',
         text: 'Воронка продаж',
         iconPath: 'svg',
-        iconName: 'icon-analytics',
+        iconName: 'icon-sale',
         iconWidth: '48',
         iconHeight: '48'
       },
@@ -91,7 +91,7 @@ block main
         altText: 'Seo',
         text: 'Seo',
         iconPath: 'svg',
-        iconName: 'icon-analytics',
+        iconName: 'icon-seo',
         iconWidth: '48',
         iconHeight: '48'
       },
@@ -105,7 +105,7 @@ block main
         altText: 'Контекст',
         text: 'Контекст',
         iconPath: 'svg',
-        iconName: 'icon-analytics',
+        iconName: 'icon-contecst',
         iconWidth: '48',
         iconHeight: '48'
       },
@@ -119,7 +119,7 @@ block main
         altText: 'Соцсети',
         text: 'Соцсети',
         iconPath: 'svg',
-        iconName: 'icon-analytics',
+        iconName: 'icon-social',
         iconWidth: '48',
         iconHeight: '48'
       },
@@ -133,7 +133,7 @@ block main
         altText: 'Видео-маркетинг',
         text: 'Видео-маркетинг',
         iconPath: 'svg',
-        iconName: 'icon-analytics',
+        iconName: 'icon-video',
         iconWidth: '48',
         iconHeight: '48'
       },
@@ -147,23 +147,10 @@ block main
         altText: 'Crm',
         text: 'Crm',
         iconPath: 'svg',
-        iconName: 'icon-analytics',
+        iconName: 'icon-crm',
         iconWidth: '48',
         iconHeight: '48'
       },
-    ];
-
-  -
-    var servicesList = [
-      {
-        text: '60% визуальный канал'
-      },
-      {
-        text: '30 % аудиальный канал'
-      },
-      {
-        text: '10% смысловой'
-      }
     ];
 
   main.gray-box
@@ -191,20 +178,12 @@ block main
           .services__boxes
             +img('services', 'big-box-active', 'svg', '640', '380', 'Коробка')
             +img('services', 'big-box-hover', 'svg', '640', '380', 'Коробка')
-        .services__box-text.services__box-text--marketing
+        .services__box-text
           h2 Стратегия
-          .services__text.z-index-1
+          .services__text
             p
               span Видеомаркетинг
               |  – мощный инструмент по продвижению вашего бизнеса, который повышает конверсии и продажи, показывая ваш товар или услугу в действии, что вызывает доверие у потенциальных покупателей. Видео окупает вложенные в него инвестиции.
-            p Видео на целевой странице может увеличить конверсию до 80%.
-          .services__text.services__text-box--2
-            p Вы наверняка слышали о человеческих каналах восприятия информации:
-            ul.services__text-list
-              each item in servicesList
-                li
-                  p= item.text
-            p Именно поэтому, люди предпочитают посмотреть какое-либо видео, нежели прочитать текст.
       .services__box-portfolio.container
         h2 Примеры работ вы можете посмотреть на странице
           a(href="#")  Портфолио

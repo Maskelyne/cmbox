@@ -60,8 +60,12 @@
   }
 
   @media (max-width: $tablet-width) {
-    grid-gap: 30px 0;
+    grid-gap: 60px 0;
     padding: 60px 15px 50px 15px;
+  }
+
+  @media (max-width: $mobile-width) {
+    grid-gap: 30px 0;
   }
 
   h2 {

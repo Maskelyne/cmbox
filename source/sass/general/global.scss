@@ -68,13 +68,17 @@ body {
   min-width: 320px;
   min-height: 100vh;
   font-family: $proximaNova;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 24px;
   font-weight: $normal;
   color: $dark-black;
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+
+  @media (max-width: $tablet-width) {
+    font-size: 16px;
+  }
 }
 
 main {
@@ -111,7 +115,7 @@ main {
 
 .page-main {
   position: absolute;
-  top: 75px;
+  top: 65px;
   left: 0;
   z-index: -1;
 
