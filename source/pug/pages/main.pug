@@ -91,8 +91,32 @@ block main
                 li: p Реклама приводит мало клиентов
                 li: p Мало продаж
                 li: p Теряются заказы
+            ul.business__list--mobile
+              li
+                +img('svg', 'icon-client', 'svg', '30', '30', 'Реклама')
+                p Реклама приводит мало клиентов
+              li
+                +img('svg', 'icon-lider', 'svg', '30', '30', 'Лидер')
+                p Конкурировать наравне с лидерами
+              li
+                +img('svg', 'icon-new', 'svg', '30', '30', 'Реклама')
+                p Новый продукт\услуга
+              li
+                +img('svg', 'icon-lider-1', 'svg', '30', '30', 'Реклама')
+                p Желание стать лидером
+              li
+                +img('svg', 'icon-site-1', 'svg', '30', '30', 'Реклама')
+                p Устаревший сайт
+              li
+                +img('svg', 'icon-money-1', 'svg', '30', '30', 'Реклама')
+                p Теряются заказы
+              li
+                +img('svg', 'icon-pay', 'svg', '30', '30', 'Реклама')
+                p Мало продаж
           .business__box-form
-            h2 Бесплатный аудит
+            h2 Аудит
+              br
+              | по цене чашки кофе
             form(method="POST" action="#")
               .modal__user-name
                 input(id="user_name" type="text" name="user_name")

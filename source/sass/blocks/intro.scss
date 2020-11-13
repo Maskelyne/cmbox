@@ -3,8 +3,8 @@
   display: grid;
   align-items: center;
   justify-content: center;
-  grid-template-columns: 55% 42%;
-  grid-gap: 0 5%;
+  grid-template-columns: 54% 42%;
+  grid-gap: 0 4%;
 
   @media (max-width: $desktop-width) {
     grid-gap: 0 0;

@@ -79,8 +79,7 @@
     font-family: $mistral;
     font-size: 48px;
     line-height: 48px;
-    font-weight: 600;
-    color: $dark-blue;
+    color: $dark-red;
     letter-spacing: 0.1em;
 
     @media (max-width: $desktop-width-min) {
@@ -169,10 +168,7 @@
 }
 
 .services__text {
-  margin-right: 10%;
-  padding: 30px 20px 30px 30px;
-  background-color: $light-pink;
-  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 570px;
 
   @media (max-width: $desktop-width-min) {
     margin-right: 0;
@@ -198,10 +194,6 @@
       font-family: $proximaBold;
       margin: 10px 0;
     }
-  }
-
-  h3 {
-    margin-bottom: 20px;
   }
 
   span {
