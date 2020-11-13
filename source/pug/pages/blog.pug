@@ -79,16 +79,14 @@ block main
         ul.blog__list
           each item in blogList
             li
-              .blog__card-box
-                .blog__card-text
-                  .blog__card
-                    a(href="article.html")
-                      .blog__image
-                        +img(item.path, item.image, item.format, item.width, item.height, item.altText)
-                        .blog__time
-                          time(datetime=item.timeText)= item.timeText
-                      .blog__text
-                        p= item.textCard
+              .blog__card
+                a(href="article.html")
+                  .blog__image
+                    +img(item.path, item.image, item.format, item.width, item.height, item.altText)
+                    .blog__time
+                      time(datetime=item.timeText)= item.timeText
+                  .blog__text
+                    p= item.textCard
       +breadcrumbs
 
 block footer
