@@ -30,7 +30,6 @@ var path = {
     jsAdd: 'source/js/default.js',
     vendorJs: 'source/js/vendor.js',
     css: 'source/sass/style.scss',
-    cssAdd: 'source/css/default.css',
     img: 'source/img/**/*.{png,jpg,svg}',
     sprite: 'source/img/svg-sprite/*.svg',
     fonts: 'source/fonts/**/*.{woff,woff2}'
@@ -47,6 +46,10 @@ var path = {
   pug: {
     views: 'source/pug/pages/*.pug',
   },
+  fancybox: {
+    source: 'source/css/*.css',
+    build: 'build/css'
+  }
 };
 
 var config = {
@@ -57,6 +60,12 @@ var config = {
 
 gulp.task('clean:build', function () {
   return del(path.clean);
+});
+
+gulp.task('fancybox:build', function () {
+  return gulp
+    .src(path.fancybox.source)
+    .pipe(gulp.dest(path.build.css));
 });
 
 gulp.task('html:build', function () {
@@ -113,17 +122,11 @@ gulp.task('css:build', function () {
     .pipe(server.stream());
 });
 
-gulp.task('cssAdd:build', function () {
-  return gulp.src(path.source.cssAdd)
-    .pipe(gulp.dest(path.build.css))
-    .pipe(server.stream());
-});
-
 gulp.task('image:build', function () {
   return gulp.src(path.source.img)
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 5}),
-      imagemin.mozjpeg({progressive: true, quality: 75}),
+      imagemin.mozjpeg({progressive: true, quality: 90}),
       imagemin.svgo(),
     ]),
      pngquant({quality: '65-70', speed: 5}))
@@ -157,12 +160,12 @@ gulp.task('fonts:build', function () {
 gulp.task('build', gulp.series(
     'clean:build',
     'html:build',
+    'fancybox:build',
     'pug:build',
     'js:build',
     'jsAdd:build',
     'vendorJs:build',
     'css:build',
-    'cssAdd:build',
     'fonts:build',
     'image:build',
     'sprite:build'
