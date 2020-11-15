@@ -74,37 +74,40 @@ block main
   -
     var portfolioList = [
       {
-        path: 'jpg',
-        image: 'image-vodadom',
+        path: 'portfolio',
+        image: 'img-yartruba',
         format: 'jpg',
         width: '340',
         height: '240',
         altText: 'Водадом',
         title: 'Vodadom',
         text: 'Сайт для бурового предприятия в Беларуси',
-        link: 'portfolio-page.html'
+        link: 'portfolio-page.html',
+        background: 'background-image: url(assets/img/portfolio/bg-vodadom.svg)'
       },
       {
-        path: 'jpg',
-        image: 'image-yartruba',
+        path: 'portfolio',
+        image: 'img-yartruba',
         format: 'jpg',
         width: '340',
         height: '240',
         altText: 'Яртруба',
         title: 'Yartruba',
         text: 'Сайт для официального поставщика труб нПВХ',
-        link: '#'
+        link: 'portfolio-page.html',
+        background: 'background-image: url(assets/img/portfolio/bg-yartruba.svg)'
       },
       {
-        path: 'jpg',
-        image: 'image-exim',
+        path: 'portfolio',
+        image: 'img-exim',
         format: 'jpg',
         width: '340',
         height: '240',
         altText: 'Эксим',
         title: 'Exim',
         text: 'Сайт для поставщика качественной электротехники',
-        link: '#'
+        link: 'portfolio-page.html',
+        background: 'background-image: url(assets/img/portfolio/bg-exim.svg)'
       },
     ];
 
@@ -120,7 +123,7 @@ block main
                 a(href= item.link)
                   .portfolio__box-card
                     .portfolio__card
-                      .portfolio__card-perspective
+                      .portfolio__card-perspective(style=item.background)
                         .portfolio__image
                           +img(item.path, item.image, item.format, item.width, item.height, item.altText)
                         .portfolio__text

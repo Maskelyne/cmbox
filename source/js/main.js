@@ -21,4 +21,5 @@
 //= modules/forms.js
 //= modules/link-hidden.js
 //= modules/feedback-tabs.js
+//= modules/vendors.js
 
