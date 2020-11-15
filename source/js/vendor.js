@@ -9,5 +9,6 @@
 //= vendor/jquery.maskedinput.min.js
 //= vendor/swiper-bundle.min.js
 //= vendor/jquery-fancybox.min.js
+//= vendor/jquery.validate.min.js
 //= vendor/lazyYT.js
 
