@@ -986,10 +986,14 @@ main {
     background-size: cover; } }
 
 .black {
-  color: #000000; }
+  color: #333333; }
+  .black a {
+    color: #333333; }
 
 .white {
   color: #ffffff; }
+  .white a {
+    color: #ffffff; }
 
 .black .portfolio-page__scroll-mouse {
   border: solid 2px #000000; }
@@ -8495,8 +8499,7 @@ main {
   .portfolio-page__box-add p {
     font-family: "ProximaNova-Bold", arial, sans-serif;
     font-size: 18px;
-    line-height: 23px;
-    color: #333333; }
+    line-height: 23px; }
   .portfolio-page__box-add strong {
     margin-bottom: 10px;
     display: inline-block;
@@ -8504,8 +8507,7 @@ main {
     font-size: 24px;
     line-height: 24px;
     letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: #333333; }
+    text-transform: uppercase; }
   .portfolio-page__box-add ul {
     margin: 0;
     padding: 0;
@@ -8536,16 +8538,13 @@ main {
     max-width: 240px;
     margin-top: 10px;
     justify-self: center; }
-    .portfolio-page__box-add a:hover {
-      color: #ffffff; }
   .portfolio-page__box-add--active {
     transition: all 1s ease;
     transition-delay: 0.6s;
     visibility: visible;
     opacity: 1; }
   .portfolio-page__box-add .portfolio-page__controls {
-    margin-bottom: 20px;
-    color: #333333; }
+    margin-bottom: 20px; }
   .portfolio-page__box-add .portfolio-page__button-prev {
     grid-gap: 0 10px; }
     @media (max-width: 1200px) {

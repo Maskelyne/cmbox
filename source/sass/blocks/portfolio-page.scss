@@ -196,7 +196,6 @@
     font-family: $proximaBold;
     font-size: 18px;
     line-height: 23px;
-    color: $dark-black;
   }
 
   strong {
@@ -207,7 +206,6 @@
     line-height: 24px;
     letter-spacing: 0.05em;
     text-transform: uppercase;
-    color: $dark-black;
   }
 
   ul {
@@ -247,10 +245,6 @@
     max-width: 240px;
     margin-top: 10px;
     justify-self: center;
-
-    &:hover {
-      color: $white;
-    }
   }
 
   &--active {
@@ -262,7 +256,6 @@
 
   .portfolio-page__controls {
     margin-bottom: 20px;
-    color: $dark-black;
   }
 
 
