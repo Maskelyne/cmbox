@@ -54,6 +54,7 @@
     inset 4px 4px 15px rgba(255, 255, 255, 0.3);
   border-radius: 10px;
   border: solid 4px $white;
+  background-repeat: no-repeat;
   transition: transform 0.2s;
 
   @media (max-width: $tablet-width) {
