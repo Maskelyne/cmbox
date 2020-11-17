@@ -69,7 +69,7 @@
   }
 
   @media (max-width: $tablet-width) {
-    margin: 30% 0 0 0;
+    margin: 90px 0 0 0;
   }
 
   h2 {
@@ -98,9 +98,10 @@
     @media (max-width: $tablet-width) {
       width: 120px;
       height: 120px;
-      left: 30%;
-      top: -80%;
+      left: 50%;
+      top: 50%;
       transform: translate(-50%, -50%);
+      animation: none;
     }
 
     li {
@@ -119,8 +120,9 @@
         animation: rotateLeft 4s infinite linear;
 
         @media (max-width: $tablet-width) {
-          top: 0;
-          left: -50px;
+          top: 40px;
+          left: -65px;
+          animation: none;
         }
       }
 
@@ -130,8 +132,9 @@
         animation: rotateLeft 4.5s infinite linear;
 
         @media (max-width: $tablet-width) {
-          bottom: -20px;
-          left: -35px;
+          bottom: -50px;
+          left: -5px;
+          animation: none;
         }
       }
 
@@ -142,7 +145,8 @@
 
         @media (max-width: $tablet-width) {
           top: -55px;
-          left: 25px;
+          left: -5px;
+          animation: none;
         }
       }
 
@@ -152,8 +156,9 @@
         animation: rotateLeft 4.5s infinite linear;
 
         @media (max-width: $tablet-width) {
-          bottom: -55px;
-          left: 45px;
+          bottom: -50px;
+          left: 90px;
+          animation: none;
         }
       }
 
@@ -163,8 +168,9 @@
         animation: rotateLeft 4s infinite linear;
 
         @media (max-width: $tablet-width) {
-          top: -20px;
-          right: -40px;
+          top: -55px;
+          right: -10px;
+          animation: none;
         }
       }
 
@@ -174,8 +180,9 @@
         animation: rotateLeft 4.5s infinite linear;
 
         @media (max-width: $tablet-width) {
-          top: 75px;
-          right: -50px;
+          top: 40px;
+          right: -60px;
+          animation: none;
         }
       }
     }

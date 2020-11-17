@@ -68,7 +68,7 @@
   @include reset-list;
   display: grid;
   grid-template-columns: 30% 50%;
-  grid-template-rows: 40px 40px 20px;
+  grid-template-rows: 30px 30px 30px;
   justify-content: center;
 
   @media (max-width: $desktop-width-min) {

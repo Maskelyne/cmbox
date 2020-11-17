@@ -47,7 +47,6 @@
 
       if (evt.target === overlayModal) {
 
-        modalDevelopment.classList.add(`modal-closed`);
         document.body.style.overflow = ``;
 
       }

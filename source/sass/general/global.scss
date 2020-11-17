@@ -138,6 +138,10 @@ main {
   a {
     color: $dark-black;
   }
+
+  p::before {
+    background-color: $dark-black;
+  }
 }
 
 .white {
@@ -145,6 +149,10 @@ main {
 
   a {
     color: $white;
+  }
+
+  p::before {
+    background-color: $white;
   }
 }
 

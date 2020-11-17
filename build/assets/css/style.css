@@ -989,16 +989,20 @@ main {
   color: #333333; }
   .black a {
     color: #333333; }
+  .black p::before {
+    background-color: #333333; }
 
 .white {
   color: #ffffff; }
   .white a {
     color: #ffffff; }
+  .white p::before {
+    background-color: #ffffff; }
 
 .black .portfolio-page__scroll-mouse {
-  border: solid 2px #000000; }
+  border: solid 2px #333333; }
   .black .portfolio-page__scroll-mouse::after {
-    background-color: #000000; }
+    background-color: #333333; }
 
 @font-face {
   font-family: "ProximaNova-Regular";
@@ -2110,7 +2114,7 @@ main {
   list-style: none;
   display: grid;
   grid-template-columns: 30% 50%;
-  grid-template-rows: 40px 40px 20px;
+  grid-template-rows: 30px 30px 30px;
   justify-content: center; }
   @media (max-width: 1023px) {
     .main-footer__nav {
@@ -4819,7 +4823,7 @@ main {
       margin: 60% 0 0 0; } }
   @media (max-width: 767px) {
     .contacts__social {
-      margin: 30% 0 0 0; } }
+      margin: 90px 0 0 0; } }
   @media (max-width: 767px) {
     .contacts__social h2 {
       max-width: 125px;
@@ -4842,9 +4846,11 @@ main {
       .contacts__social .footer-social {
         width: 120px;
         height: 120px;
-        left: 30%;
-        top: -80%;
-        transform: translate(-50%, -50%); } }
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-animation: none;
+                animation: none; } }
     .contacts__social .footer-social li {
       width: 50px;
       height: 50px;
@@ -4860,8 +4866,10 @@ main {
                 animation: rotateLeft 4s infinite linear; }
         @media (max-width: 767px) {
           .contacts__social .footer-social li:nth-child(1) {
-            top: 0;
-            left: -50px; } }
+            top: 40px;
+            left: -65px;
+            -webkit-animation: none;
+                    animation: none; } }
       .contacts__social .footer-social li:nth-child(2) {
         bottom: 0;
         left: 50px;
@@ -4869,8 +4877,10 @@ main {
                 animation: rotateLeft 4.5s infinite linear; }
         @media (max-width: 767px) {
           .contacts__social .footer-social li:nth-child(2) {
-            bottom: -20px;
-            left: -35px; } }
+            bottom: -50px;
+            left: -5px;
+            -webkit-animation: none;
+                    animation: none; } }
       .contacts__social .footer-social li:nth-child(3) {
         top: 5px;
         left: 40px;
@@ -4879,7 +4889,9 @@ main {
         @media (max-width: 767px) {
           .contacts__social .footer-social li:nth-child(3) {
             top: -55px;
-            left: 25px; } }
+            left: -5px;
+            -webkit-animation: none;
+                    animation: none; } }
       .contacts__social .footer-social li:nth-child(4) {
         bottom: -5px;
         left: 180px;
@@ -4887,8 +4899,10 @@ main {
                 animation: rotateLeft 4.5s infinite linear; }
         @media (max-width: 767px) {
           .contacts__social .footer-social li:nth-child(4) {
-            bottom: -55px;
-            left: 45px; } }
+            bottom: -50px;
+            left: 90px;
+            -webkit-animation: none;
+                    animation: none; } }
       .contacts__social .footer-social li:nth-child(5) {
         top: 125px;
         right: -25px;
@@ -4896,8 +4910,10 @@ main {
                 animation: rotateLeft 4s infinite linear; }
         @media (max-width: 767px) {
           .contacts__social .footer-social li:nth-child(5) {
-            top: -20px;
-            right: -40px; } }
+            top: -55px;
+            right: -10px;
+            -webkit-animation: none;
+                    animation: none; } }
       .contacts__social .footer-social li:nth-child(6) {
         top: 5px;
         right: 45px;
@@ -4905,8 +4921,10 @@ main {
                 animation: rotateLeft 4.5s infinite linear; }
         @media (max-width: 767px) {
           .contacts__social .footer-social li:nth-child(6) {
-            top: 75px;
-            right: -50px; } }
+            top: 40px;
+            right: -60px;
+            -webkit-animation: none;
+                    animation: none; } }
     .contacts__social .footer-social img {
       border-radius: 15px;
       transition: all 0.3s linear;
@@ -8532,8 +8550,7 @@ main {
           position: absolute;
           content: "";
           top: 10px;
-          left: 0;
-          background-color: #000000; }
+          left: 0; }
   .portfolio-page__box-add a {
     max-width: 240px;
     margin-top: 10px;

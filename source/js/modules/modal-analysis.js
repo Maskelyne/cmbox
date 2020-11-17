@@ -10,7 +10,7 @@
   // var modalThanks = document.querySelector('.modal-thanks');
   var modalClose = document.querySelectorAll('.modal__btn-closed');
 
-  if (modalAnalysis) {
+  if (modalAnalysisBtn) {
 
     modalAnalysisBtn.addEventListener('click', function (evt) {
       evt.preventDefault();
@@ -49,7 +49,6 @@
       if (evt.target === overlayModal) {
 
         modalAnalysis.classList.remove(`modal-active`);
-        modalAnalysis.classList.add(`modal-closed`);
         document.body.style.overflow = ``;
 
       }

@@ -17,6 +17,14 @@
         menuBtn.classList.remove('main-header__btn--closed');
         menuBtn.classList.add('main-header__btn--opened');
         wrapMenu.classList.add('main-header__wrap-menu--active');
+        servicesMenu.classList.remove('main-header__services-nav--opened');
+        servicesMenu.classList.add('main-header__services-nav--closed');
+        servicesMenuBtn.classList.remove('main-header__link-services--opened');
+        servicesMenuBtn.classList.add('main-header__link-services--closed');
+        stageMenu.classList.remove('main-header__stage-nav--opened');
+        stageMenu.classList.add('main-header__stage-nav--closed');
+        stageMenuBtn.classList.remove('main-header__link-stage--opened');
+        stageMenuBtn.classList.add('main-header__link-stage--closed');
         document.body.style.overflow = 'hidden';
       } else {
         menuBtn.classList.add('main-header__btn--closed');
@@ -34,6 +42,13 @@
         stageMenu.classList.add('main-header__stage-nav--opened');
         stageMenuBtn.classList.remove('main-header__link-stage--closed');
         stageMenuBtn.classList.add('main-header__link-stage--opened');
+        menuBtn.classList.add('main-header__btn--closed');
+        menuBtn.classList.remove('main-header__btn--opened');
+        wrapMenu.classList.remove('main-header__wrap-menu--active');
+        servicesMenu.classList.remove('main-header__services-nav--opened');
+        servicesMenu.classList.add('main-header__services-nav--closed');
+        servicesMenuBtn.classList.remove('main-header__link-services--opened');
+        servicesMenuBtn.classList.add('main-header__link-services--closed');
         document.body.style.overflow = 'hidden';
       } else {
         stageMenu.classList.add('main-header__stage-nav--closed');
@@ -52,6 +67,13 @@
         servicesMenu.classList.add('main-header__services-nav--opened');
         servicesMenuBtn.classList.remove('main-header__link-services--closed');
         servicesMenuBtn.classList.add('main-header__link-services--opened');
+        menuBtn.classList.add('main-header__btn--closed');
+        menuBtn.classList.remove('main-header__btn--opened');
+        wrapMenu.classList.remove('main-header__wrap-menu--active');
+        stageMenu.classList.remove('main-header__stage-nav--opened');
+        stageMenu.classList.add('main-header__stage-nav--closed');
+        stageMenuBtn.classList.remove('main-header__link-stage--opened');
+        stageMenuBtn.classList.add('main-header__link-stage--closed');
         document.body.style.overflow = 'hidden';
       } else {
         servicesMenu.classList.add('main-header__services-nav--closed');
