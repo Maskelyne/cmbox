@@ -41,9 +41,10 @@
     return new Swiper(el, {
       loop: true,
       speed: 1000,
-      autoplay: {
-        delay: 1200,
-      },
+      spaceBetween: 30,
+      // autoplay: {
+      //   delay: 1200,
+      // },
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',

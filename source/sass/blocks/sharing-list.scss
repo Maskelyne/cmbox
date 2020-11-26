@@ -12,22 +12,35 @@
     grid-gap: 0 10px;
   }
 
+  li {
+    position: relative;
+  }
+
   a {
     img {
-      transition: all 0.3s linear;
+      &:nth-child(3) {
+        display: none;
+      }
     }
 
     &:hover {
       img {
         transform: scale(1.2);
-        transition: all 0.3s linear;
+
+        &:nth-child(2) {
+          display: none;
+        }
+
+        &:nth-child(3) {
+          display: block;
+        }
       }
     }
   }
 }
 
 .sharing-list__copy {
-  padding: 10px ;
+  padding: 10px;
   width: 300px;
   position: absolute;
   top: 40px;
@@ -37,39 +50,35 @@
   box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.15), 2px 2px 8px rgba(0, 0, 0, 0.15);
   border-radius: 5px;
   display: none;
-}
-.sharing-list__copy p {
-  margin: 0;
-}
 
-.sharing-list__copy span {
-  font-size: 18px;
-  font-weight: bold;
-}
-
-@media (max-width: 767px) {
-
-  .sharing-list__copy {
+  @media (max-width: $tablet-width) {
     width: 160px;
+
+    span {
+      font-size: 16px;
+    }
   }
 
-  .sharing-list__copy span {
-    font-size: 16px;
+  p {
+    margin: 0;
   }
 
+  span {
+    font-size: 18px;
+    font-weight: $bold;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: -20px;
+    border: 10px solid transparent;
+    border-bottom: 10px solid #ffffff;
+  }
 }
+
 .sharing-list__copy--active {
   display: grid;
   justify-items: center;
 }
-
-.sharing-list__copy::before {
-  content: "";
-  position: absolute;
-  left: 10px;
-  top: -20px;
-  border: 10px solid transparent;
-  border-bottom: 10px solid #ffffff;
-}
-
-

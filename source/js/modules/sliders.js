@@ -8,7 +8,6 @@
     return new Swiper(el, {
       direction: 'vertical',
       slidesPerView: 1,
-      spaceBetween: 30,
       loop: true,
       speed: 1000,
       autoplay: {

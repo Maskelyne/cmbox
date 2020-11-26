@@ -10,7 +10,7 @@
     var portfolioBox = document.querySelector('.portfolio-page__box');
     var portfolioBoxAdd = document.querySelector('.portfolio-page__box-add');
     var portfolioWrapper = document.querySelector('.portfolio-page__wrapper');
-    var portfolioBoxImage = document.querySelector('.portfolio-page__box-image')
+    var portfolioBoxImage = document.querySelector('.portfolio-page__box-image');
     var main = document.querySelector('.box-closed');
     var text = document.querySelector('.text-closed');
 

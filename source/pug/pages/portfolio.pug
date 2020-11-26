@@ -71,45 +71,6 @@ block main
         timeText: '24 апреля 2020'
       },
     ];
-  -
-    var portfolioList = [
-      {
-        path: 'portfolio',
-        image: 'img-vodadom',
-        format: 'jpg',
-        width: '340',
-        height: '240',
-        altText: 'Водадом',
-        title: 'Vodadom',
-        text: 'Сайт для бурового предприятия в Беларуси',
-        link: 'portfolio-page.html',
-        background: 'background-image: url(assets/img/portfolio/bg-vodadom.svg)'
-      },
-      {
-        path: 'portfolio',
-        image: 'img-yartruba',
-        format: 'jpg',
-        width: '340',
-        height: '240',
-        altText: 'Яртруба',
-        title: 'Yartruba',
-        text: 'Сайт для официального поставщика труб нПВХ',
-        link: 'portfolio-page.html',
-        background: 'background-image: url(assets/img/portfolio/bg-yartruba.svg)'
-      },
-      {
-        path: 'portfolio',
-        image: 'img-exim',
-        format: 'jpg',
-        width: '340',
-        height: '240',
-        altText: 'Эксим',
-        title: 'Exim',
-        text: 'Сайт для поставщика качественной электротехники',
-        link: 'portfolio-page.html',
-        background: 'background-image: url(assets/img/portfolio/bg-exim.svg)'
-      },
-    ];
 
   main.gray-box
     section.portfolio
@@ -118,20 +79,48 @@ block main
         +tabs
         .portfolio__box
           ul.portfolio__list
-            each item in portfolioList
-              li
-                a(href= item.link)
-                  .portfolio__box-card
-                    .portfolio__card
-                      .portfolio__card-perspective(style=item.background)
-                        .portfolio__image
-                          +img(item.path, item.image, item.format, item.width, item.height, item.altText)
-                        .portfolio__text
-                          h2= item.title
-                          p= item.text
+            li
+              a(href='portfolio-page.html')
+                .portfolio__box-card
+                  .portfolio__card
+                    .portfolio__card-perspective(style='background-image: url(assets/img/portfolio/bg-exim.svg);')
+                      .portfolio__image
+                        +img('portfolio', 'img-exim', 'jpg', '340', '240', 'Интернет-магазин')
+                      .portfolio__text
+                        h2 Exim.by
+                        p Интернет-магазин
+            li
+              a(href='portfolio-page.html').portfolio-modal-js
+                .portfolio__box-card.portfolio__box-card--project
+                  .portfolio__card
+                    .portfolio__card-perspective(style='background-image: url(assets/img/portfolio/bg-yartruba.svg);')
+                      .portfolio__image
+                        p Место для вашего проекта
+                      .portfolio__text
+                        button(type="button").button
+                          span Оставить заявку
 
 block footer
   +footer
+
+  section.modal.contacts.modal-consultation
+    .modal-consultation__wrapper
+      .contacts__form
+        h3 Заказать проект
+        form(id="form" action="#" method="get")
+          .modal__user-name
+            input(id="user_name" type="text" name="user_name" required)
+            label(for="user_name") Имя
+          .modal__user-phone
+            input(id="user_phone" type="tel" name="user_phone" required)
+            label(for="user_phone") Телефон
+          .modal__user-comment
+            textarea(id="user_comment" name="user_comment")
+            label(for="user_comment") Комментарий
+          a(href="#").button
+            span Отправить
+      a.modal__btn-closed(href="#")
+        span.visually-hidden Закрыть модальное окно
 
   section.modal.modal-development
     .modal__wrapper

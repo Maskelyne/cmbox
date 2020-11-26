@@ -36,7 +36,7 @@
       let isTablet = window.innerWidth > TABLET_WIDTH;
 
         if (isTablet) {
-          let contentHeight = servicesBoxWrapper.offsetHeight - 70;
+          let contentHeight = servicesBoxWrapper.offsetHeight;
           servicesBox.style.height = contentHeight + 'px';
         } else {
           servicesBox.style.height = '';

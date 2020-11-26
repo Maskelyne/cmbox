@@ -22,11 +22,22 @@
 }
 
 .about-us__box-text {
+  h4 {
+    font-size: 24px;
+    line-height: 36px;
+    color: $dark-red;
+
+    @media (max-width: $tablet-width) {
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+
   p {
     strong {
       font-family: $proximaBold;
-      font-size: 16px;
-      line-height: 16px;
+      font-size: 17px;
+      line-height: 17px;
       color: $dark-blue;
     }
   }

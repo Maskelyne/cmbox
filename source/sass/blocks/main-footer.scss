@@ -67,7 +67,7 @@
 .main-footer__nav {
   @include reset-list;
   display: grid;
-  grid-template-columns: 30% 50%;
+  grid-template-columns: 40% 50%;
   grid-template-rows: 30px 30px 30px;
   justify-content: center;
 
@@ -86,7 +86,7 @@
 .main-footer__link-location {
   margin: 0;
   padding-left: 20px;
-  color: $black;
+  color: $dark-black;
   position: relative;
 
   &::before {
@@ -105,7 +105,7 @@
   padding-left: 22px;
   margin: 15px 0 10px 0;
   display: block;
-  color: $black;
+  color: $dark-black;
   position: relative;
 
   &::before {
@@ -122,7 +122,7 @@
 
 .main-footer__link-phone {
   padding-left: 20px;
-  color: $black;
+  color: $dark-black;
   position: relative;
 
   &::before {
@@ -135,12 +135,18 @@
     background-image: url("../img/svg/icon-mobile.svg");
     background-repeat: no-repeat;
   }
+
+  &:hover {
+    font-weight: $normal;
+    color: $dark-black;
+  }
 }
 
 .main-footer__link-box {
   display: grid;
   grid-template-columns: 180px auto;
   align-items: center;
+  grid-gap: 0 5px;
 
   .social-list {
     width: auto;

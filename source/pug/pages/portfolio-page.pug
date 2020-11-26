@@ -180,18 +180,16 @@ block main
       .portfolio-page__wrapper.container
         .portfolio-page__box-add.black
           .portfolio-page__controls.black
-            .portfolio-page__button-prev
+            .portfolio-page__button-prev.button__disabled
               a(href="#")
-              span Exim
               span Предыдущий проект
             .portfolio-page__button-next
               a(href="#")
-              span Yartruba
               span Следующий проект
           h2
             a(href="#") Exim.by
           p ЗАО «Эксимэлектро» более 17 лет поставщики качественной электротехнической продукции в РБ
-          strong Цели
+          h3 Цели
           ul
             li
               p Разработка стратегии для увеличения продаж в интернете
@@ -202,7 +200,7 @@ block main
             li
               p Подключение всех инструментов продвижения
           a(href="#").button--consultation
-            +img('svg', 'lead-magnit', 'svg', '240', '190', 'Заказать проект')
+            +picture('svg', 'lead-magnit', 'lead-magnit-mobile', 'svg', '240', '120', 'Заказать проект', '1400')
         .portfolio-page__box-image
           .portfolio-page__image
             a(href="#")
@@ -230,10 +228,15 @@ block main
         .portfolio-page__info
           .portfolio-page__cell
             h3 Цели
-            p Разработка стратегии для увеличения продаж в интернете
-            p Ребрендинг торговой марки
-            p Создание многофункционального интернет-магазина
-            p Подключение всех инструментов продвижения
+            ul
+              li
+                p Разработка стратегии для увеличения продаж в интернете
+              li
+                p Ребрендинг торговой марки
+              li
+                p Создание многофункционального сайта магазина
+              li
+                p Подключение всех инструментов продвижения
           .portfolio-page__trabls
             h3 Клиент пришел с:
             p Устаревший сайт со слабым функционалом
@@ -252,7 +255,7 @@ block main
             h3 Результаты:
             p Обновлённый удобный сайт, стал возвращать старых клиентов.
             p Ребрендинг заметили все конкуренты и клиенты.
-              +img('png', 'company-exim-next', 'png', '700', '350', 'Эксим')
+            +img('png', 'company-exim-next', 'png', '700', '350', 'Эксим')
             p Создали шаблоны постов Instagram и разработали Хештеги, для дальнейшего ведения социальной сети внутренними силами заказчика.
             .portfolio-page__image-box
               +img('png', 'company-image-1', 'png', '180', '280', 'Инстаграм')
@@ -260,12 +263,13 @@ block main
               +img('png', 'company-image-3', 'png', '180', '280', 'Инстаграм')
             p В первый же месяц трафик на сайте
               strong  увеличился на 30%.
-              +img('svg', 'graph-1', 'svg', '430', '280', 'Пользователи')
+            +img('svg', 'graph-1', 'svg', '430', '280', 'Пользователи')
             p За первый месяц без бюджета на рекламу
               strong   привлекли 317 подписчиков в Instagram.
-              +img('svg', 'people-element-1', 'svg', '430', '280', 'Пользователи')
-          .feedback__box.portfolio-page__feedback
+            +img('svg', 'people-element-1', 'svg', '430', '280', 'Пользователи')
+          .feedback__image-arm
             +picture('svg', 'arm', 'arm-mobile', 'svg', '1130', '180', 'Цель достигнута', '767')
+          .feedback__box.portfolio-page__feedback
             article
               .feedback__title
                 .feedback__title-text
@@ -284,7 +288,7 @@ block main
                   strong= item.text
           .portfolio-page__leadmagnit
             a(href="#").button--consultation
-              +img('svg', 'lead-magnit', 'svg', '240', '197', 'Заказать проект')
+              +img('svg', 'lead-magnit', 'svg', '240', '120', 'Заказать проект')
             p Посетить сайт
               a(href="#")  www.exim.by
         .main-footer.portfolio-page__footer
