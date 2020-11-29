@@ -25,8 +25,7 @@
 
   @media (max-width: $desktop-width-min) {
     margin: 0;
-    padding: 0 30px;
-    height: 100vh;
+    padding: 70px 30px 120px 30px;
     grid-template-columns: 1fr;
   }
 
@@ -93,7 +92,7 @@
   grid-template-rows: repeat(3, max-content);
 
   @media (max-width: $desktop-width-min) {
-    max-width: 550px;
+    max-width: 500px;
     margin: 0 auto;
   }
 

@@ -326,7 +326,7 @@
     background-color: transparent;
 
     &:required {
-      + label {
+      ~ label {
         &::after {
           position: absolute;
           content: "*";
@@ -338,7 +338,7 @@
 
     &:focus,
     &.not-empty {
-      + label {
+      ~ label {
         color: #666666;
         font-size: 15px;
         transform: translateY(-15px);
@@ -383,4 +383,18 @@
 
 .modal-active {
   display: flex;
+}
+
+.modal__user-phone .error,
+.modal__user-name .error {
+  border-bottom: solid 1px $dark-red;
+  color: $dark-black;
+}
+
+.modal__user-phone #user_phone-error,
+.modal__user-name #user_name-error {
+  border: none;
+  font-size: 14px;
+  line-height: 14px;
+  color: $dark-red;
 }

@@ -126,7 +126,7 @@
 .article__box-text {
   padding-right: 270px;
 
-  @media(max-width: $desktop-width-min) {
+  @media (max-width: $desktop-width-min) {
     padding-right: 0;
   }
 
@@ -202,19 +202,19 @@
     }
   }
 
-  .article__list {
+  ul {
     @include reset-list;
 
     p {
-      padding-left: 30px;
+      padding-left: 25px;
       position: relative;
 
       &::before {
         width: 10px;
-        height: 10px;
+        height: 2px;
         position: absolute;
         content: "";
-        top: 7px;
+        top: 10px;
         left: 0;
         background-color: $dark-red;
       }

@@ -6,11 +6,11 @@
 
   var overlayModal = document.querySelector('.modal');
   var modalConsultation = document.querySelector('.modal-consultation');
+  var modalConsultationBtn = document.querySelector('.portfolio-modal-js');
 
-  if (modalConsultation) {
+  if (modalConsultationBtn) {
 
     // var modalThanks = document.querySelector('.modal-thanks');
-    var modalConsultationBtn = document.querySelector('.portfolio-modal-js');
     var modalClose = document.querySelectorAll('.modal__btn-closed');
 
       modalConsultationBtn.addEventListener('click', function (evt) {

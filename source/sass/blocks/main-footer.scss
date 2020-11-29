@@ -139,6 +139,11 @@
   &:hover {
     font-weight: $normal;
     color: $dark-black;
+
+    @media (max-width: $desktop-width-min) {
+      color: $dark-red;
+      font-weight: $bold;
+    }
   }
 }
 

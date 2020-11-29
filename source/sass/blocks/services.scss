@@ -33,7 +33,8 @@
   grid-template-columns: 48% 582px 21%;
 
   @media (max-width: $desktop-width) {
-    grid-template-columns: 48% 520px 21%;
+    align-items: center;
+    grid-template-columns: 55% auto;
   }
 
   @media (max-width: $desktop-width-min) {
@@ -57,10 +58,6 @@
 .services__box-text {
   position: relative;
 
-  @media (max-width: $desktop-width) {
-    padding-right: 29px;
-  }
-
   @media (max-width: $desktop-width-min) {
     margin: 0 0 0 28%;
     grid-gap: 10px 0;
@@ -79,6 +76,10 @@
 
     @media (max-width: $tablet-width) {
       font-size: 16px;
+    }
+
+    strong {
+      color: $dark-blue;
     }
   }
 
@@ -110,6 +111,10 @@
 .services__box-images {
   margin: 0 auto 0 24%;
 
+  @media (max-width: $desktop-width) {
+    margin-left: 30%;
+  }
+
   @media (max-width: $desktop-width-min) {
     margin: 0 15% 0 25%;
   }
@@ -126,7 +131,7 @@
 
 .services__image {
   max-width: 250px;
-  margin: 0 28% -20% 28%;
+  margin: 0 25% -18% 30%;
   position: relative;
   animation: services-icon-show, services-icon-movement;
   animation-duration: 2.5s, 3.2s;
@@ -138,6 +143,10 @@
   animation-play-state: running;
   opacity: 0;
 
+  @media (max-width: $desktop-width) {
+    margin: 0 27% -20% 27%;
+  }
+
   @media (max-width: $desktop-width-min) {
     max-width: 200px;
   }
@@ -148,6 +157,10 @@
   margin: 75px 5% 0 20%;
   display: grid;
   grid-template-columns: 57% 1fr;
+
+  @media (max-width: $desktop-width) {
+    margin-left: 23%;
+  }
 
   @media (max-width: $desktop-width-min) {
     grid-template-columns: 1fr;
@@ -271,16 +284,12 @@
   position: absolute;
   top: 75px;
   left: 0;
-
-  @media (max-width: $desktop-width-min) {
-    top: 105px;
-  }
 }
 
 .services__boxes-list {
   @include reset-list;
   position: sticky;
-  top: 75px;
+  top: 100px;
   left: 0;
   z-index: 1;
 
@@ -824,6 +833,10 @@
   max-width: 1200px;
   margin: 75px 0 0 20%;
 
+  @media (max-width: $desktop-width) {
+    margin-left: 23%;
+  }
+
   @media (max-width: $desktop-width-min) {
     margin-left: 28%;
   }
@@ -872,7 +885,8 @@
     font-family: $proximaBold;
     font-size: 17px;
     line-height: 17px;
-    color: $dark-blue;
+    text-align: center;
+    color: $dark-red;
     display: block;
   }
 
@@ -914,7 +928,7 @@
     font-family: $proximaBold;
     font-size: 17px;
     line-height: 24px;
-    color: $dark-blue;
+    color: $dark-red;
 
     @media (max-width: $tablet-width) {
       font-size: 16px;

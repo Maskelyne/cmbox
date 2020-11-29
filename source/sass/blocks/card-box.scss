@@ -47,12 +47,6 @@
 }
 
 .card__box-text {
-  @media (max-width: $desktop-width-min) {
-    max-width: 350px;
-    margin: 0 auto;
-    grid-row: 2;
-  }
-
   h2 {
     max-width: 300px;
 

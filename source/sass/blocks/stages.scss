@@ -21,7 +21,7 @@
 .stages__nav-list {
   @include reset-list;
   position: sticky;
-  top: 20px;
+  top: 100px;
 }
 
 .stages__box {
@@ -41,7 +41,7 @@
   }
 
   @media (max-width: $desktop-width-min) {
-    margin: 0 0 0 23%;
+    margin: 0 0 0 25%;
   }
 
   @media (max-width: $tablet-width) {
@@ -1586,7 +1586,7 @@
   margin: 45px 10% 0 23%;
 
   @media (max-width: $desktop-width-min) {
-    margin: 40px 5% 0 29%;
+    margin: 40px 5% 0 30%;
   }
 
   @media (max-width: $tablet-width) {

@@ -163,3 +163,8 @@ main {
     background-color: $dark-black;
   }
 }
+
+.grecaptcha-badge {
+  overflow: hidden;
+  opacity: 0;
+}

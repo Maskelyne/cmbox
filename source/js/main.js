@@ -7,10 +7,8 @@
 
 //= modules/header-nav.js
 //= modules/clients-slider.js
-//= modules/validation.js
 //= modules/portfolio-rotate-card.js
 //= modules/scroll-height.js
-//= modules/sliders.js
 //= modules/bg-main.js
 //= modules/portfolio-page-scroll.js
 //= modules/modals.js
