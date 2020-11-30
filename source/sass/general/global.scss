@@ -133,17 +133,38 @@ main {
 }
 
 .black {
-  color: $black;
+  color: $dark-black;
+
+  a {
+    color: $dark-black;
+  }
+
+  p::before {
+    background-color: $dark-black;
+  }
 }
 
 .white {
   color: $white;
+
+  a {
+    color: $white;
+  }
+
+  p::before {
+    background-color: $white;
+  }
 }
 
 .black .portfolio-page__scroll-mouse {
-  border: solid 2px $black;
+  border: solid 2px $dark-black;
 
   &::after {
-    background-color: $black;
+    background-color: $dark-black;
   }
+}
+
+.grecaptcha-badge {
+  overflow: hidden;
+  opacity: 0;
 }

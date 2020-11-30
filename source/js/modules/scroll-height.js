@@ -2,14 +2,14 @@
 
 (function () {
 
-  let articleContent = document.querySelector('.article__box-article');
+  var articleContent = document.querySelector('.article__box-article');
 
   if (articleContent) {
 
     const DESKTOP_WIDTH = 1023;
-    let articleCard = document.querySelector('.article__box-articles');
+    var articleCard = document.querySelector('.article__box-articles');
 
-    let setHeight = function () {
+    var setHeight = function () {
       let isDesktop = window.innerWidth > DESKTOP_WIDTH;
 
         if (isDesktop) {
@@ -25,14 +25,14 @@
     window.addEventListener('resize', setHeight);
   }
 
-  let servicesBoxWrapper = document.querySelector('.services');
+  var servicesBoxWrapper = document.querySelector('.services');
 
   if (servicesBoxWrapper) {
 
     const TABLET_WIDTH = 767;
-    let servicesBox = document.querySelector('.services__nav-box');
+    var servicesBox = document.querySelector('.services__nav-box');
 
-    let setHeight = function () {
+    var setHeight = function () {
       let isTablet = window.innerWidth > TABLET_WIDTH;
 
         if (isTablet) {
@@ -48,14 +48,14 @@
     window.addEventListener('resize', setHeight);
   }
 
-  let stageWrapper = document.querySelector('.stages');
+  var stageWrapper = document.querySelector('.stages');
 
   if (stageWrapper) {
 
     const TABLET_WIDTH = 767;
-    let stageBox = document.querySelector('.stages__nav-box');
+    var stageBox = document.querySelector('.stages__nav-box');
 
-    let setHeight = function () {
+    var setHeight = function () {
       let isTablet = window.innerWidth > TABLET_WIDTH;
 
         if (isTablet) {

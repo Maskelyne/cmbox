@@ -7,10 +7,6 @@
 }
 
 .article__title {
-  display: grid;
-  grid-template-columns: 48px auto;
-  grid-gap: 0 20px;
-
   h1 {
     text-align: left;
 
@@ -26,9 +22,9 @@
     align-items: center;
 
     @media (max-width: $tablet-width) {
-      grid-template-columns: 30px auto;
+      padding-left: 70px;
       grid-gap: 0 10px;
-      margin-left: 50px;
+      grid-template-columns: 30px auto;
     }
 
     img {
@@ -130,7 +126,7 @@
 .article__box-text {
   padding-right: 270px;
 
-  @media(max-width: $desktop-width-min) {
+  @media (max-width: $desktop-width-min) {
     padding-right: 0;
   }
 
@@ -138,15 +134,10 @@
     margin-top: 20px;
     margin-bottom: 10px;
     max-width: 850px;
-    font-size: 48px;
-    line-height: 48px;
+    font-size: 36px;
+    line-height: 36px;
     text-transform: none;
     letter-spacing: 0;
-
-    @media (max-width: $desktop-width-min) {
-      font-size: 36px;
-      line-height: 36px;
-    }
 
     @media (max-width: $tablet-width) {
       font-size: 16px;
@@ -211,19 +202,19 @@
     }
   }
 
-  .article__list {
+  ul {
     @include reset-list;
 
     p {
-      padding-left: 30px;
+      padding-left: 25px;
       position: relative;
 
       &::before {
         width: 10px;
-        height: 10px;
+        height: 2px;
         position: absolute;
         content: "";
-        top: 7px;
+        top: 10px;
         left: 0;
         background-color: $dark-red;
       }

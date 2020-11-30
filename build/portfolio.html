@@ -107,38 +107,25 @@
               <li><a href="portfolio-page.html">
                   <div class="portfolio__box-card">
                     <div class="portfolio__card">
-                      <div class="portfolio__card-perspective" style="background-image: url(assets/img/portfolio/bg-vodadom.svg)">
-                        <div class="portfolio__image"><img src="assets/img/portfolio/img-yartruba.jpg" width="340" height="240" alt="Водадом"/>
+                      <div class="portfolio__card-perspective" style="background-image: url(assets/img/portfolio/bg-exim.svg);">
+                        <div class="portfolio__image"><img src="assets/img/portfolio/img-exim.jpg" width="340" height="240" alt="Интернет-магазин"/>
                         </div>
                         <div class="portfolio__text">
-                          <h2>Vodadom</h2>
-                          <p>Сайт для бурового предприятия в Беларуси</p>
+                          <h2>Exim.by</h2>
+                          <p>Интернет-магазин</p>
                         </div>
                       </div>
                     </div>
                   </div></a></li>
-              <li><a href="portfolio-page.html">
-                  <div class="portfolio__box-card">
+              <li><a class="portfolio-modal-js" href="portfolio-page.html">
+                  <div class="portfolio__box-card portfolio__box-card--project">
                     <div class="portfolio__card">
-                      <div class="portfolio__card-perspective" style="background-image: url(assets/img/portfolio/bg-yartruba.svg)">
-                        <div class="portfolio__image"><img src="assets/img/portfolio/img-yartruba.jpg" width="340" height="240" alt="Яртруба"/>
+                      <div class="portfolio__card-perspective" style="background-image: url(assets/img/portfolio/bg-yartruba.svg);">
+                        <div class="portfolio__image">
+                          <p>Место для вашего проекта</p>
                         </div>
                         <div class="portfolio__text">
-                          <h2>Yartruba</h2>
-                          <p>Сайт для официального поставщика труб нПВХ</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div></a></li>
-              <li><a href="portfolio-page.html">
-                  <div class="portfolio__box-card">
-                    <div class="portfolio__card">
-                      <div class="portfolio__card-perspective" style="background-image: url(assets/img/portfolio/bg-exim.svg)">
-                        <div class="portfolio__image"><img src="assets/img/portfolio/img-exim.jpg" width="340" height="240" alt="Эксим"/>
-                        </div>
-                        <div class="portfolio__text">
-                          <h2>Exim</h2>
-                          <p>Сайт для поставщика качественной электротехники</p>
+                          <button class="button" type="button"><span>Оставить заявку</span></button>
                         </div>
                       </div>
                     </div>
@@ -183,6 +170,27 @@
         </div>
       </div>
     </footer>
+    <section class="modal contacts modal-consultation">
+      <div class="modal-consultation__wrapper">
+        <div class="contacts__form">
+          <h3>Заказать проект</h3>
+          <form id="form" action="#" method="get">
+            <div class="modal__user-name">
+              <input id="user_name" type="text" name="user_name" required>
+              <label for="user_name">Имя</label>
+            </div>
+            <div class="modal__user-phone">
+              <input id="user_phone" type="tel" name="user_phone" required>
+              <label for="user_phone">Телефон</label>
+            </div>
+            <div class="modal__user-comment">
+              <textarea id="user_comment" name="user_comment"></textarea>
+              <label for="user_comment">Комментарий</label>
+            </div><a class="button" href="#"><span>Отправить</span></a>
+          </form>
+        </div><a class="modal__btn-closed" href="#"><span class="visually-hidden">Закрыть модальное окно</span></a>
+      </div>
+    </section>
     <section class="modal modal-development">
       <div class="modal__wrapper">
         <div class="modal__box">

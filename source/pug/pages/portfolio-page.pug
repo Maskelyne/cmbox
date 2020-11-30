@@ -40,7 +40,7 @@ block main
     var developers = [
       {
         text: 'Маркетолог',
-        path: 'png',
+        path: 'png/teams',
         image: 'marketolog',
         format: 'png',
         width: '120',
@@ -49,8 +49,17 @@ block main
       },
       {
         text: 'Дизайнер',
-        path: 'png',
-        image: 'designer',
+        path: 'png/teams',
+        image: 'designer-kate',
+        format: 'png',
+        width: '120',
+        height: '120',
+        altText: 'Дизайнер'
+      },
+      {
+        text: 'Дизайнер',
+        path: 'png/teams',
+        image: 'designer-kseniya',
         format: 'png',
         width: '120',
         height: '120',
@@ -58,8 +67,44 @@ block main
       },
       {
         text: 'Разработчик',
-        path: 'png',
-        image: 'developer',
+        path: 'png/teams',
+        image: 'developer-artem-1',
+        format: 'png',
+        width: '120',
+        height: '120',
+        altText: 'Разработчик'
+      },
+      {
+        text: 'Разработчик',
+        path: 'png/teams',
+        image: 'developer-artem',
+        format: 'png',
+        width: '120',
+        height: '120',
+        altText: 'Разработчик'
+      },
+      {
+        text: 'Разработчик',
+        path: 'png/teams',
+        image: 'developer-artemiy',
+        format: 'png',
+        width: '120',
+        height: '120',
+        altText: 'Разработчик'
+      },
+      {
+        text: 'Team-Lead',
+        path: 'png/teams',
+        image: 'team-lead',
+        format: 'png',
+        width: '120',
+        height: '120',
+        altText: 'Руководитель'
+      },
+      {
+        text: 'Разработчик',
+        path: 'png/teams',
+        image: 'developer-evgeniy',
         format: 'png',
         width: '120',
         height: '120',
@@ -67,7 +112,7 @@ block main
       },
       {
         text: 'SEO-специалист',
-        path: 'png',
+        path: 'png/teams',
         image: 'seo',
         format: 'png',
         width: '120',
@@ -76,7 +121,7 @@ block main
       },
       {
         text: 'SMM-специалист',
-        path: 'png',
+        path: 'png/teams',
         image: 'smm',
         format: 'png',
         width: '120',
@@ -85,12 +130,48 @@ block main
       },
       {
         text: 'Контекстолог',
-        path: 'png',
+        path: 'png/teams',
         image: 'contextolog',
         format: 'png',
         width: '120',
         height: '120',
         altText: 'Контекстолог'
+      },
+      {
+        text: 'Видеооператор',
+        path: 'png/teams',
+        image: 'operator',
+        format: 'png',
+        width: '120',
+        height: '120',
+        altText: 'Видеооператор'
+      },
+      {
+        text: 'Видеооператор',
+        path: 'png/teams',
+        image: 'operator-1',
+        format: 'png',
+        width: '120',
+        height: '120',
+        altText: 'Видеооператор'
+      },
+      {
+        text: 'Видеооператор',
+        path: 'png/teams',
+        image: 'operator-2',
+        format: 'png',
+        width: '120',
+        height: '120',
+        altText: 'Видеооператор'
+      },
+      {
+        text: 'Видеооператор',
+        path: 'png/teams',
+        image: 'operator-3',
+        format: 'png',
+        width: '120',
+        height: '120',
+        altText: 'Видеооператор'
       },
     ];
 
@@ -99,18 +180,16 @@ block main
       .portfolio-page__wrapper.container
         .portfolio-page__box-add.black
           .portfolio-page__controls.black
-            .portfolio-page__button-prev
+            .portfolio-page__button-prev.button__disabled
               a(href="#")
-              span Exim
               span Предыдущий проект
             .portfolio-page__button-next
               a(href="#")
-              span Yartruba
               span Следующий проект
           h2
             a(href="#") Exim.by
           p ЗАО «Эксимэлектро» более 17 лет поставщики качественной электротехнической продукции в РБ
-          strong Цели
+          h3 Цели
           ul
             li
               p Разработка стратегии для увеличения продаж в интернете
@@ -121,7 +200,7 @@ block main
             li
               p Подключение всех инструментов продвижения
           a(href="#").button--consultation
-            +img('svg', 'lead-magnit', 'svg', '240', '190', 'Заказать проект')
+            +picture('svg', 'lead-magnit', 'lead-magnit-mobile', 'svg', '240', '120', 'Заказать проект', '1400')
         .portfolio-page__box-image
           .portfolio-page__image
             a(href="#")
@@ -131,7 +210,6 @@ block main
               a(href="#")
               span Exim
               span Предыдущий проект
-            h1 Exim.by
             .portfolio-page__button-next
               a(href="#")
               span Yartruba
@@ -150,10 +228,15 @@ block main
         .portfolio-page__info
           .portfolio-page__cell
             h3 Цели
-            p Разработка стратегии для увеличения продаж в интернете
-            p Ребрендинг торговой марки
-            p Создание многофункционального интернет-магазина
-            p Подключение всех инструментов продвижения
+            ul
+              li
+                p Разработка стратегии для увеличения продаж в интернете
+              li
+                p Ребрендинг торговой марки
+              li
+                p Создание многофункционального сайта магазина
+              li
+                p Подключение всех инструментов продвижения
           .portfolio-page__trabls
             h3 Клиент пришел с:
             p Устаревший сайт со слабым функционалом
@@ -172,7 +255,7 @@ block main
             h3 Результаты:
             p Обновлённый удобный сайт, стал возвращать старых клиентов.
             p Ребрендинг заметили все конкуренты и клиенты.
-              +img('png', 'company-exim-next', 'png', '700', '350', 'Эксим')
+            +img('png', 'company-exim-next', 'png', '700', '350', 'Эксим')
             p Создали шаблоны постов Instagram и разработали Хештеги, для дальнейшего ведения социальной сети внутренними силами заказчика.
             .portfolio-page__image-box
               +img('png', 'company-image-1', 'png', '180', '280', 'Инстаграм')
@@ -180,12 +263,13 @@ block main
               +img('png', 'company-image-3', 'png', '180', '280', 'Инстаграм')
             p В первый же месяц трафик на сайте
               strong  увеличился на 30%.
-              +img('svg', 'graph-1', 'svg', '430', '280', 'Пользователи')
+            +img('svg', 'graph-1', 'svg', '430', '280', 'Пользователи')
             p За первый месяц без бюджета на рекламу
               strong   привлекли 317 подписчиков в Instagram.
-              +img('svg', 'people-element-1', 'svg', '430', '280', 'Пользователи')
-          .feedback__box.portfolio-page__feedback
+            +img('svg', 'people-element-1', 'svg', '430', '280', 'Пользователи')
+          .feedback__image-arm
             +picture('svg', 'arm', 'arm-mobile', 'svg', '1130', '180', 'Цель достигнута', '767')
+          .feedback__box.portfolio-page__feedback
             article
               .feedback__title
                 .feedback__title-text
@@ -204,7 +288,7 @@ block main
                   strong= item.text
           .portfolio-page__leadmagnit
             a(href="#").button--consultation
-              +img('svg', 'lead-magnit', 'svg', '240', '197', 'Заказать проект')
+              +img('svg', 'lead-magnit', 'svg', '240', '120', 'Заказать проект')
             p Посетить сайт
               a(href="#")  www.exim.by
         .main-footer.portfolio-page__footer

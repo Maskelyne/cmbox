@@ -430,7 +430,7 @@
     background-color: transparent;
 
     &:required {
-      + label {
+      ~ label {
         &::after {
           position: absolute;
           content: "*";
@@ -442,7 +442,7 @@
 
     &:focus,
     &.not-empty {
-      + label {
+      ~ label {
         font-size: 15px;
         transform: translateY(-15px);
         transition: all 0.3s linear;

@@ -1,5 +1,5 @@
 .intro__wrapper {
-  min-height: 1100px;
+  height: 100vh;
   display: grid;
   align-items: center;
   justify-content: center;
@@ -12,15 +12,13 @@
   }
 
   @media (max-width: $desktop-width-min) {
-    padding: 90px 150px 190px 150px;
+    margin-top: 130px;
+    padding-bottom: 200px;
     grid-template-columns: 1fr;
   }
 
   @media (max-width: $tablet-width) {
-    min-height: auto;
-  }
-
-  @media (max-width: $tablet-width) {
+    height: auto;
     max-width: 430px;
     padding: 130px 15px 90px 15px;
   }
@@ -39,8 +37,7 @@
 
       @media (max-width: $tablet-width) {
         max-width: 200px;
-        margin-top: 0;
-        justify-self: flex-start;
+        margin-top: 30px;
       }
     }
   }
@@ -48,7 +45,7 @@
 
 .intro__box {
   h1 {
-    margin: 0 0 35px 0;
+    margin: 0 0 30px 0;
     font-size: 36px;
     line-height: 54px;
     color: $dark-blue;
@@ -56,8 +53,10 @@
     text-transform: uppercase;
 
     @media (max-width: $desktop-width-min) {
-      font-size: 24px;
+      font-size: 30px;
       line-height: 36px;
+      max-width: 580px;
+      margin: 0 auto;
       text-align: center;
     }
 
@@ -74,8 +73,8 @@
 
   h2 {
     margin-bottom: 5px;
-    font-size: 20px;
-    line-height: 25px;
+    font-size: 18px;
+    line-height: 23px;
   }
 
   p {
@@ -127,6 +126,7 @@
   background-position: bottom;
 
   @media (max-width: $desktop-width-min) {
+    height: 330px;
     margin: 0 auto;
   }
 
@@ -136,7 +136,12 @@
 
   .swiper-container {
     position: static;
-    height: 220px;
+    height: 160px;
+    margin-top: 60px;
+
+    @media (max-width: $desktop-width-min) {
+      margin-top: 0;
+    }
   }
 
   .swiper-slide-active {

@@ -7,10 +7,9 @@
   var overlayModal = document.querySelector('.modal');
   var modalAnalysis = document.querySelector('.modal-analysis');
   var modalAnalysisBtn = document.querySelector('.analysis-btn');
-  // var modalThanks = document.querySelector('.modal-thanks');
   var modalClose = document.querySelectorAll('.modal__btn-closed');
 
-  if (modalAnalysis) {
+  if (modalAnalysisBtn) {
 
     modalAnalysisBtn.addEventListener('click', function (evt) {
       evt.preventDefault();
@@ -23,7 +22,6 @@
       modalClose[i].addEventListener('click', function (evt) {
         evt.preventDefault();
 
-        // modalThanks.classList.remove('modal-active');
         modalAnalysis.classList.remove('modal-active');
         document.body.style.overflow = '';
       });
@@ -36,8 +34,6 @@
 
         modalAnalysis.classList.contains(`modal-active`);
         modalAnalysis.classList.remove(`modal-active`);
-        // modalThanks.classList.contains('modal-active');
-        // modalThanks.classList.remove('modal-active');
         document.body.style.overflow = ``;
 
       }
@@ -49,22 +45,11 @@
       if (evt.target === overlayModal) {
 
         modalAnalysis.classList.remove(`modal-active`);
-        modalAnalysis.classList.add(`modal-closed`);
         document.body.style.overflow = ``;
 
       }
 
     });
-
-    // modalThanks.addEventListener('click', function (evt) {
-    //
-    //   if (evt.target === modalThanks) {
-    //     modalThanks.classList.contains('modal-active');
-    //     modalThanks.classList.remove('modal-active');
-    //     document.body.style.overflow = ``;
-    //   }
-    //
-    // })
 
   }
 

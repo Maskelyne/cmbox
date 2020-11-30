@@ -11,4 +11,5 @@
 //= vendor/jquery-fancybox.min.js
 //= vendor/jquery.validate.min.js
 //= vendor/lazyYT.js
+//= vendor/clipboard.min.js
 

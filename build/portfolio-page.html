@@ -81,11 +81,12 @@
         <div class="portfolio-page__wrapper container">
           <div class="portfolio-page__box-add black">
             <div class="portfolio-page__controls black">
-              <div class="portfolio-page__button-prev"><a href="#"></a><span>Exim</span><span>Предыдущий проект</span></div>
-              <div class="portfolio-page__button-next"><a href="#"></a><span>Yartruba</span><span>Следующий проект</span></div>
+              <div class="portfolio-page__button-prev button__disabled"><a href="#"></a><span>Предыдущий проект</span></div>
+              <div class="portfolio-page__button-next"><a href="#"></a><span>Следующий проект</span></div>
             </div>
             <h2><a href="#">Exim.by</a></h2>
-            <p>ЗАО «Эксимэлектро» более 17 лет поставщики качественной электротехнической продукции в РБ</p><strong>Цели</strong>
+            <p>ЗАО «Эксимэлектро» более 17 лет поставщики качественной электротехнической продукции в РБ</p>
+            <h3>Цели</h3>
             <ul>
               <li>
                 <p>Разработка стратегии для увеличения продаж в интернете</p>
@@ -99,13 +100,15 @@
               <li>
                 <p>Подключение всех инструментов продвижения</p>
               </li>
-            </ul><a class="button--consultation" href="#"><img src="assets/img/svg/lead-magnit.svg" width="240" height="190" alt="Заказать проект"/></a>
+            </ul><a class="button--consultation" href="#">
+              <picture>
+                <source media="(max-width: 1400px)" srcset="assets/img/svg/lead-magnit-mobile.svg"/><img src="assets/img/svg/lead-magnit.svg" width="240" height="120" alt="Заказать проект"/>
+              </picture></a>
           </div>
           <div class="portfolio-page__box-image">
             <div class="portfolio-page__image"><a href="#"><img src="assets/img/portfolio/img-exim.jpg" width="340" height="240" alt="Эксим"/></a></div>
             <div class="portfolio-page__controls black">
               <div class="portfolio-page__button-prev"><a href="#"></a><span>Exim</span><span>Предыдущий проект</span></div>
-              <h1>Exim.by</h1>
               <div class="portfolio-page__button-next"><a href="#"></a><span>Yartruba</span><span>Следующий проект</span></div>
             </div>
           </div>
@@ -124,10 +127,20 @@
           <div class="portfolio-page__info">
             <div class="portfolio-page__cell">
               <h3>Цели</h3>
-              <p>Разработка стратегии для увеличения продаж в интернете</p>
-              <p>Ребрендинг торговой марки</p>
-              <p>Создание многофункционального интернет-магазина</p>
-              <p>Подключение всех инструментов продвижения</p>
+              <ul>
+                <li>
+                  <p>Разработка стратегии для увеличения продаж в интернете</p>
+                </li>
+                <li>
+                  <p>Ребрендинг торговой марки</p>
+                </li>
+                <li>
+                  <p>Создание многофункционального сайта магазина</p>
+                </li>
+                <li>
+                  <p>Подключение всех инструментов продвижения</p>
+                </li>
+              </ul>
             </div>
             <div class="portfolio-page__trabls">
               <h3>Клиент пришел с:</h3>
@@ -147,20 +160,19 @@
             <div class="portfolio-page__advantages">
               <h3>Результаты:</h3>
               <p>Обновлённый удобный сайт, стал возвращать старых клиентов.</p>
-              <p>Ребрендинг заметили все конкуренты и клиенты.<img src="assets/img/png/company-exim-next.png" width="700" height="350" alt="Эксим"/>
-              </p>
+              <p>Ребрендинг заметили все конкуренты и клиенты.</p><img src="assets/img/png/company-exim-next.png" width="700" height="350" alt="Эксим"/>
               <p>Создали шаблоны постов Instagram и разработали Хештеги, для дальнейшего ведения социальной сети внутренними силами заказчика.</p>
               <div class="portfolio-page__image-box"><img src="assets/img/png/company-image-1.png" width="180" height="280" alt="Инстаграм"/><img src="assets/img/png/company-image-2.png" width="180" height="280" alt="Инстаграм"/><img src="assets/img/png/company-image-3.png" width="180" height="280" alt="Инстаграм"/>
               </div>
-              <p>В первый же месяц трафик на сайте<strong> увеличился на 30%.</strong><img src="assets/img/svg/graph-1.svg" width="430" height="280" alt="Пользователи"/>
-              </p>
-              <p>За первый месяц без бюджета на рекламу<strong>  привлекли 317 подписчиков в Instagram.</strong><img src="assets/img/svg/people-element-1.svg" width="430" height="280" alt="Пользователи"/>
-              </p>
+              <p>В первый же месяц трафик на сайте<strong> увеличился на 30%.</strong></p><img src="assets/img/svg/graph-1.svg" width="430" height="280" alt="Пользователи"/>
+              <p>За первый месяц без бюджета на рекламу<strong>  привлекли 317 подписчиков в Instagram.</strong></p><img src="assets/img/svg/people-element-1.svg" width="430" height="280" alt="Пользователи"/>
             </div>
-            <div class="feedback__box portfolio-page__feedback">
+            <div class="feedback__image-arm">
               <picture>
                 <source media="(max-width: 767px)" srcset="assets/img/svg/arm-mobile.svg"/><img src="assets/img/svg/arm.svg" width="1130" height="180" alt="Цель достигнута"/>
               </picture>
+            </div>
+            <div class="feedback__box portfolio-page__feedback">
               <article>
                 <div class="feedback__title">
                   <div class="feedback__title-text"><strong>Стив Джобс</strong><span>Генеральный директор Torwood</span></div><a href="#">Больше отзывов</a>
@@ -172,21 +184,39 @@
             <div class="portfolio-page__developers">
               <h3>В проекте участвовали:</h3>
               <div class="portfolio-page__box-developers">
-                <article><img src="assets/img/png/marketolog.png" width="120" height="120" alt="Маркетолог"/><strong>Маркетолог</strong>
+                <article><img src="assets/img/png/teams/marketolog.png" width="120" height="120" alt="Маркетолог"/><strong>Маркетолог</strong>
                 </article>
-                <article><img src="assets/img/png/designer.png" width="120" height="120" alt="Дизайнер"/><strong>Дизайнер</strong>
+                <article><img src="assets/img/png/teams/designer-kate.png" width="120" height="120" alt="Дизайнер"/><strong>Дизайнер</strong>
                 </article>
-                <article><img src="assets/img/png/developer.png" width="120" height="120" alt="Разработчик"/><strong>Разработчик</strong>
+                <article><img src="assets/img/png/teams/designer-kseniya.png" width="120" height="120" alt="Дизайнер"/><strong>Дизайнер</strong>
                 </article>
-                <article><img src="assets/img/png/seo.png" width="120" height="120" alt="SEO-специалист"/><strong>SEO-специалист</strong>
+                <article><img src="assets/img/png/teams/developer-artem-1.png" width="120" height="120" alt="Разработчик"/><strong>Разработчик</strong>
                 </article>
-                <article><img src="assets/img/png/smm.png" width="120" height="120" alt="SMM-специалист"/><strong>SMM-специалист</strong>
+                <article><img src="assets/img/png/teams/developer-artem.png" width="120" height="120" alt="Разработчик"/><strong>Разработчик</strong>
                 </article>
-                <article><img src="assets/img/png/contextolog.png" width="120" height="120" alt="Контекстолог"/><strong>Контекстолог</strong>
+                <article><img src="assets/img/png/teams/developer-artemiy.png" width="120" height="120" alt="Разработчик"/><strong>Разработчик</strong>
+                </article>
+                <article><img src="assets/img/png/teams/team-lead.png" width="120" height="120" alt="Руководитель"/><strong>Team-Lead</strong>
+                </article>
+                <article><img src="assets/img/png/teams/developer-evgeniy.png" width="120" height="120" alt="Разработчик"/><strong>Разработчик</strong>
+                </article>
+                <article><img src="assets/img/png/teams/seo.png" width="120" height="120" alt="SEO-специалист"/><strong>SEO-специалист</strong>
+                </article>
+                <article><img src="assets/img/png/teams/smm.png" width="120" height="120" alt="SMM-специалист"/><strong>SMM-специалист</strong>
+                </article>
+                <article><img src="assets/img/png/teams/contextolog.png" width="120" height="120" alt="Контекстолог"/><strong>Контекстолог</strong>
+                </article>
+                <article><img src="assets/img/png/teams/operator.png" width="120" height="120" alt="Видеооператор"/><strong>Видеооператор</strong>
+                </article>
+                <article><img src="assets/img/png/teams/operator-1.png" width="120" height="120" alt="Видеооператор"/><strong>Видеооператор</strong>
+                </article>
+                <article><img src="assets/img/png/teams/operator-2.png" width="120" height="120" alt="Видеооператор"/><strong>Видеооператор</strong>
+                </article>
+                <article><img src="assets/img/png/teams/operator-3.png" width="120" height="120" alt="Видеооператор"/><strong>Видеооператор</strong>
                 </article>
               </div>
             </div>
-            <div class="portfolio-page__leadmagnit"><a class="button--consultation" href="#"><img src="assets/img/svg/lead-magnit.svg" width="240" height="197" alt="Заказать проект"/></a>
+            <div class="portfolio-page__leadmagnit"><a class="button--consultation" href="#"><img src="assets/img/svg/lead-magnit.svg" width="240" height="120" alt="Заказать проект"/></a>
               <p>Посетить сайт<a href="#"> www.exim.by</a></p>
             </div>
           </div>

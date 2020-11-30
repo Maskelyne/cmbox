@@ -615,10 +615,10 @@
       }
 
       &:nth-child(5) {
-        width: 50px;
-        height: 40px;
+        width: 62px;
+        height: 63px;
         position: absolute;
-        top: 100px;
+        top: 90px;
         left: 175px;
         animation: teams-svg-top;
         animation-duration: 2s;
@@ -630,6 +630,10 @@
         @media (max-width: $desktop-width) {
           top: 90px;
           left: 155px;
+        }
+
+        @media (max-width: $desktop-width-min) {
+          top: 80px;
         }
       }
 
@@ -671,7 +675,7 @@
       }
 
       &:nth-child(8) {
-        width: 55px;
+        width: 50px;
         height: 40px;
         position: absolute;
         top: 140px;
@@ -689,8 +693,8 @@
       }
 
       &:nth-child(9) {
-        width: 62px;
-        height: 63px;
+        width: 50px;
+        height: 40px;
         position: absolute;
         top: 215px;
         left: 510px;
@@ -702,6 +706,10 @@
         animation-direction: alternate;
 
         @media (max-width: $desktop-width) {
+          left: 430px;
+        }
+
+        @media (max-width: $desktop-width-min) {
           left: 455px;
         }
       }
@@ -874,6 +882,10 @@
         @media (max-width: $desktop-width) {
           width: 80px;
           height: 80px;
+          top: 40px;
+        }
+
+        @media (max-width: $desktop-width-min) {
           top: 0;
         }
       }
@@ -894,6 +906,10 @@
         @media (max-width: $desktop-width) {
           width: 75px;
           height: 95px;
+          top: -15%;
+        }
+
+        @media (max-width: $desktop-width-min) {
           top: -25%;
         }
       }
@@ -914,6 +930,10 @@
         @media (max-width: $desktop-width) {
           width: 75px;
           height: 95px;
+          top: -7%;
+        }
+
+        @media (max-width: $desktop-width-min) {
           top: -16%;
         }
       }

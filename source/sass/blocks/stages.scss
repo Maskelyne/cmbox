@@ -21,7 +21,7 @@
 .stages__nav-list {
   @include reset-list;
   position: sticky;
-  top: 20px;
+  top: 100px;
 }
 
 .stages__box {
@@ -41,7 +41,7 @@
   }
 
   @media (max-width: $desktop-width-min) {
-    margin: 0 0 0 23%;
+    margin: 0 0 0 25%;
   }
 
   @media (max-width: $tablet-width) {
@@ -1586,12 +1586,42 @@
   margin: 45px 10% 0 23%;
 
   @media (max-width: $desktop-width-min) {
-    margin: 40px 5% 0 29%;
+    margin: 40px 5% 0 30%;
   }
 
   @media (max-width: $tablet-width) {
     margin: 0 auto;
     padding: 0 10px;
+  }
+
+  ol {
+    padding: 0;
+    margin: 0 0 30px 20px;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  ul {
+    @include reset-list;
+    margin-bottom: 30px;
+
+    p {
+      margin: 0;
+      padding-left: 20px;
+      position: relative;
+
+      &::before {
+        width: 10px;
+        height: 2px;
+        position: absolute;
+        content: "";
+        top: 10px;
+        left: 0px;
+        background-color: $dark-red;
+      }
+    }
   }
 
   h2 {
@@ -1604,16 +1634,12 @@
   }
 
   p {
-    margin: 0;
+    margin-bottom: 10px;
   }
 
   a {
     font-family: $proximaNova;
   }
-}
-
-.stages__list {
-  margin-top: 10px;
 
   strong {
     color: $dark-blue;
@@ -1621,7 +1647,7 @@
 }
 
 .stages__coffee-box {
-  margin: 60px 0 20px 0;
+  margin: 100px 0 20px 0;
   display: grid;
   grid-template-columns: 260px auto;
   grid-gap: 0 40px;
@@ -1629,6 +1655,7 @@
 
   @media (max-width: $tablet-width) {
     grid-gap: 0 14px;
+    margin-top: 30px;
   }
 
   @media (max-width: $mobile-width) {
@@ -1650,8 +1677,89 @@
   strong {
     color: $dark-red;
   }
+}
+
+.stages__coffee-image {
+  position: relative;
 
   img {
-    max-width: 260px;
+    &:nth-child(1) {
+      max-width: 170px;
+
+      @media (max-width: $tablet-width) {
+        display: none;
+      }
+    }
+
+    &:nth-child(2) {
+      max-width: 130px;
+      position: absolute;
+      top: -40px;
+      right: 0;
+      animation: rotateCoffeePrice;
+      animation-duration: 1.5s;
+      animation-delay: 0s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-fill-mode: forwards;
+      animation-play-state: running;
+
+      @media (max-width: $tablet-width) {
+        display: none;
+        animation: none;
+      }
+    }
+
+    &:nth-child(3) {
+      max-width: 35px;
+      position: absolute;
+      top: -75px;
+      left: 70px;
+      animation: coffeeOpacity;
+      animation-duration: 2s;
+      animation-delay: 0s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-fill-mode: forwards;
+      animation-play-state: running;
+      opacity: 0;
+
+      @media (max-width: $tablet-width) {
+        display: none;
+        animation: none;
+      }
+    }
+
+    &:nth-child(4) {
+      max-width: 35px;
+      position: absolute;
+      top: -85px;
+      left: 68px;
+      animation: coffeeOpacity;
+      animation-duration: 2s;
+      animation-delay: 2s;
+      animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-fill-mode: forwards;
+      animation-play-state: running;
+      opacity: 0;
+
+      @media (max-width: $tablet-width) {
+        display: none;
+        animation: none;
+      }
+    }
+
+    &:nth-child(5) {
+      max-width: 260px;
+      display: none;
+
+      @media (max-width: $tablet-width) {
+        display: block;
+      }
+    }
   }
 }

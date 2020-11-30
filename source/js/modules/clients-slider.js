@@ -2,45 +2,47 @@
 
 (function () {
 
-  let clientsSlider = document.querySelector('.clients__swiper-container');
-  let servicesSlider = document.querySelector('.services__swiper-container');
+  var mainSlider = document.querySelector('.intro__box-swiper-container');
+  // var clientsSlider = document.querySelector('.clients__swiper-container');
+  var servicesSlider = document.querySelector('.services__swiper-container');
 
-  let clientsSliderDesk = function (el) {
+  // var clientsSliderDesk = function (el) {
+  //   return new Swiper(el, {
+  //     loop: true,
+  //     speed: 1000,
+  //     autoplay: {
+  //       delay: 2500,
+  //     },
+  //     navigation: {
+  //       nextEl: '.swiper-button-next',
+  //       prevEl: '.swiper-button-prev',
+  //     },
+  //     breakpoints: {
+  //       320: {
+  //         slidesPerView: 1,
+  //       },
+  //       768: {
+  //         slidesPerView: 2,
+  //       },
+  //       950: {
+  //         slidesPerView: 3,
+  //       },
+  //       1200: {
+  //         slidesPerView: 4,
+  //       }
+  //     }
+  //   });
+  // };
+  //
+  // if (clientsSlider) {
+  //   clientsSliderDesk(clientsSlider);
+  // }
+
+  var servicesSliderDesk = function (el) {
     return new Swiper(el, {
       loop: true,
       speed: 1000,
-      autoplay: {
-        delay: 2500,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-        },
-        768: {
-          slidesPerView: 2,
-        },
-        950: {
-          slidesPerView: 3,
-        },
-        1200: {
-          slidesPerView: 4,
-        }
-      }
-    });
-  };
-
-  if (clientsSlider) {
-    clientsSliderDesk(clientsSlider);
-  }
-
-  let servicesSliderDesk = function (el) {
-    return new Swiper(el, {
-      loop: true,
-      speed: 1000,
+      spaceBetween: 30,
       autoplay: {
         delay: 1200,
       },
@@ -64,6 +66,27 @@
 
   if (servicesSlider) {
     servicesSliderDesk(servicesSlider);
+  }
+
+  var createSlider = function (el) {
+    return new Swiper(el, {
+      direction: 'vertical',
+      slidesPerView: 1,
+      loop: true,
+      speed: 1000,
+      autoplay: {
+        delay: 7000,
+      },
+      mousewheel: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  };
+
+  if (mainSlider) {
+    createSlider(mainSlider);
   }
 
 })();

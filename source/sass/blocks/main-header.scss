@@ -87,6 +87,10 @@
     a {
       font-weight: $bold;
       color: $dark-red;
+
+      @media (max-width: $desktop-width-min) {
+        color: $dark-blue;
+      }
     }
   }
 }
@@ -196,6 +200,16 @@
 
     @media (max-width: $tablet-width) {
       display: none;
+    }
+  }
+
+  &:hover {
+    font-weight: $normal;
+    color: $dark-black;
+
+    @media (max-width: $desktop-width-min) {
+      color: $dark-red;
+      font-weight: $bold;
     }
   }
 }
