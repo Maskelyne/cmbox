@@ -39,46 +39,17 @@
   }
 }
 
-.sharing-list__copy {
-  padding: 10px;
-  width: 300px;
-  position: absolute;
-  top: 40px;
-  left: -10px;
-  background-color: white;
-  z-index: 1;
-  box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.15), 2px 2px 8px rgba(0, 0, 0, 0.15);
-  border-radius: 5px;
-  display: none;
-
-  @media (max-width: $tablet-width) {
-    width: 160px;
-
-    span {
-      font-size: 16px;
-    }
-  }
-
-  p {
-    margin: 0;
-  }
+.user-button {
+  display: block;
+  position: relative;
 
   span {
-    font-size: 18px;
-    font-weight: $bold;
-  }
-
-  &::before {
-    content: "";
+    width: 170px;
+    top: -30px;
+    left: -75px;
     position: absolute;
-    left: 10px;
-    top: -20px;
-    border: 10px solid transparent;
-    border-bottom: 10px solid #ffffff;
+    display: none;
+    font-weight: $bold;
+    color: $dark-red;
   }
-}
-
-.sharing-list__copy--active {
-  display: grid;
-  justify-items: center;
 }

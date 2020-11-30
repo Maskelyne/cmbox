@@ -386,13 +386,17 @@
 }
 
 .modal__user-phone .error,
-.modal__user-name .error {
+.modal__user-name .error,
+.modal__user-position .error,
+.modal__user-company .error {
   border-bottom: solid 1px $dark-red;
   color: $dark-black;
 }
 
 .modal__user-phone #user_phone-error,
-.modal__user-name #user_name-error {
+.modal__user-name #user_name-error,
+.modal__user-position #user_position-error,
+.modal__user-company #user_company-error {
   border: none;
   font-size: 14px;
   line-height: 14px;

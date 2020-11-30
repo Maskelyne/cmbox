@@ -99,12 +99,34 @@ $(function () {
     ],
   });
 
+    $('#form-portfolio').validate({
+      messages: {
+        name: 'Введите ваше имя',
+        phone: 'Введите ваш номер телефона',
+      },
+      errorElement: 'span',
+    });
+
     $('form').validate({
       messages: {
         name: 'Введите ваше имя',
-        phone: 'Введите ваш номер телефона'
+        phone: 'Введите ваш номер телефона',
+        position: 'Введите вашу должность',
+        company: 'Введите название компании'
       },
-      errorElement: "span",
+      errorElement: 'span',
     });
+
+  var clipboard = new ClipboardJS('.user-button');
+  var text = document.querySelector('.clip-text');
+  clipboard.on('success', function(e) {
+    text.style.display = 'block';
+    setTimeout(sayHi, 5000);
+    e.clearSelection();
+  });
+
+  var sayHi = function () {
+    text.style.display = '';
+  };
 
 });

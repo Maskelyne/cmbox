@@ -650,7 +650,6 @@
         transform: translateX(30px);
 
         &:hover {
-
           span {
             transform: translate(45%, 42px) skew(0deg, -20deg);
           }
@@ -668,9 +667,13 @@
         span {
           background-color: $pink;
 
-          &::after {
+          &::before {
             border-top: solid 15px $pink;
-            border-bottom: solid 16px $pink;
+            filter: brightness(0.9);
+          }
+
+          &::after {
+            border-bottom: solid 15px $pink;
             filter: brightness(0.9);
           }
         }

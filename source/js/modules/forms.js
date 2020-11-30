@@ -18,7 +18,7 @@
     } else if (form.attr('id') === 'form-portfolio') {
       modalThanks.classList.add('modal-active');
       modalConsultation.classList.remove('modal-active');
-      // response.message = '';
+      response.message = '';
 
     } else if (form.attr('id') === 'form-main') {
       modalThanks.classList.add('modal-active');
