@@ -1,0 +1,34 @@
+.footer-social {
+  @include reset-list;
+  display: grid;
+  grid-template-columns: repeat(6, 9.5%);
+  grid-gap: 10px;
+
+  img {
+    border-radius: 5px;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s linear;
+
+    &:hover {
+      transform: scale(1.2);
+      transition: all 0.3s linear;
+    }
+  }
+
+  @media (max-width: $desktop-width) {
+    grid-template-columns: repeat(6, 8%);
+  }
+
+  @media (max-width: $desktop-width-min) {
+    grid-template-columns: repeat(6, 7.6%);
+  }
+
+  @media (max-width: $tablet-width) {
+    grid-template-columns: repeat(6, minmax(5%, 35px));
+    grid-gap: 0 5px;
+
+    img {
+      max-width: 30px;
+    }
+  }
+}

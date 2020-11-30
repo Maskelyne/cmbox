@@ -1,0 +1,42 @@
+mixin social-list
+
+  -
+    var sociallist = [
+      {
+        link: '#',
+        text: 'Телеграм',
+        path: 'svg',
+        name: 'icon-telegram',
+        format: 'svg',
+        width: '24',
+        height: '24',
+        altText: 'Телеграм'
+      },
+      {
+        link: '#',
+        text: 'Вайбер',
+        path: 'svg',
+        name: 'icon-viber',
+        format: 'svg',
+        width: '24',
+        height: '24',
+        altText: 'Вайбер'
+      },
+      {
+        link: '#',
+        text: 'Ватсап',
+        path: 'svg',
+        name: 'icon-whatsapp',
+        format: 'svg',
+        width: '24',
+        height: '24',
+        altText: 'Ватсап'
+      },
+    ];
+
+  ul.social-list(class!=attributes.class)
+    each item in sociallist
+      li
+        a(href= item.link)
+          span.visually-hidden= item.text
+          +img(item.path, item.name, item.format, item.width, item.height, item.altText)

@@ -9,3 +9,27 @@
     url("../fonts/ProximaNova-Regular.woff2") format("woff2"),
     url("../fonts/ProximaNova-Regular.woff") format("woff");
 }
+
+@font-face {
+  font-family: "ProximaNova-Bold";
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src:
+    local("ProximaNova-Bold"),
+    local("ProximaNova Bold"),
+    url("../fonts/ProximaNova-Bold.woff2") format("woff2"),
+    url("../fonts/ProximaNova-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Mistral";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    local("Mistral"),
+    local("Mistral"),
+    url("../fonts/Mistral.woff2") format("woff2"),
+    url("../fonts/Mistral.woff") format("woff");
+}

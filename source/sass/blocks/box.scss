@@ -1,0 +1,297 @@
+.box {
+  position: relative;
+
+  @media (max-width: $desktop-width-min) {
+    max-width: 450px;
+    margin: 0 auto;
+    grid-row: 1;
+    display: grid;
+    justify-content: center;
+  }
+
+  @media (max-width: $tablet-width) {
+    max-width: 345px;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: 230px;
+  }
+
+  img {
+    display: block;
+
+    @media (max-width: $desktop-width-min) {
+      max-width: 410px;
+    }
+  }
+}
+
+.box__list {
+  @include reset-list;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.box__link {
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+  text-align: center;
+
+  @media (max-width: $tablet-width) {
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 11px;
+    line-height: 11px;
+  }
+
+  &--design {
+    position: absolute;
+    top: 170px;
+    left: -15px;
+
+    @media (max-width: $desktop-width) {
+      top: 180px;
+    }
+
+    @media (max-width: $desktop-width-min) {
+      top: 185px;
+    }
+
+    @media (max-width: $tablet-width) {
+      top: 160px;
+      left: -20px;
+    }
+
+    @media (max-width: $mobile-width) {
+      top: 105px;
+    }
+  }
+
+  &--seo {
+    position: absolute;
+    top: 110px;
+    left: -10px;
+
+    @media (max-width: $desktop-width) {
+      top: 115px;
+    }
+
+    @media (max-width: $desktop-width-min) {
+      top: 120px;
+    }
+
+    @media (max-width: $tablet-width) {
+      top: 102px;
+      left: -20px;
+    }
+
+    @media (max-width: $mobile-width) {
+      top: 65px;
+      left: -10px;
+    }
+  }
+
+  &--sales {
+    position: absolute;
+    top: 40px;
+    left: -15px;
+
+    @media (max-width: $desktop-width) {
+      top: 44px;
+    }
+
+    @media (max-width: $desktop-width-min) {
+      top: 45px;
+    }
+
+    @media (max-width: $tablet-width) {
+      top: 40px;
+      left: -20px;
+    }
+
+    @media (max-width: $mobile-width) {
+      top: 23px;
+      left: -20px;
+    }
+  }
+
+  &--context {
+    position: absolute;
+    top: 15px;
+    left: 50px;
+
+    @media (max-width: $desktop-width) {
+      top: 20px;
+    }
+
+    @media (max-width: $desktop-width-min) {
+      top: 15px;
+      left: 60px;
+    }
+
+    @media (max-width: $tablet-width) {
+      top: 15px;
+      left: 40px;
+    }
+
+    @media (max-width: $mobile-width) {
+      top: 5px;
+      left: 20px;
+    }
+  }
+
+  &--marketing {
+    position: absolute;
+    top: -20px;
+    left: 120px;
+
+    @media (max-width: $desktop-width) {
+      left: 140px;
+    }
+
+    @media (max-width: $tablet-width) {
+      top: -15px;
+      left: 110px;
+    }
+
+    @media (max-width: $mobile-width) {
+      top: -15px;
+      left: 65px;
+    }
+  }
+
+  &--analytics {
+    position: absolute;
+    top: 15px;
+    left: 215px;
+
+    @media (max-width: $desktop-width) {
+      top: 20px;
+      left: 230px;
+    }
+
+    @media (max-width: $desktop-width-min) {
+      top: 20px;
+      left: 240px;
+    }
+
+    @media (max-width: $tablet-width) {
+      top: 20px;
+      left: 195px;
+    }
+
+    @media (max-width: $mobile-width) {
+      top: 5px;
+      left: 125px;
+    }
+  }
+
+  &--social {
+    position: absolute;
+    top: 40px;
+    left: 335px;
+
+    @media (max-width: $desktop-width) {
+      left: 355px;
+      top: 35px;
+    }
+
+    @media (max-width: $desktop-width-min) {
+      left: 350px;
+      top: 35px;
+    }
+
+    @media (max-width: $tablet-width) {
+      top: 35px;
+      left: 300px;
+    }
+
+    @media (max-width: $mobile-width) {
+      top: 17px;
+      left: 200px;
+    }
+  }
+
+  &--strategy {
+    position: absolute;
+    top: 95px;
+    left: 365px;
+
+    @media (max-width: $desktop-width) {
+      left: 375px;
+      top: 86px;
+    }
+
+    @media (max-width: $desktop-width-min) {
+      left: 365px;
+      top: 90px;
+    }
+
+    @media (max-width: $tablet-width) {
+      top: 75px;
+      left: 310px;
+    }
+
+    @media (max-width: $mobile-width) {
+      top: 47px;
+      left: 200px;
+    }
+  }
+
+  &--crm {
+    position: absolute;
+    top: 145px;
+    left: 385px;
+
+    @media (max-width: $desktop-width) {
+      top: 155px;
+      left: 405px;
+    }
+
+    @media (max-width: $desktop-width-min) {
+      top: 160px;
+      left: 417px;
+    }
+
+    @media (max-width: $tablet-width) {
+      top: 135px;
+      left: 351px;
+    }
+
+    @media (max-width: $mobile-width) {
+      top: 88px;
+      left: 235px;
+    }
+  }
+
+  &--site {
+    position: absolute;
+    top: 203px;
+    left: 355px;
+
+    @media (max-width: $desktop-width) {
+      top: 215px;
+      left: 375px;
+    }
+
+    @media (max-width: $desktop-width-min) {
+      top: 225px;
+      left: 385px;
+    }
+
+    @media (max-width: $tablet-width) {
+      top: 190px;
+      left: 325px;
+    }
+
+    @media (max-width: $mobile-width) {
+      top: 125px;
+      left: 218px;
+    }
+  }
+}

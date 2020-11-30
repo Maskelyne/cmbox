@@ -1,0 +1,222 @@
+.intro__wrapper {
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 54% 42%;
+  grid-gap: 0 4%;
+
+  @media (max-width: $desktop-width) {
+    grid-gap: 0 0;
+    grid-template-columns: 50% 44%;
+  }
+
+  @media (max-width: $desktop-width-min) {
+    margin-top: 130px;
+    padding-bottom: 200px;
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: $tablet-width) {
+    height: auto;
+    max-width: 430px;
+    padding: 130px 15px 90px 15px;
+  }
+
+  .intro__link {
+    @media (max-width: $desktop-width-min) {
+      display: none;
+    }
+
+    &--tablet {
+      display: none;
+
+      @media (max-width: $desktop-width-min) {
+        display: grid;
+      }
+
+      @media (max-width: $tablet-width) {
+        max-width: 200px;
+        margin-top: 30px;
+      }
+    }
+  }
+}
+
+.intro__box {
+  h1 {
+    margin: 0 0 30px 0;
+    font-size: 36px;
+    line-height: 54px;
+    color: $dark-blue;
+    text-align: left;
+    text-transform: uppercase;
+
+    @media (max-width: $desktop-width-min) {
+      font-size: 30px;
+      line-height: 36px;
+      max-width: 580px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    @media (max-width: $tablet-width) {
+      font-size: 22px;
+      line-height: 32px;
+      text-align: left;
+    }
+  }
+}
+
+.intro__list {
+  @include reset-list;
+
+  h2 {
+    margin-bottom: 5px;
+    font-size: 18px;
+    line-height: 23px;
+  }
+
+  p {
+    margin: 0;
+
+    strong {
+      color: $dark-red;
+    }
+  }
+}
+
+.intro__link-box {
+  margin-left: 12px;
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  grid-gap: 0 30px;
+  align-items: center;
+
+  img {
+    max-width: 140px;
+  }
+
+  @media (max-width: $desktop-width) {
+    margin-left: 0;
+    grid-template-columns: 150px 250px;
+    justify-content: center;
+
+    img {
+      max-width: 140px;
+    }
+  }
+
+  &:hover {
+    color: $dark-black;
+    font-weight: $normal;
+
+    h2 {
+      color: $dark-red;
+    }
+  }
+}
+
+.intro__box-swiper-wrapper {
+  height: 410px;
+  position: relative;
+  background-image: url("../img/svg/bckg-slide-main.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+
+  @media (max-width: $desktop-width-min) {
+    height: 330px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+
+  .swiper-container {
+    position: static;
+    height: 160px;
+    margin-top: 60px;
+
+    @media (max-width: $desktop-width-min) {
+      margin-top: 0;
+    }
+  }
+
+  .swiper-slide-active {
+    .intro__text {
+      animation: sliderSkew;
+      animation-duration: 1.5s;
+      animation-delay: 1s;
+      animation-timing-function: ease;
+      animation-iteration-count: 1;
+      animation-direction: normal;
+      animation-fill-mode: forwards;
+      animation-play-state: running;
+    }
+
+    img {
+      animation: services-icon-show;
+      animation-duration: 1.2s;
+      animation-delay: 0.8s;
+      animation-timing-function: ease;
+      animation-iteration-count: 1;
+      animation-direction: normal;
+      animation-fill-mode: forwards;
+      animation-play-state: running;
+      opacity: 0;
+    }
+
+    h2 {
+      animation: services-icon-show;
+      animation-duration: 1.3s;
+      animation-delay: 1.2s;
+      animation-timing-function: ease;
+      animation-iteration-count: 1;
+      animation-direction: normal;
+      animation-fill-mode: forwards;
+      animation-play-state: running;
+      opacity: 0;
+    }
+
+    p {
+      animation: services-icon-show;
+      animation-duration: 1.3s;
+      animation-delay: 1.7s;
+      animation-timing-function: ease;
+      animation-iteration-count: 1;
+      animation-direction: normal;
+      animation-fill-mode: forwards;
+      animation-play-state: running;
+      opacity: 0;
+    }
+  }
+
+  .swiper-pagination {
+    right: -35px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .swiper-pagination-bullet {
+    background: $dark-blue;
+    opacity: 1;
+    width: 12px;
+    height: 5px;
+    border-radius: 0;
+    outline: none;
+
+    &:hover {
+      background: $dark-red;
+      width: 20px;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    background: $dark-red;
+    width: 20px;
+    height: 7px;
+  }
+}

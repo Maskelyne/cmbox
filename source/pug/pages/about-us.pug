@@ -1,0 +1,247 @@
+extends ../layout/page-layout
+
+block variables
+  - var title = "О нас"
+
+block header
+  +header
+
+block main
+
+  -
+    var imageList = [
+      {
+        link: '#',
+        path: 'png',
+        name: 'logo-deepsleep',
+        format: 'png',
+        width: '240',
+        height: '70',
+        altText: 'Дипслип'
+      },
+      {
+        link: '#',
+        path: 'png',
+        name: 'logo-exim',
+        format: 'png',
+        width: '240',
+        height: '70',
+        altText: 'Эксимэлектро'
+      },
+      {
+        link: '#',
+        path: 'png',
+        name: 'logo-torwood',
+        format: 'png',
+        width: '240',
+        height: '70',
+        altText: 'Торвуд'
+      },
+      {
+        link: '#',
+        path: 'png',
+        name: 'logo-techimport',
+        format: 'png',
+        width: '240',
+        height: '70',
+        altText: 'Техимпорт'
+      },
+    ];
+
+  -
+    var navList = [
+      {
+        linkText: 'Дизайн'
+      },
+      {
+        linkText: 'Seo'
+      },
+      {
+        linkText: 'Воронка продаж'
+      },
+      {
+        linkText: 'Контекст'
+      },
+      {
+        linkText: 'Видеомаркетинг'
+      },
+      {
+        linkText: 'Аналитика'
+      },
+      {
+        linkText: 'Соцсети'
+      },
+      {
+        linkText: 'Стратегия'
+      },
+      {
+        linkText: 'Crm'
+      },
+      {
+        linkText: 'Сайт'
+      },
+    ];
+
+  main
+    section.about-us
+      .about-us__wrapper.container
+        h1 О нас
+        .about-us__box
+          .about-us__box-text
+            p
+              strong «CMbox»
+              |  - маркетинговое агентство, предоставляющее комплекс услуг по интернет-упаковке бизнеса.
+            p
+              strong Наши направления
+              |  – комплексный анализ интернет-рынка, разработка маркетинговой стратегии, разработка дизайна и брендинга, разработка сайтов, SEO-продвижение, контекстная реклама, SMM-продвижение, видеомаркетинг, подбор и внедрение CRM-систем.
+            h4 Мы всегда работаем на результат!
+          .about-us__image
+            +picture('about-us', 'img-boss', 'img-boss-mobile', 'png', '815', '430', 'Руководство', '767')
+            ul.about-us__nav-list
+              each item in navList
+                li
+                  a(href="#")= item.linkText
+    section.benefit
+      .benefit__wrapper.container
+        h2 Наши преимущества
+        .benefit__box
+          article
+            p Мы сопровождаем на всем пути развития вашего бизнеса в Интернете.
+            p Вы сокращаете количество подрядчиков до одного агентства, что уменьшает риски и экономит деньги.
+            p Мы полностью погружаемся в ваш бизнес, чтобы понять его тонкости и нюансы.
+            p Соблюдаем сроки и оговоренные объемы работ, потому как ответственно относимся к нашим обещаниям.
+            p Помогаем увеличить ваши продажи и прибыль, используя самые эффективные инструменты комплексного продвижения и продаж.
+          article
+            p С нами ваш сайт займет ТОП-позиции в Google, Яндекс и других поисковиках.
+            p Разрабатываем выгодную стратегию продвижения вашего бизнеса в Интернете.
+            p Во время обслуживания у нас вы всегда знаете ход рекламных кампаний, результаты по продвижению SEO, динамик SMM - сообществ, потому что мы предоставляем короткие и понятные отчеты в цифрах о результативности продвижения.
+            p
+              strong Мы думаем, этот пункт вы захотите написать сами после нашей работы.
+    //section.clients
+    //  .clients__wrapper.container
+    //    h2 Наши клиенты
+    //    .clients__slider-wrapper
+    //      .clients__swiper-container.swiper-container
+    //        ul.clients__image-list.swiper-wrapper
+    //          each item in imageList
+    //            li.swiper-slide
+    //              .clients__image-box
+    //                a(href= item.link)
+    //                  +img(item.path, item.name, item.format, item.width, item.height, item.altText)
+    //        .clients__swiper-button-prev.swiper-button-prev
+    //        .clients__swiper-button-next.swiper-button-next
+    section.teams
+      .teams__wrapper.container
+        h2 Наша команда
+        .teams__box
+          .teams__box-text
+            h3 Маркетинг
+            p Маркетинг – это совокупность процессов, направленных на создание, продвижение и предоставление продукта покупателям, а также управление взаимоотношениями с ними.  Главная задача маркетинга – повышение рыночных позиций предприятия, получение прибыли. Для этого используются различные методы, стратегии и инструменты, начиная с конкурентного анализа и заканчивая повышением конкурентоспособности товара или услуги.
+            a(href="#") Подробнее
+          .teams__image.teams__image--marketing
+            +img('about-us', 'img-marketing', 'png', '500', '570', 'Маркетинг')
+            +img('about-us', 'marketing-element-1', 'svg', '200', '97', 'Элемент 1')
+            +img('about-us', 'marketing-element-2', 'svg', '200', '97', 'Элемент 2')
+            +img('about-us', 'marketing-element-3', 'svg', '200', '97', 'Элемент 3')
+            +img('about-us', 'img-marketing-mobile', 'png', '650', '575', 'Маркетинговая стратегия')
+        .teams__box
+          .teams__box-text
+            h3 Дизайн
+            p Web-дизайн – это важная отрасль веб разработки сайта, основной задачей которой является проектирование пользовательского интерфейса. Это не просто привлекательная картинка, а имидживое решение, которое сделает сайт узнаваемым среди тысяч других и сформирует деловую репутацию компании.
+            a(href="#") Подробнее
+          .teams__image.teams__image--designers.teams__image--row
+            +img('about-us', 'img-designers', 'png', '530', '525', 'Дизайнеры')
+            +img('about-us', 'designers-element-1', 'svg', '30', '38', 'Элемент 1')
+            +img('about-us', 'designers-element-2', 'svg', '40', '38', 'Элемент 2')
+            +img('about-us', 'designers-element-3', 'svg', '40', '40', 'Элемент 3')
+            +img('about-us', 'designers-element-4', 'svg', '36', '36', 'Элемент 4')
+            +img('about-us', 'designers-element-5', 'svg', '50', '45', 'Элемент 5')
+            +img('about-us', 'designers-element-6', 'svg', '115', '85', 'Элемент 6')
+            +img('about-us', 'designers-element-7', 'svg', '70', '80', 'Элемент 7')
+            +img('about-us', 'img-designers-mobile', 'png', '530', '585', 'Дизайнеры')
+        .teams__box
+          .teams__box-text
+            h3 Разработка
+            p Смысл веб-разработки заключается в написании кода для функционирования сайта. Веб-разработчики с помощью интегрированных сред разработки и языков программирования на основе созданного дизайнерами проекта строят полностью работоспособный сайт.
+            a(href="#") Подробнее
+          .teams__image.teams__image--developers
+            +img('about-us', 'img-developers', 'png', '578', '578', 'Разработчики')
+            +img('about-us', 'october', 'png', '110', '20', 'Элемент 1')
+            +img('about-us', 'php', 'svg', '60', '42', 'Элемент 2')
+            +img('about-us', 'laravel', 'png', '125', '35', 'Элемент 3')
+            +img('about-us', 'modx', 'png', '60', '65', 'Элемент 8')
+            +img('about-us', 'html', 'svg', '45', '30', 'Элемент 5')
+            +img('about-us', 'evolution', 'png', '110', '30', 'Элемент 6')
+            +img('about-us', 'css', 'svg', '55', '40', 'Элемент 7')
+            +img('about-us', 'tags', 'svg', '45', '40', 'Элемент 4')
+            +img('about-us', 'img-developers-mobile', 'png', '600', '580', 'Разработчики')
+        .teams__box
+          .teams__box-text
+            h3 Seo
+            p SEO (Search Engine Optimization) — совокупность работ по развитию сайта, изменению его окружения, анализу поведения пользователей, направленная на улучшение уже существующих позиций по целевым запросам (в Яндексе, Google, Mail.ru и других поисковиках), а также получение хороших позиций (в ТОП-10) по новым интересующим запросам.
+            a(href="#") Подробнее
+          .teams__image.teams__image--seo.teams__image--row
+            +img('about-us', 'img-seo', 'png', '500', '530', 'СЕО')
+            +img('about-us', 'seo-element-1', 'svg', '42', '42', 'Элемент 1')
+            +img('about-us', 'seo-element-2', 'svg', '60', '55', 'Элемент 2')
+            +img('about-us', 'seo-element-4', 'svg', '75', '75', 'Элемент 3')
+            +img('about-us', 'seo-element-5', 'svg', '65', '80', 'Элемент 4')
+            +img('about-us', 'seo-element-3', 'svg', '60', '80', 'Элемент 5')
+            +img('about-us', 'img-seo-mobile', 'png', '500', '530', 'СЕО')
+        .teams__box
+          .teams__box-text
+            h3 Контекст
+            p Контекстолог — это специалист, который занимается ведением и анализом контекстной рекламы. Он настраивает рекламу так, чтобы она показывалась только тем людям, которые искали в поиске аналогичную информацию. Преимущество контекстной рекламы — быстрая отдача. После размещения целевая аудитория увидит рекламу , если правильно подобраны ключевые слова.
+            a(href="#") Подробнее
+          .teams__image.teams__image--context
+            +img('about-us', 'img-context', 'png', '500', '634', 'Контекстолог')
+            +img('about-us', 'context-element-1', 'svg', '87', '87', 'Элемент 1')
+            +img('about-us', 'context-element-2', 'svg', '95', '120', 'Элемент 2')
+            +img('about-us', 'context-element-3', 'svg', '85', '120', 'Элемент 3')
+            +img('about-us', 'context-element-4', 'svg', '55', '55', 'Элемент 4')
+            +img('about-us', 'img-context-mobile', 'png', '500', '635', 'Контекстолог')
+        .teams__box
+          .teams__box-text
+            h3 Smm
+            p SMM-продвижение в социальных сетях наряду с другими видами рекламы, чаще всего — таргетированной и контекстной рекламой, составляет основу многих маркетинговых стратегий. Нередко маркетологи принимают решение в пользу одного только SMM — для некоторых брендов работы с соцсетями, прямых коммуникаций с клиентом бывает более чем достаточно.
+            a(href="#") Подробнее
+          .teams__image.teams__image--smm.teams__image--row
+            +img('about-us', 'img-smm', 'png', '475', '590', 'SMM')
+            +img('about-us', 'social-element-1', 'svg', '425', '280', 'Элемент 1')
+            +img('about-us', 'smm-element-2', 'svg', '72', '72', 'Элемент 2')
+            +img('about-us', 'smm-element-3', 'svg', '100', '100', 'Элемент 3')
+            +img('about-us', 'smm-element-4', 'svg', '72', '72', 'Элемент 4')
+            +img('about-us', 'smm-element-5', 'svg', '90', '90', 'Элемент 5')
+            +img('about-us', 'smm-element-6', 'svg', '74', '74', 'Элемент 6')
+            +img('about-us', 'smm-element-7', 'svg', '73', '71', 'Элемент 7')
+            +img('about-us', 'smm-element-8', 'svg', '100', '100', 'Элемент 8')
+            +img('about-us', 'img-smm-mobile', 'png', '465', '765', 'SMM')
+        .teams__box.teams__box--mans
+          .teams__box-text
+            h3 Видеомаркетинг
+            p Видеомаркетинг — это деятельность, направленная на формирование потребностей у людей в каком-либо товаре с помощью видео. Является очень мощным инструментом для продвижения бизнеса.
+            a(href="#") Подробнее
+          .teams__image.teams__image--operators.teams__image--box
+            +img('about-us', 'img-mans', 'png', '1140', '617', 'Операторы')
+            .teams__image-quadrocopter
+              +img('about-us', 'quadrocopter-1', 'svg', '125', '87', 'Элемент 1')
+            +img('about-us', 'quadrocopter-2', 'svg', '135', '105', 'Элемент 2')
+            +img('about-us', 'style-mobile', 'png', '700', '510', 'Операторы')
+          .teams__image-svg-animate
+            +img('about-us', 'img-operator', 'svg', '300', '405', 'Оператор-постановщик')
+            +img('about-us', 'operator-element-1', 'svg', '220', '130', 'Элемент 1')
+            .teams__katerina
+              +img('about-us', 'img-katerina', 'png', '600', '485', 'Имиджмейкер')
+              +img('about-us', 'katerina-element-1', 'svg', '92', '120', 'Элемент 1')
+            .teams__box-text.teams__box-text--animate
+              h3 Стиль
+              p Имиджмейкер выступает организатором и связующим звеном между всеми участниками творческого процесса.
+              a(href="#") Подробнее
+          .teams__box-text.teams__box-text--tablet
+            h3 Видеомаркетинг
+            p Видеомаркетинг — это деятельность, направленная на формирование потребностей у людей в каком-либо товаре с помощью видео. Является очень мощным инструментом для продвижения бизнеса.
+            h3 Стиль
+            p Имиджмейкер выступает организатором и связующим звеном между всеми участниками творческого процесса.
+
+block footer
+  +footer

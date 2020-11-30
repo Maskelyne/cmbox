@@ -1,0 +1,25 @@
+extends ../layout/page-layout
+
+block variables
+  - var title = "Услуги"
+
+block header
+  +header
+
+block main
+  main.gray-box
+    section.page-unavailable
+      .page-unavailable__wrapper.container
+        .page-unavailable__image-box
+          .page-unavailable__image
+            +img('png', '404', 'png', '390', '252', 'Элемент 1')
+          .page-unavailable__box-image
+            +img('svg', '404-box', 'svg', '705', '420', 'Элемент 2')
+        .page-unavailable__box-text
+          h1 Упс… Мы не можем найти то, что Вы ищете
+          p Скорее всего, это случилось по одной из следующих причин: страница переехала, страницы больше нет или Вам просто нравится изучать 404 страницы.
+          a.button.intro__link(href="#")
+            span На главную
+
+block footer
+  +footer

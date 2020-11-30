@@ -1,0 +1,133 @@
+.main-services {
+  max-width: 650px;
+  margin: 60px auto 60px auto;
+
+  @media (max-width: $desktop-width) {
+    margin-left: 22%;
+  }
+
+  @media (max-width: $desktop-width-min) {
+    padding: 0;
+    max-width: 492px;
+    margin: 110px 9% 110px 27%;
+  }
+
+  img {
+    @media (max-width: $desktop-width-min) {
+      max-width: 100%;
+    }
+  }
+
+  .box__list {
+    left: 15%;
+  }
+
+  .box__link {
+    font-size: 24px;
+    line-height: 24px;
+
+    @media (max-width: $desktop-width-min) {
+      font-size: 18px;
+      line-height: 18px;
+    }
+
+    &--design {
+      top: 268px;
+      left: -115px;
+
+      @media (max-width: $desktop-width-min) {
+        top: 225px;
+        left: -105px;
+      }
+    }
+
+    &--seo {
+      top: 175px;
+      left: -105px;
+
+      @media (max-width: $desktop-width-min) {
+        top: 145px;
+        left: -105;
+      }
+    }
+
+    &--sales {
+      top: 65px;
+      left: -130px;
+
+      @media (max-width: $desktop-width-min) {
+        top: 55px;
+      }
+    }
+
+    &--context {
+      top: 25px;
+      left: -15px;
+
+      @media (max-width: $desktop-width-min) {
+        top: 20px;
+        left: -20px;
+      }
+    }
+
+    &--marketing {
+      top: -30px;
+      left: 120px;
+
+      @media (max-width: $desktop-width-min) {
+        top: -25px;
+        left: 85px;
+      }
+    }
+
+    &--analytics {
+      top: 28px;
+      left: 270px;
+
+      @media (max-width: $desktop-width-min) {
+        top: 20px;
+        left: 215px;
+      }
+    }
+
+    &--social {
+      top: 60px;
+      left: 450px;
+
+      @media (max-width: $desktop-width-min) {
+        left: 355px;
+        top: 45px;
+      }
+    }
+
+    &--strategy {
+      top: 145px;
+      left: 500px;
+
+      @media (max-width: $desktop-width-min) {
+        left: 380px;
+        top: 109px;
+      }
+    }
+
+    &--crm {
+      top: 228px;
+      left: 530px;
+
+      @media (max-width: $desktop-width-min) {
+        top: 205px;
+        left: 420px;
+      }
+    }
+
+    &--site {
+      top: 325px;
+      left: 485px;
+
+      @media (max-width: $desktop-width-min) {
+        top: 275px;
+        left: 385px;
+      }
+    }
+  }
+}

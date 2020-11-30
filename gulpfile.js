@@ -10,6 +10,7 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var rigger = require('gulp-rigger');
 var imagemin = require('gulp-imagemin');
+var pngquant = require('imagemin-pngquant');
 var svgstore = require('gulp-svgstore');
 var pug = require('gulp-pug');
 var del = require('del');
@@ -18,18 +19,17 @@ var server = require('browser-sync').create();
 var path = {
   build: {
     html: 'build/',
-    js: 'build/js/',
-    css: 'build/css/',
-    img: 'build/img/',
-    fonts: 'build/fonts/'
+    js: 'build/assets/js/',
+    css: 'build/assets/css/',
+    img: 'build/assets/img/',
+    fonts: 'build/assets/fonts/'
   },
   source: {
     html: 'source/*.html',
-    js: 'source/js/default.js',
-    jsAdd: 'source/js/main.js',
+    js: 'source/js/main.js',
+    jsAdd: 'source/js/default.js',
     vendorJs: 'source/js/vendor.js',
     css: 'source/sass/style.scss',
-    cssAdd: 'source/css/style.css',
     img: 'source/img/**/*.{png,jpg,svg}',
     sprite: 'source/img/svg-sprite/*.svg',
     fonts: 'source/fonts/**/*.{woff,woff2}'
@@ -46,6 +46,10 @@ var path = {
   pug: {
     views: 'source/pug/pages/*.pug',
   },
+  fancybox: {
+    source: 'source/css/*.css',
+    build: 'build/css'
+  }
 };
 
 var config = {
@@ -56,6 +60,12 @@ var config = {
 
 gulp.task('clean:build', function () {
   return del(path.clean);
+});
+
+gulp.task('fancybox:build', function () {
+  return gulp
+    .src(path.fancybox.source)
+    .pipe(gulp.dest(path.build.css));
 });
 
 gulp.task('html:build', function () {
@@ -112,19 +122,14 @@ gulp.task('css:build', function () {
     .pipe(server.stream());
 });
 
-gulp.task('cssAdd:build', function () {
-  return gulp.src(path.source.cssAdd)
-    .pipe(gulp.dest(path.build.css))
-    .pipe(server.stream());
-});
-
 gulp.task('image:build', function () {
   return gulp.src(path.source.img)
     .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
-      imagemin.mozjpeg({progressive: true, quality: 75}),
-      imagemin.svgo()
-    ]))
+      imagemin.optipng({optimizationLevel: 5}),
+      imagemin.mozjpeg({progressive: true, quality: 90}),
+      imagemin.svgo(),
+    ]),
+     pngquant({quality: '65-70', speed: 5}))
     .pipe(gulp.dest(path.build.img))
     .pipe(server.stream());
 });
@@ -155,12 +160,12 @@ gulp.task('fonts:build', function () {
 gulp.task('build', gulp.series(
     'clean:build',
     'html:build',
+    'fancybox:build',
     'pug:build',
     'js:build',
     'jsAdd:build',
     'vendorJs:build',
     'css:build',
-    'cssAdd:build',
     'fonts:build',
     'image:build',
     'sprite:build'

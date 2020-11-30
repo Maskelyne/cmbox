@@ -1,0 +1,175 @@
+extends ../layout/page-layout
+
+block variables
+  - var title = "Дизайн"
+
+block header
+  +header
+
+block main
+
+  -
+    var imageList = [
+      {
+        path: 'stage-design',
+        image: 'image-element-1',
+        format: 'svg',
+        width: '775',
+        height: '500',
+        altText: '1 Элемент'
+      },
+      {
+        path: 'stage-design',
+        image: 'image-element-2',
+        format: 'svg',
+        width: '870',
+        height: '275',
+        altText: '2 Элемент'
+      },
+      {
+        path: 'stage-design',
+        image: 'image-element-3',
+        format: 'svg',
+        width: '45',
+        height: '40',
+        altText: '3 Элемент'
+      },
+      {
+        path: 'stage-design',
+        image: 'image-element-4',
+        format: 'svg',
+        width: '75',
+        height: '75',
+        altText: '4 Элемент'
+      },
+      {
+        path: 'stage-design',
+        image: 'image-element-5',
+        format: 'svg',
+        width: '55',
+        height: '55',
+        altText: '5 Элемент'
+      },
+      {
+        path: 'stage-design',
+        image: 'image-element-6',
+        format: 'svg',
+        width: '65',
+        height: '80',
+        altText: '6 Элемент'
+      },
+      {
+        path: 'stage-design',
+        image: 'image-element-7',
+        format: 'svg',
+        width: '45',
+        height: '45',
+        altText: '7 Элемент'
+      },
+      {
+        path: 'stage-design',
+        image: 'image-element-8',
+        format: 'svg',
+        width: '73',
+        height: '127',
+        altText: '8 Элемент'
+      },
+      {
+        path: 'stage-design',
+        image: 'image-element-9',
+        format: 'svg',
+        width: '73',
+        height: '127',
+        altText: '9 Элемент'
+      },
+      {
+        path: 'stage-design',
+        image: 'image-element-10',
+        format: 'svg',
+        width: '225',
+        height: '215',
+        altText: '10 Элемент'
+      },
+      {
+        path: 'stage-design',
+        image: 'image-element-11',
+        format: 'svg',
+        width: '220',
+        height: '180',
+        altText: '11 Элемент'
+      },
+    ];
+
+  main
+    section.stages
+      h1 Этапы
+      .stages__nav-box
+        ul.stages__nav-list
+          li
+            .stages__image
+              a(href='stage-analysis.html')
+                span Анализ
+                +img('stage-boxes', 'stage-box', 'svg', '125', '120', 'Анализ')
+          li
+            .stages__image
+              a(href='stage-strategy.html')
+                span Стратегия
+                +img('stage-boxes', 'stage-box', 'svg', '220', '175', 'Стратегия')
+          li
+            .stages__image.stages__image--active
+              a(href='stage-design.html')
+                span Дизайн
+                +img('stage-boxes', 'stage-box-active', 'svg', '220', '175', 'Дизайн')
+          li
+            .stages__image
+              a(href='stage-developers.html')
+                span Разработка
+                +img('stage-boxes', 'stage-box', 'svg', '125', '120', 'Разработка')
+          li
+            .stages__image
+              a(href='stage-promotion.html')
+                span Продвижение
+                +img('stage-boxes', 'stage-box', 'svg', '125', '120', 'Продвижение')
+          li
+            .stages__image
+              a(href='stage-automation.html')
+                span Автоматизация
+                +img('stage-boxes', 'stage-box', 'svg', '125', '120', 'Автоматизация')
+          li
+            .stages__image
+              a(href='stage-support.html')
+                span Поддержка
+                +img('stage-boxes', 'stage-box', 'svg', '125', '120', 'Поддержка')
+      .stages__box.stages__box--design.container
+        each item in imageList
+          +img(item.path, item.image, item.format, item.width, item.height, item.altText)
+      .stages__box
+        +img('stage-design', 'image-mobile', 'svg', '340', '235', 'Дизайн')
+      .stages__text
+        h2 Анализ
+        p Первый этап в комплексном маркетинге – это анализ ниши вашего бизнеса, вашей целевой аудитории и конкурентов. Всё это позволяет максимально точно оценить рынок и определить возможности развития компании.
+        .stages__list
+          p Что входит в
+            strong  полный анализ:
+          p 1. Оценка потенциала рынка и покупательского спроса на ваши товары или услуги.
+          p 2. Составление портрета именно ваших потенциальных покупателей.
+          p 3. Поиск компаний с такой же целевой аудиторией, как у вас.
+          p 4. Аналитика интернет-упаковки основных конкурирующих фирм, инструментов продвижения, которые они используют.
+          p 5. Определение преимуществ и недостатков всех инструментов продаж конкурентов.
+          p 6. Определение главных конкурентных преимуществ вашего бизнеса и его позиционирования в нише.
+        .stages__list
+          p Что входит в
+            strong  базовый анализ
+          p 1. В него входит оценка рынка и покупательского спроса.
+        .stages__coffee
+          .stages__coffee-box
+            +img('svg', 'icon-coffee', 'svg', '260', '175', 'Чашка кофе')
+            p Базовый анализ
+              br
+              strong  по цене
+              |  чашки кофе
+          a(href="#").button
+            span Заказать
+
+block footer
+  +footer

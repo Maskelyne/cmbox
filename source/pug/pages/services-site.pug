@@ -1,0 +1,191 @@
+extends ../layout/page-layout
+
+block variables
+  - var title = "Сайт"
+  - var activePage = 3
+
+block header
+  +header
+
+block main
+
+  -
+    var boxesList = [
+      {
+        link: 'services-analytics.html',
+        path: 'services',
+        name: 'box-close',
+        format: 'svg',
+        width: '240',
+        height: '160',
+        altText: 'Аналитика',
+        text: 'Аналитика',
+        iconPath: 'svg',
+        iconName: 'icon-analytics',
+        iconWidth: '48',
+        iconHeight: '48'
+      },
+      {
+        link: 'services-strategy.html',
+        path: 'services',
+        name: 'box-close',
+        format: 'svg',
+        width: '240',
+        height: '160',
+        altText: 'Стратегия',
+        text: 'Стратегия',
+        iconPath: 'svg',
+        iconName: 'icon-strategy',
+        iconWidth: '48',
+        iconHeight: '48'
+      },
+      {
+        link: 'services-design.html',
+        path: 'services',
+        name: 'box-close',
+        format: 'svg',
+        width: '240',
+        height: '160',
+        altText: 'Дизайн',
+        text: 'Дизайн',
+        iconPath: 'svg',
+        iconName: 'icon-design',
+        iconWidth: '48',
+        iconHeight: '48'
+      },
+      {
+        link: 'services-site.html',
+        path: 'services',
+        name: 'box-close',
+        format: 'svg',
+        width: '240',
+        height: '160',
+        altText: 'Сайт',
+        text: 'Сайт',
+        iconPath: 'svg',
+        iconName: 'icon-site',
+        iconWidth: '48',
+        iconHeight: '48'
+      },
+      {
+        link: 'services-sales.html',
+        path: 'services',
+        name: 'box-close',
+        format: 'svg',
+        width: '240',
+        height: '160',
+        altText: 'Воронка продаж',
+        text: 'Воронка продаж',
+        iconPath: 'svg',
+        iconName: 'icon-sale',
+        iconWidth: '48',
+        iconHeight: '48'
+      },
+      {
+        link: 'services-seo.html',
+        path: 'services',
+        name: 'box-close',
+        format: 'svg',
+        width: '240',
+        height: '160',
+        altText: 'Seo',
+        text: 'Seo',
+        iconPath: 'svg',
+        iconName: 'icon-seo',
+        iconWidth: '48',
+        iconHeight: '48'
+      },
+      {
+        link: 'services-context.html',
+        path: 'services',
+        name: 'box-close',
+        format: 'svg',
+        width: '240',
+        height: '160',
+        altText: 'Контекст',
+        text: 'Контекст',
+        iconPath: 'svg',
+        iconName: 'icon-contecst',
+        iconWidth: '48',
+        iconHeight: '48'
+      },
+      {
+        link: 'services-social.html',
+        path: 'services',
+        name: 'box-close',
+        format: 'svg',
+        width: '240',
+        height: '160',
+        altText: 'Соцсети',
+        text: 'Соцсети',
+        iconPath: 'svg',
+        iconName: 'icon-social',
+        iconWidth: '48',
+        iconHeight: '48'
+      },
+      {
+        link: 'services-marketing.html',
+        path: 'services',
+        name: 'box-close',
+        format: 'svg',
+        width: '240',
+        height: '160',
+        altText: 'Видео-маркетинг',
+        text: 'Видео-маркетинг',
+        iconPath: 'svg',
+        iconName: 'icon-video',
+        iconWidth: '48',
+        iconHeight: '48'
+      },
+      {
+        link: 'services-crm.html',
+        path: 'services',
+        name: 'box-close',
+        format: 'svg',
+        width: '240',
+        height: '160',
+        altText: 'Crm',
+        text: 'Crm',
+        iconPath: 'svg',
+        iconName: 'icon-crm',
+        iconWidth: '48',
+        iconHeight: '48'
+      },
+    ];
+
+  main.gray-box
+    section.services
+      h1 Услуги
+      .services__box
+        .services__nav-box
+          ul.services__boxes-list
+            each item, index in boxesList
+              if (index === activePage)
+                li
+                  a(href= item.link).services__link-active
+                    span= item.text
+                    +img(item.path, item.name, item.format, item.width, item.height, item.altText)
+                    +img(item.iconPath, item.iconName, item.format, item.iconWidth, item.iconHeight, item.altText)
+              else
+                li
+                  a(href= item.link)
+                    span= item.text
+                    +img(item.path, item.name, item.format, item.width, item.height, item.altText)
+                    +img(item.iconPath, item.iconName, item.format, item.iconWidth, item.iconHeight, item.altText)
+        .services__box-images
+          .services__image
+            +img('services', 'icon-tv', 'svg', '250', '250', 'Компьютер')
+          .services__boxes
+            +img('services', 'big-box-active', 'svg', '640', '380', 'Сайт')
+            +img('services', 'big-box-hover', 'svg', '640', '380', 'Сайт')
+        .services__box-text
+          h2 Сайт
+          .services__text
+            strong 2000
+            p Сайт — полноценный инструмент продажи в интернете из-за слабой конкуренции.
+      .services__box-portfolio.container
+        h2 Примеры работ вы можете посмотреть на странице
+          a(href="#")  Портфолио
+
+block footer
+  +footer

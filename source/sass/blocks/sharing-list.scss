@@ -1,0 +1,55 @@
+.sharing-list {
+  @include reset-list;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 0 15px;
+
+  @media (max-width: $desktop-width-min) {
+    grid-template-columns: repeat(5, 20px);
+  }
+
+  @media (max-width: $tablet-width) {
+    grid-gap: 0 10px;
+  }
+
+  li {
+    position: relative;
+  }
+
+  a {
+    img {
+      &:nth-child(3) {
+        display: none;
+      }
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.2);
+
+        &:nth-child(2) {
+          display: none;
+        }
+
+        &:nth-child(3) {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.user-button {
+  display: block;
+  position: relative;
+
+  span {
+    width: 170px;
+    top: -30px;
+    left: -75px;
+    position: absolute;
+    display: none;
+    font-weight: $bold;
+    color: $dark-red;
+  }
+}

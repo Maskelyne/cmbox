@@ -1,0 +1,346 @@
+extends ../layout/page-layout
+
+block variables
+  - var title = "Vodadom"
+
+block header
+  +header
+
+block main
+
+  -
+    var footerNav = [
+      {
+        link: '#',
+        text: 'О нас'
+      },
+      {
+        link: '#',
+        text: 'Услуги'
+      },
+      {
+        link: '#',
+        text: 'Этапы'
+      },
+      {
+        link: '#',
+        text: 'Портфолио'
+      },
+      {
+        link: '#',
+        text: 'Блог'
+      },
+      {
+        link: '#',
+        text: 'Контакты'
+      },
+    ];
+
+  -
+    var developers = [
+      {
+        text: 'Маркетолог',
+        path: 'png/teams',
+        image: 'marketolog',
+        format: 'png',
+        width: '120',
+        height: '120',
+        altText: 'Маркетолог'
+      },
+      {
+        text: 'Дизайнер',
+        path: 'png/teams',
+        image: 'designer-kate',
+        format: 'png',
+        width: '120',
+        height: '120',
+        altText: 'Дизайнер'
+      },
+      {
+        text: 'Дизайнер',
+        path: 'png/teams',
+        image: 'designer-kseniya',
+        format: 'png',
+        width: '120',
+        height: '120',
+        altText: 'Дизайнер'
+      },
+      {
+        text: 'Разработчик',
+        path: 'png/teams',
+        image: 'developer-artem-1',
+        format: 'png',
+        width: '120',
+        height: '120',
+        altText: 'Разработчик'
+      },
+      {
+        text: 'Разработчик',
+        path: 'png/teams',
+        image: 'developer-artem',
+        format: 'png',
+        width: '120',
+        height: '120',
+        altText: 'Разработчик'
+      },
+      {
+        text: 'Разработчик',
+        path: 'png/teams',
+        image: 'developer-artemiy',
+        format: 'png',
+        width: '120',
+        height: '120',
+        altText: 'Разработчик'
+      },
+      {
+        text: 'Team-Lead',
+        path: 'png/teams',
+        image: 'team-lead',
+        format: 'png',
+        width: '120',
+        height: '120',
+        altText: 'Руководитель'
+      },
+      {
+        text: 'Разработчик',
+        path: 'png/teams',
+        image: 'developer-evgeniy',
+        format: 'png',
+        width: '120',
+        height: '120',
+        altText: 'Разработчик'
+      },
+      {
+        text: 'SEO-специалист',
+        path: 'png/teams',
+        image: 'seo',
+        format: 'png',
+        width: '120',
+        height: '120',
+        altText: 'SEO-специалист'
+      },
+      {
+        text: 'SMM-специалист',
+        path: 'png/teams',
+        image: 'smm',
+        format: 'png',
+        width: '120',
+        height: '120',
+        altText: 'SMM-специалист'
+      },
+      {
+        text: 'Контекстолог',
+        path: 'png/teams',
+        image: 'contextolog',
+        format: 'png',
+        width: '120',
+        height: '120',
+        altText: 'Контекстолог'
+      },
+      {
+        text: 'Видеооператор',
+        path: 'png/teams',
+        image: 'operator',
+        format: 'png',
+        width: '120',
+        height: '120',
+        altText: 'Видеооператор'
+      },
+      {
+        text: 'Видеооператор',
+        path: 'png/teams',
+        image: 'operator-1',
+        format: 'png',
+        width: '120',
+        height: '120',
+        altText: 'Видеооператор'
+      },
+      {
+        text: 'Видеооператор',
+        path: 'png/teams',
+        image: 'operator-2',
+        format: 'png',
+        width: '120',
+        height: '120',
+        altText: 'Видеооператор'
+      },
+      {
+        text: 'Видеооператор',
+        path: 'png/teams',
+        image: 'operator-3',
+        format: 'png',
+        width: '120',
+        height: '120',
+        altText: 'Видеооператор'
+      },
+    ];
+
+  main.box-closed(style="background: linear-gradient(90deg, #FEED01 0%, #C1B500 100%);")
+    section.portfolio-page.text-closed
+      .portfolio-page__wrapper.container
+        .portfolio-page__box-add.black
+          .portfolio-page__controls.black
+            .portfolio-page__button-prev.button__disabled
+              a(href="#")
+              span Предыдущий проект
+            .portfolio-page__button-next
+              a(href="#")
+              span Следующий проект
+          h2
+            a(href="#") Exim.by
+          p ЗАО «Эксимэлектро» более 17 лет поставщики качественной электротехнической продукции в РБ
+          h3 Цели
+          ul
+            li
+              p Разработка стратегии для увеличения продаж в интернете
+            li
+              p Ребрендинг торговой марки
+            li
+              p Создание многофункционального сайта магазина
+            li
+              p Подключение всех инструментов продвижения
+          a(href="#").button--consultation
+            +picture('svg', 'lead-magnit', 'lead-magnit-mobile', 'svg', '240', '120', 'Заказать проект', '1400')
+        .portfolio-page__box-image
+          .portfolio-page__image
+            a(href="#")
+              +img('portfolio', 'img-exim', 'jpg', '340', '240', 'Эксим')
+          .portfolio-page__controls.black
+            .portfolio-page__button-prev
+              a(href="#")
+              span Exim
+              span Предыдущий проект
+            .portfolio-page__button-next
+              a(href="#")
+              span Yartruba
+              span Следующий проект
+        .portfolio-page__box.black
+          h1 Exim.by
+          p ЗАО «Эксимэлектро» более 17 лет поставщики качественной электротехнической продукции в РБ
+          .portfolio-page__scroll
+            p Скролл для дальнейшей информации
+            .portfolio-page__scroll-mouse
+      .portfolio-page__company.gray-box
+        .portfolio-page__title
+          a(href="#")
+            +img('svg', 'icon-left-arrow', 'svg', '48', '48', 'Вернуться в портфолио')
+            h2 Портфолио
+        .portfolio-page__info
+          .portfolio-page__cell
+            h3 Цели
+            ul
+              li
+                p Разработка стратегии для увеличения продаж в интернете
+              li
+                p Ребрендинг торговой марки
+              li
+                p Создание многофункционального сайта магазина
+              li
+                p Подключение всех инструментов продвижения
+          .portfolio-page__trabls
+            h3 Клиент пришел с:
+            p Устаревший сайт со слабым функционалом
+            p Отсутствие всех видов продвижения
+            p Желание увеличить продажи и нарастить базу постоянных клиентов
+            +img('png', 'company-exim-prev', 'png', '700', '350', 'Эксим')
+          .portfolio-page__purposes
+            h3 Как мы реализовали:
+            p Провели комплексное маркетинговое исследование рынка и конкурентов.
+            p Сделали комплексный ребрендинг дизайна сайта, логотипа, визиток,  социальных сетей.
+            p Разработали многофункциональный интернет-магазин на платформе Bitrix.
+            p Сделали комплексное SEO.
+            p Создали социальные сети и разработали стратегию ведения.
+            p Настроили контекстную рекламу Google и Яндекс.
+          .portfolio-page__advantages
+            h3 Результаты:
+            p Обновлённый удобный сайт, стал возвращать старых клиентов.
+            p Ребрендинг заметили все конкуренты и клиенты.
+            +img('png', 'company-exim-next', 'png', '700', '350', 'Эксим')
+            p Создали шаблоны постов Instagram и разработали Хештеги, для дальнейшего ведения социальной сети внутренними силами заказчика.
+            .portfolio-page__image-box
+              +img('png', 'company-image-1', 'png', '180', '280', 'Инстаграм')
+              +img('png', 'company-image-2', 'png', '180', '280', 'Инстаграм')
+              +img('png', 'company-image-3', 'png', '180', '280', 'Инстаграм')
+            p В первый же месяц трафик на сайте
+              strong  увеличился на 30%.
+            +img('svg', 'graph-1', 'svg', '430', '280', 'Пользователи')
+            p За первый месяц без бюджета на рекламу
+              strong   привлекли 317 подписчиков в Instagram.
+            +img('svg', 'people-element-1', 'svg', '430', '280', 'Пользователи')
+          .feedback__image-arm
+            +picture('svg', 'arm', 'arm-mobile', 'svg', '1130', '180', 'Цель достигнута', '767')
+          .feedback__box.portfolio-page__feedback
+            article
+              .feedback__title
+                .feedback__title-text
+                  strong Стив Джобс
+                  span Генеральный директор Torwood
+                a(href="#") Больше отзывов
+              p Мы являемся агентством веб- и бизнес-аналитики. Основное направление нашей деятельности – это бизнес-аналитика и ключевые течения интернет-маркетинга: веб-аналитика, SEO-продвижение, контекстная реклама, SMM, а также ряд других сопутствующих услуг.
+              .feedback__video.lazyYT(data-youtube-id="EeqPIAYPtiQ" data-ratio="16:9") Смешарики
+              a(href="#") Больше отзывов
+          .portfolio-page__developers
+            h3 В проекте участвовали:
+            .portfolio-page__box-developers
+              each item in developers
+                article
+                  +img(item.path, item.image, item.format, item.width, item.height, item.altText)
+                  strong= item.text
+          .portfolio-page__leadmagnit
+            a(href="#").button--consultation
+              +img('svg', 'lead-magnit', 'svg', '240', '120', 'Заказать проект')
+            p Посетить сайт
+              a(href="#")  www.exim.by
+        .main-footer.portfolio-page__footer
+          .main-footer__wrapper.container
+            .main-footer__box
+              .main-footer__box-image
+                .main-footer__image
+                  a(href='#')
+                    +img('svg', 'logo', 'svg', '120', '43', 'Логотип')
+                +footer-social
+              span © 2019 - ∞
+              p ООО "Дигитал Креатив Маркетинг"
+            ul.main-footer__nav
+              each item in footerNav
+                li
+                  a(href= item.link)= item.text
+            .main-footer__contacts
+              a.main-footer__link-location(href="#") ул. Калиновского 77а, офис 310
+              a.main-footer__link-mail(href="mail:info@cmbox.by") info@cmbox.by
+              .main-footer__link-box
+                a.main-footer__link-phone(href="tel:+375296086368") +375 (29) 608-63-68
+                +social-list
+
+  section.modal.contacts.modal-consultation
+    .modal-consultation__wrapper
+      .contacts__form
+        h3 Заказать проект
+        form(id="form" action="#" method="get")
+          .modal__user-name
+            input(id="user_name" type="text" name="user_name" required)
+            label(for="user_name") Имя
+          .modal__user-phone
+            input(id="user_phone" type="tel" name="user_phone" required)
+            label(for="user_phone") Телефон
+          .modal__user-comment
+            textarea(id="user_comment" name="user_comment")
+            label(for="user_comment") Комментарий
+          a(href="#").button
+            span Отправить
+      a.modal__btn-closed(href="#")
+        span.visually-hidden Закрыть модальное окно
+  section.modal.modal-thanks
+    .modal__wrapper
+      .modal__box
+        h3 Ваша заявка отправлена!
+        p В ближайшее время мы
+          br
+          | с вами свяжемся.
+        a.button(href="#")
+          span На главную
+      .modal__image
+        +img('svg', 'modals-check', 'svg', '190', '200', 'Элемент 2')
+        +img('svg', 'modals-box', 'svg', '460', '200', 'Элемент 1')
+      a.modal__btn-closed(href="#")
+        span.visually-hidden Закрыть модальное окно

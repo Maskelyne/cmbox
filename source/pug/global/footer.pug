@@ -1,3 +1,51 @@
 mixin footer()
-  section.main-footer
-    //- h1 Footer
+
+  -
+    var footerNav = [
+      {
+        link: '#',
+        text: 'О нас'
+      },
+      {
+        link: '#',
+        text: 'Услуги'
+      },
+      {
+        link: '#',
+        text: 'Этапы'
+      },
+      {
+        link: '#',
+        text: 'Портфолио'
+      },
+      {
+        link: '#',
+        text: 'Блог'
+      },
+      {
+        link: '#',
+        text: 'Контакты'
+      },
+    ];
+
+  footer.main-footer(class!=attributes.class)
+    .main-footer__wrapper.container
+      .main-footer__box
+        .main-footer__box-image
+          .main-footer__image
+            a(href='#')
+              +img('svg', 'logo', 'svg', '120', '43', 'Логотип')
+          +footer-social
+        span © 2019 - ∞
+        p ООО "Дигитал Креатив Маркетинг"
+      ul.main-footer__nav
+        each item in footerNav
+          li
+            a(href= item.link)= item.text
+      .main-footer__contacts
+        a.main-footer__link-location(href="#") ул. Калиновского 77а, офис 310
+        a.main-footer__link-mail(href="mail:info@cmbox.by") info@cmbox.by
+        .main-footer__link-box
+          a.main-footer__link-phone(href="tel:+375296086368") +375 (29) 608-63-68
+          +social-list
+

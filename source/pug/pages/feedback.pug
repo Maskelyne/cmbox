@@ -1,0 +1,149 @@
+extends ../layout/page-layout
+
+block variables
+  - var title = "Отзывы"
+
+block header
+  +header
+
+block main
+
+  main
+    section.feedback
+      .feedback__wrapper-left
+        .feedback__wrapper-box
+          h1 Отзывы
+          .feedback__box-title
+            strong 68 отзывов
+            a(href="#").button.feedback-btn
+              span Оставить отзыв
+          section.feedback__box-logotypes
+            .feedback__box-info
+              a(href="#")
+                article.yellow
+                  +img('png', 'logo-exim', 'png', '202', '58', 'Эксим')
+                  p Интернет-магазин
+            .feedback__box-info
+              a(href="#")
+                article.green
+                  +img('png', 'logo-techimport', 'png', '202', '58', 'Техимпорт')
+                  p Интернет-магазин
+            .feedback__box-info
+              a(href="#")
+                article.brown
+                  +img('png', 'logo-torwood', 'png', '202', '58', 'Торвуд')
+                  p Интернет-магазин
+            .feedback__box-info
+              a(href="#")
+                article.dark-green
+                  +img('png', 'logo-exim', 'png', '202', '58', 'Эксим')
+                  p Интернет-магазин
+            .feedback__box-info
+              a(href="#")
+                article.dark-pink
+                  +img('png', 'logo-techimport', 'png', '202', '58', 'Техимпорт')
+                  p Интернет-магазин
+            .feedback__box-info
+              a(href="#")
+                article.black
+                  +img('png', 'logo-torwood', 'png', '202', '58', 'Торвуд')
+                  p Интернет-магазин
+            .feedback__box-info
+              a(href="#")
+                article.violet
+                  +img('png', 'logo-exim', 'png', '202', '58', 'Эксим')
+                  p Интернет-магазин
+            .feedback__box-info
+              a(href="#")
+                article.blue
+                  +img('png', 'logo-techimport', 'png', '202', '58', 'Техимпорт')
+                  p Интернет-магазин
+            .feedback__box-info
+              a(href="#")
+                article.light-blue
+                  +img('png', 'logo-torwood', 'png', '202', '58', 'Торвуд')
+                  p Интернет-магазин
+            .feedback__box-info
+              a(href="#")
+                article.orange
+                  +img('png', 'logo-exim', 'png', '202', '58', 'Эксим')
+                  p Интернет-магазин
+            .feedback__box-info
+              a(href="#")
+                article.red
+                  +img('png', 'logo-techimport', 'png', '202', '58', 'Техимпорт')
+                  p Интернет-магазин
+      .feedback__wrapper-right
+        .feedback__box
+          h1 Отзывы
+          article.feedback-active
+            .feedback__title
+              strong Стив Джобс
+              span Генеральный директор Torwood
+            p Мы являемся агентством веб- и бизнес-аналитики. Основное направление нашей деятельности – это бизнес-аналитика и ключевые течения интернет-маркетинга: веб-аналитика, SEO-продвижение, контекстная реклама, SMM, а также ряд других сопутствующих услуг.
+            a(href="assets/img/png/feedback-1.png" data-fancybox="photo")
+              +img('png', 'feedback-1', 'png', '225', '300', 'Сертификат')
+          article
+            .feedback__title
+              strong Илон Маск
+              span Генеральный директор Torwood
+            p Мы являемся агентством веб- и бизнес-аналитики. Основное направление нашей деятельности – это бизнес-аналитика и ключевые течения интернет-маркетинга: веб-аналитика, SEO-продвижение, контекстная реклама, SMM, а также ряд других сопутствующих услуг.
+            <iframe src="https://www.youtube.com/embed/EeqPIAYPtiQ"></iframe>
+          article
+            .feedback__title
+              strong Джон Леннон
+              span Генеральный директор Torwood
+            p Мы являемся агентством веб- и бизнес-аналитики. Основное направление нашей деятельности – это бизнес-аналитика и ключевые течения интернет-маркетинга: веб-аналитика, SEO-продвижение, контекстная реклама, SMM, а также ряд других сопутствующих услуг.
+            <iframe src="https://www.youtube.com/embed/EeqPIAYPtiQ"></iframe>
+        .main-footer.portfolio-page__footer
+          .main-footer__wrapper.container
+            .main-footer__box
+              .main-footer__box-image
+                .main-footer__image
+                  a(href='#')
+                    +img('svg', 'logo', 'svg', '120', '43', 'Логотип')
+                +footer-social
+              span © 2019 - ∞
+              p ООО "Дигитал Креатив Маркетинг"
+            .main-footer__contacts
+              a.main-footer__link-location(href="#") ул. Калиновского 77а, офис 310
+              a.main-footer__link-mail(href="mail:info@cmbox.by") info@cmbox.by
+              .main-footer__link-box
+                a.main-footer__link-phone(href="tel:+375296086368") +375 (29) 608-63-68
+                +social-list
+
+    section.modal.modal-feedback
+      .modal-feedback__wrapper
+        .modal__form
+          h3 Написать отзыв
+          form(id="form" action="#" method="get")
+            .modal__user-name
+              input(id="user_name" type="text" name="user_name" required)
+              label(for="user_name") Имя
+            .modal__user-position
+              input(id="user_position" type="tel" name="user_position" required)
+              label(for="user_position") Должность
+            .modal__user-company
+              input(id="user_company" type="text" name="user_company" required)
+              label(for="user_company") Название компании
+            .modal__user-comment
+              textarea(id="user_comment" name="user_comment")
+              label(for="user_comment") Комментарий
+            a(href="#").button
+              span Отправить
+        a.modal__btn-closed(href="#")
+          span.visually-hidden Закрыть модальное окно
+    section.modal.modal-thanks
+      .modal__wrapper
+        .modal__box
+          h3 Ваша заявка отправлена!
+          p В ближайшее время мы
+            br
+            | с вами свяжемся.
+          a.button(href="#")
+            span На главную
+        .modal__image
+          +img('svg', 'modals-check', 'svg', '190', '200', 'Элемент 2')
+          +img('svg', 'modals-box', 'svg', '460', '200', 'Элемент 1')
+        a.modal__btn-closed(href="#")
+          span.visually-hidden Закрыть модальное окно

@@ -1,22 +1,25 @@
 mixin header()
-
   -
-    const headerList = [
+    var headerList = [
       {
         text: 'О нас',
         link: 'about-us.html'
       },
       {
         text: 'Услуги',
-        link: 'services.html'
+        link: 'services-analytics.html'
       },
       {
         text: 'Этапы',
-        link: 'steps.html'
+        link: 'stage-analysis.html'
       },
       {
         text: 'Портфолио',
         link: 'portfolio.html'
+      },
+      {
+        text: 'Отзывы',
+        link: 'feedback.html'
       },
       {
         text: 'Блог',
@@ -28,13 +31,160 @@ mixin header()
       },
     ];
 
-  section.main-header
+  -
+    var stageList = [
+      {
+        link: '#',
+        text: 'Стратегия'
+      },
+      {
+        link: '#',
+        text: 'Анализ'
+      },
+      {
+        link: '#',
+        text: 'Дизайн'
+      },
+      {
+        link: '#',
+        text: 'Разработка'
+      },
+      {
+        link: '#',
+        text: 'Продвижение'
+      },
+      {
+        link: '#',
+        text: 'Автоматизация'
+      },
+      {
+        link: '#',
+        text: 'Поддержка'
+      },
+    ];
+
+  -
+    var servicesList = [
+      {
+        path: 'svg',
+        image: 'icon-site',
+        format: 'svg',
+        width: '48',
+        height: '48',
+        altText: 'Сайт',
+        link: '#',
+        text: 'Сайт'
+      },
+      {
+        path: 'svg',
+        image: 'icon-sale',
+        format: 'svg',
+        width: '48',
+        height: '48',
+        altText: 'Воронка продаж',
+        link: '#',
+        text: 'Воронка продаж'
+      },
+      {
+        path: 'svg',
+        image: 'icon-seo',
+        format: 'svg',
+        width: '48',
+        height: '48',
+        altText: 'Сео',
+        link: '#',
+        text: 'SEO'
+      },
+      {
+        path: 'svg',
+        image: 'icon-contecst',
+        format: 'svg',
+        width: '48',
+        height: '48',
+        altText: 'Контекст',
+        link: '#',
+        text: 'Контекст'
+      },
+      {
+        path: 'svg',
+        image: 'icon-social',
+        format: 'svg',
+        width: '48',
+        height: '48',
+        altText: 'Соцсети',
+        link: '#',
+        text: 'Соцсети'
+      },
+      {
+        path: 'svg',
+        image: 'icon-video',
+        format: 'svg',
+        width: '48',
+        height: '48',
+        altText: 'Видеомаркетинг',
+        link: '#',
+        text: 'Видеомаркетинг'
+      },
+      {
+        path: 'svg',
+        image: 'icon-crm',
+        format: 'svg',
+        width: '48',
+        height: '48',
+        altText: 'ЦРМ',
+        link: '#',
+        text: 'CRM'
+      },
+    ];
+
+  header.main-header
     nav.main-header__wrapper.container
-      .main-header__image
-        +img('svg', 'logo', 'svg', '120', '43', 'Логотип сайта')
-      ul.main-header__list
-        each item in headerList
-          li
-            a(href= item.link)= item.text
+      .main-header__logo
+        a(href="index.html")
+          +img('svg', 'logo', 'svg', '120', '43', 'Логотип')
+      .main-header__stage-box
+        a.main-header__link-stage.main-header__link-stage--closed(href="#")
+          span.visually-hidden Меню с этапами
+        .main-header__stage-nav.main-header__stage-nav--closed
+          h1 Этапы
+          ul.main-header__stage-list
+            each item in stageList
+              li
+                a(href= item.link)= item.text
+      .main-header__services-box
+        a.main-header__link-services.main-header__link-services--closed(href="#")
+          span.visually-hidden Наши услуги
+        .main-header__services-nav.main-header__services-nav--closed
+          h1 Услуги
+          ul.main-header__services-list
+            each item in servicesList
+              li
+                a(href= item.link)
+                  +img(item.path, item.image, item.format, item.width, item.height, item.altText)
+                  = item.text
+      .main-header__wrap-menu-nav
+        button.main-header__btn.main-header__btn--closed(href="#")
+          span
+          span
+          span
+        .main-header__wrap-menu
+          ul.main-header__list
+            each item in headerList
+              li
+                a(href= item.link)= item.text
+          .main-header__box-tablet
+            .main-header__box-info
+              a(href="#")
+                +img('svg', 'icon-pin-white', 'svg', '40', '40', 'Адрес')
+                span ул. Калиновского 77а, офис 310
+              a(href="mailto:info@cmbox.by")
+                +img('svg', 'icon-mail-white', 'svg', '40', '40', 'Почта')
+                span info@cmbox.by
+            .main-header__box-tel
+              a(href="tel:375296086368") +375 (29) 608-63-68
+              +social-list.social-list--tablet
       .main-header__box
-        +img('svg', 'icon-mobile', 'svg', '24', '24', '')
+        a.main-header__link-phone(href="tel:375296086368")
+          +img('svg', 'icon-mobile', 'svg', '9', '18', 'Телефон')
+          span +375 (29) 608-63-68
+        +social-list

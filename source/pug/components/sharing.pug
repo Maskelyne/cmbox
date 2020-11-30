@@ -1,0 +1,77 @@
+mixin sharing()
+
+  -
+    var sharingList = [
+      {
+        path: 'svg',
+        image: 'icon-sharing',
+        format: 'svg',
+        width: '24',
+        height: '24',
+        altText: 'Поделиться',
+        text: 'Поделиться'
+      },
+      {
+        path: 'svg',
+        image: 'icon-sharing-twitter',
+        format: 'svg',
+        width: '24',
+        height: '24',
+        altText: 'Твиттер',
+        text: 'Твиттер'
+      },
+      {
+        path: 'svg',
+        image: 'icon-sharing-facebook',
+        format: 'svg',
+        width: '24',
+        height: '24',
+        altText: 'Фэйсбук',
+        text: 'Фэйсбук'
+      },
+      {
+        path: 'svg',
+        image: 'icon-sharing-vk',
+        format: 'svg',
+        width: '24',
+        height: '24',
+        altText: 'Вконтакте',
+        text: 'Вконтакте'
+      },
+      {
+        path: 'svg',
+        image: 'icon-sharing-ok',
+        format: 'svg',
+        width: '24',
+        height: '24',
+        altText: 'Одноклассники',
+        text: 'Одноклассники'
+      },
+    ];
+
+  ul.sharing-list
+    li
+      a(href="#")
+        span.visually-hidden Поделиться
+        +img('svg', 'icon-sharing', 'svg', '24', '24', 'Поделиться')
+        +img('svg', 'icon-sharing-red', 'svg', '24', '24', 'Поделиться')
+    li
+      a(href="#")
+        span.visually-hidden Твиттер
+        +img('svg', 'icon-sharing-twitter', 'svg', '24', '24', 'Твиттер')
+        +img('svg', 'icon-sharing-twitter-red', 'svg', '24', '24', 'Твиттер')
+    li
+      a(href="#")
+        span.visually-hidden Фэйсбук
+        +img('svg', 'icon-sharing-facebook', 'svg', '24', '24', 'Фэйсбук')
+        +img('svg', 'icon-sharing-facebook-red', 'svg', '24', '24', 'Фэйсбук')
+    li
+      a(href="#")
+        span.visually-hidden Вконтакте
+        +img('svg', 'icon-sharing-vk', 'svg', '24', '24', 'Вконтакте')
+        +img('svg', 'icon-sharing-vk-red', 'svg', '24', '24', 'Вконтакте')
+    li
+      a(href="#")
+        span.visually-hidden Одноклассники
+        +img('svg', 'icon-sharing-ok', 'svg', '24', '24', 'Одноклассники')
+        +img('svg', 'icon-sharing-ok-red', 'svg', '24', '24', 'Одноклассники')

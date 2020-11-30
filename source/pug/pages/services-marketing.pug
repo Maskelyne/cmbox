@@ -1,0 +1,252 @@
+extends ../layout/page-layout
+
+block variables
+  - var title = "Видеомаркетинг"
+  - var activePage = 8
+
+block header
+  +header
+
+block main
+
+  -
+    var boxesList = [
+      {
+        link: 'services-analytics.html',
+        path: 'services',
+        name: 'box-close',
+        format: 'svg',
+        width: '240',
+        height: '160',
+        altText: 'Аналитика',
+        text: 'Аналитика',
+        iconPath: 'svg',
+        iconName: 'icon-analytics',
+        iconWidth: '48',
+        iconHeight: '48'
+      },
+      {
+        link: 'services-strategy.html',
+        path: 'services',
+        name: 'box-close',
+        format: 'svg',
+        width: '240',
+        height: '160',
+        altText: 'Стратегия',
+        text: 'Стратегия',
+        iconPath: 'svg',
+        iconName: 'icon-strategy',
+        iconWidth: '48',
+        iconHeight: '48'
+      },
+      {
+        link: 'services-design.html',
+        path: 'services',
+        name: 'box-close',
+        format: 'svg',
+        width: '240',
+        height: '160',
+        altText: 'Дизайн',
+        text: 'Дизайн',
+        iconPath: 'svg',
+        iconName: 'icon-design',
+        iconWidth: '48',
+        iconHeight: '48'
+      },
+      {
+        link: 'services-site.html',
+        path: 'services',
+        name: 'box-close',
+        format: 'svg',
+        width: '240',
+        height: '160',
+        altText: 'Сайт',
+        text: 'Сайт',
+        iconPath: 'svg',
+        iconName: 'icon-site',
+        iconWidth: '48',
+        iconHeight: '48'
+      },
+      {
+        link: 'services-sales.html',
+        path: 'services',
+        name: 'box-close',
+        format: 'svg',
+        width: '240',
+        height: '160',
+        altText: 'Воронка продаж',
+        text: 'Воронка продаж',
+        iconPath: 'svg',
+        iconName: 'icon-sale',
+        iconWidth: '48',
+        iconHeight: '48'
+      },
+      {
+        link: 'services-seo.html',
+        path: 'services',
+        name: 'box-close',
+        format: 'svg',
+        width: '240',
+        height: '160',
+        altText: 'Seo',
+        text: 'Seo',
+        iconPath: 'svg',
+        iconName: 'icon-seo',
+        iconWidth: '48',
+        iconHeight: '48'
+      },
+      {
+        link: 'services-context.html',
+        path: 'services',
+        name: 'box-close',
+        format: 'svg',
+        width: '240',
+        height: '160',
+        altText: 'Контекст',
+        text: 'Контекст',
+        iconPath: 'svg',
+        iconName: 'icon-contecst',
+        iconWidth: '48',
+        iconHeight: '48'
+      },
+      {
+        link: 'services-social.html',
+        path: 'services',
+        name: 'box-close',
+        format: 'svg',
+        width: '240',
+        height: '160',
+        altText: 'Соцсети',
+        text: 'Соцсети',
+        iconPath: 'svg',
+        iconName: 'icon-social',
+        iconWidth: '48',
+        iconHeight: '48'
+      },
+      {
+        link: 'services-marketing.html',
+        path: 'services',
+        name: 'box-close',
+        format: 'svg',
+        width: '240',
+        height: '160',
+        altText: 'Видео-маркетинг',
+        text: 'Видео-маркетинг',
+        iconPath: 'svg',
+        iconName: 'icon-video',
+        iconWidth: '48',
+        iconHeight: '48'
+      },
+      {
+        link: 'services-crm.html',
+        path: 'services',
+        name: 'box-close',
+        format: 'svg',
+        width: '240',
+        height: '160',
+        altText: 'Crm',
+        text: 'Crm',
+        iconPath: 'svg',
+        iconName: 'icon-crm',
+        iconWidth: '48',
+        iconHeight: '48'
+      },
+    ];
+
+  main.gray-box
+    section.services
+      h1 Услуги
+      .services__box
+        .services__nav-box
+          ul.services__boxes-list
+            each item, index in boxesList
+              if (index === activePage)
+                li
+                  a(href= item.link).services__link-active
+                    span= item.text
+                    +img(item.path, item.name, item.format, item.width, item.height, item.altText)
+                    +img(item.iconPath, item.iconName, item.format, item.iconWidth, item.iconHeight, item.altText)
+              else
+                li
+                  a(href= item.link)
+                    span= item.text
+                    +img(item.path, item.name, item.format, item.width, item.height, item.altText)
+                    +img(item.iconPath, item.iconName, item.format, item.iconWidth, item.iconHeight, item.altText)
+        .services__box-images
+          .services__image
+            +img('services', 'icon-seo', 'svg', '220', '220', 'Seo')
+          .services__boxes
+            +img('services', 'big-box-active', 'svg', '640', '380', 'Коробка')
+            +img('services', 'big-box-hover', 'svg', '640', '380', 'Коробка')
+        .services__box-text
+          h2 Видеомаркетинг
+          .services__text
+            p Это продвижение товаров или услуг за счет видеоконтента, один из форматов медийной рекламы.
+              strong  Медийная реклама
+              |  — это реклама, направленная на привлечение внимания аудитории, формирование отношения к компании, создание нужных ассоциаций за счет использования изображений, видео, аудио. В дальнейшем это повышает ценность продукта для покупателя, а также это хороший способ презентовать бренд.
+            p
+              strong Основные площадки, где может размещаться видеореклама:
+              |  социальные сети (Instagram, Tiktok, Facebook, OK, VK), видеохостинги (YouTube, Rutube, Vimeo), собственный сайт.
+      .services__info
+        article
+          h3 Вам нужен видеомаркетинг, если вы хотите:
+          p Презентовать новый продукт или услугу: видео нагляднее покажет все их преимущества.
+          p Расширить охват аудитории и усилить ее вовлеченность в бренд.
+          p Привлечь внимание к вашему бренду, запомниться.
+          p Повысить узнаваемость и популярность вашего бренда.
+          p Увеличить доверие к вашим товарам или услугам, показав их в действии.
+          p Создать нужное впечатление, имидж вашего бренда.
+          p Добавить вашим соцсетям продающего контента.
+        article
+          +img('stage-design', 'image-element-10', 'svg', '225', '115')
+          +img('stage-design', 'image-element-11', 'svg', '225', '115')
+          +img('svg', 'image-element-mobile', 'svg', '240', '200')
+      .services__info-1
+        h3 Преимущества CMBOX:
+        .services__info-list
+          article
+            +img('services/icon-services', 'icon-operators', 'svg', '200', '130', 'Большая команда')
+            strong Большая команда
+            p Контент для вашего продвижения создается слаженной командой  профессионалов.
+          article
+            +img('services/icon-services', 'icon-quadric', 'svg', '200', '130', 'Специальное оборудование')
+            strong Специальное оборудование
+            p Используем профессиональное съемочное оборудование – камеры, объективы, свет и квадрокоптеры.
+          article
+            +img('services/icon-services', 'icon-individ-3', 'svg', '200', '130', 'Клиенты из разных стран')
+            strong Индивидуальные концепции
+            p При создании концепта для вашего бренда наши специалисты учтут множество нюансов, чтобы контент был уникальным.
+        .services__slider
+          h3 Примеры нашего видеомаркетинга для сайтов:
+          .services__slider-wrapper
+            .services__swiper-container.swiper-container
+              ul.swiper-wrapper
+                li.swiper-slide
+                  .services__slide-image
+                    a(href="https://www.youtube.com/watch?v=cBUcdDmS-1A&feature=emb_logo" target="_blank")
+                      +img('jpg', 'video', 'jpg', '400', '220', 'Видео')
+                li.swiper-slide
+                  .services__slide-image
+                    a(href="https://www.youtube.com/watch?v=8lndFrEMLvM&feature=emb_logo" target="_blank")
+                      +img('jpg', 'video', 'jpg', '400', '220', 'Видео')
+                li.swiper-slide
+                  .services__slide-image
+                    a(href="https://www.youtube.com/watch?v=8lndFrEMLvM&feature=emb_logo" target="_blank")
+                      +img('jpg', 'video', 'jpg', '400', '220', 'Видео')
+                li.swiper-slide
+                  .services__slide-image
+                    a(href="https://www.youtube.com/watch?v=8lndFrEMLvM&feature=emb_logo" target="_blank")
+                      +img('jpg', 'video', 'jpg', '400', '220', 'Видео')
+              .services__swiper-button-prev.swiper-button-prev
+              .services__swiper-button-next.swiper-button-next
+        .services__info-text
+          h3 Основные форматы роликов:
+          span Презентационный – для демонстрации преимуществ товаров/услуг.
+          span Рекламный – для привлечения новой аудитории, демонстрации позиционирования продукта/услуги. Это эмоциональный ролик.
+          span Имиджевый – для усиления бренда и увеличения лояльности аудитории. Это может быть видеоурок, обзор, интервью, познавательный или развлекательный ролик и так далее. Главное, чтобы он был интересен и полезен зрителю.
+        .services__box-portfolio.container
+          h2 Примеры работ вы можете посмотреть на странице
+            a(href="#")  Портфолио
+
+block footer
+  +footer

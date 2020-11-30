@@ -1,0 +1,125 @@
+extends ../layout/page-layout
+
+block variables
+  - var title = "Анализ"
+
+block header
+  +header
+
+block main
+  main
+    section.stages
+      h1 Этапы
+      .stages__nav-box
+        ul.stages__nav-list
+          li
+            .stages__image.stages__image--active
+              a(href='stage-analysis.html')
+                span Анализ
+                +img('stage-boxes', 'stage-box-active', 'svg', '220', '175', 'Анализ')
+          li
+            .stages__image
+              a(href='stage-strategy.html')
+                span Стратегия
+                +img('stage-boxes', 'stage-box', 'svg', '125', '120', 'Стратегия')
+          li
+            .stages__image
+              a(href='stage-design.html')
+                span Дизайн
+                +img('stage-boxes', 'stage-box', 'svg', '125', '120', 'Дизайн')
+          li
+            .stages__image
+              a(href='stage-developers.html')
+                span Разработка
+                +img('stage-boxes', 'stage-box', 'svg', '125', '120', 'Разработка')
+          li
+            .stages__image
+              a(href='stage-promotion.html')
+                span Продвижение
+                +img('stage-boxes', 'stage-box', 'svg', '125', '120', 'Продвижение')
+          li
+            .stages__image
+              a(href='stage-automation.html')
+                span Автоматизация
+                +img('stage-boxes', 'stage-box', 'svg', '125', '120', 'Автоматизация')
+          li
+            .stages__image
+              a(href='stage-support.html')
+                span Поддержка
+                +img('stage-boxes', 'stage-box', 'svg', '125', '120', 'Поддержка')
+      .stages__box.stages__box--analysis.container
+        +img('stage-analysis', 'image-element-1', 'svg', '720', '510', 'Анализ')
+        +img('stage-analysis', 'image-element-2', 'svg', '870', '275', 'Анализ')
+        +img('stage-analysis', 'image-element-3', 'svg', '63', '61', '1 Элемент')
+        +img('stage-analysis', 'image-element-4', 'svg', '48', '48', '2 Элемент')
+        +img('stage-analysis', 'image-element-5', 'svg', '60', '60', '3 Элемент')
+        +img('stage-analysis', 'image-element-6', 'svg', '68', '90', '4 Элемент')
+        +img('stage-analysis', 'image-element-7', 'svg', '90', '71', '5 Элемент')
+        +img('stage-analysis', 'image-element-8', 'svg', '190', '130', '6 Элемент')
+        +img('stage-analysis', 'image-element-9', 'svg', '90', '90', '7 Элемент')
+      .stages__box
+        +img('stage-analysis', 'image-mobile', 'svg', '340', '235', 'Анализ')
+      .stages__text
+        h2 Анализ
+        p Первый этап в комплексном маркетинге – это анализ ниши вашего бизнеса, вашей целевой аудитории и конкурентов. Всё это позволяет максимально точно оценить рынок и определить возможности развития компании.
+        p Что входит в
+          strong  полный анализ:
+        p 1. Оценка потенциала рынка и покупательского спроса на ваши товары или услуги.
+        p 2. Составление портрета именно ваших потенциальных покупателей.
+        p 3. Поиск компаний с такой же целевой аудиторией, как у вас.
+        p 4. Аналитика интернет-упаковки основных конкурирующих фирм, инструментов продвижения, которые они используют.
+        p 5. Определение преимуществ и недостатков всех инструментов продаж конкурентов.
+        p 6. Определение главных конкурентных преимуществ вашего бизнеса и его позиционирования в нише.
+        p Что входит в
+          strong  базовый анализ
+        p 1. В него входит оценка рынка и покупательского спроса.
+        .stages__coffee
+          .stages__coffee-box
+            .stages__coffee-image
+              +img('svg', 'icon-coffee', 'svg', '170', '140', 'Чашка кофе')
+              +img('svg', 'icon-coffee-price', 'svg', '130', '108', 'Цена')
+              +img('svg', 'icon-coffee-element-1', 'svg', '32', '100', 'Элемент 1')
+              +img('svg', 'icon-coffee-element-1', 'svg', '32', '100', 'Элемент 1')
+              +img('svg', 'icon-coffee-mobile', 'svg', '260', '175', 'Чашка кофе')
+            p Базовый анализ
+              br
+              strong  по цене
+              |  чашки кофе
+          a(href="#").button.analysis-btn
+            span Заказать
+
+block footer
+  +footer
+
+  section.modal.modal-analysis
+    .modal-analysis__wrapper
+      .modal__form
+        h3 Заказать анализ
+        form(id="form" action="#" method="get")
+          .modal__user-name
+            input(id="user_name" type="text" name="user_name" required)
+            label(for="user_name") Имя
+          .modal__user-phone
+            input(id="user_phone" type="text" name="user_phone" required)
+            label(for="user_phone") Номер телефона
+          .modal__user-site
+            input(id="user_site" type="text" name="user_site")
+            label(for="user_site") Сайт
+          a(href="#").button
+            span Отправить
+      a.modal__btn-closed(href="#")
+        span.visually-hidden Закрыть модальное окно
+  section.modal.modal-thanks
+    .modal__wrapper
+      .modal__box
+        h3 Ваша заявка отправлена!
+        p В ближайшее время мы
+          br
+          | с вами свяжемся.
+        a.button(href="#")
+          span На главную
+      .modal__image
+        +img('svg', 'modals-check', 'svg', '190', '200', 'Элемент 2')
+        +img('svg', 'modals-box', 'svg', '460', '200', 'Элемент 1')
+      a.modal__btn-closed(href="#")
+        span.visually-hidden Закрыть модальное окно
