@@ -5314,6 +5314,7 @@ main {
     position: relative;
     z-index: 1; }
     .services__boxes-list li:nth-child(1) a span::before {
+<<<<<<< Updated upstream
       width: 44px;
       top: 11px;
       right: -40px;
@@ -5321,6 +5322,32 @@ main {
       position: absolute;
       content: "";
       border-top: solid 15px transparent;
+      border-right: 7px solid transparent;
+      transition: all 1s ease; }
+    .services__boxes-list li:nth-child(1) a span::after {
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
+      width: 45px;
+      top: 26px;
+      right: -41px;
+      transform: translate(4px, -2px) skew(0deg, 21deg);
+      position: absolute;
+      content: "";
+      border-bottom: solid 16px transparent;
+<<<<<<< Updated upstream
+      border-right: 8px solid transparent;
+      transition: all 1s ease; }
+=======
+=======
+      width: 44px;
+      top: 11px;
+      right: -40px;
+      transform: translate(4px, -2px) skew(0deg, 20deg);
+      position: absolute;
+      content: "";
+      border-top: solid 15px transparent;
+>>>>>>> 0e1d69b24d7ae19ef1b57ec8d644401770f638a0
       border-right: 7px solid transparent;
       transition: all 1s ease; }
     .services__boxes-list li:nth-child(1) a span::after {
@@ -5333,6 +5360,7 @@ main {
       border-bottom: solid 16px transparent;
       border-right: 8px solid transparent;
       transition: all 1s ease; }
+>>>>>>> Stashed changes
     .services__boxes-list li:nth-child(1) a:hover span::before {
       width: 45px;
       top: 10px;
@@ -5769,11 +5797,14 @@ main {
           width: 45px;
           border-top: solid 16px #ffb4c5;
           filter: brightness(0.9); }
+<<<<<<< HEAD
+=======
         .services__boxes-list li:nth-child(1n) .services__link-active span::after {
           right: -40px;
           border-right: 7px solid transparent;
           border-bottom: solid 16px #ffb4c5;
           filter: brightness(0.9); }
+>>>>>>> 0e1d69b24d7ae19ef1b57ec8d644401770f638a0
 
 .services__boxes {
   max-width: 600px; }
