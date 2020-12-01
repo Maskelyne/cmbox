@@ -42,6 +42,7 @@
 .user-button {
   display: block;
   position: relative;
+  cursor: pointer;
 
   span {
     width: 170px;
@@ -51,5 +52,9 @@
     display: none;
     font-weight: $bold;
     color: $dark-red;
+
+    @media (max-width: $tablet-width) {
+      top: -25px;
+    }
   }
 }
