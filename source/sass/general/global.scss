@@ -24,8 +24,12 @@ a {
   color: $dark-black;
 
   &:hover {
-    font-weight: $bold;
     color: $dark-red;
+  }
+
+  &:active {
+    color: $dark-red;
+    font-weight: $bold;
   }
 }
 
