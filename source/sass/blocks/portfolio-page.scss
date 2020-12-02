@@ -741,6 +741,9 @@
 
   @media (max-width: $tablet-width) {
     padding: 30px 10px;
+    background-image: none;
+    box-shadow: none;
+    border-radius: 0;
 
     h3 {
       margin-top: 0;

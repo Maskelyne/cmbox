@@ -47,6 +47,7 @@
   position: relative;
 
   .contacts__form {
+    margin-top: 0;
     box-shadow: none;
 
     @media (max-width: $mobile-width) {
@@ -246,10 +247,9 @@
     @media (max-width: $mobile-width) {
       grid-row: 3;
       background-color: $white;
-    }
-
-    @media (max-width: $mobile-width) {
       margin-top: 0;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
     }
 
     img {

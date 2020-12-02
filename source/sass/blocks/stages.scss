@@ -1634,7 +1634,9 @@
   }
 
   a {
-    font-family: $proximaNova;
+    @media (max-width: $tablet-width) {
+      margin: 0 auto;
+    }
   }
 
   strong {

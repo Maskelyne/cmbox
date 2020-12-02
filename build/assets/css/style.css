@@ -4994,48 +4994,49 @@ main {
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.5); }
       @media (max-width: 767px) {
         .contacts__social .footer-social img {
-          border-radius: 5px;
+          border-radius: 10px;
           max-width: 40px; } }
       .contacts__social .footer-social img:hover {
         transform: scale(1.2);
         transition: all 0.3s linear; }
 
-.contacts__info {
-  display: grid;
-  grid-template-rows: auto;
-  grid-gap: 10px 0; }
+@media (max-width: 1023px) {
+  .contacts__info {
+    max-width: 430px;
+    width: 100%;
+    margin: 0 auto; } }
+
+.contacts__info h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  font-family: "ProximaNova-Regular", arial, sans-serif;
+  text-align: left; }
+  @media (max-width: 767px) {
+    .contacts__info h2 {
+      font-size: 16px;
+      line-height: 16px; } }
+
+.contacts__info h3 {
+  margin-bottom: 10px;
+  font-size: 36px;
+  line-height: 36px;
+  font-family: "ProximaNova-Bold", arial, sans-serif;
+  color: #a62e41; }
   @media (max-width: 1023px) {
-    .contacts__info {
-      max-width: 430px;
-      width: 100%;
-      margin: 0 auto; } }
-  .contacts__info h2 {
-    font-size: 24px;
-    line-height: 24px;
-    font-weight: 400;
-    font-family: "ProximaNova-Regular", arial, sans-serif;
-    text-align: left; }
-    @media (max-width: 767px) {
-      .contacts__info h2 {
-        font-size: 16px;
-        line-height: 16px; } }
-  .contacts__info h3 {
-    font-size: 36px;
-    line-height: 36px;
-    font-family: "ProximaNova-Bold", arial, sans-serif;
-    color: #a62e41; }
-    @media (max-width: 1023px) {
-      .contacts__info h3 {
-        font-size: 33px;
-        line-height: 33px; } }
-    @media (max-width: 767px) {
-      .contacts__info h3 {
-        font-size: 24px;
-        line-height: 24px; } }
-    .contacts__info h3 span {
-      color: #0a3d76; }
+    .contacts__info h3 {
+      font-size: 33px;
+      line-height: 33px; } }
+  @media (max-width: 767px) {
+    .contacts__info h3 {
+      font-size: 24px;
+      line-height: 24px; } }
+  .contacts__info h3 span {
+    color: #0a3d76; }
 
 .contacts__form {
+  margin-top: 30px;
   padding: 40px 54px;
   display: grid;
   grid-gap: 40px 0;
@@ -5122,6 +5123,7 @@ main {
     font-family: "Mistral", arial, sans-serif;
     font-size: 48px;
     line-height: 48px;
+    font-weight: 400;
     text-align: center;
     color: #a62e41;
     letter-spacing: 0.1em; }
@@ -7786,8 +7788,9 @@ main {
     font-weight: normal; }
   .stages__text p {
     margin-bottom: 10px; }
-  .stages__text a {
-    font-family: "ProximaNova-Regular", arial, sans-serif; }
+  @media (max-width: 767px) {
+    .stages__text a {
+      margin: 0 auto; } }
   .stages__text strong {
     color: #0a3d76; }
 
@@ -8254,7 +8257,7 @@ main {
   max-width: 235px;
   width: 100%;
   padding: 15px 0;
-  font-family: "ProximaNova-Bold", arial, sans-serif;
+  font-family: "ProximaNova-Regular", arial, sans-serif;
   font-size: 18px;
   line-height: 18px;
   text-transform: uppercase;
@@ -9401,7 +9404,10 @@ main {
   border-radius: 10px; }
   @media (max-width: 767px) {
     .portfolio-page__purposes {
-      padding: 30px 10px; }
+      padding: 30px 10px;
+      background-image: none;
+      box-shadow: none;
+      border-radius: 0; }
       .portfolio-page__purposes h3 {
         margin-top: 0; } }
   .portfolio-page__purposes ul {
@@ -9942,6 +9948,7 @@ main {
   width: 100%;
   position: relative; }
   .modal-consultation__wrapper .contacts__form {
+    margin-top: 0;
     box-shadow: none; }
     @media (max-width: 480px) {
       .modal-consultation__wrapper .contacts__form {
@@ -10096,10 +10103,10 @@ main {
     @media (max-width: 480px) {
       .modal-development .modal__image {
         grid-row: 3;
-        background-color: #ffffff; } }
-    @media (max-width: 480px) {
-      .modal-development .modal__image {
-        margin-top: 0; } }
+        background-color: #ffffff;
+        margin-top: 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px; } }
     .modal-development .modal__image img {
       max-width: 400px;
       display: block;
