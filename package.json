@@ -48,6 +48,7 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-svgstore": "^7.0.1",
     "gulp-uglify": "^3.0.2",
+    "imagemin-gifsicle": "^7.0.0",
     "imagemin-pngquant": "^9.0.1",
     "stylelint": "^13.1.0",
     "stylelint-config-htmlacademy": "^0.1.4"

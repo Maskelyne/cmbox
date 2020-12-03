@@ -32,7 +32,7 @@ var path = {
     jsWorker: 'source/js/service-worker.js',
     vendorJs: 'source/js/vendor.js',
     css: 'source/sass/style.scss',
-    img: 'source/img/**/*.{png,jpg,svg}',
+    img: 'source/img/**/*.{png,jpg,svg,gif}',
     sprite: 'source/img/svg-sprite/*.svg',
     fonts: 'source/fonts/**/*.{woff,woff2}'
   },

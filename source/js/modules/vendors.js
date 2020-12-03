@@ -129,4 +129,14 @@ $(function () {
     text.style.display = '';
   };
 
+  document.ondragstart = test;
+//запрет на перетаскивание
+  document.onselectstart = test;
+//запрет на выделение элементов страницы
+  document.oncontextmenu = test;
+//запрет на выведение контекстного меню
+  function test() {
+    return false;
+  }
+
 });

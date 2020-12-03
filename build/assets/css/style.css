@@ -983,9 +983,10 @@ main {
 
 @media (max-width: 767px) {
   .main {
-    background-image: url("../img/png/bckg-main.png");
+    background-image: url("../img/svg/bckg-main.svg");
     background-repeat: no-repeat;
-    background-size: cover; } }
+    background-size: cover;
+    background-attachment: fixed; } }
 
 .black {
   color: #333333; }
@@ -10135,6 +10136,94 @@ main {
           .modal-development .modal__image img:nth-child(1) {
             max-width: 130px;
             margin: 0 5px -70px 0; } }
+
+.modal-question h3 {
+  margin-bottom: 20px; }
+
+.modal-question p {
+  margin-bottom: 20px; }
+
+.modal-question .modal__wrapper {
+  grid-template-columns: 70% auto;
+  border-radius: 10px; }
+  @media (max-width: 480px) {
+    .modal-question .modal__wrapper {
+      grid-template-columns: 1fr;
+      grid-template-rows: 67% 1fr; } }
+
+.modal-question .modal__box {
+  max-width: 286px;
+  margin: 40px 40px -60px 40px; }
+  .modal-question .modal__box .button {
+    margin: 0 auto; }
+
+.modal-question label {
+  position: absolute;
+  top: -5px;
+  left: 0;
+  cursor: text;
+  transition: all 0.3s linear; }
+
+.modal-question input {
+  margin-bottom: 30px;
+  width: 100%;
+  padding: 0;
+  border: none;
+  border-bottom: solid 1px #333333;
+  outline: none;
+  background-color: transparent; }
+  .modal-question input:required ~ label::after {
+    position: absolute;
+    content: "*";
+    top: 0;
+    right: -8px; }
+  .modal-question input:focus ~ label, .modal-question input.not-empty ~ label {
+    color: #666666;
+    font-size: 15px;
+    transform: translateY(-15px);
+    transition: all 0.3s linear; }
+
+.modal-question .modal__image {
+  margin-top: 70px;
+  grid-row: 2;
+  grid-column: 1 / 3;
+  justify-self: flex-end;
+  display: grid; }
+  @media (max-width: 480px) {
+    .modal-question .modal__image {
+      grid-row: 3;
+      background-color: #ffffff;
+      margin-top: 0;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px; } }
+  .modal-question .modal__image img {
+    max-width: 400px;
+    display: block;
+    border-bottom-right-radius: 10px; }
+    .modal-question .modal__image img:nth-child(1) {
+      max-width: 150px;
+      margin: 0 15px -70px 0;
+      justify-self: self-end;
+      -webkit-animation: services-icon-movement;
+              animation: services-icon-movement;
+      -webkit-animation-duration: 2.5s;
+              animation-duration: 2.5s;
+      -webkit-animation-delay: 0s;
+              animation-delay: 0s;
+      -webkit-animation-timing-function: ease-in-out;
+              animation-timing-function: ease-in-out;
+      -webkit-animation-iteration-count: infinite;
+              animation-iteration-count: infinite;
+      -webkit-animation-direction: alternate;
+              animation-direction: alternate;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+      -webkit-animation-play-state: running;
+              animation-play-state: running; }
+      @media (max-width: 480px) {
+        .modal-question .modal__image img:nth-child(1) {
+          max-width: 130px;
+          margin: 0 5px -70px 0; } }
 
 .modal-feedback,
 .modal-analysis {
