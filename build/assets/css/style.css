@@ -10156,6 +10156,12 @@ main {
   margin: 40px 40px -60px 40px; }
   .modal-question .modal__box .button {
     margin: 0 auto; }
+  @media (max-width: 767px) {
+    .modal-question .modal__box form {
+      max-width: 210px; } }
+  @media (max-width: 480px) {
+    .modal-question .modal__box form {
+      max-width: 100%; } }
 
 .modal-question label {
   position: absolute;

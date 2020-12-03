@@ -29,7 +29,6 @@ var path = {
     html: 'source/*.html',
     js: 'source/js/main.js',
     jsAdd: 'source/js/default.js',
-    jsWorker: 'source/js/service-worker.js',
     vendorJs: 'source/js/vendor.js',
     css: 'source/sass/style.scss',
     img: 'source/img/**/*.{png,jpg,svg,gif}',
@@ -101,12 +100,6 @@ gulp.task('jsAdd:build', function () {
     .pipe(server.stream());
 });
 
-gulp.task('jsWorker:build', function () {
-  return gulp.src(path.source.jsWorker)
-    .pipe(gulp.dest(path.build.jsWorker))
-    .pipe(server.stream());
-});
-
 gulp.task('vendorJs:build', function () {
   return gulp.src(path.source.vendorJs)
     .pipe(rigger())
@@ -172,7 +165,6 @@ gulp.task('build', gulp.series(
     'pug:build',
     'js:build',
     'jsAdd:build',
-    'jsWorker:build',
     'vendorJs:build',
     'css:build',
     'fonts:build',

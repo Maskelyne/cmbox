@@ -29,14 +29,4 @@ html(lang="ru")
     script(src="assets/js/vendor.min.js")
     script(src="assets/js/main.js")
     script(src="assets/js/default.js")
-    script(src="service-worker.js")
-    script(src="https://js.pusher.com/beams/1.0/push-notifications-cdn.js")
-    script
-      | const beamsClient = new PusherPushNotifications.Client({
-      | instanceId: 'a30cf157-09aa-423c-934e-9f6da40e0b3e',
-      | });
-      | beamsClient.start()
-      | .then(() => beamsClient.addDeviceInterest('hello'))
-      | .then(() => console.log('Successfully registered and subscribed!'))
-      | .catch(console.error);
 

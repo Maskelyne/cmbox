@@ -305,6 +305,18 @@
     .button {
       margin: 0 auto;
     }
+
+    @media (max-width: $tablet-width) {
+      form {
+        max-width: 210px;
+      }
+    }
+
+    @media (max-width: $mobile-width) {
+      form {
+        max-width: 100%;
+      }
+    }
   }
 
   label {
