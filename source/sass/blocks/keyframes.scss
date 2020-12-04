@@ -574,3 +574,13 @@
     right: -75px;
   }
 }
+
+@keyframes flickers {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

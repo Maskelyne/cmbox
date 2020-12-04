@@ -5,6 +5,7 @@ $(function () {
   jQuery(function ($) {
     $("#user_phone").mask("+375 (99) 999-99-99",{autoclear: false});
     $("#user_phone2").mask("+375 (99) 999-99-99",{autoclear: false});
+    $("#user_phone-question").mask("+375 (99) 999-99-99",{autoclear: false});
   });
 
   $("#user_name").keyup(function () {
@@ -80,6 +81,13 @@ $(function () {
   });
 
   $("#user_site").keyup(function () {
+    if ($(this).val()) {
+      $(this).addClass('not-empty');
+    } else {
+      $(this).removeClass('not-empty');
+    }
+  });
+  $("#user_phone-question").keyup(function () {
     if ($(this).val()) {
       $(this).addClass('not-empty');
     } else {
