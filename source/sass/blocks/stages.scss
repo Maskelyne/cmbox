@@ -987,7 +987,7 @@
       }
 
       &:nth-child(2) {
-        margin-top: -180px;
+        margin-top: -250px;
         z-index: -1;
         animation: stage-show-elements-1;
         animation-duration: 2s;
@@ -999,12 +999,8 @@
         animation-play-state: running;
         opacity: 0;
 
-        @media (max-width: $desktop-width) {
-          margin-top: -165px;
-        }
-
         @media (max-width: $desktop-width-min) {
-          margin-top: -110px;
+          margin-top: -160px;
         }
       }
 
@@ -1638,11 +1634,24 @@
   }
 
   a {
-    font-family: $proximaNova;
+    @media (max-width: $tablet-width) {
+      margin: 0 auto;
+    }
   }
 
   strong {
     color: $dark-blue;
+  }
+}
+
+.stages__coffee {
+  @media (max-width: $tablet-width) {
+    max-width: 470px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: 235px;
   }
 }
 
@@ -1671,6 +1680,10 @@
     @media (max-width: $tablet-width) {
       font-size: 20px;
       line-height: 24px;
+    }
+
+    @media (max-width: $mobile-width) {
+      text-align: center;
     }
   }
 

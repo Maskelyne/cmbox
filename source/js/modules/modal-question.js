@@ -1,0 +1,64 @@
+'use strict';
+
+(function () {
+
+  const KEY_CODE = 27;
+
+  var overlayModal = document.querySelector('.modal');
+  var modalQuestion = document.querySelector('.modal-question');
+  var modalClose = document.querySelectorAll('.modal__btn-closed');
+
+  if (modalQuestion) {
+
+    var modalShow = function () {
+      modalQuestion.classList.add('modal-active');
+    };
+
+    setTimeout(modalShow, 3000);
+
+
+    for (var i = 0; i < modalClose.length; i++) {
+      modalClose[i].addEventListener('click', function (evt) {
+        evt.preventDefault();
+
+        modalQuestion.classList.remove('modal-active');
+        document.body.style.overflow = '';
+      });
+    }
+
+    window.addEventListener(`keydown`, function (evt) {
+
+      if (evt.keyCode === KEY_CODE) {
+        evt.preventDefault();
+
+        modalQuestion.classList.contains('modal-active');
+        modalQuestion.classList.remove('modal-active');
+        document.body.style.overflow = ``;
+
+      }
+
+    });
+
+    overlayModal.addEventListener(`click`, function (evt) {
+
+      if (evt.target === overlayModal) {
+
+        document.body.style.overflow = ``;
+
+      }
+
+    });
+
+    modalQuestion.addEventListener('click', function (evt) {
+
+      if (evt.target === modalQuestion) {
+        modalQuestion.classList.contains('modal-active');
+        modalQuestion.classList.remove('modal-active');
+        document.body.style.overflow = ``;
+      }
+
+    })
+
+  }
+
+})();

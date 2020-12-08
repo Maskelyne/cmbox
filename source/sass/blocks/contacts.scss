@@ -193,7 +193,7 @@
       box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
 
       @media (max-width: $tablet-width) {
-        border-radius: 5px;
+        border-radius: 10px;
         max-width: 40px;
       }
 
@@ -206,10 +206,6 @@
 }
 
 .contacts__info {
-  display: grid;
-  grid-template-rows: auto;
-  grid-gap: 10px 0;
-
   @media (max-width: $desktop-width-min) {
     max-width: 430px;
     width: 100%;
@@ -217,6 +213,7 @@
   }
 
   h2 {
+    margin-bottom: 10px;
     font-size: 24px;
     line-height: 24px;
     font-weight: $normal;
@@ -230,6 +227,7 @@
   }
 
   h3 {
+    margin-bottom: 10px;
     font-size: 36px;
     line-height: 36px;
     font-family: $proximaBold;
@@ -252,6 +250,7 @@
 }
 
 .contacts__form {
+  margin-top: 30px;
   padding: 40px 54px;
   display: grid;
   grid-gap: 40px 0;

@@ -24,8 +24,12 @@ a {
   color: $dark-black;
 
   &:hover {
-    font-weight: $bold;
     color: $dark-red;
+  }
+
+  &:active {
+    color: $dark-red;
+    font-weight: $bold;
   }
 }
 
@@ -126,9 +130,10 @@ main {
 
 .main {
   @media (max-width: $tablet-width) {
-    background-image: url("../img/png/bckg-main.png");
+    background-image: url("../img/svg/bckg-main.svg");
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
   }
 }
 

@@ -5,6 +5,7 @@ $(function () {
   jQuery(function ($) {
     $("#user_phone").mask("+375 (99) 999-99-99",{autoclear: false});
     $("#user_phone2").mask("+375 (99) 999-99-99",{autoclear: false});
+    $("#user_phone-question").mask("+375 (99) 999-99-99",{autoclear: false});
   });
 
   $("#user_name").keyup(function () {
@@ -86,6 +87,13 @@ $(function () {
       $(this).removeClass('not-empty');
     }
   });
+  $("#user_phone-question").keyup(function () {
+    if ($(this).val()) {
+      $(this).addClass('not-empty');
+    } else {
+      $(this).removeClass('not-empty');
+    }
+  });
 
   $('.lazyYT').lazyYT();
 
@@ -128,5 +136,15 @@ $(function () {
   var sayHi = function () {
     text.style.display = '';
   };
+
+//   document.ondragstart = test;
+// //запрет на перетаскивание
+//   document.onselectstart = test;
+// //запрет на выделение элементов страницы
+//   document.oncontextmenu = test;
+// //запрет на выведение контекстного меню
+//   function test() {
+//     return false;
+//   }
 
 });

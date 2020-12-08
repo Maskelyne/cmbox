@@ -10,11 +10,18 @@ block main
   main.gray-box
     section.page-unavailable
       .page-unavailable__wrapper.container
-        .page-unavailable__image-box
-          .page-unavailable__image
-            +img('png', '404', 'png', '390', '252', 'Элемент 1')
-          .page-unavailable__box-image
-            +img('svg', '404-box', 'svg', '705', '420', 'Элемент 2')
+        .page-unavailable__image
+          +img('404', 'image-element-1', 'svg', '700', '420', 'Элемент 1')
+          +img('404', 'image-element-5', 'svg', '245', '120', 'Элемент 2')
+          +img('404', 'image-element-2', 'svg', '60', '60', 'Элемент 3')
+          +img('404', 'image-element-3', 'svg', '60', '60', 'Элемент 4')
+          +img('404', 'image-element-2', 'svg', '60', '60', 'Элемент 5')
+          +img('404', 'image-element-3', 'svg', '60', '60', 'Элемент 6')
+          +img('404', '404-mobile', 'svg', '570', '365', 'Элемент 7')
+          .page-unavailable__image-box1
+            +img('404', 'image-element-4', 'svg', '75', '75', 'Элемент 8')
+          .page-unavailable__image-box2
+            +img('404', 'image-element-4', 'svg', '75', '75', 'Элемент 9')
         .page-unavailable__box-text
           h1 Упс… Мы не можем найти то, что Вы ищете
           p Скорее всего, это случилось по одной из следующих причин: страница переехала, страницы больше нет или Вам просто нравится изучать 404 страницы.

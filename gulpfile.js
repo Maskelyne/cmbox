@@ -20,6 +20,7 @@ var path = {
   build: {
     html: 'build/',
     js: 'build/assets/js/',
+    jsWorker: 'build',
     css: 'build/assets/css/',
     img: 'build/assets/img/',
     fonts: 'build/assets/fonts/'
@@ -30,7 +31,7 @@ var path = {
     jsAdd: 'source/js/default.js',
     vendorJs: 'source/js/vendor.js',
     css: 'source/sass/style.scss',
-    img: 'source/img/**/*.{png,jpg,svg}',
+    img: 'source/img/**/*.{png,jpg,svg,gif}',
     sprite: 'source/img/svg-sprite/*.svg',
     fonts: 'source/fonts/**/*.{woff,woff2}'
   },
