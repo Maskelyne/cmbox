@@ -305,7 +305,7 @@
     margin: 40px 40px -60px 40px;
 
     .button {
-      margin: 0 auto;
+      margin: 30px auto 0 auto;
     }
 
     @media (max-width: $tablet-width) {
@@ -330,7 +330,6 @@
   }
 
   input {
-    margin-bottom: 30px;
     width: 100%;
     padding: 0;
     border: none;
@@ -519,7 +518,8 @@
 .modal__user-phone #user_phone-error,
 .modal__user-name #user_name-error,
 .modal__user-position #user_position-error,
-.modal__user-company #user_company-error {
+.modal__user-company #user_company-error,
+.modal__user-phone #user_phone-question-error {
   border: none;
   font-size: 14px;
   line-height: 14px;

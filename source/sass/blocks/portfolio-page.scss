@@ -843,6 +843,7 @@
 
     @media (max-width: $tablet-width) {
       grid-template-columns: repeat(auto-fill, minmax(auto, 125px));
+      justify-content: center;
     }
   }
 
@@ -945,6 +946,8 @@
 
     @media (max-width: $tablet-width) {
       display: block;
+      max-width: 300px;
+      margin: 0 auto;
 
       &::after {
         width: 24px;
