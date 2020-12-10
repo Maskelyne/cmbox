@@ -117,6 +117,11 @@ main {
   z-index: 0;
 }
 
+.gray-box-2 {
+  background-color: #f0f6ff;
+  z-index: 0;
+}
+
 //.page-main {
 //  position: absolute;
 //  top: 65px;
@@ -128,14 +133,14 @@ main {
 //  }
 //}
 
-.main {
-  @media (max-width: $tablet-width) {
-    background-image: url("../img/svg/bckg-main.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-  }
-}
+//.main {
+//  @media (max-width: $tablet-width) {
+//    background-image: url("../img/svg/bckg-main.svg");
+//    background-repeat: no-repeat;
+//    background-size: cover;
+//    background-attachment: fixed;
+//  }
+//}
 
 .black {
   color: $dark-black;
@@ -183,8 +188,8 @@ main {
   z-index: -2;
   background-image: url("../img/svg/bg-main.svg");
 
-  @media (max-width: $tablet-width) {
-    display: none;
+  &--uslugi {
+    background-image: none;
   }
 }
 
