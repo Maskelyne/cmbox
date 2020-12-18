@@ -117,9 +117,12 @@ main {
   z-index: 0;
 }
 
-.gray-box-2 {
-  background-color: #f0f6ff;
-  z-index: 0;
+.overflow-hidden {
+  overflow: hidden;
+
+  @media (max-width: $desktop-width-min) {
+    overflow: auto;
+  }
 }
 
 //.page-main {

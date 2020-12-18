@@ -29,7 +29,9 @@
             </ul>
           </div>
         </div>
-        <div class="main-header__services-box"><a class="main-header__link-services main-header__link-services--closed" href="#"><span class="visually-hidden">Наши услуги</span></a>
+        <div class="main-header__services-box">
+          <!--a.main-header__link-services.main-header__link-services--closed(href="#")-->
+          <!--  span.visually-hidden Наши услуги-->
           <div class="main-header__services-nav main-header__services-nav--closed">
             <h1>Услуги</h1>
             <ul class="main-header__services-list">
@@ -43,36 +45,39 @@
             </ul>
           </div>
         </div>
-        <div class="main-header__wrap-menu-nav">
-          <button class="main-header__btn main-header__btn--closed" href="#"><span></span><span></span><span></span></button>
-          <div class="main-header__wrap-menu">
-            <ul class="main-header__list">
-              <li><a href="about-us.html">О нас</a></li>
-              <li><a href="services-analytics.html">Услуги</a></li>
-              <li><a href="stage-analysis.html">Этапы</a></li>
-              <li><a href="portfolio.html">Портфолио</a></li>
-              <li><a href="feedback.html">Отзывы</a></li>
-              <li><a href="blog.html">Блог</a></li>
-              <li><a href="contacts.html">Контакты</a></li>
-            </ul>
-            <div class="main-header__box-tablet">
-              <div class="main-header__box-info"><a href="#"><img src="assets/img/svg/icon-pin-white.svg" width="40" height="40" alt="Адрес"/><span>ул. Калиновского 77а, офис 310</span></a><a href="mailto:info@cmbox.by"><img src="assets/img/svg/icon-mail-white.svg" width="40" height="40" alt="Почта"/><span>info@cmbox.by</span></a></div>
-              <div class="main-header__box-tel"><a href="tel:375296086368">+375 (29) 608-63-68</a>
-                <ul class="social-list social-list--tablet">
-                  <li><a href="#"><span class="visually-hidden">Телеграм</span><img src="assets/img/svg/icon-telegram.svg" width="24" height="24" alt="Телеграм"/></a></li>
-                  <li><a href="#"><span class="visually-hidden">Вайбер</span><img src="assets/img/svg/icon-viber.svg" width="24" height="24" alt="Вайбер"/></a></li>
-                  <li><a href="#"><span class="visually-hidden">Ватсап</span><img src="assets/img/svg/icon-whatsapp.svg" width="24" height="24" alt="Ватсап"/></a></li>
-                </ul>
+        <div class="main-header__nav-box">
+          <div class="main-header__tel"><a class="main-header__link-phone" href="tel:+375296086368"><img src="assets/img/svg/icon-mobile.svg" width="24" height="24" alt="Телефон"/>+375 (29) 608-63-68 (Минск),</a><a href="tel:+74996086368">+7 (499) 608-63-68 (Москва)</a></div>
+          <div class="main-header__wrap-menu-nav">
+            <button class="main-header__btn main-header__btn--closed" href="#"><span></span><span></span><span></span></button>
+            <div class="main-header__wrap-menu">
+              <ul class="main-header__list">
+                <li><a href="#">О нас</a></li>
+                <li class="main-header__link-services"><a href="#">Услуги</a></li>
+                <li><a href="#">Этапы</a></li>
+                <li><a href="#">Портфолио</a></li>
+                <li><a href="#">Отзывы</a></li>
+                <li><a href="#">Блог</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+              <div class="main-header__box-tablet">
+                <div class="main-header__box-info"><a href="#"><img src="assets/img/svg/icon-pin-white.svg" width="40" height="40" alt="Адрес"/><span>ул. Калиновского 77а, офис 310</span></a><a href="mailto:info@cmbox.by"><img src="assets/img/svg/icon-mail-white.svg" width="40" height="40" alt="Почта"/><span>info@cmbox.by</span></a></div>
+                <div class="main-header__box-tel"><a href="tel:375296086368">+375 (29) 608-63-68</a>
+                  <ul class="social-list social-list--tablet">
+                    <li><a href="#"><span class="visually-hidden">Телеграм</span><img src="assets/img/svg/icon-telegram.svg" width="24" height="24" alt="Телеграм"/></a></li>
+                    <li><a href="#"><span class="visually-hidden">Вайбер</span><img src="assets/img/svg/icon-viber.svg" width="24" height="24" alt="Вайбер"/></a></li>
+                    <li><a href="#"><span class="visually-hidden">Ватсап</span><img src="assets/img/svg/icon-whatsapp.svg" width="24" height="24" alt="Ватсап"/></a></li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="main-header__box"><a class="main-header__link-phone" href="tel:375296086368"><img src="assets/img/svg/icon-mobile.svg" width="9" height="18" alt="Телефон"/><span>+375 (29) 608-63-68</span></a>
-          <ul class="social-list">
-            <li><a href="#"><span class="visually-hidden">Телеграм</span><img src="assets/img/svg/icon-telegram.svg" width="24" height="24" alt="Телеграм"/></a></li>
-            <li><a href="#"><span class="visually-hidden">Вайбер</span><img src="assets/img/svg/icon-viber.svg" width="24" height="24" alt="Вайбер"/></a></li>
-            <li><a href="#"><span class="visually-hidden">Ватсап</span><img src="assets/img/svg/icon-whatsapp.svg" width="24" height="24" alt="Ватсап"/></a></li>
-          </ul>
+          <div class="main-header__box"><a class="main-header__box-phone" href="#"><img src="assets/img/svg/icon-mobile.svg" width="24" height="24" alt="Заказать звонок"/><span>Заказать звонок</span></a>
+            <ul class="social-list">
+              <li><a href="#"><span class="visually-hidden">Телеграм</span><img src="assets/img/svg/icon-telegram.svg" width="24" height="24" alt="Телеграм"/></a></li>
+              <li><a href="#"><span class="visually-hidden">Вайбер</span><img src="assets/img/svg/icon-viber.svg" width="24" height="24" alt="Вайбер"/></a></li>
+              <li><a href="#"><span class="visually-hidden">Ватсап</span><img src="assets/img/svg/icon-whatsapp.svg" width="24" height="24" alt="Ватсап"/></a></li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
@@ -113,12 +118,11 @@
             </div>
           </div>
           <div class="portfolio-page__box black">
+            <div class="portfolio-page__order-image"><img src="assets/img/svg/icon-order.svg" width="267" height="85" alt="В оформлении"/><span>В оформлении</span>
+            </div>
             <h1>Exim.by</h1>
             <p>ЗАО «Эксимэлектро» более 17 лет поставщики качественной электротехнической продукции в РБ</p>
-            <div class="portfolio-page__scroll">
-              <p>Скролл для дальнейшей информации</p>
-              <div class="portfolio-page__scroll-mouse"></div>
-            </div>
+            <p>Портфолио по данному проекту на стадии оформления. Зайдите позже.</p>
           </div>
         </div>
         <div class="portfolio-page__company gray-box">

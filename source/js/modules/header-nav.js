@@ -2,7 +2,7 @@
 
 (function () {
   var menuBtn = document.querySelector('.main-header__btn');
-  var wrapMenu = document.querySelector(".main-header__wrap-menu");
+  var wrapMenu = document.querySelector('.main-header__wrap-menu');
   var stageMenuBtn = document.querySelector('.main-header__link-stage');
   var stageMenu = document.querySelector('.main-header__stage-nav');
   var servicesMenuBtn = document.querySelector('.main-header__link-services');

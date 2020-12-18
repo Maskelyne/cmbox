@@ -127,12 +127,12 @@
   position: relative;
 
   &::before {
-    width: 10px;
-    height: 18px;
+    width: 25px;
+    height: 25px;
     position: absolute;
     content: "";
-    top: 3px;
-    left: 0;
+    top: 0;
+    left: -6px;
     background-image: url("../img/svg/icon-mobile.svg");
     background-repeat: no-repeat;
   }
