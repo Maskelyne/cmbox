@@ -7,6 +7,7 @@
   var overlayModal = document.querySelector('.modal');
   var modalQuestion = document.querySelector('.modal-question');
   var modalClose = document.querySelectorAll('.modal__btn-closed');
+  var linkPhone = document.querySelectorAll('.link-modal-question');
 
   if (modalQuestion) {
 
@@ -14,8 +15,9 @@
       modalQuestion.classList.add('modal-active');
     };
 
-    setTimeout(modalShow, 3000);
-
+    linkPhone.forEach(function (item, i) {
+      linkPhone[i].addEventListener('click', modalShow);
+    })
 
     for (var i = 0; i < modalClose.length; i++) {
       modalClose[i].addEventListener('click', function (evt) {

@@ -3,40 +3,7 @@
 (function () {
 
   var mainSlider = document.querySelector('.intro__box-swiper-container');
-  // var clientsSlider = document.querySelector('.clients__swiper-container');
   var servicesSlider = document.querySelector('.services__swiper-container');
-
-  // var clientsSliderDesk = function (el) {
-  //   return new Swiper(el, {
-  //     loop: true,
-  //     speed: 1000,
-  //     autoplay: {
-  //       delay: 2500,
-  //     },
-  //     navigation: {
-  //       nextEl: '.swiper-button-next',
-  //       prevEl: '.swiper-button-prev',
-  //     },
-  //     breakpoints: {
-  //       320: {
-  //         slidesPerView: 1,
-  //       },
-  //       768: {
-  //         slidesPerView: 2,
-  //       },
-  //       950: {
-  //         slidesPerView: 3,
-  //       },
-  //       1200: {
-  //         slidesPerView: 4,
-  //       }
-  //     }
-  //   });
-  // };
-  //
-  // if (clientsSlider) {
-  //   clientsSliderDesk(clientsSlider);
-  // }
 
   var servicesSliderDesk = function (el) {
     return new Swiper(el, {

@@ -1,7 +1,7 @@
 .social-list {
   @include reset-list;
   display: grid;
-  grid-template-columns: repeat(3, 25%);
+  grid-template-columns: repeat(3, 24px);
   justify-content: center;
   grid-column-gap: 10px;
 

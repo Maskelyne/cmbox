@@ -29,7 +29,9 @@
             </ul>
           </div>
         </div>
-        <div class="main-header__services-box"><a class="main-header__link-services main-header__link-services--closed" href="#"><span class="visually-hidden">Наши услуги</span></a>
+        <div class="main-header__services-box">
+          <!--a.main-header__link-services.main-header__link-services--closed(href="#")-->
+          <!--  span.visually-hidden Наши услуги-->
           <div class="main-header__services-nav main-header__services-nav--closed">
             <h1>Услуги</h1>
             <ul class="main-header__services-list">
@@ -43,41 +45,245 @@
             </ul>
           </div>
         </div>
-        <div class="main-header__wrap-menu-nav">
-          <button class="main-header__btn main-header__btn--closed" href="#"><span></span><span></span><span></span></button>
-          <div class="main-header__wrap-menu">
-            <ul class="main-header__list">
-              <li><a href="about-us.html">О нас</a></li>
-              <li><a href="services-analytics.html">Услуги</a></li>
-              <li><a href="stage-analysis.html">Этапы</a></li>
-              <li><a href="portfolio.html">Портфолио</a></li>
-              <li><a href="feedback.html">Отзывы</a></li>
-              <li><a href="blog.html">Блог</a></li>
-              <li><a href="contacts.html">Контакты</a></li>
-            </ul>
-            <div class="main-header__box-tablet">
-              <div class="main-header__box-info"><a href="#"><img src="assets/img/svg/icon-pin-white.svg" width="40" height="40" alt="Адрес"/><span>ул. Калиновского 77а, офис 310</span></a><a href="mailto:info@cmbox.by"><img src="assets/img/svg/icon-mail-white.svg" width="40" height="40" alt="Почта"/><span>info@cmbox.by</span></a></div>
-              <div class="main-header__box-tel"><a href="tel:375296086368">+375 (29) 608-63-68</a>
-                <ul class="social-list social-list--tablet">
-                  <li><a href="#"><span class="visually-hidden">Телеграм</span><img src="assets/img/svg/icon-telegram.svg" width="24" height="24" alt="Телеграм"/></a></li>
-                  <li><a href="#"><span class="visually-hidden">Вайбер</span><img src="assets/img/svg/icon-viber.svg" width="24" height="24" alt="Вайбер"/></a></li>
-                  <li><a href="#"><span class="visually-hidden">Ватсап</span><img src="assets/img/svg/icon-whatsapp.svg" width="24" height="24" alt="Ватсап"/></a></li>
-                </ul>
+        <div class="main-header__nav-box">
+          <div class="main-header__tel"><a class="main-header__link-phone" href="tel:+375296086368"><img src="assets/img/svg/icon-mobile.svg" width="24" height="24" alt="Телефон"/>+375 (29) 608-63-68 (Минск),</a><a href="tel:+74996086368">+7 (499) 608-63-68 (Москва)</a></div>
+          <div class="main-header__wrap-menu-nav">
+            <button class="main-header__btn main-header__btn--closed" href="#"><span></span><span></span><span></span></button>
+            <div class="main-header__wrap-menu">
+              <ul class="main-header__list">
+                <li><a href="#">О нас</a></li>
+                <li class="main-header__link-services"><a href="#">Услуги</a></li>
+                <li><a href="#">Этапы</a></li>
+                <li><a href="#">Портфолио</a></li>
+                <li><a href="#">Отзывы</a></li>
+                <li><a href="#">Блог</a></li>
+                <li><a href="#">Контакты</a></li>
+              </ul>
+              <div class="main-header__box-tablet">
+                <div class="main-header__box-info"><a href="tel:+375296086368">+375 (29) 608 63 68 (Минск)</a><a href="tel:+74996086368">+7 (499) 208 63 68 (Москва)</a><a href="#"><span class="link-modal-question">Заказать звонок</span></a>
+                  <ul class="social-list social-list--tablet">
+                    <li><a href="#"><span class="visually-hidden">Телеграм</span><img src="assets/img/svg/icon-telegram.svg" width="24" height="24" alt="Телеграм"/></a></li>
+                    <li><a href="#"><span class="visually-hidden">Вайбер</span><img src="assets/img/svg/icon-viber.svg" width="24" height="24" alt="Вайбер"/></a></li>
+                    <li><a href="#"><span class="visually-hidden">Ватсап</span><img src="assets/img/svg/icon-whatsapp.svg" width="24" height="24" alt="Ватсап"/></a></li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="main-header__box"><a class="main-header__link-phone" href="tel:375296086368"><img src="assets/img/svg/icon-mobile.svg" width="9" height="18" alt="Телефон"/><span>+375 (29) 608-63-68</span></a>
-          <ul class="social-list">
-            <li><a href="#"><span class="visually-hidden">Телеграм</span><img src="assets/img/svg/icon-telegram.svg" width="24" height="24" alt="Телеграм"/></a></li>
-            <li><a href="#"><span class="visually-hidden">Вайбер</span><img src="assets/img/svg/icon-viber.svg" width="24" height="24" alt="Вайбер"/></a></li>
-            <li><a href="#"><span class="visually-hidden">Ватсап</span><img src="assets/img/svg/icon-whatsapp.svg" width="24" height="24" alt="Ватсап"/></a></li>
-          </ul>
+          <div class="main-header__box"><a class="main-header__box-phone" href="#"><img src="assets/img/svg/icon-mobile.svg" width="24" height="24" alt="Заказать звонок"/><span class="link-modal-question">Заказать звонок</span></a>
+            <ul class="social-list">
+              <li><a href="#"><span class="visually-hidden">Телеграм</span><img src="assets/img/svg/icon-telegram.svg" width="24" height="24" alt="Телеграм"/></a></li>
+              <li><a href="#"><span class="visually-hidden">Вайбер</span><img src="assets/img/svg/icon-viber.svg" width="24" height="24" alt="Вайбер"/></a></li>
+              <li><a href="#"><span class="visually-hidden">Ватсап</span><img src="assets/img/svg/icon-whatsapp.svg" width="24" height="24" alt="Ватсап"/></a></li>
+            </ul>
+          </div>
         </div>
       </nav>
     </header>
     <main class="main">
-      <div class="page-main" id="bg"></div>
+      <div class="snow-box">
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+        <div class="snow"></div>
+      </div>
+      <!--div#bg.page-main-->
       <section class="intro">
         <div class="intro__wrapper container">
           <div class="intro__box">
@@ -304,6 +510,23 @@
           <p>В ближайшее время мы<br>с вами свяжемся.</p><a class="button" href="#"><span>На главную</span></a>
         </div>
         <div class="modal__image"><img src="assets/img/svg/modals-check.svg" width="190" height="200" alt="Элемент 2"/><img src="assets/img/svg/modals-box.svg" width="460" height="200" alt="Элемент 1"/>
+        </div><a class="modal__btn-closed" href="#"><span class="visually-hidden">Закрыть модальное окно</span></a>
+      </div>
+    </section>
+    <section class="modal modal-question">
+      <div class="modal__wrapper">
+        <div class="modal__box">
+          <h3>У вас остались вопросы?</h3>
+          <p>Мы с радостью предоставим необходимую для вас информацию.</p>
+          <form id="form-question" action="#" method="get">
+            <div class="modal__user-phone">
+              <input id="user_phone-question" type="tel" name="phone" required>
+              <label for="user_phone-question">Телефон</label>
+            </div>
+            <button class="button" type="submit"><span>Жду звонка</span></button>
+          </form>
+        </div>
+        <div class="modal__image"><img src="assets/img/svg/icon-question.svg" width="200" height="200" alt="Элемент 2"/><img src="assets/img/svg/modals-box.svg" width="460" height="200" alt="Элемент 1"/>
         </div><a class="modal__btn-closed" href="#"><span class="visually-hidden">Закрыть модальное окно</span></a>
       </div>
     </section>

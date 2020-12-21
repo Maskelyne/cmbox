@@ -115,6 +115,13 @@ $(function () {
       errorElement: 'span',
     });
 
+    $('#form-question').validate({
+      messages: {
+        phone: 'Введите ваш номер телефона',
+      },
+      errorElement: 'span',
+    });
+
     $('form').validate({
       messages: {
         name: 'Введите ваше имя',
@@ -129,22 +136,22 @@ $(function () {
   var text = document.querySelector('.clip-text');
   clipboard.on('success', function(e) {
     text.style.display = 'block';
-    setTimeout(sayHi, 5000);
+    setTimeout(clipText, 5000);
     e.clearSelection();
   });
 
-  var sayHi = function () {
+  var clipText = function () {
     text.style.display = '';
   };
 
-//   document.ondragstart = test;
-// //запрет на перетаскивание
-//   document.onselectstart = test;
-// //запрет на выделение элементов страницы
-//   document.oncontextmenu = test;
-// //запрет на выведение контекстного меню
-//   function test() {
-//     return false;
-//   }
+  // document.ondragstart = test;
+  // //запрет на перетаскивание
+  // document.onselectstart = test;
+  // //запрет на выделение элементов страницы
+  // document.oncontextmenu = test;
+  // //запрет на выведение контекстного меню
+  // function test() {
+  //   return false;
+  // }
 
 });

@@ -34,6 +34,7 @@
     10px 10px 20px rgba(68, 69, 70, 0.1),
     inset 4px 4px 15px rgba(255, 255, 255, 0.4);
   transition: all 0.2s linear;
+  background-color: #f0f6ff;
 
   @media (max-width: $desktop-width-min) {
     min-height: 220px;
