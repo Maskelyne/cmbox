@@ -513,7 +513,8 @@
   }
 }
 
-.main-header__link-stage {
+.main-header__link-stage,
+.main-header__services {
   display: none;
 
   @media (max-width: $tablet-width) {

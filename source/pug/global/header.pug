@@ -152,8 +152,6 @@ mixin header()
               li
                 a(href= item.link)= item.text
       .main-header__services-box
-        //a.main-header__link-services.main-header__link-services--closed(href="#")
-        //  span.visually-hidden Наши услуги
         .main-header__services-nav.main-header__services-nav--closed
           h1 Услуги
           ul.main-header__services-list
@@ -179,7 +177,7 @@ mixin header()
                 a(href="#") О нас
               li.main-header__link-services
                 a(href="#") Услуги
-              li
+              li.main-header__stage-link
                 a(href="#") Этапы
               li
                 a(href="#") Портфолио
