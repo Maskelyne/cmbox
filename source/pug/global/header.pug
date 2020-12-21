@@ -191,17 +191,13 @@ mixin header()
                 a(href="#") Контакты
             .main-header__box-tablet
               .main-header__box-info
+                a(href="tel:+375296086368") +375 (29) 608 63 68 (Минск)
+                a(href="tel:+74996086368") +7 (499) 208 63 68 (Москва)
                 a(href="#")
-                  +img('svg', 'icon-pin-white', 'svg', '40', '40', 'Адрес')
-                  span ул. Калиновского 77а, офис 310
-                a(href="mailto:info@cmbox.by")
-                  +img('svg', 'icon-mail-white', 'svg', '40', '40', 'Почта')
-                  span info@cmbox.by
-              .main-header__box-tel
-                a(href="tel:375296086368") +375 (29) 608-63-68
+                  span.link-modal-question Заказать звонок
                 +social-list.social-list--tablet
         .main-header__box
           a.main-header__box-phone(href="#")
             +img('svg', 'icon-mobile', 'svg', '24', '24', 'Заказать звонок')
-            span Заказать звонок
+            span.link-modal-question Заказать звонок
           +social-list

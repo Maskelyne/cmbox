@@ -134,20 +134,3 @@ block footer
         +img('svg', 'modals-box', 'svg', '460', '200', 'Элемент 1')
       a.modal__btn-closed(href="#")
         span.visually-hidden Закрыть модальное окно
-
-  section.modal.modal-question
-    .modal__wrapper
-      .modal__box
-        h3 У вас остались вопросы?
-        p Мы с радостью предоставим необходимую для вас информацию.
-        form(id="form-question" action="#" method="get")
-          .modal__user-phone
-            input(id="user_phone-question" type="tel" name="phone" required)
-            label(for="user_phone-question") Телефон
-          button(type="submit").button
-            span Жду звонка
-      .modal__image
-        +img('svg', 'icon-question', 'svg', '200', '200', 'Элемент 2')
-        +img('svg', 'modals-box', 'svg', '460', '200', 'Элемент 1')
-      a.modal__btn-closed(href="#")
-        span.visually-hidden Закрыть модальное окно
