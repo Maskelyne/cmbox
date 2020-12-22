@@ -1,5 +1,6 @@
-mixin picture(path, imageDesk, imageTab, format, width, height, altText, mediaImg)
+mixin picture(path, imageDesk, imageTab, imageMobile, format, width, height, altText, mediaTab, mediaMobile)
   picture
-    source(media= "(max-width: " + mediaImg + "px)", srcset= "assets/img/" + path + "/" + imageTab + "." + format)
+    source(media= "(max-width: " + mediaMobile + "px)", srcset= "assets/img/" + path + "/" + imageMobile + "." + format)
+    source(media= "(max-width: " + mediaTab + "px)", srcset= "assets/img/" + path + "/" + imageTab + "." + format)
     img(src="assets/img/" + path + "/" + imageDesk + '.' + format, width= width, height= height, alt= altText)
 

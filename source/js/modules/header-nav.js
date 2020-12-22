@@ -12,7 +12,6 @@
   var stageWrapMenuBtn = document.querySelector('.main-header__stage-link');
   var mainPhone = document.querySelector('.main-header__box-phone');
   var mainBoxPhone = document.querySelector('.main-header__tel');
-  var modalQuestion = document.querySelector('.link-modal-question');
 
   if (menuBtn) {
 

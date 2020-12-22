@@ -401,6 +401,19 @@
   }
 }
 
+.modal-services-order {
+  display: none;
+
+  .modal__wrapper {
+    max-width: 390px;
+    grid-template-columns: 1fr;
+  }
+
+  .contacts__form {
+    margin-top: 0;
+  }
+}
+
 .modal-feedback,
 .modal-analysis {
   display: none;
@@ -492,6 +505,7 @@
     }
   }
 }
+
 
 .modal__user-name,
 .modal__user-email,

@@ -212,7 +212,7 @@ block main
             p Существует больше 500 факторов, которые влияют на органическую выдачу. При настройке SEO достаточно учесть основные из таких факторов, чтобы эффективно конкурировать в вашей нише бизнеса.
       .services__price
         .services__image-seo
-          +picture('png', 'image-seo', 'image-seo-tablet', 'png', '1050', '170', 'Реклама', '1023')
+          +picture('png', 'image-seo', 'image-seo-tablet', 'image-seo-mobile', 'png', '1050', '170', 'Реклама', '1023', '767')
         h3 Тарифы для Беларуси, России и СНГ
         ul
           li
@@ -244,7 +244,7 @@ block main
                   strong  до 1000
                   |  символов в месяц
                 p Развернутый отчет
-              a.button(href="#")
+              a.button.services-modal-js(href="#")
                 span Заказать
           li
             article
@@ -275,7 +275,7 @@ block main
                   strong  до 1000
                   |  символов в месяц
                 p Развернутый отчет
-                a.button(href="#")
+                a.button.services-modal-js(href="#")
                   span Заказать
           li
             article
@@ -306,7 +306,7 @@ block main
                   strong  до 1000
                   |  символов в месяц
                 p Развернутый отчет
-                a.button(href="#")
+                a.button.services-modal-js(href="#")
                   span Заказать
           li
             article
@@ -337,7 +337,7 @@ block main
                   strong  до 1000
                   |  символов в месяц
                 p Развернутый отчет
-                a.button(href="#")
+                a.button.services-modal-js(href="#")
                   span Заказать
 
         .services__price-text2
@@ -347,11 +347,112 @@ block main
         h3 Кейсы по продвижению сайтов
         .services-keys__box
           article
-            +img('jpg', 'image-1', 'jpg', '300', '430', 'График')
+            .services-keys__text
+              strong Сайт:
+                a(href="#")  domlaminata.by
+              p
+                strong Тематика проекта:
+                |  Продажа ламината
+              p
+                strong Регион продаж:
+                |  Беларусь
+              p
+                strong Результат по трафику:
+                |  Количество переходов из поисковых систем увеличилось с 60 до 300 человек в неделю
+            .services-keys__image
+              +img('png', 'image-1', 'png', '310', '150', 'График')
+            table
+              tr
+                th Запрос
+                td
+                  +img('png', 'icon-google', 'png', '50', '18', 'Google')
+                td
+                  +img('png', 'icon-yandex', 'png', '50', '18', 'Yandex')
+              tr
+                td Ламинат выезд с образцами
+                td 1
+                td 1
+              tr
+                td Магазин ламината
+                td 2
+                td 2
+              tr
+                td Ламинат оптом
+                td 8
+                td 5
+              tr
+                td Распродажа ламината
+                td 8
+                td 7
           article
-            +img('jpg', 'image-1', 'jpg', '300', '430', 'График')
+            .services-keys__text
+              strong Сайт:
+                a(href="#")  exim.by
+              p
+                strong Тематика проекта:
+                |  Продажа инструментов
+              p
+                strong Регион продаж:
+                |  Беларусь
+              p
+                strong Результат по трафику:
+                |  Количество переходов из поисковых систем увеличилось с 100 до 1000 человек в неделю
+            .services-keys__image
+              +img('png', 'image-2', 'png', '310', '150', 'График')
+            table
+              tr
+                th Запрос
+                td
+                  +img('png', 'icon-google', 'png', '50', '18', 'Google')
+                td
+                  +img('png', 'icon-yandex', 'png', '50', '18', 'Yandex')
+              tr
+                td Cimco Минск
+                td 1
+                td 1
+              tr
+                td Торцевой фиксатор
+                td 10
+                td 2
+              tr
+                td Кабель для зарядки электромобиля
+                td 10
+                td 3
+              tr
+                td Бирки маркировочные
+                td 10
+                td 4
           article
-            +img('jpg', 'image-1', 'jpg', '300', '430', 'График')
+            .services-keys__text
+              strong Сайт:
+                a(href="#")  grossprof.by
+              p
+                strong Тематика проекта:
+                |  Услуги бухгалтера и налоговых консультантов
+              p
+                strong Регион продвижения:
+                |  Минск
+            .services-keys__image
+              +img('png', 'image-3', 'png', '310', '150', 'График')
+            table
+              tr
+                th Запрос
+                td
+                  +img('png', 'icon-google', 'png', '50', '18', 'Google')
+                td
+                  +img('png', 'icon-yandex', 'png', '50', '18', 'Yandex')
+              tr
+                td Сопровождение проверок контролирующих органов
+                td 8
+                td 1
+              tr
+                td Консультация по налогам для физ лиц
+                td 10
+                td 6
+              tr
+                td Консультация по налогам для физ лиц
+                td 8
+                td 9
       .services__info
         article
           h3 Необходимо заказать SEO у нас, если:
@@ -444,3 +545,25 @@ block main
 
 block footer
   +footer
+
+  section.contacts.modal.modal-services-order
+    .modal__wrapper
+      .contacts__form
+        p Как с Вами связаться?
+        form(id="form-services-order" action="#" method="get")
+          .modal__user-name
+            input(id="user_name" type="text" name="user_name" required)
+            label(for="user_name") Имя
+          .modal__user-phone
+            input(id="user_phone" type="tel" name="user_phone" required)
+            label(for="user_phone") Телефон
+          .modal__user-email
+            input(id="user_email" type="tel" name="user_email")
+            label(for="user_email") Email
+          .modal__user-comment
+            textarea(id="user_comment" name="user_comment")
+            label(for="user_comment") Комментарий
+          button.button(type="submit")
+            span Отправить
+      a.modal__btn-closed(href="#")
+        span.visually-hidden Закрыть модальное окно

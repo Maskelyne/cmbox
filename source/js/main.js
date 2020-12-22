@@ -18,6 +18,7 @@
 //= modules/modal-analysis.js
 //= modules/modal-portfolio-order.js
 //= modules/modal-question.js
+//= modules/modal-services-order.js
 //= modules/forms.js
 //= modules/link-hidden.js
 //= modules/feedback-tabs.js

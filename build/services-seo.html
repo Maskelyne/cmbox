@@ -114,6 +114,7 @@
         <div class="services__price">
           <div class="services__image-seo">
             <picture>
+              <source media="(max-width: 767px)" srcset="assets/img/png/image-seo-mobile.png"/>
               <source media="(max-width: 1023px)" srcset="assets/img/png/image-seo-tablet.png"/><img src="assets/img/png/image-seo.png" width="1050" height="170" alt="Реклама"/>
             </picture>
           </div>
@@ -134,7 +135,7 @@
                   <p>Дизайнер<strong> до 1 часа</strong> в месяц</p>
                   <p>Копирайтер<strong> до 1000</strong> символов в месяц</p>
                   <p>Развернутый отчет</p>
-                </div><a class="button" href="#"><span>Заказать</span></a>
+                </div><a class="button services-modal-js" href="#"><span>Заказать</span></a>
               </article>
             </li>
             <li>
@@ -151,7 +152,7 @@
                   <p>Маркетолог<strong> до 1 часа</strong> в месяц</p>
                   <p>Дизайнер<strong> до 1 часа</strong> в месяц</p>
                   <p>Копирайтер<strong> до 1000</strong> символов в месяц</p>
-                  <p>Развернутый отчет</p><a class="button" href="#"><span>Заказать</span></a>
+                  <p>Развернутый отчет</p><a class="button services-modal-js" href="#"><span>Заказать</span></a>
                 </div>
               </article>
             </li>
@@ -169,7 +170,7 @@
                   <p>Маркетолог<strong> до 1 часа</strong> в месяц</p>
                   <p>Дизайнер<strong> до 1 часа</strong> в месяц</p>
                   <p>Копирайтер<strong> до 1000</strong> символов в месяц</p>
-                  <p>Развернутый отчет</p><a class="button" href="#"><span>Заказать</span></a>
+                  <p>Развернутый отчет</p><a class="button services-modal-js" href="#"><span>Заказать</span></a>
                 </div>
               </article>
             </li>
@@ -187,7 +188,7 @@
                   <p>Маркетолог<strong> до 1 часа</strong> в месяц</p>
                   <p>Дизайнер<strong> до 1 часа</strong> в месяц</p>
                   <p>Копирайтер<strong> до 1000</strong> символов в месяц</p>
-                  <p>Развернутый отчет</p><a class="button" href="#"><span>Заказать</span></a>
+                  <p>Развернутый отчет</p><a class="button services-modal-js" href="#"><span>Заказать</span></a>
                 </div>
               </article>
             </li>
@@ -199,11 +200,113 @@
         <div class="services-keys">
           <h3>Кейсы по продвижению сайтов</h3>
           <div class="services-keys__box">
-            <article><img src="assets/img/jpg/image-1.jpg" width="300" height="430" alt="График"/>
+            <article>
+              <div class="services-keys__text"><strong>Сайт:<a href="#"> domlaminata.by</a></strong>
+                <p><strong>Тематика проекта:</strong> Продажа ламината</p>
+                <p><strong>Регион продаж:</strong> Беларусь</p>
+                <p><strong>Результат по трафику:</strong> Количество переходов из поисковых систем увеличилось с 60 до 300 человек в неделю</p>
+              </div>
+              <div class="services-keys__image"><img src="assets/img/png/image-1.png" width="310" height="150" alt="График"/>
+              </div>
+              <table>
+                <tr>
+                  <th>Запрос</th>
+                  <td><img src="assets/img/png/icon-google.png" width="50" height="18" alt="Google"/>
+                  </td>
+                  <td><img src="assets/img/png/icon-yandex.png" width="50" height="18" alt="Yandex"/>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Ламинат выезд с образцами</td>
+                  <td>1</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>Магазин ламината</td>
+                  <td>2</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>Ламинат оптом</td>
+                  <td>8</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <td>Распродажа ламината</td>
+                  <td>8</td>
+                  <td>7</td>
+                </tr>
+              </table>
             </article>
-            <article><img src="assets/img/jpg/image-1.jpg" width="300" height="430" alt="График"/>
+            <article>
+              <div class="services-keys__text"><strong>Сайт:<a href="#"> exim.by</a></strong>
+                <p><strong>Тематика проекта:</strong> Продажа инструментов</p>
+                <p><strong>Регион продаж:</strong> Беларусь</p>
+                <p><strong>Результат по трафику:</strong> Количество переходов из поисковых систем увеличилось с 100 до 1000 человек в неделю</p>
+              </div>
+              <div class="services-keys__image"><img src="assets/img/png/image-2.png" width="310" height="150" alt="График"/>
+              </div>
+              <table>
+                <tr>
+                  <th>Запрос</th>
+                  <td><img src="assets/img/png/icon-google.png" width="50" height="18" alt="Google"/>
+                  </td>
+                  <td><img src="assets/img/png/icon-yandex.png" width="50" height="18" alt="Yandex"/>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Cimco Минск</td>
+                  <td>1</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>Торцевой фиксатор</td>
+                  <td>10</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>Кабель для зарядки электромобиля</td>
+                  <td>10</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>Бирки маркировочные</td>
+                  <td>10</td>
+                  <td>4</td>
+                </tr>
+              </table>
             </article>
-            <article><img src="assets/img/jpg/image-1.jpg" width="300" height="430" alt="График"/>
+            <article>
+              <div class="services-keys__text"><strong>Сайт:<a href="#"> grossprof.by</a></strong>
+                <p><strong>Тематика проекта:</strong> Услуги бухгалтера и налоговых консультантов</p>
+                <p><strong>Регион продвижения:</strong> Минск</p>
+              </div>
+              <div class="services-keys__image"><img src="assets/img/png/image-3.png" width="310" height="150" alt="График"/>
+              </div>
+              <table>
+                <tr>
+                  <th>Запрос</th>
+                  <td><img src="assets/img/png/icon-google.png" width="50" height="18" alt="Google"/>
+                  </td>
+                  <td><img src="assets/img/png/icon-yandex.png" width="50" height="18" alt="Yandex"/>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Сопровождение проверок контролирующих органов</td>
+                  <td>8</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>Консультация по налогам для физ лиц</td>
+                  <td>10</td>
+                  <td>6</td>
+                </tr>
+                <tr>
+                  <td>Консультация по налогам для физ лиц</td>
+                  <td>8</td>
+                  <td>9</td>
+                </tr>
+              </table>
             </article>
           </div>
         </div>
@@ -335,6 +438,32 @@
         </div>
       </div>
     </footer>
+    <section class="contacts modal modal-services-order">
+      <div class="modal__wrapper">
+        <div class="contacts__form">
+          <p>Как с Вами связаться?</p>
+          <form id="form-services-order" action="#" method="get">
+            <div class="modal__user-name">
+              <input id="user_name" type="text" name="user_name" required>
+              <label for="user_name">Имя</label>
+            </div>
+            <div class="modal__user-phone">
+              <input id="user_phone" type="tel" name="user_phone" required>
+              <label for="user_phone">Телефон</label>
+            </div>
+            <div class="modal__user-email">
+              <input id="user_email" type="tel" name="user_email">
+              <label for="user_email">Email</label>
+            </div>
+            <div class="modal__user-comment">
+              <textarea id="user_comment" name="user_comment"></textarea>
+              <label for="user_comment">Комментарий</label>
+            </div>
+            <button class="button" type="submit"><span>Отправить</span></button>
+          </form>
+        </div><a class="modal__btn-closed" href="#"><span class="visually-hidden">Закрыть модальное окно</span></a>
+      </div>
+    </section>
     <script src="assets/js/vendor.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/default.js"></script>
