@@ -12,6 +12,7 @@
   var stageWrapMenuBtn = document.querySelector('.main-header__stage-link');
   var mainPhone = document.querySelector('.main-header__box-phone');
   var mainBoxPhone = document.querySelector('.main-header__tel');
+  var modalQuestion = document.querySelector('.link-modal-question');
 
   if (menuBtn) {
 
@@ -91,26 +92,27 @@
 
     if (servicesMenuBtn && window.innerWidth <= 767) {
 
-    servicesMenuBtn.addEventListener('click', function (evt) {
-      evt.preventDefault();
+      servicesMenuBtn.addEventListener('click', function (evt) {
+        evt.preventDefault();
 
-      if (servicesMenu.classList.contains('main-header__services-nav--closed')) {
-        servicesMenu.classList.remove('main-header__services-nav--closed');
-        servicesMenu.classList.add('main-header__services-nav--opened');
-        servicesMenuBtn.classList.remove('main-header__link-services--closed');
-        servicesMenuBtn.classList.add('main-header__link-services--opened');
-        wrapMenu.classList.remove('main-header__wrap-menu--active');
-        stageMenu.classList.remove('main-header__stage-nav--opened');
-        stageMenu.classList.add('main-header__stage-nav--closed');
-        document.body.style.overflow = 'hidden';
-      } else {
-        servicesMenu.classList.add('main-header__services-nav--closed');
-        servicesMenu.classList.remove('main-header__services-nav--opened');
-        servicesMenuBtn.classList.add('main-header__link-services--closed');
-        servicesMenuBtn.classList.remove('main-header__link-services--opened');
-        document.body.style.overflow = '';
-      }
-    });
+        if (servicesMenu.classList.contains('main-header__services-nav--closed')) {
+          servicesMenu.classList.remove('main-header__services-nav--closed');
+          servicesMenu.classList.add('main-header__services-nav--opened');
+          servicesMenuBtn.classList.remove('main-header__link-services--closed');
+          servicesMenuBtn.classList.add('main-header__link-services--opened');
+          wrapMenu.classList.remove('main-header__wrap-menu--active');
+          stageMenu.classList.remove('main-header__stage-nav--opened');
+          stageMenu.classList.add('main-header__stage-nav--closed');
+          document.body.style.overflow = 'hidden';
+        } else {
+          servicesMenu.classList.add('main-header__services-nav--closed');
+          servicesMenu.classList.remove('main-header__services-nav--opened');
+          servicesMenuBtn.classList.add('main-header__link-services--closed');
+          servicesMenuBtn.classList.remove('main-header__link-services--opened');
+          document.body.style.overflow = '';
+        }
+
+      });
 
     }
 

@@ -34,11 +34,6 @@
     color: $dark-blue;
 
     @media (max-width: $desktop-width-min) {
-      font-size: 16px;
-      color: $dark-blue;
-    }
-
-    @media (max-width: $desktop-width-min) {
       font-size: 18px;
       line-height: 18px;
     }
@@ -133,6 +128,210 @@
 
   @media (max-width: $desktop-width) {
     margin-bottom: -20%;
+  }
+}
+
+.services__image-seo {
+  margin-bottom: 60px;
+
+  img {
+    max-width: 1000px;
+    display: block;
+    margin: 0 auto;
+
+    @media (max-width: $desktop-width-min) {
+      max-width: 500px;
+    }
+  }
+}
+
+.services__price {
+  max-width: 1140px;
+  margin: 60px 5% 0 20%;
+
+  @media (max-width: $desktop-width-min) {
+    margin: 60px 3% 0 28%;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin: 60px auto;
+    padding: 0 15px;
+  }
+
+  h3 {
+    text-align: center;
+    color: $dark-blue;
+  }
+
+  ul {
+    @include reset-list;
+    margin-top: 30px;
+    display: grid;
+    grid-gap: 0 2.5%;
+    grid-template-columns: repeat(4, 23%);
+
+    @media (max-width: $desktop-width) {
+      justify-content: center;
+      grid-template-columns: repeat(2, 350px);
+      grid-gap: 30px 30px;
+    }
+
+    @media (max-width: $desktop-width-min) {
+      grid-template-columns: repeat(2, auto);
+    }
+
+    @media (max-width: $tablet-width) {
+      grid-template-columns: minmax(0, 350px);
+    }
+  }
+
+  li {
+    height: 100%;
+  }
+
+  article {
+    height: 100%;
+    padding-bottom: 20px;
+    background-image: linear-gradient(134.17deg, #F1F7FF 4.98%, #F5F9FF 94.88%);
+    border-radius: 10px;
+    box-shadow: -8px -8px 16px rgba(255, 255, 255, 0.8), 8px 8px 16px rgba(186, 198, 216, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .button {
+      max-width: 150px;
+      margin: 0 auto;
+    }
+  }
+
+  strong {
+    font-family: $proximaBold;
+    font-size: 18px;
+    line-height: 18px;
+    color: $dark-red;
+  }
+}
+
+.services__price-box {
+  margin-bottom: 15px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  justify-items: center;
+
+  .services__price-text {
+    padding: 5px 10px;
+    background-color: $dark-blue;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+
+    span {
+      padding: 5px 0;
+      display: block;
+      color: $white;
+      font-family: $proximaBold;
+      font-size: 14px;
+      line-height: 14px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      text-align: center;
+
+      &:first-child {
+        border-bottom: dashed 2px $white;
+      }
+    }
+  }
+}
+
+.services__price-wrap {
+  margin-bottom: auto;
+  padding: 0 15px 0 15px;
+
+  p {
+    margin: 0;
+    padding: 0 0 15px 30px;
+    font-family: $proximaBold;
+    font-size: 14px;
+    line-height: 14px;
+    color: $dark-blue;
+    position: relative;
+
+    &::before {
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 13px;
+      background-image: url("../img/svg/icon-arrow-green.svg");
+      background-repeat: no-repeat;
+    }
+
+    strong {
+      font-size: 14px;
+      line-height: 14px;
+      color: $dark-red;
+    }
+  }
+}
+
+.services__price-text2 {
+  max-width: 670px;
+  margin: 60px auto;
+  display: grid;
+  grid-gap: 0 30px;
+  grid-template-columns: 80px auto;
+  align-items: center;
+
+  p {
+    margin: 0;
+    font-family: $proximaBold;
+    font-size: 24px;
+    line-height: 36px;
+    color: $dark-red;
+
+    @media (max-width: $tablet-width) {
+      font-size: 18px;
+      line-height: 27px;
+    }
+  }
+}
+
+.services-keys {
+  max-width: 1140px;
+  margin: 0 5% 0 20%;
+
+  @media (max-width: $desktop-width-min) {
+    margin: 0 3% 0 28%;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin: 0 auto;
+  }
+
+  .services-keys__box {
+    margin: 30px 0;
+    display: flex;
+    gap: 50px;
+
+    @media (max-width: $desktop-width-min) {
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+
+    article {
+      width: 100%;
+
+      @media (max-width: $desktop-width-min) {
+        width: 48%;
+      }
+
+      @media (max-width: $tablet-width) {
+        width: auto;
+      }
+    }
   }
 }
 

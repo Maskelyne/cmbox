@@ -13,6 +13,7 @@
 
     var modalShow = function () {
       modalQuestion.classList.add('modal-active');
+      document.body.style.overflow = 'hidden';
     };
 
     linkPhone.forEach(function (item, i) {

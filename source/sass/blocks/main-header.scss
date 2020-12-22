@@ -53,6 +53,15 @@
   &--active {
     display: grid;
   }
+
+  a:hover {
+    font-weight: $normal;
+    color: $dark-black;
+
+    @media (max-width: $desktop-width-min) {
+      color: $dark-red;
+    }
+  }
 }
 
 .main-header__link-phone {
@@ -66,15 +75,6 @@
 
     img {
       display: none;
-    }
-  }
-
-  &:hover {
-    font-weight: $normal;
-    color: $dark-black;
-
-    @media (max-width: $desktop-width-min) {
-      color: $dark-red;
     }
   }
 }
