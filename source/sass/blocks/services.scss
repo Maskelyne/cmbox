@@ -23,6 +23,8 @@
     @media (max-width: $tablet-width) {
       margin-top: 10px;
       padding: 0 20px;
+      font-size: 24px;
+      line-height: 24px;
     }
   }
 
@@ -71,7 +73,7 @@
   position: relative;
 
   @media (max-width: $desktop-width-min) {
-    margin: 0 0 0 28%;
+    margin: 0 3% 0 28%;
     grid-gap: 10px 0;
   }
 
@@ -441,7 +443,7 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 200px;
     grid-gap: 30px 0;
-    margin: 75px auto 0 28%;
+    margin: 75px 3% 0 28%;
   }
 
   @media (max-width: $tablet-width) {
@@ -1419,6 +1421,7 @@
 
   @media (max-width: $desktop-width-min) {
     margin-left: 28%;
+    margin-right: 3%;
   }
 
   @media (max-width: $tablet-width) {
@@ -1481,10 +1484,12 @@
 
   @media (max-width: $desktop-width-min) {
     padding: 0 30px;
+    margin-left: 28%;
   }
 
   @media (max-width: $tablet-width) {
     padding: 0 15px;
+    margin-left: auto;
   }
 
   h3 {

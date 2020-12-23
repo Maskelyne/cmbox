@@ -92,7 +92,7 @@
   grid-template-rows: repeat(3, max-content);
 
   @media (max-width: $desktop-width-min) {
-    max-width: 500px;
+    max-width: 550px;
     margin: 0 auto;
   }
 
@@ -173,6 +173,10 @@
 
     img {
       max-width: 265px;
+
+      @media (max-width: $tablet-width) {
+        max-width: 200px;
+      }
     }
 
     span {
@@ -183,6 +187,12 @@
       font-family: $proximaBold;
       font-size: 28px;
       line-height: 28px;
+
+      @media (max-width: $tablet-width) {
+        font-size: 20px;
+        line-height: 20px;
+        top: 13px;
+      }
     }
   }
 }
@@ -336,7 +346,7 @@
 
 
   @media (max-width: $desktop-width-min) {
-    max-width: 500px;
+    max-width: 550px;
     width: 100%;
     margin: 0 auto;
     grid-template-columns: 1fr;
@@ -1191,62 +1201,6 @@
     @media (max-width: $tablet-width) {
       width: 3px;
       height: 3px;
-    }
-  }
-}
-
-.portfolio-page__button-prev.button__disabled {
-  a {
-    background-color: rgba(204, 204, 204, 0.6);
-
-    &::before {
-      width: 13px;
-      height: 20px;
-      position: absolute;
-      content: "";
-      top: 10px;
-      left: 12px;
-      background-image: url("../img/svg/icon-arrow-portfolio-3.svg");
-      background-repeat: no-repeat;
-
-      @media (max-width: $tablet-width) {
-        top: 5px;
-        left: 7px;
-      }
-    }
-
-    &:hover::before {
-      background-image: url("../img/svg/icon-arrow-portfolio-3.svg");
-      background-repeat: no-repeat;
-      transform: rotate(180deg);
-    }
-  }
-}
-
-.portfolio-page__button-next.button__disabled {
-  a {
-    background-color: rgba(204, 204, 204, 0.6);
-
-    &::before {
-      width: 13px;
-      height: 20px;
-      position: absolute;
-      content: "";
-      top: 10px;
-      left: 15px;
-      background-image: url("../img/svg/icon-arrow-portfolio-3.svg");
-      background-repeat: no-repeat;
-
-      @media (max-width: $tablet-width) {
-        top: 5px;
-        left: 10px;
-      }
-    }
-
-    &:hover::before {
-      background-image: url("../img/svg/icon-arrow-portfolio-3.svg");
-      background-repeat: no-repeat;
-      transform: rotate(0deg);
     }
   }
 }

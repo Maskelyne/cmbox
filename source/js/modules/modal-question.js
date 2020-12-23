@@ -11,7 +11,9 @@
 
   if (modalQuestion) {
 
-    var modalShow = function () {
+    var modalShow = function (evt) {
+      evt.preventDefault();
+
       modalQuestion.classList.add('modal-active');
       document.body.style.overflow = 'hidden';
     };

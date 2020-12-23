@@ -32,10 +32,13 @@
 .main-header__tel {
   display: grid;
   grid-column: 1 / 3;
+  grid-row: 1;
   grid-template-columns: repeat(2, auto);
   justify-self: flex-end;
   align-items: center;
-  grid-gap: 0 10px;
+  grid-gap: 0 51px;
+  font-size: 15px;
+  line-height: 15px;
 
   @media (max-width: $desktop-width-min) {
     padding: 5px 10px;
@@ -52,6 +55,7 @@
 
   &--active {
     display: grid;
+    grid-gap: 5px 0;
   }
 
   a:hover {

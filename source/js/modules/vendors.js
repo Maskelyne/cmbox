@@ -107,38 +107,38 @@ $(function () {
     ],
   });
 
-    $('#form-portfolio').validate({
-      messages: {
-        name: 'Введите ваше имя',
-        phone: 'Введите ваш номер телефона',
-      },
-      errorElement: 'span',
-    });
+    // $('#form-portfolio').validate({
+    //   messages: {
+    //     name: 'Введите ваше имя',
+    //     phone: 'Введите ваш номер телефона',
+    //   },
+    //   errorElement: 'span',
+    // });
+    //
+    // $('#form-order').validate({
+    //   messages: {
+    //     name: 'Введите ваше имя',
+    //     phone: 'Введите ваш номер телефона',
+    //   },
+    //   errorElement: 'span',
+    // });
+    //
+    // $('#form-question').validate({
+    //   messages: {
+    //     phone: 'Введите ваш номер телефона',
+    //   },
+    //   errorElement: 'span',
+    // });
 
-    $('#form-services-order').validate({
-      messages: {
-        user_name: 'Введите ваше имя',
-        user_phone: 'Введите ваш номер телефона',
-      },
-      errorElement: 'span',
-    });
-
-    $('#form-question').validate({
-      messages: {
-        phone: 'Введите ваш номер телефона',
-      },
-      errorElement: 'span',
-    });
-
-    $('form').validate({
-      messages: {
-        name: 'Введите ваше имя',
-        phone: 'Введите ваш номер телефона',
-        position: 'Введите вашу должность',
-        company: 'Введите название компании'
-      },
-      errorElement: 'span',
-    });
+    // $('form').validate({
+    //   messages: {
+    //     name: 'Введите ваше имя',
+    //     phone: 'Введите ваш номер телефона',
+    //     position: 'Введите вашу должность',
+    //     company: 'Введите название компании'
+    //   },
+    //   errorElement: 'span',
+    // });
 
   var clipboard = new ClipboardJS('.user-button');
   var text = document.querySelector('.clip-text');

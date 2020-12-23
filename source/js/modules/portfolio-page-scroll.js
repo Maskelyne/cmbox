@@ -17,7 +17,7 @@
     document.body.style.overflow = 'hidden';
 
     var open = function () {
-      portfolioBoxImage.style.transform = 'translateY(-170%)';
+      portfolioBoxImage.style.transform = 'translateY(-220%)';
       portfolioBox.style.transform = 'translateY(-320%)';
       portfolioBox.style.transitionDelay = '';
       portfolioBoxImage.style.transitionDelay = '';

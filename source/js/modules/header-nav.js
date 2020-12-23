@@ -132,10 +132,14 @@
     }
   }
 
-  mainPhone.addEventListener('click', function (evt) {
-    evt.preventDefault();
+  if (window.innerWidth <= 1023) {
 
-    mainBoxPhone.classList.toggle('main-header__tel--active');
-  });
+    mainPhone.addEventListener('click', function (evt) {
+      evt.preventDefault();
+
+      mainBoxPhone.classList.toggle('main-header__tel--active');
+    });
+
+  }
 
 })();
