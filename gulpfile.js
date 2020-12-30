@@ -168,7 +168,7 @@ gulp.task('build', gulp.series(
     'vendorJs:build',
     'css:build',
     'fonts:build',
-    'image:build',
+    // 'image:build',
     'sprite:build'
 ));
 
