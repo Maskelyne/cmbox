@@ -7,17 +7,17 @@
 .main-footer__wrapper {
   padding: 10px 30px;
   display: grid;
-  grid-template-columns: 23% 1fr 24%;
+  grid-template-columns: 23% auto 32%;
   grid-column-gap: 13%;
 
   @media (max-width: $desktop-width) {
-    grid-template-columns: 30% 1fr 30%;
+    grid-template-columns: 30% auto 36%;
     grid-column-gap: 0;
   }
 
   @media (max-width: $desktop-width-min) {
     padding: 15px 30px;
-    grid-template-columns: 45% 45%;
+    grid-template-columns: 45% 50%;
     align-items: center;
     justify-content: space-between;
   }
@@ -124,18 +124,6 @@
 .main-footer__link-phone {
   padding-left: 20px;
   color: $dark-black;
-  position: relative;
-
-  &::before {
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    content: "";
-    top: 0;
-    left: -6px;
-    background-image: url("../img/svg/icon-mobile.svg");
-    background-repeat: no-repeat;
-  }
 
   &:hover {
     font-weight: $normal;
@@ -148,9 +136,25 @@
   }
 }
 
+.main-footer__phone {
+  display: grid;
+  position: relative;
+
+  &::before {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    content: "";
+    top: 10px;
+    left: -6px;
+    background-image: url("../img/svg/icon-mobile.svg");
+    background-repeat: no-repeat;
+  }
+}
+
 .main-footer__link-box {
   display: grid;
-  grid-template-columns: 180px auto;
+  grid-template-columns: 250px auto;
   align-items: center;
   grid-gap: 0 5px;
 

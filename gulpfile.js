@@ -168,7 +168,7 @@ gulp.task('build', gulp.series(
     'vendorJs:build',
     'css:build',
     'fonts:build',
-    // 'image:build',
+    'image:build',
     'sprite:build'
 ));
 
@@ -184,6 +184,6 @@ gulp.task('server', function () {
   gulp.watch([path.watch.html], gulp.series('html:build'));
   gulp.watch([path.watch.pug], gulp.series('pug:build'));
   gulp.watch([path.watch.css], gulp.series('css:build'));
-  gulp.watch([path.watch.js], gulp.series('js:build'));
+  gulp.watch([path.watch.js], gulp.series('js:build', 'vendorJs:build'));
   gulp.watch([path.watch.img], gulp.series('image:build', 'sprite:build'));
 });

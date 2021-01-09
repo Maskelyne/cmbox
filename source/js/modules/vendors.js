@@ -2,12 +2,6 @@
 
 $(function () {
 
-  jQuery(function ($) {
-    $("#user_phone").mask("+375 (99) 999-99-99",{autoclear: false});
-    $("#user_phone2").mask("+375 (99) 999-99-99",{autoclear: false});
-    $("#user_phone-question").mask("+375 (99) 999-99-99",{autoclear: false});
-  });
-
   $("#user_name").keyup(function () {
     if ($(this).val()) {
       $(this).addClass("not-empty");
@@ -107,38 +101,43 @@ $(function () {
     ],
   });
 
-    // $('#form-portfolio').validate({
-    //   messages: {
-    //     name: 'Введите ваше имя',
-    //     phone: 'Введите ваш номер телефона',
-    //   },
-    //   errorElement: 'span',
-    // });
-    //
-    // $('#form-order').validate({
-    //   messages: {
-    //     name: 'Введите ваше имя',
-    //     phone: 'Введите ваш номер телефона',
-    //   },
-    //   errorElement: 'span',
-    // });
-    //
-    // $('#form-question').validate({
-    //   messages: {
-    //     phone: 'Введите ваш номер телефона',
-    //   },
-    //   errorElement: 'span',
-    // });
+    $('#form-portfolio').validate({
+      messages: {
+        name: 'Введите ваше имя',
+        phone: 'Введите ваш номер телефона',
+      },
+      errorElement: 'span',
+    });
 
-    // $('form').validate({
-    //   messages: {
-    //     name: 'Введите ваше имя',
-    //     phone: 'Введите ваш номер телефона',
-    //     position: 'Введите вашу должность',
-    //     company: 'Введите название компании'
-    //   },
-    //   errorElement: 'span',
-    // });
+    $('#form-order').validate({
+      messages: {
+        name: 'Введите ваше имя',
+        phone: 'Введите ваш номер телефона',
+      },
+      errorElement: 'span',
+    });
+
+    $('#form-analysis').validate({
+      messages: {
+        name: 'Введите ваше имя',
+        phone: 'Введите ваш номер телефона',
+      },
+      errorElement: 'span',
+    });
+
+    $('#form-question').validate({
+      messages: {
+        phone: 'Введите ваш номер телефона',
+      },
+      errorElement: 'span',
+    });
+
+    $('#form-main').validate({
+      messages: {
+        phone: 'Введите ваш номер телефона',
+      },
+      errorElement: 'span',
+    });
 
   var clipboard = new ClipboardJS('.user-button');
   var text = document.querySelector('.clip-text');
@@ -152,14 +151,56 @@ $(function () {
     text.style.display = '';
   };
 
-  // document.ondragstart = test;
-  // //запрет на перетаскивание
-  // document.onselectstart = test;
-  // //запрет на выделение элементов страницы
-  // document.oncontextmenu = test;
-  // //запрет на выведение контекстного меню
-  // function test() {
-  //   return false;
-  // }
+  document.ondragstart = test;
+  //запрет на перетаскивание
+  document.onselectstart = test;
+  //запрет на выделение элементов страницы
+  document.oncontextmenu = test;
+  //запрет на выведение контекстного меню
+  function test() {
+    return false;
+  }
+
+  var maskList = $.masksSort($.masksLoad("https://cdn.rawgit.com/andr-04/inputmask-multi/master/data/phone-codes.json"), ['#'], /[0-9]|#/, "mask");
+  var maskOpts = {
+    inputmask: {
+      definitions: {
+        '#': {
+          validator: "[0-9]",
+          cardinality: 1
+        }
+      },
+      showMaskOnHover: false,
+      autoUnmask: true,
+      clearMaskOnLostFocus: true
+    },
+    match: /[0-9]/,
+    replace: '#',
+    list: maskList,
+    listKey: "mask",
+    onMaskChange: function(maskObj, determined) {}
+  };
+
+  $('#user_phone').change(function() {
+    $('#user_phone').inputmask("remove");
+    $('#user_phone').inputmasks(maskOpts);
+  });
+
+  $('#user_phone').change();
+
+  $('#user_phone2').change(function() {
+    $('#user_phone2').inputmask("remove");
+    $('#user_phone2').inputmasks(maskOpts);
+  });
+
+  $('#user_phone2').change();
+
+  $('#user_phone-question').change(function() {
+    $('#user_phone-question').inputmask("remove");
+    $('#user_phone-question').inputmasks(maskOpts);
+  });
+
+  $('#user_phone-question').change();
+
 
 });
