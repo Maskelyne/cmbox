@@ -1,5 +1,5 @@
 .services {
-  margin-top: 110px;
+  margin-top: 95px;
 
   @media (max-width: $tablet-width) {
     margin-top: 90px;
@@ -44,7 +44,7 @@
 
 .services__box {
   display: grid;
-  grid-template-columns: 48% 582px 21%;
+  grid-template-columns: 46% 582px 21%;
 
   @media (max-width: $desktop-width) {
     align-items: center;
@@ -53,19 +53,6 @@
 
   @media (max-width: $desktop-width-min) {
     grid-template-columns: 1fr;
-  }
-
-  h3 {
-    font-family: $proximaBold;
-    font-size: 24px;
-    line-height: 24px;
-    text-align: center;
-    color: $middle-blue;
-
-    @media (max-width: $desktop-width-min) {
-      font-size: 16px;
-      color: $dark-blue;
-    }
   }
 }
 
@@ -82,20 +69,52 @@
     padding: 0 10px;
   }
 
-  p {
-    margin: 0 0 10px 0;
-    font-size: 17px;
-    line-height: 24px;
-    color: $dark-gray;
+  h3 {
+    font-family: $proximaBold;
+    text-align: left;
+    color: $blue;
 
-    @media (max-width: $tablet-width) {
+    @media (max-width: $desktop-width-min) {
       font-size: 16px;
+    }
+  }
+
+  .services__image-seo {
+    img {
+      border-radius: 10px;
+      box-shadow: -8px -8px 16px rgba(255, 255, 255, 0.8), 8px 8px 16px rgba(186, 198, 216, 0.8);
+    }
+  }
+
+  .services__data-text {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: 60% auto;
+    align-items: center;
+    grid-gap: 0 7%;
+
+    p {
+      font-family: $proximaBold;
+
+      strong {
+        color: $dark-red;
+      }
+    }
+  }
+}
+
+.services__boxes {
+  max-width: 450px;
+
+  img {
+    &:last-child {
+      display: none;
     }
   }
 }
 
 .services__box-images {
-  margin: 0 auto 0 24%;
+  margin: 0 auto 0 40%;
 
   @media (max-width: $desktop-width) {
     margin-left: 30%;
@@ -133,24 +152,9 @@
   }
 }
 
-.services__image-seo {
-  margin-bottom: 60px;
-
-  img {
-    max-width: 1000px;
-    display: block;
-    margin: 0 auto;
-    cursor: pointer;
-
-    @media (max-width: $desktop-width-min) {
-      max-width: 500px;
-    }
-  }
-}
-
 .services__price {
   max-width: 1140px;
-  margin: 60px 5% 0 20%;
+  margin: 30px 5% 0 20%;
 
   @media (max-width: $desktop-width-min) {
     margin: 60px 3% 0 28%;
@@ -166,7 +170,7 @@
     color: $dark-blue;
   }
 
-  ul {
+  .services__price-grid {
     @include reset-list;
     margin-top: 30px;
     display: grid;
@@ -244,11 +248,32 @@
 
 .services__price-wrap {
   margin-bottom: auto;
-  padding: 0 15px 0 15px;
 
-  p {
+  ul {
+    @include reset-list;
+  }
+
+  .services__price-tooltip {
+    display: flex;
+    align-items: center;
+  }
+
+  .services__btn-tooltip {
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    background-image: url("../img/svg/icon-tooltip.svg");
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    cursor: pointer;
+    outline: none;
+  }
+
+  span {
     margin: 0;
-    padding: 0 0 15px 30px;
+    padding: 0 8px 0 30px;
     font-family: $proximaBold;
     font-size: 14px;
     line-height: 14px;
@@ -271,6 +296,13 @@
       line-height: 14px;
       color: $dark-red;
     }
+  }
+
+  p {
+    margin: 0;
+    padding: 0 10px 0 30px;
+    font-size: 14px;
+    line-height: 16px;
   }
 }
 
@@ -326,9 +358,6 @@
     article {
       width: 100%;
       padding: 20px 20px 30px 20px;
-      //display: flex;
-      //flex-direction: column;
-      //justify-content: space-between;
       border-radius: 10px;
       box-shadow: -8px -8px 16px rgba(255, 255, 255, 0.8), 8px 8px 16px rgba(186, 198, 216, 0.8);
       background-image: linear-gradient(134.17deg, #F1F7FF 4.98%, #F5F9FF 94.88%);
@@ -345,8 +374,6 @@
   }
 
   .services-keys__text {
-    //margin-bottom: auto;
-
     strong {
       margin-bottom: 10px;
       text-align: center;
@@ -1253,16 +1280,6 @@
           }
         }
       }
-    }
-  }
-}
-
-.services__boxes {
-  max-width: 600px;
-
-  img {
-    &:last-child {
-      display: none;
     }
   }
 }

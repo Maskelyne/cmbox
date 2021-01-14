@@ -177,6 +177,7 @@ block main
 
   main.gray-box
     section.services
+      +breadcrumbs
       h1 Услуги
       .services__box
         .services__nav-box
@@ -201,19 +202,18 @@ block main
             +img('services', 'big-box-active', 'svg', '640', '380', 'Коробка')
             +img('services', 'big-box-hover', 'svg', '640', '380', 'Коробка')
         .services__box-text
-          .services__text
-            p Прежде, чем говорить о преимуществах, стоит объяснить, что означает
-              strong  SEO.
-              |  Это поисковая оптимизация и продвижение сайта, которые выводят в топовые позиции органической выдачи Яндекс, Google и других поисковиков.
-            p
-              strong Органическая выдача
-              |  – это естественная часть выдачи в поисковиках Яндекс, Google и других, не являющаяся рекламной. То есть, вы попадаете в ТОП-позиции органической выдачи при условии максимального совпадения контента сайта с запросом пользователя.
-            p Существует больше 500 факторов, которые влияют на органическую выдачу. При настройке SEO достаточно учесть основные из таких факторов, чтобы эффективно конкурировать в вашей нише бизнеса.
+          .services__data
+            h3 Хочешь проверить свое SEO?
+            .services__data-text
+              p Базовый анализ ваших маркетинговых инструментов
+                strong  по цене чашки кофе
+              a.button.analysis-btn(href="#")
+                span Заказать
+            .services__image-seo
+              +picture('png', 'image-seo', 'image-seo-tablet', 'image-seo-mobile', 'png', '1050', '170', 'Реклама', '1023', '767')
       .services__price
-        .services__image-seo
-          +picture('png', 'image-seo', 'image-seo-tablet', 'image-seo-mobile', 'png', '1050', '170', 'Реклама', '1023', '767')
         h3 Тарифы для Беларуси, России и СНГ
-        ul
+        ul.services__price-grid
           li
             article
               .services__price-box
@@ -338,7 +338,6 @@ block main
                 p Развернутый отчет
                 a.button.services-modal-js(href="#")
                   span Заказать
-
         .services__price-text2
           +img('svg', 'image-price', 'svg', '80', '80', 'Ключевые параметры')
           p Гарантируем повышение ключевых параметров в позициях или вернем деньги.

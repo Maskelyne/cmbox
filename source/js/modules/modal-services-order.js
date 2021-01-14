@@ -12,12 +12,15 @@
     var modalClose = document.querySelectorAll('.modal__btn-closed');
     var servicesBanner = document.querySelector('.services__image-seo img');
 
-    servicesBanner.addEventListener('click', function () {
-      servicesModal.classList.add('modal-active');
-      document.body.style.overflow = 'hidden';
-    });
+    if (servicesBanner) {
 
-    for(var y = 0; y < modalServicesBtn.length; y++) {
+      servicesBanner.addEventListener('click', function () {
+        servicesModal.classList.add('modal-active');
+        document.body.style.overflow = 'hidden';
+      });
+    }
+
+    for (var y = 0; y < modalServicesBtn.length; y++) {
 
       modalServicesBtn[y].addEventListener('click', function (evt) {
         evt.preventDefault();

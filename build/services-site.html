@@ -103,10 +103,56 @@
             </div>
           </div>
           <div class="services__box-text">
-            <h2>Сайт</h2>
-            <div class="services__text"><strong>2000</strong>
-              <p>Сайт — полноценный инструмент продажи в интернете из-за слабой конкуренции.</p>
+            <div class="services__data">
+              <h3>Хочешь проверить свое SEO?</h3>
+              <div class="services__data-text">
+                <p>Базовый анализ ваших маркетинговых инструментов<strong> по цене чашки кофе</strong></p><a class="button analysis-btn" href="#"><span>Заказать</span></a>
+              </div>
+              <div class="services__image-seo">
+                <picture>
+                  <source media="(max-width: 767px)" srcset="assets/img/png/image-seo-mobile.png"/>
+                  <source media="(max-width: 1023px)" srcset="assets/img/png/image-seo-tablet.png"/><img src="assets/img/png/image-seo.png" width="1050" height="170" alt="Реклама"/>
+                </picture>
+              </div>
             </div>
+          </div>
+        </div>
+        <div class="services__price">
+          <h3>Тарифы для Беларуси, России и СНГ</h3>
+          <ul class="services__price-grid">
+            <li>
+              <article>
+                <div class="services__price-box"><strong>Лэндинг</strong>
+                  <div class="services__price-text"><span>650 byn</span><span>18 800 rub</span></div>
+                </div>
+                <div class="services__price-wrap">
+                  <ul>
+                    <li>
+                      <div class="services__price-tooltip"><span>Маркетинговое исследование</span>
+                        <button class="services__btn-tooltip" type="button"><span class="visually-hidden">Подробнее</span></button>
+                      </div>
+                      <p>Создание уникального дизайна исходя из задачи проекта, пожеланий заказчика и маркетинговых исследований</p>
+                    </li>
+                    <li>
+                      <div class="services__price-tooltip"><span>Дизайн-проект</span>
+                        <button class="services__btn-tooltip" type="button"><span class="visually-hidden">Подробнее</span></button>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="services__price-tooltip"><span>Верстка</span>
+                        <button class="services__btn-tooltip" type="button"><span class="visually-hidden">Подробнее</span></button>
+                      </div>
+                    </li>
+                    <li><span>Разработка back-end</span></li>
+                    <li><span>Тесты</span></li>
+                    <li><span>Обслуживание</span></li>
+                  </ul>
+                </div><a class="button services-modal-js" href="#"><span>Заказать</span></a>
+              </article>
+            </li>
+          </ul>
+          <div class="services__price-text2"><img src="assets/img/svg/image-price.svg" width="80" height="80" alt="Ключевые параметры"/>
+            <p>Гарантируем повышение ключевых параметров в позициях или вернем деньги.</p>
           </div>
         </div>
         <div class="services__box-portfolio container">
@@ -150,6 +196,32 @@
         </div>
       </div>
     </footer>
+    <section class="contacts modal modal-services-order">
+      <div class="modal__wrapper">
+        <div class="contacts__form">
+          <p>Как с Вами связаться?</p>
+          <form id="form-services-order" action="#" method="get">
+            <div class="modal__user-name">
+              <input id="user_name" type="text" name="user_name" required>
+              <label for="user_name">Имя</label>
+            </div>
+            <div class="modal__user-phone">
+              <input id="user_phone" type="tel" name="user_phone" required>
+              <label for="user_phone">Телефон</label>
+            </div>
+            <div class="modal__user-email">
+              <input id="user_email" type="tel" name="user_email">
+              <label for="user_email">Email</label>
+            </div>
+            <div class="modal__user-comment">
+              <textarea id="user_comment" name="user_comment"></textarea>
+              <label for="user_comment">Комментарий</label>
+            </div>
+            <button class="button" type="submit"><span>Отправить</span></button>
+          </form>
+        </div><a class="modal__btn-closed" href="#"><span class="visually-hidden">Закрыть модальное окно</span></a>
+      </div>
+    </section>
     <script src="assets/js/vendor.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/default.js"></script>
