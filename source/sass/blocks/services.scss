@@ -253,9 +253,22 @@
     @include reset-list;
   }
 
+  li {
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+
   .services__price-tooltip {
     display: flex;
     align-items: center;
+  }
+
+  .services__text-box {
+    max-height: 0;
+
+    &--active {
+      max-height: 300px;
+    }
   }
 
   .services__btn-tooltip {
