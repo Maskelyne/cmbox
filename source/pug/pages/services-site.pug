@@ -176,18 +176,17 @@ block main
           .services__image
             +img('services', 'icon-tv', 'svg', '250', '250', 'Компьютер')
           .services__boxes
-            +img('services', 'big-box-active', 'svg', '640', '380', 'Сайт')
-            +img('services', 'big-box-hover', 'svg', '640', '380', 'Сайт')
+            +img('services', 'big-box-active-1', 'svg', '640', '380', 'Сайт')
+            +img('services', 'big-box-hover-1', 'svg', '640', '380', 'Сайт')
         .services__box-text
-          .services__data
-            h3 Хочешь проверить свое SEO?
-            .services__data-text
-              p Базовый анализ ваших маркетинговых инструментов
-                strong  по цене чашки кофе
-              a.button.analysis-btn(href="#")
-                span Заказать
-            .services__image-seo
-              +picture('png', 'image-seo', 'image-seo-tablet', 'image-seo-mobile', 'png', '1050', '170', 'Реклама', '1023', '767')
+          h3 Хочешь проверить свое SEO?
+          .services__data-text
+            p Базовый анализ ваших маркетинговых инструментов
+              strong  по цене чашки кофе
+            a.button.analysis-btn(href="#")
+              span Заказать
+          .services__image-seo
+            +picture('png', 'image-seo', 'image-seo', 'image-seo-mobile', 'png', '1050', '170', 'Реклама', '1023', '767')
       .services__price
         h3 Тарифы для Беларуси, России и СНГ
         ul.services__price-grid
@@ -196,39 +195,297 @@ block main
               .services__price-box
                 strong Лэндинг
                 .services__price-text
-                  span 650 byn
-                  span 18 800 rub
+                  .services__span
+                    span от
+                    span 650
+                    span byn
+                  .services__span
+                    span от
+                    span 18 800
+                    span rub
               .services__price-wrap
                 ul
                   li
                     .services__price-tooltip
-                      span Маркетинговое исследование
-                      button.services__btn-tooltip(type="button")
-                        span.visually-hidden Подробнее
+                      p Маркетинговое исследование
+                        button.services__btn-tooltip(type="button")
+                          span.visually-hidden Подробнее
                     .services__text-box
                       p Создание уникального дизайна исходя из задачи проекта, пожеланий заказчика и маркетинговых исследований
                   li
                     .services__price-tooltip
-                      span Дизайн-проект
-                      button.services__btn-tooltip(type="button")
-                        span.visually-hidden Подробнее
+                      p Дизайн-проект
+                        button.services__btn-tooltip(type="button")
+                          span.visually-hidden Подробнее
                     .services__text-box
                       p Создание уникального дизайна исходя из задачи проекта, пожеланий заказчика и маркетинговых исследований
                   li
                     .services__price-tooltip
-                      span Верстка
-                      button.services__btn-tooltip(type="button")
-                        span.visually-hidden Подробнее
+                      p Верстка
+                        button.services__btn-tooltip(type="button")
+                          span.visually-hidden Подробнее
                     .services__text-box
                       p Создание уникального дизайна исходя из задачи проекта, пожеланий заказчика и маркетинговых исследований
                   li
-                    span Разработка back-end
+                    .services__price-tooltip
+                      p Разработка back-end
+                        button.services__btn-tooltip(type="button")
+                          span.visually-hidden Подробнее
+                    .services__text-box
+                      p Создание уникального дизайна исходя из задачи проекта, пожеланий заказчика и маркетинговых исследований
                   li
-                    span Тесты
+                    .services__price-tooltip
+                      p Тесты
+                        button.services__btn-tooltip(type="button")
+                          span.visually-hidden Подробнее
+                    .services__text-box
+                      p Создание уникального дизайна исходя из задачи проекта, пожеланий заказчика и маркетинговых исследований
                   li
-                    span Обслуживание
-              a.button.services-modal-js(href="#")
-                span Заказать
+                    .services__price-tooltip
+                      p Обслуживание
+                        button.services__btn-tooltip(type="button")
+                          span.visually-hidden Подробнее
+                    .services__text-box
+                      p Создание уникального дизайна исходя из задачи проекта, пожеланий заказчика и маркетинговых исследований
+                      p В течении всей работы с нами мы предлагаем обслуживание вашего сайта, доработки по вашим запросам и разработку новых функций
+                a.button.services-modal-js(href="#")
+                  span Заказать
+              button.services__btn-more(type="button")
+                span.visually-hidden Узнать больше
+          li
+            article
+              .services__price-box
+                strong Каталог
+                .services__price-text
+                  .services__span
+                    span от
+                    span 650
+                    span byn
+                  .services__span
+                    span от
+                    span 18 800
+                    span rub
+              .services__price-wrap
+                ul
+                  li
+                    .services__price-tooltip
+                      p Маркетинговое исследование
+                        button.services__btn-tooltip(type="button")
+                          span.visually-hidden Подробнее
+                    .services__text-box
+                      p Создание уникального дизайна исходя из задачи проекта, пожеланий заказчика и маркетинговых исследований
+                  li
+                    .services__price-tooltip
+                      p Дизайн-проект
+                        button.services__btn-tooltip(type="button")
+                          span.visually-hidden Подробнее
+                    .services__text-box
+                      p Создание уникального дизайна исходя из задачи проекта, пожеланий заказчика и маркетинговых исследований
+                  li
+                    .services__price-tooltip
+                      p Верстка
+                        button.services__btn-tooltip(type="button")
+                          span.visually-hidden Подробнее
+                    .services__text-box
+                      p Создание уникального дизайна исходя из задачи проекта, пожеланий заказчика и маркетинговых исследований
+                  li
+                    .services__price-tooltip
+                      p Разработка back-end
+                        button.services__btn-tooltip(type="button")
+                          span.visually-hidden Подробнее
+                    .services__text-box
+                      p Создание уникального дизайна исходя из задачи проекта, пожеланий заказчика и маркетинговых исследований
+                  li
+                    .services__price-tooltip
+                      p Наполнение сайта
+                        button.services__btn-tooltip(type="button")
+                          span.visually-hidden Подробнее
+                    .services__text-box
+                      p Создание уникального дизайна исходя из задачи проекта, пожеланий заказчика и маркетинговых исследований
+                  li
+                    .services__price-tooltip
+                      p Создание шаблона импорта товаров
+                        button.services__btn-tooltip(type="button")
+                          span.visually-hidden Подробнее
+                    .services__text-box
+                      p Создание уникального дизайна исходя из задачи проекта, пожеланий заказчика и маркетинговых исследований
+                      p В течении всей работы с нами мы предлагаем обслуживание вашего сайта, доработки по вашим запросам и разработку новых функций
+                  li
+                    .services__price-tooltip
+                      p Тесты
+                        button.services__btn-tooltip(type="button")
+                          span.visually-hidden Подробнее
+                    .services__text-box
+                      p Создание уникального дизайна исходя из задачи проекта, пожеланий заказчика и маркетинговых исследований
+                      p В течении всей работы с нами мы предлагаем обслуживание вашего сайта, доработки по вашим запросам и разработку новых функций
+                  li
+                    .services__price-tooltip
+                      p Обслуживание
+                        button.services__btn-tooltip(type="button")
+                          span.visually-hidden Подробнее
+                    .services__text-box
+                      p Создание уникального дизайна исходя из задачи проекта, пожеланий заказчика и маркетинговых исследований
+                      p В течении всей работы с нами мы предлагаем обслуживание вашего сайта, доработки по вашим запросам и разработку новых функций
+                a.button.services-modal-js(href="#")
+                  span Заказать
+              button.services__btn-more(type="button")
+                span.visually-hidden Узнать больше
+          li
+            article
+              .services__price-box
+                strong Каталог
+                .services__price-text
+                  .services__span
+                    span от
+                    span 650
+                    span byn
+                  .services__span
+                    span от
+                    span 18 800
+                    span rub
+              .services__price-wrap
+                ul
+                  li
+                    .services__price-tooltip
+                      p Маркетинговое исследование
+                        span.services__mark *
+                        button.services__btn-tooltip(type="button")
+                          span.visually-hidden Подробнее
+                    .services__text-box
+                      p Создание уникального дизайна исходя из задачи проекта, пожеланий заказчика и маркетинговых исследований
+                  li
+                    .services__price-tooltip
+                      p Дизайн-проект
+                        button.services__btn-tooltip(type="button")
+                          span.visually-hidden Подробнее
+                    .services__text-box
+                      p Создание уникального дизайна исходя из задачи проекта, пожеланий заказчика и маркетинговых исследований
+                  li
+                    .services__price-tooltip
+                      p Верстка
+                        button.services__btn-tooltip(type="button")
+                          span.visually-hidden Подробнее
+                    .services__text-box
+                      p Создание уникального дизайна исходя из задачи проекта, пожеланий заказчика и маркетинговых исследований
+                  li
+                    .services__price-tooltip
+                      p Разработка back-end
+                        button.services__btn-tooltip(type="button")
+                          span.visually-hidden Подробнее
+                    .services__text-box
+                      p Создание уникального дизайна исходя из задачи проекта, пожеланий заказчика и маркетинговых исследований
+                  li
+                    .services__price-tooltip
+                      p Наполнение сайта
+                        button.services__btn-tooltip(type="button")
+                          span.visually-hidden Подробнее
+                    .services__text-box
+                      p Создание уникального дизайна исходя из задачи проекта, пожеланий заказчика и маркетинговых исследований
+                  li
+                    .services__price-tooltip
+                      p Создание шаблона импорта товаров
+                        button.services__btn-tooltip(type="button")
+                          span.visually-hidden Подробнее
+                    .services__text-box
+                      p Создание уникального дизайна исходя из задачи проекта, пожеланий заказчика и маркетинговых исследований
+                      p В течении всей работы с нами мы предлагаем обслуживание вашего сайта, доработки по вашим запросам и разработку новых функций
+                  li
+                    .services__price-tooltip
+                      p Тесты
+                        button.services__btn-tooltip(type="button")
+                          span.visually-hidden Подробнее
+                    .services__text-box
+                      p Создание уникального дизайна исходя из задачи проекта, пожеланий заказчика и маркетинговых исследований
+                      p В течении всей работы с нами мы предлагаем обслуживание вашего сайта, доработки по вашим запросам и разработку новых функций
+                  li
+                    .services__price-tooltip
+                      p Обслуживание
+                        button.services__btn-tooltip(type="button")
+                          span.visually-hidden Подробнее
+                    .services__text-box
+                      p Создание уникального дизайна исходя из задачи проекта, пожеланий заказчика и маркетинговых исследований
+                      p В течении всей работы с нами мы предлагаем обслуживание вашего сайта, доработки по вашим запросам и разработку новых функций
+                a.button.services-modal-js(href="#")
+                  span Заказать
+          li
+            article
+              .services__price-box
+                strong Каталог
+                .services__price-text
+                  .services__span
+                    span от
+                    span 650
+                    span byn
+                  .services__span
+                    span от
+                    span 18 800
+                    span rub
+              .services__price-wrap
+                ul
+                  li
+                    .services__price-tooltip
+                      p Маркетинговое исследование
+                        button.services__btn-tooltip(type="button")
+                          span.visually-hidden Подробнее
+                    .services__text-box
+                      p Создание уникального дизайна исходя из задачи проекта, пожеланий заказчика и маркетинговых исследований
+                  li
+                    .services__price-tooltip
+                      p Дизайн-проект
+                        button.services__btn-tooltip(type="button")
+                          span.visually-hidden Подробнее
+                    .services__text-box
+                      p Создание уникального дизайна исходя из задачи проекта, пожеланий заказчика и маркетинговых исследований
+                  li
+                    .services__price-tooltip
+                      p Верстка
+                        button.services__btn-tooltip(type="button")
+                          span.visually-hidden Подробнее
+                    .services__text-box
+                      p Создание уникального дизайна исходя из задачи проекта, пожеланий заказчика и маркетинговых исследований
+                  li
+                    .services__price-tooltip
+                      p Разработка back-end
+                        button.services__btn-tooltip(type="button")
+                          span.visually-hidden Подробнее
+                    .services__text-box
+                      p Создание уникального дизайна исходя из задачи проекта, пожеланий заказчика и маркетинговых исследований
+                  li
+                    .services__price-tooltip
+                      p Наполнение сайта
+                        button.services__btn-tooltip(type="button")
+                          span.visually-hidden Подробнее
+                    .services__text-box
+                      p Создание уникального дизайна исходя из задачи проекта, пожеланий заказчика и маркетинговых исследований
+                  li
+                    .services__price-tooltip
+                      p Создание шаблона импорта товаров
+                        button.services__btn-tooltip(type="button")
+                          span.visually-hidden Подробнее
+                    .services__text-box
+                      p Создание уникального дизайна исходя из задачи проекта, пожеланий заказчика и маркетинговых исследований
+                      p В течении всей работы с нами мы предлагаем обслуживание вашего сайта, доработки по вашим запросам и разработку новых функций
+                  li
+                    .services__price-tooltip
+                      p Тесты
+                        button.services__btn-tooltip(type="button")
+                          span.visually-hidden Подробнее
+                    .services__text-box
+                      p Создание уникального дизайна исходя из задачи проекта, пожеланий заказчика и маркетинговых исследований
+                      p В течении всей работы с нами мы предлагаем обслуживание вашего сайта, доработки по вашим запросам и разработку новых функций
+                  li
+                    .services__price-tooltip
+                      p Обслуживание
+                        button.services__btn-tooltip(type="button")
+                          span.visually-hidden Подробнее
+                    .services__text-box
+                      p Создание уникального дизайна исходя из задачи проекта, пожеланий заказчика и маркетинговых исследований
+                      p В течении всей работы с нами мы предлагаем обслуживание вашего сайта, доработки по вашим запросам и разработку новых функций
+                a.button.services-modal-js(href="#")
+                  span Заказать
+        p
+          span *
+          | дизайн и верстка могут быть шаблонными решениями, что сократит время разработки вдвое и значительно удешевит разработку, однако в таком случае ваш сайт потеряет уникальность и индивидуальность.
         .services__price-text2
           +img('svg', 'image-price', 'svg', '80', '80', 'Ключевые параметры')
           p Гарантируем повышение ключевых параметров в позициях или вернем деньги.

@@ -167,7 +167,7 @@
   @media (max-width: $mobile-width) {
     max-width: 320px;
     grid-template-columns: 1fr;
-    grid-template-rows: 44% 1fr;
+    grid-template-rows: 1fr;
   }
 
   .modal__btn-closed {

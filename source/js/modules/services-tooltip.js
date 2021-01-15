@@ -2,36 +2,36 @@
 
 (function () {
 
-  let boxMore = document.querySelectorAll('.services__text-box');
-  let btnMore = document.querySelectorAll('.services__btn-tooltip');
+  $('.services__btn-tooltip').on('click', function () {
+    if ($(this).hasClass('services__btn-tooltip--active')) {
+      $(this).removeClass('services__btn-tooltip--active');
 
-  // btnMore.forEach(function(btn) {
-  //   btn.addEventListener('click', function(evt) {
-  //     boxMore.forEach(function(box, i) {
-  //       box.classList.toggle('services__text-box--active', (evt.target == btnMore[i]));
-  //     });
-  //   });
-  // });
+    } else {
+      $(".services__btn-tooltip").removeClass('services__btn-tooltip--active');
+      $(this).addClass('services__btn-tooltip--active');
+    }
+    if ($(this).parent().parent().parent().find('.services__text-box').hasClass('services__text-box--active')) {
+      $(this).parent().parent().parent().find('.services__text-box').removeClass('services__text-box--active');
+    } else {
+      $('.services__text-box').removeClass('services__text-box--active');
+      $(this).parent().parent().parent().find('.services__text-box').addClass('services__text-box--active');
+    }
+  });
 
-  // btnMore.forEach((btn) => {
-  //   btn.addEventListener('click', function() {
-  //     boxMore.forEach((box) => {
-  //       if (box != this.parentElement) { box.classList.remove('services__text-box--active'); }
-  //     });
-  //     this.parentElement.classList.toggle('services__text-box--active');
-  //   });
-  // });
+  $('.services__btn-more').on('click', function () {
+    if ($(this).hasClass('services__btn-more--active')) {
+      $(this).removeClass('services__btn-more--active');
 
-  $(function() {
-
-    $(".services__btn-tooltip").click(function() {
-      $(this).next().toggleClass("services__text-box--active");
-      $(this).toggleClass("active-tab");
-
-      $(".services__text-box").not($(this).next()).removeClass("services__text-box--active");
-      $(".services__btn-tooltip").not(jQuery(this)).removeClass("active-tab");
-    });
-  }); // jQuery load
-
+    } else {
+      $(".services__btn-more").removeClass('services__btn-more--active');
+      $(this).addClass('services__btn-more--active');
+    }
+    if ($(this).parent().find('.services__price-wrap').hasClass('services__price-wrap--active')) {
+      $(this).parent().find('.services__price-wrap').removeClass('services__price-wrap--active');
+    } else {
+      $('.services__price-wrap').removeClass('services__price-wrap--active');
+      $(this).parent().find('.services__price-wrap').addClass('services__price-wrap--active');
+    }
+  });
 
 })();
