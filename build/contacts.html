@@ -99,7 +99,14 @@
             <div class="contacts__info">
               <h2>Маркетинговое агенство</h2>
               <h3>Creative Marketing<span> box</span></h3>
-              <div class="main-footer__contacts"><a class="main-footer__link-location" href="https://yandex.by/maps/157/minsk/house/Zk4YcARnSEwGQFtpfXV1dHRrZw==/?ll=27.639610%2C53.946001&amp;utm_source=main_stripe_big&amp;z=16.5" target="_blank">ул. Калиновского 77а, офис 310</a><a class="main-footer__link-mail" href="mail:info@cmbox.by">info@cmbox.by</a>
+              <div class="contacts__text">
+                <p>ООО «Дигитал Креатив Маркетинг»</p>
+                <p>УНП 193357007</p>
+                <p>р/с RUB</p>
+                <p>р/с BY97BELB301200019S0010226000 BYN БИК: BELBBY2X</p>
+                <p>Банк: ОАО «Банк БелВЭБ»</p>
+              </div>
+              <div class="main-footer__contacts"><a class="main-footer__link-location" href="https://yandex.by/maps/157/minsk/house/Zk4YcARnSEwGQFtpfXV1dHRrZw==/?ll=27.639610%2C53.946001&amp;utm_source=main_stripe_big&amp;z=16.5" target="_blank">Юридический адрес/Почтовый адрес: 220103 г. Минск, ул. Калиновского 77а, каб 310</a><a class="main-footer__link-mail" href="mail:info@cmbox.by">info@cmbox.by</a>
                 <div class="main-footer__link-box">
                   <div class="main-footer__phone"><a class="main-footer__link-phone" href="tel:+375296086368">+375 (29) 608-63-68 (Минск)</a><a class="main-footer__link-phone" href="tel:+375296086368">+7 (495) 608-63-68 (Москва)</a></div>
                   <ul class="social-list">
@@ -108,25 +115,7 @@
                     <li><a href="#"><span class="visually-hidden">Ватсап</span><img src="assets/img/svg/icon-whatsapp.svg" width="24" height="24" alt="Ватсап"/></a></li>
                   </ul>
                 </div>
-              </div>
-              <div class="contacts__form">
-                <p>Как с Вами связаться?</p>
-                <form id="form" action="#" method="get">
-                  <div class="modal__user-name">
-                    <input id="user_name" type="text" name="user_name" required>
-                    <label for="user_name">Имя</label>
-                  </div>
-                  <div class="modal__user-phone">
-                    <input id="user_phone" type="tel" name="user_phone" required>
-                    <label for="user_phone">Телефон</label>
-                  </div>
-                  <div class="modal__user-comment">
-                    <textarea id="user_comment" name="user_comment"></textarea>
-                    <label for="user_comment">Комментарий</label>
-                  </div>
-                  <button class="button" type="submit"><span>Отправить</span></button>
-                </form>
-              </div>
+              </div><a class="button services-modal-js" href="#"><span>Нажми для связи с нами</span></a>
             </div>
           </div>
         </div>
@@ -168,6 +157,32 @@
         </div>
       </div>
     </footer>
+    <section class="contacts modal modal-services-order">
+      <div class="modal__wrapper">
+        <div class="contacts__form">
+          <p>Как с Вами связаться?</p>
+          <form id="form-services-order" action="#" method="get">
+            <div class="modal__user-name">
+              <input id="user_name" type="text" name="user_name" required>
+              <label for="user_name">Имя</label>
+            </div>
+            <div class="modal__user-phone">
+              <input id="user_phone" type="tel" name="user_phone" required>
+              <label for="user_phone">Телефон</label>
+            </div>
+            <div class="modal__user-email">
+              <input id="user_email" type="tel" name="user_email">
+              <label for="user_email">Email</label>
+            </div>
+            <div class="modal__user-comment">
+              <textarea id="user_comment" name="user_comment"></textarea>
+              <label for="user_comment">Комментарий</label>
+            </div>
+            <button class="button" type="submit"><span>Отправить</span></button>
+          </form>
+        </div><a class="modal__btn-closed" href="#"><span class="visually-hidden">Закрыть модальное окно</span></a>
+      </div>
+    </section>
     <script src="assets/js/vendor.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/default.js"></script>

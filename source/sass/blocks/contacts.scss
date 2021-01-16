@@ -12,7 +12,7 @@
 
 .contacts__box-info {
   display: grid;
-  grid-template-columns: 31% 35% auto;
+  grid-template-columns: 31% 33% auto;
 
   @media (max-width: $desktop-width) {
     grid-template-columns: 32% 28% auto;
@@ -51,6 +51,13 @@
 
   .main-footer__contacts {
     display: grid;
+  }
+
+  .main-footer__link-box {
+    @media (max-width: $tablet-width) {
+      grid-template-columns: 1fr;
+      grid-gap: 10px 0;
+    }
   }
 }
 
@@ -210,6 +217,21 @@
 }
 
 .contacts__info {
+  .contacts__text {
+    margin-bottom: 20px;
+
+    p {
+      margin: 0;
+      max-width: 360px;
+      color: $dark-black;
+    }
+  }
+
+  .button {
+    margin-top: 30px;
+    max-width: 350px;
+  }
+
   @media (max-width: $desktop-width-min) {
     max-width: 430px;
     width: 100%;

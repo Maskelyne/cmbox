@@ -241,12 +241,10 @@
         cursor: pointer;
         background-image: url("../img/svg/icon-more.svg");
         background-repeat: no-repeat;
-        transition: all 0.5s linear;
         transform: rotate(180deg);
       }
 
       &--active {
-        transition: all 0.5s linear;
         transform: rotate(0);
       }
     }
