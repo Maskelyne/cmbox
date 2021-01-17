@@ -161,7 +161,7 @@ $(function () {
     return false;
   }
 
-  var maskList = $.masksSort($.masksLoad("https://cdn.rawgit.com/andr-04/inputmask-multi/master/data/phone-codes.json"), ['#'], /[0-9]|#/, "mask");
+  var maskList = $.masksSort($.masksLoad("assets/json/phone-codes.json"), ['#'], /[0-9]|#/, "mask");
   var maskOpts = {
     inputmask: {
       definitions: {
