@@ -6,6 +6,7 @@
 */
 
 //= modules/vendors.js
+//= modules/bg-main.js
 //= modules/header-nav.js
 //= modules/clients-slider.js
 //= modules/portfolio-rotate-card.js

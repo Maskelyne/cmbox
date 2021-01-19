@@ -71,13 +71,12 @@
   }
 
   time {
-    font-family: $proximaBold;
+    font-family: $proximaNova;
+    color: $dark-red;
 
     @media (max-width: $tablet-width) {
-      font-family: $proximaNova;
       font-size: 14px;
       line-height: 20px;
-      color: $dark-red;
     }
   }
 }
