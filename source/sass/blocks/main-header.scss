@@ -149,7 +149,7 @@
       color: $dark-red;
 
       @media (max-width: $desktop-width-min) {
-        color: $dark-blue;
+        color: rgba(232, 169, 180, 0.6);
       }
     }
   }

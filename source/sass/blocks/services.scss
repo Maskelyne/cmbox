@@ -177,7 +177,7 @@
   }
 
   @media (max-width: $tablet-width) {
-    margin: 60px auto;
+    margin: 60px auto 0 auto;
     padding: 0 15px;
   }
 
@@ -222,6 +222,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media (max-width: $desktop-width-min) {
+      min-height: 400px;
+    }
 
     @media (max-width: $tablet-width) {
       min-height: auto;
@@ -1594,7 +1598,6 @@
 
   @media (max-width: $desktop-width-min) {
     padding: 0 30px;
-    margin-left: 28%;
   }
 
   @media (max-width: $tablet-width) {

@@ -2,7 +2,11 @@
   margin-left: 20%;
 
   @media (max-width: $desktop-width-min) {
-    margin-left: 24%;
+    margin-left: 30%;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-left: 70px;
   }
 }
 
@@ -16,6 +20,13 @@
   @include reset-list;
   display: flex;
   flex-wrap: wrap;
+
+  li {
+    @media (max-width: $tablet-width) {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
 
   .breadcrumbs__link {
     padding-right: 30px;
@@ -34,7 +45,8 @@
       transform: rotate(45deg);
 
       @media (max-width: $tablet-width) {
-        top: 7px;
+        width: 7px;
+        top: 6px;
       }
     }
 
@@ -49,7 +61,8 @@
       transform: rotate(-45deg);
 
       @media (max-width: $tablet-width) {
-        top: 12px;
+        width: 7px;
+        top: 10px;
       }
     }
 

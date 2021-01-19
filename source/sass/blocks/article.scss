@@ -72,6 +72,13 @@
 
   time {
     font-family: $proximaBold;
+
+    @media (max-width: $tablet-width) {
+      font-family: $proximaNova;
+      font-size: 14px;
+      line-height: 20px;
+      color: $dark-red;
+    }
   }
 }
 
@@ -150,8 +157,8 @@
     letter-spacing: 0;
 
     @media (max-width: $tablet-width) {
-      font-size: 16px;
-      line-height: 16px;
+      font-size: 20px;
+      line-height: 22px;
     }
   }
 
