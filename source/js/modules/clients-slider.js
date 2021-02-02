@@ -11,18 +11,16 @@
       speed: 1000,
       spaceBetween: 30,
       autoplay: {
-        delay: 1200,
+        delay: 2500,
       },
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
       breakpoints: {
-        320: {
-          slidesPerView: 1,
-        },
         768: {
-          slidesPerView: 2,
+          slidesPerView: 1,
+          spaceBetween: 15,
         },
         1024: {
           slidesPerView: 2,

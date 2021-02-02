@@ -6117,6 +6117,17 @@ main {
 .services__swiper-container {
   position: static;
   padding: 30px 15px; }
+  @media (max-width: 767px) {
+    .services__swiper-container {
+      padding: 30px 0 0 0; } }
+  .services__swiper-container .swiper-slide iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+    display: block; }
+    @media (max-width: 767px) {
+      .services__swiper-container .swiper-slide iframe {
+        height: 250px; } }
 
 .services__swiper-button-prev {
   left: 0px; }
@@ -9048,7 +9059,9 @@ main {
 
 .blog__image {
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px; }
   .blog__image img {
     display: block;
     filter: brightness(0.5);
