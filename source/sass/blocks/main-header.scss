@@ -41,10 +41,10 @@
   line-height: 15px;
 
   @media (max-width: $desktop-width-min) {
-    padding: 5px 10px;
+    padding: 10px;
     position: absolute;
     top: 65px;
-    right: 0;
+    right: 20px;
     grid-template-columns: 1fr;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -53,9 +53,13 @@
     display: none;
   }
 
+  @media (max-width: $tablet-width) {
+    right: 0;
+  }
+
   &--active {
     display: grid;
-    grid-gap: 5px 0;
+    grid-gap: 7px 0;
   }
 
   a:hover {
@@ -64,6 +68,98 @@
 
     @media (max-width: $desktop-width-min) {
       color: $dark-red;
+    }
+  }
+}
+
+.main-header__social {
+  margin-top: 5px;
+  grid-row: 1;
+  grid-gap: 0 5px;
+  grid-template-columns: auto 20px;
+  display: none;
+
+  @media (max-width: $desktop-width-min) {
+    display: grid;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-top: 3px;
+  }
+
+  ul {
+    @include reset-list;
+    position: absolute;
+    top: 65px;
+    right: 175px;
+    background-color: $light-gray;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 0 10px;
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    @media (max-width: $tablet-width) {
+      right: 29px;
+    }
+  }
+
+  button {
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 2px 0 0 0;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+
+    &::before {
+      width: 8px;
+      height: 2px;
+      position: absolute;
+      content: "";
+      top: 9px;
+      left: 3px;
+      background-color: $blue;
+      transform: rotate(45deg);
+
+      @media (max-width: $tablet-width) {
+        top: 7px;
+      }
+    }
+
+    &::after {
+      width: 8px;
+      height: 2px;
+      position: absolute;
+      content: "";
+      top: 9px;
+      left: 8px;
+      background-color: $blue;
+      transform: rotate(-45deg);
+
+      @media (max-width: $tablet-width) {
+        top: 7px;
+      }
+    }
+  }
+
+  img {
+    max-width: 24px;
+    display: block;
+
+    @media (max-width: $tablet-width) {
+      max-width: 20px;
+    }
+  }
+
+  &--active {
+    ul {
+      display: grid;
     }
   }
 }
@@ -174,8 +270,8 @@
   @media (max-width: $desktop-width-min) {
     grid-column: 2;
     grid-row: 1;
-    grid-gap: 0 15px;
-    grid-template-columns: 30px auto;
+    grid-gap: 0 30px;
+    grid-template-columns: 40px auto;
   }
 
   @media (max-width: $tablet-width) {
@@ -188,6 +284,41 @@
   }
 
   .main-header__box-phone {
+    @media (max-width: $desktop-width-min) {
+      padding-right: 10px;
+      position: relative;
+
+      &::before {
+        width: 8px;
+        height: 2px;
+        position: absolute;
+        content: "";
+        top: 13px;
+        right: 5px;
+        background-color: $blue;
+        transform: rotate(45deg);
+
+        @media (max-width: $tablet-width) {
+          top: 11px;
+        }
+      }
+
+      &::after {
+        width: 8px;
+        height: 2px;
+        position: absolute;
+        content: "";
+        top: 13px;
+        right: 0;
+        background-color: $blue;
+        transform: rotate(-45deg);
+
+        @media (max-width: $tablet-width) {
+          top: 11px;
+        }
+      }
+    }
+
     &:hover {
       span {
         color: $dark-red;

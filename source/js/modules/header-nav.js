@@ -12,6 +12,8 @@
   var stageWrapMenuBtn = document.querySelector('.main-header__stage-link');
   var mainPhone = document.querySelector('.main-header__box-phone');
   var mainBoxPhone = document.querySelector('.main-header__tel');
+  var mainSocialBox = document.querySelector('.main-header__social');
+  var mainSocialBtn = document.querySelector('.main-header__social-btn');
 
   if (menuBtn) {
 
@@ -132,14 +134,24 @@
     }
   }
 
-  if (window.innerWidth <= 1023) {
+  mainPhone.addEventListener('click', function (evt) {
+    evt.preventDefault();
 
-    mainPhone.addEventListener('click', function (evt) {
-      evt.preventDefault();
+    mainBoxPhone.classList.toggle('main-header__tel--active');
 
-      mainBoxPhone.classList.toggle('main-header__tel--active');
-    });
+    if (mainSocialBox.classList.contains('main-header__social--active')) {
+      mainSocialBox.classList.remove('main-header__social--active');
+    }
+  });
 
-  }
+  mainSocialBtn.addEventListener('click', function (evt) {
+    evt.preventDefault();
+
+    mainSocialBox.classList.toggle('main-header__social--active');
+
+    if (mainBoxPhone.classList.contains('main-header__tel--active')) {
+      mainBoxPhone.classList.remove('main-header__tel--active');
+    }
+  });
 
 })();

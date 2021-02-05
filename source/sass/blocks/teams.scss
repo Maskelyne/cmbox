@@ -565,7 +565,7 @@
         height: 20px;
         position: absolute;
         top: 210px;
-        left: -20px;
+        left: -30px;
         animation: teams-svg-developers;
         animation-duration: 2s;
         animation-delay: 0.5s;
@@ -574,6 +574,8 @@
         animation-direction: alternate;
 
         @media (max-width: $desktop-width) {
+          width: 100px;
+          height: 17px;
           left: -45px;
         }
       }
@@ -582,7 +584,7 @@
         width: 60px;
         height: 45px;
         position: absolute;
-        top: 125px;
+        top: 100px;
         left: 60px;
         animation: teams-svg-top;
         animation-duration: 2.3s;
@@ -592,7 +594,9 @@
         animation-direction: alternate;
 
         @media (max-width: $desktop-width) {
-          left: 25px;
+          width: 50px;
+          height: 45px;
+          left: 10px;
         }
       }
 
@@ -600,7 +604,7 @@
         width: 125px;
         height: 35px;
         position: absolute;
-        top: 35px;
+        top: 0;
         left: 110px;
         animation: teams-svg-top;
         animation-duration: 2s;
@@ -610,7 +614,10 @@
         animation-direction: alternate;
 
         @media (max-width: $desktop-width) {
-          left: 85px;
+          width: 110px;
+          height: 30px;
+          top: -10px;
+          left: 70px;
         }
       }
 
@@ -618,7 +625,7 @@
         width: 62px;
         height: 63px;
         position: absolute;
-        top: 90px;
+        top: 45px;
         left: 175px;
         animation: teams-svg-top;
         animation-duration: 2s;
@@ -628,12 +635,14 @@
         animation-direction: alternate;
 
         @media (max-width: $desktop-width) {
-          top: 90px;
-          left: 155px;
+          width: 58px;
+          height: 55px;
+          top: 33px;
+          left: 105px;
         }
 
         @media (max-width: $desktop-width-min) {
-          top: 80px;
+          top: 40px;
         }
       }
 
@@ -641,7 +650,7 @@
         width: 45px;
         height: 35px;
         position: absolute;
-        top: 115px;
+        top: 80px;
         left: 360px;
         animation: teams-svg-top;
         animation-duration: 1.7s;
@@ -651,7 +660,8 @@
         animation-direction: alternate;
 
         @media (max-width: $desktop-width) {
-          top: 100px;
+          top: 65px;
+          left: 300px;
         }
       }
 
@@ -659,7 +669,7 @@
         width: 110px;
         height: 30px;
         position: absolute;
-        top: 60px;
+        top: 20px;
         left: 360px;
         animation: teams-svg-top;
         animation-duration: 1.8s;
@@ -669,8 +679,12 @@
         animation-direction: alternate;
 
         @media (max-width: $desktop-width) {
-          top: 50px;
-          left: 305px;
+          top: 15px;
+          left: 300px;
+        }
+
+        @media (max-height: $desktop-width-min) {
+          top: 5px;
         }
       }
 
@@ -678,8 +692,8 @@
         width: 50px;
         height: 40px;
         position: absolute;
-        top: 140px;
-        left: 450px;
+        top: 110px;
+        left: 470px;
         animation: teams-svg-top;
         animation-duration: 1.8s;
         animation-delay: 0.5s;
@@ -697,7 +711,7 @@
         height: 40px;
         position: absolute;
         top: 215px;
-        left: 510px;
+        left: 500px;
         animation: teams-svg-top;
         animation-duration: 2s;
         animation-delay: 0.3s;
@@ -706,7 +720,7 @@
         animation-direction: alternate;
 
         @media (max-width: $desktop-width) {
-          left: 430px;
+          left: 440px;
         }
 
         @media (max-width: $desktop-width-min) {
@@ -775,7 +789,7 @@
         width: 75px;
         height: 75px;
         position: absolute;
-        top: -20%;
+        top: -22%;
         left: 33%;
         animation: teams-svg-top;
         animation-duration: 2.4s;
@@ -795,7 +809,7 @@
         width: 65px;
         height: 80px;
         position: absolute;
-        top: -20%;
+        top: -27%;
         left: 65%;
         animation: teams-svg-top;
         animation-duration: 2.5s;
@@ -807,7 +821,7 @@
         @media (max-width: $desktop-width) {
           width: 60px;
           height: 75px;
-          top: -22%;
+          top: -28%;
         }
       }
 
@@ -816,7 +830,7 @@
         height: 78px;
         position: absolute;
         top: 29%;
-        left: 9%;
+        left: 16%;
         animation: rotateSeo;
         animation-duration: 1.7s;
         animation-delay: 0s;
@@ -825,12 +839,15 @@
         animation-direction: alternate;
 
         @media (max-width: $desktop-width) {
-          top: 28%;
-          left: 8%;
+          width: 50px;
+          height: 65px;
+          top: 29%;
+          left: 16%;
         }
 
         @media (max-width: $desktop-width-min) {
-          top: 29%;
+          top: 29.5%;
+          left: 17%;
         }
       }
 

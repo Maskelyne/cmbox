@@ -181,22 +181,22 @@ $(function () {
     onMaskChange: function(maskObj, determined) {}
   };
 
-  $('#user_phone').change(function() {
-    $('#user_phone').inputmask("remove");
+  $('#user_phone').change(function () {
+    $('#user_phone').inputmask('remove');
     $('#user_phone').inputmasks(maskOpts);
   });
 
   $('#user_phone').change();
 
-  $('#user_phone2').change(function() {
-    $('#user_phone2').inputmask("remove");
+  $('#user_phone2').change(function () {
+    $('#user_phone2').inputmask('remove');
     $('#user_phone2').inputmasks(maskOpts);
   });
 
   $('#user_phone2').change();
 
-  $('#user_phone-question').change(function() {
-    $('#user_phone-question').inputmask("remove");
+  $('#user_phone-question').change(function () {
+    $('#user_phone-question').inputmask('remove');
     $('#user_phone-question').inputmasks(maskOpts);
   });
 
