@@ -151,15 +151,39 @@ $(function () {
     text.style.display = '';
   };
 
-  document.ondragstart = test;
-  //запрет на перетаскивание
-  document.onselectstart = test;
-  //запрет на выделение элементов страницы
-  document.oncontextmenu = test;
-  //запрет на выведение контекстного меню
-  function test() {
-    return false;
-  }
+  // var checkCookies = function () {
+  //   var cookieDate = localStorage.getItem('cookieDate');
+  //   var cookieNotification = document.getElementById('cookie__notification');
+  //   var cookieBtn = cookieNotification.querySelector('.cookie__accept');
+  //   var cookieBtnClosed = cookieNotification.querySelector('.cookie__btn');
+  //
+  //   // Если записи про кукисы нет или она просрочена на 1 год, то показываем информацию про кукисы
+  //   if (!cookieDate || (+cookieDate + 604800) < Date.now()) {
+  //     cookieNotification.classList.add('show');
+  //   }
+  //
+  //   // При клике на кнопку, в локальное хранилище записывается текущая дата в системе UNIX
+  //   cookieBtn.addEventListener('click', function () {
+  //     localStorage.setItem('cookieDate', Date.now());
+  //     cookieNotification.classList.remove('show');
+  //   });
+  //
+  //   cookieBtnClosed.addEventListener('click', function () {
+  //     cookieNotification.classList.remove('show');
+  //   });
+  // };
+  //
+  // checkCookies();
+
+  // document.ondragstart = test;
+  // //запрет на перетаскивание
+  // document.onselectstart = test;
+  // //запрет на выделение элементов страницы
+  // document.oncontextmenu = test;
+  // //запрет на выведение контекстного меню
+  // function test() {
+  //   return false;
+  // }
 
   var maskList = $.masksSort($.masksLoad("assets/json/phone-codes.json"), ['#'], /[0-9]|#/, "mask");
   var maskOpts = {

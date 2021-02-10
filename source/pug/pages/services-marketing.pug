@@ -157,21 +157,22 @@ block main
     section.services
       h1 Услуги
       .services__box
-        .services__nav-box
-          ul.services__boxes-list
-            each item, index in boxesList
-              if (index === activePage)
-                li
-                  a(href= item.link).services__link-active
-                    span= item.text
-                    +img(item.path, item.name, item.format, item.width, item.height, item.altText)
-                    +img(item.iconPath, item.iconName, item.format, item.iconWidth, item.iconHeight, item.altText)
-              else
-                li
-                  a(href= item.link)
-                    span= item.text
-                    +img(item.path, item.name, item.format, item.width, item.height, item.altText)
-                    +img(item.iconPath, item.iconName, item.format, item.iconWidth, item.iconHeight, item.altText)
+        .wrap
+          .services__nav-box
+            ul.services__boxes-list
+              each item, index in boxesList
+                if (index === activePage)
+                  li
+                    a(href= item.link).services__link-active
+                      span= item.text
+                      +img(item.path, item.name, item.format, item.width, item.height, item.altText)
+                      +img(item.iconPath, item.iconName, item.format, item.iconWidth, item.iconHeight, item.altText)
+                else
+                  li
+                    a(href= item.link)
+                      span= item.text
+                      +img(item.path, item.name, item.format, item.width, item.height, item.altText)
+                      +img(item.iconPath, item.iconName, item.format, item.iconWidth, item.iconHeight, item.altText)
         .services__box-images
           .services__image
             +img('services', 'icon-seo', 'svg', '220', '220', 'Seo')

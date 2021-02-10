@@ -272,6 +272,7 @@
   .services__span {
     display: flex;
     gap: 5px;
+    justify-content: center;
 
     &:first-child {
       border-bottom: dashed 2px $white;
