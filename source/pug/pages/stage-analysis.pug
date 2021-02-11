@@ -11,43 +11,48 @@ block main
     section.stages
       +breadcrumbs
       h1 Этапы
-      .stages__nav-box
-        ul.stages__nav-list
+      .services__nav-box
+        ul
           li
-            .stages__image.stages__image--active
-              a(href='stage-analysis.html')
-                span Анализ
-                +img('stage-boxes', 'stage-box-active', 'svg', '220', '175', 'Анализ')
+            a.services__link-active(href="#")
+              +img('services/services-nav', 'box-close', 'svg', '30', '30', '1 Элемент')
+              +img('services/services-nav', 'box-open', 'svg', '30', '30', '2 Элемент')
+              +img('services/services-nav', 'box-close-hover', 'svg', '30', '30', '3 Элемент')
+              | Аналитика
+              +img('services/services-nav', 'analytic-icon', 'svg', '30', '30', '4 Элемент')
+              +img('services/services-nav', 'analytic-icon-active', 'svg', '30', '30', '5 Элемента')
           li
-            .stages__image
-              a(href='stage-strategy.html')
-                span Стратегия
-                +img('stage-boxes', 'stage-box', 'svg', '125', '120', 'Стратегия')
+            a(href="#")
+              +img('services/services-nav', 'box-close', 'svg', '30', '30', '1 Элемент')
+              +img('services/services-nav', 'box-open', 'svg', '30', '30', '2 Элемент')
+              +img('services/services-nav', 'box-close-hover', 'svg', '30', '30', '3 Элемент')
+              | Дизайн
+              +img('services/services-nav', 'design-icon', 'svg', '30', '30', '4 Элемент')
+              +img('services/services-nav', 'design-icon-active', 'svg', '30', '30', '5 Элемент')
           li
-            .stages__image
-              a(href='stage-design.html')
-                span Дизайн
-                +img('stage-boxes', 'stage-box', 'svg', '125', '120', 'Дизайн')
+            a(href="#")
+              +img('services/services-nav', 'box-close', 'svg', '30', '30', '1 Элемент')
+              +img('services/services-nav', 'box-open', 'svg', '30', '30', '2 Элемент')
+              +img('services/services-nav', 'box-close-hover', 'svg', '30', '30', '3 Элемент')
+              | Стратегия
+              +img('services/services-nav', 'strategy-icon', 'svg', '30', '30', '4 Элемент')
+              +img('services/services-nav', 'strategy-icon-active', 'svg', '30', '30', '5 Элемент')
           li
-            .stages__image
-              a(href='stage-developers.html')
-                span Разработка
-                +img('stage-boxes', 'stage-box', 'svg', '125', '120', 'Разработка')
+            a(href="#")
+              +img('services/services-nav', 'box-close', 'svg', '30', '30', '1 Элемент')
+              +img('services/services-nav', 'box-open', 'svg', '30', '30', '2 Элемент')
+              +img('services/services-nav', 'box-close-hover', 'svg', '30', '30', '3 Элемент')
+              | Видеомаркетинг
+              +img('services/services-nav', 'video-icon', 'svg', '30', '30', '4 Элемент')
+              +img('services/services-nav', 'video-icon-active', 'svg', '30', '30', '5 Элемент')
           li
-            .stages__image
-              a(href='stage-promotion.html')
-                span Продвижение
-                +img('stage-boxes', 'stage-box', 'svg', '125', '120', 'Продвижение')
-          li
-            .stages__image
-              a(href='stage-automation.html')
-                span Автоматизация
-                +img('stage-boxes', 'stage-box', 'svg', '125', '120', 'Автоматизация')
-          li
-            .stages__image
-              a(href='stage-support.html')
-                span Поддержка
-                +img('stage-boxes', 'stage-box', 'svg', '125', '120', 'Поддержка')
+            a(href="#")
+              +img('services/services-nav', 'box-close', 'svg', '30', '30', '1 Элемент')
+              +img('services/services-nav', 'box-open', 'svg', '30', '30', '2 Элемент')
+              +img('services/services-nav', 'box-close-hover', 'svg', '30', '30', '3 Элемент')
+              | Воронка продаж
+              +img('services/services-nav', 'sale-icon', 'svg', '30', '30', '4 Элемент')
+              +img('services/services-nav', 'sale-icon-active', 'svg', '30', '30', '5 Элемент')
       .stages__box.stages__box--analysis.container
         +img('stage-analysis', 'image-element-1', 'svg', '720', '510', 'Анализ')
         +img('stage-analysis', 'image-element-2', 'svg', '870', '275', 'Анализ')

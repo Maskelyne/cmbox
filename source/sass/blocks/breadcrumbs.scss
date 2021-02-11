@@ -1,6 +1,10 @@
 .breadcrumbs {
   margin-left: 20%;
 
+  @media (max-width: $desktop-width) {
+    margin-left: 26%;
+  }
+
   @media (max-width: $desktop-width-min) {
     margin-left: 30%;
   }
