@@ -813,16 +813,15 @@
   }
 }
 
+.services__nav-box:hover + .services__box-images img {
+  &:first-child {
+    display: none;
+  }
 
-//.services__nav-box:hover + .services__box-images img {
-//  &:first-child {
-//    display: none;
-//  }
-//
-//  &:last-child {
-//    display: block;
-//  }
-//}
+  &:last-child {
+    display: block;
+  }
+}
 
 .services__slide-image {
   img {

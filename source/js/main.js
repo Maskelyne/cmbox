@@ -25,4 +25,5 @@
 //= modules/link-hidden.js
 //= modules/feedback-tabs.js
 //= modules/ymaps.js
+//= modules/animated-maps.js
 

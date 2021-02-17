@@ -3096,209 +3096,6 @@ main {
       transform: translateY(-15px);
       transition: all 0.3s linear; }
 
-.steps__wrapper {
-  display: grid;
-  grid-gap: 100px 0;
-  margin-bottom: 150px; }
-  @media (max-width: 1200px) {
-    .steps__wrapper {
-      grid-gap: 70px 0;
-      margin-bottom: 70px; } }
-  @media (max-width: 767px) {
-    .steps__wrapper {
-      grid-gap: 30px 0;
-      margin-bottom: 50px; } }
-  .steps__wrapper h2 {
-    text-align: center; }
-
-.steps__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(7, 135px);
-  justify-content: space-between; }
-  @media (max-width: 1200px) {
-    .steps__list {
-      max-width: 965px;
-      margin: 0 auto;
-      grid-gap: 0 9px;
-      grid-template-columns: repeat(7, 130px); } }
-  @media (max-width: 1023px) {
-    .steps__list {
-      max-width: 570px;
-      grid-gap: 0 18px;
-      grid-template-columns: repeat(4, 130px); } }
-  @media (max-width: 767px) {
-    .steps__list {
-      grid-template-columns: repeat(2, 130px); } }
-  .steps__list li {
-    position: relative; }
-    .steps__list li:nth-child(1)::before {
-      width: 70px;
-      height: 62px;
-      position: absolute;
-      content: "";
-      bottom: 45px;
-      left: 90px;
-      background-image: url("../img/svg/icon-arrow-1.svg");
-      background-repeat: no-repeat; }
-      @media (max-width: 1200px) {
-        .steps__list li:nth-child(1)::before {
-          bottom: 45px;
-          left: 65px; } }
-      @media (max-width: 1023px) {
-        .steps__list li:nth-child(1)::before {
-          bottom: 65px;
-          left: 75px; } }
-    .steps__list li:nth-child(2)::before {
-      width: 90px;
-      height: 90px;
-      position: absolute;
-      content: "";
-      top: -90px;
-      left: 75px;
-      background-image: url("../img/svg/icon-arrow-2.svg");
-      background-repeat: no-repeat; }
-      @media (max-width: 1200px) {
-        .steps__list li:nth-child(2)::before {
-          left: 45px; } }
-      @media (max-width: 1023px) {
-        .steps__list li:nth-child(2)::before {
-          left: 55px; } }
-      @media (max-width: 767px) {
-        .steps__list li:nth-child(2)::before {
-          top: 130px;
-          left: -28px;
-          transform: rotate(160deg); } }
-    .steps__list li:nth-child(3)::before {
-      width: 95px;
-      height: 90px;
-      position: absolute;
-      content: "";
-      bottom: 20px;
-      left: 70px;
-      background-image: url("../img/svg/icon-arrow-3.svg");
-      background-repeat: no-repeat; }
-      @media (max-width: 1200px) {
-        .steps__list li:nth-child(3)::before {
-          bottom: 20px;
-          left: 42px; } }
-      @media (max-width: 1023px) {
-        .steps__list li:nth-child(3)::before {
-          width: 95px;
-          height: 90px;
-          top: 42px;
-          left: 126px;
-          background-image: url("../img/svg/icon-arrow-7.svg"); } }
-      @media (max-width: 767px) {
-        .steps__list li:nth-child(3)::before {
-          top: 125px;
-          left: 50px;
-          background-image: url("../img/svg/icon-arrow-3.svg"); } }
-    .steps__list li:nth-child(4)::before {
-      width: 80px;
-      height: 80px;
-      position: absolute;
-      content: "";
-      top: -78px;
-      left: 87px;
-      background-image: url("../img/svg/icon-arrow-4.svg");
-      background-repeat: no-repeat; }
-      @media (max-width: 1200px) {
-        .steps__list li:nth-child(4)::before {
-          top: -80px;
-          left: 55px; } }
-      @media (max-width: 1023px) {
-        .steps__list li:nth-child(4)::before {
-          height: 90px;
-          top: 117px;
-          left: -40px;
-          background-image: url("../img/svg/icon-arrow-8.svg"); } }
-    .steps__list li:nth-child(5)::before {
-      width: 125px;
-      height: 90px;
-      position: absolute;
-      content: "";
-      bottom: 20px;
-      left: 37px;
-      background-image: url("../img/svg/icon-arrow-5.svg");
-      background-repeat: no-repeat; }
-      @media (max-width: 1200px) {
-        .steps__list li:nth-child(5)::before {
-          bottom: 20px;
-          left: 10px; } }
-      @media (max-width: 1023px) {
-        .steps__list li:nth-child(5)::before {
-          left: 278px;
-          bottom: 40px;
-          background-image: url("../img/svg/icon-arrow-9.svg"); } }
-      @media (max-width: 767px) {
-        .steps__list li:nth-child(5)::before {
-          left: 20px;
-          background-image: url("../img/svg/icon-arrow-5.svg"); } }
-    .steps__list li:nth-child(6)::before {
-      width: 91px;
-      height: 100px;
-      position: absolute;
-      content: "";
-      top: -95px;
-      left: 75px;
-      background-image: url("../img/svg/icon-arrow-6.svg");
-      background-repeat: no-repeat; }
-      @media (max-width: 1200px) {
-        .steps__list li:nth-child(6)::before {
-          top: -95px;
-          left: 45px; } }
-      @media (max-width: 1023px) {
-        .steps__list li:nth-child(6)::before {
-          top: -98px;
-          left: -43px;
-          background-image: url("../img/svg/icon-arrow-10.svg"); } }
-      @media (max-width: 767px) {
-        .steps__list li:nth-child(6)::before {
-          width: 100px;
-          top: 125px;
-          transform: rotate(65deg);
-          background-image: url("../img/svg/icon-arrow-7.svg"); } }
-    .steps__list li:nth-child(2n) {
-      margin-top: 110px; }
-      @media (max-width: 1023px) {
-        .steps__list li:nth-child(2n) {
-          margin-top: 130px; } }
-
-.steps__box {
-  max-width: 135px; }
-  .steps__box img {
-    display: block;
-    opacity: 1;
-    transition: all 0.3s linear; }
-  .steps__box a {
-    display: block;
-    position: relative; }
-    .steps__box a:hover {
-      color: #000000; }
-      .steps__box a:hover span {
-        transition: all 0.4s linear;
-        background-color: #d6516b; }
-  .steps__box span {
-    width: 110px;
-    padding: 18px 0 18px 0;
-    position: absolute;
-    top: 58px;
-    z-index: 1;
-    font-family: "ProximaNova-Bold", arial, sans-serif;
-    font-size: 14px;
-    line-height: 14px;
-    text-align: center;
-    color: #000000;
-    transition: all 0.4s linear; }
-    @media (max-width: 1200px) {
-      .steps__box span {
-        width: 105px;
-        top: 56px;
-        padding: 17px 0; } }
-
 .about-us {
   margin-top: 95px; }
   .about-us .breadcrumbs {
@@ -5227,6 +5024,67 @@ main {
     display: grid;
     grid-gap: 30px 0; }
 
+.map {
+  position: relative; }
+  .map h2 {
+    margin: 0 0 30px 0;
+    color: #0a3d76;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center; }
+    @media (max-width: 767px) {
+      .map h2 {
+        font-size: 20px;
+        line-height: 20px; } }
+  .map .ymaps-2-1-78-ground-pane {
+    filter: grayscale(1); }
+  .map--color-none .ymaps-2-1-78-ground-pane {
+    filter: grayscale(0); }
+
+.contacts-btn {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px 0;
+  position: absolute;
+  top: 165px;
+  left: 95px;
+  z-index: 1; }
+  @media (max-width: 767px) {
+    .contacts-btn {
+      top: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      grid-template-columns: repeat(3, 92px);
+      grid-gap: 0 10px;
+      padding: 0 10px; } }
+  .contacts-btn button {
+    min-width: 200px;
+    padding: 12px 0;
+    margin: 0;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 18px;
+    border: none;
+    background-image: linear-gradient(90deg, #8d2716 5.41%, #c9081f 89.5%);
+    border-radius: 8px;
+    box-shadow: -4px -4px 16px rgba(255, 255, 255, 0.8), 8px 8px 16px rgba(0, 0, 0, 0.25);
+    outline: none; }
+    @media (max-width: 767px) {
+      .contacts-btn button {
+        min-width: auto;
+        padding: 7px 0; } }
+    .contacts-btn button:hover {
+      background-image: linear-gradient(90.02deg, #e2031e 5.42%, #8d1400 94.13%);
+      box-shadow: -6px -6px 20px rgba(255, 255, 255, 0.8), 8px 8px 16px rgba(0, 0, 0, 0.3); }
+    .contacts-btn button:active {
+      box-shadow: inset -3px -3px 5px rgba(255, 85, 106, 0.4), inset 5px 5px 10px rgba(80, 20, 11, 0.4); }
+    .contacts-btn button:disabled {
+      background: #a0a0a0; }
+  .contacts-btn .btn-active {
+    background-image: linear-gradient(90deg, #8d2716 0%, #8d2716 100%);
+    box-shadow: inset -3px -3px 5px rgba(255, 85, 106, 0.4), inset 5px 5px 10px rgba(80, 20, 11, 0.4); }
+
 .services {
   margin-top: 95px; }
   @media (max-width: 767px) {
@@ -5828,6 +5686,12 @@ main {
     .services__nav-box img:nth-child(2), .services__nav-box img:nth-child(3), .services__nav-box img:nth-child(5) {
       display: none; }
 
+.services__nav-box:hover + .services__box-images img:first-child {
+  display: none; }
+
+.services__nav-box:hover + .services__box-images img:last-child {
+  display: block; }
+
 .services__slide-image img {
   display: block;
   border-radius: 15px;
@@ -6106,8 +5970,8 @@ main {
             animation: stage-show-elements-2;
     -webkit-animation-duration: 2s;
             animation-duration: 2s;
-    -webkit-animation-delay: 1.5s;
-            animation-delay: 1.5s;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
     -webkit-animation-timing-function: ease;
             animation-timing-function: ease;
     -webkit-animation-iteration-count: 1;
@@ -6126,8 +5990,8 @@ main {
             animation: stage-show-elements-1;
     -webkit-animation-duration: 1.5s;
             animation-duration: 1.5s;
-    -webkit-animation-delay: 0.3s;
-            animation-delay: 0.3s;
+    -webkit-animation-delay: 0.5s;
+            animation-delay: 0.5s;
     -webkit-animation-timing-function: ease;
             animation-timing-function: ease;
     -webkit-animation-iteration-count: 1;
@@ -6157,8 +6021,8 @@ main {
             animation: stage-show-elements-3, stage-show-elements-4;
     -webkit-animation-duration: 2s, 1.8s;
             animation-duration: 2s, 1.8s;
-    -webkit-animation-delay: 2s, 2.2s;
-            animation-delay: 2s, 2.2s;
+    -webkit-animation-delay: 1.2s, 0s;
+            animation-delay: 1.2s, 0s;
     -webkit-animation-timing-function: ease, ease-in-out;
             animation-timing-function: ease, ease-in-out;
     -webkit-animation-iteration-count: 1, infinite;
@@ -6186,8 +6050,8 @@ main {
             animation: stage-show-elements-3, stage-show-elements-4;
     -webkit-animation-duration: 2s, 2.1s;
             animation-duration: 2s, 2.1s;
-    -webkit-animation-delay: 2.5s, 2.8s;
-            animation-delay: 2.5s, 2.8s;
+    -webkit-animation-delay: 1.5s, 0s;
+            animation-delay: 1.5s, 0s;
     -webkit-animation-timing-function: ease, ease-in-out;
             animation-timing-function: ease, ease-in-out;
     -webkit-animation-iteration-count: 1, infinite;
@@ -6211,8 +6075,8 @@ main {
             animation: stage-show-elements-3, stage-show-elements-4;
     -webkit-animation-duration: 2s, 2.6s;
             animation-duration: 2s, 2.6s;
-    -webkit-animation-delay: 3s, 0s;
-            animation-delay: 3s, 0s;
+    -webkit-animation-delay: 1.8s, 0s;
+            animation-delay: 1.8s, 0s;
     -webkit-animation-timing-function: ease, ease-in-out;
             animation-timing-function: ease, ease-in-out;
     -webkit-animation-iteration-count: 1, infinite;
@@ -6239,8 +6103,8 @@ main {
             animation: stage-show-elements-3, stage-show-elements-4;
     -webkit-animation-duration: 2s, 2.5s;
             animation-duration: 2s, 2.5s;
-    -webkit-animation-delay: 3.5s, 0s;
-            animation-delay: 3.5s, 0s;
+    -webkit-animation-delay: 2.1s, 0s;
+            animation-delay: 2.1s, 0s;
     -webkit-animation-timing-function: ease, ease-in-out;
             animation-timing-function: ease, ease-in-out;
     -webkit-animation-iteration-count: 1, infinite;
@@ -6267,8 +6131,8 @@ main {
             animation: stage-show-elements-3, stage-show-elements-4;
     -webkit-animation-duration: 2s, 1.7s;
             animation-duration: 2s, 1.7s;
-    -webkit-animation-delay: 4s, 0s;
-            animation-delay: 4s, 0s;
+    -webkit-animation-delay: 2.4s, 0s;
+            animation-delay: 2.4s, 0s;
     -webkit-animation-timing-function: ease, ease-in-out;
             animation-timing-function: ease, ease-in-out;
     -webkit-animation-iteration-count: 1, infinite;
@@ -6295,8 +6159,8 @@ main {
             animation: stage-show-elements-3, stage-show-elements-4;
     -webkit-animation-duration: 2s, 2.4s;
             animation-duration: 2s, 2.4s;
-    -webkit-animation-delay: 4.5s, 0s;
-            animation-delay: 4.5s, 0s;
+    -webkit-animation-delay: 2.7s, 0s;
+            animation-delay: 2.7s, 0s;
     -webkit-animation-timing-function: ease, ease-in-out;
             animation-timing-function: ease, ease-in-out;
     -webkit-animation-iteration-count: 1, infinite;
@@ -6323,8 +6187,8 @@ main {
             animation: stage-show-elements-3, stage-show-elements-4;
     -webkit-animation-duration: 2s, 2.7s;
             animation-duration: 2s, 2.7s;
-    -webkit-animation-delay: 5s, 0s;
-            animation-delay: 5s, 0s;
+    -webkit-animation-delay: 3s, 0s;
+            animation-delay: 3s, 0s;
     -webkit-animation-timing-function: ease, ease-in-out;
             animation-timing-function: ease, ease-in-out;
     -webkit-animation-iteration-count: 1, infinite;
@@ -6351,8 +6215,8 @@ main {
               animation: stage-show-elements-2;
       -webkit-animation-duration: 2s;
               animation-duration: 2s;
-      -webkit-animation-delay: 2s;
-              animation-delay: 2s;
+      -webkit-animation-delay: 1.5s;
+              animation-delay: 1.5s;
       -webkit-animation-timing-function: ease;
               animation-timing-function: ease;
       -webkit-animation-iteration-count: 1;
@@ -6375,8 +6239,8 @@ main {
               animation: stage-show-elements-1;
       -webkit-animation-duration: 2s;
               animation-duration: 2s;
-      -webkit-animation-delay: 0.5s;
-              animation-delay: 0.5s;
+      -webkit-animation-delay: 0.3s;
+              animation-delay: 0.3s;
       -webkit-animation-timing-function: ease;
               animation-timing-function: ease;
       -webkit-animation-iteration-count: 1;
@@ -6405,8 +6269,8 @@ main {
               animation: stage-show-elements-3, stage-show-elements-4;
       -webkit-animation-duration: 2s, 1.8s;
               animation-duration: 2s, 1.8s;
-      -webkit-animation-delay: 3.1s, 2.8s;
-              animation-delay: 3.1s, 2.8s;
+      -webkit-animation-delay: 1.2s, 0s;
+              animation-delay: 1.2s, 0s;
       -webkit-animation-timing-function: ease, ease-in-out;
               animation-timing-function: ease, ease-in-out;
       -webkit-animation-iteration-count: 1, infinite;
@@ -6434,8 +6298,8 @@ main {
               animation: stage-show-elements-3, stage-show-elements-4;
       -webkit-animation-duration: 2s, 1.8s;
               animation-duration: 2s, 1.8s;
-      -webkit-animation-delay: 3.5s, 2.8s;
-              animation-delay: 3.5s, 2.8s;
+      -webkit-animation-delay: 1.5s, 0s;
+              animation-delay: 1.5s, 0s;
       -webkit-animation-timing-function: ease, ease-in-out;
               animation-timing-function: ease, ease-in-out;
       -webkit-animation-iteration-count: 1, infinite;
@@ -6463,8 +6327,8 @@ main {
               animation: stage-show-elements-3, stage-show-elements-4;
       -webkit-animation-duration: 2s, 1.8s;
               animation-duration: 2s, 1.8s;
-      -webkit-animation-delay: 4s, 2.8s;
-              animation-delay: 4s, 2.8s;
+      -webkit-animation-delay: 1.8s, 0s;
+              animation-delay: 1.8s, 0s;
       -webkit-animation-timing-function: ease, ease-in-out;
               animation-timing-function: ease, ease-in-out;
       -webkit-animation-iteration-count: 1, infinite;
@@ -6490,8 +6354,8 @@ main {
               animation: stage-show-elements-3, stage-show-elements-4;
       -webkit-animation-duration: 2s, 1.8s;
               animation-duration: 2s, 1.8s;
-      -webkit-animation-delay: 4.4s, 2.8s;
-              animation-delay: 4.4s, 2.8s;
+      -webkit-animation-delay: 2.1s, 0s;
+              animation-delay: 2.1s, 0s;
       -webkit-animation-timing-function: ease, ease-in-out;
               animation-timing-function: ease, ease-in-out;
       -webkit-animation-iteration-count: 1, infinite;
@@ -6520,8 +6384,8 @@ main {
               animation: show, scale2;
       -webkit-animation-duration: 2s, 1s;
               animation-duration: 2s, 1s;
-      -webkit-animation-delay: 4.8s, 1s;
-              animation-delay: 4.8s, 1s;
+      -webkit-animation-delay: 2.4s, 0s;
+              animation-delay: 2.4s, 0s;
       -webkit-animation-timing-function: ease, ease-in-out;
               animation-timing-function: ease, ease-in-out;
       -webkit-animation-iteration-count: 1, infinite;
@@ -6546,8 +6410,8 @@ main {
               animation: show, scale2;
       -webkit-animation-duration: 2s, 1s;
               animation-duration: 2s, 1s;
-      -webkit-animation-delay: 4.2s, 1s;
-              animation-delay: 4.2s, 1s;
+      -webkit-animation-delay: 2.7s, 0s;
+              animation-delay: 2.7s, 0s;
       -webkit-animation-timing-function: ease, ease-in-out;
               animation-timing-function: ease, ease-in-out;
       -webkit-animation-iteration-count: 1, infinite;
@@ -6621,8 +6485,8 @@ main {
               animation: stage-show-elements-3, stage-show-elements-4;
       -webkit-animation-duration: 2s, 1.8s;
               animation-duration: 2s, 1.8s;
-      -webkit-animation-delay: 4s, 2.8s;
-              animation-delay: 4s, 2.8s;
+      -webkit-animation-delay: 2s, 0s;
+              animation-delay: 2s, 0s;
       -webkit-animation-timing-function: ease, ease-in-out;
               animation-timing-function: ease, ease-in-out;
       -webkit-animation-iteration-count: 1, infinite;
@@ -6647,8 +6511,8 @@ main {
               animation: stage-show-elements-3, stage-show-elements-4;
       -webkit-animation-duration: 2s, 2.3s;
               animation-duration: 2s, 2.3s;
-      -webkit-animation-delay: 4.3s, 2.8s;
-              animation-delay: 4.3s, 2.8s;
+      -webkit-animation-delay: 2.3s, 0s;
+              animation-delay: 2.3s, 0s;
       -webkit-animation-timing-function: ease, ease-in-out;
               animation-timing-function: ease, ease-in-out;
       -webkit-animation-iteration-count: 1, infinite;
@@ -6673,8 +6537,8 @@ main {
               animation: stage-show-elements-3, stage-show-elements-4;
       -webkit-animation-duration: 2s, 2.7s;
               animation-duration: 2s, 2.7s;
-      -webkit-animation-delay: 4.6s, 2.8s;
-              animation-delay: 4.6s, 2.8s;
+      -webkit-animation-delay: 2.6s, 0s;
+              animation-delay: 2.6s, 0s;
       -webkit-animation-timing-function: ease, ease-in-out;
               animation-timing-function: ease, ease-in-out;
       -webkit-animation-iteration-count: 1, infinite;
@@ -6698,8 +6562,8 @@ main {
               animation: stage-show-elements-3, stage-show-elements-4;
       -webkit-animation-duration: 2s, 2.4s;
               animation-duration: 2s, 2.4s;
-      -webkit-animation-delay: 4.4s, 2.8s;
-              animation-delay: 4.4s, 2.8s;
+      -webkit-animation-delay: 2.9s, 0s;
+              animation-delay: 2.9s, 0s;
       -webkit-animation-timing-function: ease, ease-in-out;
               animation-timing-function: ease, ease-in-out;
       -webkit-animation-iteration-count: 1, infinite;
@@ -6724,8 +6588,8 @@ main {
               animation: stage-show-elements-3, stage-show-elements-4;
       -webkit-animation-duration: 2s, 2s;
               animation-duration: 2s, 2s;
-      -webkit-animation-delay: 4.8s, 2.8s;
-              animation-delay: 4.8s, 2.8s;
+      -webkit-animation-delay: 3.2s, 0s;
+              animation-delay: 3.2s, 0s;
       -webkit-animation-timing-function: ease, ease-in-out;
               animation-timing-function: ease, ease-in-out;
       -webkit-animation-iteration-count: 1, infinite;
@@ -6749,8 +6613,8 @@ main {
               animation: stage-show-elements-3, teams-svg-top;
       -webkit-animation-duration: 2s, 2.2s;
               animation-duration: 2s, 2.2s;
-      -webkit-animation-delay: 3s, 2.8s;
-              animation-delay: 3s, 2.8s;
+      -webkit-animation-delay: 3.5s, 0s;
+              animation-delay: 3.5s, 0s;
       -webkit-animation-timing-function: ease, ease-in-out;
               animation-timing-function: ease, ease-in-out;
       -webkit-animation-iteration-count: 1, infinite;
@@ -6776,8 +6640,8 @@ main {
               animation: stage-show-elements-3, teams-svg-top;
       -webkit-animation-duration: 2s, 2.5s;
               animation-duration: 2s, 2.5s;
-      -webkit-animation-delay: 3.4s, 2.8s;
-              animation-delay: 3.4s, 2.8s;
+      -webkit-animation-delay: 3.8s, 0s;
+              animation-delay: 3.8s, 0s;
       -webkit-animation-timing-function: ease, ease-in-out;
               animation-timing-function: ease, ease-in-out;
       -webkit-animation-iteration-count: 1, infinite;
@@ -6858,8 +6722,8 @@ main {
               animation: stage-show-elements-2;
       -webkit-animation-duration: 2s;
               animation-duration: 2s;
-      -webkit-animation-delay: 1.5s;
-              animation-delay: 1.5s;
+      -webkit-animation-delay: 1s;
+              animation-delay: 1s;
       -webkit-animation-timing-function: ease;
               animation-timing-function: ease;
       -webkit-animation-iteration-count: 1;
@@ -6881,8 +6745,8 @@ main {
               animation: stage-show-elements-1;
       -webkit-animation-duration: 2s;
               animation-duration: 2s;
-      -webkit-animation-delay: 0.3s;
-              animation-delay: 0.3s;
+      -webkit-animation-delay: 0.2s;
+              animation-delay: 0.2s;
       -webkit-animation-timing-function: ease;
               animation-timing-function: ease;
       -webkit-animation-iteration-count: 1;
@@ -6906,8 +6770,8 @@ main {
               animation: stage-show-elements-3, stage-show-elements-4;
       -webkit-animation-duration: 2s, 1.8s;
               animation-duration: 2s, 1.8s;
-      -webkit-animation-delay: 2s, 2s;
-              animation-delay: 2s, 2s;
+      -webkit-animation-delay: 1.2s, 2s;
+              animation-delay: 1.2s, 2s;
       -webkit-animation-timing-function: ease, ease-in-out;
               animation-timing-function: ease, ease-in-out;
       -webkit-animation-iteration-count: 1, infinite;
@@ -6935,8 +6799,8 @@ main {
               animation: stage-show-elements-3, stage-show-elements-4;
       -webkit-animation-duration: 2s, 2.4s;
               animation-duration: 2s, 2.4s;
-      -webkit-animation-delay: 2.4s, 2.4s;
-              animation-delay: 2.4s, 2.4s;
+      -webkit-animation-delay: 1.5s, 0s;
+              animation-delay: 1.5s, 0s;
       -webkit-animation-timing-function: ease, ease-in-out;
               animation-timing-function: ease, ease-in-out;
       -webkit-animation-iteration-count: 1, infinite;
@@ -6962,8 +6826,8 @@ main {
               animation: stage-show-elements-3, stage-show-elements-4;
       -webkit-animation-duration: 2s, 2.7s;
               animation-duration: 2s, 2.7s;
-      -webkit-animation-delay: 2.8s, 2.8s;
-              animation-delay: 2.8s, 2.8s;
+      -webkit-animation-delay: 1.8s, 0s;
+              animation-delay: 1.8s, 0s;
       -webkit-animation-timing-function: ease, ease-in-out;
               animation-timing-function: ease, ease-in-out;
       -webkit-animation-iteration-count: 1, infinite;
@@ -6987,8 +6851,8 @@ main {
               animation: stage-show-elements-3, stage-show-elements-4;
       -webkit-animation-duration: 2s, 2.1s;
               animation-duration: 2s, 2.1s;
-      -webkit-animation-delay: 3.2s, 2.8s;
-              animation-delay: 3.2s, 2.8s;
+      -webkit-animation-delay: 2.1s, 0s;
+              animation-delay: 2.1s, 0s;
       -webkit-animation-timing-function: ease, ease-in-out;
               animation-timing-function: ease, ease-in-out;
       -webkit-animation-iteration-count: 1, infinite;
@@ -7015,8 +6879,8 @@ main {
               animation: stage-show-elements-3, stage-show-elements-4;
       -webkit-animation-duration: 2s, 2.5s;
               animation-duration: 2s, 2.5s;
-      -webkit-animation-delay: 3.7s, 2.8s;
-              animation-delay: 3.7s, 2.8s;
+      -webkit-animation-delay: 2.5s, 0s;
+              animation-delay: 2.5s, 0s;
       -webkit-animation-timing-function: ease, ease-in-out;
               animation-timing-function: ease, ease-in-out;
       -webkit-animation-iteration-count: 1, infinite;
@@ -7066,8 +6930,8 @@ main {
                   animation: rotateRight, show;
           -webkit-animation-duration: 7s, 3s;
                   animation-duration: 7s, 3s;
-          -webkit-animation-delay: 0s, 3s;
-                  animation-delay: 0s, 3s;
+          -webkit-animation-delay: 0s, 1.5s;
+                  animation-delay: 0s, 1.5s;
           -webkit-animation-timing-function: linear, ease;
                   animation-timing-function: linear, ease;
           -webkit-animation-iteration-count: infinite, 1;
@@ -7088,8 +6952,8 @@ main {
                   animation: rotateRight, show;
           -webkit-animation-duration: 6.5s, 3s;
                   animation-duration: 6.5s, 3s;
-          -webkit-animation-delay: 0s, 3s;
-                  animation-delay: 0s, 3s;
+          -webkit-animation-delay: 0s, 1.5s;
+                  animation-delay: 0s, 1.5s;
           -webkit-animation-timing-function: linear, ease;
                   animation-timing-function: linear, ease;
           -webkit-animation-iteration-count: infinite, 1;
@@ -7110,8 +6974,8 @@ main {
                   animation: rotateRight, show;
           -webkit-animation-duration: 7s, 3s;
                   animation-duration: 7s, 3s;
-          -webkit-animation-delay: 0s, 3s;
-                  animation-delay: 0s, 3s;
+          -webkit-animation-delay: 0s, 1.5s;
+                  animation-delay: 0s, 1.5s;
           -webkit-animation-timing-function: linear, ease;
                   animation-timing-function: linear, ease;
           -webkit-animation-iteration-count: infinite, 1;
@@ -7134,8 +6998,8 @@ main {
                   animation: rotateRight, show;
           -webkit-animation-duration: 6.5s, 3s;
                   animation-duration: 6.5s, 3s;
-          -webkit-animation-delay: 0s, 3s;
-                  animation-delay: 0s, 3s;
+          -webkit-animation-delay: 0s, 1.5s;
+                  animation-delay: 0s, 1.5s;
           -webkit-animation-timing-function: linear, ease;
                   animation-timing-function: linear, ease;
           -webkit-animation-iteration-count: infinite, 1;
@@ -7156,8 +7020,8 @@ main {
               animation: stage-show-elements-2;
       -webkit-animation-duration: 2s;
               animation-duration: 2s;
-      -webkit-animation-delay: 2s;
-              animation-delay: 2s;
+      -webkit-animation-delay: 1s;
+              animation-delay: 1s;
       -webkit-animation-timing-function: ease;
               animation-timing-function: ease;
       -webkit-animation-iteration-count: 1;
@@ -7176,8 +7040,8 @@ main {
               animation: stage-show-elements-1;
       -webkit-animation-duration: 2s;
               animation-duration: 2s;
-      -webkit-animation-delay: 0.5s;
-              animation-delay: 0.5s;
+      -webkit-animation-delay: 0.2s;
+              animation-delay: 0.2s;
       -webkit-animation-timing-function: ease;
               animation-timing-function: ease;
       -webkit-animation-iteration-count: 1;
@@ -7201,8 +7065,8 @@ main {
               animation: stage-show-elements-3, stage-show-elements-4;
       -webkit-animation-duration: 2s, 1.8s;
               animation-duration: 2s, 1.8s;
-      -webkit-animation-delay: 3.5s, 2.8s;
-              animation-delay: 3.5s, 2.8s;
+      -webkit-animation-delay: 2s, 0s;
+              animation-delay: 2s, 0s;
       -webkit-animation-timing-function: ease, ease-in-out;
               animation-timing-function: ease, ease-in-out;
       -webkit-animation-iteration-count: 1, infinite;
@@ -7226,8 +7090,8 @@ main {
               animation: stage-show-elements-3, stage-show-elements-4;
       -webkit-animation-duration: 2s, 2.2s;
               animation-duration: 2s, 2.2s;
-      -webkit-animation-delay: 4s, 2.8s;
-              animation-delay: 4s, 2.8s;
+      -webkit-animation-delay: 2.3s, 0s;
+              animation-delay: 2.3s, 0s;
       -webkit-animation-timing-function: ease, ease-in-out;
               animation-timing-function: ease, ease-in-out;
       -webkit-animation-iteration-count: 1, infinite;
@@ -7251,8 +7115,8 @@ main {
               animation: stage-show-elements-3, stage-show-elements-4;
       -webkit-animation-duration: 2s, 2.6s;
               animation-duration: 2s, 2.6s;
-      -webkit-animation-delay: 4.5s, 2.8s;
-              animation-delay: 4.5s, 2.8s;
+      -webkit-animation-delay: 2.6s, 0s;
+              animation-delay: 2.6s, 0s;
       -webkit-animation-timing-function: ease, ease-in-out;
               animation-timing-function: ease, ease-in-out;
       -webkit-animation-iteration-count: 1, infinite;
@@ -7276,8 +7140,8 @@ main {
               animation: stage-show-elements-3, stage-show-elements-4;
       -webkit-animation-duration: 2s, 2.4s;
               animation-duration: 2s, 2.4s;
-      -webkit-animation-delay: 5s, 2.8s;
-              animation-delay: 5s, 2.8s;
+      -webkit-animation-delay: 2.9s, 0s;
+              animation-delay: 2.9s, 0s;
       -webkit-animation-timing-function: ease, ease-in-out;
               animation-timing-function: ease, ease-in-out;
       -webkit-animation-iteration-count: 1, infinite;
@@ -7301,8 +7165,8 @@ main {
               animation: stage-show-elements-3, stage-show-elements-4;
       -webkit-animation-duration: 2s, 2.7s;
               animation-duration: 2s, 2.7s;
-      -webkit-animation-delay: 5.5s, 2.8s;
-              animation-delay: 5.5s, 2.8s;
+      -webkit-animation-delay: 3.2s, 0s;
+              animation-delay: 3.2s, 0s;
       -webkit-animation-timing-function: ease, ease-in-out;
               animation-timing-function: ease, ease-in-out;
       -webkit-animation-iteration-count: 1, infinite;
@@ -7326,8 +7190,8 @@ main {
               animation: stage-show-elements-2;
       -webkit-animation-duration: 2s;
               animation-duration: 2s;
-      -webkit-animation-delay: 1.5s;
-              animation-delay: 1.5s;
+      -webkit-animation-delay: 1s;
+              animation-delay: 1s;
       -webkit-animation-timing-function: ease;
               animation-timing-function: ease;
       -webkit-animation-iteration-count: 1;
@@ -7349,8 +7213,8 @@ main {
               animation: stage-show-elements-1;
       -webkit-animation-duration: 2s;
               animation-duration: 2s;
-      -webkit-animation-delay: 0.3s;
-              animation-delay: 0.3s;
+      -webkit-animation-delay: 0.2s;
+              animation-delay: 0.2s;
       -webkit-animation-timing-function: ease;
               animation-timing-function: ease;
       -webkit-animation-iteration-count: 1;
@@ -7377,8 +7241,8 @@ main {
               animation: rotateRight, show;
       -webkit-animation-duration: 6s, 3s;
               animation-duration: 6s, 3s;
-      -webkit-animation-delay: 0s, 3s;
-              animation-delay: 0s, 3s;
+      -webkit-animation-delay: 0s, 1.7s;
+              animation-delay: 0s, 1.7s;
       -webkit-animation-timing-function: linear, ease;
               animation-timing-function: linear, ease;
       -webkit-animation-iteration-count: infinite, 1;
@@ -7406,8 +7270,8 @@ main {
               animation: rotateRight, show;
       -webkit-animation-duration: 6s, 3s;
               animation-duration: 6s, 3s;
-      -webkit-animation-delay: 0s, 3.5s;
-              animation-delay: 0s, 3.5s;
+      -webkit-animation-delay: 0s, 2s;
+              animation-delay: 0s, 2s;
       -webkit-animation-timing-function: linear, ease;
               animation-timing-function: linear, ease;
       -webkit-animation-iteration-count: infinite, 1;
@@ -7432,8 +7296,8 @@ main {
               animation: stage-show-elements-3, stage-show-elements-4;
       -webkit-animation-duration: 2s, 1.8s;
               animation-duration: 2s, 1.8s;
-      -webkit-animation-delay: 3.8s, 2.8s;
-              animation-delay: 3.8s, 2.8s;
+      -webkit-animation-delay: 2.4s, 0s;
+              animation-delay: 2.4s, 0s;
       -webkit-animation-timing-function: ease, ease-in-out;
               animation-timing-function: ease, ease-in-out;
       -webkit-animation-iteration-count: 1, infinite;
@@ -7458,8 +7322,8 @@ main {
               animation: stage-show-elements-2;
       -webkit-animation-duration: 2s;
               animation-duration: 2s;
-      -webkit-animation-delay: 1.5s;
-              animation-delay: 1.5s;
+      -webkit-animation-delay: 1.2s;
+              animation-delay: 1.2s;
       -webkit-animation-timing-function: ease;
               animation-timing-function: ease;
       -webkit-animation-iteration-count: 1;
@@ -7479,8 +7343,8 @@ main {
               animation: stage-show-elements-1;
       -webkit-animation-duration: 2s;
               animation-duration: 2s;
-      -webkit-animation-delay: 0.3s;
-              animation-delay: 0.3s;
+      -webkit-animation-delay: 0.2s;
+              animation-delay: 0.2s;
       -webkit-animation-timing-function: ease;
               animation-timing-function: ease;
       -webkit-animation-iteration-count: 1;
@@ -7507,8 +7371,8 @@ main {
               animation: stage-show-elements-3, stage-show-elements-4;
       -webkit-animation-duration: 2s, 1.8s;
               animation-duration: 2s, 1.8s;
-      -webkit-animation-delay: 2.5s, 2.8s;
-              animation-delay: 2.5s, 2.8s;
+      -webkit-animation-delay: 1.6s, 0s;
+              animation-delay: 1.6s, 0s;
       -webkit-animation-timing-function: ease, ease-in-out;
               animation-timing-function: ease, ease-in-out;
       -webkit-animation-iteration-count: 1, infinite;
@@ -7534,8 +7398,8 @@ main {
               animation: stage-show-elements-3, stage-show-elements-4;
       -webkit-animation-duration: 2s, 2s;
               animation-duration: 2s, 2s;
-      -webkit-animation-delay: 3.2s, 3.6s;
-              animation-delay: 3.2s, 3.6s;
+      -webkit-animation-delay: 2s, 0s;
+              animation-delay: 2s, 0s;
       -webkit-animation-timing-function: ease, ease-in-out;
               animation-timing-function: ease, ease-in-out;
       -webkit-animation-iteration-count: 1, infinite;
@@ -7560,8 +7424,8 @@ main {
               animation: stage-show-elements-3, stage-show-elements-4;
       -webkit-animation-duration: 2s, 2.2s;
               animation-duration: 2s, 2.2s;
-      -webkit-animation-delay: 4s, 4s;
-              animation-delay: 4s, 4s;
+      -webkit-animation-delay: 2.3s, 0s;
+              animation-delay: 2.3s, 0s;
       -webkit-animation-timing-function: ease, ease-in-out;
               animation-timing-function: ease, ease-in-out;
       -webkit-animation-iteration-count: 1, infinite;
@@ -7586,8 +7450,8 @@ main {
               animation: rotateRight, show;
       -webkit-animation-duration: 7s, 3.3s;
               animation-duration: 7s, 3.3s;
-      -webkit-animation-delay: 0s, 2.7s;
-              animation-delay: 0s, 2.7s;
+      -webkit-animation-delay: 0s, 2.6s;
+              animation-delay: 0s, 2.6s;
       -webkit-animation-timing-function: linear, ease;
               animation-timing-function: linear, ease;
       -webkit-animation-iteration-count: infinite, 1;
@@ -7613,8 +7477,8 @@ main {
               animation: show;
       -webkit-animation-duration: 3.3s;
               animation-duration: 3.3s;
-      -webkit-animation-delay: 3.6s;
-              animation-delay: 3.6s;
+      -webkit-animation-delay: 3s;
+              animation-delay: 3s;
       -webkit-animation-timing-function: ease;
               animation-timing-function: ease;
       -webkit-animation-iteration-count: 1;

@@ -40,7 +40,12 @@ block main
                 +social-list
             a.button.services-modal-js(href="#")
               span Нажми для связи с нами
-    #map(style="width: 600px; height: 400px;")
+    #map.map(style="width: 100%; height: 450px;")
+      h2 Как к нам добраться:
+      .contacts-btn
+        button#btn-vostok(type="button") метро Восток
+        button#btn-mkad(type="button") со стороны МКАД
+        button#btn-logoisk(type="button") Логойский тракт
 
 block footer
   +footer
