@@ -8,7 +8,7 @@
 //= modules/vendors.js
 //= modules/bg-main.js
 //= modules/header-nav.js
-//= modules/clients-slider.js
+//= modules/sliders.js
 //= modules/portfolio-rotate-card.js
 //= modules/scroll-height.js
 //= modules/portfolio-page-scroll.js
