@@ -4,6 +4,20 @@
   @media (max-width: $tablet-width) {
     margin: 90px 0 40px 0;
   }
+
+  h1 {
+    @media (max-width: $desktop-width) {
+      margin-left: 23%;
+    }
+
+    @media (max-width: $desktop-width-min) {
+      margin-left: 28%;
+    }
+
+    @media (max-width: $tablet-width) {
+      margin-left: 0;
+    }
+  }
 }
 
 .stages__nav-box {
@@ -118,7 +132,7 @@
 
         @media (max-width: $desktop-width-min) {
           max-width: 50px;
-          left: 15px;
+          left: 30px;
         }
 
         @media (max-width: $tablet-width) {
@@ -288,6 +302,10 @@
         @media (max-width: $desktop-width) {
           margin-right: 40px;
         }
+
+        @media (max-width: $desktop-width-min) {
+          margin-right: 0;
+        }
       }
 
       &:nth-child(2) {
@@ -311,6 +329,7 @@
 
         @media (max-width: $desktop-width-min) {
           margin-top: -155px;
+          margin-left: 30px;
         }
       }
 
@@ -1271,6 +1290,7 @@
 
         @media (max-width: $desktop-width-min) {
           margin-top: -115px;
+          margin-right: 20px;
         }
       }
     }

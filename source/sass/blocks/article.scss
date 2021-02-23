@@ -91,6 +91,7 @@
   @media (max-width: $desktop-width-min) {
     height: auto;
     width: auto;
+    min-height: auto;
     position: static;
   }
 

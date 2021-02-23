@@ -19,6 +19,8 @@
 
     if (feedbackBoxInfo) {
       feedbackBoxInfo.forEach(function (item, i) {
+        feedbackBoxInfo[0].classList.add('feedback__box-info--active');
+        feedbackArticle[0].classList.add('feedback-active');
         item.addEventListener('click', function (evt) {
           evt.preventDefault();
 

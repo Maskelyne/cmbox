@@ -6,7 +6,7 @@
 
   if (articleContent) {
 
-    const DESKTOP_WIDTH = 1023;
+    const DESKTOP_WIDTH = 1025;
     var articleCard = document.querySelector('.article__box-articles');
 
     var setHeight = function () {

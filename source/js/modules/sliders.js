@@ -11,9 +11,9 @@
       loop: true,
       speed: 1000,
       spaceBetween: 30,
-      autoplay: {
-        delay: 2500,
-      },
+      // autoplay: {
+      //   delay: 10000,
+      // },
       navigation: {
         nextEl: '.services__swiper-button-next',
         prevEl: '.services__swiper-button-prev',
@@ -21,7 +21,7 @@
       breakpoints: {
         768: {
           slidesPerView: 1,
-          spaceBetween: 15,
+          spaceBetween: 20,
         },
         1024: {
           slidesPerView: 2,
@@ -40,9 +40,9 @@
       slidesPerView: 1,
       loop: true,
       speed: 1000,
-      autoplay: {
-        delay: 7000,
-      },
+      // autoplay: {
+      //   delay: 7000,
+      // },
       mousewheel: true,
       pagination: {
         el: '.swiper-pagination',
@@ -60,9 +60,9 @@
       loop: true,
       speed: 1000,
       spaceBetween: 30,
-      autoplay: {
-        delay: 2500,
-      },
+      // autoplay: {
+      //   delay: 10000,
+      // },
       navigation: {
         nextEl: '.feedback-slider__swiper-button-next',
         prevEl: '.feedback-slider__swiper-button-prev',
@@ -70,7 +70,7 @@
       breakpoints: {
         768: {
           slidesPerView: 1,
-          spaceBetween: 15,
+          spaceBetween: 20,
         },
         1024: {
           slidesPerView: 2,

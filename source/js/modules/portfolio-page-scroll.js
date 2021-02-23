@@ -2,7 +2,7 @@
 
 (function () {
 
-  const DESKTOP_WIDTH = 1023;
+  const DESKTOP_WIDTH = 1025;
   var portfolioPage = document.querySelector('.portfolio-page__company');
 
   if (portfolioPage && window.innerWidth > DESKTOP_WIDTH) {
@@ -17,7 +17,7 @@
     document.body.style.overflow = 'hidden';
 
     var open = function () {
-      portfolioBoxImage.style.transform = 'translateY(-220%)';
+      portfolioBoxImage.style.transform = 'translateY(-230%)';
       portfolioBox.style.transform = 'translateY(-320%)';
       portfolioBox.style.transitionDelay = '';
       portfolioBoxImage.style.transitionDelay = '';

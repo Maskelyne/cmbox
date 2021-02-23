@@ -139,6 +139,10 @@
   justify-content: center;
   grid-gap: 30px 30px;
 
+  @media (max-width: $desktop-width) {
+    padding-bottom: 30px;
+  }
+
   @media (max-width: $desktop-width-min) {
     display: none;
   }
@@ -257,6 +261,87 @@
         transform: translateY(-50%);
         color: $white;
         font-weight: $normal;
+      }
+    }
+  }
+
+  .feedback__box-info--active {
+    img {
+      transform: translateY(-30%);
+    }
+
+    p {
+      transform: translateY(-50%);
+      color: $white;
+      font-weight: $normal;
+    }
+
+    .red {
+      p {
+        background-color: $red;
+      }
+    }
+
+    .orange {
+      p {
+        background-color: $orange;
+      }
+    }
+
+    .yellow {
+      p {
+        background: $yellow;
+        color: $black;
+        font-weight: $bold;
+      }
+    }
+
+    .green {
+      p {
+        background-color: $green;
+      }
+    }
+
+    .dark-green {
+      p {
+        background-color: $dark-green;
+      }
+    }
+
+    .light-blue {
+      p {
+        background-color: $light-blue;
+      }
+    }
+
+    .blue {
+      p {
+        background-color: $blue;
+      }
+    }
+
+    .violet {
+      p {
+        background-color: $violet;
+      }
+    }
+
+    .dark-pink {
+      p {
+        background-color: $dark-pink;
+      }
+    }
+
+    .brown {
+      p {
+        background-color: #3e3728;
+        font-weight: $normal;
+      }
+    }
+
+    .black {
+      p {
+        background-color: $black;
       }
     }
   }
