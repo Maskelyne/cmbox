@@ -57,7 +57,7 @@
 
   var createSlider = function (el) {
     return new Swiper(el, {
-      loop: true,
+      // loop: true,
       speed: 1000,
       spaceBetween: 30,
       // autoplay: {

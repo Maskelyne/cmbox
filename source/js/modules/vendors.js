@@ -2,28 +2,6 @@
 
 $(function () {
 
-  // var iframe = document.querySelectorAll('.video');
-  //
-  // iframe.forEach(function (item, i) {
-  //   iframe[i].addEventListener('click', function () {
-  //     console.log('click');
-  //   });
-  // })
-
-  function onYouTubeIframeAPIReady() {
-    var player;
-    player = new YT.Player('player', {
-      videoId: 'M7lc1UVf-VE',
-      playerVars: { 'autoplay': 1, 'controls': 0 },
-      events: {
-        'onReady': onPlayerReady,
-        'onPlaybackQualityChange': onPlayerPlaybackQualityChange,
-        'onStateChange': onPlayerStateChange,
-        'onError': onPlayerError
-      }
-    });
-  }
-
   $("#user_name").keyup(function () {
     if ($(this).val()) {
       $(this).addClass("not-empty");
@@ -197,15 +175,15 @@ $(function () {
   //
   // checkCookies();
 
-  document.ondragstart = test;
-  //запрет на перетаскивание
-  document.onselectstart = test;
-  //запрет на выделение элементов страницы
-  document.oncontextmenu = test;
-  //запрет на выведение контекстного меню
-  function test() {
-    return false;
-  }
+  // document.ondragstart = test;
+  // //запрет на перетаскивание
+  // document.onselectstart = test;
+  // //запрет на выделение элементов страницы
+  // document.oncontextmenu = test;
+  // //запрет на выведение контекстного меню
+  // function test() {
+  //   return false;
+  // }
 
   var maskList = $.masksSort($.masksLoad("assets/json/phone-codes.json"), ['#'], /[0-9]|#/, "mask");
   var maskOpts = {
