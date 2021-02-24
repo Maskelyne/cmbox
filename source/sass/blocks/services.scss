@@ -198,7 +198,7 @@
     @include reset-list;
     margin-top: 30px;
     display: grid;
-    grid-gap: 0 2.5%;
+    grid-gap: 30px 2.5%;
     grid-template-columns: repeat(4, 23%);
 
     @media (max-width: $desktop-width) {
@@ -214,6 +214,45 @@
     @media (max-width: $tablet-width) {
       grid-template-columns: minmax(0, 350px);
     }
+
+    li {
+      &:first-child {
+        .services__price-wrap ul li {
+          margin-bottom: 15px;
+        }
+
+        .services__price-box {
+          grid-template-columns: 1fr 38%;
+
+          @media (max-width: $tablet-width) {
+            grid-template-columns: 1fr 121px;
+          }
+        }
+
+        .services__price-text {
+          width: 100%;
+        }
+
+        .services__price-wrap {
+          .services__price-tooltip {
+            p {
+              font-size: 16px;
+              line-height: 18px;
+            }
+          }
+
+          .services__btn-tooltip {
+            margin-top: 3px;
+          }
+        }
+      }
+    }
+
+    li:nth-child(n+6) {
+      @media (max-width: $tablet-width) {
+        display: none;
+      }
+    }
   }
 
   article {
@@ -223,7 +262,7 @@
     box-shadow: -8px -8px 16px rgba(255, 255, 255, 0.8), 8px 8px 16px rgba(186, 198, 216, 0.8);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    //justify-content: space-between;
 
     @media (max-width: $desktop-width-min) {
       min-height: 400px;
@@ -252,6 +291,33 @@
 
       &--active {
         transform: rotate(0);
+      }
+    }
+
+    .services__text {
+      padding: 15px 0;
+      background-color: $dark-blue;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+
+      strong {
+        font-family: $proximaBold;
+        font-size: 18px;
+        line-height: 18px;
+        text-align: center;
+        color: $white;
+        display: block;
+      }
+    }
+
+    .services__text-image {
+      margin-top: 85px;
+
+      img {
+        width: 100%;
+        max-width: 125px;
+        margin: 0 auto;
+        display: block;
       }
     }
   }

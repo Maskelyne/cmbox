@@ -32,6 +32,30 @@
 
   if (servicesSlider) {
     servicesSliderDesk(servicesSlider);
+
+    jQuery(function($){
+      $(document).mouseup(function (e){
+        var div = $(".swiper-slide");
+        if (!div.is(e.target)
+          && div.has(e.target).length === 0) {
+          jQuery("iframe").each(function () {
+            jQuery(this)[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
+          });
+        }
+      });
+    });
+
+    $(document).on('click', '.services__swiper-button-prev', function() {
+      jQuery("iframe").each(function () {
+        jQuery(this)[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
+      });
+    });
+
+    $(document).on('click', '.services__swiper-button-next', function() {
+      jQuery("iframe").each(function () {
+        jQuery(this)[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
+      });
+    });
   }
 
   var mainSlider = function (el) {
@@ -57,12 +81,9 @@
 
   var createSlider = function (el) {
     return new Swiper(el, {
-      // loop: true,
+      loop: true,
       speed: 1000,
       spaceBetween: 30,
-      // autoplay: {
-      //   delay: 10000,
-      // },
       navigation: {
         nextEl: '.feedback-slider__swiper-button-next',
         prevEl: '.feedback-slider__swiper-button-prev',
@@ -81,32 +102,30 @@
 
   if (feedbackSlider) {
     createSlider(feedbackSlider);
+
+    jQuery(function($){
+      $(document).mouseup(function (e){
+        var div = $(".swiper-slide");
+        if (!div.is(e.target)
+          && div.has(e.target).length === 0) {
+          jQuery("iframe").each(function () {
+            jQuery(this)[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
+          });
+        }
+      });
+    });
+
+    $(document).on('click', '.feedback-slider__swiper-button-prev', function() {
+      jQuery("iframe").each(function () {
+        jQuery(this)[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
+      });
+    });
+
+    $(document).on('click', '.feedback-slider__swiper-button-next', function() {
+      jQuery("iframe").each(function () {
+        jQuery(this)[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
+      });
+    });
   }
-
-  jQuery(function($){
-    $(document).mouseup(function (e){ // событие клика по веб-документу
-      var div = $(".swiper-slide"); // тут указываем ID элемента
-      if (!div.is(e.target) // если клик был не по нашему блоку
-        && div.has(e.target).length === 0) { // и не по его дочерним элементам
-        jQuery("iframe").each(function () {
-          jQuery(this)[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
-        }); // скрываем его
-      }
-    });
-  });
-
-  $(document).on('click', '.feedback-slider__swiper-button-prev', function() {
-      jQuery("iframe").each(function () {
-        jQuery(this)[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
-      });
-    });
-
-  $(document).on('click', '.feedback-slider__swiper-button-next', function() {
-      jQuery("iframe").each(function () {
-        jQuery(this)[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
-      });
-    });
-
-
 
 })();

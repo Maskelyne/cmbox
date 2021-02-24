@@ -38,4 +38,14 @@
   &:disabled {
     background: #a0a0a0;
   }
+
+  &--order {
+    background-image: none;
+    background-color: $dark-red;
+
+    &:hover {
+      background-image: none;
+      background-color: $dark-red;
+    }
+  }
 }
