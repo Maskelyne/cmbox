@@ -201,11 +201,9 @@ mixin header()
                   span.link-modal-question Заказать звонок
                 +social-list.social-list--tablet
         .main-header__social
-          a(href="#")
-            span.visually-hidden Instagram
-            +img('svg', 'icon-instagram', 'svg', '24', '24', 'Instagram')
-          button.main-header__social-btn(type="button")
-            span.visually-hidden Социальные сети
+          a.main-header__social-btn(href="#")
+            span
+            +img('svg', 'social-icon', 'svg', '24', '24', 'Social')
           ul
             li
               a(href="#")
@@ -223,6 +221,10 @@ mixin header()
               a(href="#")
                 span.visually-hidden Линкедин
                 +img('svg', 'icon-linkedin', 'svg', '24', '24', 'Ленкедин')
+            li
+              a(href="#")
+                span.visually-hidden Instagram
+                +img('svg', 'icon-instagram', 'svg', '24', '24', 'Instagram')
         .main-header__box
           a.main-header__box-phone(href="#")
             +img('svg', 'icon-mobile', 'svg', '24', '24', 'Заказать звонок')

@@ -480,14 +480,15 @@ block main
         .feedback-slider
           h3 Отзывы
           .feedback-slider__wrapper
+            #button Остановить
             .feedback-slider__swiper-container.swiper-container
               ul.swiper-wrapper
                 li.swiper-slide
-                  iframe#player(src="https://www.youtube.com/embed/egRMfkc56iI" allowfullscreen)
+                  iframe(src="https://www.youtube.com/embed/egRMfkc56iI?rel=0&showinfo=0&enablejsapi=1" allowfullscreen)
                 li.swiper-slide
-                  iframe.video(src="https://www.youtube.com/embed/egRMfkc56iI" allowfullscreen)
+                  iframe(src="https://www.youtube.com/embed/egRMfkc56iI?rel=0&showinfo=0&enablejsapi=1" allowfullscreen)
                 li.swiper-slide
-                  iframe.video(src="https://www.youtube.com/embed/egRMfkc56iI" allowfullscreen)
+                  iframe(src="https://www.youtube.com/embed/egRMfkc56iI?rel=0&showinfo=0&enablejsapi=1" allowfullscreen)
               .feedback-slider__swiper-button-prev.swiper-button-prev
               .feedback-slider__swiper-button-next.swiper-button-next
         .services__info-text
@@ -538,17 +539,17 @@ block main
           span Справедливая цена.
         .services__slider
           h3 Примеры нашего видеомаркетинга для сайтов:
-          .services__slider-wrapper
-            .services__swiper-container.swiper-container
-              ul.swiper-wrapper
-                li.swiper-slide
-                  iframe(src="https://www.youtube.com/embed/egRMfkc56iI" allowfullscreen)
-                li.swiper-slide
-                  iframe(src="https://www.youtube.com/embed/egRMfkc56iI" allowfullscreen)
-                li.swiper-slide
-                  iframe(src="https://www.youtube.com/embed/egRMfkc56iI" allowfullscreen)
-              .services__swiper-button-prev.swiper-button-prev
-              .services__swiper-button-next.swiper-button-next
+          //.services__slider-wrapper
+          //  .services__swiper-container.swiper-container
+          //    ul.swiper-wrapper
+          //      li.swiper-slide
+          //        iframe(src="https://www.youtube.com/embed/egRMfkc56iI" allowfullscreen)
+          //      li.swiper-slide
+          //        iframe(src="https://www.youtube.com/embed/egRMfkc56iI" allowfullscreen)
+          //      li.swiper-slide
+          //        iframe(src="https://www.youtube.com/embed/egRMfkc56iI" allowfullscreen)
+          //    .services__swiper-button-prev.swiper-button-prev
+          //    .services__swiper-button-next.swiper-button-next
         .services__box-portfolio.container
           h2 Примеры работ вы можете посмотреть на странице
             a(href="#")  Портфолио
