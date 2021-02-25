@@ -1783,14 +1783,16 @@ main {
       border-bottom-right-radius: 10px;
       background-color: #f5f9ff;
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-      display: none; } }
+      display: none;
+      font-size: 18px;
+      line-height: 21px; } }
   @media (max-width: 767px) {
     .main-header__tel {
       right: 0;
       border-bottom-right-radius: 0; } }
   .main-header__tel--active {
     display: grid;
-    grid-gap: 7px 0; }
+    grid-gap: 12px 0; }
   .main-header__tel a:hover {
     font-weight: 400;
     color: #333333; }
@@ -1837,27 +1839,29 @@ main {
       height: 2px;
       position: absolute;
       content: "";
-      top: 12px;
+      top: 16px;
       right: -2px;
       background-color: #1e4180;
       transform: rotate(45deg); }
       @media (max-width: 767px) {
         .main-header__social .main-header__social-btn::before {
-          top: 10px; } }
+          top: 14px; } }
     .main-header__social .main-header__social-btn::after {
       width: 8px;
       height: 2px;
       position: absolute;
       content: "";
-      top: 12px;
+      top: 16px;
       right: -7px;
       background-color: #1e4180;
       transform: rotate(-45deg); }
       @media (max-width: 767px) {
         .main-header__social .main-header__social-btn::after {
-          top: 10px; } }
+          top: 14px; } }
+    .main-header__social .main-header__social-btn img {
+      max-width: 35px; }
   .main-header__social img {
-    max-width: 26px;
+    max-width: 35px;
     display: block; }
   .main-header__social--active ul {
     display: grid; }
@@ -2004,7 +2008,8 @@ main {
       .main-header__box .main-header__box-phone span {
         display: none; } }
   .main-header__box-tablet {
-    display: none; }
+    display: none;
+    padding-bottom: 70px; }
     @media (max-width: 1025px) {
       .main-header__box-tablet {
         display: grid; }
@@ -2045,7 +2050,8 @@ main {
     position: absolute;
     top: 65px;
     left: 0;
-    display: none; }
+    display: none;
+    overflow-y: scroll; }
     .main-header__wrap-menu--active {
       display: grid;
       z-index: -2;
@@ -5246,22 +5252,25 @@ main {
     @media (max-width: 767px) {
       .services__price .services__price-grid {
         grid-template-columns: minmax(0, 350px); } }
-    .services__price .services__price-grid li:first-child .services__price-wrap ul li {
+    .services__price .services__price-grid--2 li:first-child .services__price-wrap ul li {
       margin-bottom: 15px; }
-    .services__price .services__price-grid li:first-child .services__price-box {
+    .services__price .services__price-grid--2 li:first-child .services__price-box {
       grid-template-columns: 1fr 38%; }
       @media (max-width: 767px) {
-        .services__price .services__price-grid li:first-child .services__price-box {
+        .services__price .services__price-grid--2 li:first-child .services__price-box {
           grid-template-columns: 1fr 121px; } }
-    .services__price .services__price-grid li:first-child .services__price-text {
+    .services__price .services__price-grid--2 li:first-child .services__price-text {
       width: 100%; }
-    .services__price .services__price-grid li:first-child .services__price-wrap .services__price-tooltip p {
+    .services__price .services__price-grid--2 li:first-child .services__price-wrap .services__price-tooltip p {
       font-size: 16px;
       line-height: 18px; }
-    .services__price .services__price-grid li:first-child .services__price-wrap .services__btn-tooltip {
+    .services__price .services__price-grid--2 li:first-child .services__price-wrap .services__btn-tooltip {
       margin-top: 3px; }
+    @media (max-width: 1025px) {
+      .services__price .services__price-grid--2 li:nth-child(n+7) {
+        display: none; } }
     @media (max-width: 767px) {
-      .services__price .services__price-grid li:nth-child(n+6) {
+      .services__price .services__price-grid--2 li:nth-child(n+6) {
         display: none; } }
   .services__price article {
     min-height: 370px;
@@ -8476,9 +8485,12 @@ main {
           max-width: 125px; } }
     .feedback__box article iframe {
       width: 100%;
-      height: 340px;
+      height: 400px;
       border: none;
       display: block; }
+  .feedback__box .youtube img {
+    max-width: 560px;
+    height: 400px; }
   .feedback__box .feedback-active {
     display: block; }
 
@@ -8522,7 +8534,7 @@ main {
       padding: 30px 0 0 0; } }
   .feedback-slider__swiper-container .swiper-slide iframe {
     width: 100%;
-    height: 300px;
+    height: 380px;
     border: none;
     display: block; }
     @media (max-width: 767px) {

@@ -11,9 +11,6 @@
       loop: true,
       speed: 1000,
       spaceBetween: 30,
-      // autoplay: {
-      //   delay: 10000,
-      // },
       navigation: {
         nextEl: '.services__swiper-button-next',
         prevEl: '.services__swiper-button-prev',
@@ -84,6 +81,7 @@
       loop: true,
       speed: 1000,
       spaceBetween: 30,
+      allowTouchMove: true,
       navigation: {
         nextEl: '.feedback-slider__swiper-button-next',
         prevEl: '.feedback-slider__swiper-button-prev',

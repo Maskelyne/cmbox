@@ -50,6 +50,8 @@
     background-color: #f5f9ff;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     display: none;
+    font-size: 18px;
+    line-height: 21px;
   }
 
   @media (max-width: $tablet-width) {
@@ -59,7 +61,7 @@
 
   &--active {
     display: grid;
-    grid-gap: 7px 0;
+    grid-gap: 12px 0;
   }
 
   a:hover {
@@ -116,13 +118,13 @@
       height: 2px;
       position: absolute;
       content: "";
-      top: 12px;
+      top: 16px;
       right: -2px;
       background-color: $blue;
       transform: rotate(45deg);
 
       @media (max-width: $tablet-width) {
-        top: 10px;
+        top: 14px;
       }
     }
 
@@ -131,19 +133,23 @@
       height: 2px;
       position: absolute;
       content: "";
-      top: 12px;
+      top: 16px;
       right: -7px;
       background-color: $blue;
       transform: rotate(-45deg);
 
       @media (max-width: $tablet-width) {
-        top: 10px;
+        top: 14px;
       }
+    }
+
+    img {
+      max-width: 35px;
     }
   }
 
   img {
-    max-width: 26px;
+    max-width: 35px;
     display: block;
   }
 
@@ -342,6 +348,7 @@
 
   &-tablet {
     display: none;
+    padding-bottom: 70px;
 
     @media (max-width: $desktop-width-min) {
       display: grid;
@@ -405,6 +412,7 @@
     top: 65px;
     left: 0;
     display: none;
+    overflow-y: scroll;
 
     &--active {
       display: grid;

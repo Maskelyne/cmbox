@@ -4,6 +4,7 @@
 
   const DESKTOP_WIDTH = 1023;
   var feedbackLogo = document.querySelector('.feedback__box-logotypes');
+  var feedbackActive = document.querySelector('.feedback__box-info--active')
 
   if (feedbackLogo && window.innerWidth > DESKTOP_WIDTH) {
 
@@ -32,5 +33,17 @@
       });
     }
   }
+
+  jQuery(function($){
+    $(document).mouseup(function (e){
+      var div = $(".feedback__box-info--active");
+      if (!div.is(e.target)
+        && div.has(e.target).length === 0) {
+        jQuery("iframe").each(function () {
+          jQuery(this)[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
+        });
+      }
+    });
+  });
 
 })();

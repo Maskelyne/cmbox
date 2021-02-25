@@ -391,9 +391,16 @@
 
     iframe {
       width: 100%;
-      height: 340px;
+      height: 400px;
       border: none;
       display: block;
+    }
+  }
+
+  .youtube {
+    img {
+      max-width: 560px;
+      height: 400px;
     }
   }
 

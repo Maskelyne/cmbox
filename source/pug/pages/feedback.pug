@@ -88,13 +88,18 @@ block main
               strong Илон Маск
               span Генеральный директор Torwood
             p Мы являемся агентством веб- и бизнес-аналитики. Основное направление нашей деятельности – это бизнес-аналитика и ключевые течения интернет-маркетинга: веб-аналитика, SEO-продвижение, контекстная реклама, SMM, а также ряд других сопутствующих услуг.
-            <iframe src="https://www.youtube.com/embed/EeqPIAYPtiQ"></iframe>
+            //.lazyYT(data-youtube-id="Q1vA_O8cORc" data-ratio="16:9" data-width="100%" data-height="100%") Заголовок видео
+            //iframe(src="https://www.youtube.com/embed/EeqPIAYPtiQ?&enablejsapi=1")
+            .youtube(data-embed="dwJodFnhzNk")
+              .play-button
           article
             .feedback__title
               strong Джон Леннон
               span Генеральный директор Torwood
             p Мы являемся агентством веб- и бизнес-аналитики. Основное направление нашей деятельности – это бизнес-аналитика и ключевые течения интернет-маркетинга: веб-аналитика, SEO-продвижение, контекстная реклама, SMM, а также ряд других сопутствующих услуг.
-            <iframe src="https://www.youtube.com/embed/EeqPIAYPtiQ"></iframe>
+            .youtube(data-embed="egRMfkc56iI")
+              .play-button
+            //iframe(src="https://www.youtube.com/embed/egRMfkc56iI?&enablejsapi=1")
         .main-footer.portfolio-page__footer
           .main-footer__wrapper.container
             .main-footer__box
