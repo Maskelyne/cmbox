@@ -21,7 +21,6 @@
 @import "blocks/card-box.scss";
 @import "blocks/advantages.scss";
 @import "blocks/business.scss";
-@import "blocks/steps.scss";
 @import "blocks/about-us.scss";
 @import "blocks/benefit.scss";
 @import "blocks/teams.scss";
@@ -29,9 +28,12 @@
 @import "blocks/contacts.scss";
 @import "blocks/services.scss";
 @import "blocks/stages.scss";
+@import "blocks/pagination.scss";
 @import "blocks/breadcrumbs.scss";
 @import "blocks/404.scss";
 @import "blocks/feedback.scss";
+@import "blocks/feedback-slider.scss";
+@import "blocks/cookie.scss";
 
 //buttons
 @import "blocks/button.scss";
@@ -55,3 +57,4 @@
 
 //modals
 @import "blocks/modals.scss";
+

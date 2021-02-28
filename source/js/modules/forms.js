@@ -7,11 +7,12 @@
     var modalConsultation = document.querySelector('.modal-consultation');
     var modalFeedback = document.querySelector('.modal-feedback');
     var modalAnalysis = document.querySelector('.modal-analysis');
+    var modalQuestion = document.querySelector('.modal-question');
+    var modalServicesOrder = document.querySelector('.modal-services-order');
     var modalThanks = document.querySelector('.modal-thanks');
     var form = response.form;
 
     if (form.attr('id') === 'form-contacts') {
-
       modalThanks.classList.add('modal-active');
       response.message = '';
 
@@ -34,6 +35,14 @@
       modalThanks.classList.add('modal-active');
       response.message = '';
 
+    } else if (form.attr('id') === 'form-question') {
+      modalQuestion.classList.remove('modal-active');
+      modalThanks.classList.add('modal-active');
+      response.message = '';
+    } else if (form.attr('id') === 'form-order') {
+      modalServicesOrder.classList.remove('modal-active');
+      modalThanks.classList.add('modal-active');
+      response.message = '';
     }
 
     else {

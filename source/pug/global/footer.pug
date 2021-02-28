@@ -46,6 +46,18 @@ mixin footer()
         a.main-footer__link-location(href="#") ул. Калиновского 77а, офис 310
         a.main-footer__link-mail(href="mail:info@cmbox.by") info@cmbox.by
         .main-footer__link-box
-          a.main-footer__link-phone(href="tel:+375296086368") +375 (29) 608-63-68
+          .main-footer__phone
+            a.main-footer__link-phone(href="tel:+375296086368") +375 (29) 608-63-68 (Минск)
+            a.main-footer__link-phone(href="tel:+375296086368") +375 (29) 608-63-68 (Москва)
           +social-list
-
+    section#cookie__notification.cookie
+      .cookie__inner
+        button.modal__btn-closed.cookie__btn(type="button")
+          span.visually-hidden Закрыть окно
+        .cookie__wrapper
+          h3
+            +img('svg', 'icon-cookie', 'svg', '24', '24', 'Cookie')
+            | Cookies
+          p На этом сайте используются файлы cookie. Нажимая ПРИНЯТЬ или продолжая просмотр сайта, вы разрешаете их использование.
+        button.button.cookie__accept(type="button")
+          span Принять

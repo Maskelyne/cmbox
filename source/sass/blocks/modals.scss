@@ -167,7 +167,7 @@
   @media (max-width: $mobile-width) {
     max-width: 320px;
     grid-template-columns: 1fr;
-    grid-template-rows: 44% 1fr;
+    grid-template-rows: 1fr;
   }
 
   .modal__btn-closed {
@@ -401,6 +401,19 @@
   }
 }
 
+.modal-services-order {
+  display: none;
+
+  .modal__wrapper {
+    max-width: 390px;
+    grid-template-columns: 1fr;
+  }
+
+  .contacts__form {
+    margin-top: 0;
+  }
+}
+
 .modal-feedback,
 .modal-analysis {
   display: none;
@@ -493,12 +506,15 @@
   }
 }
 
+
 .modal__user-name,
+.modal__user-name2,
 .modal__user-email,
 .modal__user-position,
 .modal__user-company,
 .modal__user-comment,
 .modal__user-phone,
+.modal__user-phone2,
 .modal__user-site {
   position: relative;
 }
@@ -508,7 +524,9 @@
 }
 
 .modal__user-phone .error,
+.modal__user-phone2 .error,
 .modal__user-name .error,
+.modal__user-name2 .error,
 .modal__user-position .error,
 .modal__user-company .error {
   border-bottom: solid 1px $dark-red;
@@ -516,7 +534,10 @@
 }
 
 .modal__user-phone #user_phone-error,
+.modal__user-phone #user_phone2-error,
+.modal__user-phone2 #user_phone2-error,
 .modal__user-name #user_name-error,
+.modal__user-name2 #user_name2-error,
 .modal__user-position #user_position-error,
 .modal__user-company #user_company-error,
 .modal__user-phone #user_phone-question-error {

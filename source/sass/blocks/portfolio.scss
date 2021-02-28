@@ -1,8 +1,12 @@
 .portfolio {
-  margin: 110px 0 70px 0;
+  margin: 95px 0 70px 0;
 
   @media (max-width: $tablet-width) {
     margin: 90px 0 40px 0;
+  }
+
+  .breadcrumbs {
+    margin: 0 auto;
   }
 }
 

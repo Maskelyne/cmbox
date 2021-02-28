@@ -157,21 +157,22 @@ block main
     section.services
       h1 Услуги
       .services__box
-        .services__nav-box
-          ul.services__boxes-list
-            each item, index in boxesList
-              if (index === activePage)
-                li
-                  a(href= item.link).services__link-active
-                    span= item.text
-                    +img(item.path, item.name, item.format, item.width, item.height, item.altText)
-                    +img(item.iconPath, item.iconName, item.format, item.iconWidth, item.iconHeight, item.altText)
-              else
-                li
-                  a(href= item.link)
-                    span= item.text
-                    +img(item.path, item.name, item.format, item.width, item.height, item.altText)
-                    +img(item.iconPath, item.iconName, item.format, item.iconWidth, item.iconHeight, item.altText)
+        .wrap
+          .services__nav-box
+            ul.services__boxes-list
+              each item, index in boxesList
+                if (index === activePage)
+                  li
+                    a(href= item.link).services__link-active
+                      span= item.text
+                      +img(item.path, item.name, item.format, item.width, item.height, item.altText)
+                      +img(item.iconPath, item.iconName, item.format, item.iconWidth, item.iconHeight, item.altText)
+                else
+                  li
+                    a(href= item.link)
+                      span= item.text
+                      +img(item.path, item.name, item.format, item.width, item.height, item.altText)
+                      +img(item.iconPath, item.iconName, item.format, item.iconWidth, item.iconHeight, item.altText)
         .services__box-images
           .services__image
             +img('services', 'icon-seo', 'svg', '220', '220', 'Seo')
@@ -216,34 +217,38 @@ block main
             +img('services/icon-services', 'icon-individ-3', 'svg', '200', '130', 'Клиенты из разных стран')
             strong Индивидуальные концепции
             p При создании концепта для вашего бренда наши специалисты учтут множество нюансов, чтобы контент был уникальным.
+        .feedback-slider
+          h3 Отзывы
+          .feedback-slider__wrapper
+            .feedback-slider__swiper-container.swiper-container
+              ul.swiper-wrapper
+                li.swiper-slide
+                  iframe#player(src="https://www.youtube.com/embed/egRMfkc56iI?&enablejsapi=1" allowfullscreen)
+                li.swiper-slide
+                  iframe.video(src="https://www.youtube.com/embed/egRMfkc56iI?&enablejsapi=1" allowfullscreen)
+                li.swiper-slide
+                  iframe.video(src="https://www.youtube.com/embed/egRMfkc56iI?&enablejsapi=1" allowfullscreen)
+              .feedback-slider__swiper-button-prev.swiper-button-prev
+              .feedback-slider__swiper-button-next.swiper-button-next
+        .services__info-text
+          .services__info-text-box
+            h3 Основные форматы роликов:
+            span Презентационный – для демонстрации преимуществ товаров/услуг.
+            span Рекламный – для привлечения новой аудитории, демонстрации позиционирования продукта/услуги. Это эмоциональный ролик.
+            span Имиджевый – для усиления бренда и увеличения лояльности аудитории. Это может быть видеоурок, обзор, интервью, познавательный или развлекательный ролик и так далее. Главное, чтобы он был интересен и полезен зрителю.
         .services__slider
           h3 Примеры нашего видеомаркетинга для сайтов:
           .services__slider-wrapper
             .services__swiper-container.swiper-container
               ul.swiper-wrapper
                 li.swiper-slide
-                  .services__slide-image
-                    a(href="https://www.youtube.com/watch?v=cBUcdDmS-1A&feature=emb_logo" target="_blank")
-                      +img('jpg', 'video', 'jpg', '400', '220', 'Видео')
+                  iframe(src="https://www.youtube.com/embed/egRMfkc56iI" allowfullscreen)
                 li.swiper-slide
-                  .services__slide-image
-                    a(href="https://www.youtube.com/watch?v=8lndFrEMLvM&feature=emb_logo" target="_blank")
-                      +img('jpg', 'video', 'jpg', '400', '220', 'Видео')
+                  iframe(src="https://www.youtube.com/embed/egRMfkc56iI" allowfullscreen)
                 li.swiper-slide
-                  .services__slide-image
-                    a(href="https://www.youtube.com/watch?v=8lndFrEMLvM&feature=emb_logo" target="_blank")
-                      +img('jpg', 'video', 'jpg', '400', '220', 'Видео')
-                li.swiper-slide
-                  .services__slide-image
-                    a(href="https://www.youtube.com/watch?v=8lndFrEMLvM&feature=emb_logo" target="_blank")
-                      +img('jpg', 'video', 'jpg', '400', '220', 'Видео')
+                  iframe(src="https://www.youtube.com/embed/egRMfkc56iI" allowfullscreen)
               .services__swiper-button-prev.swiper-button-prev
               .services__swiper-button-next.swiper-button-next
-        .services__info-text
-          h3 Основные форматы роликов:
-          span Презентационный – для демонстрации преимуществ товаров/услуг.
-          span Рекламный – для привлечения новой аудитории, демонстрации позиционирования продукта/услуги. Это эмоциональный ролик.
-          span Имиджевый – для усиления бренда и увеличения лояльности аудитории. Это может быть видеоурок, обзор, интервью, познавательный или развлекательный ролик и так далее. Главное, чтобы он был интересен и полезен зрителю.
         .services__box-portfolio.container
           h2 Примеры работ вы можете посмотреть на странице
             a(href="#")  Портфолио

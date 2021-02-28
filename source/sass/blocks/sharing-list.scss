@@ -10,6 +10,7 @@
 
   @media (max-width: $tablet-width) {
     grid-gap: 0 10px;
+    grid-template-columns: repeat(5, 17px);
   }
 
   li {

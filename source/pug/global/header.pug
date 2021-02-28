@@ -1,35 +1,4 @@
 mixin header()
-  -
-    var headerList = [
-      {
-        text: 'О нас',
-        link: 'about-us.html'
-      },
-      {
-        text: 'Услуги',
-        link: 'services-analytics.html'
-      },
-      {
-        text: 'Этапы',
-        link: 'stage-analysis.html'
-      },
-      {
-        text: 'Портфолио',
-        link: 'portfolio.html'
-      },
-      {
-        text: 'Отзывы',
-        link: 'feedback.html'
-      },
-      {
-        text: 'Блог',
-        link: 'blog.html'
-      },
-      {
-        text: 'Контакты',
-        link: 'contacts.html'
-      },
-    ];
 
   -
     var stageList = [
@@ -152,8 +121,6 @@ mixin header()
               li
                 a(href= item.link)= item.text
       .main-header__services-box
-        //a.main-header__link-services.main-header__link-services--closed(href="#")
-        //  span.visually-hidden Наши услуги
         .main-header__services-nav.main-header__services-nav--closed
           h1 Услуги
           ul.main-header__services-list
@@ -163,11 +130,6 @@ mixin header()
                   +img(item.path, item.image, item.format, item.width, item.height, item.altText)
                   = item.text
       .main-header__nav-box
-        .main-header__tel
-          a.main-header__link-phone(href="tel:+375296086368")
-            +img('svg', 'icon-mobile', 'svg', '24', '24', 'Телефон')
-            | +375 (29) 608-63-68 (Минск),
-          a(href="tel:+74996086368") +7 (499) 608-63-68 (Москва)
         .main-header__wrap-menu-nav
           button.main-header__btn.main-header__btn--closed(href="#")
             span
@@ -179,8 +141,50 @@ mixin header()
                 a(href="#") О нас
               li.main-header__link-services
                 a(href="#") Услуги
-              li
+                ul
+                  li
+                    a(href="#") Аналитика
+                  li
+                    a(href="#") Стратегия
+                  li
+                    a(href="#") Дизайн
+                  li
+                    a(href="#") Сайт
+                  li
+                    a(href="#") Воронка продаж
+                  li
+                    a(href="#") SEO
+                  li
+                    a(href="#") Контекст
+                  li
+                    a(href="#") Соцсети
+                  li
+                    a(href="#") Видеомаркетинг
+                  li
+                    a(href="#") CRM
+              li.main-header__stage-link
                 a(href="#") Этапы
+                ul
+                  li
+                    a(href="#") Аналитика
+                  li
+                    a(href="#") Стратегия
+                  li
+                    a(href="#") Дизайн
+                  li
+                    a(href="#") Сайт
+                  li
+                    a(href="#") Воронка продаж
+                  li
+                    a(href="#") SEO
+                  li
+                    a(href="#") Контекст
+                  li
+                    a(href="#") Соцсети
+                  li
+                    a(href="#") Видеомаркетинг
+                  li
+                    a(href="#") CRM
               li
                 a(href="#") Портфолио
               li
@@ -196,8 +200,38 @@ mixin header()
                 a(href="#")
                   span.link-modal-question Заказать звонок
                 +social-list.social-list--tablet
+        .main-header__social
+          a.main-header__social-btn(href="#")
+            span
+            +img('svg', 'social-icon', 'svg', '24', '24', 'Social')
+          ul
+            li
+              a(href="#")
+                span.visually-hidden Одноклассники
+                +img('svg', 'icon-ok', 'svg', '24', '24', 'Одноклассники')
+            li
+              a(href="#")
+                span.visually-hidden Вконтакте
+                +img('svg', 'icon-vk', 'svg', '24', '24', 'Вконтакте')
+            li
+              a(href="#")
+                span.visually-hidden Фэйсбук
+                +img('svg', 'icon-facebook', 'svg', '24', '24', 'Фэйсбук')
+            li
+              a(href="#")
+                span.visually-hidden Линкедин
+                +img('svg', 'icon-linkedin', 'svg', '24', '24', 'Ленкедин')
+            li
+              a(href="#")
+                span.visually-hidden Instagram
+                +img('svg', 'icon-instagram', 'svg', '24', '24', 'Instagram')
         .main-header__box
           a.main-header__box-phone(href="#")
             +img('svg', 'icon-mobile', 'svg', '24', '24', 'Заказать звонок')
             span.link-modal-question Заказать звонок
           +social-list
+        .main-header__tel
+          a.main-header__link-phone(href="tel:+375296086368")
+            +img('svg', 'icon-mobile', 'svg', '24', '24', 'Телефон')
+            | +375 (29) 608-63-68 (Минск),
+          a(href="tel:+74996086368") +7 (499) 608-63-68 (Москва)

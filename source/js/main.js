@@ -6,8 +6,9 @@
 */
 
 //= modules/vendors.js
+//= modules/bg-main.js
 //= modules/header-nav.js
-//= modules/clients-slider.js
+//= modules/sliders.js
 //= modules/portfolio-rotate-card.js
 //= modules/scroll-height.js
 //= modules/portfolio-page-scroll.js
@@ -18,7 +19,11 @@
 //= modules/modal-analysis.js
 //= modules/modal-portfolio-order.js
 //= modules/modal-question.js
+//= modules/modal-services-order.js
+//= modules/services-tooltip.js
 //= modules/forms.js
 //= modules/link-hidden.js
 //= modules/feedback-tabs.js
+//= modules/ymaps.js
+//= modules/animated-maps.js
 

@@ -1,8 +1,22 @@
 .stages {
-  margin: 110px 0 70px 0;
+  margin: 95px 0 70px 0;
 
   @media (max-width: $tablet-width) {
     margin: 90px 0 40px 0;
+  }
+
+  h1 {
+    @media (max-width: $desktop-width) {
+      margin-left: 23%;
+    }
+
+    @media (max-width: $desktop-width-min) {
+      margin-left: 28%;
+    }
+
+    @media (max-width: $tablet-width) {
+      margin-left: 0;
+    }
   }
 }
 
@@ -32,8 +46,12 @@
   justify-items: center;
   position: relative;
 
-  &:nth-child(4) {
+  &:nth-child(5) {
     display: none;
+
+    @media (max-width: $tablet-width) {
+      display: block;
+    }
   }
 
   @media (max-width: $desktop-width) {
@@ -52,7 +70,7 @@
     }
 
     &:nth-child(4) {
-      display: block;
+      display: none;
     }
   }
 
@@ -62,7 +80,7 @@
         max-width: 750px;
         animation: stage-show-elements-2;
         animation-duration: 2s;
-        animation-delay: 1.5s;
+        animation-delay: 1s;
         animation-timing-function: ease;
         animation-iteration-count: 1;
         animation-direction: normal;
@@ -76,7 +94,7 @@
         z-index: -1;
         animation: stage-show-elements-1;
         animation-duration: 1.5s;
-        animation-delay: 0.3s;
+        animation-delay: 0.5s;
         animation-timing-function: ease;
         animation-iteration-count: 1;
         animation-direction: normal;
@@ -104,7 +122,7 @@
         left: 0;
         animation: stage-show-elements-3, stage-show-elements-4;
         animation-duration: 2s, 1.8s;
-        animation-delay: 2s, 2.2s;
+        animation-delay: 1.2s, 0s;
         animation-timing-function: ease, ease-in-out;
         animation-iteration-count: 1, infinite;
         animation-direction: normal, alternate;
@@ -114,7 +132,7 @@
 
         @media (max-width: $desktop-width-min) {
           max-width: 50px;
-          left: 15px;
+          left: 30px;
         }
 
         @media (max-width: $tablet-width) {
@@ -129,7 +147,7 @@
         left: 18%;
         animation: stage-show-elements-3, stage-show-elements-4;
         animation-duration: 2s, 2.1s;
-        animation-delay: 2.5s, 2.8s;
+        animation-delay: 1.5s, 0s;
         animation-timing-function: ease, ease-in-out;
         animation-iteration-count: 1, infinite;
         animation-direction: normal, alternate;
@@ -149,7 +167,7 @@
         left: 5%;
         animation: stage-show-elements-3, stage-show-elements-4;
         animation-duration: 2s, 2.6s;
-        animation-delay: 3s, 0s;
+        animation-delay: 1.8s, 0s;
         animation-timing-function: ease, ease-in-out;
         animation-iteration-count: 1, infinite;
         animation-direction: normal, alternate;
@@ -173,7 +191,7 @@
         left: 17%;
         animation: stage-show-elements-3, stage-show-elements-4;
         animation-duration: 2s, 2.5s;
-        animation-delay: 3.5s, 0s;
+        animation-delay: 2.1s, 0s;
         animation-timing-function: ease, ease-in-out;
         animation-iteration-count: 1, infinite;
         animation-direction: normal, alternate;
@@ -197,7 +215,7 @@
         left: 29%;
         animation: stage-show-elements-3, stage-show-elements-4;
         animation-duration: 2s, 1.7s;
-        animation-delay: 4s, 0s;
+        animation-delay: 2.4s, 0s;
         animation-timing-function: ease, ease-in-out;
         animation-iteration-count: 1, infinite;
         animation-direction: normal, alternate;
@@ -221,7 +239,7 @@
         right: 18%;
         animation: stage-show-elements-3, stage-show-elements-4;
         animation-duration: 2s, 2.4s;
-        animation-delay: 4.5s, 0s;
+        animation-delay: 2.7s, 0s;
         animation-timing-function: ease, ease-in-out;
         animation-iteration-count: 1, infinite;
         animation-direction: normal, alternate;
@@ -245,7 +263,7 @@
         right: 10%;
         animation: stage-show-elements-3, stage-show-elements-4;
         animation-duration: 2s, 2.7s;
-        animation-delay: 5s, 0s;
+        animation-delay: 3s, 0s;
         animation-timing-function: ease, ease-in-out;
         animation-iteration-count: 1, infinite;
         animation-direction: normal, alternate;
@@ -273,7 +291,7 @@
         max-width: 600px;
         animation: stage-show-elements-2;
         animation-duration: 2s;
-        animation-delay: 2s;
+        animation-delay: 1.5s;
         animation-timing-function: ease;
         animation-iteration-count: 1;
         animation-direction: normal;
@@ -284,6 +302,10 @@
         @media (max-width: $desktop-width) {
           margin-right: 40px;
         }
+
+        @media (max-width: $desktop-width-min) {
+          margin-right: 0;
+        }
       }
 
       &:nth-child(2) {
@@ -292,7 +314,7 @@
         z-index: -1;
         animation: stage-show-elements-1;
         animation-duration: 2s;
-        animation-delay: 0.5s;
+        animation-delay: 0.3s;
         animation-timing-function: ease;
         animation-iteration-count: 1;
         animation-direction: normal;
@@ -307,6 +329,7 @@
 
         @media (max-width: $desktop-width-min) {
           margin-top: -155px;
+          margin-left: 30px;
         }
       }
 
@@ -318,7 +341,7 @@
         left: 85px;
         animation: stage-show-elements-3, stage-show-elements-4;
         animation-duration: 2s, 1.8s;
-        animation-delay: 3.1s, 2.8s;
+        animation-delay: 1.2s, 0s;
         animation-timing-function: ease, ease-in-out;
         animation-iteration-count: 1, infinite;
         animation-direction: normal, alternate;
@@ -342,7 +365,7 @@
         left: 190px;
         animation: stage-show-elements-3, stage-show-elements-4;
         animation-duration: 2s, 1.8s;
-        animation-delay: 3.5s, 2.8s;
+        animation-delay: 1.5s, 0s;
         animation-timing-function: ease, ease-in-out;
         animation-iteration-count: 1, infinite;
         animation-direction: normal, alternate;
@@ -367,7 +390,7 @@
         right: 80px;
         animation: stage-show-elements-3, stage-show-elements-4;
         animation-duration: 2s, 1.8s;
-        animation-delay: 4s, 2.8s;
+        animation-delay: 1.8s, 0s;
         animation-timing-function: ease, ease-in-out;
         animation-iteration-count: 1, infinite;
         animation-direction: normal, alternate;
@@ -389,7 +412,7 @@
         right: 130px;
         animation: stage-show-elements-3, stage-show-elements-4;
         animation-duration: 2s, 1.8s;
-        animation-delay: 4.4s, 2.8s;
+        animation-delay: 2.1s, 0s;
         animation-timing-function: ease, ease-in-out;
         animation-iteration-count: 1, infinite;
         animation-direction: normal, alternate;
@@ -415,7 +438,7 @@
         right: 220px;
         animation: show, scale2;
         animation-duration: 2s, 1s;
-        animation-delay: 4.8s, 1s;
+        animation-delay: 2.4s, 0s;
         animation-timing-function: ease, ease-in-out;
         animation-iteration-count: 1, infinite;
         animation-direction: normal, alternate;
@@ -436,7 +459,7 @@
         left: 220px;
         animation: show, scale2;
         animation-duration: 2s, 1s;
-        animation-delay: 4.2s, 1s;
+        animation-delay: 2.7s, 0s;
         animation-timing-function: ease, ease-in-out;
         animation-iteration-count: 1, infinite;
         animation-direction: normal, alternate;
@@ -505,7 +528,7 @@
         left: 11%;
         animation: stage-show-elements-3, stage-show-elements-4;
         animation-duration: 2s, 1.8s;
-        animation-delay: 4s, 2.8s;
+        animation-delay: 2s, 0s;
         animation-timing-function: ease, ease-in-out;
         animation-iteration-count: 1, infinite;
         animation-direction: normal, alternate;
@@ -528,7 +551,7 @@
         left: 14%;
         animation: stage-show-elements-3, stage-show-elements-4;
         animation-duration: 2s, 2.3s;
-        animation-delay: 4.3s, 2.8s;
+        animation-delay: 2.3s, 0s;
         animation-timing-function: ease, ease-in-out;
         animation-iteration-count: 1, infinite;
         animation-direction: normal, alternate;
@@ -551,7 +574,7 @@
         left: 32%;
         animation: stage-show-elements-3, stage-show-elements-4;
         animation-duration: 2s, 2.7s;
-        animation-delay: 4.6s, 2.8s;
+        animation-delay: 2.6s, 0s;
         animation-timing-function: ease, ease-in-out;
         animation-iteration-count: 1, infinite;
         animation-direction: normal, alternate;
@@ -573,7 +596,7 @@
         right: 26%;
         animation: stage-show-elements-3, stage-show-elements-4;
         animation-duration: 2s, 2.4s;
-        animation-delay: 4.4s, 2.8s;
+        animation-delay: 2.9s, 0s;
         animation-timing-function: ease, ease-in-out;
         animation-iteration-count: 1, infinite;
         animation-direction: normal, alternate;
@@ -596,7 +619,7 @@
         right: 14%;
         animation: stage-show-elements-3, stage-show-elements-4;
         animation-duration: 2s, 2s;
-        animation-delay: 4.8s, 2.8s;
+        animation-delay: 3.2s, 0s;
         animation-timing-function: ease, ease-in-out;
         animation-iteration-count: 1, infinite;
         animation-direction: normal, alternate;
@@ -616,7 +639,7 @@
         left: 20%;
         animation: stage-show-elements-3, teams-svg-top;
         animation-duration: 2s, 2.2s;
-        animation-delay: 3s, 2.8s;
+        animation-delay: 3.5s, 0s;
         animation-timing-function: ease, ease-in-out;
         animation-iteration-count: 1, infinite;
         animation-direction: normal, alternate;
@@ -638,7 +661,7 @@
         left: 52%;
         animation: stage-show-elements-3, teams-svg-top;
         animation-duration: 2s, 2.5s;
-        animation-delay: 3.4s, 2.8s;
+        animation-delay: 3.8s, 0s;
         animation-timing-function: ease, ease-in-out;
         animation-iteration-count: 1, infinite;
         animation-direction: normal, alternate;
@@ -711,7 +734,7 @@
         max-width: 610px;
         animation: stage-show-elements-2;
         animation-duration: 2s;
-        animation-delay: 1.5s;
+        animation-delay: 1s;
         animation-timing-function: ease;
         animation-iteration-count: 1;
         animation-direction: normal;
@@ -729,7 +752,7 @@
         z-index: -1;
         animation: stage-show-elements-1;
         animation-duration: 2s;
-        animation-delay: 0.3s;
+        animation-delay: 0.2s;
         animation-timing-function: ease;
         animation-iteration-count: 1;
         animation-direction: normal;
@@ -749,7 +772,7 @@
         left: 5%;
         animation: stage-show-elements-3, stage-show-elements-4;
         animation-duration: 2s, 1.8s;
-        animation-delay: 2s, 2s;
+        animation-delay: 1.2s, 2s;
         animation-timing-function: ease, ease-in-out;
         animation-iteration-count: 1, infinite;
         animation-direction: normal, alternate;
@@ -774,7 +797,7 @@
         left: 10%;
         animation: stage-show-elements-3, stage-show-elements-4;
         animation-duration: 2s, 2.4s;
-        animation-delay: 2.4s, 2.4s;
+        animation-delay: 1.5s, 0s;
         animation-timing-function: ease, ease-in-out;
         animation-iteration-count: 1, infinite;
         animation-direction: normal, alternate;
@@ -796,7 +819,7 @@
         left: 57%;
         animation: stage-show-elements-3, stage-show-elements-4;
         animation-duration: 2s, 2.7s;
-        animation-delay: 2.8s, 2.8s;
+        animation-delay: 1.8s, 0s;
         animation-timing-function: ease, ease-in-out;
         animation-iteration-count: 1, infinite;
         animation-direction: normal, alternate;
@@ -816,7 +839,7 @@
         right: 7%;
         animation: stage-show-elements-3, stage-show-elements-4;
         animation-duration: 2s, 2.1s;
-        animation-delay: 3.2s, 2.8s;
+        animation-delay: 2.1s, 0s;
         animation-timing-function: ease, ease-in-out;
         animation-iteration-count: 1, infinite;
         animation-direction: normal, alternate;
@@ -840,7 +863,7 @@
         right: 13%;
         animation: stage-show-elements-3, stage-show-elements-4;
         animation-duration: 2s, 2.5s;
-        animation-delay: 3.7s, 2.8s;
+        animation-delay: 2.5s, 0s;
         animation-timing-function: ease, ease-in-out;
         animation-iteration-count: 1, infinite;
         animation-direction: normal, alternate;
@@ -896,7 +919,7 @@
           img {
             animation: rotateRight, show;
             animation-duration: 7s, 3s;
-            animation-delay: 0s, 3s;
+            animation-delay: 0s, 1.5s;
             animation-timing-function: linear, ease;
             animation-iteration-count: infinite, 1;
             animation-direction: normal;
@@ -915,7 +938,7 @@
           img {
             animation: rotateRight, show;
             animation-duration: 6.5s, 3s;
-            animation-delay: 0s, 3s;
+            animation-delay: 0s, 1.5s;
             animation-timing-function: linear, ease;
             animation-iteration-count: infinite, 1;
             animation-direction: normal;
@@ -934,7 +957,7 @@
           img {
             animation: rotateRight, show;
             animation-duration: 7s, 3s;
-            animation-delay: 0s, 3s;
+            animation-delay: 0s, 1.5s;
             animation-timing-function: linear, ease;
             animation-iteration-count: infinite, 1;
             animation-direction: normal;
@@ -955,7 +978,7 @@
           img {
             animation: rotateRight, show;
             animation-duration: 6.5s, 3s;
-            animation-delay: 0s, 3s;
+            animation-delay: 0s, 1.5s;
             animation-timing-function: linear, ease;
             animation-iteration-count: infinite, 1;
             animation-direction: normal;
@@ -977,7 +1000,7 @@
         max-width: 800px;
         animation: stage-show-elements-2;
         animation-duration: 2s;
-        animation-delay: 2s;
+        animation-delay: 1s;
         animation-timing-function: ease;
         animation-iteration-count: 1;
         animation-direction: normal;
@@ -991,7 +1014,7 @@
         z-index: -1;
         animation: stage-show-elements-1;
         animation-duration: 2s;
-        animation-delay: 0.5s;
+        animation-delay: 0.2s;
         animation-timing-function: ease;
         animation-iteration-count: 1;
         animation-direction: normal;
@@ -1011,7 +1034,7 @@
         left: 26%;
         animation: stage-show-elements-3, stage-show-elements-4;
         animation-duration: 2s, 1.8s;
-        animation-delay: 3.5s, 2.8s;
+        animation-delay: 2s, 0s;
         animation-timing-function: ease, ease-in-out;
         animation-iteration-count: 1, infinite;
         animation-direction: normal, alternate;
@@ -1031,7 +1054,7 @@
         left: 20%;
         animation: stage-show-elements-3, stage-show-elements-4;
         animation-duration: 2s, 2.2s;
-        animation-delay: 4s, 2.8s;
+        animation-delay: 2.3s, 0s;
         animation-timing-function: ease, ease-in-out;
         animation-iteration-count: 1, infinite;
         animation-direction: normal, alternate;
@@ -1051,7 +1074,7 @@
         left: 47%;
         animation: stage-show-elements-3, stage-show-elements-4;
         animation-duration: 2s, 2.6s;
-        animation-delay: 4.5s, 2.8s;
+        animation-delay: 2.6s, 0s;
         animation-timing-function: ease, ease-in-out;
         animation-iteration-count: 1, infinite;
         animation-direction: normal, alternate;
@@ -1071,7 +1094,7 @@
         right: 26%;
         animation: stage-show-elements-3, stage-show-elements-4;
         animation-duration: 2s, 2.4s;
-        animation-delay: 5s, 2.8s;
+        animation-delay: 2.9s, 0s;
         animation-timing-function: ease, ease-in-out;
         animation-iteration-count: 1, infinite;
         animation-direction: normal, alternate;
@@ -1091,7 +1114,7 @@
         right: 21%;
         animation: stage-show-elements-3, stage-show-elements-4;
         animation-duration: 2s, 2.7s;
-        animation-delay: 5.5s, 2.8s;
+        animation-delay: 3.2s, 0s;
         animation-timing-function: ease, ease-in-out;
         animation-iteration-count: 1, infinite;
         animation-direction: normal, alternate;
@@ -1115,7 +1138,7 @@
         max-width: 720px;
         animation: stage-show-elements-2;
         animation-duration: 2s;
-        animation-delay: 1.5s;
+        animation-delay: 1s;
         animation-timing-function: ease;
         animation-iteration-count: 1;
         animation-direction: normal;
@@ -1135,7 +1158,7 @@
         z-index: -1;
         animation: stage-show-elements-1;
         animation-duration: 2s;
-        animation-delay: 0.3s;
+        animation-delay: 0.2s;
         animation-timing-function: ease;
         animation-iteration-count: 1;
         animation-direction: normal;
@@ -1161,7 +1184,7 @@
         left: 20%;
         animation: rotateRight, show;
         animation-duration: 6s, 3s;
-        animation-delay: 0s, 3s;
+        animation-delay: 0s, 1.7s;
         animation-timing-function: linear, ease;
         animation-iteration-count: infinite, 1;
         animation-direction: normal;
@@ -1188,7 +1211,7 @@
         left: 53%;
         animation: rotateRight, show;
         animation-duration: 6s, 3s;
-        animation-delay: 0s, 3.5s;
+        animation-delay: 0s, 2s;
         animation-timing-function: linear, ease;
         animation-iteration-count: infinite, 1;
         animation-direction: normal;
@@ -1211,7 +1234,7 @@
         right: 10%;
         animation: stage-show-elements-3, stage-show-elements-4;
         animation-duration: 2s, 1.8s;
-        animation-delay: 3.8s, 2.8s;
+        animation-delay: 2.4s, 0s;
         animation-timing-function: ease, ease-in-out;
         animation-iteration-count: 1, infinite;
         animation-direction: normal, alternate;
@@ -1236,7 +1259,7 @@
         max-width: 860px;
         animation: stage-show-elements-2;
         animation-duration: 2s;
-        animation-delay: 1.5s;
+        animation-delay: 1.2s;
         animation-timing-function: ease;
         animation-iteration-count: 1;
         animation-direction: normal;
@@ -1253,7 +1276,7 @@
         z-index: -1;
         animation: stage-show-elements-1;
         animation-duration: 2s;
-        animation-delay: 0.3s;
+        animation-delay: 0.2s;
         animation-timing-function: ease;
         animation-iteration-count: 1;
         animation-direction: normal;
@@ -1267,6 +1290,7 @@
 
         @media (max-width: $desktop-width-min) {
           margin-top: -115px;
+          margin-right: 20px;
         }
       }
     }
@@ -1279,7 +1303,7 @@
         left: 10%;
         animation: stage-show-elements-3, stage-show-elements-4;
         animation-duration: 2s, 1.8s;
-        animation-delay: 2.5s, 2.8s;
+        animation-delay: 1.6s, 0s;
         animation-timing-function: ease, ease-in-out;
         animation-iteration-count: 1, infinite;
         animation-direction: normal, alternate;
@@ -1303,7 +1327,7 @@
         left: 50%;
         animation: stage-show-elements-3, stage-show-elements-4;
         animation-duration: 2s, 2s;
-        animation-delay: 3.2s, 3.6s;
+        animation-delay: 2s, 0s;
         animation-timing-function: ease, ease-in-out;
         animation-iteration-count: 1, infinite;
         animation-direction: normal, alternate;
@@ -1326,7 +1350,7 @@
         right: 16%;
         animation: stage-show-elements-3, stage-show-elements-4;
         animation-duration: 2s, 2.2s;
-        animation-delay: 4s, 4s;
+        animation-delay: 2.3s, 0s;
         animation-timing-function: ease, ease-in-out;
         animation-iteration-count: 1, infinite;
         animation-direction: normal, alternate;
@@ -1349,7 +1373,7 @@
         left: 34%;
         animation: rotateRight, show;
         animation-duration: 7s, 3.3s;
-        animation-delay: 0s, 2.7s;
+        animation-delay: 0s, 2.6s;
         animation-timing-function: linear, ease;
         animation-iteration-count: infinite, 1;
         animation-direction: normal;
@@ -1372,7 +1396,7 @@
       right: 20%;
       animation: show;
       animation-duration: 3.3s;
-      animation-delay: 3.6s;
+      animation-delay: 3s;
       animation-timing-function: ease;
       animation-iteration-count: 1;
       animation-direction: normal;

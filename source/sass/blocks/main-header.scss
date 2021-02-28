@@ -11,7 +11,6 @@
 .main-header__wrapper {
   display: grid;
   grid-template-columns: 17% auto;
-  min-height: 75px;
   align-items: center;
 
   @media (max-width: $desktop-width-min) {
@@ -32,26 +31,132 @@
 .main-header__tel {
   display: grid;
   grid-column: 1 / 3;
+  grid-row: 1;
   grid-template-columns: repeat(2, auto);
   justify-self: flex-end;
   align-items: center;
-  grid-gap: 0 10px;
+  grid-gap: 0 20px;
+  font-size: 15px;
+  line-height: 15px;
 
   @media (max-width: $desktop-width-min) {
-    padding: 5px 10px;
+    padding: 10px;
     position: absolute;
     top: 65px;
-    right: 0;
+    right: 20px;
     grid-template-columns: 1fr;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     background-color: #f5f9ff;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
     display: none;
+    font-size: 18px;
+    line-height: 21px;
+  }
+
+  @media (max-width: $tablet-width) {
+    right: 0;
+    border-bottom-right-radius: 0;
   }
 
   &--active {
     display: grid;
+    grid-gap: 12px 0;
+  }
+
+  a:hover {
+    font-weight: $normal;
+    color: $dark-black;
+
+    @media (max-width: $desktop-width-min) {
+      color: $dark-red;
+    }
+  }
+}
+
+.main-header__social {
+  grid-row: 1;
+  grid-gap: 0 5px;
+  grid-template-columns: 1fr;
+  display: none;
+
+  @media (max-width: $desktop-width-min) {
+    display: grid;
+    margin-top: 5px;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-top: 3px;
+  }
+
+  ul {
+    @include reset-list;
+    position: absolute;
+    top: 65px;
+    right: 140px;
+    background-color: $light-gray;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: none;
+    grid-template-columns: repeat(5, auto);
+    grid-gap: 0 15px;
+    padding: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    @media (max-width: $tablet-width) {
+      right: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+
+  .main-header__social-btn {
+    padding-right: 10px;
+    position: relative;
+
+    &::before {
+      width: 8px;
+      height: 2px;
+      position: absolute;
+      content: "";
+      top: 16px;
+      right: -2px;
+      background-color: $blue;
+      transform: rotate(45deg);
+
+      @media (max-width: $tablet-width) {
+        top: 14px;
+      }
+    }
+
+    &::after {
+      width: 8px;
+      height: 2px;
+      position: absolute;
+      content: "";
+      top: 16px;
+      right: -7px;
+      background-color: $blue;
+      transform: rotate(-45deg);
+
+      @media (max-width: $tablet-width) {
+        top: 14px;
+      }
+    }
+
+    img {
+      max-width: 35px;
+    }
+  }
+
+  img {
+    max-width: 35px;
+    display: block;
+  }
+
+  &--active {
+    ul {
+      display: grid;
+    }
   }
 }
 
@@ -68,28 +173,21 @@
       display: none;
     }
   }
-
-  &:hover {
-    font-weight: $normal;
-    color: $dark-black;
-
-    @media (max-width: $desktop-width-min) {
-      color: $dark-red;
-    }
-  }
 }
 
 .main-header__nav-box {
   display: grid;
   grid-template-columns: 66% auto;
+  padding-top: 5px;
 
   @media (max-width: $desktop-width-min) {
     grid-gap: 0 30px;
     grid-template-columns: repeat(2, auto);
+    padding-top: 0;
   }
 
   @media (max-width: $tablet-width) {
-    grid-gap: 0 15px;
+    grid-gap: 0 20px;
     grid-template-columns: 1fr;
   }
 }
@@ -145,7 +243,7 @@
       color: $dark-red;
 
       @media (max-width: $desktop-width-min) {
-        color: $dark-blue;
+        color: rgba(232, 169, 180, 0.6);
       }
     }
   }
@@ -154,9 +252,11 @@
 .main-header__wrap-menu-nav {
   display: grid;
   align-items: center;
+  padding-top: 10px;
 
   @media (max-width: $desktop-width-min) {
     grid-column: 3;
+    padding-top: 0;
   }
 }
 
@@ -170,8 +270,8 @@
   @media (max-width: $desktop-width-min) {
     grid-column: 2;
     grid-row: 1;
-    grid-gap: 0 15px;
-    grid-template-columns: 30px auto;
+    grid-gap: 0 30px;
+    grid-template-columns: 40px auto;
   }
 
   @media (max-width: $tablet-width) {
@@ -184,6 +284,41 @@
   }
 
   .main-header__box-phone {
+    @media (max-width: $desktop-width-min) {
+      padding-right: 10px;
+      position: relative;
+
+      &::before {
+        width: 8px;
+        height: 2px;
+        position: absolute;
+        content: "";
+        top: 13px;
+        right: 5px;
+        background-color: $blue;
+        transform: rotate(45deg);
+
+        @media (max-width: $tablet-width) {
+          top: 12px;
+        }
+      }
+
+      &::after {
+        width: 8px;
+        height: 2px;
+        position: absolute;
+        content: "";
+        top: 13px;
+        right: 0;
+        background-color: $blue;
+        transform: rotate(-45deg);
+
+        @media (max-width: $tablet-width) {
+          top: 12px;
+        }
+      }
+    }
+
     &:hover {
       span {
         color: $dark-red;
@@ -195,7 +330,7 @@
       display: none;
 
       @media (max-width: $desktop-width-min) {
-        max-width: 45px;
+        max-width: 27px;
         display: block;
       }
     }
@@ -213,6 +348,7 @@
 
   &-tablet {
     display: none;
+    padding-bottom: 70px;
 
     @media (max-width: $desktop-width-min) {
       display: grid;
@@ -276,6 +412,7 @@
     top: 65px;
     left: 0;
     display: none;
+    overflow-y: scroll;
 
     &--active {
       display: grid;
@@ -513,7 +650,8 @@
   }
 }
 
-.main-header__link-stage {
+.main-header__link-stage,
+.main-header__services {
   display: none;
 
   @media (max-width: $tablet-width) {
@@ -539,6 +677,50 @@
       background-repeat: no-repeat;
       background-position: 12px 14px;
       box-shadow: none;
+    }
+  }
+}
+
+.main-header__link-services,
+.main-header__stage-link {
+  position: relative;
+  padding-bottom: 10px;
+
+  ul {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width-min) {
+    &:hover {
+      ul {
+        @include reset-list;
+        padding: 15px 0;
+        width: 355px;
+        position: absolute;
+        top: 34px;
+        left: 0;
+        background-color: $light-gray;
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        columns: 2;
+        display: inline-block;
+
+        a {
+          padding-left: 15px;
+          border-left: solid 2px transparent;
+          display: block;
+          margin-bottom: 10px;
+          text-align: left;
+          color: $dark-black;
+          font-weight: $normal;
+
+          &:hover {
+            color: $dark-red;
+            border-left: solid 2px $blue;
+          }
+        }
+      }
     }
   }
 }

@@ -1,8 +1,12 @@
 .blog {
-  margin: 110px 0 70px 0;
+  margin: 95px 0 70px 0;
 
   @media (max-width: $tablet-width) {
     margin-bottom: 40px;
+  }
+
+  .breadcrumbs {
+    margin-left: 0;
   }
 }
 
@@ -55,9 +59,12 @@
 .blog__image {
   position: relative;
   overflow: hidden;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
 
   img {
     display: block;
+    filter: brightness(0.5);
     transition: all 1s ease;
   }
 }

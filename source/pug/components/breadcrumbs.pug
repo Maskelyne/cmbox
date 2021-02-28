@@ -1,11 +1,8 @@
 mixin breadcrumbs()
-  .breadcrumbs.container
-    ul.breadcrumbs__list
-      li.breadcrumbs__link-active: a(href="#") 1
-      li: a(href="#") 2
-      li: a(href="#") 3
-      li: a(href="#") 4
-      li: a(href="#") 5
-      li: span ...
-      li: a(href="#") 10
-
+  .breadcrumbs
+    .breadcrumbs__wrapper
+      ul.breadcrumbs__list
+        li
+          a.breadcrumbs__link(href="#") Главная
+        li
+          a.breadcrumbs__link.breadcrumbs__link--active SEO продвижение

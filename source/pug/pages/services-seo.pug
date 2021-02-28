@@ -2,157 +2,11 @@ extends ../layout/page-layout
 
 block variables
   - var title = "SEO"
-  - var activePage = 5
 
 block header
   +header
 
 block main
-
-  -
-    var boxesList = [
-      {
-        link: 'services-analytics.html',
-        path: 'services',
-        name: 'box-close',
-        format: 'svg',
-        width: '240',
-        height: '160',
-        altText: 'Аналитика',
-        text: 'Аналитика',
-        iconPath: 'svg',
-        iconName: 'icon-analytics',
-        iconWidth: '48',
-        iconHeight: '48'
-      },
-      {
-        link: 'services-strategy.html',
-        path: 'services',
-        name: 'box-close',
-        format: 'svg',
-        width: '240',
-        height: '160',
-        altText: 'Стратегия',
-        text: 'Стратегия',
-        iconPath: 'svg',
-        iconName: 'icon-strategy',
-        iconWidth: '48',
-        iconHeight: '48'
-      },
-      {
-        link: 'services-design.html',
-        path: 'services',
-        name: 'box-close',
-        format: 'svg',
-        width: '240',
-        height: '160',
-        altText: 'Дизайн',
-        text: 'Дизайн',
-        iconPath: 'svg',
-        iconName: 'icon-design',
-        iconWidth: '48',
-        iconHeight: '48'
-      },
-      {
-        link: 'services-site.html',
-        path: 'services',
-        name: 'box-close',
-        format: 'svg',
-        width: '240',
-        height: '160',
-        altText: 'Сайт',
-        text: 'Сайт',
-        iconPath: 'svg',
-        iconName: 'icon-site',
-        iconWidth: '48',
-        iconHeight: '48'
-      },
-      {
-        link: 'services-sales.html',
-        path: 'services',
-        name: 'box-close',
-        format: 'svg',
-        width: '240',
-        height: '160',
-        altText: 'Воронка продаж',
-        text: 'Воронка продаж',
-        iconPath: 'svg',
-        iconName: 'icon-sale',
-        iconWidth: '48',
-        iconHeight: '48'
-      },
-      {
-        link: 'services-seo.html',
-        path: 'services',
-        name: 'box-close',
-        format: 'svg',
-        width: '240',
-        height: '160',
-        altText: 'Seo',
-        text: 'Seo',
-        iconPath: 'svg',
-        iconName: 'icon-seo',
-        iconWidth: '48',
-        iconHeight: '48'
-      },
-      {
-        link: 'services-context.html',
-        path: 'services',
-        name: 'box-close',
-        format: 'svg',
-        width: '240',
-        height: '160',
-        altText: 'Контекст',
-        text: 'Контекст',
-        iconPath: 'svg',
-        iconName: 'icon-contecst',
-        iconWidth: '48',
-        iconHeight: '48'
-      },
-      {
-        link: 'services-social.html',
-        path: 'services',
-        name: 'box-close',
-        format: 'svg',
-        width: '240',
-        height: '160',
-        altText: 'Соцсети',
-        text: 'Соцсети',
-        iconPath: 'svg',
-        iconName: 'icon-social',
-        iconWidth: '48',
-        iconHeight: '48'
-      },
-      {
-        link: 'services-marketing.html',
-        path: 'services',
-        name: 'box-close',
-        format: 'svg',
-        width: '240',
-        height: '160',
-        altText: 'Видео-маркетинг',
-        text: 'Видео-маркетинг',
-        iconPath: 'svg',
-        iconName: 'icon-video',
-        iconWidth: '48',
-        iconHeight: '48'
-      },
-      {
-        link: 'services-crm.html',
-        path: 'services',
-        name: 'box-close',
-        format: 'svg',
-        width: '240',
-        height: '160',
-        altText: 'Crm',
-        text: 'Crm',
-        iconPath: 'svg',
-        iconName: 'icon-crm',
-        iconWidth: '48',
-        iconHeight: '48'
-      },
-    ];
-
   -
     var servicesList = [
       {
@@ -177,23 +31,51 @@ block main
 
   main.gray-box
     section.services
+      +breadcrumbs
       h1 Услуги
       .services__box
         .services__nav-box
-          ul.services__boxes-list
-            each item, index in boxesList
-              if (index === activePage)
-                li
-                  a(href= item.link).services__link-active
-                    span= item.text
-                    +img(item.path, item.name, item.format, item.width, item.height, item.altText)
-                    +img(item.iconPath, item.iconName, item.format, item.iconWidth, item.iconHeight, item.altText)
-              else
-                li
-                  a(href= item.link)
-                    span= item.text
-                    +img(item.path, item.name, item.format, item.width, item.height, item.altText)
-                    +img(item.iconPath, item.iconName, item.format, item.iconWidth, item.iconHeight, item.altText)
+          ul
+            li
+              a.services__link-active(href="#")
+                +img('services/services-nav', 'box-close', 'svg', '30', '30', '1 Элемент')
+                +img('services/services-nav', 'box-open', 'svg', '30', '30', '2 Элемент')
+                +img('services/services-nav', 'box-close-hover', 'svg', '30', '30', '3 Элемент')
+                | Аналитика
+                +img('services/services-nav', 'analytic-icon', 'svg', '30', '30', '4 Элемент')
+                +img('services/services-nav', 'analytic-icon-active', 'svg', '30', '30', '5 Элемента')
+            li
+              a(href="#")
+                +img('services/services-nav', 'box-close', 'svg', '30', '30', '1 Элемент')
+                +img('services/services-nav', 'box-open', 'svg', '30', '30', '2 Элемент')
+                +img('services/services-nav', 'box-close-hover', 'svg', '30', '30', '3 Элемент')
+                | Дизайн
+                +img('services/services-nav', 'design-icon', 'svg', '30', '30', '4 Элемент')
+                +img('services/services-nav', 'design-icon-active', 'svg', '30', '30', '5 Элемент')
+            li
+              a(href="#")
+                +img('services/services-nav', 'box-close', 'svg', '30', '30', '1 Элемент')
+                +img('services/services-nav', 'box-open', 'svg', '30', '30', '2 Элемент')
+                +img('services/services-nav', 'box-close-hover', 'svg', '30', '30', '3 Элемент')
+                | Стратегия
+                +img('services/services-nav', 'strategy-icon', 'svg', '30', '30', '4 Элемент')
+                +img('services/services-nav', 'strategy-icon-active', 'svg', '30', '30', '5 Элемент')
+            li
+              a(href="#")
+                +img('services/services-nav', 'box-close', 'svg', '30', '30', '1 Элемент')
+                +img('services/services-nav', 'box-open', 'svg', '30', '30', '2 Элемент')
+                +img('services/services-nav', 'box-close-hover', 'svg', '30', '30', '3 Элемент')
+                | Видеомаркетинг
+                +img('services/services-nav', 'video-icon', 'svg', '30', '30', '4 Элемент')
+                +img('services/services-nav', 'video-icon-active', 'svg', '30', '30', '5 Элемент')
+            li
+              a(href="#")
+                +img('services/services-nav', 'box-close', 'svg', '30', '30', '1 Элемент')
+                +img('services/services-nav', 'box-open', 'svg', '30', '30', '2 Элемент')
+                +img('services/services-nav', 'box-close-hover', 'svg', '30', '30', '3 Элемент')
+                | Воронка продаж
+                +img('services/services-nav', 'sale-icon', 'svg', '30', '30', '4 Элемент')
+                +img('services/services-nav', 'sale-icon-active', 'svg', '30', '30', '5 Элемент')
         .services__box-images
           .services__image
             +img('services', 'icon-seo', 'svg', '220', '220', 'Seo')
@@ -201,15 +83,359 @@ block main
             +img('services', 'big-box-active', 'svg', '640', '380', 'Коробка')
             +img('services', 'big-box-hover', 'svg', '640', '380', 'Коробка')
         .services__box-text
-          h2 Seo продвижение
-          .services__text
-            p Прежде, чем говорить о преимуществах, стоит объяснить, что означает
-              strong  SEO.
-              |  Это поисковая оптимизация и продвижение сайта, которые выводят в топовые позиции органической выдачи Яндекс, Google и других поисковиков.
-            p
-              strong Органическая выдача
-              |  – это естественная часть выдачи в поисковиках Яндекс, Google и других, не являющаяся рекламной. То есть, вы попадаете в ТОП-позиции органической выдачи при условии максимального совпадения контента сайта с запросом пользователя.
-            p Существует больше 500 факторов, которые влияют на органическую выдачу. При настройке SEO достаточно учесть основные из таких факторов, чтобы эффективно конкурировать в вашей нише бизнеса.
+          .services__data
+            h3 Хочешь проверить свое SEO?
+            .services__data-text
+              p Базовый анализ ваших маркетинговых инструментов
+                strong  по цене чашки кофе
+              a.button.analysis-btn(href="#")
+                span Заказать
+            .services__image-seo
+              +picture('png', 'image-seo', 'image-seo-tablet', 'image-seo-mobile', 'png', '1050', '170', 'Реклама', '1023', '767')
+      .services__price
+        h3 Тарифы для Беларуси, России и СНГ
+        ul.services__price-grid
+          li
+            article
+              .services__price-box
+                strong Старт
+                .services__price-text
+                  .services__span
+                    span 450 byn
+                  .services__span
+                    span 13000 rub
+              .services__price-wrap
+                ul
+                  li
+                    .services__price-tooltip
+                      p До
+                        strong  100
+                        |  запросов
+                  li
+                    .services__price-tooltip
+                      p Изучение конкурентов
+                  li
+                    .services__price-tooltip
+                      p Создание SEO стратегии
+                  li
+                    .services__price-tooltip
+                      p
+                        strong 1 ссылка
+                        |  в месяц
+                  li
+                    .services__price-tooltip
+                      p Разработка
+                        strong  до 1 часа
+                        |  в месяц
+                  li
+                    .services__price-tooltip
+                      p Разработка
+                        strong  до 1 часа
+                        |  в месяц
+                  li
+                    .services__price-tooltip
+                      p Маркетолог
+                        strong  до 1 часа
+                        |  в месяц
+                  li
+                    .services__price-tooltip
+                      p Дизайнер
+                        strong  до 1 часа
+                        |  в месяц
+                  li
+                    .services__price-tooltip
+                      p Копирайтер
+                        strong  до 1000
+                        |  символов в месяц
+                  li
+                    .services__price-tooltip
+                      p Развернутый отчёт
+                a.button.services-modal-js(href="#")
+                  span Заказать
+          li
+            article
+              .services__price-box
+                strong Старт
+                .services__price-text
+                  .services__span
+                    span 450 byn
+                  .services__span
+                    span 13000 rub
+              .services__price-wrap
+                ul
+                  li
+                    .services__price-tooltip
+                      p До
+                        strong  100
+                        |  запросов
+                  li
+                    .services__price-tooltip
+                      p Изучение конкурентов
+                  li
+                    .services__price-tooltip
+                      p Создание SEO стратегии
+                  li
+                    .services__price-tooltip
+                      p
+                        strong 1 ссылка
+                        |  в месяц
+                  li
+                    .services__price-tooltip
+                      p Разработка
+                        strong  до 1 часа
+                        |  в месяц
+                  li
+                    .services__price-tooltip
+                      p Разработка
+                        strong  до 1 часа
+                        |  в месяц
+                  li
+                    .services__price-tooltip
+                      p Маркетолог
+                        strong  до 1 часа
+                        |  в месяц
+                  li
+                    .services__price-tooltip
+                      p Дизайнер
+                        strong  до 1 часа
+                        |  в месяц
+                  li
+                    .services__price-tooltip
+                      p Копирайтер
+                        strong  до 1000
+                        |  символов в месяц
+                  li
+                    .services__price-tooltip
+                      p Развернутый отчёт
+                a.button.services-modal-js(href="#")
+                  span Заказать
+          li
+            article
+              .services__price-box
+                strong Старт
+                .services__price-text
+                  .services__span
+                    span 450 byn
+                  .services__span
+                    span 13000 rub
+              .services__price-wrap
+                ul
+                  li
+                    .services__price-tooltip
+                      p До
+                        strong  100
+                        |  запросов
+                  li
+                    .services__price-tooltip
+                      p Изучение конкурентов
+                  li
+                    .services__price-tooltip
+                      p Создание SEO стратегии
+                  li
+                    .services__price-tooltip
+                      p
+                        strong 1 ссылка
+                        |  в месяц
+                  li
+                    .services__price-tooltip
+                      p Разработка
+                        strong  до 1 часа
+                        |  в месяц
+                  li
+                    .services__price-tooltip
+                      p Разработка
+                        strong  до 1 часа
+                        |  в месяц
+                  li
+                    .services__price-tooltip
+                      p Маркетолог
+                        strong  до 1 часа
+                        |  в месяц
+                  li
+                    .services__price-tooltip
+                      p Дизайнер
+                        strong  до 1 часа
+                        |  в месяц
+                  li
+                    .services__price-tooltip
+                      p Копирайтер
+                        strong  до 1000
+                        |  символов в месяц
+                  li
+                    .services__price-tooltip
+                      p Развернутый отчёт
+                a.button.services-modal-js(href="#")
+                  span Заказать
+          li
+            article
+              .services__price-box
+                strong Старт
+                .services__price-text
+                  .services__span
+                    span 450 byn
+                  .services__span
+                    span 13000 rub
+              .services__price-wrap
+                ul
+                  li
+                    .services__price-tooltip
+                      p До
+                        strong  100
+                        |  запросов
+                  li
+                    .services__price-tooltip
+                      p Изучение конкурентов
+                  li
+                    .services__price-tooltip
+                      p Создание SEO стратегии
+                  li
+                    .services__price-tooltip
+                      p
+                        strong 1 ссылка
+                        |  в месяц
+                  li
+                    .services__price-tooltip
+                      p Разработка
+                        strong  до 1 часа
+                        |  в месяц
+                  li
+                    .services__price-tooltip
+                      p Разработка
+                        strong  до 1 часа
+                        |  в месяц
+                  li
+                    .services__price-tooltip
+                      p Маркетолог
+                        strong  до 1 часа
+                        |  в месяц
+                  li
+                    .services__price-tooltip
+                      p Дизайнер
+                        strong  до 1 часа
+                        |  в месяц
+                  li
+                    .services__price-tooltip
+                      p Копирайтер
+                        strong  до 1000
+                        |  символов в месяц
+                  li
+                    .services__price-tooltip
+                      p Развернутый отчёт
+                a.button.services-modal-js(href="#")
+                  span Заказать
+        .services__price-text2
+          +img('svg', 'image-price', 'svg', '80', '80', 'Ключевые параметры')
+          p Гарантируем повышение ключевых параметров в позициях или вернем деньги.
+      .services-keys
+        h3 Кейсы по продвижению сайтов
+        .services-keys__box
+          article
+            .services-keys__text
+              strong Сайт:
+                a(href="#")  domlaminata.by
+              p
+                strong Тематика проекта:
+                |  Продажа ламината
+              p
+                strong Регион продаж:
+                |  Беларусь
+              p
+                strong Результат по трафику:
+                |  Количество переходов из поисковых систем увеличилось с 60 до 300 человек в неделю
+            .services-keys__image
+              +img('png', 'image-1', 'png', '310', '150', 'График')
+            table
+              tr
+                th Запрос
+                td
+                  +img('png', 'icon-google', 'png', '50', '18', 'Google')
+                td
+                  +img('png', 'icon-yandex', 'png', '50', '18', 'Yandex')
+              tr
+                td Ламинат выезд с образцами
+                td 1
+                td 1
+              tr
+                td Магазин ламината
+                td 2
+                td 2
+              tr
+                td Ламинат оптом
+                td 8
+                td 5
+              tr
+                td Распродажа ламината
+                td 8
+                td 7
+          article
+            .services-keys__text
+              strong Сайт:
+                a(href="#")  exim.by
+              p
+                strong Тематика проекта:
+                |  Продажа инструментов
+              p
+                strong Регион продаж:
+                |  Беларусь
+              p
+                strong Результат по трафику:
+                |  Количество переходов из поисковых систем увеличилось с 100 до 1000 человек в неделю
+            .services-keys__image
+              +img('png', 'image-2', 'png', '310', '150', 'График')
+            table
+              tr
+                th Запрос
+                td
+                  +img('png', 'icon-google', 'png', '50', '18', 'Google')
+                td
+                  +img('png', 'icon-yandex', 'png', '50', '18', 'Yandex')
+              tr
+                td Cimco Минск
+                td 1
+                td 1
+              tr
+                td Торцевой фиксатор
+                td 10
+                td 2
+              tr
+                td Кабель для зарядки электромобиля
+                td 10
+                td 3
+              tr
+                td Бирки маркировочные
+                td 10
+                td 4
+          article
+            .services-keys__text
+              strong Сайт:
+                a(href="#")  grossprof.by
+              p
+                strong Тематика проекта:
+                |  Услуги бухгалтера и налоговых консультантов
+              p
+                strong Регион продвижения:
+                |  Минск
+            .services-keys__image
+              +img('png', 'image-3', 'png', '310', '150', 'График')
+            table
+              tr
+                th Запрос
+                td
+                  +img('png', 'icon-google', 'png', '50', '18', 'Google')
+                td
+                  +img('png', 'icon-yandex', 'png', '50', '18', 'Yandex')
+              tr
+                td Сопровождение проверок контролирующих органов
+                td 8
+                td 1
+              tr
+                td Консультация по налогам для физ лиц
+                td 10
+                td 6
+              tr
+                td Консультация по налогам для физ лиц
+                td 8
+                td 9
       .services__info
         article
           h3 Необходимо заказать SEO у нас, если:
@@ -250,6 +476,19 @@ block main
             +img('services/icon-services', 'icon-rocket', 'svg', '200', '130', 'Следим за трендами')
             strong Следим за трендами
             p Для достижения лучших результатов мы используем эффективные и современные инструменты продвижения.
+        .feedback-slider
+          h3 Отзывы
+          .feedback-slider__wrapper
+            .feedback-slider__swiper-container.swiper-container
+              ul.swiper-wrapper
+                li.swiper-slide
+                  iframe(src="https://www.youtube.com/embed/egRMfkc56iI?&enablejsapi=1" allowfullscreen)
+                li.swiper-slide
+                  iframe(src="https://www.youtube.com/embed/egRMfkc56iI?&enablejsapi=1" allowfullscreen)
+                li.swiper-slide
+                  iframe(src="https://www.youtube.com/embed/egRMfkc56iI?&enablejsapi=1" allowfullscreen)
+              .feedback-slider__swiper-button-prev.swiper-button-prev
+              .feedback-slider__swiper-button-next.swiper-button-next
         .services__info-text
           h3 Зачем SEO продвижение?
           p Сейчас продвижение сайта – это одна из самых важных частей эффективных продаж в Интернете.
@@ -296,9 +535,44 @@ block main
           span Опытные специалисты.
           span Сплоченная командная работа. В данной услуге участвуют: SEO- специалист, маркетолог, дизайнер, копирайтер, разработчик.
           span Справедливая цена.
+        .services__slider
+          h3 Примеры нашего видеомаркетинга для сайтов:
+          .services__slider-wrapper
+            .services__swiper-container.swiper-container
+              ul.swiper-wrapper
+                li.swiper-slide
+                  iframe(src="https://www.youtube.com/embed/egRMfkc56iI?&enablejsapi=1" allowfullscreen)
+                li.swiper-slide
+                  iframe(src="https://www.youtube.com/embed/egRMfkc56iI?&enablejsapi=1" allowfullscreen)
+                li.swiper-slide
+                  iframe(src="https://www.youtube.com/embed/egRMfkc56iI?&enablejsapi=1" allowfullscreen)
+              .services__swiper-button-prev.swiper-button-prev
+              .services__swiper-button-next.swiper-button-next
         .services__box-portfolio.container
           h2 Примеры работ вы можете посмотреть на странице
             a(href="#")  Портфолио
 
 block footer
   +footer
+
+  section.contacts.modal.modal-services-order
+    .modal__wrapper
+      .contacts__form
+        p Как с Вами связаться?
+        form(id="form-services-order" action="#" method="get")
+          .modal__user-name
+            input(id="user_name" type="text" name="user_name" required)
+            label(for="user_name") Имя
+          .modal__user-phone
+            input(id="user_phone" type="tel" name="user_phone" required)
+            label(for="user_phone") Телефон
+          .modal__user-email
+            input(id="user_email" type="tel" name="user_email")
+            label(for="user_email") Email
+          .modal__user-comment
+            textarea(id="user_comment" name="user_comment")
+            label(for="user_comment") Комментарий
+          button.button(type="submit")
+            span Отправить
+      a.modal__btn-closed(href="#")
+        span.visually-hidden Закрыть модальное окно

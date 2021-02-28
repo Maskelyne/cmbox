@@ -24,29 +24,50 @@ block main
             h2 Маркетинговое агенство
             h3 Creative Marketing
               span  box
+            .contacts__text
+              p ООО «Дигитал Креатив Маркетинг»
+              p УНП 193357007
+              p р/с RUB
+              p р/с BY97BELB301200019S0010226000 BYN БИК: BELBBY2X
+              p Банк: ОАО «Банк БелВЭБ»
             .main-footer__contacts
-              a.main-footer__link-location(href="https://yandex.by/maps/157/minsk/house/Zk4YcARnSEwGQFtpfXV1dHRrZw==/?ll=27.639610%2C53.946001&utm_source=main_stripe_big&z=16.5" target="_blank") ул. Калиновского 77а, офис 310
+              a.main-footer__link-location(href="https://yandex.by/maps/157/minsk/house/Zk4YcARnSEwGQFtpfXV1dHRrZw==/?ll=27.639610%2C53.946001&utm_source=main_stripe_big&z=16.5" target="_blank") Юридический адрес/Почтовый адрес: 220103 г. Минск, ул. Калиновского 77а, каб 310
               a.main-footer__link-mail(href="mail:info@cmbox.by") info@cmbox.by
               .main-footer__link-box
-                a.main-footer__link-phone(href="tel:+375296086368") +375 (29) 608-63-68
+                .main-footer__phone
+                  a.main-footer__link-phone(href="tel:+375296086368") +375 (29) 608-63-68 (Минск)
+                  a.main-footer__link-phone(href="tel:+375296086368") +7 (495) 608-63-68 (Москва)
                 +social-list
-            .contacts__form
-              p Как с Вами связаться?
-              form(id="form" action="#" method="get")
-                .modal__user-name
-                  input(id="user_name" type="text" name="user_name" required)
-                  label(for="user_name") Имя
-                .modal__user-phone
-                  input(id="user_phone" type="tel" name="user_phone" required)
-                  label(for="user_phone") Телефон
-                .modal__user-email
-                  input(id="user_email" type="tel" name="user_email")
-                  label(for="user_email") Email
-                .modal__user-comment
-                  textarea(id="user_comment" name="user_comment")
-                  label(for="user_comment") Комментарий
-                button.button(type="submit")
-                  span Отправить
+            a.button.services-modal-js(href="#")
+              span Нажми для связи с нами
+    #map.map(style="width: 100%; height: 450px;")
+      h2 Как к нам добраться:
+      .contacts-btn
+        button#btn-vostok(type="button") метро Восток
+        button#btn-mkad(type="button") со стороны МКАД
+        button#btn-logoisk(type="button") Логойский тракт
 
 block footer
   +footer
+
+  section.contacts.modal.modal-services-order
+    .modal__wrapper
+      .contacts__form
+        p Как с Вами связаться?
+        form(id="form-services-order" action="#" method="get")
+          .modal__user-name
+            input(id="user_name" type="text" name="user_name" required)
+            label(for="user_name") Имя
+          .modal__user-phone
+            input(id="user_phone" type="tel" name="user_phone" required)
+            label(for="user_phone") Телефон
+          .modal__user-email
+            input(id="user_email" type="tel" name="user_email")
+            label(for="user_email") Email
+          .modal__user-comment
+            textarea(id="user_comment" name="user_comment")
+            label(for="user_comment") Комментарий
+          button.button(type="submit")
+            span Отправить
+      a.modal__btn-closed(href="#")
+        span.visually-hidden Закрыть модальное окно

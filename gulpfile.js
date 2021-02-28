@@ -20,7 +20,7 @@ var path = {
   build: {
     html: 'build/',
     js: 'build/assets/js/',
-    jsWorker: 'build',
+    json: 'build/assets/json',
     css: 'build/assets/css/',
     img: 'build/assets/img/',
     fonts: 'build/assets/fonts/'
@@ -31,6 +31,7 @@ var path = {
     jsAdd: 'source/js/default.js',
     vendorJs: 'source/js/vendor.js',
     css: 'source/sass/style.scss',
+    json: 'source/json/*.json',
     img: 'source/img/**/*.{png,jpg,svg,gif}',
     sprite: 'source/img/svg-sprite/*.svg',
     fonts: 'source/fonts/**/*.{woff,woff2}'
@@ -67,6 +68,12 @@ gulp.task('fancybox:build', function () {
   return gulp
     .src(path.fancybox.source)
     .pipe(gulp.dest(path.build.css));
+});
+
+gulp.task('json:build', function () {
+  return gulp
+    .src(path.source.json)
+    .pipe(gulp.dest(path.build.json));
 });
 
 gulp.task('html:build', function () {
@@ -162,6 +169,7 @@ gulp.task('build', gulp.series(
     'clean:build',
     'html:build',
     'fancybox:build',
+    'json:build',
     'pug:build',
     'js:build',
     'jsAdd:build',
@@ -184,6 +192,6 @@ gulp.task('server', function () {
   gulp.watch([path.watch.html], gulp.series('html:build'));
   gulp.watch([path.watch.pug], gulp.series('pug:build'));
   gulp.watch([path.watch.css], gulp.series('css:build'));
-  gulp.watch([path.watch.js], gulp.series('js:build'));
+  gulp.watch([path.watch.js], gulp.series('js:build', 'vendorJs:build'));
   gulp.watch([path.watch.img], gulp.series('image:build', 'sprite:build'));
 });

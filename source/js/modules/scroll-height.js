@@ -6,7 +6,7 @@
 
   if (articleContent) {
 
-    const DESKTOP_WIDTH = 1023;
+    const DESKTOP_WIDTH = 1025;
     var articleCard = document.querySelector('.article__box-articles');
 
     var setHeight = function () {
@@ -25,7 +25,7 @@
     window.addEventListener('resize', setHeight);
   }
 
-  var servicesBoxWrapper = document.querySelector('.services');
+  var servicesBoxWrapper = document.querySelector('.scroll-height');
 
   if (servicesBoxWrapper) {
 
@@ -40,29 +40,6 @@
           servicesBox.style.height = contentHeight + 'px';
         } else {
           servicesBox.style.height = '';
-        }
-    }
-    setHeight();
-
-    window.addEventListener('scroll', setHeight);
-    window.addEventListener('resize', setHeight);
-  }
-
-  var stageWrapper = document.querySelector('.stages');
-
-  if (stageWrapper) {
-
-    const TABLET_WIDTH = 767;
-    var stageBox = document.querySelector('.stages__nav-box');
-
-    var setHeight = function () {
-      let isTablet = window.innerWidth > TABLET_WIDTH;
-
-        if (isTablet) {
-          let contentHeight = stageWrapper.offsetHeight;
-          stageBox.style.height = contentHeight + 'px';
-        } else {
-          stageBox.style.height = '';
         }
     }
     setHeight();

@@ -91,8 +91,12 @@
   display: grid;
   grid-template-rows: repeat(3, max-content);
 
+  @media (max-width: $desktop-width) {
+    margin-left: 19%;
+  }
+
   @media (max-width: $desktop-width-min) {
-    max-width: 500px;
+    max-width: 550px;
     margin: 0 auto;
   }
 
@@ -105,6 +109,11 @@
     font-size: 48px;
     line-height: 48px;
     text-align: left;
+
+    @media (max-width: $desktop-width) {
+      font-size: 44px;
+      line-height: 44px;
+    }
 
     @media (max-width: $desktop-width-min) {
       font-size: 36px;
@@ -173,6 +182,10 @@
 
     img {
       max-width: 265px;
+
+      @media (max-width: $tablet-width) {
+        max-width: 200px;
+      }
     }
 
     span {
@@ -183,6 +196,12 @@
       font-family: $proximaBold;
       font-size: 28px;
       line-height: 28px;
+
+      @media (max-width: $tablet-width) {
+        font-size: 20px;
+        line-height: 20px;
+        top: 13px;
+      }
     }
   }
 }
@@ -311,6 +330,10 @@
   grid-template-columns: 42% auto;
   align-items: center;
 
+  @media (max-width: $desktop-width) {
+    grid-template-columns: 50% auto;
+  }
+
   @media (max-width: $tablet-width) {
     grid-template-columns: 1fr;
   }
@@ -334,9 +357,13 @@
   grid-template-columns: 1fr;
   grid-gap: 20px 0;
 
+  @media (max-width: $desktop-width) {
+    min-width: 470px;
+  }
 
   @media (max-width: $desktop-width-min) {
-    max-width: 500px;
+    min-width: auto;
+    max-width: 550px;
     width: 100%;
     margin: 0 auto;
     grid-template-columns: 1fr;
@@ -1075,6 +1102,10 @@
   align-items: center;
   grid-gap: 0 80px;
 
+  @media (max-width: $desktop-width-min) {
+    grid-template-columns: repeat(2, 200px);
+  }
+
   p {
     display: grid;
     grid-template-rows: auto auto;
@@ -1106,11 +1137,16 @@
 .portfolio-page__footer {
   .main-footer__wrapper {
     padding: 10px 50px;
-    grid-template-columns: 30% auto 35%;
+    grid-template-columns: 24% auto 38%;
     grid-column-gap: 0;
 
+    @media (max-width: $desktop-width-middle) {
+      grid-template-columns: 30% auto;
+      padding: 10px 100px 10px 50px;
+    }
+
     @media (max-width: $desktop-width) {
-      padding: 10px 70px;
+      padding: 10px 90px 10px 50px;
       grid-template-columns: 45% 49%;
       justify-content: space-between;
     }
@@ -1133,7 +1169,7 @@
   .main-footer__nav {
     grid-template-columns: 30% auto;
 
-    @media (max-width: $desktop-width) {
+    @media (max-width: $desktop-width-middle) {
       display: none;
     }
   }
@@ -1191,62 +1227,6 @@
     @media (max-width: $tablet-width) {
       width: 3px;
       height: 3px;
-    }
-  }
-}
-
-.portfolio-page__button-prev.button__disabled {
-  a {
-    background-color: rgba(204, 204, 204, 0.6);
-
-    &::before {
-      width: 13px;
-      height: 20px;
-      position: absolute;
-      content: "";
-      top: 10px;
-      left: 12px;
-      background-image: url("../img/svg/icon-arrow-portfolio-3.svg");
-      background-repeat: no-repeat;
-
-      @media (max-width: $tablet-width) {
-        top: 5px;
-        left: 7px;
-      }
-    }
-
-    &:hover::before {
-      background-image: url("../img/svg/icon-arrow-portfolio-3.svg");
-      background-repeat: no-repeat;
-      transform: rotate(180deg);
-    }
-  }
-}
-
-.portfolio-page__button-next.button__disabled {
-  a {
-    background-color: rgba(204, 204, 204, 0.6);
-
-    &::before {
-      width: 13px;
-      height: 20px;
-      position: absolute;
-      content: "";
-      top: 10px;
-      left: 15px;
-      background-image: url("../img/svg/icon-arrow-portfolio-3.svg");
-      background-repeat: no-repeat;
-
-      @media (max-width: $tablet-width) {
-        top: 5px;
-        left: 10px;
-      }
-    }
-
-    &:hover::before {
-      background-image: url("../img/svg/icon-arrow-portfolio-3.svg");
-      background-repeat: no-repeat;
-      transform: rotate(0deg);
     }
   }
 }
