@@ -24,7 +24,7 @@
   }
 
   @media (max-width: $tablet-width) {
-    grid-template-columns: repeat(6, minmax(5%, 35px));
+    grid-template-columns: repeat(5, minmax(5%, 35px));
     grid-gap: 0 5px;
 
     img {

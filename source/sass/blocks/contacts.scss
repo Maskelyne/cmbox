@@ -26,7 +26,7 @@
 
   @media (max-width: $tablet-width) {
     grid-template-columns: 1fr;
-    grid-gap: 130px 0;
+    grid-gap: 20px 0;
   }
 
   h2 {
@@ -80,13 +80,32 @@
   }
 
   @media (max-width: $tablet-width) {
-    margin: 90px 0 0 0;
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
   }
 
   h2 {
+    &:nth-child(2) {
+      display: none;
+    }
+
     @media (max-width: $tablet-width) {
-      max-width: 125px;
-      margin: 0 auto;
+      font-family: $proximaNova;
+      margin: 0 auto 10px auto;
+      font-size: 16px;
+      line-height: 21px;
+      font-weight: $normal;
+      text-transform: none;
+      text-align: left;
+
+      &:first-child {
+        display: none;
+      }
+
+      &:nth-child(2) {
+        display: block;
+      }
     }
   }
 
@@ -107,12 +126,12 @@
     }
 
     @media (max-width: $tablet-width) {
-      width: 120px;
-      height: 120px;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
+      width: auto;
+      height: auto;
+      position: static;
       animation: none;
+      grid-gap: 0 20px;
+      grid-template-columns: repeat(5, minmax(5%, 35px));
     }
 
     li {
@@ -121,8 +140,9 @@
       position: absolute;
 
       @media (max-width: $tablet-width) {
-        width: 40px;
-        height: 40px;
+        width: auto;
+        height: auto;
+        position: static;
       }
 
       &:nth-child(1) {
@@ -131,68 +151,51 @@
         animation: rotateLeft 4s infinite linear;
 
         @media (max-width: $tablet-width) {
-          top: 40px;
-          left: -65px;
+          position: static;
           animation: none;
         }
       }
 
       &:nth-child(2) {
-        bottom: 0;
-        left: 50px;
+        bottom: -15px;
+        left: 80px;
         animation: rotateLeft 4.5s infinite linear;
 
         @media (max-width: $tablet-width) {
-          bottom: -50px;
-          left: -5px;
+          position: static;
           animation: none;
         }
       }
 
       &:nth-child(3) {
-        top: 5px;
-        left: 40px;
+        top: -11px;
+        left: 70px;
         animation: rotateLeft 4s infinite linear;
 
         @media (max-width: $tablet-width) {
-          top: -55px;
-          left: -5px;
+          position: static;
           animation: none;
         }
       }
 
       &:nth-child(4) {
-        bottom: -5px;
-        left: 180px;
+        bottom: 45px;
+        left: 230px;
         animation: rotateLeft 4.5s infinite linear;
 
         @media (max-width: $tablet-width) {
-          bottom: -50px;
-          left: 90px;
+          position: static;
           animation: none;
         }
       }
 
       &:nth-child(5) {
-        top: 125px;
-        right: -25px;
+        top: 40px;
+        right: 5px;
         animation: rotateLeft 4s infinite linear;
 
         @media (max-width: $tablet-width) {
-          top: -55px;
-          right: -10px;
-          animation: none;
-        }
-      }
-
-      &:nth-child(6) {
-        top: 5px;
-        right: 45px;
-        animation: rotateLeft 4.5s infinite linear;
-
-        @media (max-width: $tablet-width) {
-          top: 40px;
-          right: -60px;
+          position: static;
           animation: none;
         }
       }

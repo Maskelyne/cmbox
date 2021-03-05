@@ -75,7 +75,6 @@
   @media (max-width: $desktop-width-min) {
     display: none;
   }
-
 }
 
 .main-footer__contacts {
@@ -149,6 +148,7 @@
     left: -6px;
     background-image: url("../img/svg/icon-mobile.svg");
     background-repeat: no-repeat;
+    background-size: 25px;
   }
 }
 
@@ -167,5 +167,9 @@
     position: static;
     background-color: transparent;
     box-shadow: none;
+
+    @media (max-width: $tablet-width) {
+      grid-template-columns: repeat(3, 35px);
+    }
   }
 }

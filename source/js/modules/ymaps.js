@@ -22,7 +22,7 @@
     }, {
       preset: 'islands#nightStretchyIcon'
     });
-    myMap.behaviors.disable('scrollZoom');
+    c
     myMap.geoObjects
       .add(myGeoObject);
 

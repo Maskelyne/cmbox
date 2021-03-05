@@ -2422,7 +2422,8 @@ main {
     top: 10px;
     left: -6px;
     background-image: url("../img/svg/icon-mobile.svg");
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    background-size: 25px; }
 
 .main-footer__link-box {
   display: grid;
@@ -2438,6 +2439,9 @@ main {
     position: static;
     background-color: transparent;
     box-shadow: none; }
+    @media (max-width: 767px) {
+      .main-footer__link-box .social-list {
+        grid-template-columns: repeat(3, 35px); } }
 
 .intro__wrapper {
   height: 100vh;
@@ -4812,7 +4816,7 @@ main {
   @media (max-width: 767px) {
     .contacts__box-info {
       grid-template-columns: 1fr;
-      grid-gap: 130px 0; } }
+      grid-gap: 20px 0; } }
   .contacts__box-info h2 {
     text-align: center;
     text-transform: capitalize; }
@@ -4848,11 +4852,24 @@ main {
       margin: 60% 0 0 0; } }
   @media (max-width: 767px) {
     .contacts__social {
-      margin: 90px 0 0 0; } }
+      width: 100%;
+      max-width: 430px;
+      margin: 0 auto; } }
+  .contacts__social h2:nth-child(2) {
+    display: none; }
   @media (max-width: 767px) {
     .contacts__social h2 {
-      max-width: 125px;
-      margin: 0 auto; } }
+      font-family: "ProximaNova-Regular", arial, sans-serif;
+      margin: 0 auto 10px auto;
+      font-size: 16px;
+      line-height: 21px;
+      font-weight: 400;
+      text-transform: none;
+      text-align: left; }
+      .contacts__social h2:first-child {
+        display: none; }
+      .contacts__social h2:nth-child(2) {
+        display: block; } }
   .contacts__social .footer-social {
     width: 280px;
     height: 280px;
@@ -4869,21 +4886,22 @@ main {
         left: 28px; } }
     @media (max-width: 767px) {
       .contacts__social .footer-social {
-        width: 120px;
-        height: 120px;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+        width: auto;
+        height: auto;
+        position: static;
         -webkit-animation: none;
-                animation: none; } }
+                animation: none;
+        grid-gap: 0 20px;
+        grid-template-columns: repeat(5, minmax(5%, 35px)); } }
     .contacts__social .footer-social li {
       width: 50px;
       height: 50px;
       position: absolute; }
       @media (max-width: 767px) {
         .contacts__social .footer-social li {
-          width: 40px;
-          height: 40px; } }
+          width: auto;
+          height: auto;
+          position: static; } }
       .contacts__social .footer-social li:nth-child(1) {
         top: 125px;
         left: -20px;
@@ -4891,63 +4909,47 @@ main {
                 animation: rotateLeft 4s infinite linear; }
         @media (max-width: 767px) {
           .contacts__social .footer-social li:nth-child(1) {
-            top: 40px;
-            left: -65px;
+            position: static;
             -webkit-animation: none;
                     animation: none; } }
       .contacts__social .footer-social li:nth-child(2) {
-        bottom: 0;
-        left: 50px;
+        bottom: -15px;
+        left: 80px;
         -webkit-animation: rotateLeft 4.5s infinite linear;
                 animation: rotateLeft 4.5s infinite linear; }
         @media (max-width: 767px) {
           .contacts__social .footer-social li:nth-child(2) {
-            bottom: -50px;
-            left: -5px;
+            position: static;
             -webkit-animation: none;
                     animation: none; } }
       .contacts__social .footer-social li:nth-child(3) {
-        top: 5px;
-        left: 40px;
+        top: -11px;
+        left: 70px;
         -webkit-animation: rotateLeft 4s infinite linear;
                 animation: rotateLeft 4s infinite linear; }
         @media (max-width: 767px) {
           .contacts__social .footer-social li:nth-child(3) {
-            top: -55px;
-            left: -5px;
+            position: static;
             -webkit-animation: none;
                     animation: none; } }
       .contacts__social .footer-social li:nth-child(4) {
-        bottom: -5px;
-        left: 180px;
+        bottom: 45px;
+        left: 230px;
         -webkit-animation: rotateLeft 4.5s infinite linear;
                 animation: rotateLeft 4.5s infinite linear; }
         @media (max-width: 767px) {
           .contacts__social .footer-social li:nth-child(4) {
-            bottom: -50px;
-            left: 90px;
+            position: static;
             -webkit-animation: none;
                     animation: none; } }
       .contacts__social .footer-social li:nth-child(5) {
-        top: 125px;
-        right: -25px;
+        top: 40px;
+        right: 5px;
         -webkit-animation: rotateLeft 4s infinite linear;
                 animation: rotateLeft 4s infinite linear; }
         @media (max-width: 767px) {
           .contacts__social .footer-social li:nth-child(5) {
-            top: -55px;
-            right: -10px;
-            -webkit-animation: none;
-                    animation: none; } }
-      .contacts__social .footer-social li:nth-child(6) {
-        top: 5px;
-        right: 45px;
-        -webkit-animation: rotateLeft 4.5s infinite linear;
-                animation: rotateLeft 4.5s infinite linear; }
-        @media (max-width: 767px) {
-          .contacts__social .footer-social li:nth-child(6) {
-            top: 40px;
-            right: -60px;
+            position: static;
             -webkit-animation: none;
                     animation: none; } }
     .contacts__social .footer-social img {
@@ -10252,7 +10254,7 @@ main {
     transition: all 0.3s linear; }
     @media (max-width: 1025px) {
       .social-list img {
-        border-radius: 6px;
+        border-radius: 10px;
         max-width: 36px; } }
     .social-list img:hover {
       transform: scale(1.2);
@@ -10295,7 +10297,7 @@ main {
       grid-template-columns: repeat(6, 7.6%); } }
   @media (max-width: 767px) {
     .footer-social {
-      grid-template-columns: repeat(6, minmax(5%, 35px));
+      grid-template-columns: repeat(5, minmax(5%, 35px));
       grid-gap: 0 5px; }
       .footer-social img {
         max-width: 30px; } }
