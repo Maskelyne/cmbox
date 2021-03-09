@@ -173,6 +173,8 @@
     padding: 5px;
     margin: 0;
     text-align: center;
+    font-size: 16px;
+    line-height: 21px;
     background-color: $light-gray;
     transform: translateY(55%);
     transition: all 0.3s linear;
@@ -261,6 +263,8 @@
         transform: translateY(-50%);
         color: $white;
         font-weight: $normal;
+        font-size: 16px;
+        line-height: 21px;
       }
     }
   }
@@ -274,6 +278,8 @@
       transform: translateY(-50%);
       color: $white;
       font-weight: $normal;
+      font-size: 16px;
+      line-height: 21px;
     }
 
     .red {
@@ -293,6 +299,8 @@
         background: $yellow;
         color: $black;
         font-weight: $bold;
+        font-size: 16px;
+        line-height: 21px;
       }
     }
 
@@ -336,6 +344,8 @@
       p {
         background-color: #3e3728;
         font-weight: $normal;
+        font-size: 16px;
+        line-height: 21px;
       }
     }
 
@@ -359,6 +369,7 @@
   @media (max-width: $desktop-width-min) {
     padding: 0 100px;
     max-width: 100%;
+    margin: 0 auto;
   }
 
   @media (max-width: $tablet-width) {
@@ -371,6 +382,10 @@
 
     @media (max-width: $desktop-width-min) {
       display: block;
+    }
+
+    @media (max-width: $tablet-width) {
+      margin-bottom: 40px;
     }
 
     p {
@@ -401,6 +416,11 @@
     img {
       max-width: 560px;
       height: 400px;
+
+      @media (max-width: $tablet-width) {
+        height: 250px;
+        max-width: 370px;
+      }
     }
   }
 
