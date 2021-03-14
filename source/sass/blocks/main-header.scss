@@ -32,7 +32,7 @@
   display: grid;
   grid-column: 1 / 3;
   grid-row: 1;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(2, auto);
   justify-self: flex-end;
   align-items: center;
   grid-gap: 0 20px;
@@ -61,7 +61,7 @@
 
   &--active {
     display: grid;
-    grid-gap: 12px 0;
+    grid-gap: 10px 0;
   }
 
   a:hover {
@@ -71,6 +71,18 @@
     @media (max-width: $desktop-width-min) {
       color: $dark-red;
     }
+  }
+}
+
+.main-header__tel-box {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  align-items: center;
+  grid-gap: 0 5px;
+
+  @media (max-width: $desktop-width) {
+    grid-template-columns: 1fr;
+    grid-gap: 10px 0;
   }
 }
 
