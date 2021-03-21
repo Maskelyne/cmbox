@@ -7,17 +7,17 @@
 .main-footer__wrapper {
   padding: 10px 30px;
   display: grid;
-  grid-template-columns: 23% auto 32%;
-  grid-column-gap: 13%;
+  grid-template-columns: 25% auto 36%;
+  grid-column-gap: 5%;
 
   @media (max-width: $desktop-width) {
-    grid-template-columns: 30% auto 36%;
+    grid-template-columns: 25% auto 42%;
     grid-column-gap: 0;
   }
 
   @media (max-width: $desktop-width-min) {
     padding: 15px 30px;
-    grid-template-columns: 45% 50%;
+    grid-template-columns: 32% 57%;
     align-items: center;
     justify-content: space-between;
   }
@@ -154,22 +154,17 @@
 
 .main-footer__link-box {
   display: grid;
-  grid-template-columns: 250px auto;
+  grid-template-columns: 275px auto;
   align-items: center;
-  grid-gap: 0 5px;
 
   .social-list {
     width: auto;
     min-height: auto;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: repeat(auto-fit, minmax(24px, auto));
     position: static;
     background-color: transparent;
     box-shadow: none;
-
-    @media (max-width: $tablet-width) {
-      grid-template-columns: repeat(3, 35px);
-    }
   }
 }

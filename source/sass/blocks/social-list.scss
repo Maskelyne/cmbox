@@ -1,22 +1,14 @@
 .social-list {
   @include reset-list;
   display: grid;
-  grid-template-columns: repeat(3, 24px);
+  grid-template-columns: repeat(auto-fit, minmax(24px, auto));
   justify-content: center;
   grid-column-gap: 10px;
 
-  li {
-    margin-top: 5px;
-  }
-
   img {
-    border-radius: 5px;
+    border-radius: 7px;
     box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
     transition: all 0.3s linear;
-
-    @media (max-width: $desktop-width-min) {
-      max-width: 36px;
-    }
 
     &:hover {
       transform: scale(1.2);
@@ -25,8 +17,8 @@
   }
 
   @media (max-width: $desktop-width) {
-    grid-template-columns: repeat(3, auto);
     justify-content: flex-start;
+    grid-template-columns: repeat(auto-fit, minmax(30px, auto));
   }
 
   &--tablet {
@@ -35,7 +27,7 @@
       padding: 0;
       display: grid;
       grid-gap: 0 30px;
-      grid-template-columns: repeat(3, 36px);
+      grid-template-columns: repeat(auto-fit, minmax(35px, auto));
       position: static;
       justify-content: center;
       background-color: transparent;

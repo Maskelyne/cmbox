@@ -22,7 +22,7 @@
     }, {
       preset: 'islands#nightStretchyIcon'
     });
-    c
+
     myMap.geoObjects
       .add(myGeoObject);
 
