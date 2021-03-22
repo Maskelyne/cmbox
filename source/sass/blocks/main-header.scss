@@ -57,6 +57,10 @@
     font-size: 18px;
     line-height: 21px;
 
+    @media (max-width: $desktop-width-min) {
+      right: 0;
+    }
+
     & > .main-header__link-phone {
       img {
         &:first-child {
@@ -129,6 +133,7 @@
 
     a {
       justify-content: flex-start;
+      margin: 2px 0;
 
       img {
         display: block;
@@ -137,6 +142,7 @@
 
     .social-list {
       justify-content: flex-start;
+      margin: 5px 0;
     }
   }
 
@@ -152,7 +158,7 @@
 
   a:hover {
     font-weight: $normal;
-    color: $dark-black;
+    color: $dark-red;
 
     @media (max-width: $desktop-width-min) {
       color: $dark-red;
@@ -213,14 +219,17 @@
     background-color: $light-gray;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: none;
-    grid-template-columns: repeat(5, auto);
+    grid-template-columns: repeat(5, 30px);
     grid-gap: 0 15px;
     padding: 10px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
 
-    @media (max-width: $tablet-width) {
+    @media (max-width: $desktop-width-min) {
       right: 0;
+    }
+
+    @media (max-width: $tablet-width) {
       border-bottom-right-radius: 0;
     }
   }
@@ -497,14 +506,6 @@
             line-height: 24px;
           }
         }
-      }
-    }
-
-    .social-list--tablet {
-      display: none;
-
-      @media (max-width: $tablet-width) {
-        display: grid;
       }
     }
   }

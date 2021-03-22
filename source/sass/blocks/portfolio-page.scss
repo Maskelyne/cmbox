@@ -1137,16 +1137,16 @@
 .portfolio-page__footer {
   .main-footer__wrapper {
     padding: 10px 50px;
-    grid-template-columns: 24% auto 38%;
+    grid-template-columns: 24% auto 42%;
     grid-column-gap: 0;
 
     @media (max-width: $desktop-width-middle) {
-      grid-template-columns: 30% auto;
+      grid-template-columns: 31% auto;
       padding: 10px 100px 10px 50px;
     }
 
     @media (max-width: $desktop-width) {
-      padding: 10px 90px 10px 50px;
+      padding: 10px 40px 10px 40px;
       grid-template-columns: 45% 49%;
       justify-content: space-between;
     }
@@ -1162,7 +1162,7 @@
   }
 
   .social-list {
-    grid-template-columns: repeat(3, 25px);
+    grid-template-columns: repeat(4, 25px);
     justify-content: flex-start;
   }
 

@@ -126,7 +126,7 @@
 
   &:hover {
     font-weight: $normal;
-    color: $dark-black;
+    color: $dark-red;
 
     @media (max-width: $desktop-width-min) {
       color: $dark-red;
@@ -149,6 +149,11 @@
     background-image: url("../img/svg/icon-mobile.svg");
     background-repeat: no-repeat;
     background-size: 25px;
+  }
+
+  span {
+    color: $dark-blue;
+    font-family: $proximaBold;
   }
 }
 

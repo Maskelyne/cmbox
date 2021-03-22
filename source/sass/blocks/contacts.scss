@@ -15,7 +15,7 @@
   grid-template-columns: 31% 33% auto;
 
   @media (max-width: $desktop-width) {
-    grid-template-columns: 32% 28% auto;
+    grid-template-columns: 31% 27% auto;
   }
 
   @media (max-width: $desktop-width-min) {
@@ -54,7 +54,7 @@
   }
 
   .main-footer__link-box {
-    @media (max-width: $tablet-width) {
+    @media (max-width: $desktop-width-min) {
       grid-template-columns: 1fr;
       grid-gap: 10px 0;
     }
