@@ -21,6 +21,8 @@
       evt.preventDefault();
 
       if (menuBtn.classList.contains('main-header__btn--closed')) {
+        mainBoxPhone.classList.remove('main-header__tel--active');
+        mainSocialBox.classList.remove('main-header__social--active');
         menuBtn.classList.remove('main-header__btn--closed');
         menuBtn.classList.add('main-header__btn--opened');
         wrapMenu.classList.add('main-header__wrap-menu--active');
@@ -34,6 +36,8 @@
         stageMenu.classList.add('main-header__stage-nav--closed');
         document.body.style.overflow = 'hidden';
       } else {
+        mainBoxPhone.classList.remove('main-header__tel--active');
+        mainSocialBox.classList.remove('main-header__social--active');
         menuBtn.classList.add('main-header__btn--closed');
         menuBtn.classList.remove('main-header__btn--opened');
         wrapMenu.classList.remove('main-header__wrap-menu--active');

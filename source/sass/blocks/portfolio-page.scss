@@ -633,7 +633,7 @@
   }
 
   @media (max-width: $desktop-width-min) {
-    padding-top: 0;
+    padding-top: 50px;
     position: static;
     overflow: inherit;
     overflow-x: hidden;
@@ -664,6 +664,10 @@
   grid-template-columns: 48px auto;
   grid-gap: 0 20px;
   padding: 25px 70px 40px 70px;
+
+  @media (max-width: $desktop-width-min) {
+    padding-top: 15px;
+  }
 
   @media (max-width: $tablet-width) {
     padding: 15px 15px 0 15px;

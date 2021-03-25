@@ -363,7 +363,7 @@
 
 .feedback__box {
   position: relative;
-  max-width: 700px;
+  max-width: 800px;
   padding: 0 70px;
 
   @media (max-width: $desktop-width) {
@@ -400,14 +400,6 @@
       grid-column: 1 / 3;
     }
 
-    img {
-      max-width: 225px;
-
-      @media (max-width: $tablet-width) {
-        max-width: 125px;
-      }
-    }
-
     iframe {
       width: 100%;
       height: 400px;
@@ -417,13 +409,49 @@
   }
 
   .youtube {
+    position: relative;
+    cursor: pointer;
+
     img {
-      max-width: 560px;
-      height: 400px;
+      max-width: 670px;
+      height: 500px;
+      display: block;
+
+      @media (max-width: $desktop-width-min) {
+        height: 460px;
+      }
 
       @media (max-width: $tablet-width) {
         height: 250px;
-        max-width: 370px;
+      }
+    }
+
+
+    &:hover {
+      .play-button::before {
+        width: 70px;
+        height: 50px;
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url("../img/svg/play-button-2.svg");
+        background-repeat: no-repeat;
+      }
+    }
+
+    .play-button {
+      &::before {
+        width: 70px;
+        height: 50px;
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url("../img/svg/play-button.svg");
+        background-repeat: no-repeat;
       }
     }
   }
