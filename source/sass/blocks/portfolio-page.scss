@@ -126,6 +126,12 @@
     }
   }
 
+  a {
+    &:hover {
+      color: $dark-red;
+    }
+  }
+
   p {
     margin: 0 0 16px 0;
     font-family: $proximaBold;
@@ -627,7 +633,7 @@
   }
 
   @media (max-width: $desktop-width-min) {
-    padding-top: 0;
+    padding-top: 50px;
     position: static;
     overflow: inherit;
     overflow-x: hidden;
@@ -658,6 +664,10 @@
   grid-template-columns: 48px auto;
   grid-gap: 0 20px;
   padding: 25px 70px 40px 70px;
+
+  @media (max-width: $desktop-width-min) {
+    padding-top: 15px;
+  }
 
   @media (max-width: $tablet-width) {
     padding: 15px 15px 0 15px;
@@ -730,6 +740,30 @@
 
   p {
     margin: 0 0 10px 0;
+  }
+}
+
+.portfolio-page__tags {
+  ul {
+    @include reset-list;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+
+  span {
+    display: block;
+    padding: 10px 15px;
+    font-family: $proximaBold;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    border-radius: 10px;
+    background-image: linear-gradient(134.17deg, #F5F9FF 4.98%, #F0F6FF 94.88%);
+    box-shadow: -8px -8px 16px rgba(255, 255, 255, 0.8),
+    8px 8px 16px rgba(186, 198, 216, 0.8);
+    color: $dark-blue;
   }
 }
 
@@ -835,24 +869,11 @@
     max-width: 750px;
     font-size: 17px;
     line-height: 24px;
-    padding-left: 24px;
     font-family: $proximaBold;
-    color: $dark-blue;
     position: relative;
 
     @media (max-width: $desktop-width-min) {
       font-size: 16px;
-    }
-
-    &::before {
-      width: 20px;
-      height: 22px;
-      position: absolute;
-      content: "";
-      top: 0;
-      left: 0;
-      background-image: url("../img/svg/icon-stick.svg");
-      background-repeat: no-repeat;
     }
 
     strong {
@@ -1137,16 +1158,16 @@
 .portfolio-page__footer {
   .main-footer__wrapper {
     padding: 10px 50px;
-    grid-template-columns: 24% auto 38%;
+    grid-template-columns: 24% auto 42%;
     grid-column-gap: 0;
 
     @media (max-width: $desktop-width-middle) {
-      grid-template-columns: 30% auto;
+      grid-template-columns: 31% auto;
       padding: 10px 100px 10px 50px;
     }
 
     @media (max-width: $desktop-width) {
-      padding: 10px 90px 10px 50px;
+      padding: 10px 40px 10px 40px;
       grid-template-columns: 45% 49%;
       justify-content: space-between;
     }
@@ -1162,7 +1183,7 @@
   }
 
   .social-list {
-    grid-template-columns: repeat(3, 25px);
+    grid-template-columns: repeat(4, 25px);
     justify-content: flex-start;
   }
 
@@ -1230,3 +1251,364 @@
     }
   }
 }
+
+.exim {
+  background-image: linear-gradient(90deg, #FEED01 0%, #C1B500 100%);
+
+  .portfolio-page__advantages {
+    p {
+      &::before {
+        width: 55px;
+        height: 10px;
+        position: absolute;
+        content: "";
+        top: 6px;
+        left: -70px;
+        background-image: linear-gradient(90deg, #FEED01 0%, #C1B500 100%);
+      }
+    }
+  }
+}
+
+.yartruba {
+  background-image: linear-gradient(90deg, #00A0FF 0%, #011C3B 100%);
+
+  .portfolio-page__advantages {
+    p {
+      &::before {
+        width: 55px;
+        height: 10px;
+        position: absolute;
+        content: "";
+        top: 6px;
+        left: -70px;
+        background-image: linear-gradient(90deg, #00A0FF 0%, #011C3B 100%);
+      }
+    }
+  }
+}
+
+.vodadom {
+  background-image: linear-gradient(90deg, #FDA905 0%, #EE7900 100%);
+
+  .portfolio-page__advantages {
+    p {
+      &::before {
+        width: 55px;
+        height: 10px;
+        position: absolute;
+        content: "";
+        top: 6px;
+        left: -70px;
+        background-image: linear-gradient(90deg, #FDA905 0%, #EE7900 100%);
+      }
+    }
+  }
+}
+
+.prodoors {
+  background-image: linear-gradient(90deg, #54B1A9 0%, #175A53 93.23%);
+
+  .portfolio-page__advantages {
+    p {
+      &::before {
+        width: 55px;
+        height: 10px;
+        position: absolute;
+        content: "";
+        top: 6px;
+        left: -70px;
+        background-image: linear-gradient(90deg, #54B1A9 0%, #175A53 93.23%);
+      }
+    }
+  }
+}
+
+.torwood {
+  background-image: linear-gradient(114.3deg, #BCAEA8 4.25%, #3E3728 93.37%);
+
+  .portfolio-page__advantages {
+    p {
+      &::before {
+        width: 55px;
+        height: 10px;
+        position: absolute;
+        content: "";
+        top: 6px;
+        left: -70px;
+        background-image: linear-gradient(114.3deg, #BCAEA8 4.25%, #3E3728 93.37%);
+      }
+    }
+  }
+}
+
+.grosspofit {
+  background-image: linear-gradient(90deg, #FEED01 0%, #008CC4 0.01%, #004966 100%);
+
+  .portfolio-page__advantages {
+    p {
+      &::before {
+        width: 55px;
+        height: 10px;
+        position: absolute;
+        content: "";
+        top: 6px;
+        left: -70px;
+        background-image: linear-gradient(90deg, #FEED01 0%, #008CC4 0.01%, #004966 100%);
+      }
+    }
+  }
+}
+
+.eramarket {
+  background-image: linear-gradient(89.79deg, #F64B03 0.21%, #F46001 99.84%);
+
+  .portfolio-page__advantages {
+    p {
+      &::before {
+        width: 55px;
+        height: 10px;
+        position: absolute;
+        content: "";
+        top: 6px;
+        left: -70px;
+        background-image: linear-gradient(89.79deg, #F64B03 0.21%, #F46001 99.84%);
+      }
+    }
+  }
+}
+
+.cdg {
+  background-image: linear-gradient(90deg, #1E3C72 0%, #1B54B7 100%);
+
+  .portfolio-page__advantages {
+    p {
+      &::before {
+        width: 55px;
+        height: 10px;
+        position: absolute;
+        content: "";
+        top: 6px;
+        left: -70px;
+        background-image: linear-gradient(90deg, #1E3C72 0%, #1B54B7 100%);
+      }
+    }
+  }
+}
+
+.les {
+  background-image: linear-gradient(90deg, #54B1A9 0%, #175A53 93.23%);
+
+  .portfolio-page__advantages {
+    p {
+      &::before {
+        width: 55px;
+        height: 10px;
+        position: absolute;
+        content: "";
+        top: 6px;
+        left: -70px;
+        background-image: linear-gradient(90deg, #54B1A9 0%, #175A53 93.23%);
+      }
+    }
+  }
+}
+
+.deepsleep {
+  background-image: linear-gradient(90deg, #49166B 0%, #54186F 51.56%, #AA007B 100%);
+
+  .portfolio-page__advantages {
+    p {
+      &::before {
+        width: 55px;
+        height: 10px;
+        position: absolute;
+        content: "";
+        top: 6px;
+        left: -70px;
+        background-image: linear-gradient(90deg, #49166B 0%, #54186F 51.56%, #AA007B 100%);
+      }
+    }
+  }
+}
+
+.techimport {
+  background-image: linear-gradient(90deg, #6EB039 0%, #4A9B3C 100%);
+
+  .portfolio-page__advantages {
+    p {
+      &::before {
+        width: 55px;
+        height: 10px;
+        position: absolute;
+        content: "";
+        top: 6px;
+        left: -70px;
+        background-image: linear-gradient(90deg, #6EB039 0%, #4A9B3C 100%);
+      }
+    }
+  }
+}
+
+.pasena {
+  background-image: linear-gradient(90deg, #0E4D70 0%, #56829B 100%);
+
+  .portfolio-page__advantages {
+    p {
+      &::before {
+        width: 55px;
+        height: 10px;
+        position: absolute;
+        content: "";
+        top: 6px;
+        left: -70px;
+        background-image: linear-gradient(90deg, #0E4D70 0%, #56829B 100%);
+      }
+    }
+  }
+}
+
+.mexp {
+  background-image: linear-gradient(89.82deg, #232E4A 0.19%, #172340 99.87%);
+
+  .portfolio-page__advantages {
+    p {
+      &::before {
+        width: 55px;
+        height: 10px;
+        position: absolute;
+        content: "";
+        top: 6px;
+        left: -70px;
+        background-image: linear-gradient(89.82deg, #232E4A 0.19%, #172340 99.87%);
+      }
+    }
+  }
+}
+
+.domlaminata {
+  background-image: linear-gradient(90.08deg, #F78C2D 0.69%, #C63D0E 102.63%);
+
+  .portfolio-page__advantages {
+    p {
+      &::before {
+        width: 55px;
+        height: 10px;
+        position: absolute;
+        content: "";
+        top: 6px;
+        left: -70px;
+        background-image: linear-gradient(90.08deg, #F78C2D 0.69%, #C63D0E 102.63%);
+      }
+    }
+  }
+}
+
+.chicago {
+  background-image: linear-gradient(271.23deg, #7E0019 4.07%, #DB0025 96.09%);
+
+  .portfolio-page__advantages {
+    p {
+      &::before {
+        width: 55px;
+        height: 10px;
+        position: absolute;
+        content: "";
+        top: 6px;
+        left: -70px;
+        background-image: linear-gradient(271.23deg, #7E0019 4.07%, #DB0025 96.09%);
+      }
+    }
+  }
+}
+
+.vseremonty {
+  background-image: linear-gradient(116.5deg, #FF774D 4.08%, #FF5824 85.47%);
+
+  .portfolio-page__advantages {
+    p {
+      &::before {
+        width: 55px;
+        height: 10px;
+        position: absolute;
+        content: "";
+        top: 6px;
+        left: -70px;
+        background-image: linear-gradient(116.5deg, #FF774D 4.08%, #FF5824 85.47%);
+      }
+    }
+  }
+}
+
+.avtostiklevo {
+  background-image: linear-gradient(90deg, #C52C2C 1.15%, #D90203 98.61%);
+
+  .portfolio-page__advantages {
+    p {
+      &::before {
+        width: 55px;
+        height: 10px;
+        position: absolute;
+        content: "";
+        top: 6px;
+        left: -70px;
+        background-image: linear-gradient(90deg, #C52C2C 1.15%, #D90203 98.61%);
+      }
+    }
+  }
+}
+
+.bars {
+  background-image: linear-gradient(90deg, #FAE3D6 0%, #F3B188 100%);
+
+  .portfolio-page__advantages {
+    p {
+      &::before {
+        width: 55px;
+        height: 10px;
+        position: absolute;
+        content: "";
+        top: 6px;
+        left: -70px;
+        background-image: linear-gradient(90deg, #FAE3D6 0%, #F3B188 100%);
+      }
+    }
+  }
+}
+
+.coffee {
+  background-image: linear-gradient(90deg, #FF9C40 45.45%, #FFCA8A 100%);
+
+  .portfolio-page__advantages {
+    p {
+      &::before {
+        width: 55px;
+        height: 10px;
+        position: absolute;
+        content: "";
+        top: 6px;
+        left: -70px;
+        background-image: linear-gradient(90deg, #FF9C40 45.45%, #FFCA8A 100%);
+      }
+    }
+  }
+}
+
+.kolesnik {
+  background-image: linear-gradient(90deg, #B84D83 24.76%, #7D2D55 80.88%);
+
+  .portfolio-page__advantages {
+    p {
+      &::before {
+        width: 55px;
+        height: 10px;
+        position: absolute;
+        content: "";
+        top: 6px;
+        left: -70px;
+        background-image: linear-gradient(90deg, #B84D83 24.76%, #7D2D55 80.88%);
+      }
+    }
+  }
+}
+

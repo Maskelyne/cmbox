@@ -199,7 +199,6 @@ mixin header()
                 a(href="tel:+74996086368") +7 (499) 208 63 68 (Москва)
                 a(href="#")
                   span.link-modal-question Заказать звонок
-                +social-list.social-list--tablet
         .main-header__social
           a.main-header__social-btn(href="#")
             span
@@ -228,10 +227,18 @@ mixin header()
         .main-header__box
           a.main-header__box-phone(href="#")
             +img('svg', 'icon-mobile', 'svg', '24', '24', 'Заказать звонок')
-            span.link-modal-question Заказать звонок
-          +social-list
-        .main-header__tel
-          a.main-header__link-phone(href="tel:+375296086368")
-            +img('svg', 'icon-mobile', 'svg', '24', '24', 'Телефон')
-            | +375 (29) 608-63-68 (Минск),
-          a(href="tel:+74996086368") +7 (499) 608-63-68 (Москва)
+          .main-header__tel
+            a.main-header__link-phone(href="tel:+375296086368")
+              +img('svg', 'icon-mobile', 'svg', '24', '24', 'Телефон')
+              | +375 (29) 608-63-68
+              span  Беларусь
+              +img('png', 'icon-a1', 'png', '15', '15', 'А1')
+            button(type="button")
+            .main-header__phone-box
+              a.main-header__link-phone(href="tel:+375296086368")
+                | +375 (29) 608-63-68
+                span  Беларусь
+                +img('png', 'icon-mts', 'png', '15', '15', 'МТС')
+              a(href="tel:+74996086368") +7 (499) 608-63-68
+                span  Россия
+              +social-list

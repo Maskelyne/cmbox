@@ -181,3 +181,15 @@ main {
   overflow: hidden;
   opacity: 0;
 }
+
+#__replain_widget {
+  animation: coffeeOpacity;
+  animation-duration: 1.5s;
+  animation-delay: 7s;
+  animation-timing-function: ease;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  opacity: 0;
+}

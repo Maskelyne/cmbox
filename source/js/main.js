@@ -22,7 +22,6 @@
 //= modules/modal-services-order.js
 //= modules/services-tooltip.js
 //= modules/forms.js
-//= modules/link-hidden.js
 //= modules/feedback-tabs.js
 //= modules/ymaps.js
 //= modules/animated-maps.js

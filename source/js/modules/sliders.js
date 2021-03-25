@@ -82,6 +82,7 @@
       speed: 1000,
       spaceBetween: 30,
       allowTouchMove: true,
+      slidesPerView: 1,
       navigation: {
         nextEl: '.feedback-slider__swiper-button-next',
         prevEl: '.feedback-slider__swiper-button-prev',

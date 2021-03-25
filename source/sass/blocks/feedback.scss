@@ -89,8 +89,12 @@
     align-self: flex-end;
 
     .main-footer__wrapper {
-      padding: 10px 30px;
+      padding: 10px 110px 10px 30px;
       grid-template-columns: repeat(2, auto);
+
+      @media (max-width: $tablet-width) {
+        padding: 10px 15px;
+      }
     }
   }
 }
@@ -173,6 +177,8 @@
     padding: 5px;
     margin: 0;
     text-align: center;
+    font-size: 16px;
+    line-height: 21px;
     background-color: $light-gray;
     transform: translateY(55%);
     transition: all 0.3s linear;
@@ -261,6 +267,8 @@
         transform: translateY(-50%);
         color: $white;
         font-weight: $normal;
+        font-size: 16px;
+        line-height: 21px;
       }
     }
   }
@@ -274,6 +282,8 @@
       transform: translateY(-50%);
       color: $white;
       font-weight: $normal;
+      font-size: 16px;
+      line-height: 21px;
     }
 
     .red {
@@ -293,6 +303,8 @@
         background: $yellow;
         color: $black;
         font-weight: $bold;
+        font-size: 16px;
+        line-height: 21px;
       }
     }
 
@@ -336,6 +348,8 @@
       p {
         background-color: #3e3728;
         font-weight: $normal;
+        font-size: 16px;
+        line-height: 21px;
       }
     }
 
@@ -349,7 +363,7 @@
 
 .feedback__box {
   position: relative;
-  max-width: 700px;
+  max-width: 800px;
   padding: 0 70px;
 
   @media (max-width: $desktop-width) {
@@ -359,6 +373,7 @@
   @media (max-width: $desktop-width-min) {
     padding: 0 100px;
     max-width: 100%;
+    margin: 0 auto;
   }
 
   @media (max-width: $tablet-width) {
@@ -373,20 +388,16 @@
       display: block;
     }
 
+    @media (max-width: $tablet-width) {
+      margin-bottom: 40px;
+    }
+
     p {
       max-width: 550px;
       margin: 15px 0 30px 0;
       font-family: $proximaBold;
       font-style: italic;
       grid-column: 1 / 3;
-    }
-
-    img {
-      max-width: 225px;
-
-      @media (max-width: $tablet-width) {
-        max-width: 125px;
-      }
     }
 
     iframe {
@@ -398,9 +409,50 @@
   }
 
   .youtube {
+    position: relative;
+    cursor: pointer;
+
     img {
-      max-width: 560px;
-      height: 400px;
+      max-width: 670px;
+      height: 500px;
+      display: block;
+
+      @media (max-width: $desktop-width-min) {
+        height: 460px;
+      }
+
+      @media (max-width: $tablet-width) {
+        height: 250px;
+      }
+    }
+
+
+    &:hover {
+      .play-button::before {
+        width: 70px;
+        height: 50px;
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url("../img/svg/play-button-2.svg");
+        background-repeat: no-repeat;
+      }
+    }
+
+    .play-button {
+      &::before {
+        width: 70px;
+        height: 50px;
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url("../img/svg/play-button.svg");
+        background-repeat: no-repeat;
+      }
     }
   }
 

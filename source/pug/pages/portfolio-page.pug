@@ -175,7 +175,7 @@ block main
       },
     ];
 
-  main.box-closed(style="background: linear-gradient(90deg, #FEED01 0%, #C1B500 100%);")
+  main.box-closed.exim
     section.portfolio-page.text-closed
       .portfolio-page__wrapper.container
         .portfolio-page__box-add.black
@@ -203,7 +203,7 @@ block main
             +picture('svg', 'lead-magnit', 'lead-magnit-mobile', 'svg', '240', '120', 'Заказать проект', '1400')
         .portfolio-page__box-image
           .portfolio-page__image
-            a(href="#")
+            a.portfolio-page__info-btn(href="#")
               +img('portfolio', 'img-exim', 'jpg', '340', '240', 'Эксим')
           .portfolio-page__controls.black
             .portfolio-page__button-prev
@@ -227,6 +227,16 @@ block main
             +img('svg', 'icon-left-arrow', 'svg', '48', '48', 'Вернуться в портфолио')
             h2 Портфолио
         .portfolio-page__info
+          .portfolio-page__tags
+            ul
+              li
+                span #стратегия
+              li
+                span #лидогенерация
+              li
+                span #SMM
+              li
+                span #сайт
           .portfolio-page__cell
             h3 Цели
             ul
