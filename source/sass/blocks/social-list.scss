@@ -1,7 +1,7 @@
 .social-list {
   @include reset-list;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(24px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(26px, 26px));
   justify-content: center;
   grid-column-gap: 10px;
 
@@ -16,9 +16,9 @@
     }
   }
 
-  @media (max-width: $desktop-width) {
+  @media (max-width: $desktop-width-min) {
     justify-content: flex-start;
-    grid-template-columns: repeat(auto-fit, minmax(30px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(30px, 30px));
   }
 
   &--tablet {
@@ -27,7 +27,7 @@
       padding: 0;
       display: grid;
       grid-gap: 0 30px;
-      grid-template-columns: repeat(auto-fit, minmax(35px, auto));
+      grid-template-columns: repeat(auto-fit, minmax(35px, 35px));
       position: static;
       justify-content: center;
       background-color: transparent;

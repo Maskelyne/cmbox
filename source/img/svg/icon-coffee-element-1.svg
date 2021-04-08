@@ -1,16 +1,1 @@
-<svg width="32" height="99" viewBox="0 0 32 99" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_f)">
-<path d="M18.7344 19.0878C29.118 12.2648 29.3843 4.87329 28.2194 2.0304C27.4208 8.85335 23.5601 13.5692 21.7295 15.0743C21.7295 15.0743 13.2428 21.5962 11.7453 23.1013C10.2477 24.6063 7.45212 26.3121 4.25704 33.135C1.06196 39.958 2.59276 43.1688 4.2571 45.1755C6.7535 48.1856 18.5346 52.9015 21.7295 55.711C24.9245 58.5204 25.0576 64.2397 24.7248 66.7481C23.7267 70.7616 23.1273 70.862 16.7374 79.2903C10.3475 87.7187 10.7468 94.5082 11.7453 96.8494C11.3459 92.0332 15.5726 84.8089 17.7358 81.7988C19.7327 79.2903 24.3254 73.6714 26.7217 71.2633C29.717 68.2532 30.0331 62.7346 29.2177 59.2228C28.4024 55.711 24.7248 50.6941 17.7358 48.1857C10.7468 45.6772 9.08287 41.831 8.2509 39.657C7.41887 35.6435 8.35074 25.9107 18.7344 19.0878Z" fill="url(#paint0_linear)"/>
-</g>
-<defs>
-<filter id="filter0_f" x="0.391602" y="0.0303955" width="31.2127" height="98.819" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
-<feGaussianBlur stdDeviation="1" result="effect1_foregroundBlur"/>
-</filter>
-<linearGradient id="paint0_linear" x1="22.7282" y1="49.189" x2="-4.5974" y2="49.189" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FFF6EB"/>
-<stop offset="1" stop-color="#E0E0E0" stop-opacity="0"/>
-</linearGradient>
-</defs>
-</svg>
+<svg width="32" height="99" fill="none" xmlns="http://www.w3.org/2000/svg"><g filter="url(#filter0_f)"><path d="M18.734 19.088C29.118 12.265 29.384 4.873 28.22 2.03c-.798 6.823-4.659 11.54-6.49 13.044 0 0-8.486 6.522-9.984 8.027-1.497 1.505-4.293 3.211-7.488 10.034-3.195 6.823-1.664 10.034 0 12.04 2.497 3.01 14.278 7.727 17.473 10.536 3.194 2.81 3.328 8.529 2.995 11.037-.998 4.014-1.598 4.114-7.988 12.542-6.39 8.429-5.99 15.218-4.992 17.56-.4-4.817 3.828-12.041 5.99-15.051 1.998-2.509 6.59-8.128 8.987-10.536 2.995-3.01 3.311-8.528 2.496-12.04-.816-3.512-4.493-8.529-11.482-11.037-6.99-2.509-8.653-6.355-9.485-8.529-.832-4.013.1-13.746 10.483-20.57z" fill="url(#paint0_linear)"/></g><defs><linearGradient id="paint0_linear" x1="22.728" y1="49.189" x2="-4.597" y2="49.189" gradientUnits="userSpaceOnUse"><stop stop-color="#FFF6EB"/><stop offset="1" stop-color="#E0E0E0" stop-opacity="0"/></linearGradient><filter id="filter0_f" x=".392" y=".03" width="31.213" height="98.819" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur stdDeviation="1" result="effect1_foregroundBlur"/></filter></defs></svg>

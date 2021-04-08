@@ -88,8 +88,6 @@
   max-width: 500px;
   margin-left: 10%;
   transition: all 0.6s linear;
-  display: grid;
-  grid-template-rows: repeat(3, max-content);
 
   @media (max-width: $desktop-width) {
     margin-left: 19%;
@@ -123,12 +121,6 @@
     @media (max-width: $tablet-width) {
       font-size: 24px;
       line-height: 24px;
-    }
-  }
-
-  a {
-    &:hover {
-      color: $dark-red;
     }
   }
 
@@ -327,6 +319,52 @@
       padding-top: 0;
       grid-row: 1;
       align-self: center;
+    }
+  }
+}
+
+.portfolio-page__box-add.white {
+  h2 a {
+    padding-bottom: 5px;
+    position: relative;
+
+    &::after {
+      width: 0;
+      height: 2px;
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+      background-color: transparent;
+      transition: all 0.3s linear;
+    }
+
+    &:hover::after {
+      width: 100%;
+      background-color: $white;
+    }
+  }
+}
+
+.portfolio-page__box-add.black {
+  h2 a {
+    padding-bottom: 5px;
+    position: relative;
+
+    &::after {
+      width: 0;
+      height: 2px;
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+      background-color: transparent;
+      transition: all 0.3s linear;
+    }
+
+    &:hover::after {
+      width: 100%;
+      background-color: $dark-black;
     }
   }
 }
@@ -712,11 +750,7 @@
 }
 
 .portfolio-page__info {
-  padding-left: 70px;
-
-  @media (max-width: $desktop-width-min) {
-    padding: 0 70px;
-  }
+  padding: 0 70px;
 
   @media (max-width: $tablet-width) {
     padding: 0 15px;
@@ -769,7 +803,7 @@
 
 .feedback__image-arm {
   height: 175px;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
   position: relative;
 
   @media (max-width: $tablet-width) {
@@ -790,7 +824,6 @@
 
 .portfolio-page__trabls {
   img {
-    max-width: 500px;
     margin-top: 30px;
   }
 
@@ -811,18 +844,10 @@
 }
 
 .portfolio-page__purposes {
-  max-width: 900px;
   margin: 60px 0;
-  padding: 30px;
-  background-image: linear-gradient(134.17deg, #F1F7FF 4.98%, #F5F9FF 94.88%);
-  box-shadow: inset -5px -5px 5px rgba(240, 242, 243, 0.5), inset 5px 5px 10px rgba(166, 180, 200, 0.75);
-  border-radius: 10px;
 
   @media (max-width: $tablet-width) {
     padding: 30px 10px;
-    background-image: none;
-    box-shadow: none;
-    border-radius: 0;
 
     h3 {
       margin-top: 0;
@@ -862,11 +887,9 @@
 .portfolio-page__advantages {
   img {
     margin: 20px 0 60px 0;
-    max-width: 500px;
   }
 
   p {
-    max-width: 750px;
     font-size: 17px;
     line-height: 24px;
     font-family: $proximaBold;
@@ -900,15 +923,33 @@
   }
 }
 
+.portfolio-page__development {
+  margin-bottom: 60px;
+
+  p {
+    padding-left: 20px;
+    position: relative;
+
+    &::before {
+      width: 10px;
+      height: 2px;
+      position: absolute;
+      content: "";
+      top: 10px;
+      left: 0;
+      background-color: $dark-red;
+    }
+  }
+}
+
 .portfolio-page__developers {
   .portfolio-page__box-developers {
     display: grid;
-    grid-template-columns: repeat(4, 125px);
+    grid-template-columns: repeat(auto-fit, minmax(auto, 125px));
     grid-gap: 30px 30px;
     margin-bottom: 60px;
 
     @media (max-width: $tablet-width) {
-      grid-template-columns: repeat(auto-fill, minmax(auto, 125px));
       justify-content: center;
     }
   }
@@ -995,10 +1036,10 @@
 }
 
 .portfolio-page__feedback {
+  max-width: 100%;
   padding: 0;
 
   article {
-    max-width: 600px;
     display: block;
   }
 
@@ -1038,12 +1079,43 @@
     }
   }
 
+  .youtube {
+    img {
+      max-width: 100%;
+      height: 600px;
+      object-fit: cover;
+
+      @media (max-width: $desktop-width) {
+        height: 450px;
+      }
+
+      @media (max-width: $tablet-width) {
+        height: 270px;
+      }
+    }
+
+    iframe {
+      height: 600px;
+
+      @media (max-width: $desktop-width) {
+        height: 450px;
+      }
+
+      @media (max-width: $tablet-width) {
+        height: 270px;
+      }
+    }
+  }
+
   .feedback__title {
-    grid-template-columns: 1fr auto;
+    display: flex;
+    gap: 0 100px;
+    align-items: flex-start;
     position: relative;
 
-    @media (max-width: $tablet-width) {
-      grid-template-columns: 1fr;
+    @media (max-width: $desktop-width-middle) {
+      justify-content: space-between;
+      gap: 0 50px;
     }
 
     img {
@@ -1081,6 +1153,7 @@
     }
 
     a {
+      margin-top: 35px;
       padding-right: 25px;
       text-align: right;
       display: inline-block;

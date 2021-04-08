@@ -1,15 +1,1 @@
-<svg width="370" height="370" viewBox="0 0 370 370" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0)">
-<rect width="370" height="370" rx="5" fill="#F5F9FF"/>
-<ellipse cx="185" cy="102.5" rx="265" ry="152.5" fill="url(#paint0_linear)"/>
-</g>
-<defs>
-<linearGradient id="paint0_linear" x1="-75.9514" y1="-13.5132" x2="348.384" y2="319.465" gradientUnits="userSpaceOnUse">
-<stop stop-color="#BCAEA8"/>
-<stop offset="1" stop-color="#3E3728"/>
-</linearGradient>
-<clipPath id="clip0">
-<rect width="370" height="370" rx="5" fill="white"/>
-</clipPath>
-</defs>
-</svg>
+<svg width="370" height="370" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0)"><rect width="370" height="370" rx="5" fill="#F5F9FF"/><ellipse cx="185" cy="102.5" rx="265" ry="152.5" fill="url(#paint0_linear)"/></g><defs><linearGradient id="paint0_linear" x1="-75.951" y1="-13.513" x2="348.384" y2="319.465" gradientUnits="userSpaceOnUse"><stop stop-color="#BCAEA8"/><stop offset="1" stop-color="#3E3728"/></linearGradient><clipPath id="clip0"><rect width="370" height="370" rx="5" fill="#fff"/></clipPath></defs></svg>

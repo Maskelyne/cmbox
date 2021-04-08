@@ -80,8 +80,8 @@ block main
           .services__image
             +img('services', 'icon-seo', 'svg', '220', '220', 'Seo')
           .services__boxes
-            +img('services', 'big-box-active', 'svg', '640', '380', 'Коробка')
-            +img('services', 'big-box-hover', 'svg', '640', '380', 'Коробка')
+            +img('services', 'big-box-active-1', 'svg', '640', '380', 'Коробка')
+            +img('services', 'big-box-hover-1', 'svg', '640', '380', 'Коробка')
         .services__box-text
           .services__data
             h3 Хочешь проверить свое SEO?
@@ -343,7 +343,7 @@ block main
                 strong Результат по трафику:
                 |  Количество переходов из поисковых систем увеличилось с 60 до 300 человек в неделю
             .services-keys__image
-              +img('png', 'image-1', 'png', '310', '150', 'График')
+              +img('svg', 'graphic-1', 'svg', '310', '150', 'График')
             table
               tr
                 th Запрос
@@ -381,7 +381,7 @@ block main
                 strong Результат по трафику:
                 |  Количество переходов из поисковых систем увеличилось с 100 до 1000 человек в неделю
             .services-keys__image
-              +img('png', 'image-2', 'png', '310', '150', 'График')
+              +img('svg', 'graphic-2', 'svg', '310', '150', 'График')
             table
               tr
                 th Запрос
@@ -416,7 +416,7 @@ block main
                 strong Регион продвижения:
                 |  Минск
             .services-keys__image
-              +img('png', 'image-3', 'png', '310', '150', 'График')
+              +img('svg', 'graphic-3', 'svg', '310', '150', 'График')
             table
               tr
                 th Запрос
@@ -476,6 +476,50 @@ block main
             +img('services/icon-services', 'icon-rocket', 'svg', '200', '130', 'Следим за трендами')
             strong Следим за трендами
             p Для достижения лучших результатов мы используем эффективные и современные инструменты продвижения.
+        .services__context
+          h3 Настройка контекста по ПС:
+          .services__context-box
+            a(href="#") Я.Директ
+            a(href="#") Ads
+        .services__sites
+          h3 Типы сайтов:
+          .services__sites-box
+            a(href="#") Лендинг
+            a(href="#") Сайт-визитка
+            a(href="#") Интернет-магазин
+        .services__developers
+          h3 Разработка сайтов производится на платформах:
+          .services__developers-box
+            a(href="#")
+              +img('png', 'bitrix', 'png', '130', '76', 'Битрикс')
+            a(href="#")
+              +img('png', 'modx', 'png', '63', '63', 'ModX')
+            a(href="#")
+              +img('png', 'wordpress', 'png', '100', '80', 'Wordpress')
+        .services__promotion
+          h3 Продвижение:
+          .services__promotion-box
+            a(href="#")
+              | Инстаграм
+              +img('services', 'icon-inst', 'svg', '48', '48', 'Инстаграм')
+            a(href="#")
+              | Вконтакте
+              +img('services', 'icon-vk', 'svg', '48', '48', 'Вконтакте')
+        .services__social
+          h3 Реклама в соцсетях:
+          .services__social-box
+            a(href="#")
+              | Инстаграм
+              +img('services', 'icon-inst', 'svg', '48', '48', 'Инстаграм')
+            a(href="#")
+              | Вконтакте
+              +img('services', 'icon-vk', 'svg', '48', '48', 'Вконтакте')
+            a(href="#")
+              | Facebook
+              +img('services', 'icon-fb', 'svg', '48', '48', 'Facebook')
+            a(href="#")
+              | Одноклассники
+              +img('services', 'icon-ok', 'svg', '48', '48', 'Одноклассники')
         .feedback-slider
           h3 Отзывы
           .feedback-slider__wrapper

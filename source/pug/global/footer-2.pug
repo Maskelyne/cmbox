@@ -1,0 +1,147 @@
+mixin footer2()
+  -
+    var footerNav = [
+      {
+        link: '#',
+        text: 'О нас'
+      },
+      {
+        link: '#',
+        text: 'Услуги'
+      },
+      {
+        link: '#',
+        text: 'Этапы'
+      },
+      {
+        link: '#',
+        text: 'Отзывы'
+      },
+      {
+        link: '#',
+        text: 'Портфолио'
+      },
+      {
+        link: '#',
+        text: 'Блог'
+      },
+      {
+        link: '#',
+        text: 'Контакты'
+      },
+    ];
+  -
+    var footerNav2 = [
+      {
+        link: '#',
+        text: 'Разработка'
+      },
+      {
+        link: '#',
+        text: 'Сайт-визитка'
+      },
+      {
+        link: '#',
+        text: 'Лендинг'
+      },
+      {
+        link: '#',
+        text: 'Интернет-магазин'
+      },
+      {
+        link: '#',
+        text: 'Сайт на Bitrix'
+      },
+      {
+        link: '#',
+        text: 'Сайт MODX'
+      },
+    ];
+  -
+    var footerNav3 = [
+      {
+        link: '#',
+        text: 'SMM'
+      },
+      {
+        link: '#',
+        text: 'Продвижение в Вконтакте'
+      },
+      {
+        link: '#',
+        text: 'Продвижение в Инстаграм'
+      },
+      {
+        link: '#',
+        text: 'Реклама в социальных сетях'
+      },
+      {
+        link: '#',
+        text: 'Реклама в Инстаграм'
+      },
+      {
+        link: '#',
+        text: 'Реклама в Одноклассниках'
+      },
+      {
+        link: '#',
+        text: 'Реклама в Вконтакте'
+      },
+      {
+        link: '#',
+        text: 'Реклама в Facebook'
+      },
+    ];
+  -
+    var footerNav4 = [
+      {
+        link: '#',
+        text: 'Контекстная реклама'
+      },
+      {
+        link: '#',
+        text: 'Настройка Я.Директ'
+      },
+      {
+        link: '#',
+        text: 'Настройка Ads'
+      },
+    ];
+
+  footer.main-footer(class!=attributes.class)
+    section.main-footer__wrapper.container
+      .main-footer__box
+        .main-footer__image
+          a(href='#')
+            +img('svg', 'logo', 'svg', '120', '43', 'Логотип')
+        +footer-social
+      .main-footer__nav
+        ul
+          each item in footerNav
+            li
+              a(href= item.link)= item.text
+        ul
+          each item in footerNav2
+            li
+              a(href= item.link)= item.text
+        ul
+          each item in footerNav3
+            li
+              a(href= item.link)= item.text
+      .main-footer__contacts
+        ul
+          each item in footerNav4
+            li
+              a(href= item.link)= item.text
+        a.main-footer__link-location(href="#") ул. Калиновского 77а, офис 310
+        a.main-footer__link-mail(href="mail:info@cmbox.by") info@cmbox.by
+        .main-footer__link-box
+          .main-footer__phone
+            a.main-footer__link-phone(href="tel:+375296086368") +375 (29) 608-63-68 (Минск)
+            a.main-footer__link-phone(href="tel:+375296086368") +375 (29) 608-63-68 (Москва)
+          +social-list
+    section.confidence
+      .confidence__wrapper.container
+        .confidence__text
+          p © 2019 - ∞ ООО "Дигитал Креатив Маркетинг"
+          a(href="#") Политика конфиденциальности

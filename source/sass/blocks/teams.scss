@@ -622,8 +622,8 @@
       }
 
       &:nth-child(5) {
-        width: 62px;
-        height: 63px;
+        width: 55px;
+        height: 65px;
         position: absolute;
         top: 45px;
         left: 175px;
@@ -635,7 +635,7 @@
         animation-direction: alternate;
 
         @media (max-width: $desktop-width) {
-          width: 58px;
+          width: 50px;
           height: 55px;
           top: 33px;
           left: 105px;

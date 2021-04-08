@@ -1,7 +1,7 @@
 .footer-social {
   @include reset-list;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(24px, 24px));
+  grid-template-columns: repeat(auto-fit, minmax(26px, 26px));
   grid-gap: 10px;
 
   img {
@@ -13,6 +13,10 @@
       transform: scale(1.2);
       transition: all 0.3s linear;
     }
+  }
+
+  @media (max-width: $desktop-width-min) {
+    grid-template-columns: repeat(auto-fit, minmax(30px, 30px));
   }
 
   @media (max-width: $tablet-width) {
