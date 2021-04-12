@@ -828,8 +828,15 @@
   }
 
   p {
+    font-size: 18px;
+    line-height: 16px;
     padding-left: 20px;
     position: relative;
+
+    @media (max-width: $tablet-width) {
+      font-size: 16px;
+      line-height: 24px;
+    }
 
     &::before {
       width: 10px;
@@ -1669,6 +1676,24 @@
 
 .kolesnik {
   background-image: linear-gradient(90deg, #B84D83 24.76%, #7D2D55 80.88%);
+
+  .portfolio-page__advantages {
+    p {
+      &::before {
+        width: 55px;
+        height: 10px;
+        position: absolute;
+        content: "";
+        top: 6px;
+        left: -70px;
+        background-image: linear-gradient(90deg, #B84D83 24.76%, #7D2D55 80.88%);
+      }
+    }
+  }
+}
+
+.hipee {
+  background-image: linear-gradient(88.59deg, #D3D4FD 25.05%, #D2E7F7 99.04%);
 
   .portfolio-page__advantages {
     p {

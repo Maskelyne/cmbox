@@ -26,6 +26,8 @@
     myMap.geoObjects
       .add(myGeoObject);
 
+    myMap.behaviors.disable('scrollZoom');
+
     var firstPoint = new ymaps.Placemark([53.934553754850974,27.65181604365534], {}, {
       preset: 'islands#redRapidTransitCircleIcon'
     });

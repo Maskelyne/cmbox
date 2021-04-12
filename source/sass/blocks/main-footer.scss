@@ -173,3 +173,32 @@
     box-shadow: none;
   }
 }
+
+.confidence {
+  background-color: $dark-blue;
+
+  .confidence__text {
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: $tablet-width) {
+      flex-direction: column;
+      gap: 10px 0;
+    }
+
+    p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 18px;
+      color: $white;
+    }
+
+    a {
+      font-size: 14px;
+      line-height: 18px;
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+}
